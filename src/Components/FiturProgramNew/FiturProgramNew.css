@@ -1,0 +1,222 @@
+/* src/components/FiturProgram/FiturProgram.css */
+
+.features-section-v2 {
+  padding: 80px 0;
+  text-align: center;
+}
+
+.features-container-v2 {
+  margin: 0 auto;
+}
+
+.features-header-v2 {
+  margin-bottom: 60px;
+}
+
+.features-title-v2 {
+  font-size: 1.5rem;
+  color: #333333;
+  margin-bottom: 15px;
+  font-weight: 700;
+  font-family: "Nunito", sans-serif;
+  line-height: 1.2;
+}
+
+.features-subtitle-v2 {
+  font-size: 1rem;
+  color: #4f4f4f;
+  line-height: 1.6;
+  max-width: 800px;
+  margin: 0 auto;
+  font-family: "Nunito", sans-serif;
+}
+
+.features-grid-v2 {
+  display: grid;
+  /* Desktop: 2 kolom */
+  grid-template-columns: repeat(2, 1fr);
+  gap: 30px; /* Jarak antar kartu */
+  justify-content: center;
+  align-items: stretch; /* Penting agar kartu memiliki tinggi yang sama */
+}
+
+.feature-card-v2 {
+  background-color: #ffffff;
+  border-radius: 15px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+  padding: 18px;
+  position: relative;
+  overflow: hidden;
+  text-align: left;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border: 1px solid #e0e0e0;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  min-height: 160px;
+}
+
+.feature-card-v2:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+}
+
+.feature-content-v2 {
+  flex-grow: 1;
+
+  position: relative;
+  z-index: 1;
+}
+
+.feature-card-header-v2 {
+  display: flex;
+  align-items: center; /* Nomor dan judul sejajar */
+  margin-bottom: 10px; /* Jarak antara header dan deskripsi */
+}
+
+.feature-number-v2 {
+  background-color: #006bde;
+  color: #ffffff;
+  font-size: 1.2rem;
+  font-weight: bold;
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 15px; /* Jarak antara nomor dan judul */
+  flex-shrink: 0;
+}
+
+.feature-title-v2 {
+  font-size: 1rem; /* Ukuran judul */
+  color: #333333;
+  font-weight: 700;
+  margin: 0; /* Hapus margin default */
+  font-family: "Nunito", sans-serif;
+  line-height: 1.3; /* Keterbacaan lebih baik */
+}
+
+.feature-description-v2 {
+  font-size: 0.9rem; /* Ukuran deskripsi */
+  color: #4f4f4f;
+  line-height: 1.6;
+  font-family: "Nunito", sans-serif;
+  margin-top: 0; /* Hapus margin-top default dari p */
+}
+
+.feature-image-v2 {
+  flex-shrink: 0;
+  margin: 0;
+  width: 15vw;
+  height: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.feature-img-v2 {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+  display: block;
+}
+
+/* Tablet (misalnya, antara 768px dan 991px) */
+@media (min-width: 768px) and (max-width: 991px) {
+  .features-grid-v2 {
+    grid-template-columns: repeat(2, 1fr); /* Tetap 2 kolom */
+    gap: 25px;
+  }
+  .features-title-v2 {
+    font-size: 2.2rem;
+  }
+  .features-subtitle-v2 {
+    font-size: 1.05rem;
+  }
+  .feature-card-v2 {
+    padding: 25px;
+    min-height: 200px;
+  }
+  .feature-title-v2 {
+    font-size: 1.15rem;
+  }
+  .feature-description-v2 {
+    font-size: 0.9rem;
+  }
+  .feature-number-v2 {
+    width: 30px;
+    height: 30px;
+    font-size: 1rem;
+    margin-right: 10px;
+  }
+  .feature-image-v2 {
+    width: 80px;
+    height: 80px;
+    margin-left: 15px;
+  }
+}
+
+/* Mobile (misalnya, di bawah 767px) */
+@media (max-width: 767px) {
+  .features-section-v2 {
+    padding: 60px 0;
+  }
+  .features-header-v2 {
+    margin-bottom: 40px;
+  }
+  .features-title-v2 {
+    font-size: 2rem;
+  }
+  .features-subtitle-v2 {
+    font-size: 1rem;
+  }
+  .features-grid-v2 {
+    grid-template-columns: 1fr; /* 1 kolom di mobile */
+    gap: 20px;
+  }
+  .feature-card-v2 {
+    flex-direction: column; /* Ubah ke kolom di mobile */
+    align-items: flex-start; /* Rata kiri di mobile */
+    padding: 25px;
+    min-height: auto; /* Biarkan tinggi menyesuaikan konten */
+  }
+  .feature-content-v2 {
+    padding-right: 0;
+    width: 100%; /* Ambil lebar penuh */
+    order: 2; /* Pindahkan teks ke bawah gambar di mobile */
+  }
+  .feature-image-v2 {
+    width: 10rem; /* Ukuran gambar tetap atau disesuaikan */
+    height: 10rem;
+    margin-left: 0;
+    margin-bottom: 15px; /* Jarak antara gambar dan teks */
+    order: 1; /* Pindahkan gambar ke atas teks di mobile */
+    align-self: center; /* Pusatkan gambar secara horizontal di mobile */
+  }
+  .feature-card-header-v2 {
+    margin-bottom: 10px;
+  }
+  .feature-title-v2 {
+    font-size: 1.25rem;
+  }
+  .feature-description-v2 {
+    font-size: 0.9rem;
+  }
+}
+
+/* Layar sangat kecil */
+@media (max-width: 480px) {
+  .features-title-v2 {
+    font-size: 1.5rem;
+  }
+
+  .features-subtitle-v2 {
+    font-size: 0.9rem;
+  }
+  .feature-card-v2 {
+    padding: 20px;
+  }
+}

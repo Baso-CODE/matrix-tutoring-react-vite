@@ -1,0 +1,166 @@
+.footer-container-matrix {
+  background-color: #0b192c;
+  padding-left: 12%;
+  padding-right: 12%;
+}
+
+.footer-content-matrix {
+  color: white;
+  padding: 2rem 0rem;
+}
+
+/* Media query for mobile view */
+@media (max-width: 768px) {
+  .header-container-footer-matrix {
+    justify-content: center;
+  }
+  .footer-container-matrix {
+    padding-left: 4%;
+    padding-right: 4%;
+    padding-bottom: 12%;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  .footer-container-matrix {
+    padding-left: 4%;
+    padding-right: 4%;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .footer-container-matrix {
+    padding-left: 4%;
+    padding-right: 4%;
+  }
+}
+@media only screen and (max-width: 820px) {
+  .footer-container-matrix {
+    padding-left: 4%;
+    padding-right: 4%;
+  }
+}
+@media only screen and (max-width: 1024px) {
+  .footer-container-matrix {
+    padding-left: 4%;
+    padding-right: 4%;
+  }
+}
+
+.grid-container-footer-matrix {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); /* 4 kolom */
+  gap: 1.5rem;
+}
+
+/* Media query for mobile view */
+@media (max-width: 768px) {
+  .grid-container-footer-matrix {
+    grid-template-columns: 1fr; /* Make grid single-column on mobile */
+  }
+}
+
+.office-info-footer,
+.member-of-footer-matrix,
+.students-info-footer-matrix {
+  padding: 1rem;
+}
+
+.section-title-footer-matrix {
+  font-size: 1.125rem;
+  font-weight: 700;
+  font-family: "Nunito", sans-serif;
+  margin-top: 1rem;
+}
+
+.section-subtitle-footer-matrix {
+  font-size: 1rem;
+  font-weight: 700;
+  font-family: "Nunito", sans-serif;
+  margin-bottom: 0.5rem;
+  margin-top: 2rem;
+}
+
+.address-footer-matrix,
+.phone-list-footer-matrix {
+  font-family: "Nunito", sans-serif;
+  margin: 0;
+}
+.office-hours-footer-matrix {
+  font-family: "Nunito", sans-serif;
+  margin-bottom: 0.4rem;
+  padding-inline-start: 16px;
+  margin: 0;
+}
+
+.phone-list-footer-matrix {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.phone-list-footer-matrix li,
+.office-hours-footer-matrix li {
+  margin-bottom: 0.4rem;
+}
+
+.phone-list-footer-matrix li a {
+  color: white; /* Sesuaikan dengan warna teks sebelumnya */
+  text-decoration: none; /* Hilangkan underline */
+  font-family: "Nunito", sans-serif; /* Pertahankan font yang sama */
+  display: inline-block; /* Agar padding dan margin bekerja dengan baik */
+  padding: 0.2rem 0; /* Tambahkan padding sesuai kebutuhan */
+  transition: color 0.3s ease; /* Tambahkan transisi untuk efek hover */
+}
+
+/* Jika ingin menambahkan efek hover */
+.phone-list-footer-matrix li a:hover {
+  color: #828282; /* Warna pada hover, bisa disesuaikan */
+  text-decoration: underline; /* Tambahkan underline saat hover jika diinginkan */
+}
+
+.member-logo-footer-matrix {
+  width: 100%;
+  height: auto;
+  border-radius: 0.375rem;
+}
+
+.students-flag-footer-matrix {
+  width: 100%;
+  height: auto;
+}
+
+.footer-copyright-matrix,
+.footer-location-matrix {
+  margin-top: 0.7rem;
+  text-align: center;
+  font-size: 0.7rem;
+  font-family: "Nunito", sans-serif;
+}
+
+.footer-matrix-image {
+  width: 50%;
+  height: auto;
+  background-color: white;
+  border-radius: 10px;
+}
+
+/* Adjust the office info image size for mobile */
+@media (max-width: 768px) {
+  .footer-matrix-image {
+    width: 100%; /* Make image full width on mobile */
+  }
+
+  .footer-copyright-matrix,
+  .footer-location-matrix {
+    margin-top: 1rem;
+    text-align: center;
+    font-size: 0.8rem;
+    font-family: "Nunito", sans-serif;
+  }
+  .office-info-footer,
+  .member-of-footer-matrix,
+  .students-info-footer-matrix {
+    padding: 0rem;
+  }
+}

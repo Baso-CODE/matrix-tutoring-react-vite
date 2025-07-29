@@ -1,0 +1,21 @@
+.testimonial-les-private {
+  display: grid;
+  margin-bottom: 30px;
+  margin-top: 20px;
+  grid-template-columns: repeat(2, 1fr); /* Two columns on desktop */
+  gap: 20px; /* Space between images */
+  justify-items: center; /* Center images horizontally within their grid cell */
+}
+
+.testimonial-les-private img {
+  width: 100%; /* Full width of the grid cell */
+  max-width: 400px; /* Limit the maximum width of the images */
+  height: auto; /* Maintain aspect ratio of images */
+  border-radius: 15px; /* Rounded corners */
+}
+
+@media (max-width: 768px) {
+  .testimonial-les-private {
+    grid-template-columns: 1fr; /* Single column for mobile */
+  }
+}

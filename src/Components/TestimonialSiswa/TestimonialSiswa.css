@@ -1,0 +1,52 @@
+/* Testimonials.css */
+.testimonials-siswa-container {
+  text-align: center;
+  margin-top: 10vh;
+}
+
+.testimonials-siswa-container h2 {
+  font-size: 1.7rem;
+  font-family: "Nunito", sans-serif;
+  font-weight: 700;
+  color: #333333;
+  margin-bottom: 20px;
+}
+
+.testimonials-siswa-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+.testimonial-siswa-item {
+  background-color: #fff;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.testimonial-siswa-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .testimonials-siswa-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .testimonials-siswa-grid {
+    grid-template-columns: repeat(1, 1fr);
+  }
+  .testimonials-siswa-container h2 {
+    font-size: 24px;
+    font-weight: 700;
+  }
+  .testimonials-siswa-container h2 {
+    font-size: 1.5rem;
+  }
+}

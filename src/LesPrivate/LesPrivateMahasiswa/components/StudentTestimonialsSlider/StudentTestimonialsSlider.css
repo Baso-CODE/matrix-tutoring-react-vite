@@ -1,0 +1,255 @@
+/* StudentTestimonialsSlider.css */
+
+.testimonials-section {
+  padding: 80px 20px;
+
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.testimonials-section::before,
+.testimonials-section::after {
+  content: "";
+  position: absolute;
+  border-radius: 50%;
+  background: rgba(13, 16, 185, 0.03);
+  filter: blur(50px);
+  z-index: 0;
+  pointer-events: none;
+}
+
+.testimonials-section::before {
+  width: 280px;
+  height: 280px;
+  top: -60px;
+  left: -60px;
+  animation: floatEffect 11s infinite ease-in-out;
+}
+
+.testimonials-section::after {
+  width: 320px;
+  height: 320px;
+  bottom: -80px;
+  right: -80px;
+  background: rgba(59, 130, 246, 0.03);
+  animation: floatEffect 13s infinite ease-in-out reverse;
+}
+
+@keyframes floatEffect {
+  0% {
+    transform: translate(0, 0) scale(1);
+  }
+  50% {
+    transform: translate(20px, -20px) scale(1.05);
+  }
+  100% {
+    transform: translate(0, 0) scale(1);
+  }
+}
+
+.testimonials-container {
+  margin: 0 auto;
+  position: relative;
+  z-index: 1;
+}
+
+.testimonials-title {
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: #333333;
+  margin-bottom: 15px;
+  font-family: "Nunito", sans-serif;
+  line-height: 1.2;
+  text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.05);
+}
+
+.highlight-text-orange {
+  color: #fec200; /* Warna aksen oranye */
+}
+
+.testimonials-subtitle {
+  font-size: 1rem;
+  color: #4b5563;
+  margin-bottom: 40px;
+
+  margin-left: auto;
+  margin-right: auto;
+  line-height: 1.6;
+  font-family: "Nunito", sans-serif;
+}
+
+.slider-wrapper {
+  position: relative;
+
+  margin: 0 auto 30px auto; /* Jarak dari bawah */
+  overflow: hidden; /* Penting untuk menyembunyikan kartu yang tidak aktif */
+  border-radius: 20px;
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.1);
+  background-color: #ffffff;
+  border: 1px solid #e6f0ff;
+}
+
+.testimonial-card-container {
+  display: flex;
+  transition: transform 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94); /* Transisi lebih halus */
+}
+
+.testimonial-card {
+  flex-shrink: 0;
+  width: 94%;
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Memusatkan item flex secara horizontal */
+  text-align: center; /* --- PERBAIKAN: Memusatkan teks di dalam item flex --- */
+}
+
+.quote-icon {
+  color: #fec200; /* Ikon kutipan oranye */
+  margin-bottom: 25px;
+}
+
+.testimonial-quote {
+  font-size: 1.3rem;
+  font-style: italic;
+  color: #2d3748;
+  margin-bottom: 30px;
+  line-height: 1.8;
+  font-family: "Nunito", sans-serif;
+  max-width: 680px;
+
+  text-align: center;
+}
+
+.testimonial-author-info {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  /* --- PERBAIKAN: Memusatkan item flex di dalam author-info --- */
+  align-items: center;
+}
+
+.author-name {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: #007bff; /* Nama penulis biru */
+  font-family: "Nunito", sans-serif;
+}
+
+.author-university {
+  font-size: 0.95rem;
+  color: #64748b;
+  font-family: "Nunito", sans-serif;
+}
+
+.slider-arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(13, 16, 185, 0.7); /* Biru transparan */
+  color: #ffffff;
+  border: none;
+  padding: 12px 18px;
+  border-radius: 50%;
+  cursor: pointer;
+  font-size: 1.5rem;
+  z-index: 10;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.slider-arrow:hover {
+  background-color: #007bff; /* Biru solid saat hover */
+  transform: translateY(-50%) scale(1.05);
+}
+
+.prev-arrow {
+  left: 6px; /* Posisikan di luar sedikit */
+}
+
+.next-arrow {
+  right: 6px; /* Posisikan di luar sedikit */
+}
+
+/* Dots Navigation */
+.slider-dots {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+.dot_mahasiswa_slider {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background-color: #a0c4ff; /* Biru muda */
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.dot_mahasiswa_slider.active {
+  background-color: #007bff; /* Biru utama saat aktif */
+  transform: scale(1.2);
+}
+
+/* Responsivitas */
+@media (max-width: 768px) {
+  .testimonials-section {
+    padding: 50px 15px;
+  }
+  .testimonials-title {
+    font-size: 1.2em;
+  }
+  .testimonials-subtitle {
+    font-size: 1rem;
+    margin-bottom: 40px;
+  }
+  .slider-wrapper {
+    max-width: 100%; /* Ambil lebar penuh di mobile */
+    margin: 0 auto 20px auto;
+    border-radius: 15px;
+  }
+  .testimonial-card {
+    padding: 30px 20px;
+  }
+  .quote-icon {
+    font-size: 50px;
+    margin-bottom: 20px;
+  }
+  .testimonial-quote {
+    font-size: 0.9rem;
+    margin-bottom: 25px;
+  }
+  .author-name {
+    font-size: 1rem;
+  }
+  .author-university {
+    font-size: 0.85rem;
+  }
+  /* .slider-arrow {
+  } */
+  .dot_mahasiswa_slider {
+    width: 10px;
+    height: 10px;
+  }
+  .slider-arrow {
+    font-size: 1rem;
+  }
+}
+
+/* @media (max-width: 480px) {
+  .testimonials-title {
+    font-size: 1.8rem;
+  }
+  .testimonials-subtitle {
+    font-size: 1rem;
+  }
+  .testimonial-card {
+    padding: 25px 15px;
+  }
+  .testimonial-quote {
+    font-size: 1rem;
+  }
+} */

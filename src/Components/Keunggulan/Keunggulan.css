@@ -1,0 +1,65 @@
+.parent-box-keunggulan {
+  margin-top: 50px;
+  margin-bottom: 5vh;
+}
+.title-keunggulan {
+  color: #333333;
+  display: flex;
+  align-items: center;
+  font-size: 1.5rem;
+  gap: 10px;
+  font-weight: 700;
+  font-family: "Nunito", sans-serif;
+}
+.icon-keunggulan {
+  width: 60px;
+}
+.parent-card-keunggulan {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 20px;
+}
+.keunggulan-img {
+  width: 24%;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: transform 0.3s ease-in-out, filter 0.3s ease-in-out,
+    box-shadow 0.3s ease-in-out, border-radius 0.3s ease-in-out;
+}
+.keunggulan-img:hover {
+  transform: scale(1.05);
+  filter: brightness(1.15);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+  border-radius: 12px;
+}
+
+/* RESPONSIVE */
+@media only screen and (max-width: 500px) {
+  .keunggulan-img {
+    width: 40%;
+  }
+  .title-keunggulan {
+    justify-content: center;
+    font-size: 1.5rem;
+  }
+  .icon-keunggulan {
+    width: 35px;
+  }
+  .parent-box-keunggulan {
+    margin-top: 20px;
+  }
+  .parent-card-keunggulan {
+    margin-top: 10px;
+  }
+}
+@media only screen and (max-width: 768px) {
+  .keunggulan-img {
+    width: 45%;
+  }
+  .title-keunggulan {
+    justify-content: center;
+  }
+}

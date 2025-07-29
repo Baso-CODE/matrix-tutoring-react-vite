@@ -1,0 +1,952 @@
+.hero-section-container {
+  padding: 40px 20px;
+  /* padding-left: 12%;
+  padding-left: 12%; */
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "Nunito", sans-serif;
+  color: #333333;
+  overflow: hidden;
+}
+
+/* Wrapper to constrain content width */
+
+.hero-content-wrapper {
+  display: flex;
+  flex-direction: row; /* Default: row on larger screens */
+  justify-content: center;
+  align-items: center;
+  max-width: 1240px;
+  width: 100%;
+  gap: 40px;
+}
+
+/* Left Section: Text Content */
+
+.hero-left-section {
+  flex: 1;
+  /* max-width: 550px; */
+  padding: 20px 0;
+  text-align: left;
+}
+
+.hero-title {
+  font-size: 2.8rem;
+  font-weight: 800;
+  line-height: 1.1;
+  margin-bottom: 18px;
+  color: #333333;
+}
+
+.hero-highlight-bimbel {
+  color: #006bde;
+  margin-left: 10px;
+}
+
+.hero-subtitle {
+  font-size: 1.1rem; /* Slightly larger for better readability */
+  color: #4a5568;
+  font-weight: 500;
+  line-height: 1.5;
+  margin-bottom: 25px; /* Added margin-bottom for spacing */
+}
+
+.hero-highlight-discount {
+  color: #ef4444;
+  font-weight: 700;
+}
+
+.hero-feature-list {
+  list-style: none; /* Hapus bullet default */
+  padding: 0;
+  margin-bottom: 25px; /* Adjusted margin-bottom */
+}
+
+.hero-feature-list li {
+  display: flex;
+  align-items: center;
+  margin-bottom: 12px;
+  font-size: 1rem;
+  color: #2d3748;
+  font-weight: 500;
+}
+
+.check-icon {
+  width: 26px;
+  height: 26px;
+  color: #34d399;
+  margin-right: 8px;
+  stroke-width: 2.5;
+}
+
+.hero-pricing {
+  display: flex;
+  align-items: baseline;
+  margin-bottom: 5px;
+}
+
+.hero-price {
+  font-size: 2.5rem;
+  font-weight: 800;
+  color: #333333;
+  margin-right: 8px;
+}
+
+.hero-per-month {
+  font-size: 1.4rem; /* Adjusted for better proportion */
+  color: #4a5568;
+  font-weight: 700;
+}
+
+.hero-bonus {
+  font-size: 1rem; /* Adjusted for better proportion */
+  color: #4a5568;
+  margin-bottom: 30px;
+  font-weight: 500;
+}
+
+.hero-cta-section {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+/* START: Style untuk container tombol */
+.hero-cta-section-wrapper {
+  display: flex;
+  flex-direction: row; /* Stack buttons by default */
+  gap: 15px; /* Spasi antar tombol */
+  margin-bottom: 20px; /* Jarak bawah dari section ini */
+}
+
+/* END: Style untuk container tombol */
+
+.hero-promo-button {
+  display: inline-flex;
+  font-family: "Nunito", sans-serif;
+  align-items: center;
+  justify-content: center;
+
+  padding: 10px 15px;
+  background-color: #006bde;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  font-size: 1.2rem;
+  font-weight: 700;
+  text-decoration: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  box-shadow: 0 6px 20px rgba(20, 23, 229, 0.4);
+  width: fit-content; /* Sesuaikan lebar dengan konten */
+}
+
+.hero-promo-button:hover {
+  background-color: #007bff;
+  transform: translateY(-3px);
+}
+
+/* START: Style untuk tombol timer terpisah */
+
+.hero-timer-button {
+  display: inline-flex;
+  font-family: "Nunito", sans-serif;
+  align-items: center;
+  justify-content: center;
+  gap: 8px; /* Spasi antara teks dan waktu */
+  padding: 10px 20px; /* Sedikit lebih kecil dari tombol promo utama */
+  background-color: #e0e7ff; /* Warna background lebih terang */
+  color: #006bde; /* Warna teks sesuai highlight bimbel */
+  border: 1px solid #a7b7ff; /* Border yang lebih lembut */
+  border-radius: 10px;
+  font-size: 1rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+  width: fit-content; /* Sesuaikan lebar dengan konten */
+}
+
+.hero-timer-button:hover {
+  background-color: #d1d9ff;
+  transform: translateY(-2px);
+}
+
+.hero-timer-button:disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
+}
+
+.hero-timer-display {
+  background-color: rgba(20, 23, 229, 0.1); /* Warna background timer */
+  padding: 4px 10px;
+  border-radius: 6px;
+  font-family: "monospace", sans-serif;
+  font-size: 1rem;
+  color: #006bde;
+  white-space: nowrap;
+}
+
+/* END: Style untuk tombol timer terpisah */
+
+.hero-guarantee {
+  font-size: 1rem;
+  color: #6b7280;
+  text-align: left; /* Ensure it stays left-aligned by default */
+}
+
+/* Right Section: Illustrations / Graphics */
+
+.hero-right-section {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  min-height: 600px;
+  padding: 20px;
+}
+
+.hero-illustration-main {
+  background: linear-gradient(180deg, #b0a7ec, #006bde);
+  border-radius: 25px;
+  padding: 25px;
+  width: 100%;
+  max-width: 650px;
+  height: 500px;
+  max-height: 100%;
+  position: relative;
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.2);
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  margin-top: 50px;
+}
+
+/* Styles for illustration elements (updated for Bimbel theme) */
+
+.illustration-top-bar {
+  background-color: #f7fafc;
+  border-radius: 12px;
+  padding: 10px 20px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 1rem;
+  color: #4a5568;
+  position: absolute;
+  top: -20px;
+  left: 50%;
+  transform: translateX(-50%);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+  z-index: 2;
+  font-weight: 700;
+}
+
+.lock-icon {
+  font-size: 1.3rem;
+  color: #006bde; /* Changed to match hero color */
+}
+
+.website-ui-placeholder {
+  background-color: white;
+  border-radius: 18px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+  position: absolute;
+  top: 50px;
+  left: 25px;
+  right: 25px;
+  height: 400px;
+  display: flex;
+  overflow: hidden;
+}
+
+.ui-sidebar {
+  background-color: #f7fafc;
+  width: 70px;
+  padding: 20px 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  border-right: 1px solid #e2e8f0;
+}
+
+.ui-icon-btn {
+  background-color: #e6e9ff; /* Adjusted background color */
+  width: 45px;
+  height: 45px;
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.6rem;
+  color: #006bde; /* Adjusted icon color */
+  cursor: pointer;
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.08);
+  transition: transform 0.2s ease;
+}
+
+.ui-icon-btn:hover {
+  transform: translateY(-2px);
+}
+
+.ui-content {
+  flex-grow: 1;
+  padding: 25px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.container-text-block {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+}
+
+.ui-text-block {
+  background-color: #edf2f7;
+  border-radius: 8px;
+  min-height: 30px;
+  /* height: 100%; */
+  width: 80px;
+  margin-bottom: 15px;
+  font-size: 0.9rem;
+  color: #718096;
+  padding: 8px 15px;
+  display: flex;
+  align-items: center;
+  font-weight: 500;
+}
+
+.ui-headline {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #333333;
+
+  line-height: 1.2;
+}
+
+.ui-gallery-label {
+  font-size: 1rem;
+  color: #718096;
+
+  font-weight: 500;
+}
+
+.ui-image-grid {
+  display: flex;
+  gap: 20px;
+}
+
+.ui-image-item {
+  width: 200px;
+  height: 150px;
+  background-color: #e2e8f0;
+  border-radius: 12px;
+  background-size: cover;
+  background-position: center;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Placeholder images for bimbel content */
+
+.materi-img-1 {
+  background-image: url("../../../public/images/materi-matematika.webp");
+}
+
+.materi-img-2 {
+  background-image: url("../../../public/images/materi-matematika2.webp");
+}
+
+.client-profile-card {
+  background-color: white;
+  border-radius: 18px;
+  padding: 18px 25px;
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  position: absolute;
+  bottom: 20px;
+  left: -40px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+  z-index: 3;
+  min-width: 300px;
+  border-left: 6px solid #5355f7;
+}
+
+.client-avatar {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid #006bde;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.client-name {
+  font-weight: 700;
+  font-size: 1.1rem;
+  color: #333333;
+  margin-bottom: 3px;
+}
+
+.client-description {
+  font-size: 0.95rem;
+  color: #718096;
+  line-height: 1.3;
+  margin: 0;
+}
+
+.pagespeed-badge {
+  background-color: white;
+  border-radius: 15px;
+  width: 130px;
+  height: 130px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  right: -35px;
+  top: 45px;
+  transform: translateY(-50%) translateX(0);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+  z-index: 3;
+  border: 2px solid #e0e7ff;
+}
+
+.pagespeed-label {
+  font-size: 0.9rem;
+  color: #4a5568;
+  margin-bottom: 5px;
+  font-weight: 700;
+}
+
+.pagespeed-score-circle {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 95px;
+  height: 95px;
+  border-radius: 50%;
+  background: conic-gradient(#7f7ae2 95%, #e2e8f0 0);
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #ffffff;
+}
+
+.pagespeed-score-circle::after {
+  content: "95%";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 2rem;
+  color: #ffffff;
+}
+
+.small-icons {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  position: absolute;
+  right: -40px;
+  bottom: 80px;
+  z-index: 3;
+}
+
+.icon-box {
+  background-color: white;
+  width: 60px;
+  height: 60px;
+  border-radius: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s ease;
+}
+
+.icon-box:hover {
+  transform: translateY(-3px);
+}
+
+.icon-box img {
+  width: 75%;
+  height: 75%;
+  object-fit: contain;
+}
+
+/*
+
+* ========================================
+
+* Media Queries for Responsiveness
+
+* ========================================
+
+*/
+
+/* For tablets and smaller desktops (e.g., 1024px to 769px) */
+
+@media (max-width: 1024px) {
+  .hero-content-wrapper {
+    flex-direction: column; /* Stack columns */
+    gap: 60px; /* More space when stacked */
+    padding-top: 40px;
+  }
+
+  .hero-left-section {
+    max-width: 700px; /* Allow text section to be wider */
+    text-align: center; /* Center text content */
+    padding: 0 20px; /* Add horizontal padding */
+  }
+
+  .hero-title {
+    font-size: 2.5rem;
+    line-height: 1.2;
+  }
+
+  .hero-subtitle {
+    font-size: 1rem;
+  }
+
+  .hero-feature-list {
+    padding-left: 0; /* Remove padding */
+    display: flex; /* Use flexbox for list items */
+    flex-direction: column;
+    align-items: center; /* Center list items horizontally */
+  }
+
+  .hero-feature-list li {
+    justify-content: flex-start; /* Align icon and text to start */
+    width: fit-content; /* Shrink to content width */
+
+    margin-right: auto; /* Center list item */
+  }
+
+  .hero-pricing,
+  .hero-bonus,
+  .hero-cta-section,
+  .hero-guarantee {
+    justify-content: center; /* Center these elements */
+    text-align: center; /* Center guarantee text */
+  }
+
+  .hero-right-section {
+    min-height: 500px; /* Reduce min-height for stacked layout */
+    padding: 0 0; /* Adjust padding */
+    width: 100%; /* Take full width */
+    max-width: 650px;
+  }
+
+  .hero-illustration-main {
+    height: 525px; /* Slightly reduced height */
+    max-width: 100%; /* Take full width of parent */
+    margin-top: 0; /* Remove top margin when stacked */
+  }
+
+  /* Adjust absolute positioning for elements within the illustration */
+  .illustration-top-bar {
+    top: -20px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  .website-ui-placeholder {
+    top: 40px; /* Adjust top position */
+    left: 20px;
+
+    right: 20px;
+    height: 380px; /* Slightly reduced height */
+  }
+
+  .ui-headline {
+    font-size: 2.2rem; /* Scale down headline */
+  }
+
+  .ui-image-grid {
+    flex-direction: row; /* Keep row for images if space allows */
+    justify-content: center;
+    flex-wrap: wrap; /* Allow wrapping */
+  }
+
+  .ui-image-item {
+    width: 45%; /* Make images take roughly half width */
+    max-width: 180px; /* Max width to prevent too large images */
+    height: 120px; /* Adjusted height */
+  }
+
+  .client-profile-card {
+    bottom: 30px; /* Move slightly up */
+    left: 50%; /* Center horizontally */
+    transform: translateX(-50%);
+    width: calc(100% - 60px); /* Adjust width to fit */
+    max-width: 320px; /* Max width for the card */
+    padding: 15px 20px;
+    gap: 15px;
+  }
+
+  .pagespeed-badge {
+    right: 15px; /* Adjust right position */
+    top: 55px; /* Adjust top position */
+    transform: none; /* Remove transform for easier positioning */
+    width: 110px; /* Slightly smaller */
+    height: 110px;
+    border: 2px solid #e0e7ff;
+  }
+  .pagespeed-score-circle {
+    width: 80px;
+    height: 80px;
+    font-size: 2rem;
+  }
+  .pagespeed-score-circle::after {
+    font-size: 1.8rem;
+  }
+  .lightning-icon {
+    font-size: 1.3rem;
+    bottom: 8px; /* Adjust position */
+  }
+
+  .small-icons {
+    bottom: 30px; /* Move slightly up */
+    right: 15px; /* Adjust right position */
+    gap: 15px;
+    flex-wrap: wrap; /* Allow icons to wrap */
+    justify-content: flex-end; /* Align to the right */
+  }
+  .icon-box {
+    width: 50px; /* Smaller icons */
+    height: 50px;
+    border-radius: 12px;
+  }
+  .hero-timer-button {
+    width: 100%;
+  }
+  .hero-promo-button {
+    width: 100%;
+  }
+  .pagespeed-label {
+    font-size: 0.8rem;
+  }
+  .ui-text-block {
+    font-size: 0.8rem;
+    height: 50%;
+  }
+}
+
+/* For mobile phones (e.g., 768px and smaller) */
+
+@media (max-width: 768px) {
+  .hero-section-container {
+    padding: 30px 15px;
+    padding-left: 4%;
+    padding-right: 4%;
+    min-height: auto; /* Allow height to adjust to content */
+  }
+
+  .hero-content-wrapper {
+    gap: 20px; /* Reduce gap */
+  }
+
+  .hero-left-section {
+    padding: 0 10px; /* Further reduce padding */
+  }
+
+  .hero-title {
+    font-size: 2rem;
+    margin-bottom: 15px;
+  }
+
+  .hero-subtitle {
+    font-size: 0.95rem;
+    margin-bottom: 20px;
+  }
+
+  .hero-price {
+    font-size: 2rem;
+  }
+
+  .hero-per-month {
+    font-size: 1.2rem;
+  }
+
+  .hero-feature-list li {
+    font-size: 0.9rem;
+    margin-bottom: 10px;
+  }
+
+  .check-icon {
+    width: 22px;
+    height: 22px;
+    margin-right: 0px;
+  }
+
+  .hero-promo-button {
+    padding: 15px 25px;
+    font-size: 1.05rem;
+    flex-direction: column; /* Stack button text and timer */
+    gap: 5px;
+    width: 100%;
+  }
+
+  .hero-timer {
+    font-size: 0.9rem;
+    padding: 4px 8px;
+  }
+
+  .hero-illustration-main {
+    height: 420px; /* Further reduce height */
+    padding: 15px;
+    border-radius: 20px;
+  }
+
+  .illustration-top-bar {
+    padding: 8px 15px;
+    font-size: 0.9rem;
+    top: -15px;
+  }
+
+  .website-ui-placeholder {
+    top: 30px;
+    left: 15px;
+    right: 15px;
+    height: 330px; /* Further reduced height */
+    border-radius: 15px;
+  }
+
+  .ui-sidebar {
+    width: 50px; /* Narrower sidebar */
+    padding: 15px 0;
+    gap: 15px;
+  }
+
+  .ui-icon-btn {
+    width: 40px;
+    height: 40px;
+    font-size: 1.4rem;
+  }
+
+  .ui-content {
+    padding: 18px;
+    gap: 10px;
+  }
+
+  .ui-headline {
+    font-size: 1.8rem;
+  }
+
+  .ui-gallery-label {
+    font-size: 0.9rem;
+    margin-bottom: 10px;
+  }
+  .hero-illustration-main {
+    height: 525px; /* Slightly reduced height */
+  }
+
+  .ui-image-grid {
+    flex-direction: column; /* Stack images vertically */
+    align-items: center; /* Center stacked images */
+    gap: 15px;
+  }
+
+  .ui-image-item {
+    width: 90%; /* Take more width when stacked */
+    max-width: 280px; /* Max width for stacked images */
+    height: 100px; /* Smaller height for stacked images */
+  }
+
+  .client-profile-card {
+    bottom: 20px; /* Adjust position */
+    width: calc(100% - 40px); /* Adjust width */
+    max-width: 280px;
+    padding: 12px 18px;
+    gap: 12px;
+    border-radius: 15px;
+  }
+
+  .client-avatar {
+    width: 50px;
+    height: 50px;
+  }
+
+  .client-name {
+    font-size: 1rem;
+  }
+
+  .client-description {
+    font-size: 0.85rem;
+  }
+
+  .pagespeed-badge {
+    right: 13px;
+    top: 30px;
+    width: 90px;
+    height: 90px;
+  }
+  .pagespeed-label {
+    font-size: 0.5rem;
+    margin-bottom: 0px;
+  }
+  .pagespeed-score-circle {
+    width: 65px;
+    height: 65px;
+    font-size: 1.8rem;
+  }
+  .pagespeed-score-circle::after {
+    font-size: 1.5rem;
+  }
+  .lightning-icon {
+    font-size: 1.2rem;
+    bottom: 5px;
+  }
+
+  .small-icons {
+    bottom: 240px; /* Adjusted position */
+    right: 5px;
+    gap: 10px;
+  }
+  .icon-box {
+    width: 45px;
+    height: 45px;
+    border-radius: 10px;
+  }
+  .ui-text-block {
+    padding: 1px 15px;
+  }
+  .hero-timer-button {
+    font-size: 0.8rem;
+  }
+}
+
+/* For very small mobile devices (e.g., iPhone SE) */
+
+@media (max-width: 480px) {
+  .hero-section-container {
+    padding: 20px 10px;
+    padding-left: 4%;
+    padding-right: 4%;
+    margin-top: 40px;
+  }
+
+  .hero-title {
+    font-size: 1.6rem;
+  }
+
+  .hero-subtitle {
+    font-size: 0.9rem;
+  }
+
+  .hero-price {
+    font-size: 1.8rem;
+  }
+  .hero-per-month {
+    font-size: 1.1rem;
+  }
+
+  .hero-promo-button {
+    padding: 10px 15px;
+    font-size: 0.8rem;
+    width: 100%;
+  }
+
+  .hero-timer {
+    font-size: 0.8rem;
+    padding: 3px 6px;
+  }
+
+  .hero-illustration-main {
+    height: 445px;
+    padding: 10px;
+  }
+
+  .illustration-top-bar {
+    padding: 6px 12px;
+    font-size: 0.8rem;
+  }
+
+  .website-ui-placeholder {
+    top: 25px;
+    left: 10px;
+    right: 10px;
+    height: 280px;
+  }
+
+  .ui-sidebar {
+    width: 40px;
+    padding: 10px 0;
+    gap: 10px;
+  }
+
+  .ui-icon-btn {
+    width: 30px;
+    height: 30px;
+    font-size: 1.1rem;
+  }
+
+  .ui-content {
+    padding: 12px;
+    gap: 8px;
+  }
+
+  .ui-headline {
+    font-size: 1.3rem;
+  }
+
+  .ui-gallery-label {
+    font-size: 0.8rem;
+  }
+
+  .ui-image-item {
+    height: 80px;
+  }
+
+  .client-profile-card {
+    max-width: 240px;
+    padding: 10px 15px;
+  }
+  .client-avatar {
+    width: 40px;
+    height: 40px;
+  }
+  .client-name {
+    font-size: 0.85rem;
+  }
+  .client-description {
+    font-size: 0.7rem;
+  }
+
+  .pagespeed-badge {
+    width: 80px;
+    height: 70px;
+    right: 13px;
+    top: 14px;
+  }
+  .pagespeed-score-circle {
+    width: 50px;
+    height: 50px;
+    font-size: 1.4rem;
+  }
+  .pagespeed-score-circle::after {
+    font-size: 1.2rem;
+  }
+  .lightning-icon {
+    font-size: 1rem;
+    bottom: 3px;
+  }
+
+  .small-icons {
+    gap: 8px;
+    bottom: 220px;
+  }
+  .icon-box {
+    width: 35px;
+    height: 35px;
+  }
+}

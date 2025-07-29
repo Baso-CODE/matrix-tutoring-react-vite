@@ -1,0 +1,150 @@
+.container-halaman-kota {
+  padding-top: 5%;
+}
+
+.content-kota {
+  display: flex;
+  justify-content: space-between; /* Distribute space between text and image */
+  align-items: center;
+  background-color: #007bff;
+  border-radius: 10px;
+  min-height: 400px;
+  margin-top: 20px;
+}
+
+.teks-content {
+  width: 55%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 10px;
+  padding-left: 15px;
+  color: white;
+}
+
+.rumah-adat {
+  width: 45%;
+  margin: 0;
+  padding: 0;
+  object-fit: cover;
+  border-radius: 10px;
+  /* border-bottom-right-radius: 10px;
+  border-bottom-left-radius: 10px; */
+}
+
+.child-paragraf-kota {
+  font-family: "Nunito", sans-serif;
+  margin-top: 10px;
+  font-weight: 400;
+}
+
+.title-halaman-kota {
+  font-family: "Nunito", sans-serif;
+  font-size: 30px;
+  font-weight: 800;
+  color: white;
+  line-height: 34px;
+}
+
+.highlight-yellow-kota {
+  color: #ffff00; /* Warna kuning */
+  font-weight: bold; /* Opsional: Membuat teks tebal */
+}
+
+/* RESPONSIVE STYLES */
+
+/* For screens up to 1024px (tablet landscape) */
+@media only screen and (max-width: 1024px) {
+  .content-kota {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .teks-content {
+    width: 100%; /* Full width for text */
+    padding: 0;
+  }
+
+  .rumah-adat {
+    width: 100%; /* Full width for the image */
+    margin-top: 20px;
+    border-radius: 10px;
+  }
+  .child-paragraf-kota {
+    font-family: "Nunito", sans-serif;
+    margin-top: 10px;
+    font-weight: 400;
+    padding-left: 4px;
+    padding-right: 4px;
+    font-size: 17px;
+  }
+
+  .title-halaman-kota {
+    font-family: "Nunito", sans-serif;
+    font-size: 30px;
+    font-weight: 800;
+    padding: 20px;
+    color: white;
+    line-height: normal;
+  }
+}
+
+/* For screens up to 768px (tablet portrait) */
+@media only screen and (max-width: 768px) {
+  .content-kota {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .teks-content {
+    width: 100%;
+  }
+  .rumah-adat {
+    width: 100%; /* Image takes full width */
+    margin: 0;
+    padding: 0;
+    object-fit: cover;
+    border-radius: 0; /* Remove rounded corners on mobile */
+  }
+  .child-paragraf-kota {
+    font-size: 17px;
+  }
+  .title-halaman-kota {
+    font-size: 28px;
+    line-height: 36px;
+  }
+}
+
+/* For screens up to 500px (mobile) */
+@media only screen and (max-width: 500px) {
+  .container-halaman-kota {
+    padding-left: 5%;
+    padding-right: 5%;
+  }
+
+  .content-kota {
+    flex-direction: column;
+    text-align: center;
+    margin-top: 25px;
+  }
+
+  .teks-content {
+    width: 100%;
+    text-align: center;
+    padding: 0;
+  }
+  .rumah-adat {
+    width: 100%; /* Image takes full width */
+    margin: 0;
+    padding: 0;
+    object-fit: cover;
+    border-radius: 10px; /* Remove rounded corners on mobile */
+  }
+  .title-halaman-kota {
+    font-size: 1.2rem; /* Font size for mobile */
+    line-height: normal;
+  }
+  .child-paragraf-kota {
+    font-size: 12px;
+  }
+}

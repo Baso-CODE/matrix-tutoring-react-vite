@@ -1,0 +1,103 @@
+/* LesPrivateSDSection.css */
+
+.tutor-header-les-private {
+  font-family: Arial, sans-serif;
+  width: 100%;
+  margin-top: 20px;
+  margin-bottom: 40px;
+}
+
+.tutor-header-les-private h1 {
+  font-size: 2rem;
+  color: #4f4f4f;
+  margin-bottom: 1rem;
+  text-align: left; /* Center-align heading text */
+  font-family: "Nunito", sans-serif;
+}
+
+.tutor-header-les-private h2 {
+  font-size: 1.2rem;
+  color: #4f4f4f;
+  margin-top: 2rem;
+  font-family: "Nunito", sans-serif;
+}
+
+.tutor-header-les-private p {
+  font-size: 1.1rem;
+  font-family: "Nunito", sans-serif;
+  color: #333333;
+  line-height: 1.6;
+  margin-bottom: 1.5rem;
+}
+
+.image-lesPrivate {
+  margin: 2rem 0;
+  text-align: center;
+}
+
+.image-lesPrivate img {
+  max-width: 100%;
+  height: auto;
+}
+
+.image-caption {
+  margin-top: 0.5rem;
+  font-size: 1rem;
+  color: #777;
+  text-align: center; /* Center-align image caption */
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 1024px) {
+  .tutor-header-les-private h1 {
+    font-size: 1.8rem;
+  }
+
+  .tutor-header-les-private h2 {
+    font-size: 1rem;
+  }
+
+  .tutor-header-les-private p {
+    font-size: 1rem;
+  }
+
+  .image-caption {
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .tutor-header-les-private h1 {
+    font-size: 1.6rem;
+  }
+
+  .tutor-header-les-private h2 {
+    font-size: 1.2rem;
+  }
+
+  .tutor-header-les-private p {
+    font-size: 1.1rem;
+  }
+
+  .image-caption {
+    font-size: 0.8rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .tutor-header-les-private h1 {
+    font-size: 1.5rem;
+  }
+
+  .tutor-header-les-private h2 {
+    font-size: 1.2rem;
+  }
+
+  .tutor-header-les-private p {
+    font-size: 1rem;
+  }
+
+  .image-caption {
+    font-size: 0.7rem;
+  }
+}

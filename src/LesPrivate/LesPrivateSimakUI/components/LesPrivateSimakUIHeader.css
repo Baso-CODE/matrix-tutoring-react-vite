@@ -1,0 +1,88 @@
+/* LesPrivateTKSection.css */
+
+.centered-content-lesPrivate-simakUI {
+  width: 100%;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.centered-content-lesPrivate-simakUI h1 {
+  font-size: 1.6rem;
+  color: #333333;
+  font-family: "Nunito", sans-serif;
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+.centered-content-lesPrivate-simakUI h2 {
+  font-size: 1.4rem;
+  color: #333333;
+  margin-top: 2rem;
+  font-family: "Nunito", sans-serif;
+  font-weight: 700;
+  margin-bottom: 0.3rem;
+}
+
+.centered-content-lesPrivate-simakUI p {
+  font-size: 1rem;
+  color: #4f4f4f;
+  line-height: 1.6;
+  margin-bottom: 1.5rem;
+  font-weight: 500;
+  font-family: "Nunito", sans-serif;
+}
+
+.image-lesPrivate {
+  margin: 2rem 0;
+  text-align: center;
+}
+
+.image-lesPrivate img {
+  max-width: 100%;
+  height: auto;
+}
+
+.image-caption {
+  margin-top: 0.5rem;
+  font-size: 1rem;
+  color: #777777;
+  text-align: center; /* Center-align image caption */
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 1024px) {
+  .centered-content-lesPrivate-simakUI h1 {
+    font-size: 1.6rem;
+  }
+
+  .centered-content-lesPrivate-simakUI h2 {
+    font-size: 1.4rem;
+  }
+
+  .centered-content-lesPrivate-simakUI p {
+    font-size: 1rem;
+  }
+
+  .image-caption {
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .centered-content-lesPrivate-simakUI h1 {
+    font-size: 1.2rem;
+  }
+
+  .centered-content-lesPrivate-simakUI h2 {
+    font-size: 1rem;
+  }
+
+  .centered-content-lesPrivate-simakUI p {
+    font-size: 0.9rem;
+  }
+
+  .image-caption {
+    font-size: 0.8rem;
+  }
+}

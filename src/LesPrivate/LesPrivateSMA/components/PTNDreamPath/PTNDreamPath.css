@@ -1,0 +1,241 @@
+/* PTNDreamPath.css */
+
+.ptn-dream-path-section {
+  padding: 80px 20px;
+  background: linear-gradient(
+    145deg,
+    #f0f8ff,
+    #ffffff
+  ); /* Gradasi sangat lembut */
+  text-align: center;
+  overflow: hidden;
+}
+
+.ptn-dream-path-container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.ptn-dream-path-title {
+  font-size: 2.8rem;
+  font-weight: 800;
+  color: #007bff; /* Biru utama */
+  margin-bottom: 20px;
+  font-family: "Nunito", sans-serif;
+  line-height: 1.2;
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.05);
+}
+
+.ptn-dream-path-subtitle {
+  font-size: 1.3rem;
+  color: #4b5563;
+  margin-bottom: 60px;
+  max-width: 900px;
+  margin-left: auto;
+  margin-right: auto;
+  line-height: 1.6;
+  font-family: "Nunito", sans-serif;
+}
+
+.dream-path-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 30px;
+  margin-bottom: 60px;
+}
+
+.dream-path-card {
+  background-color: #ffffff;
+  padding: 30px;
+  border-radius: 16px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+  transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  border: 1px solid #e0efff;
+  position: relative;
+  overflow: hidden;
+  height: 100%; /* Penting untuk tinggi kartu yang seragam */
+  justify-content: flex-start; /* Konten dimulai dari atas */
+}
+
+.dream-path-card::before {
+  content: "";
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: radial-gradient(circle, rgba(13, 16, 185, 0.1), transparent 70%);
+  transition: all 0.5s ease-out;
+  opacity: 0;
+  z-index: 0;
+}
+
+.dream-path-card:hover {
+  transform: translateY(-15px) scale(1.02);
+  box-shadow: 0 18px 40px rgba(0, 0, 0, 0.12);
+  border-color: #007bff; /* Border menjadi biru utama saat di-hover */
+}
+
+.dream-path-card:hover::before {
+  opacity: 1;
+  transform: rotate(30deg);
+}
+
+.dream-path-icon-wrapper {
+  background-color: #007bff; /* Biru utama */
+  width: 80px; /* Sedikit lebih besar untuk menampung nomor */
+  height: 80px;
+  border-radius: 50%;
+  display: flex;
+  flex-direction: column; /* Untuk menumpuk nomor dan ikon */
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 25px;
+  box-shadow: 0 5px 15px rgba(13, 16, 185, 0.3);
+  position: relative;
+  z-index: 1;
+  border: 3px solid #3b82f6; /* Border aksen */
+}
+
+.dream-path-step-number {
+  font-size: 0.8rem; /* Ukuran nomor langkah */
+  font-weight: bold;
+  color: #ffffff;
+  margin-bottom: 2px; /* Jarak antara nomor dan ikon */
+}
+
+.dream-path-icon {
+  color: #ffffff; /* Ikon putih */
+  font-size: 2rem; /* Ukuran ikon */
+}
+
+.dream-path-card-title {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #007bff; /* Biru gelap untuk judul fitur */
+  margin-bottom: 15px;
+  font-family: "Nunito", sans-serif;
+  position: relative;
+  z-index: 1;
+}
+
+.dream-path-card-description {
+  font-size: 1rem;
+  color: #64748b; /* Abu-abu teks */
+  line-height: 1.6;
+  font-family: "Nunito", sans-serif;
+  position: relative;
+  z-index: 1;
+  flex-grow: 1; /* Biarkan teks mengisi sisa ruang */
+  display: -webkit-box;
+  -webkit-line-clamp: 5; /* Batasi hingga 5 baris */
+  line-clamp: 5; /* Standard property for compatibility */
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.ptn-dream-path-cta-wrapper {
+  background: linear-gradient(
+    90deg,
+    #007bff,
+    #007bff
+  ); /* Gradasi biru untuk CTA */
+  padding: 40px;
+  border-radius: 16px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 25px;
+  margin-top: 40px;
+  box-shadow: 0 15px 30px rgba(13, 16, 185, 0.4);
+}
+
+.ptn-dream-path-cta-text {
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: #ffffff;
+  font-family: "Nunito", sans-serif;
+  max-width: 800px;
+}
+
+.ptn-dream-path-cta-button {
+  background-color: #ff6500; /* Tombol oranye (aksen) */
+  color: #ffffff;
+  padding: 15px 35px;
+  border-radius: 10px;
+  font-size: 1.2rem;
+  font-weight: 700;
+  text-decoration: none;
+  transition: background-color 0.3s ease, transform 0.2s ease,
+    box-shadow 0.3s ease;
+  box-shadow: 0 8px 15px rgba(255, 101, 0, 0.3);
+}
+
+.ptn-dream-path-cta-button:hover {
+  background-color: #e54d00; /* Oranye lebih gelap saat hover */
+  transform: translateY(-3px);
+  box-shadow: 0 12px 20px rgba(255, 101, 0, 0.4);
+}
+
+/* Responsivitas */
+@media (max-width: 768px) {
+  .ptn-dream-path-section {
+    padding: 50px 15px;
+  }
+  .ptn-dream-path-title {
+    font-size: 2.2rem;
+  }
+  .ptn-dream-path-subtitle {
+    font-size: 1.1rem;
+    margin-bottom: 40px;
+  }
+  .dream-path-grid {
+    grid-template-columns: 1fr; /* Satu kolom di mobile */
+    gap: 25px;
+  }
+  .dream-path-card {
+    padding: 25px;
+  }
+  .dream-path-icon-wrapper {
+    width: 70px;
+    height: 70px;
+    margin-bottom: 20px;
+  }
+  .dream-path-step-number {
+    font-size: 0.7rem;
+  }
+  .dream-path-icon {
+    font-size: 1.8rem;
+  }
+  .ptn-dream-path-card-title {
+    font-size: 1.3rem;
+  }
+  .ptn-dream-path-card-description {
+    font-size: 0.95rem;
+  }
+  .ptn-dream-path-cta-wrapper {
+    padding: 30px 20px;
+  }
+  .ptn-dream-path-cta-text {
+    font-size: 1.4rem;
+  }
+  .ptn-dream-path-cta-button {
+    font-size: 1rem;
+    padding: 12px 25px;
+  }
+}
+
+@media (max-width: 480px) {
+  .ptn-dream-path-title {
+    font-size: 1.8rem;
+  }
+  .ptn-dream-path-subtitle {
+    font-size: 1rem;
+  }
+}

@@ -1,0 +1,192 @@
+/* MasterTeacherV2.css */
+
+.container-master-teacher-v2 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+.superparent-container-master-teacher-v2 {
+  padding-top: 5%;
+  padding-bottom: 5%;
+}
+.img-card-master-teacher-v2 {
+  width: 50%;
+  max-width: 120px;
+  height: 120px;
+  object-fit: cover;
+  border-radius: 100px;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  margin-top: -60px;
+  margin-bottom: 15px;
+  flex-shrink: 0;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+.card-master-teacher-v2 {
+  background-color: white;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  padding: 20px;
+  padding-top: 80px;
+  border-radius: 15px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  height: 380px;
+  justify-content: space-between;
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+.card-master-teacher-v2:hover {
+  transform: translateY(-10px);
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 8px 24px;
+  cursor: pointer;
+}
+
+.jurusan-master-teacher-v2:hover {
+  background-color: #f0f0f0;
+  border-color: #888;
+  transform: translateY(-2px);
+  transition: transform 0.2s ease-in-out;
+}
+
+.univ-master-teacher-v2:hover {
+  background-color: #1a6fdc;
+  transform: translateY(-2px);
+  transition: transform 0.2s ease-in-out;
+}
+.parent-jurusan-master-teacher-v2 {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  align-items: center;
+  margin-top: auto;
+}
+.mapel-master-teacher-v2 {
+  margin-top: 5px;
+  font-weight: 400;
+  font-family: "Nunito", sans-serif;
+  color: rgb(77, 77, 77);
+  margin-bottom: 0;
+  font-size: 0.9rem;
+}
+.jurusan-master-teacher-v2 {
+  border: 1px solid rgb(155, 155, 155);
+  padding: 7px;
+  width: 100%;
+  font-family: "Nunito", sans-serif;
+  border-radius: 5px;
+  background-color: white;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.univ-master-teacher-v2 {
+  background-color: #007bff;
+  color: white;
+  border: 1px solid transparent;
+  padding: 7px;
+  width: 100%;
+  border-radius: 5px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.ratting-master-teacher-v2 {
+  line-height: 18px;
+  font-size: 15px;
+  color: rgb(77, 77, 77);
+  margin-top: 12px;
+  margin-bottom: 12px;
+  flex-shrink: 0;
+}
+.nama-master-teacher-v2 {
+  margin-top: 12px;
+  font-weight: 600;
+  flex-shrink: 0;
+  font-size: 15px;
+  line-height: 19px;
+  margin-bottom: 5px;
+}
+.swiper-wrapper {
+  padding-top: 5%;
+  /* Tambahkan padding-bottom di sini untuk memberi ruang pada pagination */
+  padding-bottom: 60px; /* Sesuaikan nilai ini sesuai kebutuhan Anda */
+}
+.swiper {
+  margin-left: auto;
+  margin-right: auto;
+  position: relative;
+  overflow: hidden;
+  list-style: none;
+  padding: 0;
+  /* Hapus padding-bottom di sini jika sudah ada di swiper-wrapper */
+  /* padding-bottom: 20px; */
+  z-index: 1;
+  display: block;
+}
+
+/* TARGET PAGINATION BULLET */
+.swiper-pagination {
+  bottom: 0px !important;
+}
+
+.title-master-teacher-v2 {
+  text-align: center;
+  font-weight: 800;
+  color: #333333;
+  font-size: 1.8rem;
+  font-family: "Nunito", sans-serif;
+}
+.child-title-master-teacher-v2 {
+  margin-top: 0;
+  text-align: center;
+  font-family: "Nunito", sans-serif;
+  color: #444444;
+  font-weight: normal;
+  margin-bottom: 30px;
+}
+
+.swiper-pagination-bullet {
+  background: #bbb;
+  opacity: 0.8;
+}
+
+.swiper-pagination-bullet-active {
+  background: #007bff;
+  width: 25px;
+  border-radius: 5px;
+}
+
+@media only screen and (min-width: 320px) and (max-width: 896px) {
+  .title-master-teacher-v2 {
+    font-size: 20px;
+  }
+  .child-title-master-teacher-v2 {
+    font-size: 15px;
+  }
+
+  .superparent-container-master-teacher-v2 {
+    margin-top: 10%;
+    margin-bottom: 10%;
+  }
+  .card-master-teacher-v2 {
+    height: 310px;
+    padding-top: 70px;
+  }
+  .img-card-master-teacher-v2 {
+    margin-top: -50px;
+  }
+  .swiper-wrapper {
+    padding-bottom: 50px; /* Sesuaikan untuk mobile juga */
+  }
+  .swiper-pagination {
+    bottom: 0px !important; /* Pastikan konsisten di mobile */
+  }
+}
+
+@media only screen and (min-width: 1024px) {
+  .card-master-teacher-v2 {
+    height: 290px;
+  }
+}

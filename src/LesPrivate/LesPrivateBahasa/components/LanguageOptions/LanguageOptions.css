@@ -1,0 +1,95 @@
+/* Styling untuk komponen LanguageOptions yang menggunakan react-fast-marquee dengan gambar */
+
+.rfm-marquee-container {
+  /* Gaya untuk container yang membungkus komponen Marquee */
+  overflow: hidden; /* Pastikan konten di luar batas tersembunyi */
+  width: 100%;
+  margin: 40px auto; /* Jarak atas/bawah dan tengah secara horizontal */
+  background-color: #e6f0ff; /* Latar belakang biru muda */
+  padding: 20px 0; /* Padding vertikal, padding horizontal akan ditangani oleh margin item */
+  border-radius: 15px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+}
+
+/* Gaya untuk setiap item individual di dalam marquee */
+.rfm-marquee-item {
+  flex-shrink: 0; /* Penting agar item tidak mengecil di dalam flex container */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 15px 25px; /* Sesuaikan padding agar gambar dan teks pas */
+  margin: 0 15px; /* Jarak antar item di dalam marquee */
+  background-color: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.05);
+  min-width: 160px; /* Lebar minimum untuk setiap kartu bahasa */
+  height: 120px; /* Tinggi tetap untuk konsistensi, sesuaikan jika perlu */
+  box-sizing: border-box; /* Pastikan padding dan border termasuk dalam height */
+  transition: transform 0.2s ease; /* Efek hover */
+}
+
+.rfm-marquee-item:hover {
+  transform: translateY(-5px); /* Efek mengangkat sedikit saat di-hover */
+}
+
+/* --- PERUBAHAN DI SINI: Styling untuk tag <img> --- */
+.rfm-marquee-item img {
+  width: 50px; /* Sesuaikan ukuran gambar bendera/icon negara */
+  height: 50px; /* Sesuaikan tinggi agar proporsional */
+  object-fit: contain; /* Pastikan gambar terlihat penuh tanpa terpotong */
+  margin-bottom: 10px; /* Jarak antara gambar dan nama bahasa */
+
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Opsional: sedikit shadow pada gambar */
+}
+
+/* Hapus atau biarkan kosong .rfm-marquee-icon jika tidak digunakan lagi */
+/* .rfm-marquee-icon {
+    display: none;
+} */
+
+.rfm-marquee-name {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: #333333;
+  text-align: center;
+  line-height: 1.2; /* Untuk mencegah teks terlalu panjang ke bawah */
+}
+
+/* Media Queries untuk Responsivitas */
+@media (max-width: 768px) {
+  .rfm-marquee-container {
+    padding: 15px 0;
+    margin: 30px auto;
+  }
+  .rfm-marquee-item {
+    padding: 10px 20px;
+    margin: 0 10px;
+    min-width: 140px;
+    height: 100px; /* Sesuaikan tinggi item */
+  }
+  .rfm-marquee-item img {
+    width: 40px; /* Ukuran gambar lebih kecil */
+    height: 40px;
+    margin-bottom: 8px;
+  }
+  .rfm-marquee-name {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .rfm-marquee-item {
+    min-width: 120px;
+    padding: 8px 15px;
+    height: 90px; /* Sesuaikan tinggi item */
+  }
+  .rfm-marquee-item img {
+    width: 35px; /* Ukuran gambar lebih kecil lagi */
+    height: 35px;
+    margin-bottom: 6px;
+  }
+  .rfm-marquee-name {
+    font-size: 0.9rem;
+  }
+}

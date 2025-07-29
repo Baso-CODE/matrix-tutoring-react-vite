@@ -1,0 +1,295 @@
+/* HowToOrder.css */
+
+.how-to-order-section {
+  padding: 80px 0;
+  /* background: linear-gradient(to right, #e0f2ff 0%, #66aaff 50%, #006bde 100%); */
+  background: #007bff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-left: 12%;
+  padding-right: 12%;
+}
+
+.how-to-order-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 40px;
+
+  width: 100%;
+  padding: 0 20px;
+  justify-content: center;
+}
+
+/* Left Column: Steps */
+.how-to-order-steps {
+  flex: 1;
+  min-width: 300px;
+  max-width: 550px;
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+  order: 1;
+}
+
+.order-step-card {
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+  padding: 25px 30px;
+  position: relative;
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease,
+    background 0.3s ease;
+
+  background: #ffffff;
+  color: #333333;
+  border: 1px solid #e0e0e0;
+}
+
+.order-step-card:nth-child(1) {
+  background: #ffffff;
+}
+.order-step-card:nth-child(2) {
+  background: #ffffff;
+}
+.order-step-card:nth-child(3) {
+  background: #ffffff;
+}
+
+/* Efek Hover pada Kartu Langkah */
+.order-step-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+  border-color: #006bde;
+  background: linear-gradient(to right, #e0f2ff 0%, #66aaff 50%, #006bde 100%);
+}
+
+.order-step-card:hover .step-title,
+.order-step-card:hover .step-description {
+  color: #ffffff;
+}
+
+/* Angka besar samar-samar di belakang */
+.order-step-card::after {
+  content: attr(data-background-number);
+  position: absolute;
+  bottom: -20px;
+  right: -20px;
+  font-size: 10vw;
+  font-weight: 700;
+  color: rgb(220, 223, 250);
+  z-index: 0;
+  pointer-events: none;
+  line-height: 1;
+  transition: color 0.3s ease;
+}
+
+.order-step-card:hover::after {
+  color: rgba(255, 255, 255, 0.3);
+}
+
+.step-header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 15px;
+  position: relative;
+  z-index: 1;
+}
+
+.step-number {
+  background-color: #007bff;
+  color: #ffffff;
+  font-size: 1.2rem;
+  font-weight: bold;
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 15px;
+  flex-shrink: 0;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.order-step-card:hover .step-number {
+  background-color: #ffffff;
+  color: #007bff;
+}
+
+.step-title {
+  font-size: 1.2rem;
+  color: #333333;
+  font-weight: 700;
+  transition: color 0.3s ease;
+  margin: 0;
+  font-family: "Nunito", sans-serif;
+}
+
+.step-description {
+  font-size: 0.95rem;
+  color: #4f4f4f;
+  line-height: 1.6;
+  margin: 0;
+  position: relative;
+  z-index: 1;
+  font-family: "Nunito", sans-serif;
+  transition: color 0.3s ease;
+}
+
+/* Right Column: Main Heading & Button */
+.how-to-order-main {
+  flex: 1;
+  min-width: 300px;
+  max-width: 550px;
+  border-radius: 12px;
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  text-align: left;
+  position: relative;
+  overflow: hidden;
+  order: 2; /* Default order untuk desktop */
+}
+
+.how-to-order-label {
+  font-size: 0.85rem;
+  color: #f4f4f4;
+  font-weight: 600;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  margin-bottom: 10px;
+  position: relative;
+  z-index: 1;
+}
+
+.how-to-order-heading {
+  font-size: 2.5rem;
+  color: #f4f4f4;
+  font-weight: 600;
+  margin-top: 0;
+  line-height: 1.2;
+  margin-bottom: 30px;
+  position: relative;
+  z-index: 1;
+}
+
+.start-order-button {
+  background-color: #205aa1;
+  color: #ffffff;
+  padding: 12px 25px;
+  border: none;
+  border-radius: 8px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  position: relative;
+  z-index: 1;
+}
+
+.start-order-button:hover {
+  background-color: #5f67e9;
+  transform: translateY(-2px);
+}
+
+.arrow-icon {
+  font-size: 1.3rem;
+}
+.start-order-link {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 1024px) {
+  .how-to-order-container {
+    flex-direction: column;
+    align-items: center;
+  }
+  .how-to-order-section {
+    padding-left: 4%;
+    padding-right: 4%;
+  }
+
+  .how-to-order-main {
+    order: 0;
+    padding: 30px;
+    align-items: center;
+    text-align: center;
+    margin-bottom: 30px;
+  }
+
+  .how-to-order-steps {
+    order: 1;
+    max-width: 600px;
+    width: 100%;
+  }
+
+  .how-to-order-heading {
+    font-size: 2rem;
+    margin-bottom: 20px;
+  }
+
+  .order-step-card::after {
+    font-size: 25vw;
+    bottom: -10px;
+    right: -10px;
+  }
+}
+
+@media (max-width: 768px) {
+  .how-to-order-section {
+    padding-left: 4%;
+    padding-right: 4%;
+  }
+  .how-to-order-container {
+    padding: 0;
+  }
+}
+
+@media (max-width: 576px) {
+  .how-to-order-section {
+    padding: 50px 0;
+    padding-left: 4%;
+    padding-right: 4%;
+  }
+  .how-to-order-steps {
+    gap: 20px;
+  }
+  .order-step-card {
+    padding: 20px 25px;
+  }
+  .step-number {
+    width: 40px;
+    height: 40px;
+    font-size: 1.1rem;
+    margin-right: 10px;
+  }
+  .step-title {
+    font-size: 1.2rem;
+  }
+  .step-description {
+    font-size: 0.9rem;
+  }
+  .how-to-order-main {
+    padding: 25px;
+    margin: 0;
+  }
+  .how-to-order-heading {
+    font-size: 1.8rem;
+  }
+  .start-order-button {
+    font-size: 1rem;
+    padding: 10px 25px;
+  }
+
+  .order-step-card::after {
+    font-size: 35vw;
+  }
+}

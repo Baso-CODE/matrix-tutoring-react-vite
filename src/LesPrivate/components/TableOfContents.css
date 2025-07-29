@@ -1,0 +1,91 @@
+.toc-container {
+  background-color: #f8f8f8;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+
+  width: 100%;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.toc-container-content {
+  margin: 15px;
+}
+.toc-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 12px;
+}
+
+.toc-title {
+  font-size: 18px;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  color: #333333;
+  font-family: "Nunito", sans-serif;
+}
+
+.toc-icon {
+  margin-right: 8px;
+}
+
+.toc-toggle {
+  background: none;
+  border: none;
+  font-size: 24px;
+  cursor: pointer;
+  color: #555;
+  align-items: center;
+  display: flex;
+}
+
+.toc-list {
+  padding-left: 20px;
+  list-style-type: disc;
+}
+
+.toc-item {
+  margin-bottom: 8px;
+}
+
+.toc-link {
+  text-decoration: none;
+  color: #007acc;
+}
+
+.toc-link:hover {
+  text-decoration: underline;
+}
+
+.toc-sublist {
+  padding-left: 20px;
+  list-style-type: circle;
+  margin-top: 8px;
+  font-family: "Nunito", sans-serif;
+}
+
+.toc-subitem {
+  margin-bottom: 8px;
+}
+
+.toc-sublink {
+  text-decoration: none;
+  color: #007acc;
+}
+
+.toc-sublink:hover {
+  text-decoration: underline;
+}
+
+@media (max-width: 768px) {
+  .toc-title {
+    font-size: 16px;
+  }
+  .toc-link {
+    font-size: 0.9rem;
+  }
+  .toc-sublink {
+    font-size: 0.9rem;
+  }
+}

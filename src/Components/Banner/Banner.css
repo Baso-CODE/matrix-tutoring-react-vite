@@ -1,0 +1,60 @@
+.banner-container {
+  background-color: rgba(128, 128, 128, 0.1);
+  padding: 10px;
+  margin-top: 25px;
+  margin-bottom: 25px;
+  text-align: center;
+  font-size: 28px; /* Default font-size for container */
+  font-family: "Nunito", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  color: #333333;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Override h1 styles */
+.banner-container h2 {
+  font-weight: 600;
+  font-size: 1.4rem;
+  margin: 0;
+  font-family: "Nunito", sans-serif;
+}
+
+@media (max-width: 1200px) {
+  .banner-container {
+    font-size: 24px;
+  }
+
+  .banner-container h2 {
+    font-size: 24px;
+  }
+}
+
+/* Media query for screens smaller than 768px (tablets) */
+@media (max-width: 768px) {
+  .banner-container {
+    font-size: 20px; /* Smaller font size for tablets */
+    padding: 8px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+
+  .banner-container h2 {
+    font-size: 20px; /* Match the container's font size */
+  }
+}
+
+/* Media query for screens smaller than 480px (phones) */
+@media (max-width: 480px) {
+  .banner-container {
+    font-size: 16px; /* Small font size for phones */
+    padding: 6px;
+    margin-top: 15px;
+    margin-bottom: 15px;
+  }
+
+  .banner-container h2 {
+    font-size: 16px; /* Match the container's font size */
+  }
+}

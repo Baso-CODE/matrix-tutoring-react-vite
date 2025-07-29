@@ -1,0 +1,191 @@
+/* MatrixDifferentiationSMA.css */
+
+.differentiation-section {
+  padding: 80px 0px;
+  text-align: center;
+  overflow: hidden;
+  position: relative;
+}
+
+.differentiation-container {
+  max-width: 1240px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 1;
+}
+
+.differentiation-title {
+  font-size: 1.5rem;
+  font-weight: 800;
+  color: #333333;
+  margin-bottom: 15px;
+  font-family: "Nunito", sans-serif;
+  line-height: 1.2;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.03);
+}
+
+.highlight-text {
+  color: #333333; /* Warna aksen oranye */
+}
+
+.differentiation-subtitle {
+  font-size: 1rem;
+  color: #4f4f4f;
+  margin-bottom: 70px;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+  line-height: 1.6;
+  font-family: "Nunito", sans-serif;
+}
+
+.features-list-matrix-differentiation-sma {
+  display: flex;
+  flex-direction: column;
+  gap: 80px; /* Jarak antar blok fitur */
+}
+
+.feature-block-matrix-differention-sma {
+  display: flex;
+  align-items: center;
+  gap: 40px; /* Jarak antara konten dan gambar */
+  padding: 30px;
+  background-color: #ffffff;
+  border-radius: 20px;
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.08); /* Bayangan lebih menonjol */
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+  border: 1px solid #e6f0ff; /* Border lembut */
+}
+
+.feature-block-matrix-differention-sma:hover {
+  transform: translateY(-12px);
+  box-shadow: 0 25px 60px rgba(0, 0, 0, 0.15);
+}
+
+.feature-block-matrix-differention-sma-reverse {
+  flex-direction: row-reverse; /* Mengubah urutan untuk blok terbalik */
+}
+
+.feature-content {
+  flex: 1;
+  text-align: left; /* Teks rata kiri */
+  padding: 20px;
+}
+
+.feature-image-wrapper {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* PENTING: Tambahkan perspektif pada wrapper agar rotasi 3D terlihat */
+  perspective: 1000px; /* Nilai ini bisa disesuaikan */
+}
+
+.feature-image {
+  max-width: 100%;
+  max-height: 50vh;
+  border-radius: 15px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+  /* Transisi untuk efek rotasi. Durasi 1 detik agar terlihat jelas */
+  transition: transform 1s ease-in-out;
+  /* backface-visibility: hidden; */ /* Opsional: Hapus ini jika Anda ingin melihat sisi belakang gambar yang terbalik selama rotasi 180-360 */
+  /* Jika backface-visibility: hidden; diaktifkan, gambar akan "menghilang" saat di tengah rotasi (90-270 derajat) */
+}
+
+/* Efek flip 360 derajat saat hover pada keseluruhan feature-block */
+.feature-block-matrix-differention-sma:hover .feature-image {
+  transform: rotateY(360deg); /* Rotasi penuh 360 derajat */
+  /* Ini akan membuat gambar berputar 360 derajat dan kembali ke orientasi semula */
+}
+
+.feature-icon-differention-sma-wrapper {
+  background: linear-gradient(45deg, #007bff, #3b82f6); /* Gradasi biru */
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 20px;
+  box-shadow: 0 5px 15px rgba(13, 16, 185, 0.3);
+  border: 3px solid #ffffff;
+}
+
+.feature-icon-differention-sma {
+  color: #ffffff;
+  font-size: 2rem;
+}
+
+.feature-title {
+  font-size: 1.8rem; /* Ukuran judul fitur */
+  font-weight: 700;
+  color: #007bff;
+  margin-bottom: 15px;
+  font-family: "Nunito", sans-serif;
+}
+
+.feature-description {
+  font-size: 1.05rem;
+  color: #64748b;
+  line-height: 1.7;
+  font-family: "Nunito", sans-serif;
+}
+
+/* Responsivitas */
+@media (max-width: 992px) {
+  /* Untuk tablet dan mobile */
+  .feature-block-matrix-differention-sma {
+    flex-direction: column; /* Tumpuk konten dan gambar */
+    text-align: center;
+  }
+  .feature-block-matrix-differention-sma-reverse {
+    flex-direction: column; /* Tetap bertumpuk */
+  }
+  .feature-content {
+    text-align: center; /* Teks rata tengah di mobile */
+    padding: 15px;
+  }
+  .feature-icon-differention-sma-wrapper {
+    margin-bottom: 15px;
+  }
+  .feature-title {
+    font-size: 1.4rem;
+    text-align: start;
+  }
+  .feature-description {
+    font-size: 0.95rem;
+    text-align: start;
+  }
+  .differentiation-title {
+    font-size: 2.2rem;
+  }
+  .differentiation-subtitle {
+    font-size: 1.1rem;
+    margin-bottom: 40px;
+  }
+}
+
+@media (max-width: 480px) {
+  .differentiation-title {
+    font-size: 1.8rem;
+  }
+  .differentiation-subtitle {
+    font-size: 1rem;
+  }
+  .feature-block-matrix-differention-sma {
+    padding: 20px;
+  }
+  .feature-icon-differention-sma-wrapper {
+    width: 60px;
+    height: 60px;
+  }
+  .feature-icon-differention-sma {
+    font-size: 1.8rem;
+  }
+  .feature-title {
+    font-size: 1.3rem;
+  }
+  .feature-description {
+    font-size: 0.9rem;
+  }
+}

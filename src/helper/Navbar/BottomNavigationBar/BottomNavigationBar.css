@@ -1,0 +1,113 @@
+@media (min-width: 1024px) {
+  .bottom-nav-bar {
+    display: none;
+  }
+}
+
+.bottom-nav-bar {
+  position: fixed;
+  font-family: "Nunito", sans-serif;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 50;
+  background-color: #ffffff; /* Latar belakang putih */
+  box-shadow: 0 -4px 10px rgba(0, 0, 0, 0.1); /* Bayangan di bagian atas */
+  padding: 8px 10px; /* Padding atas-bawah dan kanan-kiri */
+  border-top-left-radius: 15px; /* Sudut membulat di kiri atas */
+  border-top-right-radius: 15px;
+  border-top: 1px solid #e2e8f0; /* Warna border-top biru muda sebelumnya */
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.bottom-nav-container {
+  display: flex;
+  justify-content: space-around; /* Menyebarkan item secara merata */
+  align-items: center;
+  height: 64px; /* Tinggi bilah navigasi */
+  max-width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.bottom-nav-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 8px;
+  border-radius: 12px; /* Sudut membulat untuk setiap item */
+  text-decoration: none; /* Hapus garis bawah tautan */
+  color: #64748b; /* Warna teks default (abu-abu) */
+  flex-grow: 1; /* Biarkan item tumbuh mengisi ruang */
+  transition: all 0.2s ease-in-out; /* Transisi halus untuk hover/active */
+  white-space: nowrap; /* Pastikan teks tidak patah baris */
+}
+
+.bottom-nav-item:focus {
+  outline: none; /* Hapus outline fokus default */
+  box-shadow: 0 0 0 2px #222222; /* Cincin fokus biru #222222 */
+}
+
+.bottom-nav-item:hover {
+  color: #222222; /* Warna teks saat hover (biru #222222) */
+  background-color: rgba(
+    59,
+    130,
+    246,
+    0.05
+  ); /* Latar belakang saat hover (biru transparan sebelumnya) */
+}
+
+.bottom-nav-item.active {
+  color: #222222; /* Warna teks saat aktif (biru #222222) */
+  background-color: #eff6ff; /* Latar belakang saat aktif (biru sangat muda sebelumnya) */
+  outline: 2px solid #222222; /* Ring: tebal 2px, solid, warna #222222 */
+  outline-offset: 2px; /* Jarak antara elemen dan ring */
+  border-radius: 12px; /* Pastikan ring juga mengikuti border-radius parent */
+}
+
+.bottom-nav-icon {
+  width: 24px; /* Lebar ikon */
+  height: 24px; /* Tinggi ikon */
+  margin-bottom: 4px; /* Jarak antara ikon dan teks */
+  transition: color 0.2s; /* Transisi warna ikon */
+  color: #222222;
+}
+
+.bottom-nav-item.active .bottom-nav-icon {
+  color: #222222; /* Warna ikon saat aktif (biru #222222) */
+}
+
+.bottom-nav-text {
+  font-size: 12px; /* Ukuran font teks */
+  font-weight: 500; /* Ketebalan font */
+  transition: color 0.2s; /* Transisi warna teks */
+  color: #333333;
+}
+
+.bottom-nav-item.active .bottom-nav-text {
+  color: #222222; /* Warna teks saat aktif (biru #222222) */
+}
+
+/* Penyesuaian untuk ukuran layar yang sangat kecil (opsional) */
+@media (max-width: 360px) {
+  .bottom-nav-bar {
+    padding: 6px 5px;
+  }
+  .bottom-nav-item {
+    padding: 6px;
+  }
+  .bottom-nav-icon {
+    width: 20px;
+    height: 20px;
+  }
+  .bottom-nav-text {
+    font-size: 10px;
+  }
+}

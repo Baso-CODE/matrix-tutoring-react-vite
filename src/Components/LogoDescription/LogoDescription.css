@@ -1,0 +1,119 @@
+.logo-description-container {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+
+  text-align: left;
+  flex-direction: column;
+}
+
+.logo-image {
+  max-width: 100%;
+  height: auto;
+  margin-bottom: 20px;
+  flex: 1 1 100%;
+}
+
+.description-text {
+  flex: 1 1 100%;
+  font-size: 16px;
+  font-family: "Arial", sans-serif;
+  color: #333333;
+}
+
+.description-text p {
+  margin: 0 0 10px;
+  font-family: "Nunito", sans-serif;
+  font-weight: 400;
+  font-size: 17px;
+  line-height: 21px;
+  text-align: start;
+  font-style: normal;
+}
+
+@media (min-width: 1024px) {
+  .logo-description-container {
+    flex-direction: row;
+  }
+
+  .logo-image {
+    margin-bottom: 0;
+
+    flex: 1 1 40%;
+  }
+
+  .description-text {
+    flex: 1 1 60%;
+    font-size: 18px;
+  }
+}
+.logo-description-container {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+
+  text-align: center;
+  flex-direction: column;
+}
+
+.logo-image {
+  max-width: 100%;
+  height: 50%;
+  margin-bottom: 20px;
+  flex: 1 1 100%;
+}
+
+.description-text {
+  flex: 1 1 100%;
+  font-size: 16px;
+  font-family: "Arial", sans-serif;
+  color: #333333;
+}
+
+.description-text p {
+  margin: 0 0 10px;
+}
+
+@media (min-width: 1024px) {
+  .logo-description-container {
+    flex-direction: row; /* Untuk layar besar, ubah menjadi susunan kiri-kanan */
+  }
+
+  .logo-image {
+    margin-bottom: 0; /* Hilangkan margin bawah di layout horizontal */
+    /* Tambahkan margin kanan untuk jarak di layout horizontal */
+    flex: 1 1 40%; /* Sesuaikan proporsi logo */
+  }
+
+  .description-text {
+    flex: 1 1 60%; /* Sesuaikan proporsi teks */
+    font-size: 18px; /* Besarkan ukuran font untuk layar besar */
+  }
+}
+
+.menu-toggle {
+  background-color: transparent; /* Make background transparent */
+  border: none; /* Remove border */
+  cursor: pointer; /* Change cursor to pointer on hover */
+  font-size: 24px; /* Adjust font size */
+  color: #333333; /* Set default icon color */
+  transition: color 0.3s ease; /* Smooth transition for color change */
+  padding: 10px; /* Add padding for better click area */
+  margin: 0; /* Reset margin */
+}
+
+/* Change color on hover */
+.menu-toggle:hover {
+  color: #646cff; /* Change color on hover */
+}
+
+/* Change color when the menu is open */
+.menu-toggle:focus {
+  outline: none; /* Remove default focus outline */
+}
+
+/* Add styles for the icon size */
+.menu-toggle svg {
+  width: 1.5em; /* Set icon width */
+  height: 1.5em; /* Set icon height */
+}

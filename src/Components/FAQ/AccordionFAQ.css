@@ -1,0 +1,134 @@
+.accordion-container-faq {
+  border: 1px solid #e5e7eb;
+  border-radius: 8px;
+
+  overflow: hidden;
+}
+
+/* Tombol header setiap FAQ */
+.accordion-button-faq {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  padding: 16px 20px;
+  text-align: left;
+  background-color: #f9fafb;
+  border: none;
+  cursor: pointer;
+  outline: none;
+  transition: background-color 0.3s ease;
+}
+
+.accordion-button-faq:hover {
+  background-color: #f3f4f6;
+}
+
+/* Gaya teks pertanyaan */
+.accordion-button-faq span {
+  font-size: 1.12rem;
+  font-weight: 600;
+  color: #1f2937;
+  font-family: "Nunito", sans-serif;
+  flex-grow: 1;
+  margin-right: 16px;
+}
+
+/* Gaya ikon SVG */
+.accordion-button-faq svg {
+  width: 24px;
+  height: 24px;
+  color: #4f46e5;
+  transition: transform 0.3s ease-in-out;
+  flex-shrink: 0;
+}
+
+/* Rotasi ikon saat accordion terbuka */
+.accordion-button-faq.rotate svg {
+  transform: rotate(90deg);
+}
+
+/* Konten jawaban FAQ */
+.accordion-content {
+  overflow: hidden;
+  transition: max-height 0.4s ease-in-out; /* Transisi lebih halus */
+}
+
+.accordion-content-inner {
+  padding: 16px 20px;
+  font-weight: 400;
+  color: #f4f4f4;
+  font-family: "Nunito", sans-serif;
+  background-color: #007bff;
+  border-top: 1px solid #e5e7eb;
+}
+
+/* Kontainer utama halaman FAQ */
+.main-container-faq {
+  width: 100%;
+  padding-top: 10vh;
+  /* padding: 0px 0; */
+  padding-bottom: 10vh;
+  /* background: linear-gradient(to right, #e0f2ff 0%, #66aaff 50%, #006bde 100%); */
+  background: #007bff;
+}
+
+.main-wrapper-faq {
+  min-height: max-content;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0 auto;
+}
+
+/* Judul halaman FAQ */
+.accordion-title-faq {
+  margin-bottom: 40px;
+  font-size: 2rem;
+  font-weight: 700;
+  text-align: center;
+  /* font-family: "Nunito", sans-serif; */
+  color: #f3f3f3;
+}
+
+.accordion-wrapper-faq {
+  background-color: #ffffff; /* Latar belakang putih untuk wrapper item */
+  border-radius: 12px; /* Radius lebih besar */
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08); /* Tambahkan shadow */
+  width: 100%;
+  max-width: 1120px;
+}
+
+/* Media queries untuk responsivitas */
+@media (max-width: 1024px) {
+  .main-wrapper-faq {
+    padding: 0 4%;
+  }
+}
+@media (max-width: 768px) {
+  .accordion-button-faq span {
+    font-size: 0.9rem; /* text-base */
+  }
+  .accordion-button-faq svg {
+    width: 20px;
+    height: 20px;
+  }
+  /* .accordion-wrapper-faq {
+    padding-left: 2vw;
+    padding-right: 2vw;
+  } */
+
+  .accordion-title-faq {
+    font-size: 1.7rem; /* text-3xl */
+    margin-bottom: 24px;
+  }
+  .main-container-faq {
+    padding: 7vh 0;
+  }
+  .main-wrapper-faq {
+    padding: 0 4%;
+  }
+  .accordion-content-inner {
+    font-size: 0.9rem; /* Ukuran font konten sedikit lebih kecil */
+  }
+}

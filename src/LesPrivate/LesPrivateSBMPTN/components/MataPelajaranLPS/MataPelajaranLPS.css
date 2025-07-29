@@ -1,0 +1,38 @@
+/* Indicator Section (List of signs) */
+.needs-indicator-section {
+  background-color: #f9f9f9;
+  border-left: 5px solid #0455c0;
+  padding: 20px;
+  margin: 30px 0;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+}
+
+.indicator-title {
+  font-size: 1.2rem;
+  color: #555;
+  margin-bottom: 15px;
+  font-weight: 600;
+}
+
+.indicator-list {
+  list-style-type: none; /* Hapus bullet default */
+  padding: 0;
+  margin: 0;
+}
+
+.indicator-list li {
+  position: relative;
+  padding-left: 25px;
+  margin-bottom: 10px;
+  font-size: 0.95rem;
+}
+
+.indicator-list li::before {
+  content: "👉";
+  position: absolute;
+  left: 0;
+  color: #0656c0;
+  font-size: 1rem;
+  line-height: 1.6;
+}

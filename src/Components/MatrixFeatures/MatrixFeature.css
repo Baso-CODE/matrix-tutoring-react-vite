@@ -1,0 +1,197 @@
+/* MatrixFeature.css */
+
+.matrix-features-section {
+  padding: 80px 0;
+
+  text-align: center;
+}
+
+.container-general {
+  max-width: 1240px;
+}
+
+.matrix-content-wrapper {
+  display: flex;
+  flex-wrap: nowrap; /* Menggunakan wrap agar bisa ke bawah di mobile */
+  gap: 40px;
+  justify-content: center;
+  margin-top: 30px;
+}
+
+/* Styling untuk kedua kolom (Mengapa Matrix & Mata Pelajaran) */
+.matrix-why-us,
+.matrix-subjects-offered {
+  background-color: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+  padding: 40px 30px;
+  max-width: 550px;
+  text-align: left; /* Teks dalam kolom rata kiri secara default */
+  display: flex;
+  flex-direction: column;
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.matrix-why-us:hover,
+.matrix-subjects-offered:hover {
+  transform: translateY(-10px); /* Mengangkat kotak 10px ke atas */
+  box-shadow: 0 18px 40px rgba(0, 0, 0, 0.15); /* Bayangan menjadi lebih besar dan sedikit lebih gelap */
+}
+
+.matrix-heading {
+  font-size: 1.4rem;
+  color: #2c3e50;
+  margin-bottom: 6px;
+  font-weight: 700;
+  font-family: "Nunito", sans-serif;
+}
+
+.matrix-heading span {
+  color: #006bde; /* Warna teks span */
+  position: relative; /* Penting: agar ::after bisa diposisikan relatif terhadap span ini */
+  padding-bottom: 10px; /* Tambahkan padding-bottom di sini untuk ruang garis */
+  display: inline-block; /* Penting: agar padding dan posisi ::after bekerja dengan baik */
+}
+
+/* Garis bawah untuk teks dalam span (target baru) */
+.underline-text::after {
+  content: "";
+  position: absolute;
+  left: 0; /* Mulai dari kiri span */
+  bottom: 0; /* Di bagian bawah span */
+  width: 100%; /* Lebar garis sama dengan lebar span */
+  height: 4px;
+  background-color: #006bde;
+  border-radius: 2px;
+}
+
+.matrix-description {
+  font-size: 1rem;
+  color: #4f4f4f;
+  font-family: "Nunito", sans-serif;
+  margin-bottom: 30px;
+  line-height: 1.6;
+}
+
+/* Styling untuk daftar "Mengapa Harus Matrix" */
+.why-us-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.why-us-item {
+  display: flex;
+  align-items: flex-start;
+  margin-bottom: 10px;
+  font-size: 1rem;
+  color: #4f4f4f;
+  font-family: "Nunito", sans-serif;
+  line-height: 1.4;
+  font-weight: normal;
+}
+
+.feature-check-icon {
+  color: #28a745;
+  font-size: 1.3rem;
+  margin-right: 12px;
+  flex-shrink: 0;
+  margin-top: 3px;
+}
+
+/* Styling untuk daftar "Semua Mata Pelajaran" */
+.subject-offered-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 10px;
+}
+
+.subject-offered-item {
+  font-size: 1rem;
+  color: #4f4f4f;
+  font-family: "Nunito", sans-serif;
+  font-weight: 600;
+  padding-left: 25px;
+  position: relative;
+  line-height: 1.4;
+  font-weight: normal;
+}
+
+.subject-offered-item::before {
+  content: "\2022";
+  color: #ff6f00;
+  font-size: 1.2em;
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+
+/* Responsive Adjustments */
+@media (min-width: 992px) {
+  .matrix-why-us,
+  .matrix-subjects-offered {
+    width: calc(50% - 20px);
+  }
+}
+
+@media (max-width: 768px) {
+  .matrix-features-section {
+    padding: 60px 0;
+  }
+
+  .matrix-content-wrapper {
+    flex-direction: column;
+    gap: 30px;
+  }
+
+  .matrix-why-us,
+  .matrix-subjects-offered {
+    padding: 30px 20px;
+    max-width: 100%;
+  }
+
+  .matrix-heading {
+    font-size: 1.8rem;
+    text-align: start; /* Tetap di tengah */
+  }
+
+  /* Ini penting: hapus aturan ::after dari media query ini
+     karena sekarang ::after sudah otomatis presisi dengan span */
+  /* .matrix-heading::after {
+    left: 50%;
+    transform: translateX(46%);
+  } */
+
+  .matrix-description {
+    font-size: 1rem;
+    text-align: start;
+    margin-top: 0;
+  }
+
+  .why-us-list,
+  .subject-offered-list {
+    text-align: left;
+  }
+}
+
+@media (max-width: 480px) {
+  .matrix-features-section {
+    padding: 40px 0;
+  }
+  .matrix-heading {
+    font-size: 1.4rem;
+    text-emphasis: start;
+  }
+  .matrix-description,
+  .why-us-item,
+  .subject-offered-item {
+    font-size: 0.9rem;
+  }
+  .feature-check-icon {
+    font-size: 1.1rem;
+  }
+}

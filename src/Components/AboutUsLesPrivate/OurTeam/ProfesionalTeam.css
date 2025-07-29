@@ -1,0 +1,69 @@
+.profesional-team-section {
+  display: flex;
+
+  margin-top: 7rem;
+  margin-bottom: 7rem;
+  align-items: center;
+}
+
+.profesional-team-inner {
+  display: flex;
+  flex-direction: column;
+
+  align-items: center;
+  margin-bottom: 1.75rem;
+}
+
+.profesional-team-title {
+  font-size: 2rem;
+  text-align: center;
+  color: #333333;
+  max-width: 100%;
+  line-height: 1.25;
+  font-weight: bold;
+  text-transform: uppercase;
+  font-family: "Nunito", sans-serif;
+}
+
+@media (min-width: 768px) {
+  .profesional-team-title {
+    font-size: 2.4rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .profesional-team-title {
+    font-size: 3rem;
+  }
+}
+
+/* Gambar untuk desktop */
+.desktop-image {
+  display: block;
+}
+
+/* Gambar untuk mobile */
+.mobile-image {
+  display: none;
+}
+
+.profesional-team-image img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 20px;
+}
+
+@media (max-width: 768px) {
+  .desktop-image {
+    display: none;
+  }
+
+  .mobile-image {
+    display: block;
+  }
+
+  .profesional-team-image img {
+    width: 100%;
+    height: auto;
+  }
+}

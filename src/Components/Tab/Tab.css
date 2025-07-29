@@ -1,0 +1,188 @@
+.container-all-tab {
+  background-color: rgb(255, 255, 255);
+  border-radius: 10px;
+  margin-top: 10vh;
+  margin-bottom: 5vh;
+}
+
+.title-container {
+  display: flex;
+  padding-left: 3vh;
+  align-items: center;
+}
+
+.title-list {
+  font-family: "Nunito", sans-serif;
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: #333333;
+  padding-left: 10px;
+}
+
+.parent-list-kota {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+
+  padding: 20px;
+  border-radius: 10px;
+  background-image: url("/src/assets/kota_bg.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.btn-kota {
+  color: #333333;
+  padding: 5px;
+  border-radius: 50px;
+  font-family: "Nunito", sans-serif;
+  width: 20%;
+  height: 20%;
+  font-weight: 600;
+  font-size: 1rem;
+  text-decoration: none;
+}
+
+.btn-kota:hover {
+  background-color: #007bff;
+  color: white;
+  transition: 0.3s;
+}
+
+/* KELAS
+.parent-list-kelas {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  gap: 10px;
+  margin-top: 20px;
+  padding: 20px;
+  border-radius: 10px;
+  background-image: url("/src/assets/program_bg.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+} */
+
+.btn-kelas {
+  color: rgb(0, 0, 0);
+  padding: 5px;
+  border-radius: 50px;
+  font-family: "Montserrat", sans-serif;
+  width: 25%;
+  font-weight: 500;
+  font-size: 16px;
+  text-decoration: none;
+}
+
+.btn-kelas:hover {
+  background-color: #f52f63;
+  color: white;
+  transition: 0.3s;
+}
+
+.btn-mapel {
+  color: rgb(0, 0, 0);
+  padding: 6px;
+  border-radius: 50px;
+  font-family: "Montserrat", sans-serif;
+  width: 25%;
+  font-weight: 500;
+  font-size: 16px;
+  text-decoration: none;
+}
+
+.combine-icon-text {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.icon-mapel {
+  width: 30px;
+}
+
+.btn-mapel:hover {
+  background-color: #f52f63;
+  color: white;
+  transition: 0.3s;
+}
+
+.title-jangkauan-kota {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+.icon-jangkauan-kota {
+  width: 50px;
+}
+
+.icon-city {
+  width: 40px; /* Ukuran gambar PNG */
+  height: auto; /* Otomatis menyesuaikan tinggi gambar */
+}
+
+/* RESPONSIVE */
+@media only screen and (max-width: 500px) {
+  .btn-kota {
+    width: 44%; /* Dua item dalam satu baris */
+  }
+  .btn-kelas {
+    width: 100%; /* Satu item per baris */
+  }
+  .btn-mapel {
+    width: 40%; /* Dua item dalam satu baris */
+  }
+  .tab {
+    margin-top: 10px;
+    /* width: 33%; */
+  }
+  .container-all-tab {
+    margin-top: 20px;
+    gap: 10px;
+  }
+  .container-tab {
+    border-radius: 0 0 10px 10px;
+  }
+  .combine-icon-text {
+    display: flex;
+    align-items: center;
+  }
+  .parent-list-mapel {
+    justify-content: space-between;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .parent-list-kota {
+    justify-content: space-between;
+  }
+  .title-list {
+    font-size: 1.3rem;
+    line-height: 22px;
+  }
+}
+
+@media only screen and (max-width: 820px) {
+  .parent-list-mapel,
+  .parent-list-kota,
+  .parent-list-kelas {
+    justify-content: space-between;
+  }
+}
+
+/* Style untuk pesan No Kelurahan */
+.no-kelurahan {
+  font-family: "Montserrat", sans-serif;
+  font-size: 18px;
+  font-weight: 700;
+  color: #f52f63;
+  padding: 20px;
+  text-align: center;
+  width: 100%;
+  border-radius: 10px;
+  background-color: rgba(245, 47, 99, 0.1);
+  margin-top: 20px;
+}

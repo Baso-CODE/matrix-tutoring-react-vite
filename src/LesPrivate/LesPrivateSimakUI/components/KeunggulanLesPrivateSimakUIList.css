@@ -1,0 +1,61 @@
+.keunggulan-les-private-UI-list-container {
+  padding: 0;
+  margin-top: 6vh;
+  margin-bottom: 6vh;
+}
+
+.keunggulan-les-private-UI-list-container h2 {
+  font-size: 1.2rem;
+  color: #333333;
+  margin-top: 2rem;
+  font-weight: 600;
+  margin-bottom: 1.8rem;
+  font-family: "Nunito", sans-serif;
+}
+
+.keunggulan-subject-list-les-private-UI {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  display: grid;
+  gap: 9px;
+}
+
+.keunggulan-subject-list-les-private-UI-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+  margin-bottom: 8px;
+}
+
+.keunggulan-subject-list-les-private-UI-icon {
+  flex-shrink: 0;
+  width: 24px;
+  height: 24px;
+  color: #4caf50;
+}
+
+.subject-text {
+  flex: 1;
+  font-weight: 700;
+  color: #4a4a4a;
+  font-size: 1rem;
+  font-weight: normal;
+  line-height: normal;
+  font-family: "Nunito", sans-serif;
+}
+
+@media (max-width: 768px) {
+  .keunggulan-subject-list-les-private-UI-icon {
+    flex-shrink: 0;
+    width: 18px;
+    height: auto;
+    color: #4caf50;
+  }
+  .subject-text {
+    font-size: 0.9rem;
+  }
+  .keunggulan-les-private-UI-list-container h2 {
+    font-size: 1.1rem;
+  }
+}

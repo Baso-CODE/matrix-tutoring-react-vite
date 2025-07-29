@@ -1,0 +1,204 @@
+.program-modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  font-family: "Nunito", sans-serif;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.7); /* Overlay gelap transparan */
+  display: flex;
+  justify-content: center;
+  align-items: flex-end; /* Awalnya di bawah untuk mobile */
+  z-index: 1001;
+  animation: fadeIn 0.5s ease-out; /* Animasi masuk overlay */
+}
+
+/* Animasi keluar untuk overlay */
+.program-modal-overlay.fade-out {
+  animation: fadeOut 0.5s ease-in forwards; /* 'forwards' menjaga state akhir animasi */
+}
+
+.program-modal-content {
+  background-color: #ffffff;
+  width: 100%;
+  max-width: 500px;
+  padding: 24px; /* Padding ini berlaku untuk seluruh konten modal */
+  border-top-left-radius: 24px;
+  border-top-right-radius: 24px;
+  box-shadow: 0 -8px 20px rgba(0, 0, 0, 0.2);
+  transform: translateY(0%); /* Posisi awal */
+  animation: slideUp 0.5s ease-out; /* Animasi masuk content (mobile) */
+  max-height: 80vh; /* Tinggi maksimum modal */
+
+  /* --- Perubahan untuk Gulir --- */
+  display: flex; /* Jadikan kontainer flex */
+  flex-direction: column; /* Susun item secara vertikal */
+  /* Hapus 'overflow-y: auto;' dari sini */
+  position: relative; /* Penting untuk tombol close absolute */
+}
+
+/* Animasi keluar untuk content (mobile: slide down) */
+.program-modal-content.slide-down {
+  animation: slideDown 0.5s ease-in forwards; /* 'forwards' menjaga state akhir animasi */
+}
+
+@media (min-width: 768px) {
+  .program-modal-overlay {
+    align-items: center; /* Pusatkan vertikal di desktop */
+  }
+  .program-modal-content {
+    border-radius: 24px; /* Bulatkan semua sudut di desktop */
+    transform: translateY(0); /* Posisi tengah di desktop */
+    animation: fadeInScale 0.5s ease-out; /* Animasi masuk content (desktop) */
+    align-self: center; /* Pusatkan vertikal di desktop */
+  }
+  /* Animasi keluar untuk content (desktop: fade out and scale down) */
+  .program-modal-content.slide-down {
+    animation: fadeOutScale 0.5s ease-in forwards; /* Gunakan animasi desktop untuk keluar */
+  }
+}
+
+.program-modal-close-button {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: #64748b;
+  padding: 8px;
+  border-radius: 50%;
+  transition: background-color 0.2s;
+}
+
+.program-modal-close-button:hover {
+  background-color: #f0f4f8;
+}
+
+.program-modal-title {
+  font-size: 28px;
+  font-weight: bold;
+  color: #222222;
+  margin-bottom: 24px;
+  text-align: center;
+  flex-shrink: 0;
+}
+
+.program-modal-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px; /* gap-3 */
+
+  overflow-y: auto;
+  flex-grow: 1;
+  padding-bottom: 1px;
+  padding-top: 1px;
+}
+
+.program-modal-item {
+  display: flex;
+  align-items: center;
+  padding: 16px;
+  background-color: #eff6ff;
+  border-radius: 8px;
+  text-decoration: none;
+  color: #333333; /* Warna teks abu-abu dari bottom nav default */
+  transition: background-color 0.2s, transform 0.2s, box-shadow 0.2s;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+}
+
+.program-modal-item:hover {
+  background-color: rgba(
+    59,
+    130,
+    246,
+    0.05
+  ); /* Warna biru transparan dari bottom nav hover */
+  transform: translateY(-2px);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.program-modal-item-icon {
+  width: 24px;
+  height: 24px;
+  color: #222222; /* Warna ikon biru #222222 */
+  margin-right: 16px;
+  flex-shrink: 0;
+}
+
+.program-modal-item-text-wrapper {
+  display: flex;
+  flex-direction: column;
+}
+
+.program-modal-item-name {
+  font-weight: 700; /* font-semibold */
+  font-size: 16px; /* text-base */
+  color: #222222; /* Warna teks nama program biru #222222 */
+}
+
+.program-modal-item-desc {
+  font-size: 12px; /* text-xs */
+  color: #333333; /* text-gray-500, tetap abu-abu */
+  margin-top: 2px;
+}
+
+/* Animasi Masuk */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slideUp {
+  from {
+    transform: translateY(100%);
+  }
+  to {
+    transform: translateY(0%);
+  }
+}
+
+@keyframes fadeInScale {
+  from {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+/* Animasi Keluar Baru */
+@keyframes fadeOut {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+
+@keyframes slideDown {
+  from {
+    transform: translateY(0%);
+  }
+  to {
+    transform: translateY(100%);
+  }
+}
+
+@keyframes fadeOutScale {
+  from {
+    opacity: 1;
+    transform: scale(1);
+  }
+  to {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+}

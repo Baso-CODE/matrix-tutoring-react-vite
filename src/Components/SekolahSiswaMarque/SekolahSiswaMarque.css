@@ -1,0 +1,27 @@
+/* styles.css */
+.container-asal-sekolah-siswa-marque {
+  margin-top: 40px;
+}
+
+.wrapper-asal-sekolah-siswa-marque {
+  padding-left: 16px; /* px-4 */
+  padding-right: 16px; /* px-4 */
+}
+
+.marquee-container-asal-sekolah-siswa-marque {
+  overflow: hidden; /* overflow-hidden */
+  white-space: nowrap; /* whitespace-nowrap */
+  padding-top: 16px; /* py-4 */
+  padding-bottom: 16px; /* py-4 */
+}
+
+.marquee-grid {
+  display: flex; /* flex */
+}
+
+.marquee-grid img {
+  display: inline-block; /* inline-block */
+
+  height: 80vh; /* h-[80vh] */
+  border-radius: 8px; /* rounded-md */
+}

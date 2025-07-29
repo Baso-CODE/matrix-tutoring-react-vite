@@ -1,0 +1,81 @@
+.about-us-history-and-success {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.about-us-section {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 2rem;
+}
+
+.history .about-us-image-history-and-success {
+  order: 1;
+}
+
+.history .about-us-description {
+  order: 2;
+}
+
+.success-story .about-us-image-history-and-success {
+  order: 2;
+}
+
+.success-story .about-us-description {
+  order: 1;
+}
+
+.about-us-image-history-and-success img {
+  width: 100%;
+  max-width: 400px; /* Adjust max width as needed */
+  height: auto;
+}
+
+.about-us-description {
+  flex: 1;
+}
+
+.about-us-description h2 {
+  font-size: 1.75rem;
+  color: #333333;
+  font-family: "Nunito", sans-serif;
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+.about-us-success-story-h2 {
+  text-align: left;
+
+  @media (max-width: 768px) {
+    text-align: left;
+  }
+}
+.about-us-description p {
+  font-size: 1rem;
+  color: #555;
+  font-weight: 500;
+  font-family: "Nunito", sans-serif;
+  line-height: 1.6;
+  margin-bottom: 1rem;
+}
+
+@media (max-width: 768px) {
+  .about-us-section {
+    flex-direction: column;
+  }
+
+  .history .about-us-image-history-and-success,
+  .success-story .about-us-image-history-and-success {
+    order: 1;
+  }
+
+  .history .about-us-description,
+  .success-story .about-us-description {
+    order: 2;
+  }
+
+  .about-us-image-history-and-success img {
+    max-width: 100%;
+  }
+}

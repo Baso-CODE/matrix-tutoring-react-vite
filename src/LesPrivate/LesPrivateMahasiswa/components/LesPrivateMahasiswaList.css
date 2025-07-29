@@ -1,0 +1,59 @@
+/* LesPrivateMahasiswaList.css */
+
+.les-private-mahasiswa-list-container {
+  padding: 0px;
+}
+
+.les-private-mahasiswa-list-container h2 {
+  font-size: 1rem;
+  color: #333333;
+  margin-top: 2rem;
+  /* font-weight: 700; */
+  font-weight: 600;
+  margin-bottom: 1rem;
+  font-family: "Nunito", sans-serif;
+}
+
+.subject-list-les-private-mahasiswa {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.subject-list-les-private-mahasiswa-item {
+  display: flex;
+  align-items: center;
+  margin-bottom: 8px;
+  font-weight: 500;
+  font-family: "Nunito", sans-serif;
+  color: #333333;
+}
+
+.subject-list-les-private-mahasiswa-icon {
+  margin-right: 8px;
+  color: #4caf50;
+}
+
+/* Media queries for responsiveness */
+@media (max-width: 1024px) {
+  /* Tablets and small desktops */
+  .subject-list-les-private-mahasiswa {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  /* Mobile devices */
+  .subject-list-les-private-mahasiswa {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 480px) {
+  /* Very small devices */
+  .subject-list-les-private-mahasiswa {
+    grid-template-columns: 1fr;
+  }
+}

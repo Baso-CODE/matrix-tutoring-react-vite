@@ -1,0 +1,49 @@
+/* MediaMassa.css */
+
+.container-media-marquee {
+  background-color: #d4e5f5;
+  position: relative;
+}
+
+.gradient-overlay {
+  position: absolute;
+  inset: 0;
+  z-index: 6;
+  pointer-events: none;
+  background: linear-gradient(to right, #d4e5f5, transparent, #d4e5f5);
+}
+
+.title-container-media-marquee {
+  text-align: center;
+  padding: 1rem 0;
+}
+
+.title-container-media-marquee-h2 {
+  color: #333333;
+  font-size: 2rem; /* Default size */
+  font-weight: bold;
+  font-family: "Nunito", sans-serif;
+}
+
+.marquee-container-media-marquee {
+  overflow: hidden;
+  white-space: nowrap;
+  padding: 1rem 0;
+}
+
+.marquee-media {
+  display: flex;
+}
+
+.marquee-media img {
+  display: inline-block;
+  margin: 0 1rem;
+  height: 70px;
+  border-radius: 0.5rem;
+}
+
+@media (max-width: 768px) {
+  .title-container-media-marquee-h2 {
+    font-size: 1.4rem;
+  }
+}

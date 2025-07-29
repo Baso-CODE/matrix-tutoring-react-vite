@@ -1,0 +1,52 @@
+.les-private-SBMPTN-list-container {
+  padding: 0;
+  margin-top: 7vh;
+  margin-bottom: 7vh;
+}
+
+.les-private-SBMPTN-list-container h2 {
+  font-size: 1.2rem;
+  color: #333333;
+  margin-top: 2rem;
+  margin-bottom: 1.8rem;
+}
+
+.subject-list-les-private-SBMPTN {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  display: grid;
+  gap: 6px;
+}
+
+.subject-list-les-private-SBMPTN-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+  margin-bottom: 8px;
+}
+
+.subject-list-les-private-SBMPTN-icon {
+  flex-shrink: 0;
+  width: 24px;
+  height: 24px;
+  color: #4caf50;
+}
+
+.subject-text {
+  flex: 1;
+  font-weight: 700;
+}
+
+@media (max-width: 768px) {
+  .les-private-SBMPTN-list-container h2 {
+    font-size: 1rem;
+  }
+  .subject-text {
+    font-size: 0.8rem;
+  }
+  .subject-list-les-private-SBMPTN-icon {
+    width: 18px;
+    height: auto;
+  }
+}

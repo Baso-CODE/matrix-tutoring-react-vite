@@ -1,0 +1,48 @@
+.slider-top,
+.slider-top-2 {
+  position: relative;
+  overflow: hidden;
+}
+
+.embla {
+  overflow: hidden;
+}
+
+.embla__container {
+  display: flex;
+}
+
+.embla__slide {
+  min-width: calc(
+    100% - 3px
+  ); /* Sesuaikan padding dengan margin yang Anda inginkan */
+  padding: 0 5px; /* Ubah nilai ini sesuai dengan jarak yang Anda inginkan */
+}
+
+.top-slider {
+  position: relative;
+}
+
+.slider img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.desktop-only {
+  display: block;
+}
+
+.mobile-only {
+  display: none;
+}
+
+@media (max-width: 768px) {
+  .desktop-only {
+    display: none;
+  }
+
+  .mobile-only {
+    display: block;
+  }
+}

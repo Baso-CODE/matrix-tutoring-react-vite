@@ -1,0 +1,107 @@
+/* AboutUsSection.css */
+
+.centered-content-lesPrivate-tka {
+  width: 100%;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.centered-content-lesPrivate-tka h1 {
+  font-size: 1.6rem;
+  font-family: "Nunito", sans-serif;
+  font-weight: 700;
+  color: #333333;
+  margin-bottom: 1rem;
+  text-align: center; /* Center-align heading text */
+}
+
+.centered-content-lesPrivate-tka h2 {
+  font-size: 1.3rem;
+  color: #333333;
+  font-family: "Nunito", sans-serif;
+  font-weight: 700;
+  margin-top: 2rem;
+  margin-bottom: 0.3rem;
+}
+
+.centered-content-lesPrivate-tka p {
+  font-size: 1rem;
+  color: #4f4f4f;
+  line-height: 1.6;
+  margin-bottom: 1.5rem;
+  font-weight: 500;
+  font-family: "Nunito", sans-serif;
+}
+
+.image-lesPrivate-tka {
+  margin: 2rem 0;
+  text-align: center;
+}
+
+.image-lesPrivate-tka img {
+  width: 50%;
+  height: auto;
+}
+
+.image-caption {
+  margin-top: 0.5rem;
+  font-size: 1rem;
+  color: #777;
+  text-align: center; /* Center-align image caption */
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 1024px) {
+  .centered-content-lesPrivate-tka h1 {
+    font-size: 1.6rem;
+  }
+
+  .centered-content-lesPrivate-tka h2 {
+    font-size: 1.4rem;
+  }
+
+  .centered-content-lesPrivate-tka p {
+    font-size: 1rem;
+  }
+
+  .image-caption {
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .centered-content-lesPrivate-tka h1 {
+    font-size: 1.4rem;
+  }
+
+  .centered-content-lesPrivate-tka h2 {
+    font-size: 1.2rem;
+  }
+
+  .centered-content-lesPrivate-tka p {
+    font-size: 1rem;
+  }
+
+  .image-caption {
+    font-size: 0.8rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .centered-content-lesPrivate-tka h1 {
+    font-size: 1.2rem;
+    line-height: 27px;
+  }
+
+  .centered-content-lesPrivate-tka h2 {
+    font-size: 1rem;
+  }
+
+  .centered-content-lesPrivate-tka p {
+    font-size: 0.8rem;
+  }
+
+  .image-caption {
+    font-size: 0.7rem;
+  }
+}

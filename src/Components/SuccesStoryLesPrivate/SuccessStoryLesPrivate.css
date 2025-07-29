@@ -1,0 +1,54 @@
+/* SuccessStory.css */
+.success-story-container {
+  text-align: center;
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
+
+.success-story-container h2 {
+  font-size: 1.7rem;
+  font-family: "Nunito", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+  color: #333333;
+}
+.success-story-description {
+  font-size: 1rem;
+  margin-bottom: 30px; /* Space between description and content */
+  font-family: "Nunito", sans-serif;
+  color: #555555;
+  font-weight: normal;
+}
+
+.success-story-content {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 20px;
+}
+
+.success-story-item {
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.success-story-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  border-radius: 10px;
+}
+
+@media (max-width: 768px) {
+  .success-story-content {
+    gap: 10px;
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .success-story-container h2 {
+    font-size: 1.5rem;
+    font-weight: 700;
+  }
+  .success-story-description {
+    font-size: 16px;
+  }
+}

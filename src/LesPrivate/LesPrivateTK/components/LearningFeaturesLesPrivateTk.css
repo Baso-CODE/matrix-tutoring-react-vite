@@ -1,0 +1,84 @@
+.learning-features-private-tk {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  margin-top: 30px;
+  margin-bottom: 45px;
+
+  border-radius: 12px; /* Membuat sudut rounded */
+}
+
+.feature-item-private-tk {
+  display: flex;
+  gap: 20px;
+  padding: 16px;
+  border-radius: 12px;
+  background-color: #ffffff; /* Warna putih untuk setiap item fitur */
+  align-items: flex-start;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Bayangan ringan */
+}
+
+.feature-icon-lesprivate-tk {
+  flex-shrink: 0;
+  width: 80px;
+  height: 80px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  margin-top: 20px;
+}
+
+.feature-content-lesprivate-tk {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  flex-grow: 1;
+}
+
+.feature-title {
+  font-size: 1.25rem;
+  margin-bottom: 6px;
+  color: #333333;
+  font-family: "Nunito", sans-serif;
+}
+
+.feature-description {
+  font-size: 1rem;
+  line-height: 1.5;
+  margin-top: 0;
+  color: #4f4f4f;
+  font-family: "Nunito", sans-serif;
+}
+
+@media (max-width: 768px) {
+  .feature-item-private-tk {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .feature-icon-lesprivate-tk {
+    width: 75px;
+    height: 75px;
+    font-size: 45px;
+    margin-bottom: 0px;
+  }
+
+  .feature-content-lesprivate-tk {
+    text-align: center;
+  }
+
+  .feature-title {
+    font-size: 1.2rem;
+    margin-bottom: 8px;
+    font-family: "Nunito", sans-serif;
+  }
+
+  .feature-description {
+    font-size: 0.9rem;
+    font-weight: 500;
+    text-align: start;
+    font-family: "Nunito", sans-serif;
+  }
+}

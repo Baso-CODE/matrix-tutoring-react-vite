@@ -1,0 +1,97 @@
+/* Container utama */
+.carousel-container-master {
+  margin-top: 10vh;
+  margin-bottom: 10vh;
+  text-align: center;
+}
+
+/* Judul Carousel */
+.carousel-title {
+  font-family: "Nunito", sans-serif;
+  font-size: 32px;
+  color: #333333;
+  margin-bottom: 20px;
+  letter-spacing: 1px;
+  font-weight: 700;
+}
+
+/* Embla container for styling */
+.embla-master {
+  overflow: hidden;
+  width: 100%;
+}
+
+.embla-master-embla__container {
+  display: flex;
+  flex-wrap: nowrap;
+  align-items: center; /* Center items vertically */
+}
+
+/* Slide styling */
+.embla__slide-master-carouser-master-carouser {
+  flex: 0 0 auto;
+  margin: 0 8px; /* Adjust for spacing between items */
+}
+
+/* Panel individual */
+.panel-master-teacher {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Gambar di dalam panel */
+.carousel-image-master-teacher {
+  width: 100%;
+  height: auto; /* Maintain aspect ratio */
+  object-fit: cover; /* Maintain aspect ratio */
+}
+
+/* Dots styling */
+.embla__dots {
+  display: flex;
+  justify-content: center;
+  margin-top: 10px;
+}
+
+.embla__dot {
+  background-color: #d1d5db;
+  border-radius: 50%;
+  width: 10px;
+  height: 10px;
+  border: none;
+  margin: 0 2px;
+  cursor: pointer;
+}
+
+.embla__dot--active {
+  background-color: #00139b;
+}
+
+/* Responsif untuk layar desktop */
+@media (min-width: 1024px) {
+  .embla__slide-master-carouser {
+    flex: 0 0 calc(33.333% - 10px); /* 3 items per view, adjust spacing */
+  }
+}
+
+/* Responsif untuk layar tablet */
+@media (min-width: 768px) and (max-width: 1023px) {
+  .embla__slide-master-carouser {
+    flex: 0 0 calc(50% - 16px); /* 2 items per view, adjust spacing */
+  }
+}
+
+/* Responsif untuk layar mobile */
+@media (max-width: 767px) {
+  .embla__slide-master-carouser {
+    flex: 0 0 calc(100% - 16px); /* 1 item per view */
+  }
+}
+
+@media (max-width: 768px) {
+  .carousel-title {
+    font-size: 28px;
+    line-height: 30px;
+  }
+}

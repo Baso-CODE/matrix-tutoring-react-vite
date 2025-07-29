@@ -1,0 +1,207 @@
+/* MatrixFooterV2.css */
+
+.footer-container-matrix-v2 {
+  background-color: #007bff;
+  padding: 60px 0;
+  color: #ffffff;
+  font-family: "Nunito", sans-serif;
+  overflow: hidden;
+  padding-left: 8%;
+  padding-right: 8%;
+}
+
+.footer-content-matrix-v2 {
+  margin: 0 auto;
+}
+
+.grid-container-footer-matrix-v2 {
+  display: grid;
+
+  grid-template-columns: 1.2fr 1.2fr 1.2fr 1.2fr;
+  gap: 20px;
+  align-items: flex-start;
+  margin-bottom: 30px;
+}
+
+.section-title-footer-v2 {
+  font-size: 1.15rem;
+  font-weight: 700;
+  margin-bottom: 20px;
+  color: #ffffff;
+  text-transform: uppercase;
+}
+
+/* --- Kolom 1: Brand Info --- */
+.brand-info-footer-v2 .logo-footer-v2 {
+  width: 70%;
+  height: auto;
+  margin-bottom: 15px;
+  background-color: transparent; /* Pastikan tidak ada background putih jika logo transparan */
+  border-radius: 0;
+}
+
+.brand-info-footer-v2 .tagline-footer-v2 {
+  font-size: 1.4rem;
+  font-weight: 800;
+  line-height: normal;
+  margin-bottom: 10px;
+  margin: 0;
+  color: #ffffff;
+}
+
+.brand-info-footer-v2 .address-text-footer-v2 {
+  font-size: 0.9rem;
+  line-height: 1.6;
+  margin-bottom: 20px;
+  color: rgba(255, 255, 255, 0.9);
+}
+
+.social-icons-footer-v2 {
+  display: flex;
+  gap: 15px; /* Jarak antar ikon */
+  margin-top: 20px;
+}
+
+.social-icons-footer-v2 a img {
+  width: 30px; /* Ukuran ikon sosial media */
+  height: 30px;
+  transition: transform 0.2s ease;
+}
+
+.social-icons-footer-v2 a:hover img {
+  transform: scale(1.1); /* Efek zoom saat hover */
+}
+
+/* --- Kolom 2: Consultation Section --- */
+.consultation-section-footer-v2 .consultation-list-footer-v2 {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.consultation-section-footer-v2 .consultation-list-footer-v2 li {
+  margin-bottom: 15px; /* Jarak antar item kontak */
+}
+
+.consultation-section-footer-v2 .consultation-list-footer-v2 li a {
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 0.9rem;
+  line-height: 1.4;
+  transition: color 0.3s ease;
+}
+
+.consultation-section-footer-v2 .consultation-list-footer-v2 li a:hover {
+  color: #c0d9ff;
+  text-decoration: underline;
+}
+
+.sub-program-list-footer-v2 {
+  list-style: none;
+  padding: 0;
+  margin-top: 5px;
+}
+
+.sub-program-list-footer-v2 li {
+  font-size: 0.9rem;
+  color: rgba(255, 255, 255, 0.9);
+  margin-bottom: 0px;
+}
+
+/* --- Kolom 3: Students Section --- */
+.students-section-footer-v2 .students-list-footer-v2 {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  column-count: 2;
+  column-gap: 20px;
+}
+
+.students-section-footer-v2 .students-list-footer-v2 li {
+  font-size: 0.9rem;
+  color: rgba(255, 255, 255, 0.9);
+  margin-bottom: 8px;
+}
+
+/* --- Kolom 4: CTA Section (WhatsApp Image) --- */
+.cta-section-footer-v2 .whatsapp-cta-image-v2 {
+  width: 100%;
+
+  height: auto;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.cta-section-footer-v2 a:hover .whatsapp-cta-image-v2 {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.4);
+}
+
+/* --- Copyright Section --- */
+.footer-copyright-matrix-v2 {
+  text-align: center;
+  align-items: baseline;
+  font-size: 0.85rem;
+  color: rgba(255, 255, 255, 0.7);
+  margin-top: 5rem; /* Jarak dari grid atas */
+  line-height: 1.5;
+}
+
+@media (max-width: 1024px) {
+  .grid-container-footer-matrix-v2 {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+  }
+  .students-section-footer-v2 .students-list-footer-v2 {
+    column-count: 1;
+  }
+  .cta-section-footer-v2 {
+    text-align: start;
+    /* margin-top: 30px; */
+  }
+}
+
+/* Mobile (misalnya, di bawah 767px) */
+@media (max-width: 767px) {
+  .footer-container-matrix-v2 {
+    padding: 40px 15px;
+  }
+  .grid-container-footer-matrix-v2 {
+    grid-template-columns: 1fr; /* 1 kolom */
+    gap: 25px;
+    margin-bottom: 20px;
+  }
+  .section-title-footer-v2 {
+    font-size: 1rem;
+    margin-bottom: 15px;
+    text-align: start;
+  }
+  .brand-info-footer-v2 .logo-footer-v2 {
+    width: 15rem;
+  }
+  .brand-info-footer-v2 .tagline-footer-v2 {
+    font-size: 0.95rem;
+  }
+  .brand-info-footer-v2 .address-text-footer-v2,
+  .consultation-section-footer-v2 .consultation-list-footer-v2 li a,
+  .sub-program-list-footer-v2 li,
+  .students-section-footer-v2 .students-list-footer-v2 li {
+    font-size: 0.85rem;
+  }
+  .social-icons-footer-v2 {
+    justify-content: start;
+  }
+  .cta-section-footer-v2 {
+    grid-column: span 1; /* Kembali ke 1 kolom */
+    text-align: center;
+    margin-top: 0px;
+  }
+
+  .footer-copyright-matrix-v2 {
+    font-size: 0.75rem;
+    margin-top: 15px;
+    padding-bottom: 3rem;
+  }
+}

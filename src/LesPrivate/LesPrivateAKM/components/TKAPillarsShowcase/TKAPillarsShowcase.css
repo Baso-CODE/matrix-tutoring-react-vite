@@ -1,0 +1,369 @@
+/* TKAPillarsShowcase.css */
+
+.tka-pillars-section {
+  padding: 80px 10px;
+  margin-top: 30px;
+  text-align: center;
+  overflow: hidden;
+  position: relative;
+}
+
+.tka-pillars-container {
+  max-width: 1240px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 1;
+}
+
+.tka-pillars-title {
+  font-size: 1.4rem;
+  font-weight: 800;
+  color: #333333; /* Teks gelap untuk kontras */
+  margin-bottom: 20px;
+  font-family: "Nunito", sans-serif;
+  line-height: 1.2;
+  text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.05);
+}
+
+.highlight-text-blue {
+  color: #007bff; /* Biru utama */
+}
+
+.highlight-text-orange {
+  color: #fec100; /* Oranye aksen */
+}
+
+.tka-pillars-subtitle {
+  font-size: 1rem;
+  color: #4b5563;
+  margin-bottom: 70px;
+  max-width: 900px;
+  margin-left: auto;
+  margin-right: auto;
+  line-height: 1.6;
+  font-family: "Nunito", sans-serif;
+}
+
+.pillars-content-wrapper {
+  display: flex;
+  flex-wrap: wrap; /* Agar bisa wrap di mobile */
+  justify-content: center;
+  align-items: stretch; /* Penting agar tinggi kartu sama */
+  gap: 40px; /* Jarak antar pilar */
+  margin-bottom: 60px;
+}
+
+.pillar-card {
+  flex: 1; /* Agar kartu mengisi ruang */
+  min-width: 350px; /* Lebar minimum kartu */
+  background-color: #ffffff;
+  padding: 40px;
+  border-radius: 25px; /* Sudut lebih membulat */
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.1); /* Bayangan kuat */
+  /* Tambahkan filter dan opacity ke transisi */
+  transition: transform 0.4s ease, box-shadow 0.4s ease, border-color 0.4s ease,
+    filter 0.4s ease, opacity 0.4s ease;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  border: 2px solid transparent; /* Border transparan untuk transisi */
+  position: relative;
+  overflow: hidden;
+}
+
+/* Class untuk kartu yang akan diburamkan */
+.pillar-card.blurred {
+  filter: blur(3px); /* Kekuatan blur, sesuaikan sesuai preferensi */
+  opacity: 0.7; /* Sedikit transparan agar efek blur lebih terlihat */
+  pointer-events: none; /* Nonaktifkan event pointer (klik/hover) pada kartu yang buram */
+  transform: none; /* Pastikan kartu yang buram tidak memiliki efek lift/scale */
+  box-shadow: none; /* Hapus bayangan pada kartu yang buram */
+  border-color: #e0e0e0; /* Kembalikan border ke warna netral */
+}
+
+.pillar-card:hover {
+  transform: translateY(-15px) scale(1.02);
+  box-shadow: 0 25px 60px rgba(0, 0, 0, 0.2);
+  filter: blur(0); /* Pastikan kartu yang di-hover tidak buram */
+  opacity: 1; /* Pastikan kartu yang di-hover tidak transparan */
+}
+
+/* Override efek hover pada kartu yang buram jika ada */
+.pillar-card.blurred:hover {
+  transform: none;
+  box-shadow: none;
+  border-color: #e0e0e0;
+}
+
+.literasi-pillar {
+  background: linear-gradient(135deg, #e0efff, #ffffff); /* Gradasi biru muda */
+  border-color: #007bff; /* Border biru untuk literasi */
+}
+
+.literasi-pillar:hover {
+  border-color: #007bff;
+}
+
+.numerasi-pillar {
+  background: linear-gradient(
+    135deg,
+    #fff8e0,
+    #ffffff
+  ); /* Gradasi oranye muda */
+  border-color: #fec100; /* Border oranye untuk numerasi */
+}
+
+.numerasi-pillar:hover {
+  border-color: #fec100;
+}
+
+.pillar-icon-header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 25px;
+}
+
+.pillar-main-icon {
+  width: 8rem;
+  height: auto;
+}
+
+.literasi-pillar .pillar-main-icon {
+  color: #007bff; /* Ikon biru untuk literasi */
+}
+
+.numerasi-pillar .pillar-main-icon {
+  color: #fec100; /* Ikon oranye untuk numerasi */
+}
+
+.pillar-main-title {
+  font-size: 1.35rem;
+  font-weight: 700;
+  color: #333333;
+  font-family: "Nunito", sans-serif;
+}
+
+.literasi-pillar .pillar-main-title {
+  color: #007bff;
+}
+
+.numerasi-pillar .pillar-main-title {
+  color: #fec100;
+}
+
+.pillar-description {
+  font-size: 1rem;
+  color: #4b5563;
+  line-height: 1.6;
+  text-align: start;
+  margin-bottom: 30px;
+  font-family: "Nunito", sans-serif;
+}
+
+.pillar-features-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  text-align: left; /* Teks daftar rata kiri */
+  width: 100%; /* Agar list mengisi lebar kartu */
+}
+
+.pillar-features-list li {
+  display: flex;
+  align-items: center;
+  font-size: 1rem;
+  color: #4b5563;
+  margin-bottom: 10px;
+  font-family: "Nunito", sans-serif;
+}
+
+.list-check-icon {
+  color: #10b981; /* Hijau aksen untuk ceklis */
+  margin-right: 10px;
+  flex-shrink: 0;
+}
+
+.pillar-separator {
+  width: 2px;
+  background-color: #e0e0e0;
+  margin: 0 20px; /* Jarak antara pilar di desktop */
+  align-self: stretch; /* Memastikan separator mengisi tinggi */
+}
+
+@media (max-width: 992px) {
+  .pillars-content-wrapper {
+    flex-direction: column;
+    gap: 50px; /* Jarak antar pilar di mobile */
+  }
+  .pillar-separator {
+    display: none; /* Sembunyikan separator di mobile */
+  }
+  .pillar-card {
+    min-width: unset; /* Hapus min-width di mobile */
+  }
+}
+
+/* General Benefits Section */
+.general-benefits-section {
+  background-color: #ffffff;
+  padding: 50px 0px;
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+  margin-top: 60px; /* Jarak dari pilar di atas */
+  border: 1px solid #e6f0ff;
+}
+
+.general-benefits-title {
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: #007bff;
+  margin-bottom: 30px;
+  font-family: "Nunito", sans-serif;
+}
+
+.general-benefits-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 25px;
+  justify-content: center;
+}
+
+.benefit-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  padding: 20px;
+  border-radius: 12px;
+  background-color: #f8faff;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+  transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.benefit-item:hover {
+  transform: translateY(-5px);
+  background-color: #e0efff;
+}
+
+.benefit-icon {
+  color: #fec100; /* Ikon oranye */
+}
+
+.benefit-item p {
+  font-size: 1rem;
+  color: #4b5563;
+  font-weight: normal;
+  margin: 0;
+  font-family: "Nunito", sans-serif;
+}
+
+/* CTA Wrapper (reused from previous components, ensure consistency) */
+.tka-cta-wrapper {
+  background: linear-gradient(90deg, #007bff, #007bff);
+  padding: 50px;
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 30px;
+  margin-top: 60px;
+  box-shadow: 0 20px 40px rgba(13, 16, 185, 0.5);
+}
+
+.tka-cta-text {
+  font-size: 2.2rem;
+  font-weight: 800;
+  color: #ffffff;
+  font-family: "Nunito", sans-serif;
+  max-width: 900px;
+  line-height: 1.3;
+}
+
+.tka-cta-button {
+  background-color: #2cb0f7;
+  color: #ffffff;
+  padding: 18px 15px;
+  border-radius: 12px;
+  font-size: 1.3rem;
+  font-weight: 700;
+  text-decoration: none;
+  transition: background-color 0.3s ease, transform 0.2s ease,
+    box-shadow 0.3s ease;
+  box-shadow: 0 10px 20px rgba(0, 179, 255, 0.4);
+}
+
+.tka-cta-button:hover {
+  background-color: #08a3f6;
+  transform: translateY(-5px);
+  box-shadow: 0 15px 25px rgba(0, 195, 255, 0.5);
+}
+
+/* Responsivitas */
+@media (max-width: 768px) {
+  .tka-pillars-section {
+    padding: 50px 10px;
+  }
+  .tka-pillars-title {
+    font-size: 2.2rem;
+  }
+  .tka-pillars-subtitle {
+    font-size: 1.1rem;
+    margin-bottom: 40px;
+  }
+  .pillar-card {
+    padding: 30px 20px;
+  }
+  .pillar-main-icon {
+    font-size: 48px;
+  }
+  .pillar-main-title {
+    font-size: 1.8rem;
+  }
+  .pillar-description {
+    font-size: 1rem;
+  }
+  .pillar-features-list li {
+    font-size: 0.95rem;
+  }
+  .general-benefits-section {
+    padding: 40px 0px;
+    margin-top: 40px;
+  }
+  .general-benefits-title {
+    font-size: 1.8rem;
+  }
+  .general-benefits-grid {
+    grid-template-columns: 1fr;
+  }
+  .benefit-item p {
+    font-size: 0.95rem;
+  }
+  .tka-cta-wrapper {
+    padding: 30px 20px;
+  }
+  .tka-cta-text {
+    font-size: 1.6rem;
+  }
+  .tka-cta-button {
+    font-size: 1.1rem;
+    padding: 12px 25px;
+  }
+}
+
+@media (max-width: 480px) {
+  .tka-pillars-title {
+    font-size: 1.8rem;
+  }
+  .tka-pillars-subtitle {
+    font-size: 1rem;
+  }
+  .pillar-main-icon {
+    font-size: 40px;
+  }
+  .pillar-main-title {
+    font-size: 1.5rem;
+  }
+}

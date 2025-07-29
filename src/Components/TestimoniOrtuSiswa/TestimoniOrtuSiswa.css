@@ -1,0 +1,64 @@
+/* Container Utama */
+.testimonial-slider-ortu-siswa-container {
+  text-align: center;
+  margin-top: 8vh;
+  margin-bottom: 5vh;
+}
+
+/* Judul */
+.testimonial-slider-ortu-siswa-container h2 {
+  font-size: 1.4rem;
+  color: #333333;
+  margin-bottom: 20px;
+  font-family: "Nunito", sans-serif;
+  font-weight: 700;
+  text-align: center;
+}
+
+/* Embla Slider Styles */
+.embla {
+  overflow: hidden;
+  position: relative;
+  margin: 0 0;
+}
+
+.embla__container {
+  display: flex;
+  gap: 15px;
+}
+
+.embla__slide-tesimoni-ortu {
+  flex: 0 0 100%; /* Default: Full width (mobile) */
+  min-width: 0;
+  overflow: hidden;
+}
+
+.testimonial-image {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Responsiveness */
+@media (min-width: 768px) {
+  .embla__slide-tesimoni-ortu {
+    flex: 0 0 calc(50% - 15px); /* 2 slides on Tablet */
+  }
+}
+@media (max-width: 768px) {
+  .testimonial-image {
+    width: 100%;
+    height: auto;
+  }
+  /* .embla__container {
+  } */
+}
+
+@media (min-width: 1024px) {
+  .embla__slide-tesimoni-ortu {
+    flex: 0 0 calc(33.333% - 15px); /* 3 slides on Desktop */
+  }
+  .testimonial-slider-ortu-siswa-container {
+    font-size: 1.5rem;
+  }
+}

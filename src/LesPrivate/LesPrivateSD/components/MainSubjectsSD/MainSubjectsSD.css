@@ -1,0 +1,178 @@
+/* MainSubjectsSD.css */
+
+.main-subjects-section {
+  padding: 60px 20px;
+  background-color: #f9fafb; /* Latar belakang abu-abu sangat terang */
+  text-align: center;
+}
+
+.main-subjects-container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.main-subjects-title {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #333333; /* Biru utama */
+  margin-bottom: 20px;
+  font-family: "Nunito", sans-serif;
+}
+
+.main-subjects-description {
+  font-size: 1rem;
+  color: #4f4f4f; /* Teks sedang */
+  margin-bottom: 50px;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+  line-height: 1.6;
+  font-family: "Nunito", sans-serif;
+}
+
+/* SWIPER SPECIFIC STYLES */
+.main-subjects-swiper {
+  margin-left: auto;
+  margin-right: auto;
+  position: relative;
+  overflow: hidden;
+  list-style: none;
+  padding-top: 15px;
+  z-index: 1;
+  display: block;
+  padding-bottom: 50px; /* Ruang untuk pagination dots */
+}
+/* .swiper {
+  margin-left: auto;
+  margin-right: auto;
+  position: relative;
+  overflow: hidden;
+  list-style: none;
+  padding: 15 0px;
+  z-index: 1;
+  display: block;
+} */
+
+/* Styles for individual subject items (cards) */
+.subject-item {
+  background-color: #ffffff; /* Latar belakang putih untuk setiap item */
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+  transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  border: 1px solid #e5e7eb;
+  min-height: 43vh;
+  height: 100%;
+  justify-content: flex-start;
+}
+
+.subject-item:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+  border-color: #3b82f6;
+}
+
+.subject-icon-wrapper {
+  width: 70px;
+  height: 70px;
+  background-color: #3b82f6; /* Biru sekunder/aksen */
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 20px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  flex-shrink: 0;
+}
+
+.subject-icon {
+  width: 7rem;
+  height: 7rem;
+  object-fit: contain;
+}
+
+.subject-item-title {
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: #007bff; /* Biru utama */
+  margin-bottom: 10px;
+  font-family: "Nunito", sans-serif;
+  flex-shrink: 0;
+}
+
+.subject-item-text {
+  font-size: 1rem;
+  color: #4f4f4f; /* Teks sedang */
+  line-height: 1.6;
+  font-family: "Nunito", sans-serif;
+  flex-grow: 1;
+  display: -webkit-box;
+  -webkit-line-clamp: 4; /* Batasi hingga 4 baris */
+  line-clamp: 4; /* Standard property for compatibility */
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* Swiper Navigation Arrows (Panah Kiri/Kanan) */
+.swiper-button-next,
+.swiper-button-prev {
+  color: #007bff !important; /* Warna panah biru utama */
+  --swiper-navigation-size: 30px; /* Ukuran panah */
+}
+
+.swiper-button-next:hover,
+.swiper-button-prev:hover {
+  color: #3b82f6 !important; /* Warna panah biru sekunder saat hover */
+}
+
+/* Swiper Pagination Dots */
+.swiper-pagination-bullet {
+  background: #a0aec0 !important; /* Warna abu-abu default untuk dot */
+  opacity: 0.8;
+}
+
+.swiper-pagination-bullet-active {
+  background: #007bff !important; /* Warna biru utama untuk dot aktif */
+  opacity: 1;
+}
+
+/* Responsivitas */
+@media (max-width: 1024px) {
+  .subject-item {
+    min-height: 28vh;
+  }
+}
+
+@media (max-width: 768px) {
+  .main-subjects-title {
+    font-size: 1.3rem;
+  }
+  .main-subjects-description {
+    font-size: 1rem;
+    margin-bottom: 30px;
+  }
+  .subject-item {
+    padding: 20px 28px;
+    min-height: 33vh;
+  }
+  .subject-icon-wrapper {
+    width: 60px;
+    height: 60px;
+  }
+
+  .subject-item-title {
+    font-size: 1.2rem;
+  }
+  .subject-item-text {
+    font-size: 0.9rem;
+  }
+  .main-subjects-section {
+    padding: 0;
+    margin-top: 10vh;
+  }
+}
