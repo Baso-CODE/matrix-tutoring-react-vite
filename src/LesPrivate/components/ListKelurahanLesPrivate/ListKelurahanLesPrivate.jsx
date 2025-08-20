@@ -22,34 +22,35 @@ const ListKelurahanLesPrivate = ({ title, program }) => {
   }, [kecamatanSlug]);
 
   return (
-    <div className=" container-all-tab">
-      <div className="title-container">
-        <img
-          loading="lazy"
-          src="/images/daftar-kota.webp"
-          alt="City Icon"
-          className="icon-city"
-        />
-        <h2 className=" title-list">
-          Daftar {title} di {kecamatan.kecamatan}
-        </h2>
-      </div>
-      <div className="parent-list-kota">
-        {kelurahan.length > 0 ? (
-          kelurahan.map((item, index) => (
-            <Link
-              className="btn-kota"
-              key={index}
-              to={`/${program}/${kotaSlug}/${kabupatenSlug}/${kecamatanSlug}/${item.slug}`}>
-              {item.kelurahan}
-            </Link>
-          ))
-        ) : (
-          <div className="no-kelurahan">
-            <p>No data Kelurahan available for {kecamatan.kecamatan}</p>
-          </div>
-        )}
-        {/* {kelurahan.map((item, index) => (
+    <section className="container-all">
+      <div className=" container-all-tab">
+        <div className="title-container">
+          <img
+            loading="lazy"
+            src="/images/daftar-kota.webp"
+            alt="City Icon"
+            className="icon-city"
+          />
+          <h2 className=" title-list">
+            Daftar {title} di {kecamatan.kecamatan}
+          </h2>
+        </div>
+        <div className="parent-list-kota">
+          {kelurahan.length > 0 ? (
+            kelurahan.map((item, index) => (
+              <Link
+                className="btn-kota"
+                key={index}
+                to={`/${program}/${kotaSlug}/${kabupatenSlug}/${kecamatanSlug}/${item.slug}`}>
+                {item.kelurahan}
+              </Link>
+            ))
+          ) : (
+            <div className="no-kelurahan">
+              <p>No data Kelurahan available for {kecamatan.kecamatan}</p>
+            </div>
+          )}
+          {/* {kelurahan.map((item, index) => (
           <Link
             className="btn-kota"
             key={index}
@@ -57,8 +58,9 @@ const ListKelurahanLesPrivate = ({ title, program }) => {
             {item.kelurahan}
           </Link>
         ))} */}
+        </div>
       </div>
-    </div>
+    </section>
   );
 };
 

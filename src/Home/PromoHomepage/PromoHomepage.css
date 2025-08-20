@@ -1,13 +1,13 @@
 .parent-promo-home {
   display: flex;
   justify-content: center;
-  /* background: linear-gradient(to right, #e0f2ff 0%, #66aaff 50%, #006bde 100%); */
+  /* background: linear-gradient(to right, #e0f2ff 0%, #66aaff 50%, #007bff 100%); */
   background: #007bff;
   align-items: center;
   padding-top: 5vh;
   padding-bottom: 5vh;
-  padding-left: 12%;
-  padding-right: 12%;
+  padding-left: 10%;
+  padding-right: 10%;
 }
 .child-promo-home {
   width: 100%;
@@ -17,7 +17,7 @@
 .parent-promo-home-mobile {
   display: flex;
   justify-content: center;
-  /* background: linear-gradient(to right, #e0f2ff 0%, #66aaff 50%, #006bde 100%); */
+  /* background: linear-gradient(to right, #e0f2ff 0%, #66aaff 50%, #007bff 100%); */
   background: #007bff;
   align-items: center;
   padding-top: 5vh;

@@ -1,80 +1,218 @@
-/* MatrixFeature.css */
-
-.matrix-features-section {
-  padding: 80px 0;
-
-  text-align: center;
+/* General & Layout */
+.container-matrix-features {
+  background-color: #007bff;
+  padding: 80px 20px;
+  padding-left: 10%;
+  padding-right: 10%;
+  font-family: "Nunito", sans-serif;
 }
 
-.container-general {
-  max-width: 1240px;
-}
-
-.matrix-content-wrapper {
+.features-wrapper {
+  margin: 0 auto;
   display: flex;
-  flex-wrap: nowrap; /* Menggunakan wrap agar bisa ke bawah di mobile */
-  gap: 40px;
-  justify-content: center;
+  flex-wrap: wrap;
+  /* align-items: center; */
+  gap: 10px;
+}
+
+.image-column {
+  flex: 1;
+  text-align: start;
+  min-width: 300px;
+}
+
+.image-title {
+  color: #fff;
+  font-size: 1.5rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+}
+
+.main-feature-image {
+  width: 100%;
+  max-width: 500px;
+  height: auto;
+  border-radius: 16px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+}
+
+.content-column {
+  flex: 1.5;
+  min-width: 400px;
+}
+
+/* Button Group */
+.button-group {
+  display: flex;
+  gap: 15px;
+  font-family: "Nunito", sans-serif;
+  margin-bottom: 30px;
+}
+
+.feature-button {
+  flex: 1;
+  padding: 15px 25px;
+  border: 2px solid #007bff;
+  border-radius: 50px;
+  background-color: transparent;
+  color: #007bff;
+  font-size: 1rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  white-space: nowrap; /* Mencegah teks tombol terpotong */
+}
+
+.feature-button:hover {
+  background-color: #007bff;
+  color: #fff;
+}
+
+.feature-button.active {
+  background-color: #007bff;
+  color: #fff;
+  box-shadow: 0 4px 15px rgba(0, 123, 255, 0.4);
+}
+
+/* Feature Content */
+.feature-content {
+  background-color: #ffffff;
+  border-radius: 16px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+  padding: 40px;
+  transition: all 0.3s ease-in-out;
+}
+
+/* Parent Grid untuk Card */
+.why-us-grid {
+  display: grid;
+  /* grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); */
+  gap: 20px;
   margin-top: 30px;
 }
 
-/* Styling untuk kedua kolom (Mengapa Matrix & Mata Pelajaran) */
-.matrix-why-us,
-.matrix-subjects-offered {
-  background-color: #ffffff;
-  border-radius: 12px;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
-  padding: 40px 30px;
-  max-width: 550px;
-  text-align: left; /* Teks dalam kolom rata kiri secara default */
+.card-alasan-memilih-matrix {
+  position: relative;
   display: flex;
-  flex-direction: column;
-  cursor: pointer;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  align-items: center;
+  /* justify-content: center; */
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+  padding: 32px;
+  overflow: hidden;
+  border-radius: 10px;
+  transition: all 0.5s cubic-bezier(0.23, 1, 0.32, 1);
+  background-color: #007bff;
 }
 
-.matrix-why-us:hover,
-.matrix-subjects-offered:hover {
-  transform: translateY(-10px); /* Mengangkat kotak 10px ke atas */
-  box-shadow: 0 18px 40px rgba(0, 0, 0, 0.15); /* Bayangan menjadi lebih besar dan sedikit lebih gelap */
+.content-mengapa-memilih {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 5px;
+  color: #e8e8e8;
+  transition: all 0.5s cubic-bezier(0.23, 1, 0.32, 1);
+
+  /* SOLUSI: Pastikan konten berada di atas */
+  position: relative;
+  z-index: 2;
+}
+
+.heading-mengapa-memilih {
+  font-weight: 700;
+  text-align: start;
+  font-size: 15px;
+  margin: 0px;
+  margin-bottom: 0px;
+}
+
+.para-v2 {
+  line-height: 1.5;
+  font-size: 14px;
+  margin: 0px;
+  text-align: start;
+  padding: 0px;
+}
+
+.content-mengapa-memilih .btn-v2 {
+  color: #e8e8e8;
+  text-decoration: none;
+  padding: 10px;
+  font-weight: 600;
+  border: none;
+  cursor: pointer;
+  background: linear-gradient(-45deg, #fcd201 0%, #fed131 100%);
+  border-radius: 5px;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+}
+
+.card-alasan-memilih-matrix::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 5px;
+  background: linear-gradient(-45deg, #fcd201 0%, #fed131 100%);
+  /* Pastikan z-index lebih rendah dari konten */
+  z-index: 1;
+  transition: all 0.5s cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+.card-alasan-memilih-matrix:hover::before {
+  height: 100%;
+}
+
+.card-alasan-memilih-matrix:hover {
+  box-shadow: none;
+}
+
+.card-alasan-memilih-matrix:hover .btn-v2 {
+  color: #212121;
+  background: #e8e8e8;
+}
+
+.content-mengapa-memilih .btn-v2:hover {
+  outline: 2px solid #e8e8e8;
+  background: transparent;
+  color: #e8e8e8;
+}
+
+.content-mengapa-memilih .btn-v2:active {
+  box-shadow: none;
 }
 
 .matrix-heading {
   font-size: 1.4rem;
   color: #2c3e50;
-  margin-bottom: 6px;
+  margin-bottom: 10px;
   font-weight: 700;
-  font-family: "Nunito", sans-serif;
+  line-height: 1.2;
 }
 
 .matrix-heading span {
-  color: #006bde; /* Warna teks span */
-  position: relative; /* Penting: agar ::after bisa diposisikan relatif terhadap span ini */
-  padding-bottom: 10px; /* Tambahkan padding-bottom di sini untuk ruang garis */
-  display: inline-block; /* Penting: agar padding dan posisi ::after bekerja dengan baik */
+  color: #007bff;
+  position: relative;
 }
 
-/* Garis bawah untuk teks dalam span (target baru) */
 .underline-text::after {
   content: "";
   position: absolute;
-  left: 0; /* Mulai dari kiri span */
-  bottom: 0; /* Di bagian bawah span */
-  width: 100%; /* Lebar garis sama dengan lebar span */
+  left: 0;
+  bottom: -5px;
+  width: 100%;
   height: 4px;
-  background-color: #006bde;
+  background-color: #007bff;
   border-radius: 2px;
 }
 
 .matrix-description {
   font-size: 1rem;
-  color: #4f4f4f;
-  font-family: "Nunito", sans-serif;
+  color: #666;
   margin-bottom: 30px;
   line-height: 1.6;
 }
 
-/* Styling untuk daftar "Mengapa Harus Matrix" */
 .why-us-list {
   list-style: none;
   padding: 0;
@@ -82,116 +220,127 @@
 }
 
 .why-us-item {
+  margin-bottom: 25px;
+}
+
+.why-us-item .feature-title-bold {
+  font-weight: bold;
+  font-size: 1.1rem;
+  color: #2c3e50;
+  display: block;
+  margin-bottom: 5px;
+}
+
+.why-us-item p {
+  font-size: 0.95rem;
+  text-align: start;
+  color: #555;
+  line-height: 1.5;
+  margin: 0;
+  padding-left: 20px;
+  position: relative;
+}
+
+.why-us-item p::before {
+  content: "—";
+  display: block;
+  position: absolute;
+  left: 0;
+  color: #007bff;
+  font-weight: bold;
+}
+
+.subjects-grid {
   display: flex;
-  align-items: flex-start;
-  margin-bottom: 10px;
-  font-size: 1rem;
-  color: #4f4f4f;
-  font-family: "Nunito", sans-serif;
-  line-height: 1.4;
-  font-weight: normal;
+  gap: 20px;
 }
 
-.feature-check-icon {
-  color: #28a745;
-  font-size: 1.3rem;
-  margin-right: 12px;
-  flex-shrink: 0;
-  margin-top: 3px;
-}
-
-/* Styling untuk daftar "Semua Mata Pelajaran" */
 .subject-offered-list {
   list-style: none;
   padding: 0;
   margin: 0;
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: 10px;
+  flex: 1;
 }
 
 .subject-offered-item {
   font-size: 1rem;
   color: #4f4f4f;
-  font-family: "Nunito", sans-serif;
-  font-weight: 600;
-  padding-left: 25px;
-  position: relative;
   line-height: 1.4;
-  font-weight: normal;
+  text-align: start;
+  margin-bottom: 5px;
+  padding-left: 20px;
+  position: relative;
 }
 
 .subject-offered-item::before {
-  content: "\2022";
-  color: #ff6f00;
-  font-size: 1.2em;
+  content: "";
+  display: inline-block;
+  width: 8px;
+  height: 8px;
+  background-color: #28a745;
+  border-radius: 50%;
   position: absolute;
   left: 0;
-  top: 0;
+  top: 6px;
 }
 
 /* Responsive Adjustments */
-@media (min-width: 992px) {
-  .matrix-why-us,
-  .matrix-subjects-offered {
-    width: calc(50% - 20px);
+@media (max-width: 992px) {
+  .features-wrapper {
+    flex-direction: column;
+  }
+  .image-column,
+  .content-column {
+    min-width: unset;
+    width: 100%;
   }
 }
 
 @media (max-width: 768px) {
-  .matrix-features-section {
-    padding: 60px 0;
+  .container-matrix-features {
+    padding: 60px 15px;
   }
-
-  .matrix-content-wrapper {
+  .image-title {
+    font-size: 2rem;
+  }
+  .button-group {
     flex-direction: column;
-    gap: 30px;
   }
-
-  .matrix-why-us,
-  .matrix-subjects-offered {
+  .feature-button {
+    font-size: 0.9rem;
+  }
+  .feature-content {
     padding: 30px 20px;
-    max-width: 100%;
   }
-
   .matrix-heading {
-    font-size: 1.8rem;
-    text-align: start; /* Tetap di tengah */
-  }
-
-  /* Ini penting: hapus aturan ::after dari media query ini
-     karena sekarang ::after sudah otomatis presisi dengan span */
-  /* .matrix-heading::after {
-    left: 50%;
-    transform: translateX(46%);
-  } */
-
-  .matrix-description {
-    font-size: 1rem;
-    text-align: start;
-    margin-top: 0;
-  }
-
-  .why-us-list,
-  .subject-offered-list {
-    text-align: left;
+    font-size: 1.3rem;
   }
 }
 
 @media (max-width: 480px) {
-  .matrix-features-section {
-    padding: 40px 0;
+  .container-matrix-features {
+    padding: 40px 10px;
   }
-  .matrix-heading {
+  .image-title {
     font-size: 1.4rem;
-    text-emphasis: start;
+    text-align: center;
+    margin-bottom: 10px;
   }
-  .matrix-description,
-  .why-us-item,
-  .subject-offered-item {
+  .feature-button {
+    font-size: 0.8rem;
+    padding: 12px 15px;
+  }
+  .matrix-description {
     font-size: 0.9rem;
   }
-  .feature-check-icon {
-    font-size: 1.1rem;
+  .why-us-item .feature-title-bold {
+    font-size: 1rem;
+  }
+  .why-us-item p,
+  .subject-offered-item {
+    font-size: 0.85rem;
+  }
+  .subjects-grid {
+    flex-direction: column;
   }
 }

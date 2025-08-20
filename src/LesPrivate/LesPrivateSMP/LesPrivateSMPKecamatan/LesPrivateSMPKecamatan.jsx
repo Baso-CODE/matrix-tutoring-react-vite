@@ -5,9 +5,7 @@ import AsalSekolahSiswaEdumatrix from "../../../Components/AsalSekolahSiswa/Asal
 import Keunggulan from "../../../Components/Keunggulan/Keunggulan";
 import MatrixFeatures from "../../../Components/MatrixFeatures/MatrixFeatures";
 import OnlineLesOptions from "../../../Components/OnlineLesOption/OnlineLesOption";
-import PengajarLestPrivate from "../../../Components/PengajarLestPrivate/PengajarLestPrivate";
 import ProgramBelajarLesPrivat from "../../../Components/ProgramBelajarLesPrivate/ProgramBelajarLesPrivate";
-import ProgramLesPrivat from "../../../Components/ProgramLesPrivate/ProgramLesPrivate";
 import PilihanProgram from "../../../Components/ProgramOptions/PilihanProgram";
 import AsalSekolahSiswaMarque from "../../../Components/SekolahSiswaMarque/SekolahSiswaMarque";
 import EmbrelaSlider from "../../../Components/SlideTop/EmbrelaSlider";
@@ -19,13 +17,18 @@ import AccordionFAQ from "../../../Components/FAQ/AccordionFAQ";
 import FiturProgramNew from "../../../Components/FiturProgramNew/FiturProgramNew";
 import HowToOrder from "../../../Components/HowToOrder/HowToOrder";
 import MasterTeacherV2 from "../../../Components/MasterTeacherV2/MasterTeacherV2";
+import ProgramLesPrivatV2 from "../../../Components/ProgramLesPrivatNew/ProgramLesPrivatV2 ";
+import SuccessStoryLesPrivate from "../../../Components/SuccesStoryLesPrivate/SuccesStoryLesPrivate";
+import TestimonialSiswa from "../../../Components/TestimonialSiswa/TestimonialSiswa";
+import TestimoniOrtuSiswa from "../../../Components/TestimoniOrtuSiswa/TestimoniOrtuSiswa";
 import { getAllKecamatanBySlug } from "../../../helper/request/getAllKecamatanBySlug";
 import CTABottomHome from "../../../Home/CTABottomHome/CTABottomHome";
+import PromoHomepage from "../../../Home/PromoHomepage/PromoHomepage";
 import { getHeroData } from "../../../utils/getHeroData";
 import ListKelurahanLesPrivate from "../../components/ListKelurahanLesPrivate/ListKelurahanLesPrivate";
 import AdaptiveLearningSMP from "../components/AdaptiveLearningSMP/AdaptiveLearningSMP";
 import StatistikImageSMP from "../components/StatistikImageSMP";
-import PromoHomepage from "../../../Home/PromoHomepage/PromoHomepage";
+import GaleriKegiatanBelajar from "../../../Components/GaleriKegiatanBelajar/GaleriKegiatanBelajar";
 const items = [
   {
     text: "Les Privat SMP – Guru Les Privat SMP ke Rumah dan Bimbel Online",
@@ -43,7 +46,7 @@ const items = [
     ],
   },
   {
-    text: "Pendekatan Pembelajaran Adaptif Matrix",
+    text: "Pendekatan Pembelajaran Adaptif Matrix Tutoring",
     href: "#adaptive-learning-smp",
   },
   {
@@ -59,11 +62,11 @@ const items = [
     href: "#pilihan-program-les-private",
   },
   {
-    text: "Program Les Private Matrix ",
+    text: "Program Les Private Matrix Tutoring ",
     href: "#program-les-private-matrix-tutoring",
   },
   {
-    text: "Saat Ini, Matrix Juga Melayani Les Privat Online",
+    text: "Saat Ini, Matrix Tutoring Juga Melayani Les Privat Online",
     href: "#matrix-juga-melayani-les-privat-online",
   },
   {
@@ -289,52 +292,48 @@ const LesPrivateSMPKecamatan = () => {
         </script>
       </Helmet>
 
-      <div className="container-all">
-        <HeroLesPrivate
-          nameCountry={nameCountry}
-          images={heroImageSrc}
-          heading={displayedHeading}
-          desc={heroData?.description}
-        />
-        <EmbrelaSlider />
-        {/* <Slidertop /> */}
-        <TableOfContents title="Table of Contents" items={items} />
-        <LesPrivateSMPHeader />
-        <AdaptiveLearningSMP />
-        <StatistikImageSMP />
+      <HeroLesPrivate
+        nameCountry={nameCountry}
+        images={heroImageSrc}
+        heading={displayedHeading}
+        desc={heroData?.description}
+      />
+      <EmbrelaSlider />
+      {/* <Slidertop /> */}
+      <TableOfContents title="Table of Contents" items={items} />
+      <LesPrivateSMPHeader />
+      <AdaptiveLearningSMP />
+      <StatistikImageSMP />
 
-        <section id="pengajar-les-private">
-          <PengajarLestPrivate />
-        </section>
-        <section id="fitur-program-les-private">
-          <FiturProgramNew />
-        </section>
-        {/* <PromoFree /> */}
-        <section id="pilihan-program-les-private">
-          <PilihanProgram />
-        </section>
-        <section id="matrix-juga-melayani-les-privat-online">
-          <OnlineLesOptions />
-        </section>
-        <section id="program-les-private-matrix-tutoring">
-          <ProgramLesPrivat />
-        </section>
+      <section id="program-les-private-matrix-tutoring">
+        <ProgramLesPrivatV2 />
+      </section>
+      <section id="fitur-program-les-private">
+        <FiturProgramNew />
+      </section>
+      <section id="pilihan-program-les-private">
+        <PilihanProgram />
+      </section>
+      <section id="matrix-juga-melayani-les-privat-online">
+        <OnlineLesOptions />
+      </section>
+      <section id="pengajar-les-private">
         <MasterTeacherV2 />
-        <ProgramBelajarLesPrivat />
-        <MatrixFeatures />
-        <section id="asal-sekolah-siswa-matrix-tutoring-private">
-          <AsalSekolahSiswaEdumatrix />
-          <AsalSekolahSiswaMarque />
-        </section>
-        <Keunggulan />
-        <ListKelurahanLesPrivate
-          program={"les-privat-smp"}
-          title={"Les Privat SMP"}
-        />
-      </div>
+      </section>
+      <ProgramBelajarLesPrivat />
+      <MatrixFeatures />
+      <SuccessStoryLesPrivate />
+      {/* <TestimonialSiswa /> */}
+      <TestimoniOrtuSiswa />
+      <section id="asal-sekolah-siswa-matrix-tutoring-private">
+        <AsalSekolahSiswaEdumatrix />
+        <AsalSekolahSiswaMarque />
+      </section>
+
       <HowToOrder />
       <AccordionFAQ />
       <PromoHomepage />
+      <GaleriKegiatanBelajar />
       <CTABottomHome />
     </React.Fragment>
   );

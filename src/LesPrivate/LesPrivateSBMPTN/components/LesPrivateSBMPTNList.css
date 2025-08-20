@@ -8,6 +8,7 @@
   font-size: 1.2rem;
   color: #333333;
   margin-top: 2rem;
+  font-weight: 600;
   margin-bottom: 1.8rem;
 }
 
@@ -35,7 +36,6 @@
 
 .subject-text {
   flex: 1;
-  font-weight: 700;
 }
 
 @media (max-width: 768px) {

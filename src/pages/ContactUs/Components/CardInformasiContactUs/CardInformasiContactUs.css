@@ -1,0 +1,42 @@
+/* Info Cards */
+.cards-section {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+  padding: 0 1rem 4rem;
+}
+@media (min-width: 768px) {
+  .cards-section {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+.info-card {
+  background: white;
+  padding: 1.5rem;
+  border-radius: 1rem;
+  text-align: center;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+  transition: transform 0.3s ease;
+}
+.info-card:hover {
+  transform: scale(1.05);
+}
+.info-card h3 {
+  margin-top: 1rem;
+  font-family: "Nunito", sans-serif;
+  font-size: 1.25rem;
+  font-weight: bold;
+  color: #111827;
+}
+.info-card p {
+  margin-top: 0.5rem;
+  font-family: "Nunito", sans-serif;
+  color: #6b7280;
+}
+.contact-card-icon {
+  padding: 1rem;
+  border-radius: 50%;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+}

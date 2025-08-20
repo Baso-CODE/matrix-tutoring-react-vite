@@ -1,7 +1,7 @@
 .footer-container-matrix {
   background-color: #0b192c;
-  padding-left: 12%;
-  padding-right: 12%;
+  padding-left: 10%;
+  padding-right: 10%;
 }
 
 .footer-content-matrix {
@@ -17,7 +17,7 @@
   .footer-container-matrix {
     padding-left: 4%;
     padding-right: 4%;
-    padding-bottom: 12%;
+    padding-bottom: 10%;
   }
 }
 

@@ -51,8 +51,6 @@ const EmbrelaSlider = () => {
       data-src={src}
       alt="Program Bimbel - les privat Online & Guru ke Rumah (TK, SD, SMP, SMA, AKM, Mahasiswa, Bahasa Asing, Simak UI, SBMPTN) - Matrix Tutoring"
       className="lazyload"
-      width="1298"
-      height="319"
     />
   );
 
@@ -63,35 +61,43 @@ const EmbrelaSlider = () => {
   return (
     <React.Fragment>
       {/* Slider for desktop */}
-      <div className="slider-top desktop-only">
-        <div className="embla" ref={emblaRef}>
-          <div className="embla__container">
-            {sliderHeader.map((item, index) => (
-              <div className="embla__slide top-slider" key={index}>
-                <div className="slider">
-                  <a href={finalUrl} target="_blank" rel="noopener noreferrer">
-                    {lazyLoadImage(item.url)}
-                  </a>
+      <div className="container-slider">
+        <div className="slider-top desktop-only">
+          <div className="embla" ref={emblaRef}>
+            <div className="embla__container">
+              {sliderHeader.map((item, index) => (
+                <div className="embla__slide top-slider" key={index}>
+                  <div className="slider">
+                    <a
+                      href={finalUrl}
+                      target="_blank"
+                      rel="noopener noreferrer">
+                      {lazyLoadImage(item.url)}
+                    </a>
+                  </div>
                 </div>
-              </div>
-            ))}
+              ))}
+            </div>
           </div>
         </div>
-      </div>
 
-      {/* Slider for mobile */}
-      <div className="slider-top-2 mobile-only">
-        <div className="embla" ref={emblaRef2}>
-          <div className="embla__container">
-            {sliderHeader2.map((item, index) => (
-              <div className="embla__slide top-slider" key={index}>
-                <div className="slider">
-                  <a href={finalUrl} target="_blank" rel="noopener noreferrer">
-                    {lazyLoadImage(item.url)}
-                  </a>
+        {/* Slider for mobile */}
+        <div className="slider-top-2 mobile-only">
+          <div className="embla" ref={emblaRef2}>
+            <div className="embla__container">
+              {sliderHeader2.map((item, index) => (
+                <div className="embla__slide top-slider" key={index}>
+                  <div className="slider">
+                    <a
+                      href={finalUrl}
+                      target="_blank"
+                      rel="noopener noreferrer">
+                      {lazyLoadImage(item.url)}
+                    </a>
+                  </div>
                 </div>
-              </div>
-            ))}
+              ))}
+            </div>
           </div>
         </div>
       </div>

@@ -27,10 +27,11 @@ import LesPrivateSBMPTNHeader from "../components/LesPrivateSBMPTNHeader";
 import SBMPTNFlow from "../components/SBMPTNFlow";
 import StatistikImageSBMPTN from "../components/StatistikImageSBMPTN";
 import WhyChooseSBMPTN from "../components/WhyChooseSBMPTN/WhyChooseSBMPTN";
+import GaleriKegiatanBelajar from "../../../Components/GaleriKegiatanBelajar/GaleriKegiatanBelajar";
 
 const items = [
   {
-    text: "Les Privat SBMPTN – Guru Les Privat SBMPTN",
+    text: "Les Privat SNBT UTBK – Guru Les Privat SNBT UTBK",
     href: "#les-privat-sbmptn",
     subItems: [
       {
@@ -42,7 +43,7 @@ const items = [
         href: "#dukungan-orang-tua",
       },
       {
-        text: "List Program SBMPTN",
+        text: "List Program SNBT UTBK",
         href: "#list-lest-private-sbmptn",
       },
       {
@@ -50,33 +51,33 @@ const items = [
         href: "#sistem-belajar-terstruktur",
       },
       {
-        text: "Program SBMPTN",
+        text: "Program SNBT UTBK",
         href: "#program-sbmptn",
       },
       {
-        text: "Keunggulan Program SBMPTN",
+        text: "Keunggulan Program SNBT UTBK",
         href: "#keunggulan-program-sbmptn",
       },
     ],
   },
   {
-    text: "Pengajar Les Private SBMPTN",
+    text: "Pengajar Les Private SNBT UTBK",
     href: "#pengajar-les-private",
   },
   {
-    text: "Fitur Program Les Private SBMPTN",
+    text: "Fitur Program Les Private SNBT UTBK",
     href: "#fitur-program-les-private",
   },
   {
-    text: "Pilihan Program Les Private Online/Offline SBMPTN",
+    text: "Pilihan Program Les Private Online/Offline SNBT UTBK",
     href: "#pilihan-program-les-private",
   },
   {
-    text: "Program Les Private Matrix ",
+    text: "Program Les Private Matrix Tutoring ",
     href: "#program-les-private-matrix-tutoring",
   },
   {
-    text: "Saat Ini, Matrix Juga Melayani Les Privat Online",
+    text: "Saat Ini, Matrix Tutoring Juga Melayani Les Privat Online",
     href: "#matrix-juga-melayani-les-privat-online",
   },
   {
@@ -96,7 +97,7 @@ const LesPrivateSBMPTNKecamatan = () => {
       .map((word) => word.charAt(0).toUpperCase() + word.slice(1))
       .join(" ");
 
-  const programName = "SNBT (SBMPTN)";
+  const programName = "SNBT (SNBT UTBK)";
 
   useEffect(() => {
     const fetchData = async () => {
@@ -104,7 +105,7 @@ const LesPrivateSBMPTNKecamatan = () => {
         const responseKecamatan = await getAllKecamatanBySlug(kecamatanSlug);
         setKecamatan(responseKecamatan.data);
 
-        const getHero = await getHeroData("SBMPTN", "kecamatan");
+        const getHero = await getHeroData("SNBT UTBK", "kecamatan");
         setHeroData(getHero);
       } catch (error) {
         console.error("Failed to fetch kecamatan data:", error);
@@ -177,10 +178,10 @@ const LesPrivateSBMPTNKecamatan = () => {
     kotaSlug.replace(/-/g, " ").toLowerCase(),
     kabupatenSlug.replace(/-/g, " ").toLowerCase(),
     kecamatanSlug.replace(/-/g, " ").toLowerCase(),
-    // Jika masih ada yang mencari SBMPTN
-    `Les Privat SBMPTN ${nameCountry}`,
-    `Guru Privat SBMPTN ${nameCountry}`,
-    `Bimbel SBMPTN ${nameCountry}`,
+    // Jika masih ada yang mencari SNBT UTBK
+    `Les Privat SNBT UTBK ${nameCountry}`,
+    `Guru Privat SNBT UTBK ${nameCountry}`,
+    `Bimbel SNBT UTBK ${nameCountry}`,
   ];
 
   return (
@@ -290,52 +291,48 @@ const LesPrivateSBMPTNKecamatan = () => {
           `}
         </script>
       </Helmet>
-      <div className="container-all">
-        <HeroLesPrivate
-          nameCountry={nameCountry}
-          images={heroImageSrc}
-          heading={displayedHeading}
-          desc={heroData?.description}
-        />
-        <EmbrelaSlider />
-        {/* <Slidertop /> */}
-        <TableOfContents title="Table of Contents" items={items} />
-        <LesPrivateSBMPTNHeader />
-        <SBMPTNFlow />
-        <StatistikImageSBMPTN />
-        <WhyChooseSBMPTN />
-        <section id="pengajar-les-private">
-          <PengajarLestPrivate />
-        </section>
-        <section id="fitur-program-les-private">
-          <FiturProgramNew />
-        </section>
-        {/*    {/* <PromoFree /> */}
-        <section id="pilihan-program-les-private">
-          <PilihanProgram />
-        </section>
-        <section id="matrix-juga-melayani-les-privat-online">
-          <OnlineLesOptions />
-        </section>
-        <section id="program-les-private-matrix-tutoring">
-          <ProgramLesPrivat />
-        </section>
-        <MasterTeacherV2 />
-        <ProgramBelajarLesPrivat />
-        <MatrixFeatures />
-        <SuccessStoryLesPrivate />
-        <section id="asal-sekolah-siswa-matrix-tutoring-private">
-          <AsalSekolahSiswaEdumatrix />
-          <AsalSekolahSiswaMarque />
-        </section>
-        <Keunggulan />
-        <ListKelurahanLesPrivate
-          program={"les-privat-sbmptn"}
-          title={"Les Privat SBMPTN"}
-        />
-      </div>
+
+      <HeroLesPrivate
+        nameCountry={nameCountry}
+        images={heroImageSrc}
+        heading={displayedHeading}
+        desc={heroData?.description}
+      />
+      <EmbrelaSlider />
+      {/* <Slidertop /> */}
+      <TableOfContents title="Table of Contents" items={items} />
+      <LesPrivateSBMPTNHeader />
+      <SBMPTNFlow />
+      <StatistikImageSBMPTN />
+      <WhyChooseSBMPTN />
+      <section id="pengajar-les-private">
+        <PengajarLestPrivate />
+      </section>
+      <section id="fitur-program-les-private">
+        <FiturProgramNew />
+      </section>
+      {/*    {/* <PromoFree /> */}
+      <section id="pilihan-program-les-private">
+        <PilihanProgram />
+      </section>
+      <section id="matrix-juga-melayani-les-privat-online">
+        <OnlineLesOptions />
+      </section>
+      <section id="program-les-private-matrix-tutoring">
+        <ProgramLesPrivat />
+      </section>
+      <MasterTeacherV2 />
+      <ProgramBelajarLesPrivat />
+      <MatrixFeatures />
+      <SuccessStoryLesPrivate />
+      <section id="asal-sekolah-siswa-matrix-tutoring-private">
+        <AsalSekolahSiswaEdumatrix />
+        <AsalSekolahSiswaMarque />
+      </section>
+
       <HowToOrder />
       <AccordionFAQ />
+      <GaleriKegiatanBelajar />
       <PromoHomepage />
       <CTABottomHome />
     </React.Fragment>

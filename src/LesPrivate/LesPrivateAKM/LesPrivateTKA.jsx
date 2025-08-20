@@ -23,6 +23,11 @@ import LesPrivateTKAHeader from "./components/LesPrivateTKAHeader";
 import StatistikImageTKA from "./components/StatistikImageTKA";
 import TKAFlow from "./components/TKAFlow/TKAFlow";
 import TKAPillarsShowcase from "./components/TKAPillarsShowcase/TKAPillarsShowcase";
+import ProgramLesPrivatV2 from "../../Components/ProgramLesPrivatNew/ProgramLesPrivatV2 ";
+import TestimoniOrtuSiswa from "../../Components/TestimoniOrtuSiswa/TestimoniOrtuSiswa";
+import TestimonialSiswa from "../../Components/TestimonialSiswa/TestimonialSiswa";
+import SuccessStoryLesPrivate from "../../Components/SuccesStoryLesPrivate/SuccesStoryLesPrivate";
+import GaleriKegiatanBelajar from "../../Components/GaleriKegiatanBelajar/GaleriKegiatanBelajar";
 
 const items = [
   {
@@ -64,7 +69,7 @@ const items = [
     href: "#program-les-private-matrix",
   },
   {
-    text: "Saat Ini, Matrix Juga Melayani Les Privat Online",
+    text: "Saat Ini, Matrix Tutoring Juga Melayani Les Privat Online",
     href: "#matrix-juga-melayani-les-privat-online",
   },
   {
@@ -188,48 +193,45 @@ const LesPrivateTKA = () => {
           `}
         </script>
       </Helmet>
-      <div className="container-all">
-        <EmbrelaSlider />
-        {/* <Slidertop /> */}
-        <TableOfContents title="Table of Contents" items={items} />
-        <LesPrivateTKAHeader />
-        <TKAFlow />
-        <TKAPillarsShowcase />
-        <BenefitOfTKA />
-        <StatistikImageTKA />
 
-        {/* <ImpactStatisticsTKA /> */}
-        <section id="pengajar-les-private">
-          <PengajarLestPrivate />
-        </section>
-        <section id="fitur-program-les-private">
-          <FiturProgramNew />
-        </section>
-        {/*    {/* <PromoFree /> */}
-        <section id="pilihan-program-les-private">
-          <PilihanProgram />
-        </section>
-        <section id="matrix-juga-melayani-les-privat-online">
-          <OnlineLesOptions />
-        </section>
-        <section id="program-les-private-matrix">
-          <ProgramLesPrivat />
-        </section>
+      <EmbrelaSlider />
+      {/* <Slidertop /> */}
+      <TableOfContents title="Table of Contents" items={items} />
+      <LesPrivateTKAHeader />
+      <TKAFlow />
+      <TKAPillarsShowcase />
+      <BenefitOfTKA />
+      <StatistikImageTKA />
+
+      <section id="program-les-private-matrix-tutoring">
+        <ProgramLesPrivatV2 />
+      </section>
+      <section id="fitur-program-les-private">
+        <FiturProgramNew />
+      </section>
+      <section id="pilihan-program-les-private">
+        <PilihanProgram />
+      </section>
+      <section id="matrix-juga-melayani-les-privat-online">
+        <OnlineLesOptions />
+      </section>
+      <section id="pengajar-les-private">
         <MasterTeacherV2 />
-        <ProgramBelajarLesPrivat />
-        <MatrixFeatures />
-        <section id="asal-sekolah-siswa-matrix-private">
-          <AsalSekolahSiswaEdumatrix />
-          <AsalSekolahSiswaMarque />
-        </section>
-        <Keunggulan />
-        <ListKotaProgramLesPrivate
-          program={"les-privat-tka-tes-kemampuan-akademik"}
-          title={"Les Privat TKA"}
-        />
-      </div>
+      </section>
+      <ProgramBelajarLesPrivat />
+      <MatrixFeatures />
+      <SuccessStoryLesPrivate />
+      {/* <TestimonialSiswa /> */}
+      <TestimoniOrtuSiswa />
+      <section id="asal-sekolah-siswa-matrix-private">
+        <AsalSekolahSiswaEdumatrix />
+        <AsalSekolahSiswaMarque />
+      </section>
+      <Keunggulan />
+
       <HowToOrder />
       <AccordionFAQ />
+      <GaleriKegiatanBelajar />
       <PromoHomepage />
       <CTABottomHome />
     </React.Fragment>

@@ -6,22 +6,22 @@ const Tutor = () => {
   return (
     <React.Fragment>
       <Helmet>
-        <title>Panduan Umum Tutor - Matrix Les Privat</title>
+        <title>Panduan Umum Tutor - Matrix Tutoring Les Privat</title>
         <meta
           name="description"
-          content="Panduan lengkap untuk tutor Matrix, mencakup tujuan utama, bahan ajar, penjadwalan, evaluasi, dan proses transfer gaji."
+          content="Panduan lengkap untuk tutor Matrix Tutoring, mencakup tujuan utama, bahan ajar, penjadwalan, evaluasi, dan proses transfer gaji."
         />
         <meta
           name="keywords"
-          content="panduan tutor, les privat, tutor Matrix, bahan ajar, penjadwalan, evaluasi tutor, transfer gaji tutor"
+          content="panduan tutor, les privat, tutor Matrix Tutoring, bahan ajar, penjadwalan, evaluasi tutor, transfer gaji tutor"
         />
         <meta
           property="og:title"
-          content="Panduan Umum Tutor - Matrix Les Privat"
+          content="Panduan Umum Tutor - Matrix Tutoring Les Privat"
         />
         <meta
           property="og:description"
-          content="Panduan lengkap untuk tutor Matrix, mencakup tujuan utama, bahan ajar, penjadwalan, evaluasi, dan proses transfer gaji."
+          content="Panduan lengkap untuk tutor Matrix Tutoring, mencakup tujuan utama, bahan ajar, penjadwalan, evaluasi, dan proses transfer gaji."
         />
         <meta
           property="og:image"
@@ -105,11 +105,11 @@ const Tutor = () => {
           </div>
           <h2>Lain-lainnya</h2>
           <p>
-            Tutor tidak dibenarkan mengajar les siswa dari Matrix sebagai siswa
-            pribadi. Dalam beberapa hal terdapat ketentuan khusus (pada program
-            dan tutor tertentu). Semoga kerja keras kita sebagai tim dapat
-            memberikan yang terbaik untuk siswa-siswa kita, menciptakan
-            keberkahan dan menjadi nilai tambah dalam hidup kita.
+            Tutor tidak dibenarkan mengajar les siswa dari Matrix Tutoring
+            sebagai siswa pribadi. Dalam beberapa hal terdapat ketentuan khusus
+            (pada program dan tutor tertentu). Semoga kerja keras kita sebagai
+            tim dapat memberikan yang terbaik untuk siswa-siswa kita,
+            menciptakan keberkahan dan menjadi nilai tambah dalam hidup kita.
           </p>
         </section>
         {/* <Floatingcta /> */}

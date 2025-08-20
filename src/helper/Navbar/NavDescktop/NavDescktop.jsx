@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 import { motion } from "framer-motion";
 import { ChevronDown } from "lucide-react";
 import { useState } from "react";
@@ -70,8 +71,6 @@ export default function NavDescktop({ menu }) {
                   <p className="menu-heading">{menu?.subMenuHeading?.[i]}</p>
                 )}
                 <Link to={submenu.link} className="menu-content">
-                  {" "}
-                  {/* Link untuk submenu */}
                   <div className="icon-box-descktop">
                     {submenu.icon && <submenu.icon />}
                   </div>

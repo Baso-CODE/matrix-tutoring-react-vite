@@ -2,14 +2,15 @@
 
 .popular-courses-section {
   padding: 80px 20px;
+  padding-left: 10%;
+  padding-right: 10%;
   background-color: #ffffff;
   text-align: center;
 }
 
-.popular-courses-container {
-  max-width: 1100px; /* Lebar maksimum container utama */
+/* .popular-courses-container {
   margin: 0 auto;
-}
+} */
 
 .popular-courses-title {
   font-size: 1.4rem; /* Ukuran font lebih besar */
@@ -143,11 +144,19 @@
   .marquee-item {
     min-height: 38vh;
   }
+  .popular-courses-section {
+    padding-left: 4%;
+    padding-right: 4%;
+  }
 }
 /* Responsivitas (sesuaikan marquee jika perlu, misal kurangi kecepatan) */
 @media (max-width: 768px) {
   .popular-courses-title {
     font-size: 1.3rem;
+  }
+  .popular-courses-section {
+    padding-left: 4%;
+    padding-right: 4%;
   }
   .popular-courses-subtitle {
     font-size: 1rem;

@@ -8,13 +8,15 @@
 .success-story-container h2 {
   font-size: 1.7rem;
   font-family: "Nunito", sans-serif;
-  font-weight: 700;
+  font-weight: 800;
+  margin: 0;
+  text-transform: uppercase;
   font-style: normal;
   color: #333333;
 }
 .success-story-description {
   font-size: 1rem;
-  margin-bottom: 30px; /* Space between description and content */
+  margin-bottom: 30px;
   font-family: "Nunito", sans-serif;
   color: #555555;
   font-weight: normal;
@@ -45,8 +47,8 @@
     grid-template-columns: repeat(2, 1fr);
   }
   .success-story-container h2 {
-    font-size: 1.5rem;
-    font-weight: 700;
+    font-size: 1.4rem;
+    font-weight: 800;
   }
   .success-story-description {
     font-size: 16px;

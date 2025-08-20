@@ -1,0 +1,91 @@
+.more-modal-backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  z-index: 1000;
+  font-family: "Nunito", sans-serif;
+}
+
+.more-modal-content {
+  background-color: #fff;
+  border-top-left-radius: 16px;
+  border-top-right-radius: 16px;
+  width: 100%;
+  max-width: 500px;
+  padding: 24px;
+  box-shadow: 0 -5px 15px rgba(0, 0, 0, 0.2);
+  max-height: 80vh;
+  overflow-y: auto;
+}
+
+.more-modal-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 24px;
+}
+
+.more-modal-title {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.more-modal-title h3 {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #1a202c;
+  margin: 0;
+}
+
+.more-modal-close-btn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: #a0aec0;
+  transition: color 0.2s;
+}
+
+.more-modal-close-btn:hover {
+  color: #1a202c;
+}
+
+.more-modal-menu {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.more-modal-item {
+  margin-bottom: 8px;
+}
+
+.more-modal-link {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  background-color: #007bff;
+  text-decoration: none;
+  padding: 12px 16px;
+  border-radius: 8px;
+  color: #ffffff;
+  font-weight: 600;
+  transition: background-color 0.2s ease-in-out;
+}
+
+.more-modal-link:hover {
+  background-color: #007bffcb;
+}
+
+/* Ensure mobile-first design */
+@media (max-width: 500px) {
+  .more-modal-content {
+    max-width: 100%;
+  }
+}

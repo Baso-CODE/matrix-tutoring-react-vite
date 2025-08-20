@@ -19,29 +19,31 @@ const AsalSekolahSiswaMarque = () => {
   }, []);
 
   return (
-    <div className="container-asal-sekolah-siswa-marque">
-      <div className="">
+    <section className="container-all">
+      <div className="container-asal-sekolah-siswa-marque">
         <div className="">
-          {/* Horizontal Marquee */}
-          <Marquee
-            direction="left"
-            speed={85}
-            gradient={false}
-            className="marquee-grid">
-            {schoolImages.map((image, index) => (
-              <img
-                loading="lazy"
-                key={index}
-                src={`https://node-osn.edusmart-indonesia.com/asalSekolahSiswa-images/${image.foto_sekolah}`}
-                alt={`asal sekolah siswa les privat Online & Guru ke Rumah (TK, SD, SMP, SMA, AKM, Mahasiswa, Bahasa Asing, Simak UI, SBMPTN) ${
-                  index + 1
-                } - Matrix Tutoring `}
-              />
-            ))}
-          </Marquee>
+          <div className="">
+            {/* Horizontal Marquee */}
+            <Marquee
+              direction="left"
+              speed={55}
+              gradient={true}
+              className="marquee-grid">
+              {schoolImages.map((image, index) => (
+                <img
+                  loading="lazy"
+                  key={index}
+                  src={`https://node-osn.edusmart-indonesia.com/asalSekolahSiswa-images/${image.foto_sekolah}`}
+                  alt={`asal sekolah siswa les privat Online & Guru ke Rumah (TK, SD, SMP, SMA, AKM, Mahasiswa, Bahasa Asing, Simak UI, SBMPTN) ${
+                    index + 1
+                  } - Matrix Tutoring `}
+                />
+              ))}
+            </Marquee>
+          </div>
         </div>
       </div>
-    </div>
+    </section>
   );
 };
 

@@ -1,0 +1,147 @@
+/* Container Utama untuk seluruh galeri */
+.galeri-container {
+  font-family: sans-serif;
+  overflow: hidden;
+}
+
+/* Judul utama */
+.main-title-galeri-belajar {
+  text-align: center;
+  font-size: 1.7rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  color: #333333;
+  font-family: "Nunito", sans-serif;
+  margin-bottom: 10px;
+}
+
+/* Gaya Swiper utama */
+.mySwiper {
+  margin: 0 auto;
+}
+
+/* Styling untuk kartu di dalam slide */
+.galeri-card {
+  position: relative;
+  border-radius: 20px;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  padding: 20px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  min-height: 52vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Ikon bintang */
+.star-icon {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 111px;
+  height: auto;
+  transform: translate(20%, -20%) rotate(25deg);
+  z-index: 10;
+}
+
+/* Judul kartu */
+.card-title-container {
+  background-color: #007bff;
+  color: white;
+  text-align: center;
+  padding: 8px;
+  border-radius: 10px;
+  margin-bottom: 15px;
+}
+
+.card-title-galeri-kegiatan {
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin: 0;
+  color: #ffffff;
+  font-family: "Nunito", sans-serif;
+}
+
+/* Grid gambar di dalam kartu */
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 10px;
+}
+
+.image-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.image-box {
+  width: 100%;
+  padding-top: 75%; /* Rasio 4:3 */
+  position: relative;
+  overflow: hidden;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.image-box img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Tag pada gambar */
+.image-tag {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  background-color: #007bff;
+  color: white;
+  font-size: 0.75rem;
+  padding: 4px 8px;
+  border-radius: 5px;
+  font-weight: bold;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  z-index: 5;
+}
+
+.image-caption-galeri-kegiatan {
+  font-size: 0.7rem;
+  color: #f4f4f4;
+  margin-top: 5px;
+  font-family: "Nunito", sans-serif;
+}
+
+/* Scrollbar kustom */
+.swiper-scrollbar {
+  background-color: #e0e0e0; /* Jalur scrollbar berwarna abu-abu terang */
+  border-radius: 10px;
+  height: 6px;
+  bottom: 0 !important;
+}
+
+.swiper-scrollbar-drag {
+  background-color: #007bff; /* Handle scrollbar berwarna biru */
+  border-radius: 10px;
+}
+
+@media (max-width: 1024px) {
+  .galeri-card {
+    min-height: 25vh;
+  }
+}
+
+@media (max-width: 767px) {
+  .galeri-card {
+    min-height: 43vh;
+  } /* Judul utama */
+  .main-title-galeri-belajar {
+    font-size: 1.4rem;
+  }
+}

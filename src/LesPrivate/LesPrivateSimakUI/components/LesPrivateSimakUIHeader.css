@@ -7,7 +7,7 @@
 }
 
 .centered-content-lesPrivate-simakUI h1 {
-  font-size: 1.6rem;
+  font-size: 1.4rem;
   color: #333333;
   font-family: "Nunito", sans-serif;
   font-weight: 700;
@@ -16,9 +16,9 @@
 }
 
 .centered-content-lesPrivate-simakUI h2 {
-  font-size: 1.4rem;
+  font-size: 1.2rem;
   color: #333333;
-  margin-top: 2rem;
+
   font-family: "Nunito", sans-serif;
   font-weight: 700;
   margin-bottom: 0.3rem;
@@ -27,9 +27,9 @@
 .centered-content-lesPrivate-simakUI p {
   font-size: 1rem;
   color: #4f4f4f;
-  line-height: 1.6;
-  margin-bottom: 1.5rem;
-  font-weight: 500;
+  line-height: normal;
+
+  font-weight: 400;
   font-family: "Nunito", sans-serif;
 }
 

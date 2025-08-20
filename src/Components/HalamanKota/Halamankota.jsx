@@ -5,22 +5,19 @@ import { getAllKotBySlug } from "../../helper/request/getAllKotaBySlug";
 import CTABottomHome from "../../Home/CTABottomHome/CTABottomHome";
 import PromoHomepage from "../../Home/PromoHomepage/PromoHomepage";
 import AsalSekolahSiswaEdumatrix from "../AsalSekolahSiswa/AsalSekolahSiswa";
-import BannerComponent from "../Banner/Banner";
 import AccordionFAQ from "../FAQ/AccordionFAQ";
 import FiturProgramNew from "../FiturProgramNew/FiturProgramNew";
+import GaleriKegiatanBelajar from "../GaleriKegiatanBelajar/GaleriKegiatanBelajar";
 import HowToOrder from "../HowToOrder/HowToOrder";
-import Keunggulan from "../Keunggulan/Keunggulan";
 import MasterTeacherV2 from "../MasterTeacherV2/MasterTeacherV2";
 import MatrixFeatures from "../MatrixFeatures/MatrixFeatures";
 import OnlineLesOptions from "../OnlineLesOption/OnlineLesOption";
-import PengajarLestPrivate from "../PengajarLestPrivate/PengajarLestPrivate";
 import ProgramBelajarLesPrivat from "../ProgramBelajarLesPrivate/ProgramBelajarLesPrivate";
-import ProgramLesPrivat from "../ProgramLesPrivate/ProgramLesPrivate";
+import ProgramLesPrivatV2 from "../ProgramLesPrivatNew/ProgramLesPrivatV2 ";
 import PilihanProgram from "../ProgramOptions/PilihanProgram";
 import AsalSekolahSiswaMarque from "../SekolahSiswaMarque/SekolahSiswaMarque";
 import EmbrelaSlider from "../SlideTop/EmbrelaSlider";
 import SuccessStoryLesPrivate from "../SuccesStoryLesPrivate/SuccesStoryLesPrivate";
-import ListKabupaten from "../Tab/ListKabupaten";
 import TestimonialSiswa from "../TestimonialSiswa/TestimonialSiswa";
 import TestimoniOrtuSiswa from "../TestimoniOrtuSiswa/TestimoniOrtuSiswa";
 import "./Halamankota.css";
@@ -98,58 +95,52 @@ const Halamankota = () => {
           content="https://apps.bimbelmatrix.com/images/whatsapp_footer.webp"
         />
       </Helmet>{" "}
-      <div className="container-all">
-        <div className="content-kota">
-          <div className="teks-content">
-            <h1 className="title-halaman-kota">
-              Les Privat di{" "}
-              <span className="highlight-yellow-kota">{kota.kota}</span> - TK,
-              SD, SMP, SMA, UTBK SNBT, SIMAK UI, UM PTN & CBT UGM{" "}
-              <span className="highlight-yellow-kota">Terbaik</span>
-            </h1>
+      <div className="content-kota">
+        <div className="teks-content">
+          <h1 className="title-halaman-kota">
+            Les Privat di{" "}
+            <span className="highlight-yellow-kota">{kota.kota}</span> - TK, SD,
+            SMP, SMA, UTBK SNBT, SIMAK UI, UM PTN & CBT UGM{" "}
+            <span className="highlight-yellow-kota">Terbaik</span>
+          </h1>
 
-            <div className="paragraf-kota">
-              <p className="child-paragraf-kota">
-                Bimbel Les Privat di Kota {kota.kota} untuk TK, SD, SMP, SMA,
-                UN/AKM, OSN, CPNS, LPDP, PPDS, SIMAK UI, UTBK SNBT, CBT UGM,
-                UMPTN.
-              </p>
-              <p className="child-paragraf-kota">
-                Dapatkan layanan Les Privat kapan pun dan dimana pun dengan
-                lebih dari 5.000 Master Teacher Matrix yang siap memberikan
-                pelayanan{" "}
-                <span className="highlight-yellow-kota">terbaik.</span>
-              </p>
-            </div>
+          <div className="paragraf-kota">
+            <p className="child-paragraf-kota">
+              Bimbel Les Privat di Kota {kota.kota} untuk TK, SD, SMP, SMA,
+              UN/AKM, OSN, CPNS, LPDP, PPDS, SIMAK UI, UTBK SNBT, CBT UGM,
+              UMPTN.
+            </p>
+            <p className="child-paragraf-kota">
+              Dapatkan layanan Les Privat kapan pun dan dimana pun dengan lebih
+              dari 5.000 Master Teacher Matrix Tutoring yang siap memberikan
+              pelayanan <span className="highlight-yellow-kota">terbaik.</span>
+            </p>
           </div>
-
-          <img
-            loading="eager"
-            className="rumah-adat"
-            src={kota.url}
-            alt={`les privat Online & Guru ke Rumah (TK, SD, SMP, SMA, AKM, Mahasiswa, Bahasa Asing, Simak UI, SBMPTN) di${kota.kota} - Matrix Tutoring`}
-          />
         </div>
-        <EmbrelaSlider />
-        <BannerComponent />
-        <PengajarLestPrivate />
-        <FiturProgramNew />
-        <PilihanProgram />
-        <OnlineLesOptions />
-        <ProgramLesPrivat />
-        <MasterTeacherV2 />
-        <ProgramBelajarLesPrivat />
-        <MatrixFeatures />
-        <SuccessStoryLesPrivate />
-        <TestimonialSiswa />
-        <TestimoniOrtuSiswa />
-        <AsalSekolahSiswaEdumatrix />
-        <AsalSekolahSiswaMarque />
-        <Keunggulan />
-        <ListKabupaten />
+
+        <img
+          loading="eager"
+          className="rumah-adat"
+          src={kota.url}
+          alt={`les privat Online & Guru ke Rumah (TK, SD, SMP, SMA, AKM, Mahasiswa, Bahasa Asing, Simak UI, SBMPTN) di${kota.kota} - Matrix Tutoring`}
+        />
       </div>
+      <EmbrelaSlider />
+      <ProgramLesPrivatV2 />
+      <FiturProgramNew />
+      <PilihanProgram />
+      <OnlineLesOptions />
+      <MasterTeacherV2 />
+      <ProgramBelajarLesPrivat />
+      <MatrixFeatures />
+      <SuccessStoryLesPrivate />
+      {/* <TestimonialSiswa /> */}
+      <TestimoniOrtuSiswa />
+      <AsalSekolahSiswaEdumatrix />
+      <AsalSekolahSiswaMarque />
       <HowToOrder />
       <AccordionFAQ />
+      <GaleriKegiatanBelajar />
       <PromoHomepage />
       <CTABottomHome />
     </React.Fragment>

@@ -2,13 +2,10 @@ import React, { useEffect, useState } from "react";
 import { Helmet } from "react-helmet-async";
 import { useParams } from "react-router-dom";
 import AsalSekolahSiswaEdumatrix from "../../../Components/AsalSekolahSiswa/AsalSekolahSiswa";
-import Keunggulan from "../../../Components/Keunggulan/Keunggulan";
 import MasterTeacherV2 from "../../../Components/MasterTeacherV2/MasterTeacherV2";
 import MatrixFeatures from "../../../Components/MatrixFeatures/MatrixFeatures";
 import OnlineLesOptions from "../../../Components/OnlineLesOption/OnlineLesOption";
-import PengajarLestPrivate from "../../../Components/PengajarLestPrivate/PengajarLestPrivate";
 import ProgramBelajarLesPrivat from "../../../Components/ProgramBelajarLesPrivate/ProgramBelajarLesPrivate";
-import ProgramLesPrivat from "../../../Components/ProgramLesPrivate/ProgramLesPrivate";
 import PilihanProgram from "../../../Components/ProgramOptions/PilihanProgram";
 import AsalSekolahSiswaMarque from "../../../Components/SekolahSiswaMarque/SekolahSiswaMarque";
 import EmbrelaSlider from "../../../Components/SlideTop/EmbrelaSlider";
@@ -16,12 +13,16 @@ import { getAllKotBySlug } from "../../../helper/request/getAllKotaBySlug";
 import PromoHomepage from "../../../Home/PromoHomepage/PromoHomepage";
 import { getHeroData } from "../../../utils/getHeroData";
 import HeroLesPrivate from "../../components/HeroLesPrrivate/HeroLesPrivate";
-import ListKabupatenLesPrivate from "../../components/ListKabupatenLesPrivate/ListKabupatenLesPrivate";
 import TableOfContents from "../../components/TableOfContent";
 
 import AccordionFAQ from "../../../Components/FAQ/AccordionFAQ";
 import FiturProgramNew from "../../../Components/FiturProgramNew/FiturProgramNew";
+import GaleriKegiatanBelajar from "../../../Components/GaleriKegiatanBelajar/GaleriKegiatanBelajar";
 import HowToOrder from "../../../Components/HowToOrder/HowToOrder";
+import ProgramLesPrivatV2 from "../../../Components/ProgramLesPrivatNew/ProgramLesPrivatV2 ";
+import SuccessStoryLesPrivate from "../../../Components/SuccesStoryLesPrivate/SuccesStoryLesPrivate";
+import TestimonialSiswa from "../../../Components/TestimonialSiswa/TestimonialSiswa";
+import TestimoniOrtuSiswa from "../../../Components/TestimoniOrtuSiswa/TestimoniOrtuSiswa";
 import CTABottomHome from "../../../Home/CTABottomHome/CTABottomHome";
 import BenefitOfTKA from "../components/BenefitOfTKA/BenefitOfTKA";
 import LesPrivateTKAHeader from "../components/LesPrivateTKAHeader";
@@ -260,53 +261,50 @@ const LesPrivateTKAKota = () => {
           `}
         </script>
       </Helmet>
-      <div className="container-all">
-        <HeroLesPrivate
-          nameCountry={nameCountry}
-          images={heroImageSrc}
-          heading={displayedHeading}
-          desc={heroData?.description}
-        />
-        <EmbrelaSlider />
-        {/* <Slidertop /> */}
-        <TableOfContents title="Table of Contents" items={items} />
-        <LesPrivateTKAHeader />
-        <TKAFlow />
-        <TKAPillarsShowcase />
-        <BenefitOfTKA />
-        <StatistikImageTKA />
-        {/* <ImpactStatisticsTKA /> */}
-        <section id="pengajar-les-private">
-          <PengajarLestPrivate />
-        </section>
-        <section id="fitur-program-les-private">
-          <FiturProgramNew />
-        </section>
-        {/*    {/* <PromoFree /> */}
-        <section id="pilihan-program-les-private">
-          <PilihanProgram />
-        </section>
-        <section id="matrix-juga-melayani-les-privat-online">
-          <OnlineLesOptions />
-        </section>
-        <section id="program-les-private-matrix">
-          <ProgramLesPrivat />
-        </section>
+
+      <HeroLesPrivate
+        nameCountry={nameCountry}
+        images={heroImageSrc}
+        heading={displayedHeading}
+        desc={heroData?.description}
+      />
+      <EmbrelaSlider />
+      {/* <Slidertop /> */}
+      <TableOfContents title="Table of Contents" items={items} />
+      <LesPrivateTKAHeader />
+      <TKAFlow />
+      <TKAPillarsShowcase />
+      <BenefitOfTKA />
+      <StatistikImageTKA />
+
+      <section id="program-les-private-matrix-tutoring">
+        <ProgramLesPrivatV2 />
+      </section>
+      <section id="fitur-program-les-private">
+        <FiturProgramNew />
+      </section>
+      <section id="pilihan-program-les-private">
+        <PilihanProgram />
+      </section>
+      <section id="matrix-juga-melayani-les-privat-online">
+        <OnlineLesOptions />
+      </section>
+      <section id="pengajar-les-private">
         <MasterTeacherV2 />
-        <ProgramBelajarLesPrivat />
-        <MatrixFeatures />
-        <section id="asal-sekolah-siswa-matrix-private">
-          <AsalSekolahSiswaEdumatrix />
-          <AsalSekolahSiswaMarque />
-        </section>
-        <Keunggulan />
-        <ListKabupatenLesPrivate
-          program={"les-privat-tka-tes-kemampuan-akademik"}
-          title={"Les Privat TKA"}
-        />
-      </div>
+      </section>
+      <ProgramBelajarLesPrivat />
+      <MatrixFeatures />
+      <SuccessStoryLesPrivate />
+      {/* <TestimonialSiswa /> */}
+      <TestimoniOrtuSiswa />
+      <section id="asal-sekolah-siswa-matrix-tutoring-private">
+        <AsalSekolahSiswaEdumatrix />
+        <AsalSekolahSiswaMarque />
+      </section>
+
       <HowToOrder />
       <AccordionFAQ />
+      <GaleriKegiatanBelajar />
       <PromoHomepage />
       <CTABottomHome />
     </React.Fragment>

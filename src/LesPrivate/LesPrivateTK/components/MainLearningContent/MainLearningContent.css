@@ -2,27 +2,29 @@
 
 .main-learning-section {
   padding: 60px 20px;
-  background-color: #f9fafb; /* Latar belakang abu-abu sangat terang */
+  padding-left: 10%;
+  padding-right: 10%;
+  background-color: #007bff;
   text-align: center;
 }
 
 .main-learning-container {
-  max-width: 1240px;
   margin: 0 auto;
 }
 
 .main-learning-title {
-  font-size: 1.4rem;
-  font-weight: 700;
-  color: #333333;
-  margin-bottom: 20px;
+  font-size: 1.7rem;
+  text-transform: uppercase;
+  font-weight: 800;
+  color: #ffffff;
+  margin-bottom: 10px;
   font-family: "Nunito", sans-serif;
 }
 
 .main-learning-description {
   font-size: 1rem;
-  color: #4f4f4f; /* Teks sedang */
-  margin-bottom: 50px;
+  color: #f2f2f2;
+  margin-bottom: 30px;
 
   margin-left: auto;
   margin-right: auto;
@@ -30,19 +32,16 @@
   font-family: "Nunito", sans-serif;
 }
 
-/* SWIPER SPECIFIC STYLES */
 .main-learning-swiper {
   padding-bottom: 50px;
   padding-top: 20px;
 }
 
-/* Styles for individual learning items (cards) */
 .learning-item {
   background-color: #ffffff;
   padding: 30px;
   border-radius: 12px;
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
-
   transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease,
     filter 0.3s ease, opacity 0.3s ease;
   display: flex;
@@ -55,7 +54,6 @@
   justify-content: flex-start;
 }
 
-/* Class untuk kartu yang akan diburamkan */
 .learning-item.blurred {
   filter: blur(2px);
   opacity: 0.7;
@@ -73,7 +71,6 @@
   opacity: 1;
 }
 
-/* Override efek hover pada kartu yang buram jika ada */
 .learning-item.blurred:hover {
   transform: translateY(0);
   box-shadow: none;
@@ -83,64 +80,71 @@
 .learning-icon-wrapper {
   width: 70px;
   height: 70px;
-  background-color: #3b82f6; /* Biru sekunder/aksen */
+  background-color: #3b82f6;
   border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
   margin-bottom: 20px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-  flex-shrink: 0; /* Pastikan ikon tidak menyusut */
+  flex-shrink: 0;
+}
+
+.subject-icon-learnhing-features-tk {
+  width: 13rem;
+  height: 1rem;
+  object-fit: contain;
 }
 
 .learning-icon {
   font-size: 2.5rem;
-  color: #ffffff; /* Warna ikon putih */
+  color: #ffffff;
 }
 
 .learning-item-title {
-  font-size: 1.2rem;
+  font-size: 1.1rem;
   font-weight: 700;
-  color: #007bff; /* Biru utama */
-  margin-bottom: 10px;
+  color: #007bff;
+  margin-top: 2.5rem;
+  margin-bottom: 5px;
   font-family: "Nunito", sans-serif;
-  flex-shrink: 0; /* Pastikan judul tidak menyusut */
+  flex-shrink: 0;
 }
 
 .learning-item-text {
   font-size: 0.95rem;
-  color: #4b5563; /* Teks sedang */
+  color: #4b5563;
+  height: max-content;
   line-height: 1.6;
   font-family: "Nunito", sans-serif;
-  flex-grow: 1; /* IZINKAN TEKS INI UNTUK MENGISI SISA RUANG */
-  display: -webkit-box; /* Untuk membatasi baris teks (optional) */
-  -webkit-line-clamp: 4; /* Batasi hingga 4 baris */
-  line-clamp: 4; /* Standar properti untuk kompatibilitas */
+  flex-grow: 1;
+  display: -webkit-box;
+  -webkit-line-clamp: 4;
+  line-clamp: 4;
   -webkit-box-orient: vertical;
   overflow: hidden;
-  text-overflow: ellipsis; /* Tambahkan elipsis jika teks terpotong */
+  text-overflow: ellipsis;
 }
 
-/* Swiper Navigation Arrows (Panah Kiri/Kanan) */
 .swiper-button-next,
 .swiper-button-prev {
-  color: #007bff !important; /* Warna panah biru utama */
-  --swiper-navigation-size: 30px; /* Ukuran panah */
+  color: #007bff !important;
+  --swiper-navigation-size: 30px;
 }
 
 .swiper-button-next:hover,
 .swiper-button-prev:hover {
-  color: #3b82f6 !important; /* Warna panah biru sekunder saat hover */
+  color: #3b82f6 !important;
 }
 
 /* Swiper Pagination Dots */
 .swiper-pagination-bullet {
-  background: #a0aec0 !important; /* Warna abu-abu default untuk dot */
+  background: #a0aec0 !important;
   opacity: 0.8;
 }
 
 .swiper-pagination-bullet-active {
-  background: #007bff !important; /* Warna biru utama untuk dot aktif */
+  background: #007bff !important;
   opacity: 1;
 }
 
@@ -148,6 +152,10 @@
 @media (max-width: 1024px) {
   .learning-item {
     min-height: 28vh;
+  }
+  .main-learning-section {
+    padding-left: 4%;
+    padding-right: 4%;
   }
 }
 @media (max-width: 768px) {

@@ -17,27 +17,29 @@ const ListKotaProgramLesPrivate = ({ title, program }) => {
     fetchKota();
   }, []);
   return (
-    <div className=" container-all-tab">
-      <div className="title-container">
-        <img
-          loading="lazy"
-          src="/images/daftar-kota.webp"
-          alt="City Icon"
-          className="icon-city"
-        />
-        <h2 className=" title-list"> Daftar {title} di kota indonesia</h2>
+    <section className="container-all">
+      <div className=" container-all-tab">
+        <div className="title-container">
+          <img
+            loading="lazy"
+            src="/images/daftar-kota.webp"
+            alt="City Icon"
+            className="icon-city"
+          />
+          <h2 className=" title-list"> Daftar {title} di kota indonesia</h2>
+        </div>
+        <div className="parent-list-kota">
+          {kota.map((item, index) => (
+            <Link
+              className="btn-kota"
+              key={index}
+              to={`/${program}/${item.slug}`}>
+              {item.kota}
+            </Link>
+          ))}
+        </div>
       </div>
-      <div className="parent-list-kota">
-        {kota.map((item, index) => (
-          <Link
-            className="btn-kota"
-            key={index}
-            to={`/${program}/${item.slug}`}>
-            {item.kota}
-          </Link>
-        ))}
-      </div>
-    </div>
+    </section>
   );
 };
 

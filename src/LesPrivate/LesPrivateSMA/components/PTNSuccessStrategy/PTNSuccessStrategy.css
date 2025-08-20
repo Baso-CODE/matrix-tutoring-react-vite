@@ -2,11 +2,12 @@
 
 .ptn-strategy-section {
   padding: 80px 20px;
-
+  padding-left: 10%;
+  padding-right: 10%;
   text-align: center;
+  background-color: #007bff;
   overflow: hidden;
-  position: relative; /* Untuk efek latar belakang */
-  border-radius: 15px;
+  position: relative;
 }
 
 /* Efek latar belakang abstrak (opsional, untuk sentuhan futuristik) */
@@ -32,16 +33,17 @@
 }
 
 .ptn-strategy-container {
-  max-width: 1200px;
   margin: 0 auto;
+  padding-top: 30px;
   position: relative; /* Pastikan konten di atas efek latar */
   z-index: 1;
 }
 
 .ptn-strategy-title {
-  font-size: 1.5rem; /* Lebih besar dari SMP */
+  font-size: 1.5rem;
+  text-transform: uppercase;
   font-weight: 800;
-  color: #333333; /* Biru utama yang kuat */
+  color: #ffffff;
   margin-bottom: 20px;
   font-family: "Nunito", sans-serif;
   line-height: 1.2;
@@ -50,7 +52,7 @@
 
 .ptn-strategy-subtitle {
   font-size: 1rem; /* Sedikit lebih besar */
-  color: #4f4f4f;
+  color: #f2fff2;
   margin-bottom: 70px; /* Jarak lebih jauh dari grid */
   max-width: 900px;
   margin-left: auto;
@@ -61,11 +63,9 @@
 
 .strategy-features-grid {
   display: grid;
-  grid-template-columns: repeat(
-    auto-fit,
-    minmax(300px, 1fr)
-  ); /* Ukuran kartu sedikit lebih besar */
-  gap: 35px; /* Jarak antar kartu lebih besar */
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 35px;
+
   margin-bottom: 60px;
 }
 
@@ -211,6 +211,12 @@
   box-shadow: 0 15px 25px rgba(255, 101, 0, 0.5); /* Bayangan lebih kuat saat hover */
 }
 
+@media (max-width: 1024px) {
+  .ptn-strategy-section {
+    padding-left: 4%;
+    padding-right: 4%;
+  }
+}
 /* Responsivitas */
 @media (max-width: 768px) {
   .ptn-strategy-title {
@@ -271,5 +277,9 @@
   .strategy-feature-icon {
     width: 7rem;
     height: 7rem;
+  }
+  .strategy-features-grid {
+    padding-left: 4%;
+    padding-right: 4%;
   }
 }

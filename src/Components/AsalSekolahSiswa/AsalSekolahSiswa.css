@@ -3,7 +3,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-top: 5vh;
+  /* margin-top: 5vh; */
 }
 
 .content-wrapper {
@@ -15,15 +15,16 @@
 }
 
 .title-section {
-  padding-top: 2.5rem;
   padding-bottom: 2.5rem;
 }
 
 .title-asal-sekolah {
-  font-size: 1.3rem;
+  font-size: 1.7rem;
+  margin-bottom: 3vh;
   line-height: 24px;
-  color: #333333;
-  font-weight: 700;
+  color: #ffffff;
+  font-weight: 800;
+  text-transform: uppercase;
   font-family: "Nunito", sans-serif;
   text-align: center;
 }

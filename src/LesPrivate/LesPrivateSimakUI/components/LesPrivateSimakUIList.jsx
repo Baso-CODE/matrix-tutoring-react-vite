@@ -16,8 +16,8 @@ const LesPrivateSimakUIList = () => {
     <div className="les-private-UI-list-container">
       <h2>
         Hal-hal apa saja yang menjadikan Program Privat Simak UI dari Les Privat
-        Matrix dapat dijadikan pertimbangan sebagai pilihan terbaik untuk
-        Ananda:
+        Matrix Tutoring dapat dijadikan pertimbangan sebagai pilihan terbaik
+        untuk Ananda:
       </h2>
       <ul className="subject-list-les-private-UI">
         {subjects.map((subject, index) => (

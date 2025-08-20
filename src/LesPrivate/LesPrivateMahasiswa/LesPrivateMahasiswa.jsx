@@ -24,6 +24,10 @@ import PopularCourses from "./components/PopularCourses/PopularCourses";
 import StatistikImageMahasiswa from "./components/StatistikImageMahasiswa";
 import StudentTestimonialsSlider from "./components/StudentTestimonialsSlider/StudentTestimonialsSlider";
 import UniversitySuccessFlow from "./components/UniversitySuccessFlow/UniversitySuccessFlow";
+import TestimoniOrtuSiswa from "../../Components/TestimoniOrtuSiswa/TestimoniOrtuSiswa";
+import TestimonialSiswa from "../../Components/TestimonialSiswa/TestimonialSiswa";
+import SuccessStoryLesPrivate from "../../Components/SuccesStoryLesPrivate/SuccesStoryLesPrivate";
+import ProgramLesPrivatV2 from "../../Components/ProgramLesPrivatNew/ProgramLesPrivatV2 ";
 
 const items = [
   {
@@ -198,45 +202,41 @@ const LesPrivateMahasiswa = () => {
         </script>
       </Helmet>
 
-      <div className="container-all">
-        <EmbrelaSlider />
-        {/* <Slidertop /> */}
-        <TableOfContents title="Table of Contents" items={items} />
-        <LesPrivateMahasiswaHeader />
-        <UniversitySuccessFlow />
-        <CoreUniversityBenefits />
-        <StudentTestimonialsSlider />
-        <PopularCourses />
-        <StatistikImageMahasiswa />
-        <section id="pengajar-les-private">
-          <PengajarLestPrivate />
-        </section>
-        <section id="fitur-program-les-private">
-          <FiturProgramNew />
-        </section>
-        {/*    {/* <PromoFree /> */}
-        <section id="pilihan-program-les-private">
-          <PilihanProgram />
-        </section>
-        <section id="matrix-juga-melayani-les-privat-online">
-          <OnlineLesOptions />
-        </section>
-        <section id="program-les-private-matrix-tutoring">
-          <ProgramLesPrivat />
-        </section>
+      <EmbrelaSlider />
+      {/* <Slidertop /> */}
+      <TableOfContents title="Table of Contents" items={items} />
+      <LesPrivateMahasiswaHeader />
+      <UniversitySuccessFlow />
+      <CoreUniversityBenefits />
+      <StudentTestimonialsSlider />
+      <PopularCourses />
+      <StatistikImageMahasiswa />
+      <section id="program-les-private-matrix-tutoring">
+        <ProgramLesPrivatV2 />
+      </section>
+      <section id="fitur-program-les-private">
+        <FiturProgramNew />
+      </section>
+      <section id="pilihan-program-les-private">
+        <PilihanProgram />
+      </section>
+      <section id="matrix-juga-melayani-les-privat-online">
+        <OnlineLesOptions />
+      </section>
+      <section id="pengajar-les-private">
         <MasterTeacherV2 />
-        <ProgramBelajarLesPrivat />
-        <MatrixFeatures />
-        <section id="asal-sekolah-siswa-matrix-tutoring-private">
-          <AsalSekolahSiswaEdumatrix />
-          <AsalSekolahSiswaMarque />
-        </section>
-        <Keunggulan />
-        <ListKotaProgramLesPrivate
-          program={"les-privat-mahasiswa"}
-          title={"Les Privat Mahasiswa"}
-        />
-      </div>
+      </section>
+      <ProgramBelajarLesPrivat />
+      <MatrixFeatures />
+      <SuccessStoryLesPrivate />
+      {/* <TestimonialSiswa /> */}
+      <TestimoniOrtuSiswa />
+      <section id="asal-sekolah-siswa-matrix-tutoring-private">
+        <AsalSekolahSiswaEdumatrix />
+        <AsalSekolahSiswaMarque />
+      </section>
+      <Keunggulan />
+
       <HowToOrder />
       <AccordionFAQ />
       <PromoHomepage />

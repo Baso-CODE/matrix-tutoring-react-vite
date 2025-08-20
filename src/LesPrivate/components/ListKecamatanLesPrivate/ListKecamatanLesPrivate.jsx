@@ -23,35 +23,37 @@ const ListKecamatanLesPrivate = ({ title, program }) => {
   }, [kabupatenSlug]);
 
   return (
-    <div className=" container-all-tab">
-      <div className="title-container">
-        <img
-          loading="lazy"
-          src="/images/daftar-kota.webp"
-          alt="City Icon"
-          className="icon-city"
-        />
-        <h2 className=" title-list">
-          Daftar {title} di {kabupaten.kota_kabupaten}
-        </h2>
+    <section className="container-all">
+      <div className=" container-all-tab">
+        <div className="title-container">
+          <img
+            loading="lazy"
+            src="/images/daftar-kota.webp"
+            alt="City Icon"
+            className="icon-city"
+          />
+          <h2 className=" title-list">
+            Daftar {title} di {kabupaten.kota_kabupaten}
+          </h2>
+        </div>
+        <div className="parent-list-kota">
+          {kecamatan.length > 0 ? (
+            kecamatan.map((item, index) => (
+              <Link
+                className="btn-kota"
+                key={index}
+                to={`/${program}/${kotaSlug}/${kabupatenSlug}/${item.slug}`}>
+                {item.kecamatan}
+              </Link>
+            ))
+          ) : (
+            <div className="no-kelurahan">
+              <p>No data kecamatan available for {kabupaten.kota_kabupaten}</p>
+            </div>
+          )}
+        </div>
       </div>
-      <div className="parent-list-kota">
-        {kecamatan.length > 0 ? (
-          kecamatan.map((item, index) => (
-            <Link
-              className="btn-kota"
-              key={index}
-              to={`/${program}/${kotaSlug}/${kabupatenSlug}/${item.slug}`}>
-              {item.kecamatan}
-            </Link>
-          ))
-        ) : (
-          <div className="no-kelurahan">
-            <p>No data kecamatan available for {kabupaten.kota_kabupaten}</p>
-          </div>
-        )}
-      </div>
-    </div>
+    </section>
   );
 };
 

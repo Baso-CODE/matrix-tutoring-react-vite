@@ -18,22 +18,24 @@ const SuccessStoryLesPrivate = () => {
     fetchSuccessStories();
   }, []);
   return (
-    <div className="success-story-container">
-      <h2>Success Story</h2>
-      <p className="success-story-description">
-        Tim kami telah membantu siswa diterima di berbagai universitas berikut:
-      </p>
-      <div className="success-story-content">
-        {successStories.map((data, index) => (
-          <div className="success-story-item" key={index}>
-            <img
-              loading="lazy"
-              src={data.link_image}
-              alt="Success Story 1 les privat Online & Guru ke Rumah (TK, SD, SMP, SMA, AKM, Mahasiswa, Bahasa Asing, Simak UI, SBMPTN) - Matrix Tutoring"
-            />
-          </div>
-        ))}
-        {/* <div className="success-story-item">
+    <section className="container-all">
+      <div className="success-story-container">
+        <h2>Success Story</h2>
+        <p className="success-story-description">
+          Tim kami telah membantu siswa diterima di berbagai universitas
+          berikut:
+        </p>
+        <div className="success-story-content">
+          {successStories.map((data, index) => (
+            <div className="success-story-item" key={index}>
+              <img
+                loading="lazy"
+                src={data.link_image}
+                alt="Success Story 1 les privat Online & Guru ke Rumah (TK, SD, SMP, SMA, AKM, Mahasiswa, Bahasa Asing, Simak UI, SBMPTN) - Matrix Tutoring"
+              />
+            </div>
+          ))}
+          {/* <div className="success-story-item">
           <img
             loading="lazy"
             src="/images/succes-story/A.webp"
@@ -89,8 +91,9 @@ const SuccessStoryLesPrivate = () => {
             alt="Success Story 8 les privat Online & Guru ke Rumah (TK, SD, SMP, SMA, AKM, Mahasiswa, Bahasa Asing, Simak UI, SBMPTN) - Matrix Tutoring"
           />
         </div> */}
+        </div>
       </div>
-    </div>
+    </section>
   );
 };
 

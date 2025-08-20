@@ -3,9 +3,7 @@ import { Helmet } from "react-helmet-async";
 import AsalSekolahSiswaEdumatrix from "../../../Components/AsalSekolahSiswa/AsalSekolahSiswa";
 import MatrixFeatures from "../../../Components/MatrixFeatures/MatrixFeatures";
 import OnlineLesOptions from "../../../Components/OnlineLesOption/OnlineLesOption";
-import PengajarLestPrivate from "../../../Components/PengajarLestPrivate/PengajarLestPrivate";
 import ProgramBelajarLesPrivat from "../../../Components/ProgramBelajarLesPrivate/ProgramBelajarLesPrivate";
-import ProgramLesPrivat from "../../../Components/ProgramLesPrivate/ProgramLesPrivate";
 import PilihanProgram from "../../../Components/ProgramOptions/PilihanProgram";
 import AsalSekolahSiswaMarque from "../../../Components/SekolahSiswaMarque/SekolahSiswaMarque";
 import EmbrelaSlider from "../../../Components/SlideTop/EmbrelaSlider";
@@ -16,15 +14,16 @@ import LesPrivateTKHeader from "../components/LesPrivateTKHeader";
 import { useParams } from "react-router-dom";
 import AccordionFAQ from "../../../Components/FAQ/AccordionFAQ";
 import FiturProgramNew from "../../../Components/FiturProgramNew/FiturProgramNew";
+import GaleriKegiatanBelajar from "../../../Components/GaleriKegiatanBelajar/GaleriKegiatanBelajar";
 import HowToOrder from "../../../Components/HowToOrder/HowToOrder";
-import Keunggulan from "../../../Components/Keunggulan/Keunggulan";
 import MasterTeacherV2 from "../../../Components/MasterTeacherV2/MasterTeacherV2";
+import SuccessStoryLesPrivate from "../../../Components/SuccesStoryLesPrivate/SuccesStoryLesPrivate";
+import TestimoniOrtuSiswa from "../../../Components/TestimoniOrtuSiswa/TestimoniOrtuSiswa";
 import { getAllKotBySlug } from "../../../helper/request/getAllKotaBySlug";
 import CTABottomHome from "../../../Home/CTABottomHome/CTABottomHome";
 import PromoHomepage from "../../../Home/PromoHomepage/PromoHomepage";
 import { getHeroData } from "../../../utils/getHeroData";
 import HeroLesPrivate from "../../components/HeroLesPrrivate/HeroLesPrivate";
-import ListKabupatenProgramLesPrivate from "../../components/ListKabupatenLesPrivate/ListKabupatenLesPrivate";
 import MainLearningContent from "../components/MainLearningContent/MainLearningContent";
 import StatistikImage from "../components/StatistikImage/StatistikImage";
 
@@ -56,11 +55,11 @@ const items = [
     href: "#pilihan-program-les-private",
   },
   {
-    text: "Program Les Private Matrix  ",
+    text: "Program Les Private Matrix Tutoring  ",
     href: "#program-les-private-matrix-tutoring",
   },
   {
-    text: "Saat Ini, Matrix Juga Melayani Les Privat Online",
+    text: "Saat Ini, Matrix Tutoring Juga Melayani Les Privat Online",
     href: "#matrix-juga-melayani-les-privat-online",
   },
   {
@@ -246,51 +245,45 @@ const LesPrivateTKKota = () => {
           `}
           </script>
         </Helmet>
-        <div className="container-all">
-          <HeroLesPrivate
-            heading={displayedHeading}
-            desc={heroData?.description}
-            nameCountry={nameCountry}
-            images={heroImageSrc}
-          />
-          <EmbrelaSlider />
-          {/* <Slidertop /> */}
-          <TableOfContents title="Table of Contents" items={items} />
-          <LesPrivateTKHeader />
-          <LearningFeaturesLesPrivateTk />
-          <MainLearningContent />
-          <StatistikImage />
-          <section id="pengajar-les-private">
-            <PengajarLestPrivate />
-          </section>
-          <section id="fitur-program-les-private">
-            <FiturProgramNew />
-          </section>
-          {/*    {/* <PromoFree /> */}
-          <section id="pilihan-program-les-private">
-            <PilihanProgram />
-          </section>
-          <section id="matrix-juga-melayani-les-privat-online">
-            <OnlineLesOptions />
-          </section>
-          <section id="program-les-private-matrix-tutoring">
-            <ProgramLesPrivat />
-          </section>
-          <MasterTeacherV2 />
-          <ProgramBelajarLesPrivat />
-          <MatrixFeatures />
-          <section id="asal-sekolah-siswa-matrix-tutoring-private">
-            <AsalSekolahSiswaEdumatrix />
-            <AsalSekolahSiswaMarque />
-          </section>
-          <Keunggulan />
-          <ListKabupatenProgramLesPrivate
-            program={"les-privat-tk"}
-            title={"Les Privat TK"}
-          />
-        </div>
+        {/* <div className="container-all"> */}
+        <HeroLesPrivate
+          heading={displayedHeading}
+          desc={heroData?.description}
+          nameCountry={nameCountry}
+          images={heroImageSrc}
+        />
+        <EmbrelaSlider />
+        <TableOfContents title="Table of Contents" items={items} />
+        <LesPrivateTKHeader />
+        <LearningFeaturesLesPrivateTk />
+        <MainLearningContent />
+        <StatistikImage />
+        <section id="program-les-private-matrix-tutoring">
+          <ProgramLesPrivatV2 />
+        </section>
+        <section id="fitur-program-les-private">
+          <FiturProgramNew />
+        </section>
+        <section id="pilihan-program-les-private">
+          <PilihanProgram />
+        </section>
+        <section id="matrix-juga-melayani-les-privat-online">
+          <OnlineLesOptions />
+        </section>
+        <MasterTeacherV2 />
+        <ProgramBelajarLesPrivat />
+        <MatrixFeatures />
+        <SuccessStoryLesPrivate />
+        {/* <TestimonialSiswa /> */}
+        <TestimoniOrtuSiswa />
+        <section id="asal-sekolah-siswa-matrix-tutoring-private">
+          <AsalSekolahSiswaEdumatrix />
+          <AsalSekolahSiswaMarque />
+        </section>
+
         <HowToOrder />
         <AccordionFAQ />
+        <GaleriKegiatanBelajar />
         <PromoHomepage />
         <CTABottomHome />
       </React.Fragment>

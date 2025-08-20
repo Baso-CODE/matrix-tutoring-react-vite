@@ -22,6 +22,11 @@ import TableOfContents from "../components/TableOfContent";
 import AdaptiveLearningSMP from "./components/AdaptiveLearningSMP/AdaptiveLearningSMP";
 import LesPrivateSMPHeader from "./components/LesPrivateSMPHeader";
 import StatistikImageSMP from "./components/StatistikImageSMP";
+import ProgramLesPrivatV2 from "../../Components/ProgramLesPrivatNew/ProgramLesPrivatV2 ";
+import TestimoniOrtuSiswa from "../../Components/TestimoniOrtuSiswa/TestimoniOrtuSiswa";
+import TestimonialSiswa from "../../Components/TestimonialSiswa/TestimonialSiswa";
+import SuccessStoryLesPrivate from "../../Components/SuccesStoryLesPrivate/SuccesStoryLesPrivate";
+import GaleriKegiatanBelajar from "../../Components/GaleriKegiatanBelajar/GaleriKegiatanBelajar";
 
 const items = [
   {
@@ -40,7 +45,7 @@ const items = [
     ],
   },
   {
-    text: "Pendekatan Pembelajaran Adaptif Matrix",
+    text: "Pendekatan Pembelajaran Adaptif Matrix Tutoring",
     href: "#adaptive-learning-smp",
   },
   {
@@ -56,11 +61,11 @@ const items = [
     href: "#pilihan-program-les-private",
   },
   {
-    text: "Program Les Private Matrix ",
+    text: "Program Les Private Matrix Tutoring ",
     href: "#program-les-private-matrix-tutoring",
   },
   {
-    text: "Saat Ini, Matrix Juga Melayani Les Privat Online",
+    text: "Saat Ini, Matrix Tutoring Juga Melayani Les Privat Online",
     href: "#matrix-juga-melayani-les-privat-online",
   },
   {
@@ -197,45 +202,41 @@ const LesPrivateSMP = () => {
         </script>
       </Helmet>
 
-      <div className="container-all">
-        <EmbrelaSlider />
-        {/* <Slidertop /> */}
-        <TableOfContents title="Table of Contents" items={items} />
-        <LesPrivateSMPHeader />
-        <AdaptiveLearningSMP />
-        <StatistikImageSMP />
-        {/* <ImpactStatisticsSMP /> */}
-        <section id="pengajar-les-private">
-          <PengajarLestPrivate />
-        </section>
-        <section id="fitur-program-les-private">
-          <FiturProgramNew />
-        </section>
-        {/*    {/* <PromoFree /> */}
-        <section id="pilihan-program-les-private">
-          <PilihanProgram />
-        </section>
-        <section id="matrix-juga-melayani-les-privat-online">
-          <OnlineLesOptions />
-        </section>
-        <section id="program-les-private-matrix-tutoring">
-          <ProgramLesPrivat />
-        </section>
+      <EmbrelaSlider />
+
+      <TableOfContents title="Table of Contents" items={items} />
+      <LesPrivateSMPHeader />
+      <AdaptiveLearningSMP />
+      <StatistikImageSMP />
+      <section id="program-les-private-matrix-tutoring">
+        <ProgramLesPrivatV2 />
+      </section>
+      <section id="fitur-program-les-private">
+        <FiturProgramNew />
+      </section>
+      <section id="pilihan-program-les-private">
+        <PilihanProgram />
+      </section>
+      <section id="matrix-juga-melayani-les-privat-online">
+        <OnlineLesOptions />
+      </section>
+      <section id="pengajar-les-private">
         <MasterTeacherV2 />
-        <ProgramBelajarLesPrivat />
-        <MatrixFeatures />
-        <section id="asal-sekolah-siswa-matrix-tutoring-private">
-          <AsalSekolahSiswaEdumatrix />
-          <AsalSekolahSiswaMarque />
-        </section>
-        <Keunggulan />
-        <ListKotaProgramLesPrivate
-          program={"les-privat-smp"}
-          title={"Les Privat SMP"}
-        />
-      </div>
+      </section>
+      <ProgramBelajarLesPrivat />
+      <MatrixFeatures />
+      <SuccessStoryLesPrivate />
+      {/* <TestimonialSiswa /> */}
+      <TestimoniOrtuSiswa />
+      <section id="asal-sekolah-siswa-matrix-tutoring-private">
+        <AsalSekolahSiswaEdumatrix />
+        <AsalSekolahSiswaMarque />
+      </section>
+      <Keunggulan />
+
       <HowToOrder />
       <AccordionFAQ />
+      <GaleriKegiatanBelajar />
       <PromoHomepage />
       <CTABottomHome />
     </React.Fragment>

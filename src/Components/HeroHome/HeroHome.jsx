@@ -4,6 +4,8 @@ import { Link } from "react-router-dom";
 import ImageModal from "../../helper/ImageModal/ImageModal";
 import { getAllRandomSlogans } from "../../helper/request/getAllSloganSRequest";
 import "./HeroHome.css";
+import { ArrowRightCircleIcon, MoveRight } from "lucide-react";
+import ReusableButton from "../../helper/Button/ReusableButton/ReusableButton";
 
 const HeroHome = ({ contactData }) => {
   const [dataSlogan, setDataSlogan] = useState(null);
@@ -196,7 +198,7 @@ const HeroHome = ({ contactData }) => {
                   strokeLinejoin="round"
                 />
               </svg>
-              Pilihan Guru Profesional & Berpengalaman
+              Guru Profesional & Berpengalaman
             </li>
             <li>
               <svg
@@ -213,7 +215,7 @@ const HeroHome = ({ contactData }) => {
                   strokeLinejoin="round"
                 />
               </svg>
-              Fleksibel: Belajar Online atau Guru Datang ke Rumah
+              Bebas pilih guru sesuai kriteria
             </li>
             <li>
               <svg
@@ -229,7 +231,74 @@ const HeroHome = ({ contactData }) => {
                   strokeLinejoin="round"
                 />
               </svg>
-              Materi Lengkap: TKA, UTBK, OSN, CPNS & Lainnya
+              Kemudahan pembayaran via transfer ke Rekening Lembaga
+            </li>
+            <li>
+              <svg
+                className="check-icon"
+                viewBox="0 0 24 24"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M4.5 12.75L9 17.25L19.5 6.75"
+                  stroke="currentColor"
+                  strokeWidth="2"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                />
+              </svg>
+              Materi Lengkap: TK, SD, SMP, SMA, TKA, UTBK, OSN, Mahasiswa, &
+              Lainnya
+            </li>
+            <li>
+              <svg
+                className="check-icon"
+                viewBox="0 0 24 24"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M4.5 12.75L9 17.25L19.5 6.75"
+                  stroke="currentColor"
+                  strokeWidth="2"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                />
+              </svg>
+              Sistem belajar: pilih Privat Online, Guru Privat Datang ke Rumah
+              atau keduanya
+            </li>
+            <li>
+              <svg
+                className="check-icon"
+                viewBox="0 0 24 24"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M4.5 12.75L9 17.25L19.5 6.75"
+                  stroke="currentColor"
+                  strokeWidth="2"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                />
+              </svg>
+              Kemudahan penjadwalan: bisa atur jadwal sesuai dengan waktu luang
+              siswa
+            </li>
+            <li>
+              <svg
+                className="check-icon"
+                viewBox="0 0 24 24"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M4.5 12.75L9 17.25L19.5 6.75"
+                  stroke="currentColor"
+                  strokeWidth="2"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                />
+              </svg>
+              Free Biaya Pendaftaran
             </li>
           </ul>
 
@@ -243,17 +312,45 @@ const HeroHome = ({ contactData }) => {
 
           <div className="hero-cta-section-wrapper">
             <Link
-              className="hero-promo-button"
-              to={contactData?.link_cta || "#"}>
-              Ambil Promo Sekarang!
+              to={contactData?.link_cta || "#"}
+              className="link_cta_decoration">
+              {/* <svg
+                className="icon-button-how-to-order"
+                viewBox="0 0 24 24"
+                fill="currentColor">
+                <path
+                  fill-rule="evenodd"
+                  d="M12 2.25c-5.385 0-9.75 4.365-9.75 9.75s4.365 9.75 9.75 9.75 9.75-4.365 9.75-9.75S17.385 2.25 12 2.25zm4.28 10.28a.75.75 0 000-1.06l-3-3a.75.75 0 10-1.06 1.06l1.72 1.72H8.25a.75.75 0 000 1.5h5.69l-1.72 1.72a.75.75 0 101.06 1.06l3-3z"
+                  clip-rule="evenodd"></path>
+              </svg> */}
+              <ReusableButton
+                text="Ambil Promo Sekarang!"
+                bgColor="#ffffff"
+                borderColor="#007bff"
+                textColor="#007bff"
+                // onClick={handleConsultationClick}
+                icon={<ArrowRightCircleIcon />}
+              />
             </Link>
-            <button onClick={startTimer} className="hero-timer-button">
+
+            <button className="button-how-to-order">
               {timerVisible && timerComponents.length ? (
-                <>
-                  <span className="hero-timer-display">{timerComponents}</span>
-                </>
+                // Jika timer terlihat dan berjalan, tampilkan timer
+                <span className="hero-timer-display">{timerComponents}</span>
               ) : (
-                "Lihat Promo & Waktu"
+                // Jika tidak, tampilkan teks awal dengan ikon
+                <>
+                  Lihat Promo & Waktu!
+                  <svg
+                    className="icon-button-how-to-order"
+                    viewBox="0 0 24 24"
+                    fill="currentColor">
+                    <path
+                      fillRule="evenodd"
+                      d="M12 2.25c-5.385 0-9.75 4.365-9.75 9.75s4.365 9.75 9.75 9.75 9.75-4.365 9.75-9.75S17.385 2.25 12 2.25zm4.28 10.28a.75.75 0 000-1.06l-3-3a.75.75 0 10-1.06 1.06l1.72 1.72H8.25a.75.75 0 000 1.5h5.69l-1.72 1.72a.75.75 0 101.06 1.06l3-3z"
+                      clipRule="evenodd"></path>
+                  </svg>
+                </>
               )}
             </button>
           </div>
@@ -313,7 +410,7 @@ const HeroHome = ({ contactData }) => {
               <div className="client-info">
                 <p className="client-name">Siswa: Wening</p>
                 <p className="client-description">
-                  Meningkat 50% di Matematika!
+                  Meningkat 90% di Matematika!
                 </p>
               </div>
             </div>

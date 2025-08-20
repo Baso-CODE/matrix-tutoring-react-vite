@@ -1,0 +1,32 @@
+.main-section {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 4rem;
+  padding: 4rem 1rem;
+}
+
+@media (min-width: 1024px) {
+  .main-section {
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+  }
+}
+
+.right-column-stack {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+/* Image Section */
+.image-section {
+  background: #facc15;
+  height: fit-content;
+  border-radius: 1.5rem;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+.image-section img {
+  border-radius: 1.5rem;
+  width: 100%;
+  height: auto;
+}

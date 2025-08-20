@@ -1,0 +1,41 @@
+/* ReusableButton.css */
+
+.reusable-button {
+  font-family: "Montserrat", sans-serif;
+  font-size: 0.9rem;
+  /* Menggunakan variabel kustom yang ditetapkan secara inline */
+  border: 2px solid var(--button-border-color);
+  border-radius: 7px;
+  padding: 0.8rem 1rem;
+  cursor: pointer;
+  text-align: center;
+  font-weight: 700;
+  display: flex;
+  text-decoration: none;
+
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  transition: all 0.3s ease;
+  /* Menggunakan variabel untuk box-shadow */
+  box-shadow: 5px 5px 0px var(--button-border-color);
+}
+
+.reusable-button:hover {
+  /* Aturan ini akan bekerja karena box-shadow tidak lagi inline */
+  box-shadow: 0 0 0;
+  transform: translateY(3px) translateX(3px);
+}
+
+.reusable-button-icon-container {
+  display: flex;
+  align-items: center;
+  /* Gaya untuk ikon yang diteruskan sebagai children */
+  width: 24px;
+  height: 24px;
+}
+
+.reusable-button-icon-container svg {
+  width: 100%;
+  height: 100%;
+}

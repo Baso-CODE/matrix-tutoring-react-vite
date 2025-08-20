@@ -1,18 +1,18 @@
 /* src/Components/BenefitOfTKA/BenefitOfTKA.css */
 
 .benefit-of-tka-section {
-  padding: 80px 20px;
-
+  padding-left: 10%;
+  padding-right: 10%;
   text-align: center;
-  /* Pastikan font ini diimport di proyek Anda */
+  padding-bottom: 5%;
+  background-color: #007bff;
 }
 
 .benefit-of-tka-container {
-  max-width: 1200px;
-  margin: 0 auto;
-
   font-weight: 800;
-  color: #333333; /* Dark blue */
+  color: #333333;
+  padding-top: 5rem;
+
   margin-bottom: 15px;
   line-height: 1.2;
 }
@@ -24,13 +24,14 @@
 .benefit-of-tka-title {
   font-size: 1.4rem;
   font-family: "Nunito", sans-serif;
-  color: #333333;
+  font-weight: 800;
+  color: #ffffff;
 }
 
 .benefit-of-tka-subtitle {
   font-size: 1rem;
   font-family: "Nunito", sans-serif;
-  color: #4f4f4f;
+  color: #f2f2f2;
   margin-bottom: 30px;
   max-width: 800px;
   font-weight: normal;
@@ -109,6 +110,10 @@
   .benefit-card {
     min-height: 240px;
   }
+  .benefit-of-tka-section {
+    padding-left: 4%;
+    padding-right: 4%;
+  }
 }
 
 @media (max-width: 768px) {
@@ -130,7 +135,10 @@
     min-height: auto; /* Biarkan tinggi menyesuaikan konten */
     padding: 25px;
   }
-
+  .benefit-of-tka-section {
+    padding-left: 4%;
+    padding-right: 4%;
+  }
   .card-title {
     font-size: 1.25rem;
   }

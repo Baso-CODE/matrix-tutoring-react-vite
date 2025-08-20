@@ -22,6 +22,8 @@ import EmbrelaSlider from "../SlideTop/EmbrelaSlider";
 import SuccessStoryLesPrivate from "../SuccesStoryLesPrivate/SuccesStoryLesPrivate";
 import TestimonialSiswa from "../TestimonialSiswa/TestimonialSiswa";
 import TestimoniOrtuSiswa from "../TestimoniOrtuSiswa/TestimoniOrtuSiswa";
+import ProgramLesPrivatV2 from "../ProgramLesPrivatNew/ProgramLesPrivatV2 ";
+import GaleriKegiatanBelajar from "../GaleriKegiatanBelajar/GaleriKegiatanBelajar";
 
 const Halamankelurahan = () => {
   const [kelurahan, setKelurahan] = useState([]);
@@ -91,53 +93,50 @@ const Halamankelurahan = () => {
           content="https://apps.bimbelmatrix.com/images/whatsapp_footer.webp"
         />
       </Helmet>
-      <div className="container-all">
-        <div className="content-kota">
-          <div className="teks-content">
-            <h1 className="title-halaman-kota">
-              Les Privat Terbaik di{" "}
-              <span className="highlight-yellow">{kelurahan.kelurahan}</span> -
-              TK, SD, SMP, SMA, UTBK SNBT, SIMAK UI, UM PTN & CBT UGM Terbaik
-            </h1>
-            <div className="paragraf-kota">
-              <p className="child-paragraf-kota">
-                Bimbel Les Privat di {kelurahan.kelurahan} untuk TK, SD, SMP,
-                SMA, UN/AKM, OSN, CPNS, LPDP, PPDS, SIMAK UI, UTBK SNBT, CBT
-                UGM, UMPTN.
-              </p>
-              <p className="child-paragraf-kota">
-                Dapatkan layanan Les Privat kapan pun dan dimana pun dengan
-                lebih dari 5.000 Master Teacher Matrix yang siap memberikan
-                pelayanan <span className="highlight-yellow">terbaik.</span>
-              </p>
-            </div>
+
+      <div className="content-kota">
+        <div className="teks-content">
+          <h1 className="title-halaman-kota">
+            Les Privat Terbaik di{" "}
+            <span className="highlight-yellow">{kelurahan.kelurahan}</span> -
+            TK, SD, SMP, SMA, UTBK SNBT, SIMAK UI, UM PTN & CBT UGM Terbaik
+          </h1>
+          <div className="paragraf-kota">
+            <p className="child-paragraf-kota">
+              Bimbel Les Privat di {kelurahan.kelurahan} untuk TK, SD, SMP, SMA,
+              UN/AKM, OSN, CPNS, LPDP, PPDS, SIMAK UI, UTBK SNBT, CBT UGM,
+              UMPTN.
+            </p>
+            <p className="child-paragraf-kota">
+              Dapatkan layanan Les Privat kapan pun dan dimana pun dengan lebih
+              dari 5.000 Master Teacher Matrix Tutoring yang siap memberikan
+              pelayanan <span className="highlight-yellow">terbaik.</span>
+            </p>
           </div>
-          <img
-            className="rumah-adat"
-            loading="eager"
-            src={"/images/KELURAHAN.webp"}
-            alt={`les privat Online & Guru ke Rumah (TK, SD, SMP, SMA, AKM, Mahasiswa, Bahasa Asing, Simak UI, SBMPTN) di ${kelurahan.kelurahan} - Matrix Tutoring`}
-          />
         </div>
-        <EmbrelaSlider />
-        <BannerComponent />
-        <PengajarLestPrivate />
-        <FiturProgramNew />
-        <PilihanProgram />
-        <OnlineLesOptions />
-        <ProgramLesPrivat />
-        <MasterTeacherV2 />
-        <ProgramBelajarLesPrivat />
-        <MatrixFeatures />
-        <SuccessStoryLesPrivate />
-        <TestimonialSiswa />
-        <TestimoniOrtuSiswa />
-        <AsalSekolahSiswaEdumatrix />
-        <AsalSekolahSiswaMarque />
-        <Keunggulan />
+        <img
+          className="rumah-adat"
+          loading="eager"
+          src={"/images/KELURAHAN.webp"}
+          alt={`les privat Online & Guru ke Rumah (TK, SD, SMP, SMA, AKM, Mahasiswa, Bahasa Asing, Simak UI, SBMPTN) di ${kelurahan.kelurahan} - Matrix Tutoring`}
+        />
       </div>
+      <EmbrelaSlider />
+      <ProgramLesPrivatV2 />
+      <FiturProgramNew />
+      <PilihanProgram />
+      <OnlineLesOptions />
+      <MasterTeacherV2 />
+      <ProgramBelajarLesPrivat />
+      <MatrixFeatures />
+      <SuccessStoryLesPrivate />
+      {/* <TestimonialSiswa /> */}
+      <TestimoniOrtuSiswa />
+      <AsalSekolahSiswaEdumatrix />
+      <AsalSekolahSiswaMarque />
       <HowToOrder />
       <AccordionFAQ />
+      <GaleriKegiatanBelajar />
       <PromoHomepage />
       <CTABottomHome />
     </React.Fragment>

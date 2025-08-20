@@ -2,22 +2,22 @@
 
 .adaptive-learning-section {
   padding: 80px 20px;
-
+  padding-left: 10%;
+  padding-right: 10%;
+  background-color: #007bff;
   text-align: center;
   overflow: hidden; /* Pastikan tidak ada overflow dari animasi/bayangan */
-
-  border-radius: 15px;
 }
 
 .adaptive-learning-container {
-  max-width: 1200px;
   margin: 0 auto;
 }
 
 .adaptive-learning-title {
   font-size: 1.5rem;
   font-weight: 800;
-  color: #333333; /* Biru utama yang kuat */
+  color: #ffffff;
+  text-transform: uppercase;
   margin-bottom: 20px;
   font-family: "Nunito", sans-serif;
   line-height: 1.2;
@@ -26,7 +26,7 @@
 
 .adaptive-learning-subtitle {
   font-size: 1rem;
-  color: #4f4f4f;
+  color: #f2f2f2;
   margin-bottom: 60px;
   max-width: 900px;
   margin-left: auto;
@@ -164,13 +164,20 @@
   box-shadow: 0 12px 20px rgba(255, 213, 0, 0.4);
 }
 
+@media (max-width: 1024px) {
+  .adaptive-learning-section {
+    padding-left: 4%;
+    padding-right: 4%;
+  }
+}
+
 /* Responsivitas */
 @media (max-width: 768px) {
   .adaptive-learning-section {
     padding: 50px 15px;
   }
   .adaptive-learning-title {
-    font-size: 2.2rem;
+    font-size: 1.3rem;
   }
   .adaptive-learning-subtitle {
     font-size: 1.1rem;

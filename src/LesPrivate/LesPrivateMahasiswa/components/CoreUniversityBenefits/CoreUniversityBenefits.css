@@ -1,10 +1,12 @@
 /* CoreUniversityBenefits.css */
 
 .core-benefits-section {
-  padding: 80px 20px;
+  padding: 80px 0px;
   text-align: center;
   position: relative;
   overflow: hidden;
+  padding-left: 10%;
+  padding-right: 10%;
 }
 
 .core-benefits-section::before {
@@ -21,7 +23,6 @@
 }
 
 .core-benefits-container {
-  max-width: 1100px;
   margin: 0 auto;
   position: relative;
   z-index: 1; /* Pastikan konten di atas pattern */
@@ -161,10 +162,18 @@
   font-family: "Nunito", sans-serif;
 }
 
+@media (max-width: 1024px) {
+  .core-benefits-section {
+    padding-left: 4%;
+    padding-right: 4%;
+  }
+}
 /* Responsivitas */
 @media (max-width: 768px) {
   .core-benefits-section {
     padding: 50px 15px;
+    padding-left: 10%;
+    padding-right: 10%;
   }
   .core-benefits-title {
     font-size: 1.3rem;

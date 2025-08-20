@@ -1,37 +1,77 @@
 // HowToOrder.jsx
 import { Link } from "react-router-dom";
-import { selectContactCsData } from "../../lib/features/contactCsSlice";
-import { useAppSelector } from "../../lib/hooks";
 import "./HowToOrder.css";
 
 const orderSteps = [
   {
     id: 1,
-    title: "Pilih Program Belajar",
+    title: "Konsultasi (Hubungi CS)",
     description:
-      "Tentukan program belajar yang sesuai dengan kebutuhan Anda, mulai dari TK/Calistung, SD, SMP, SMA, Mahasiswa, TKA, Bahasa Asing, hingga persiapan intensif untuk Simak UI dan SNBT.",
+      "Calon siswa atau orang tua menghubungi kami melalui WhatsApp atau telepon untuk mendapatkan informasi program.",
   },
   {
     id: 2,
-    title: "Lengkapi Data Diri",
+    title: "Pemilihan Program",
     description:
-      "Setelah memilih program, lengkapi formulir pendaftaran dengan data diri dan kebutuhan belajar Anda. Tim kami siap membantu jika ada pertanyaan.",
+      "Tentukan jenis program privat, mata pelajaran yang ingin dileskan, dan jadwal belajar sesuai kebutuhan.",
   },
   {
     id: 3,
-    title: "Konfirmasi Jadwal & Pembayaran",
+    title: "Pengisian Formulir Pendaftaran",
+    description: "Lengkapi formulir pendaftaran siswa secara Online.",
+  },
+  {
+    id: 4,
+    title: "Penjadwalan",
     description:
-      "Kami akan segera mengkonfirmasi pilihan program dan jadwal les yang sesuai. Setelah itu, lakukan pembayaran untuk memulai sesi belajar pertamamu bersama tutor terbaik Matrix Tutoring!",
+      "Kami akan mencocokkan jadwal siswa dengan tutor yang sesuai dengan mata pelajaran dan kebutuhan belajar.",
+  },
+  {
+    id: 5,
+    title: "Mulai Belajar",
+    description:
+      "Program privat dimulai sesuai jadwal yang telah disepakati bersama.",
+  },
+  {
+    id: 6,
+    title: "Pembayaran",
+    description:
+      "Kemudahan pembayaran via transfer ke rekening lembaga. Biaya yang dibayarkan sesuai dengan jumlah sesi yang terlaksana pada bulan tersebut atau menggunakan sistem deposit.",
   },
 ];
 
 const HowToOrder = () => {
-  const contactData = useAppSelector(selectContactCsData);
+  // const contactData = useAppSelector(selectContactCsData);
 
-  const finalUrl = contactData?.link_cta;
+  // const finalUrl = contactData?.link_cta;
   return (
     <section className="how-to-order-section">
       <div className="how-to-order-container">
+        <div className="how-to-order-main">
+          <p className="how-to-order-label">CARA MENDAFTAR</p>
+          <h2 className="how-to-order-heading">
+            Alur Pendaftaran Siswa <br />
+            Program Privat
+          </h2>
+          <Link
+            to={"/contact-us"}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="start-order-link">
+            <button className="button-how-to-order">
+              Klik DI SINI!
+              <svg
+                className="icon-button-how-to-order"
+                viewBox="0 0 24 24"
+                fill="currentColor">
+                <path
+                  fill-rule="evenodd"
+                  d="M12 2.25c-5.385 0-9.75 4.365-9.75 9.75s4.365 9.75 9.75 9.75 9.75-4.365 9.75-9.75S17.385 2.25 12 2.25zm4.28 10.28a.75.75 0 000-1.06l-3-3a.75.75 0 10-1.06 1.06l1.72 1.72H8.25a.75.75 0 000 1.5h5.69l-1.72 1.72a.75.75 0 101.06 1.06l3-3z"
+                  clip-rule="evenodd"></path>
+              </svg>
+            </button>
+          </Link>
+        </div>
         {/* Left Column: Steps */}
         <div className="how-to-order-steps">
           {orderSteps.map((step) => (
@@ -50,23 +90,6 @@ const HowToOrder = () => {
               </div>
             </div>
           ))}
-        </div>
-
-        <div className="how-to-order-main">
-          <p className="how-to-order-label">HOW TO ORDER</p>
-          <h2 className="how-to-order-heading">
-            Lakukan Pemesanan <br />
-            dengan Mudah
-          </h2>
-          <Link
-            to={finalUrl}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="start-order-link">
-            <button className="start-order-button">
-              Mulai pemesanan <span className="arrow-icon">&#8594;</span>
-            </button>
-          </Link>
         </div>
       </div>
     </section>

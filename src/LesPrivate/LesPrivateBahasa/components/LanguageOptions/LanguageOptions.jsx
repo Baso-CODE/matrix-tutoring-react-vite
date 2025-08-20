@@ -16,8 +16,7 @@ const languageMarqueeItems = [
 
 const LanguageOptions = () => {
   return (
-    // Menggunakan ID baru dan kelas CSS dari komponen university-flow yang sudah ada
-    <section id="language-options-marquee" className="university-flow-section">
+    <div id="language-options-marquee" className="university-flow-section">
       <div className="university-flow-container">
         <h2 className="university-flow-title">
           Pilihan Bahasa Asing yang Kami Tawarkan
@@ -47,7 +46,7 @@ const LanguageOptions = () => {
           </Marquee>
         </div>
       </div>
-    </section>
+    </div>
   );
 };
 

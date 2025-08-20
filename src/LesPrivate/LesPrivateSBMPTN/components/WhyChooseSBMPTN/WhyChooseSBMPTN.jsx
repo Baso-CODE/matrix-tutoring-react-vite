@@ -6,7 +6,7 @@ const whyChooseItems = [
     icon: "/images/les-private/sbmptn/why-choose/target.webp",
     title: "Strategi Lulus Komprehensif",
     description:
-      "Fokus pada taktik dan strategi pengerjaan soal SBMPTN yang efektif, bukan hanya menghafal materi.",
+      "Fokus pada taktik dan strategi pengerjaan soal SNBT UTBK yang efektif, bukan hanya menghafal materi.",
   },
   {
     icon: "/images/les-private/sbmptn/why-choose/user-check.webp",
@@ -35,11 +35,11 @@ const WhyChooseSBMPTN = () => {
     <section id="why-choose-sbmptn" className="why-choose-section">
       <div className="why-choose-container">
         <h2 className="why-choose-title">
-          Mengapa Memilih Les Privat SBMPTN Matrix ?
+          Mengapa Memilih Les Privat SNBT UTBK Matrix Tutoring ?
         </h2>
         <p className="why-choose-subtitle">
           Kami menawarkan lebih dari sekadar les; kami adalah partner Anda
-          menuju kesuksesan SBMPTN dengan pendekatan yang terbukti.
+          menuju kesuksesan SNBT UTBK dengan pendekatan yang terbukti.
         </p>
 
         <div className="why-choose-cards-grid">

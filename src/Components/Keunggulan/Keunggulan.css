@@ -1,14 +1,19 @@
 .parent-box-keunggulan {
-  margin-top: 50px;
   margin-bottom: 5vh;
+  justify-content: center;
+  text-align: center;
+
+  align-items: center;
 }
 .title-keunggulan {
-  color: #333333;
-  display: flex;
+  color: #ffffff;
+  text-transform: uppercase;
+  justify-content: center;
   align-items: center;
-  font-size: 1.5rem;
+  text-align: center;
+  font-size: 1.7rem;
   gap: 10px;
-  font-weight: 700;
+  font-weight: 800;
   font-family: "Nunito", sans-serif;
 }
 .icon-keunggulan {

@@ -38,10 +38,11 @@
 }
 
 .about-us-description h2 {
-  font-size: 1.75rem;
+  font-size: 1.4rem;
   color: #333333;
+  text-transform: uppercase;
   font-family: "Nunito", sans-serif;
-  font-weight: 700;
+  font-weight: 800;
   margin-bottom: 1rem;
 }
 .about-us-success-story-h2 {

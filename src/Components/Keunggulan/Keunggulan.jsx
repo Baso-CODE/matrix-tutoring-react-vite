@@ -15,28 +15,32 @@ const Keunggulan = () => {
 
   return (
     <React.Fragment>
-      <div className="parent-box-keunggulan">
-        <h2 className="title-keunggulan">
-          <img
-            loading="lazy"
-            className="icon-keunggulan"
-            src={"/images/icon-keunggulan.webp"}
-            alt="les privat Online & Guru ke Rumah (TK, SD, SMP, SMA, AKM, Mahasiswa, Bahasa Asing, Simak UI, SBMPTN) - Matrix Tutoring"
-          />
-          Keunggulan
-        </h2>
-        <div className="parent-card-keunggulan">
-          {keunggulanData.map((item, index) => (
-            <img
-              loading="lazy"
-              key={index}
-              className="keunggulan-img"
-              src={item}
-              alt="les privat Online & Guru ke Rumah (TK, SD, SMP, SMA, AKM, Mahasiswa, Bahasa Asing, Simak UI, SBMPTN) - Matrix Tutoring"
-            />
-          ))}
+      <section className="container-induk-testimonial-siswa-container">
+        <div className="container-all">
+          <div className="parent-box-keunggulan">
+            <h2 className="title-keunggulan">
+              {/* <img
+                loading="lazy"
+                className="icon-keunggulan"
+                src={"/images/icon-keunggulan.webp"}
+                alt="les privat Online & Guru ke Rumah (TK, SD, SMP, SMA, AKM, Mahasiswa, Bahasa Asing, Simak UI, SBMPTN) - Matrix Tutoring"
+              /> */}
+              Keunggulan
+            </h2>
+            <div className="parent-card-keunggulan">
+              {keunggulanData.map((item, index) => (
+                <img
+                  loading="lazy"
+                  key={index}
+                  className="keunggulan-img"
+                  src={item}
+                  alt="les privat Online & Guru ke Rumah (TK, SD, SMP, SMA, AKM, Mahasiswa, Bahasa Asing, Simak UI, SBMPTN) - Matrix Tutoring"
+                />
+              ))}
+            </div>
+          </div>
         </div>
-      </div>
+      </section>
     </React.Fragment>
   );
 };

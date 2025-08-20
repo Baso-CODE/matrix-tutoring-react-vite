@@ -35,23 +35,27 @@ const TestimoniOrtuSiswa = () => {
   );
 
   return (
-    <div className="testimonial-slider-ortu-siswa-container">
-      <h2>Testimoni Orang Tua</h2>
-      <div className="embla" ref={emblaRef}>
-        <div className="embla__container">
-          {dataTestimoniOrangTua.map((image, index) => (
-            <div className="embla__slide-tesimoni-ortu" key={index}>
-              <img
-                loading="lazy"
-                src={image.link_image}
-                alt={`Testimoni Orang Tua ${image.name}`}
-                className="testimonial-image"
-              />
-            </div>
-          ))}
+    <section className="container-all">
+      <div className="testimonial-slider-ortu-siswa-container">
+        <h2 className="title-testimonial-orang-tua-siswa">
+          Testimoni Orang Tua
+        </h2>
+        <div className="embla" ref={emblaRef}>
+          <div className="embla__container">
+            {dataTestimoniOrangTua.map((image, index) => (
+              <div className="embla__slide-tesimoni-ortu" key={index}>
+                <img
+                  loading="lazy"
+                  src={image.link_image}
+                  alt={`Testimoni Orang Tua ${image.name}`}
+                  className="testimonial-image"
+                />
+              </div>
+            ))}
+          </div>
         </div>
       </div>
-    </div>
+    </section>
   );
 };
 

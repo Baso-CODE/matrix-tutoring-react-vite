@@ -1,17 +1,18 @@
-import "./MasterTeacherV2.css";
 import { Swiper, SwiperSlide } from "swiper/react";
+import "./MasterTeacherV2.css";
 
 // Import Swiper styles
 import "swiper/css";
 import "swiper/css/pagination";
 
+import { useEffect, useRef, useState } from "react";
 import { Autoplay, Pagination } from "swiper/modules";
-import { useEffect, useState, useRef } from "react"; // Impor useRef
 import { getAllMasterTeacherAlfa } from "../../helper/request/getAllMasterTeacherAlfa";
+import { FaStar } from "react-icons/fa";
 
 const MasterTeacherV2 = () => {
   const [dataTutor, setDataTutor] = useState([]);
-  const swiperRef = useRef(null); // Buat ref untuk Swiper instance
+  const swiperRef = useRef(null);
 
   useEffect(() => {
     const fetchData = async () => {
@@ -25,64 +26,66 @@ const MasterTeacherV2 = () => {
     fetchData();
   }, []);
 
-  // Fungsi untuk menghentikan autoplay saat mouse masuk
   const handleMouseEnter = () => {
     if (swiperRef.current && swiperRef.current.swiper) {
       swiperRef.current.swiper.autoplay.stop();
     }
   };
 
-  // Fungsi untuk melanjutkan autoplay saat mouse keluar
   const handleMouseLeave = () => {
     if (swiperRef.current && swiperRef.current.swiper) {
       swiperRef.current.swiper.autoplay.start();
     }
   };
 
-  const generateRandomRating = () => {
-    const min = 4.7;
-    const max = 5.0;
-    return (Math.random() * (max - min) + min).toFixed(1);
+  const renderStars = (count) => {
+    return (
+      <div className="rating-stars">
+        {[...Array(count)].map((_, i) => (
+          <FaStar key={i} className="star-icon-master-teacher" />
+        ))}
+      </div>
+    );
   };
+  // const generateRandomRating = () => {
+  //   const min = 4.8;
+
+  //   const max = 5.0;
+
+  //   return (Math.random() * (max - min) + min).toFixed(1);
+  // };
+
   return (
-    <div>
-      <div className="superparent-container-master-teacher-v2">
-        <h2 className="title-master-teacher-v2">MASTER TEACHER</h2>
-        <p className="child-title-master-teacher-v2">BERPENGALAMAN</p>
-        <div
-          className="container-master-teacher-v2"
-          onMouseEnter={handleMouseEnter}
-          onMouseLeave={handleMouseLeave}>
-          <Swiper
-            // Tetapkan ref ke Swiper component
-            ref={swiperRef}
-            loop={true}
-            slidesPerView={4}
-            spaceBetween={10}
-            pagination={{
-              clickable: true,
-            }}
-            autoplay={{
-              delay: 1000,
-              disableOnInteraction: false,
-            }}
-            modules={[Autoplay, Pagination]}
-            className="mySwiper"
-            breakpoints={{
-              320: {
-                slidesPerView: 1,
-                spaceBetween: 4,
-              },
-              768: {
-                slidesPerView: 2,
-                spaceBetween: 12,
-              },
-              1024: {
-                slidesPerView: 4,
-                spaceBetween: 10,
-              },
-            }}>
-            <>
+    <div className="container-full-master-teacher-v2">
+      <div className="container-all">
+        <div className="superparent-container-master-teacher-v2">
+          <h2 className="title-master-teacher-v2">MASTER TEACHER</h2>
+          <p className="child-title-master-teacher-v2">BERPENGALAMAN</p>
+
+          <div
+            className="container-master-teacher-v2"
+            onMouseEnter={handleMouseEnter}
+            onMouseLeave={handleMouseLeave}>
+            <Swiper
+              ref={swiperRef}
+              loop={true}
+              slidesPerView={4}
+              spaceBetween={10}
+              pagination={{
+                clickable: true,
+              }}
+              autoplay={{
+                delay: 1000,
+                disableOnInteraction: false,
+              }}
+              modules={[Autoplay, Pagination]}
+              className="mySwiper"
+              breakpoints={{
+                320: { slidesPerView: 1, spaceBetween: 4 },
+                768: { slidesPerView: 2, spaceBetween: 12 },
+                1024: { slidesPerView: 3, spaceBetween: 6 },
+                1200: { slidesPerView: 4, spaceBetween: 10 },
+              }}>
               {dataTutor?.map((tutor, index) => (
                 <SwiperSlide key={index}>
                   <div className="card-master-teacher-v2">
@@ -94,36 +97,44 @@ const MasterTeacherV2 = () => {
                     />
                     <h3 className="nama-master-teacher-v2">{tutor.nama}</h3>
                     <p className="mapel-master-teacher-v2">
-                      Tutor untuk:{" "}
+                      Tutor:{" "}
+                      {tutor?.MapelList && tutor.MapelList.length > 0
+                        ? tutor?.MapelList.map((mapel, i) => (
+                            <span key={i}>
+                              {mapel?.title}
+
+                              {i < tutor.MapelList.length - 1 ? ", " : ""}
+                            </span>
+                          ))
+                        : "Tidak ada data mata pelajaran"}
+                    </p>
+                    <p className="program-master-teacher-v2">
+                      Program:{" "}
                       {tutor?.Grades && tutor.Grades.length > 0
                         ? tutor?.Grades.map((grade, i) => (
                             <span key={i}>
                               {grade?.title}
+
                               {i < tutor.Grades.length - 1 ? ", " : ""}
                             </span>
                           ))
-                        : "Tidak ada data grade"}
+                        : "Tidak ada data program"}
                     </p>
-                    <p className="ratting-master-teacher-v2">
-                      <strong>{generateRandomRating()}</strong>
-                      <br />
-                      Rating
+                    <div className="rating-container-v2">{renderStars(5)}</div>{" "}
+                    <p className="univ-jurusan-text">
+                      {/* <p className="ratting-master-teacher-v2">
+                        <strong>{generateRandomRating()}</strong>
+                        <br /> Rating{" "}
+                      </p> */}
+                      {tutor?.jurusan} - {tutor?.universitas}
                     </p>
-                    <div className="parent-jurusan-master-teacher-v2">
-                      <button className="jurusan-master-teacher-v2">
-                        {tutor?.jurusan}
-                      </button>
-                      <button className="univ-master-teacher-v2">
-                        {tutor?.universitas}
-                      </button>
-                    </div>
                   </div>
                 </SwiperSlide>
               ))}
-            </>
-          </Swiper>
+            </Swiper>
+          </div>
         </div>
-      </div>
+      </div>{" "}
     </div>
   );
 };

@@ -19,18 +19,18 @@
 .centered-content-lesPrivate-SBMPTN h2 {
   font-size: 1.2rem;
   color: #333333;
-  margin-top: 2rem;
+
   font-family: "Nunito", sans-serif;
   font-weight: 700;
-  margin-bottom: 0.3rem;
+  margin-bottom: 0.2rem;
 }
 
 .centered-content-lesPrivate-SBMPTN p {
   font-size: 1rem;
   color: #4f4f4f;
-  line-height: 1.6;
-  margin-bottom: 1.5rem;
-  font-weight: 500;
+  line-height: normal;
+  font-weight: 400;
+
   font-family: "Nunito", sans-serif;
 }
 

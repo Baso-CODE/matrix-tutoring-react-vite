@@ -19,10 +19,11 @@ const LogoDescriptionComponent = () => {
           Mahasiswa dan Karyawan.
         </p>
         <p>
-          Matrix menyediakan Program <strong>Les Privat Offline</strong> (guru
-          les datang ke rumah) dan <strong>Les Privat Online</strong> dengan
-          spesialisasi pengajaran berdasarkan keahlian tutor. Konsep
-          pembelajaran sesuai dengan kurikulum yang diterapkan sekolah siswa.
+          Matrix Tutoring menyediakan Program{" "}
+          <strong>Les Privat Offline</strong> (guru les datang ke rumah) dan{" "}
+          <strong>Les Privat Online</strong> dengan spesialisasi pengajaran
+          berdasarkan keahlian tutor. Konsep pembelajaran sesuai dengan
+          kurikulum yang diterapkan sekolah siswa.
         </p>
 
         <p>

@@ -67,12 +67,21 @@ import LesPrivateTKKelurahan from "./LesPrivate/LesPrivateTK/LesPrivateTkKelurah
 import LesPrivateTKKota from "./LesPrivate/LesPrivateTK/LesPrivateTKKota/LesPrivateTKKota";
 import { fetchContactCs } from "./lib/features/contactCsSlice";
 import { useAppDispatch } from "./lib/hooks";
+import ContactUsPage from "./pages/ContactUs/ContactUsPage";
+import Promo from "./pages/Promo/Promo";
+import Term from "./pages/Term/Term";
+import Testimoni from "./pages/Testimoni/Testimoni";
+import MoreModal from "./Home/MoreModal/MoreModal";
 
 // const TRACKING_ID = "G-NZRFMBB12N";
 // ReactGA.initialize(TRACKING_ID);
 
 const programSubMenuData =
   Menus.find((menu) => menu.name === "Program")?.subMenu || [];
+
+// Pisahkan menu utama dari menu tambahan
+const mainNavItems = ["Home", "About Us", "Program"];
+const otherMenus = Menus.filter((menu) => !mainNavItems.includes(menu.name));
 
 function App() {
   const [loading, setLoading] = useState(false);
@@ -97,6 +106,7 @@ function App() {
   }, [location]);
 
   const [showProgramModal, setShowProgramModal] = useState(false);
+  const [showMoreModal, setShowMoreModal] = useState(false);
 
   const handleOpenProgramModal = () => {
     setShowProgramModal(true);
@@ -104,6 +114,14 @@ function App() {
 
   const handleCloseProgramModal = () => {
     setShowProgramModal(false);
+  };
+
+  const handleOpenMoreModal = () => {
+    setShowMoreModal(true);
+  };
+
+  const handleCloseMoreModal = () => {
+    setShowMoreModal(false);
   };
 
   return (
@@ -334,9 +352,16 @@ function App() {
           path="/les-privat-sbmptn/:kotaSlug/:kabupatenSlug/:kecamatanSlug/:kelurahanSlug"
           element={<LesPrivateSBMPTNKelurahan />}></Route>
         <Route exact path="/tutor" element={<Tutor />}></Route>
+        <Route exact path="/testimoni" element={<Testimoni />}></Route>
+        <Route exact path="/promo" element={<Promo />}></Route>
+        <Route exact path="/term" element={<Term />}></Route>
+        <Route exact path="/contact-us" element={<ContactUsPage />}></Route>
       </Routes>
       {/* <MediaMassaMarquee /> */}
-      <BottomNavigationBar onProgramClick={handleOpenProgramModal} />
+      <BottomNavigationBar
+        onProgramClick={handleOpenProgramModal}
+        onMoreClick={handleOpenMoreModal}
+      />
       <Floatingcta />
       <ScrollToTopButton />
       <MatrixFooterV2 />
@@ -344,6 +369,11 @@ function App() {
         isOpen={showProgramModal}
         onClose={handleCloseProgramModal}
         programSubMenu={programSubMenuData}
+      />
+      <MoreModal
+        isOpen={showMoreModal}
+        onClose={handleCloseMoreModal}
+        otherMenus={otherMenus}
       />
     </>
   );

@@ -6,12 +6,13 @@
 }
 
 /* Judul */
-.testimonial-slider-ortu-siswa-container h2 {
-  font-size: 1.4rem;
-  color: #333333;
+.title-testimonial-orang-tua-siswa {
+  font-size: 1.7rem;
+  color: #007bff;
   margin-bottom: 20px;
   font-family: "Nunito", sans-serif;
-  font-weight: 700;
+  font-weight: 800;
+  text-transform: uppercase;
   text-align: center;
 }
 
@@ -52,6 +53,9 @@
   }
   /* .embla__container {
   } */
+  .title-testimonial-orang-tua-siswa {
+    font-size: 1.4rem;
+  }
 }
 
 @media (min-width: 1024px) {

@@ -1,7 +1,6 @@
 .accordion-container-faq {
   border: 1px solid #e5e7eb;
   border-radius: 8px;
-
   overflow: hidden;
 }
 
@@ -65,11 +64,11 @@
 
 /* Kontainer utama halaman FAQ */
 .main-container-faq {
-  width: 100%;
   padding-top: 10vh;
-  /* padding: 0px 0; */
+  padding-left: 10%;
+  padding-right: 10%;
   padding-bottom: 10vh;
-  /* background: linear-gradient(to right, #e0f2ff 0%, #66aaff 50%, #006bde 100%); */
+
   background: #007bff;
 }
 
@@ -96,7 +95,7 @@
   border-radius: 12px; /* Radius lebih besar */
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08); /* Tambahkan shadow */
   width: 100%;
-  max-width: 1120px;
+  /* max-width: 1120px; */
 }
 
 /* Media queries untuk responsivitas */

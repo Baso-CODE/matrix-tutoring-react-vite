@@ -2,34 +2,32 @@
 
 .how-to-order-section {
   padding: 80px 0;
-  /* background: linear-gradient(to right, #e0f2ff 0%, #66aaff 50%, #006bde 100%); */
   background: #007bff;
   display: flex;
   justify-content: center;
   align-items: center;
-  padding-left: 12%;
-  padding-right: 12%;
+  /* Menggunakan padding persentase untuk kontrol lebar */
+  padding-left: 10%;
+  padding-right: 10%;
 }
 
 .how-to-order-container {
   display: flex;
   flex-wrap: wrap;
   gap: 40px;
-
-  width: 100%;
-  padding: 0 20px;
+  width: 100%; /* Memastikan kontainer mengisi 100% dari ruang yang tersedia setelah padding di section */
   justify-content: center;
 }
 
 /* Left Column: Steps */
 .how-to-order-steps {
-  flex: 1;
+  flex: 2;
   min-width: 300px;
-  max-width: 550px;
+  /* max-width: 550px; */
   display: flex;
   flex-direction: column;
   gap: 25px;
-  order: 1;
+  order: 2;
 }
 
 .order-step-card {
@@ -40,28 +38,16 @@
   overflow: hidden;
   transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease,
     background 0.3s ease;
-
   background: #ffffff;
   color: #333333;
   border: 1px solid #e0e0e0;
 }
 
-.order-step-card:nth-child(1) {
-  background: #ffffff;
-}
-.order-step-card:nth-child(2) {
-  background: #ffffff;
-}
-.order-step-card:nth-child(3) {
-  background: #ffffff;
-}
-
-/* Efek Hover pada Kartu Langkah */
 .order-step-card:hover {
   transform: translateY(-5px);
   box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
-  border-color: #006bde;
-  background: linear-gradient(to right, #e0f2ff 0%, #66aaff 50%, #006bde 100%);
+  border-color: #007bff;
+  background: linear-gradient(to right, #e0f2ff 0%, #66aaff 50%, #007bff 100%);
 }
 
 .order-step-card:hover .step-title,
@@ -69,7 +55,6 @@
   color: #ffffff;
 }
 
-/* Angka besar samar-samar di belakang */
 .order-step-card::after {
   content: attr(data-background-number);
   position: absolute;
@@ -141,7 +126,7 @@
 .how-to-order-main {
   flex: 1;
   min-width: 300px;
-  max-width: 550px;
+  /* max-width: 550px; */
   border-radius: 12px;
   padding: 40px;
   display: flex;
@@ -151,7 +136,7 @@
   text-align: left;
   position: relative;
   overflow: hidden;
-  order: 2; /* Default order untuk desktop */
+  order: 1;
 }
 
 .how-to-order-label {
@@ -170,6 +155,7 @@
   color: #f4f4f4;
   font-weight: 600;
   margin-top: 0;
+  text-transform: uppercase;
   line-height: 1.2;
   margin-bottom: 30px;
   position: relative;
@@ -181,6 +167,7 @@
   color: #ffffff;
   padding: 12px 25px;
   border: none;
+  font-family: "Nunito", sans-serif;
   border-radius: 8px;
   font-size: 1.1rem;
   font-weight: 600;
@@ -208,15 +195,14 @@
 
 /* Responsive Adjustments */
 @media (max-width: 1024px) {
-  .how-to-order-container {
-    flex-direction: column;
-    align-items: center;
-  }
   .how-to-order-section {
     padding-left: 4%;
     padding-right: 4%;
   }
-
+  .how-to-order-container {
+    flex-direction: column;
+    align-items: center;
+  }
   .how-to-order-main {
     order: 0;
     padding: 30px;
@@ -224,18 +210,14 @@
     text-align: center;
     margin-bottom: 30px;
   }
-
   .how-to-order-steps {
     order: 1;
     max-width: 600px;
-    width: 100%;
   }
-
   .how-to-order-heading {
     font-size: 2rem;
     margin-bottom: 20px;
   }
-
   .order-step-card::after {
     font-size: 25vw;
     bottom: -10px;
@@ -248,19 +230,16 @@
     padding-left: 4%;
     padding-right: 4%;
   }
-  .how-to-order-container {
-    padding: 0;
-  }
 }
 
 @media (max-width: 576px) {
   .how-to-order-section {
     padding: 50px 0;
-    padding-left: 4%;
-    padding-right: 4%;
   }
   .how-to-order-steps {
     gap: 20px;
+    padding-right: 4%;
+    padding-left: 4%;
   }
   .order-step-card {
     padding: 20px 25px;
@@ -292,4 +271,37 @@
   .order-step-card::after {
     font-size: 35vw;
   }
+}
+
+/* additional Button */
+/* additional Button */
+.button-how-to-order {
+  font-family: "Montserrat", sans-serif;
+  font-size: 0.9rem;
+  border: 2px solid #205aa1; /* Perbatasan biru tua */
+  border-radius: 7px;
+  padding: 0.8rem 1rem;
+  background-color: #ffffff; /* Latar belakang putih */
+  box-shadow: 5px 5px 0px #205aa1; /* Bayangan biru tua */
+  cursor: pointer;
+  text-align: center;
+  font-weight: 700;
+  display: flex;
+  text-decoration: none;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  transition: all 0.3s ease;
+  color: #205aa1; /* Teks biru tua */
+}
+
+.button-how-to-order:hover {
+  box-shadow: 0 0 0 #205aa1;
+  transform: translateY(3px) translateX(3px);
+}
+
+.icon-button-how-to-order {
+  width: 24px;
+  height: 24px;
+  transition: all 0.3s ease-in-out;
 }

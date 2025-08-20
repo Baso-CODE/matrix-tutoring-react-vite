@@ -16,21 +16,27 @@ const TestimonialSiswa = () => {
     fetchTestimoniSiswa();
   }, []);
   return (
-    <div className="testimonials-siswa-container">
-      <h2>Testimoni Siswa</h2>
-      <div className="testimonials-siswa-grid">
-        {dataTestimoniSiswa.map((image, index) => (
-          <div className="testimonial-siswa-item" key={index}>
-            <img
-              loading="lazy"
-              src={image.link_image}
-              alt={`Testimonial ${image.name}`}
-              className="testimonial-siswa-image"
-            />
+    <section className="container-induk-testimonial-siswa-container">
+      <div className="container-all">
+        <div className="testimonials-siswa-container">
+          <h2 className="title-testimoni-siswa">
+            Tesimoni Siswa Intensif Privat Masuk PTN
+          </h2>
+          <div className="testimonials-siswa-grid">
+            {dataTestimoniSiswa.map((image, index) => (
+              <div className="testimonial-siswa-item" key={index}>
+                <img
+                  loading="lazy"
+                  src={image.link_image}
+                  alt={`Testimonial ${image.name}`}
+                  className="testimonial-siswa-image"
+                />
+              </div>
+            ))}
           </div>
-        ))}
+        </div>
       </div>
-    </div>
+    </section>
   );
 };
 export default TestimonialSiswa;

@@ -25,6 +25,11 @@ import FlowPembelajaranBahasa from "../components/FlowPembelajaranBahasa/FlowPem
 import LesPrivateBahasaHeader from "../components/LesPrivateBahasaHeader";
 import StatistikImageBahasa from "../components/StatistikImageBahasa";
 import TestimonialBahasa from "../components/TestimonialBahasa/TestimonialBahasa";
+import ProgramLesPrivatV2 from "../../../Components/ProgramLesPrivatNew/ProgramLesPrivatV2 ";
+import TestimoniOrtuSiswa from "../../../Components/TestimoniOrtuSiswa/TestimoniOrtuSiswa";
+import TestimonialSiswa from "../../../Components/TestimonialSiswa/TestimonialSiswa";
+import SuccessStoryLesPrivate from "../../../Components/SuccesStoryLesPrivate/SuccesStoryLesPrivate";
+import GaleriKegiatanBelajar from "../../../Components/GaleriKegiatanBelajar/GaleriKegiatanBelajar";
 
 const items = [
   {
@@ -300,51 +305,47 @@ const LesPrivateBahasaKelurahan = () => {
         </script>
       </Helmet>
 
-      <div className="container-all">
-        <HeroLesPrivate
-          nameCountry={nameCountry}
-          images={heroImageSrc}
-          heading={displayedHeading}
-          desc={heroData?.description}
-        />
-        <EmbrelaSlider />
-        {/* <Slidertop /> */}
-        <TableOfContents title="Table of Contents" items={items} />
-        <LesPrivateBahasaHeader />
-        <FlowPembelajaranBahasa />
-        <TestimonialBahasa />
-        <StatistikImageBahasa />
-        <section id="pengajar-les-private">
-          <PengajarLestPrivate />
-        </section>
-        <section id="fitur-program-les-private">
-          {" "}
-          content=
-          {`Bimbel Les Privat Bahasa Asing  Kursus Bahasa Inggris dan Asing di ${nameCountry} Les
-Privat Matrix`}
-          <FiturProgramNew />
-        </section>
-        {/*    {/* <PromoFree /> */}
-        <section id="pilihan-program-les-private">
-          <PilihanProgram />
-        </section>
-        <section id="matrix-juga-melayani-les-privat-online">
-          <OnlineLesOptions />
-        </section>
-        <section id="program-les-private-matrix-tutoring">
-          <ProgramLesPrivat />
-        </section>
+      <HeroLesPrivate
+        nameCountry={nameCountry}
+        images={heroImageSrc}
+        heading={displayedHeading}
+        desc={heroData?.description}
+      />
+      <EmbrelaSlider />
+      {/* <Slidertop /> */}
+      <TableOfContents title="Table of Contents" items={items} />
+      <LesPrivateBahasaHeader />
+      <FlowPembelajaranBahasa />
+      <TestimonialBahasa />
+      <StatistikImageBahasa />
+      <section id="program-les-private-matrix-tutoring">
+        <ProgramLesPrivatV2 />
+      </section>
+      <section id="fitur-program-les-private">
+        <FiturProgramNew />
+      </section>
+      <section id="pilihan-program-les-private">
+        <PilihanProgram />
+      </section>
+      <section id="matrix-juga-melayani-les-privat-online">
+        <OnlineLesOptions />
+      </section>
+      <section id="pengajar-les-private">
         <MasterTeacherV2 />
-        <ProgramBelajarLesPrivat />
-        <MatrixFeatures />
-        <section id="asal-sekolah-siswa-matrix-tutoring-private">
-          <AsalSekolahSiswaEdumatrix />
-          <AsalSekolahSiswaMarque />
-        </section>
-        <Keunggulan />
-      </div>
+      </section>
+      <ProgramBelajarLesPrivat />
+      <MatrixFeatures />
+      <SuccessStoryLesPrivate />
+      {/* <TestimonialSiswa /> */}
+      <TestimoniOrtuSiswa />
+      <section id="asal-sekolah-siswa-matrix-tutoring-private">
+        <AsalSekolahSiswaEdumatrix />
+        <AsalSekolahSiswaMarque />
+      </section>
+
       <HowToOrder />
       <AccordionFAQ />
+      <GaleriKegiatanBelajar />
       <PromoHomepage />
       <CTABottomHome />
     </React.Fragment>

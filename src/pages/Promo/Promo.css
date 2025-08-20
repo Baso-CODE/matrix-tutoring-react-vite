@@ -1,0 +1,22 @@
+.parent-promo-home-promopage {
+  display: flex;
+  justify-content: center;
+  /* background: linear-gradient(to right, #e0f2ff 0%, #66aaff 50%, #007bff 100%); */
+  background: #007bff;
+  align-items: center;
+  padding-top: 12vh;
+  padding-bottom: 10vh;
+  padding-left: 10%;
+  padding-right: 10%;
+}
+.parent-promo-home-mobile-promopage {
+  display: flex;
+  justify-content: center;
+  /* background: linear-gradient(to right, #e0f2ff 0%, #66aaff 50%, #007bff 100%); */
+  background: #007bff;
+  align-items: center;
+  padding-top: 10vh;
+  padding-bottom: 10vh;
+  padding-left: 4%;
+  padding-right: 4%;
+}

@@ -7,7 +7,7 @@
 }
 
 .centered-content-lesPrivate-siswa h1 {
-  font-size: 1.5rem;
+  font-size: 1.4rem;
   font-family: "Nunito", sans-serif;
   font-weight: 700;
   color: #333333;
@@ -16,9 +16,9 @@
 }
 
 .centered-mahasiswacontent-lesPrivate-mahasiswa {
-  font-size: 1.3rem;
+  font-size: 1.2rem;
   color: #333333;
-  margin-top: 2rem;
+
   font-family: "Nunito", sans-serif;
   font-weight: 700;
   margin-bottom: 0.3rem;
@@ -27,8 +27,8 @@
 .centered-content-lesPrivate-siswa p {
   font-size: 1rem;
   color: #4f4f4f;
+  font-weight: 400;
   line-height: normal;
-  margin-bottom: 1.5rem;
 
   font-family: "Nunito", sans-serif;
 }

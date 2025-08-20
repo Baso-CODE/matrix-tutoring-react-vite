@@ -28,6 +28,11 @@ import PopularCourses from "../components/PopularCourses/PopularCourses";
 import StatistikImageMahasiswa from "../components/StatistikImageMahasiswa";
 import StudentTestimonialsSlider from "../components/StudentTestimonialsSlider/StudentTestimonialsSlider";
 import UniversitySuccessFlow from "../components/UniversitySuccessFlow/UniversitySuccessFlow";
+import SuccessStoryLesPrivate from "../../../Components/SuccesStoryLesPrivate/SuccesStoryLesPrivate";
+import TestimonialSiswa from "../../../Components/TestimonialSiswa/TestimonialSiswa";
+import TestimoniOrtuSiswa from "../../../Components/TestimoniOrtuSiswa/TestimoniOrtuSiswa";
+import ProgramLesPrivatV2 from "../../../Components/ProgramLesPrivatNew/ProgramLesPrivatV2 ";
+import GaleriKegiatanBelajar from "../../../Components/GaleriKegiatanBelajar/GaleriKegiatanBelajar";
 
 const items = [
   {
@@ -146,7 +151,7 @@ const LesPrivateMahasiswaKota = () => {
   // Judul dan Deskripsi yang Optimal dengan brand "Matrix Tutoring" dan lokasi dinamis
   const pageTitle = `🎓 Les Privat Mahasiswa di ${nameCountry} Terbaik | Matrix Tutoring`;
 
-  const descriptionContent = `🎯 Mahasiswa di ${nameCountry}, siap kuasai materi kuliah dan raih IPK tinggi? Matrix Tutoring hadir dengan Les Privat Mahasiswa terbaik di ${nameCountry}! Dapatkan bimbingan fleksibel dari pengajar profesional untuk semua jurusan & mata kuliah. Tingkatkan prestasimu, daftar sekarang! ✨`;
+  const descriptionContent = `🎯 Mahasiswa di ${nameCountry}, siap kuasai materi kuliah dan raih IPK tinggi? Matrix Tutoring hadir dengan Les Privat Mahasiswa terbaik di ${nameCountry}! Dapatkan bimbingan fleksibel dari pengajar profesional untuk semua jurusan & mata kuliah. Tingkatkan prestasimu, Konsultasi! ✨`;
 
   const ogTitle = `Les Privat Mahasiswa di ${nameCountry} - Solusi Belajar Efektif & Bimbingan Akademik | Matrix Tutoring`;
   const ogDescription = `Temukan program les privat mahasiswa yang dirancang khusus untuk memenuhi kebutuhan akademik Anda di ${nameCountry}. Mulai dari bimbingan mata kuliah, persiapan ujian, hingga pendampingan tugas akhir, Matrix Tutoring adalah pilihan terbaik untuk mahasiswa.`;
@@ -266,54 +271,50 @@ const LesPrivateMahasiswaKota = () => {
         </script>
       </Helmet>
 
-      <div className="container-all">
-        <HeroLesPrivate
-          nameCountry={nameCountry}
-          images={heroImageSrc}
-          heading={displayedHeading}
-          desc={heroData?.description}
-        />
-        <EmbrelaSlider />
-        {/* <Slidertop /> */}
-        <TableOfContents title="Table of Contents" items={items} />
-        <LesPrivateMahasiswaHeader />
-        <UniversitySuccessFlow />
-        <CoreUniversityBenefits />
-        <StudentTestimonialsSlider />
-        <PopularCourses />
-        {/* <ImpactStatistics /> */}
-        <StatistikImageMahasiswa />
-        <section id="pengajar-les-private">
-          <PengajarLestPrivate />
-        </section>
-        <section id="fitur-program-les-private">
-          <FiturProgramNew />
-        </section>
-        {/*    {/* <PromoFree /> */}
-        <section id="pilihan-program-les-private">
-          <PilihanProgram />
-        </section>
-        <section id="matrix-juga-melayani-les-privat-online">
-          <OnlineLesOptions />
-        </section>
-        <section id="program-les-private-matrix-tutoring">
-          <ProgramLesPrivat />
-        </section>
+      <HeroLesPrivate
+        nameCountry={nameCountry}
+        images={heroImageSrc}
+        heading={displayedHeading}
+        desc={heroData?.description}
+      />
+      <EmbrelaSlider />
+      {/* <Slidertop /> */}
+      <TableOfContents title="Table of Contents" items={items} />
+      <LesPrivateMahasiswaHeader />
+      <UniversitySuccessFlow />
+      <CoreUniversityBenefits />
+      <StudentTestimonialsSlider />
+      <PopularCourses />
+      {/* <ImpactStatistics /> */}
+      <StatistikImageMahasiswa />
+      <section id="program-les-private-matrix-tutoring">
+        <ProgramLesPrivatV2 />
+      </section>
+      <section id="fitur-program-les-private">
+        <FiturProgramNew />
+      </section>
+      <section id="pilihan-program-les-private">
+        <PilihanProgram />
+      </section>
+      <section id="matrix-juga-melayani-les-privat-online">
+        <OnlineLesOptions />
+      </section>
+      <section id="pengajar-les-private">
         <MasterTeacherV2 />
-        <ProgramBelajarLesPrivat />
-        <MatrixFeatures />
-        <section id="asal-sekolah-siswa-matrix-tutoring-private">
-          <AsalSekolahSiswaEdumatrix />
-          <AsalSekolahSiswaMarque />
-        </section>
-        <Keunggulan />
-        <ListKabupatenLesPrivate
-          program={"les-privat-mahasiswa"}
-          title={"Les Privat Mahasiswa"}
-        />
-      </div>
+      </section>
+      <ProgramBelajarLesPrivat />
+      <MatrixFeatures />
+      <SuccessStoryLesPrivate />
+      {/* <TestimonialSiswa /> */}
+      <TestimoniOrtuSiswa />
+      <section id="asal-sekolah-siswa-matrix-tutoring-private">
+        <AsalSekolahSiswaEdumatrix />
+        <AsalSekolahSiswaMarque />
+      </section>
+
       <HowToOrder />
       <AccordionFAQ />
+      <GaleriKegiatanBelajar />
       <PromoHomepage />
       <CTABottomHome />
     </React.Fragment>

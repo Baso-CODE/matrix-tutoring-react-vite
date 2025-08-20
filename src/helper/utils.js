@@ -16,7 +16,11 @@ export const Menus = [
     link: "/",
   },
   {
-    name: "Program", // Nama untuk Program
+    name: "About Us",
+    link: "/tentang-kami",
+  },
+  {
+    name: "Program",
     subMenu: [
       {
         name: "Les Privat TK",
@@ -62,25 +66,34 @@ export const Menus = [
       },
       {
         name: "Les Privat SIMAK UI",
-        desc: "Les untuk SIMAK UI",
+        desc: "Les Privat untuk SIMAK UI",
         icon: FileText, // Icon untuk SIMAK UI
         link: "/les-privat-simak-ui",
       },
       {
-        name: "Les Privat SBMPTN",
-        desc: "Les untuk SBMPTN",
+        name: "Les Privat UTBK",
+        desc: "Les Privat untuk UTBK",
         icon: Coffee, // Icon untuk SBMPTN
         link: "/les-privat-sbmptn",
       },
     ],
     gridCols: 2,
   },
+
   {
-    name: "About Us",
-    link: "/tentang-kami", // Link untuk About Us
+    name: "Testimoni",
+    link: "/testimoni",
   },
   {
-    name: "Tutor",
-    link: "/tutor", // Link untuk Tutor
+    name: "Promo",
+    link: "/promo",
+  },
+  {
+    name: "Term",
+    link: "/term",
+  },
+  {
+    name: "ContactUs",
+    link: "/contact-us",
   },
 ];

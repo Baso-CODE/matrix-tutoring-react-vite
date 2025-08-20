@@ -64,8 +64,8 @@ const AboutUsLesPrivate = () => {
               <p>
                 Visi kami adalah untuk menyediakan dukungan pendidikan
                 berkualitas tinggi kepada siswa dari segala usia. Kami bertujuan
-                untuk menciptakan lingkungan belajar yang mendukung dan
-                merangsang yang membantu siswa mencapai potensi penuh mereka.
+                untuk menciptakan lingkungan belajar yang mendukung, merangsang,
+                dan membantu siswa mencapai potensi penuh mereka.
               </p>
               <h2>Misi Kami</h2>
               <p>

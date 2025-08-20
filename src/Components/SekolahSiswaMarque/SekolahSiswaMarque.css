@@ -20,8 +20,14 @@
 }
 
 .marquee-grid img {
-  display: inline-block; /* inline-block */
+  /* display: inline-block; */
+  height: 60vh;
+  border-radius: 8px;
+}
 
-  height: 80vh; /* h-[80vh] */
-  border-radius: 8px; /* rounded-md */
+@media (max-width: 768px) {
+  .marquee-grid img {
+    height: 50vh;
+    border-radius: 8px;
+  }
 }

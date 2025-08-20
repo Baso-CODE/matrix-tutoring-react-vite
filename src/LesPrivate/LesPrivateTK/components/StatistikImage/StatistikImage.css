@@ -2,38 +2,22 @@
 
 .statistik-image-section {
   font-family: "Nunito", sans-serif;
+  padding-left: 10%;
+  padding-right: 10%;
   text-align: center;
   padding-top: 64px;
   padding-bottom: 64px;
 }
 
 .statistik-image-container {
-  max-width: 1240px;
   margin-left: auto;
   margin-right: auto;
-  padding-left: 10px;
-  padding-right: 10px;
-}
-
-@media (min-width: 640px) {
-  /* sm */
-  .statistik-image-container {
-    padding-left: 10px;
-    padding-right: 10px;
-  }
-}
-
-@media (min-width: 1024px) {
-  /* lg */
-  .statistik-image-container {
-    padding-left: 10px;
-    padding-right: 10px;
-  }
 }
 
 .statistik-image-title {
-  font-size: 1.3rem;
-  font-weight: 700;
+  font-size: 1.5rem;
+  font-weight: 800;
+  text-transform: uppercase;
   color: #333333;
   margin-bottom: 16px;
 }
@@ -108,7 +92,7 @@
 .statistik-card-title {
   font-size: 1.2rem;
   font-weight: 700;
-  color: #006bde;
+  color: #007bff;
   margin-bottom: 8px;
 
   flex-grow: 0;
@@ -123,10 +107,17 @@
   flex-grow: 1; /* Tumbuh untuk mengisi ruang */
 }
 
+@media (max-width: 1024px) {
+  .statistik-image-section {
+    padding-left: 4%;
+    padding-right: 4%;
+  }
+}
+
 /* Responsiveness for smaller screens */
 @media (max-width: 768px) {
   .statistik-image-title {
-    font-size: 32px;
+    font-size: 22px;
   }
   .statistik-image-subtitle {
     font-size: 18px;
@@ -136,7 +127,7 @@
     padding: 20px;
   }
   .statistik-card-image {
-    width: 80vw;
+    width: 40vw;
     height: auto;
     margin-bottom: 12px;
   }
@@ -145,6 +136,10 @@
   }
   .statistik-card-description {
     font-size: 15px;
+  }
+  .statistik-image-section {
+    padding-left: 4%;
+    padding-right: 4%;
   }
 }
 

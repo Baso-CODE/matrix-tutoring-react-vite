@@ -1,8 +1,8 @@
-import { useState } from "react";
 import { motion } from "framer-motion";
-import { Menu, X, ChevronDown } from "lucide-react";
-import "./NavMobile.css"; // Import file CSS terpisah
+import { ChevronDown, Menu, X } from "lucide-react";
+import { useState } from "react";
 import { Link } from "react-router-dom";
+import "./NavMobile.css"; // Import file CSS terpisah
 
 export default function NavMobile({ Menus }) {
   const [isOpen, setIsOpen] = useState(false);

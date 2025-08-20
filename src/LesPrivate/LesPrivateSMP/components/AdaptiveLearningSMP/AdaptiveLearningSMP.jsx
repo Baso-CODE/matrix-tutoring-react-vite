@@ -45,7 +45,7 @@ const AdaptiveLearningSMP = () => {
     <section id="adaptive-learning-smp" className="adaptive-learning-section">
       <div className="adaptive-learning-container">
         <h2 className="adaptive-learning-title">
-          🚀 Pendekatan Pembelajaran Adaptif Matrix
+          🚀 Pendekatan Pembelajaran Adaptif Matrix Tutoring
         </h2>
         <p className="adaptive-learning-subtitle">
           Maksimalkan Potensi Akademik Anak Anda dengan Teknologi Mutakhir.

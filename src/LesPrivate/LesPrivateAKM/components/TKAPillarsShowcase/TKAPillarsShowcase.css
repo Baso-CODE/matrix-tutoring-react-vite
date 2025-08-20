@@ -1,7 +1,8 @@
 /* TKAPillarsShowcase.css */
 
 .tka-pillars-section {
-  padding: 80px 10px;
+  padding-left: 10%;
+  padding-right: 10%;
   margin-top: 30px;
   text-align: center;
   overflow: hidden;
@@ -9,8 +10,6 @@
 }
 
 .tka-pillars-container {
-  max-width: 1240px;
-  margin: 0 auto;
   position: relative;
   z-index: 1;
 }
@@ -18,6 +17,7 @@
 .tka-pillars-title {
   font-size: 1.4rem;
   font-weight: 800;
+  text-transform: uppercase;
   color: #333333; /* Teks gelap untuk kontras */
   margin-bottom: 20px;
   font-family: "Nunito", sans-serif;
@@ -192,6 +192,13 @@
   align-self: stretch; /* Memastikan separator mengisi tinggi */
 }
 
+@media (max-width: 1024px) {
+  .tka-pillars-section {
+    padding-left: 4%;
+    padding-right: 4%;
+  }
+}
+
 @media (max-width: 992px) {
   .pillars-content-wrapper {
     flex-direction: column;
@@ -350,6 +357,10 @@
   .tka-cta-button {
     font-size: 1.1rem;
     padding: 12px 25px;
+  }
+  .tka-pillars-section {
+    padding-left: 4%;
+    padding-right: 4%;
   }
 }
 

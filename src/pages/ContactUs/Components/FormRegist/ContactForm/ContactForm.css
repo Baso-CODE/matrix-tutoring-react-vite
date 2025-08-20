@@ -1,0 +1,140 @@
+.contact-form-container {
+  background-color: #ffffff;
+  padding: 2rem;
+  border-radius: 1.5rem;
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1),
+    0 10px 10px -5px rgba(0, 0, 0, 0.04);
+  max-width: 800px;
+  margin: auto;
+}
+
+.contact-form-title {
+  font-size: 2rem;
+  font-weight: 800;
+  color: #333333;
+  margin-bottom: 0.5rem;
+  text-align: start;
+}
+
+.contact-form-subtitle {
+  color: #4a5568;
+  margin-bottom: 2rem;
+  text-align: start;
+}
+
+.contact-form-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.contact-form-input-group {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.5rem;
+}
+@media (min-width: 768px) {
+  .contact-form-input-group {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+.contact-form-label,
+.contact-form-form label {
+  display: flex;
+  flex-direction: column;
+}
+
+.contact-form-form span {
+  color: #4a5568;
+  font-weight: 500;
+  font-family: "Nunito", sans-serif;
+  margin-bottom: 0.25rem;
+}
+
+.contact-form-form input,
+.contact-form-form textarea,
+.contact-form-form select {
+  padding: 0.75rem 1rem;
+  font-family: "Nunito", sans-serif;
+  background-color: #f7fafc;
+  border: 1px solid #e2e8f0;
+  border-radius: 0.5rem;
+  transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+.contact-form-form input:focus,
+.contact-form-form textarea:focus,
+.contact-form-form select:focus {
+  border-color: #007bff;
+  box-shadow: 0 0 0 3px rgba(76, 81, 191, 0.25);
+  outline: none;
+}
+
+.contact-form-button {
+  width: 100%;
+  padding: 0.75rem 1.5rem;
+  background-color: #007bff;
+  color: #ffffff;
+  font-weight: 700;
+  border-radius: 9999px;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1),
+    0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  transition-property: background-color;
+  transition-duration: 300ms;
+  display: flex;
+  cursor: pointer;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+}
+.contact-form-button span {
+  color: #ffffff;
+  font-family: "Nunito", sans-serif;
+}
+
+@media (min-width: 768px) {
+  .contact-form-button {
+    width: auto;
+  }
+}
+
+.contact-form-button:hover {
+  background-color: #1d3fc6;
+}
+
+.bouncy-button {
+  position: relative;
+  display: inline-flex;
+  height: 3rem;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  border-radius: 0.375rem;
+  border: 1px solid #e5e5e5;
+  background-color: #007bff;
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+  font-weight: 500;
+  color: #525252;
+  cursor: pointer;
+  transition-property: all;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 100ms;
+  box-shadow: 5px 5px rgb(82, 82, 82);
+}
+
+.bouncy-button:hover {
+  transform: translate(3px, 3px);
+  box-shadow: 0px 0px rgb(82, 82, 82);
+}
+
+.bouncy-button span {
+  color: #ffffff;
+  font-weight: 600;
+  font-size: 1.2rem;
+  font-family: "Nunito", sans-serif;
+}
+.icon-bouncy-button {
+  color: #ffffff;
+}

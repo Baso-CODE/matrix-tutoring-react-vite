@@ -1,25 +1,21 @@
 import React from "react";
 import { Helmet } from "react-helmet-async";
 import AsalSekolahSiswaEdumatrix from "../Components/AsalSekolahSiswa/AsalSekolahSiswa";
-import BannerComponent from "../Components/Banner/Banner";
 import MatrixFeatures from "../Components/MatrixFeatures/MatrixFeatures";
 import OnlineLesOptions from "../Components/OnlineLesOption/OnlineLesOption";
-import PengajarLestPrivate from "../Components/PengajarLestPrivate/PengajarLestPrivate";
 import ProgramBelajarLesPrivat from "../Components/ProgramBelajarLesPrivate/ProgramBelajarLesPrivate";
-import ProgramLesPrivat from "../Components/ProgramLesPrivate/ProgramLesPrivate";
 import PilihanProgram from "../Components/ProgramOptions/PilihanProgram";
 import AsalSekolahSiswaMarque from "../Components/SekolahSiswaMarque/SekolahSiswaMarque";
 
 import AccordionFAQ from "../Components/FAQ/AccordionFAQ";
 import FiturProgramNew from "../Components/FiturProgramNew/FiturProgramNew";
+import GaleriKegiatanBelajar from "../Components/GaleriKegiatanBelajar/GaleriKegiatanBelajar";
 import HeroHome from "../Components/HeroHome/HeroHome";
 import HowToOrder from "../Components/HowToOrder/HowToOrder";
-import Keunggulan from "../Components/Keunggulan/Keunggulan";
 import MasterTeacherV2 from "../Components/MasterTeacherV2/MasterTeacherV2";
+import ProgramLesPrivatV2 from "../Components/ProgramLesPrivatNew/ProgramLesPrivatV2 ";
 import EmbrelaSlider from "../Components/SlideTop/EmbrelaSlider";
 import SuccessStoryLesPrivate from "../Components/SuccesStoryLesPrivate/SuccesStoryLesPrivate";
-import Listkota from "../Components/Tab/Listkota";
-import TestimonialSiswa from "../Components/TestimonialSiswa/TestimonialSiswa";
 import TestimoniOrtuSiswa from "../Components/TestimoniOrtuSiswa/TestimoniOrtuSiswa";
 import { selectContactCsData } from "../lib/features/contactCsSlice";
 import { useAppSelector } from "../lib/hooks";
@@ -75,27 +71,22 @@ const Homepage = () => {
 
       <div>
         <HeroHome contactData={contactData} />
-        <div className="container-all">
-          <EmbrelaSlider />
-          <BannerComponent />
-          <PengajarLestPrivate />
-          <FiturProgramNew />
-          <PilihanProgram />
-          <OnlineLesOptions />
-          <ProgramLesPrivat />
-          <MasterTeacherV2 />
-          <ProgramBelajarLesPrivat />
-          <MatrixFeatures />
-          <SuccessStoryLesPrivate />
-          <TestimonialSiswa />
-          <TestimoniOrtuSiswa />
-          <AsalSekolahSiswaEdumatrix />
-          <AsalSekolahSiswaMarque />
-          <Keunggulan />
-          <Listkota />
-        </div>
+        <EmbrelaSlider />
+        <ProgramLesPrivatV2 />
+        <FiturProgramNew />
+        <PilihanProgram />
+        <OnlineLesOptions />
+        <MasterTeacherV2 />
+        <ProgramBelajarLesPrivat />
+        <MatrixFeatures />
+        <SuccessStoryLesPrivate />
+        {/* <TestimonialSiswa /> */}
+        <TestimoniOrtuSiswa />
+        <AsalSekolahSiswaEdumatrix />
+        <AsalSekolahSiswaMarque />
         <HowToOrder />
         <AccordionFAQ />
+        <GaleriKegiatanBelajar />
         <PromoHomepage />
         <CTABottomHome />
       </div>

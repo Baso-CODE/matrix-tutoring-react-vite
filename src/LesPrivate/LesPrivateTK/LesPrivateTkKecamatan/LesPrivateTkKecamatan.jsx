@@ -27,6 +27,11 @@ import LesPrivateTKHeader from "../components/LesPrivateTKHeader";
 import MainLearningContent from "../components/MainLearningContent/MainLearningContent";
 import StatistikImage from "../components/StatistikImage/StatistikImage";
 import PromoHomepage from "../../../Home/PromoHomepage/PromoHomepage";
+import ProgramLesPrivatV2 from "../../../Components/ProgramLesPrivatNew/ProgramLesPrivatV2 ";
+import TestimoniOrtuSiswa from "../../../Components/TestimoniOrtuSiswa/TestimoniOrtuSiswa";
+import TestimonialSiswa from "../../../Components/TestimonialSiswa/TestimonialSiswa";
+import SuccessStoryLesPrivate from "../../../Components/SuccesStoryLesPrivate/SuccesStoryLesPrivate";
+import GaleriKegiatanBelajar from "../../../Components/GaleriKegiatanBelajar/GaleriKegiatanBelajar";
 
 const items = [
   {
@@ -56,11 +61,11 @@ const items = [
     href: "#pilihan-program-les-private",
   },
   {
-    text: "Program Les Private Matrix  ",
+    text: "Program Les Private Matrix Tutoring  ",
     href: "#program-les-private-matrix-tutoring",
   },
   {
-    text: "Saat Ini, Matrix Juga Melayani Les Privat Online",
+    text: "Saat Ini, Matrix Tutoring Juga Melayani Les Privat Online",
     href: "#matrix-juga-melayani-les-privat-online",
   },
   {
@@ -274,54 +279,45 @@ const LesPrivateTKKecamatan = () => {
           </script>
         </Helmet>
 
-        <div className="container-all">
-          <HeroLesPrivate
-            heading={displayedHeading}
-            desc={heroData?.description}
-            nameCountry={nameCountry}
-            images={heroImageSrc}
-          />
-          <EmbrelaSlider />
-          {/* <Slidertop /> */}
-          <TableOfContents title="Table of Contents" items={items} />
-          <LesPrivateTKHeader />
-          <LearningFeaturesLesPrivateTk />
-          <MainLearningContent />
-          <StatistikImage />
+        <HeroLesPrivate
+          heading={displayedHeading}
+          desc={heroData?.description}
+          nameCountry={nameCountry}
+          images={heroImageSrc}
+        />
+        <EmbrelaSlider />
+        {/* <Slidertop /> */}
+        <TableOfContents title="Table of Contents" items={items} />
+        <LesPrivateTKHeader />
+        <LearningFeaturesLesPrivateTk />
+        <MainLearningContent />
+        <StatistikImage />
+        <section id="program-les-private-matrix-tutoring">
+          <ProgramLesPrivatV2 />
+        </section>
+        <section id="fitur-program-les-private">
+          <FiturProgramNew />
+        </section>
+        <section id="pilihan-program-les-private">
+          <PilihanProgram />
+        </section>
+        <section id="matrix-juga-melayani-les-privat-online">
+          <OnlineLesOptions />
+        </section>
+        <MasterTeacherV2 />
+        <ProgramBelajarLesPrivat />
+        <MatrixFeatures />
+        <SuccessStoryLesPrivate />
+        {/* <TestimonialSiswa /> */}
+        <TestimoniOrtuSiswa />
+        <section id="asal-sekolah-siswa-matrix-tutoring-private">
+          <AsalSekolahSiswaEdumatrix />
+          <AsalSekolahSiswaMarque />
+        </section>
 
-          <section id="pengajar-les-private">
-            <PengajarLestPrivate />
-          </section>
-          <section id="fitur-program-les-private">
-            <FiturProgramNew />
-          </section>
-          {/* <PromoFree /> */}
-          <section id="pilihan-program-les-private">
-            <PilihanProgram />
-          </section>
-          <section id="matrix-juga-melayani-les-privat-online">
-            <OnlineLesOptions />
-          </section>
-          <section id="program-les-private-matrix-tutoring">
-            <ProgramLesPrivat />
-          </section>
-          <MasterTeacherV2 />
-          <ProgramBelajarLesPrivat />
-          <MatrixFeatures />
-          <section id="asal-sekolah-siswa-matrix-tutoring-private">
-            <AsalSekolahSiswaEdumatrix />
-            <AsalSekolahSiswaMarque />
-          </section>
-
-          <Keunggulan />
-
-          <ListKelurahanLesPrivate
-            program={"les-privat-tk"}
-            title={"Les Privat TK"}
-          />
-        </div>
         <HowToOrder />
         <AccordionFAQ />
+        <GaleriKegiatanBelajar />
         <PromoHomepage />
         <CTABottomHome />
       </React.Fragment>

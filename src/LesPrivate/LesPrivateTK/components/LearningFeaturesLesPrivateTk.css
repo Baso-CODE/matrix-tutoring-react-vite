@@ -44,7 +44,7 @@
   font-family: "Nunito", sans-serif;
 }
 
-.feature-description {
+.feature-description-v2 {
   font-size: 1rem;
   line-height: 1.5;
   margin-top: 0;
@@ -75,7 +75,7 @@
     font-family: "Nunito", sans-serif;
   }
 
-  .feature-description {
+  .feature-description-v2 {
     font-size: 0.9rem;
     font-weight: 500;
     text-align: start;

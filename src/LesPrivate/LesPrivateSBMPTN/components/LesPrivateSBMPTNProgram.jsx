@@ -7,7 +7,7 @@ const LesPrivateSBMPTNProgram = () => {
     <section className="section-simak-SBMPTN-program">
       <div className="space-y-6">
         <div>
-          <h3>1.Les Privat SBMPTN IPA/Saintek</h3>
+          <h3>1.Les Privat SNBT/UTBK IPA/Saintek</h3>
           <p>
             TPS: Penalaran Umum, Pengetahuan Kuantitatif, Pengetahuan dan
             Pemahaman Umum, Pemahaman Bacaan dan Menulis
@@ -16,7 +16,7 @@ const LesPrivateSBMPTNProgram = () => {
         </div>
 
         <div>
-          <h3>2.Les Privat SBMPTN IPS/Soshum</h3>
+          <h3>2.Les Privat SNBT/UTBK IPS/Soshum</h3>
           <p>
             TPS: Penalaran Umum, Pengetahuan Kuantitatif, Pengetahuan dan
             Pemahaman Umum, Pemahaman Bacaan dan Menulis
@@ -28,7 +28,7 @@ const LesPrivateSBMPTNProgram = () => {
         </div>
 
         <div>
-          <h3>3.Les Privat SBMPTN IPC/Campuran</h3>
+          <h3>3.Les Privat SNBT/UTBK IPC/Campuran</h3>
           <p>
             TPS: Penalaran Umum, Pengetahuan Kuantitatif, Pengetahuan dan
             Pemahaman Umum, Pemahaman Bacaan dan Menulis

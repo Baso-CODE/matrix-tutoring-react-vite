@@ -24,34 +24,35 @@ const ListKabupatenLesPrivate = ({ title, program }) => {
   }, [kotaSlug]);
 
   return (
-    <div className=" container-all-tab">
-      <div className="title-container">
-        <img
-          loading="lazy"
-          src="/images/daftar-kota.webp"
-          alt="City Icon"
-          className="icon-city"
-        />
-        <h2 className=" title-list">
-          Daftar {title} di {kota.kota}
-        </h2>
-      </div>
-      <div className="parent-list-kota">
-        {kabupaten.length > 0 ? (
-          kabupaten.map((item, index) => (
-            <Link
-              className="btn-kota"
-              key={index}
-              to={`/${program}/${kotaSlug}/${item.slug}`}>
-              {item.kota_kabupaten}
-            </Link>
-          ))
-        ) : (
-          <div className="no-kelurahan">
-            <p>No data kecamatan available for {kota.kota}</p>
-          </div>
-        )}
-        {/* {kabupaten.map((item, index) => (
+    <section className="container-all">
+      <div className=" container-all-tab">
+        <div className="title-container">
+          <img
+            loading="lazy"
+            src="/images/daftar-kota.webp"
+            alt="City Icon"
+            className="icon-city"
+          />
+          <h2 className=" title-list">
+            Daftar {title} di {kota.kota}
+          </h2>
+        </div>
+        <div className="parent-list-kota">
+          {kabupaten.length > 0 ? (
+            kabupaten.map((item, index) => (
+              <Link
+                className="btn-kota"
+                key={index}
+                to={`/${program}/${kotaSlug}/${item.slug}`}>
+                {item.kota_kabupaten}
+              </Link>
+            ))
+          ) : (
+            <div className="no-kelurahan">
+              <p>No data kecamatan available for {kota.kota}</p>
+            </div>
+          )}
+          {/* {kabupaten.map((item, index) => (
           <Link
             className="btn-kota"
             key={index}
@@ -59,8 +60,9 @@ const ListKabupatenLesPrivate = ({ title, program }) => {
             {item.kota_kabupaten}
           </Link>
         ))} */}
+        </div>
       </div>
-    </div>
+    </section>
   );
 };
 

@@ -1,7 +1,7 @@
 .hero-section-container {
   padding: 40px 20px;
-  /* padding-left: 12%;
-  padding-left: 12%; */
+  padding-left: 10%;
+  padding-right: 10%;
   min-height: 100vh;
   display: flex;
   justify-content: center;
@@ -18,7 +18,7 @@
   flex-direction: row; /* Default: row on larger screens */
   justify-content: center;
   align-items: center;
-  max-width: 1240px;
+  /* max-width: 1240px; */
   width: 100%;
   gap: 40px;
 }
@@ -41,7 +41,7 @@
 }
 
 .hero-highlight-bimbel {
-  color: #006bde;
+  color: #007bff;
   margin-left: 10px;
 }
 
@@ -59,26 +59,31 @@
 }
 
 .hero-feature-list {
-  list-style: none; /* Hapus bullet default */
+  list-style: none;
   padding: 0;
-  margin-bottom: 25px; /* Adjusted margin-bottom */
+  margin-bottom: 25px;
 }
 
 .hero-feature-list li {
   display: flex;
-  align-items: center;
-  margin-bottom: 12px;
+  text-align: start;
+  align-items: flex-start;
+  margin-bottom: 3px;
   font-size: 1rem;
   color: #2d3748;
   font-weight: 500;
+  gap: 3px;
 }
 
 .check-icon {
   width: 26px;
   height: 26px;
   color: #34d399;
-  margin-right: 8px;
+  /* Hapus margin-right: 8px; dan ganti dengan gap pada parent */
+  /* margin-right: 8px; */
   stroke-width: 2.5;
+  /* Tambahkan flex-shrink: 0; agar ikon tidak mengecil */
+  flex-shrink: 0;
 }
 
 .hero-pricing {
@@ -112,12 +117,15 @@
   align-items: center;
   margin-bottom: 20px;
 }
-
+.link_cta_decoration {
+  text-decoration: none;
+}
 /* START: Style untuk container tombol */
 .hero-cta-section-wrapper {
   display: flex;
   flex-direction: row; /* Stack buttons by default */
   gap: 15px; /* Spasi antar tombol */
+
   margin-bottom: 20px; /* Jarak bawah dari section ini */
 }
 
@@ -130,7 +138,7 @@
   justify-content: center;
 
   padding: 10px 15px;
-  background-color: #006bde;
+  background-color: #007bff;
   color: white;
   border: none;
   border-radius: 10px;
@@ -158,7 +166,7 @@
   gap: 8px; /* Spasi antara teks dan waktu */
   padding: 10px 20px; /* Sedikit lebih kecil dari tombol promo utama */
   background-color: #e0e7ff; /* Warna background lebih terang */
-  color: #006bde; /* Warna teks sesuai highlight bimbel */
+  color: #007bff; /* Warna teks sesuai highlight bimbel */
   border: 1px solid #a7b7ff; /* Border yang lebih lembut */
   border-radius: 10px;
   font-size: 1rem;
@@ -185,7 +193,7 @@
   border-radius: 6px;
   font-family: "monospace", sans-serif;
   font-size: 1rem;
-  color: #006bde;
+  color: #007bff;
   white-space: nowrap;
 }
 
@@ -210,7 +218,7 @@
 }
 
 .hero-illustration-main {
-  background: linear-gradient(180deg, #b0a7ec, #006bde);
+  background: linear-gradient(to right, #007bff, rgba(0, 123, 255, 0.247));
   border-radius: 25px;
   padding: 25px;
   width: 100%;
@@ -248,7 +256,7 @@
 
 .lock-icon {
   font-size: 1.3rem;
-  color: #006bde; /* Changed to match hero color */
+  color: #007bff; /* Changed to match hero color */
 }
 
 .website-ui-placeholder {
@@ -284,7 +292,7 @@
   justify-content: center;
   align-items: center;
   font-size: 1.6rem;
-  color: #006bde; /* Adjusted icon color */
+  color: #007bff; /* Adjusted icon color */
   cursor: pointer;
   box-shadow: 0 3px 8px rgba(0, 0, 0, 0.08);
   transition: transform 0.2s ease;
@@ -324,11 +332,11 @@
 }
 
 .ui-headline {
-  font-size: 2.5rem;
-  font-weight: 700;
+  font-size: 2rem;
+  font-weight: 800;
   color: #333333;
 
-  line-height: 1.2;
+  line-height: 1.1;
 }
 
 .ui-gallery-label {
@@ -376,7 +384,7 @@
   box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
   z-index: 3;
   min-width: 300px;
-  border-left: 6px solid #5355f7;
+  border-left: 8px solid #047af9;
 }
 
 .client-avatar {
@@ -384,7 +392,7 @@
   height: 60px;
   border-radius: 50%;
   object-fit: cover;
-  border: 3px solid #006bde;
+  border: 3px solid #007bff;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
 }
 
@@ -435,7 +443,7 @@
   width: 95px;
   height: 95px;
   border-radius: 50%;
-  background: conic-gradient(#7f7ae2 95%, #e2e8f0 0);
+  background: conic-gradient(#007bff 95%, #e2e8f0 0);
   font-size: 2.5rem;
   font-weight: 700;
   color: #ffffff;
@@ -685,7 +693,8 @@
   .check-icon {
     width: 22px;
     height: 22px;
-    margin-right: 0px;
+    /* margin-right: 0px; */
+    flex-shrink: 0;
   }
 
   .hero-promo-button {
@@ -949,4 +958,175 @@
     width: 35px;
     height: 35px;
   }
+}
+
+/* Button */
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+    transform: scale(0.5);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes jump-scare {
+  0% {
+    transform: scale(1) rotate(0deg);
+    opacity: 1;
+  }
+  50% {
+    transform: scale(1.5) rotate(10deg);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(0.9) rotate(-5deg);
+    opacity: 1;
+  }
+}
+
+@keyframes drop {
+  0% {
+    bottom: 0px;
+    opacity: 1;
+  }
+  80% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 1;
+    bottom: -400px;
+  }
+}
+
+.loader {
+  text-align: center;
+  font-size: 16px;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  position: relative;
+  border: none;
+  cursor: pointer;
+  margin-left: 20%;
+  background-color: transparent;
+}
+
+.loader-bg {
+  border-radius: 12px;
+  padding: 10px 15px;
+  z-index: 2;
+  width: 120px;
+  color: #fff;
+  font-weight: bold;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  background-color: black;
+  background-image: radial-gradient(circle 80px at 50% 150%, #2a2a2a, black);
+  margin-bottom: 10px;
+  transition: all 0.2s ease-in-out;
+}
+
+.loader-bg:hover {
+  text-shadow: 0px 0px 8px #fff;
+  animation: jump-scare 0.2s ease-in-out;
+}
+
+.loader-bg:active {
+  background-image: radial-gradient(circle 140px at 50% 150%, #2a2a2a, black);
+}
+
+.loader-bg:hover + .drops .drop2,
+.drop3 {
+  animation: drop 0.5s cubic-bezier(1, 0.19, 0.66, 0.12) 0.1s infinite;
+}
+
+.loader-bg:active + .drops .drop1,
+.drop2,
+.drop3 {
+  background-color: #fff;
+}
+
+.drops {
+  filter: url("#liquid");
+  position: absolute;
+  top: 35%;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  z-index: 1;
+  opacity: 0;
+  animation: fade-in 0.3s linear 0.2s forwards;
+}
+
+.drop1,
+.drop2,
+.drop3 {
+  width: 20px;
+  height: 28px;
+  border-radius: 50%;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  margin: auto;
+  background-color: black;
+}
+
+.drop1 {
+  width: 125px;
+  height: 16px;
+  bottom: 2px;
+  border-radius: 0;
+}
+
+.drop3 {
+  background-color: white;
+}
+
+.drop2,
+.drop3 {
+  animation: drop 1.5s cubic-bezier(1, 0.19, 0.66, 0.12) 0.7s infinite;
+}
+
+/* add new Style button */
+/* Styling untuk Link utama */
+.promo-button-new {
+  /* Variables */
+  --button_radius: 0.75em;
+  --button_color: #e8e8e8;
+  --button_outline_color: #000000;
+  font-size: 17px;
+  font-weight: bold;
+  border: none;
+  border-radius: var(--button_radius);
+  background: var(--button_outline_color);
+  text-decoration: none; /* Penting untuk Link */
+  cursor: pointer;
+  display: inline-block; /* Agar dapat menerapkan padding dan transform */
+}
+
+/* Styling untuk span di dalamnya */
+.promo-button-new-top {
+  display: block;
+  box-sizing: border-box;
+  border: 2px solid var(--button_outline_color);
+  border-radius: var(--button_radius);
+  padding: 0.75em 1.5em;
+  background: linear-gradient(to bottom right, #ffcc99, #ff9966);
+  color: var(--button_outline_color);
+  transform: translateY(-0.2em);
+  transition: transform 0.1s ease;
+}
+
+/* Hover state */
+.promo-button-new:hover .promo-button-new-top {
+  transform: translateY(-0.33em);
+}
+
+/* Active state */
+.promo-button-new:active .promo-button-new-top {
+  transform: translateY(0);
 }

@@ -9,14 +9,14 @@ const KeunggulanLesPrivateSBMPTNList = () => {
     "Jadwal yang fleksibel disesuaikan dengan kebutuhan Anda. Rekomendasi prioritas mapel les privat dan rekomendasi pertemuan agar efektif dalam belajar.",
     "Pemahaman konsep, pendalaman materi dan peningkatan keterampilan penyelesaian soal",
     "Sistem evaluasi secara berkala",
-    "Tutor Mahasiswa dan Alumni SBMPTN dan PTN lain yang berpengalaman & ahli di bidangnya.",
-    "Matrix selalu berorientasi pada target dan peningkatan prestasi siswa",
+    "Tutor Mahasiswa dan Alumni UTBK dan PTN lain yang berpengalaman & ahli di bidangnya.",
+    "Matrix Tutoring selalu berorientasi pada target dan peningkatan prestasi siswa",
     "Kemudahan Pembayaran via transfer",
   ];
 
   return (
     <div className="keunggulan-les-private-SBMPTN-list-container">
-      <h2>Keunnggulan Les Privat Matrix</h2>
+      <h2>Keunnggulan Les Privat Matrix Tutoring SNBT UTBK</h2>
       <ul className="keunggulan-subject-list-les-private-SBMPTN">
         {subjects.map((subject, index) => (
           <li

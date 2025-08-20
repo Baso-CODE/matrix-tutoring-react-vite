@@ -47,7 +47,7 @@ const benefits = [
 ];
 
 const CoreUniversityBenefits = () => {
-  const [hoveredBenefitId, setHoveredBenefitId] = useState(null); // State untuk melacak ID kartu yang dihover
+  const [hoveredBenefitId, setHoveredBenefitId] = useState(null);
 
   return (
     <section id="core-university-benefits" className="core-benefits-section">
@@ -92,7 +92,7 @@ const CoreUniversityBenefits = () => {
           )}
         </div>
 
-        {/* Tidak ada tombol CTA "Daftar Sekarang" di sini */}
+        {/* Tidak ada tombol CTA "Konsultasi" di sini */}
       </div>
     </section>
   );

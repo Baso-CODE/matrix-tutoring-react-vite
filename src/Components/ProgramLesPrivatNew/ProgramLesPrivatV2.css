@@ -1,0 +1,88 @@
+/* Gaya untuk kontainer utama */
+.program-container-v2 {
+  font-family: sans-serif;
+  color: #333;
+  margin-top: 4vh;
+  margin-bottom: 10vh;
+}
+
+/* Gaya untuk bagian header */
+.program-header-v2 {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.program-title-v2 {
+  font-size: 1.7rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  font-family: "Nunito", sans-serif;
+  margin-bottom: 20px;
+}
+
+.program-description-v2 {
+  font-size: 1rem;
+  max-width: 1000px;
+  font-family: "Nunito", sans-serif;
+  margin: 0 auto;
+  line-height: 1.6;
+  color: #666;
+}
+
+/* Gaya untuk kontainer kartu */
+.program-cards-v2 {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+}
+
+/* Gaya untuk setiap kartu */
+.card-v2 {
+  background-color: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 30px;
+  text-align: center;
+  flex: 1 1 300px;
+  max-width: 350px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card-v2:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.card-icon-v2 {
+  width: 150px;
+  height: auto;
+  margin-bottom: 20px;
+}
+
+.card-title-v2 {
+  font-size: 1.3rem;
+  font-family: "Nunito", sans-serif;
+  font-weight: 800;
+  margin-bottom: 10px;
+}
+
+.card-description-v2 {
+  font-size: 0.9rem;
+  color: #666;
+  font-family: "Nunito", sans-serif;
+}
+
+/* Gaya responsif untuk layar yang lebih kecil */
+@media (max-width: 768px) {
+  .program-cards-v2 {
+    flex-direction: column;
+    align-items: center;
+  }
+  .program-title-v2 {
+    font-size: 1.4rem;
+  }
+  .card-title-v2 {
+    font-size: 1.2rem;
+  }
+}

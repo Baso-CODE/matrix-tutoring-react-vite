@@ -1,3 +1,5 @@
+/* File: src/helper/Navbar/BottomNavigationBar/BottomNavigationBar.css */
+
 @media (min-width: 1024px) {
   .bottom-nav-bar {
     display: none;
@@ -11,12 +13,12 @@
   left: 0;
   right: 0;
   z-index: 50;
-  background-color: #ffffff; /* Latar belakang putih */
-  box-shadow: 0 -4px 10px rgba(0, 0, 0, 0.1); /* Bayangan di bagian atas */
-  padding: 8px 10px; /* Padding atas-bawah dan kanan-kiri */
-  border-top-left-radius: 15px; /* Sudut membulat di kiri atas */
+  background-color: #ffffff;
+  box-shadow: 0 -4px 10px rgba(0, 0, 0, 0.1);
+  padding: 8px 22px;
+  border-top-left-radius: 15px;
   border-top-right-radius: 15px;
-  border-top: 1px solid #e2e8f0; /* Warna border-top biru muda sebelumnya */
+  border-top: 1px solid #e2e8f0;
   -webkit-touch-callout: none;
   -webkit-user-select: none;
   -khtml-user-select: none;
@@ -26,10 +28,11 @@
 }
 
 .bottom-nav-container {
-  display: flex;
-  justify-content: space-around; /* Menyebarkan item secara merata */
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 8px;
   align-items: center;
-  height: 64px; /* Tinggi bilah navigasi */
+  height: 64px;
   max-width: 100%;
   margin-left: auto;
   margin-right: auto;
@@ -41,61 +44,57 @@
   align-items: center;
   justify-content: center;
   padding: 8px;
-  border-radius: 12px; /* Sudut membulat untuk setiap item */
-  text-decoration: none; /* Hapus garis bawah tautan */
-  color: #64748b; /* Warna teks default (abu-abu) */
-  flex-grow: 1; /* Biarkan item tumbuh mengisi ruang */
-  transition: all 0.2s ease-in-out; /* Transisi halus untuk hover/active */
-  white-space: nowrap; /* Pastikan teks tidak patah baris */
+  border-radius: 12px;
+  text-decoration: none;
+  color: #64748b;
+
+  transition: all 0.2s ease-in-out;
+  white-space: nowrap;
+
+  height: 100%;
 }
 
 .bottom-nav-item:focus {
-  outline: none; /* Hapus outline fokus default */
-  box-shadow: 0 0 0 2px #222222; /* Cincin fokus biru #222222 */
+  outline: none;
+  box-shadow: 0 0 0 3px #007bff;
 }
 
 .bottom-nav-item:hover {
-  color: #222222; /* Warna teks saat hover (biru #222222) */
-  background-color: rgba(
-    59,
-    130,
-    246,
-    0.05
-  ); /* Latar belakang saat hover (biru transparan sebelumnya) */
+  color: #007bff;
+  background-color: rgba(59, 130, 246, 0.05);
 }
 
 .bottom-nav-item.active {
-  color: #222222; /* Warna teks saat aktif (biru #222222) */
-  background-color: #eff6ff; /* Latar belakang saat aktif (biru sangat muda sebelumnya) */
-  outline: 2px solid #222222; /* Ring: tebal 2px, solid, warna #222222 */
-  outline-offset: 2px; /* Jarak antara elemen dan ring */
-  border-radius: 12px; /* Pastikan ring juga mengikuti border-radius parent */
+  color: #007bff;
+  background-color: #eff6ff;
+  outline: 3px solid #007bff;
+  outline-offset: 2px;
+  border-radius: 12px;
 }
 
 .bottom-nav-icon {
-  width: 24px; /* Lebar ikon */
-  height: 24px; /* Tinggi ikon */
-  margin-bottom: 4px; /* Jarak antara ikon dan teks */
-  transition: color 0.2s; /* Transisi warna ikon */
+  width: 24px;
+  height: 24px;
+  margin-bottom: 4px;
+  transition: color 0.2s;
   color: #222222;
 }
 
 .bottom-nav-item.active .bottom-nav-icon {
-  color: #222222; /* Warna ikon saat aktif (biru #222222) */
+  color: #222222;
 }
 
 .bottom-nav-text {
-  font-size: 12px; /* Ukuran font teks */
-  font-weight: 500; /* Ketebalan font */
-  transition: color 0.2s; /* Transisi warna teks */
+  font-size: 12px;
+  font-weight: 500;
+  transition: color 0.2s;
   color: #333333;
 }
 
 .bottom-nav-item.active .bottom-nav-text {
-  color: #222222; /* Warna teks saat aktif (biru #222222) */
+  color: #222222;
 }
 
-/* Penyesuaian untuk ukuran layar yang sangat kecil (opsional) */
 @media (max-width: 360px) {
   .bottom-nav-bar {
     padding: 6px 5px;

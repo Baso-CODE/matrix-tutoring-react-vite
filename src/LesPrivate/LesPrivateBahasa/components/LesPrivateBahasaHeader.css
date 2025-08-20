@@ -8,16 +8,16 @@
 .centered-content-lesPrivate-bahasa h1 {
   font-family: "Nunito", sans-serif;
   font-weight: 700;
-  font-size: 1.6rem;
+  font-size: 1.4rem;
   color: #333333;
   margin-bottom: 1rem;
   text-align: start;
 }
 
 .centered-content-lesPrivate-bahasa h2 {
-  font-size: 1.4rem;
+  font-size: 1.2rem;
   color: #333333;
-  margin-top: 2rem;
+
   margin-bottom: 0.3rem;
   font-family: "Nunito", sans-serif;
   font-weight: 700;
@@ -27,8 +27,8 @@
   font-size: 1rem;
   color: #4f4f4f;
   line-height: 1.6;
+  font-weight: 400;
 
-  font-weight: 500;
   font-family: "Nunito", sans-serif;
 }
 
