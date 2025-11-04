@@ -37,7 +37,7 @@ const languageLearningSteps = [
   },
 ];
 
-const FlowPembelajaranBahasa = () => {
+const FlowPembelajaranBahasa = ({ location }) => {
   return (
     <section id="university-success-flow" className="university-flow-section">
       <div className="university-flow-container">
@@ -57,7 +57,9 @@ const FlowPembelajaranBahasa = () => {
                 <span className="flow-step-number">{index + 1}</span>
                 <img
                   src={step.icon}
-                  alt={step.title}
+                  alt={`${step.title} ${
+                    location ? `- ${location}` : "Indonesia"
+                  } - Matrix Tutoring`}
                   className="flow-step-icon"
                   loading="lazy"
                 />

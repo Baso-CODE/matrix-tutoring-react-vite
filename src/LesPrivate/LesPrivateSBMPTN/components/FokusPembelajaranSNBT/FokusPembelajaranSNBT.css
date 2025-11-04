@@ -1,0 +1,98 @@
+.container_learning_focus {
+  padding-left: 10%;
+  padding-right: 10%;
+  padding-bottom: 3%;
+}
+
+@media (max-width: 1024px) {
+  .container_learning_focus {
+    padding-left: 4%;
+    padding-right: 4%;
+  }
+}
+.centered-content__learnhing_focus {
+  width: 100%;
+}
+
+.centered-content__learnhing_focus h2 {
+  font-size: 1.3rem;
+  color: #333333;
+  font-family: "Poppins", sans-serif;
+  font-weight: 700;
+  margin-bottom: 0.6rem;
+  line-height: 1.5;
+  border-left: 4px solid #0077ff;
+  padding-left: 0.6rem;
+}
+
+.centered-content__learnhing_focus h3 {
+  font-size: 1.1rem;
+  color: #333333;
+  font-family: "Poppins", sans-serif;
+  font-weight: 600;
+  margin-top: 1.2rem;
+  margin-bottom: 0.5rem;
+}
+
+.learnhing_focus_description-h4 {
+  font-size: 1rem;
+  color: #4f4f4f;
+  line-height: 1.6;
+  font-weight: 400;
+  font-family: "Poppins", sans-serif;
+}
+.centered-content__learnhing_focus p {
+  font-size: 0.9rem;
+  color: #4f4f4f;
+  line-height: 1.6;
+  font-weight: 400;
+  font-family: "Poppins", sans-serif;
+  margin-bottom: 0.7rem;
+}
+
+.centered-content__learnhing_focus ul {
+  margin-left: 1.2rem;
+  margin-bottom: 1rem;
+  list-style-type: disc;
+}
+
+.centered-content__learnhing_focus .numbered-list__learnhing-focus {
+  margin-left: 1.5rem;
+
+  list-style-type: decimal;
+}
+
+.centered-content__learnhing_focus .numbered-list__learnhing-focus li {
+  color: #555;
+  font-size: 1rem;
+  line-height: 1.5;
+  font-family: "Poppins", sans-serif;
+}
+
+.learnhing_focus_row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px; /* jarak antar kolom */
+  margin-bottom: 2rem;
+}
+
+.learnhing_focus_col {
+  flex: 1;
+  min-width: 300px; /* biar responsif */
+}
+
+/* Responsiveness */
+@media (max-width: 768px) {
+  .centered-content__learnhing_focus h2 {
+    font-size: 1.15rem;
+  }
+
+  .centered-content__learnhing_focus h3 {
+    font-size: 1rem;
+  }
+
+  .centered-content__learnhing_focus p,
+  .centered-content__learnhing_focus li {
+    font-size: 0.9rem;
+  }
+}

@@ -40,35 +40,40 @@ const features = [
   },
 ];
 
-const AdaptiveLearningSMP = () => {
+const AdaptiveLearningSMP = ({ location }) => {
   return (
-    <section id="adaptive-learning-smp" className="adaptive-learning-section">
-      <div className="adaptive-learning-container">
-        <h2 className="adaptive-learning-title">
-          🚀 Pendekatan Pembelajaran Adaptif Matrix Tutoring
-        </h2>
-        <p className="adaptive-learning-subtitle">
-          Maksimalkan Potensi Akademik Anak Anda dengan Teknologi Mutakhir.
-        </p>
+    <section>
+      <section id="adaptive-learning-smp" className="adaptive-learning-section">
+        <div className="adaptive-learning-container">
+          <h2 className="adaptive-learning-title">
+            🚀 Pendekatan Pembelajaran Adaptif Matrix Tutoring
+          </h2>
+          <p className="adaptive-learning-subtitle">
+            Maksimalkan Potensi Akademik Anak Anda dengan Teknologi Mutakhir.
+          </p>
 
-        <div className="adaptive-features-grid">
-          {features.map((feature, index) => (
-            <div className="adaptive-feature-card" key={index}>
-              <div className="adaptive-feature-icon-wrapper">
-                <img
-                  src={feature.images}
-                  alt={feature.title}
-                  className="strategy-feature-icon"
-                />
+          <div className="adaptive-features-grid">
+            {features.map((feature, index) => (
+              <div className="adaptive-feature-card" key={index}>
+                <div className="adaptive-feature-icon-wrapper">
+                  <img
+                    src={feature.images}
+                    loading="lazy"
+                    alt={`${feature.title} Icon - Les Privat ${
+                      location ? `di ${location}` : "Indonesia"
+                    } - Matrix Tutoring`}
+                    className="strategy-feature-icon"
+                  />
+                </div>
+                <h3 className="adaptive-feature-title">{feature.title}</h3>
+                <p className="adaptive-feature-description">
+                  {feature.description}
+                </p>
               </div>
-              <h3 className="adaptive-feature-title">{feature.title}</h3>
-              <p className="adaptive-feature-description">
-                {feature.description}
-              </p>
-            </div>
-          ))}
+            ))}
+          </div>
         </div>
-      </div>
+      </section>
     </section>
   );
 };

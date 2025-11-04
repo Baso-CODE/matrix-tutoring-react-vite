@@ -6,7 +6,7 @@
   padding-right: 10%;
   background-color: #007bff;
   text-align: center;
-  overflow: hidden; /* Pastikan tidak ada overflow dari animasi/bayangan */
+  overflow: hidden;
 }
 
 .adaptive-learning-container {
@@ -19,9 +19,9 @@
   color: #ffffff;
   text-transform: uppercase;
   margin-bottom: 20px;
-  font-family: "Nunito", sans-serif;
+  font-family: "Poppins", sans-serif;
   line-height: 1.2;
-  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.05); /* Sedikit bayangan untuk kedalaman */
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.05);
 }
 
 .adaptive-learning-subtitle {
@@ -32,16 +32,13 @@
   margin-left: auto;
   margin-right: auto;
   line-height: 1.6;
-  font-family: "Nunito", sans-serif;
+  font-family: "Poppins", sans-serif;
 }
 
 .adaptive-features-grid {
   display: grid;
-  grid-template-columns: repeat(
-    auto-fit,
-    minmax(280px, 1fr)
-  ); /* Responsif grid */
-  gap: 30px; /* Jarak antar kartu */
+  grid-template-columns: repeat(3, 1fr); /* Selalu 3 kolom */
+  gap: 30px;
   margin-bottom: 60px;
 }
 
@@ -110,16 +107,16 @@
   font-weight: 700;
   color: #007bff; /* Biru gelap untuk judul fitur */
   margin-bottom: 10px;
-  font-family: "Nunito", sans-serif;
+  font-family: "Poppins", sans-serif;
   position: relative;
   z-index: 1;
 }
 
 .adaptive-feature-description {
-  font-size: 1rem;
+  font-size: 0.9rem;
   color: #4f4f4f; /* Abu-abu teks */
   line-height: 1.6;
-  font-family: "Nunito", sans-serif;
+  font-family: "Poppins", sans-serif;
   position: relative;
   z-index: 1;
 }
@@ -141,7 +138,7 @@
   font-size: 1.8rem;
   font-weight: 700;
   color: #ffffff;
-  font-family: "Nunito", sans-serif;
+  font-family: "Poppins", sans-serif;
   max-width: 800px;
 }
 
@@ -173,9 +170,6 @@
 
 /* Responsivitas */
 @media (max-width: 768px) {
-  .adaptive-learning-section {
-    padding: 50px 15px;
-  }
   .adaptive-learning-title {
     font-size: 1.3rem;
   }
@@ -202,7 +196,7 @@
     font-size: 1.2rem;
   }
   .adaptive-feature-description {
-    font-size: 0.95rem;
+    font-size: 0.85rem;
   }
   .adaptive-cta-wrapper {
     padding: 30px 20px;
@@ -222,9 +216,5 @@
   }
   .adaptive-learning-subtitle {
     font-size: 1rem;
-  }
-  .adaptive-learning-section {
-    padding: 0;
-    margin-top: 10vh;
   }
 }

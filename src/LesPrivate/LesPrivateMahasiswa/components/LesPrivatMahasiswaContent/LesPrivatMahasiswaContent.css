@@ -1,0 +1,76 @@
+.centered-content__mahasiswa {
+  padding-left: 10%;
+  padding-right: 10%;
+  padding-top: 4%;
+  padding-bottom: 3%;
+}
+
+@media (max-width: 1024px) {
+  .centered-content__mahasiswa {
+    padding-left: 4%;
+    padding-right: 4%;
+  }
+}
+
+.centered-content__mahasiswa h2 {
+  font-size: 1.2rem;
+  color: #333333;
+  font-family: "Poppins", sans-serif;
+  font-weight: 700;
+  margin-bottom: 0.3rem;
+  line-height: 1.4;
+  border-left: 4px solid #0077ff;
+  padding-left: 0.6rem;
+}
+
+.centered-content__mahasiswa h3 {
+  font-size: 1.1rem;
+  color: #333333;
+  font-family: "Poppins", sans-serif;
+  font-weight: 700;
+
+  margin-bottom: 0.5rem;
+}
+
+.centered-content__mahasiswa p {
+  font-size: 0.9rem;
+  color: #4f4f4f;
+  line-height: 1.6;
+  font-weight: 400;
+  font-family: "Poppins", sans-serif;
+  margin-bottom: 0.5rem;
+}
+
+.centered-content__mahasiswa ul {
+  margin-left: 1.2rem;
+  margin-bottom: 1rem;
+  list-style-type: disc;
+}
+
+.centered-content__mahasiswa li {
+  margin-bottom: 0.3rem;
+  color: #555555;
+  font-size: 0.9rem;
+  line-height: 1.5;
+  font-family: "Poppins", sans-serif;
+}
+
+.les-privat_mahasiswa-image {
+  width: 100%;
+  height: auto;
+  border-radius: 12px;
+  margin-bottom: 1rem;
+  display: block;
+}
+
+/* Responsiveness */
+@media (max-width: 768px) {
+  .centered-content__mahasiswa h2 {
+    font-size: 1.1rem;
+  }
+
+  .centered-content__mahasiswa p,
+  .centered-content__mahasiswa li {
+    font-size: 0.9rem;
+  }
+}

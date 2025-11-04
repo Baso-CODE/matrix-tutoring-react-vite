@@ -22,6 +22,11 @@ import { useAppSelector } from "../lib/hooks";
 import CTABottomHome from "./CTABottomHome/CTABottomHome";
 import "./Homepage.css";
 import PromoHomepage from "./PromoHomepage/PromoHomepage";
+import WhyMatrixFeatures from "../Components/MatrixFeatures/WhyMatrixFeatures";
+import MatrixSubjects from "../Components/MatrixFeatures/MatrixSubjects";
+import KurikulumLesPrivate from "../LesPrivate/LesPrivateSD/components/KurikulumLesPrivate/KurikulumLesPrivate";
+import LesprivatKota from "../LesPrivate/LesPrivateSD/components/LesprivatKota/LesprivatKota";
+import HeroHomeV2 from "../Components/HeroHomeV2/HeroHomeV2";
 
 const Homepage = () => {
   const contactData = useAppSelector(selectContactCsData);
@@ -70,23 +75,26 @@ const Homepage = () => {
       </Helmet>
 
       <div>
-        <HeroHome contactData={contactData} />
-        <EmbrelaSlider />
+        <HeroHomeV2 contactData={contactData} />
+
         <ProgramLesPrivatV2 />
         <FiturProgramNew />
         <PilihanProgram />
         <OnlineLesOptions />
         <MasterTeacherV2 />
         <ProgramBelajarLesPrivat />
-        <MatrixFeatures />
+        <KurikulumLesPrivate />
+        <WhyMatrixFeatures />
+        <MatrixSubjects />
         <SuccessStoryLesPrivate />
-        {/* <TestimonialSiswa /> */}
+
         <TestimoniOrtuSiswa />
         <AsalSekolahSiswaEdumatrix />
-        <AsalSekolahSiswaMarque />
+
         <HowToOrder />
         <AccordionFAQ />
         <GaleriKegiatanBelajar />
+        <LesprivatKota />
         <PromoHomepage />
         <CTABottomHome />
       </div>

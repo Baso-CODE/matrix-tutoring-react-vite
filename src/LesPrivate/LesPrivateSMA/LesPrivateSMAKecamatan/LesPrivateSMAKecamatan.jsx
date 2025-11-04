@@ -4,33 +4,38 @@ import { useParams } from "react-router-dom";
 import AsalSekolahSiswaEdumatrix from "../../../Components/AsalSekolahSiswa/AsalSekolahSiswa";
 import AccordionFAQ from "../../../Components/FAQ/AccordionFAQ";
 import FiturProgramNew from "../../../Components/FiturProgramNew/FiturProgramNew";
+import GaleriKegiatanBelajar from "../../../Components/GaleriKegiatanBelajar/GaleriKegiatanBelajar";
 import HowToOrder from "../../../Components/HowToOrder/HowToOrder";
-import Keunggulan from "../../../Components/Keunggulan/Keunggulan";
 import MasterTeacherV2 from "../../../Components/MasterTeacherV2/MasterTeacherV2";
-import MatrixFeatures from "../../../Components/MatrixFeatures/MatrixFeatures";
 import OnlineLesOptions from "../../../Components/OnlineLesOption/OnlineLesOption";
-import PengajarLestPrivate from "../../../Components/PengajarLestPrivate/PengajarLestPrivate";
 import ProgramBelajarLesPrivat from "../../../Components/ProgramBelajarLesPrivate/ProgramBelajarLesPrivate";
-import ProgramLesPrivat from "../../../Components/ProgramLesPrivate/ProgramLesPrivate";
+import ProgramLesPrivatV2 from "../../../Components/ProgramLesPrivatNew/ProgramLesPrivatV2 ";
 import PilihanProgram from "../../../Components/ProgramOptions/PilihanProgram";
-import AsalSekolahSiswaMarque from "../../../Components/SekolahSiswaMarque/SekolahSiswaMarque";
-import EmbrelaSlider from "../../../Components/SlideTop/EmbrelaSlider";
+import SuccessStoryLesPrivate from "../../../Components/SuccesStoryLesPrivate/SuccesStoryLesPrivate";
+import TestimoniOrtuSiswa from "../../../Components/TestimoniOrtuSiswa/TestimoniOrtuSiswa";
 import { getAllKecamatanBySlug } from "../../../helper/request/getAllKecamatanBySlug";
 import CTABottomHome from "../../../Home/CTABottomHome/CTABottomHome";
 import PromoHomepage from "../../../Home/PromoHomepage/PromoHomepage";
 import { getHeroData } from "../../../utils/getHeroData";
 import HeroLesPrivate from "../../components/HeroLesPrrivate/HeroLesPrivate";
-import ListKelurahanLesPrivate from "../../components/ListKelurahanLesPrivate/ListKelurahanLesPrivate";
 import TableOfContents from "../../components/TableOfContent";
-import LesPrivateSMAHeader from "../components/LesPrivateSMAHeader";
+import ImpactStatistics from "../../LesPrivateMahasiswa/components/ImpactStatistics/ImpactStatistics";
+import KurikulumLesPrivate from "../../LesPrivateSD/components/KurikulumLesPrivate/KurikulumLesPrivate";
+import LesprivatKota from "../../LesPrivateSD/components/LesprivatKota/LesprivatKota";
+import ProfileMatrixTutoring from "../../LesPrivateSD/components/ProfileMatrixTutoring/ProfileMatrixTutoring";
+import TutorLesprivatMatrix from "../../LesPrivateSD/components/TutorLesprivatMatrix/TutorLesprivatMatrix";
+import GalleryBelajarSMA from "../components/GalleryBelajarSMA/GalleryBelajarSMA";
+import KeunggulanLesPrivateSMA from "../components/KeunggulanLesPrivatSMA/KeunggulanLesPrivatSMA";
+import LesPrivatSMAMetode from "../components/LesPrivatSMAMetode/LesPrivatSMAMetode";
+
+import MatrixSubjects from "../../../Components/MatrixFeatures/MatrixSubjects";
+import WhyMatrixFeatures from "../../../Components/MatrixFeatures/WhyMatrixFeatures";
+import LogoPengajarMTX from "../components/LogoAlumniTutor/LogoPengajarMTX";
 import MatrixDifferentiationSMA from "../components/MatrixDifferentiationSMA/MatrixDifferentiationSMA";
+import ProgaramLesPrivatSMA from "../components/ProgaramLesPrivatSMA/ProgaramLesPrivatSMA";
 import PTNSuccessStrategy from "../components/PTNSuccessStrategy/PTNSuccessStrategy";
-import StatistikImageSMA from "../components/StatistikImageSMA";
-import ProgramLesPrivatV2 from "../../../Components/ProgramLesPrivatNew/ProgramLesPrivatV2 ";
-import TestimoniOrtuSiswa from "../../../Components/TestimoniOrtuSiswa/TestimoniOrtuSiswa";
-import TestimonialSiswa from "../../../Components/TestimonialSiswa/TestimonialSiswa";
-import SuccessStoryLesPrivate from "../../../Components/SuccesStoryLesPrivate/SuccesStoryLesPrivate";
-import GaleriKegiatanBelajar from "../../../Components/GaleriKegiatanBelajar/GaleriKegiatanBelajar";
+import SolusiLesPrivateSMA from "../components/SolusiLesPrivateSMA/SolusiLesPrivateSMA";
+import WhyMTXImportant from "../components/WhyMTXImportant/WhyMTXImportant";
 
 const items = [
   {
@@ -155,39 +160,39 @@ const LesPrivateSMAKecamatan = () => {
   const ogImageAlt = `Les Privat SMA Terbaik ${nameCountry} Matrix Tutoring`;
 
   const keywords = [
-    `Les Privat SMA ${nameCountry}`,
-    `Les Privat Sekolah Menengah Atas ${nameCountry}`,
-    `Guru Privat SMA ${nameCountry}`,
-    `Guru Les Privat SMA ${nameCountry}`,
-    `Bimbel SMA ${nameCountry}`,
-    `Bimbingan Belajar SMA ${nameCountry}`,
-    `Les Privat Online SMA ${nameCountry}`,
-    `Les Privat Offline SMA ${nameCountry}`,
-    `Program Belajar SMA ${nameCountry}`,
-    `Program Les Sekolah Menengah Atas ${nameCountry}`,
-    `Guru Les Matematika SMA ${nameCountry}`,
-    `Les Matematika SMA ${nameCountry}`,
-    `Les IPA SMA ${nameCountry}`,
-    `Les Bahasa Inggris SMA ${nameCountry}`,
-    `Tutor SMA Berpengalaman ${nameCountry}`,
-    `Les Privat Mata Pelajaran SMA ${nameCountry}`,
-    `Les Privat Bahasa Indonesia SMA ${nameCountry}`,
-    `Les Privat Fisika SMA ${nameCountry}`,
-    `Les Privat Kimia SMA ${nameCountry}`,
-    `Les Privat Biologi SMA ${nameCountry}`,
-    `Les Privat Ekonomi SMA ${nameCountry}`,
-    `Les Privat Geografi SMA ${nameCountry}`,
-    `Matrix Tutoring SMA ${nameCountry}`,
-    `Bimbel Online SMA ${nameCountry}`,
-    `Kursus SMA ${nameCountry}`,
-    `Persiapan Ujian SMA ${nameCountry}`,
-    `UN SMA ${nameCountry}`,
-    `UTBK SMA ${nameCountry}`,
-    `Persiapan Masuk PTN ${nameCountry}`,
-    `Tingkat SMA ${nameCountry}`,
-    `Materi SMA ${nameCountry}`,
-    `PR SMA ${nameCountry}`,
-    `Remedi SMA ${nameCountry}`,
+    `Les Privat SMA Kecamatan ${nameCountry}`,
+    `Les Privat Sekolah Menengah Atas Kecamatan ${nameCountry}`,
+    `Guru Privat SMA Kecamatan ${nameCountry}`,
+    `Guru Les Privat SMA Kecamatan ${nameCountry}`,
+    `Bimbel SMA Kecamatan ${nameCountry}`,
+    `Bimbingan Belajar SMA Kecamatan ${nameCountry}`,
+    `Les Privat Online SMA Kecamatan ${nameCountry}`,
+    `Les Privat Offline SMA Kecamatan ${nameCountry}`,
+    `Program Belajar SMA Kecamatan ${nameCountry}`,
+    `Program Les Sekolah Menengah Atas Kecamatan ${nameCountry}`,
+    `Guru Les Matematika SMA Kecamatan ${nameCountry}`,
+    `Les Matematika SMA Kecamatan ${nameCountry}`,
+    `Les IPA SMA Kecamatan ${nameCountry}`,
+    `Les Bahasa Inggris SMA Kecamatan ${nameCountry}`,
+    `Tutor SMA Berpengalaman Kecamatan ${nameCountry}`,
+    `Les Privat Mata Pelajaran SMA Kecamatan ${nameCountry}`,
+    `Les Privat Bahasa Indonesia SMA Kecamatan ${nameCountry}`,
+    `Les Privat Fisika SMA Kecamatan ${nameCountry}`,
+    `Les Privat Kimia SMA Kecamatan ${nameCountry}`,
+    `Les Privat Biologi SMA Kecamatan ${nameCountry}`,
+    `Les Privat Ekonomi SMA Kecamatan ${nameCountry}`,
+    `Les Privat Geografi SMA Kecamatan ${nameCountry}`,
+    `Matrix Tutoring SMA Kecamatan ${nameCountry}`,
+    `Bimbel Online SMA Kecamatan ${nameCountry}`,
+    `Kursus SMA Kecamatan ${nameCountry}`,
+    `Persiapan Ujian SMA Kecamatan ${nameCountry}`,
+    `UN SMA Kecamatan ${nameCountry}`,
+    `UTBK SMA Kecamatan ${nameCountry}`,
+    `Persiapan Masuk PTN Kecamatan ${nameCountry}`,
+    `Tingkat SMA Kecamatan ${nameCountry}`,
+    `Materi SMA Kecamatan ${nameCountry}`,
+    `PR SMA Kecamatan ${nameCountry}`,
+    `Remedi SMA Kecamatan ${nameCountry}`,
     kecamatanSlug.replace(/-/g, " ").toLowerCase(),
     kabupatenSlug.replace(/-/g, " ").toLowerCase(),
     kotaSlug.replace(/-/g, " ").toLowerCase(),
@@ -207,7 +212,6 @@ const LesPrivateSMAKecamatan = () => {
         <meta name="description" content={descriptionContent} />
         <meta name="keywords" content={keywords.join(", ")} />
         <link rel="canonical" href={canonicalUrl} />
-
         {/* Open Graph Meta Tags */}
         <meta property="og:locale" content="id_ID" />
         <meta property="og:type" content="article" />
@@ -228,7 +232,6 @@ const LesPrivateSMAKecamatan = () => {
           property="article:section"
           content={`Les Privat ${programName}`}
         />
-
         {/* Twitter Card Meta Tags */}
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content={twitterTitle} />
@@ -236,107 +239,202 @@ const LesPrivateSMAKecamatan = () => {
         <meta name="twitter:image" content={ogImage} />
         <meta name="twitter:site" content="@matrix_tutoring" />
         <meta name="twitter:creator" content="@matrix_tutoring" />
-
+        /* Schema Markup (JSON-LD) */
         <script type="application/ld+json">
           {`
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "BreadcrumbList",
+          "@id": "${canonicalUrl}#breadcrumb",
+          "itemListElement": [
             {
-              "@context": "https://schema.org",
-              "@graph": [
-                {
-                  "@type": "BreadcrumbList",
-                  "@id": "${canonicalUrl}#breadcrumb",
-                  "itemListElement": [
-                    {
-                      "@type": "ListItem",
-                      "position": "1",
-                      "item": {
-                        "@id": "${baseUrl}",
-                        "name": "Home"
-                      }
-                    },
-                    {
-                      "@type": "ListItem",
-                      "position": "2",
-                      "item": {
-                        "@id": "${baseUrl}/les-privat-sma", 
-                        "name": "Les Privat ${programName}"
-                      }
-                    },
-                    {
-                      "@type": "ListItem",
-                      "position": "3",
-                      "item": {
-                        "@id": "${baseUrl}/les-privat-sma/${kotaSlug}", 
-                        "name": "Les Privat ${programName} di ${kotaParentName}"
-                      }
-                    },
-                    {
-                      "@type": "ListItem",
-                      "position": "4",
-                      "item": {
-                        "@id": "${baseUrl}/les-privat-sma/${kotaSlug}/${kabupatenSlug}", 
-                        "name": "Les Privat ${programName} di ${kabupatenParentName}"
-                      }
-                    },
-                    {
-                      "@type": "ListItem",
-                      "position": "5",
-                      "item": {
-                        "@id": "${canonicalUrl}",
-                        "name": "${pageTitle.replace(/<\/?[^>]+(>|$)/g, "")}"
-                      }
-                    }
-                  ]
-                }
-              ]
+              "@type": "ListItem",
+              "position": 1,
+              "item": {
+                "@id": "${baseUrl}",
+                "name": "Home"
+              }
+            },
+            {
+              "@type": "ListItem",
+              "position": 2,
+              "item": {
+                "@id": "${baseUrl}/les-privat-sma", 
+                "name": "Les Privat SMA" 
+              }
+            },
+            {
+              "@type": "ListItem",
+              "position": 3,
+              "item": {
+                "@id": "${baseUrl}/les-privat-sma/${kotaSlug}", 
+                "name": "Les Privat SMA di ${kotaParentName}" 
+              }
+            },
+            {
+              "@type": "ListItem",
+              "position": 4,
+              "item": {
+                "@id": "${baseUrl}/les-privat-sma/${kotaSlug}/${kabupatenSlug}", 
+                "name": "Les Privat SMA di ${kabupatenParentName}" 
+              }
+            },
+            {
+              "@type": "ListItem",
+              "position": 5,
+              "item": {
+                "@id": "${canonicalUrl}",
+                "name": "${pageTitle.replace(/<\/?[^>]+(>|$)/g, "")}" 
+              }
             }
-          `}
+          ]
+        },
+
+        {
+          "@type": "EducationalOrganization",
+          "@id": "${canonicalUrl}#organization",
+          "name": "Matrix Tutoring",
+          "description": "Guru Les Privat SMA datang ke rumah di **Kecamatan ${nameCountry}**. Solusi bimbingan intensif untuk Kurikulum SMA dan fokus persiapan Seleksi Masuk PTN.",
+          "url": "${canonicalUrl}",
+          "areaServed": "Kecamatan ${nameCountry}", 
+          "sameAs": [
+            "https://www.instagram.com/matrixtutoring.id",
+            "https://www.tiktok.com/@lesprivatmatrix.com",
+            "https://www.facebook.com/matrixtutoring"
+          ],
+          "brand": {
+            "@type": "Brand",
+            "name": "Matrix Tutoring",
+            "logo": "https://apps.bimbelmatrix.com/images/whatsapp_footer.webp"
+          },
+          "contactPoint": {
+            "@type": "ContactPoint",
+            "telephone": "+62-857-4728-1466",
+            "contactType": "Customer Service",
+            "areaServed": "ID",
+            "availableLanguage": ["Indonesian", "English"]
+          },
+          "keywords": "Les Privat SMA Kecamatan ${nameCountry}, Guru Privat SMA Datang ke Rumah ${nameCountry}, Bimbel UTBK terdekat ${nameCountry}, Les Privat Kimia ${nameCountry}, Persiapan SNBT ${nameCountry}"
+        },
+
+        {
+          "@type": "WebPage",
+          "@id": "${canonicalUrl}#webpage",
+          "url": "${canonicalUrl}",
+          "name": "Les Privat SMA Profesional di Kecamatan ${nameCountry} | Matrix Tutoring",
+          "inLanguage": "id-ID",
+          "description": "Tingkatkan nilai rapor dan maksimalkan peluang lulus PTN dengan Les Privat di Kecamatan ${nameCountry}. Pembelajaran personal dan terarah.",
+          "isPartOf": { "@id": "${baseUrl}" },
+          "about": { "@id": "${canonicalUrl}#organization" },
+          "mainEntity": {
+            "@type": "Service",
+            "name": "Les Privat Sekolah Menengah Atas di Kecamatan ${nameCountry}",
+            "provider": { "@id": "${canonicalUrl}#organization" },
+            "serviceType": "Les Privat Sekolah Menengah Atas",
+            "areaServed": "Kecamatan ${nameCountry}",
+            "offers": {
+              "@type": "Offer",
+              "priceCurrency": "IDR",
+              "availability": "https://schema.org/InStock",
+              "url": "${canonicalUrl}"
+            }
+          }
+        },
+
+        {
+          "@type": "FAQPage",
+          "@id": "${canonicalUrl}#faq",
+          "mainEntity": [
+            {
+              "@type": "Question",
+              "name": "Apakah Les Privat SMA di Kecamatan ${nameCountry} membantu dalam memilih jurusan kuliah?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Ya, sebagai bagian dari bimbingan persiapan PTN, kami memberikan konsultasi jurusan yang disesuaikan dengan minat, bakat, dan peluang di PTN, serta mengarahkan fokus belajar sesuai kebutuhan tes masuk jurusan tersebut."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Apakah tutor Matrix Tutoring memiliki pengalaman mengajar UTBK/SNBT?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Tutor kelas 12 kami adalah alumni PTN terkemuka yang terlatih khusus dalam pola soal UTBK dan SNBT. Mereka siap memberikan strategi pengerjaan soal TPS dan TKA yang efektif."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Bagaimana proses pendaftaran Les Privat di Kecamatan ${nameCountry}?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Anda cukup menghubungi layanan pelanggan kami, mengkonsultasikan kebutuhan siswa, dan kami akan mencocokkan siswa dengan tutor terbaik yang berlokasi di area Kecamatan ${nameCountry}."
+              }
+            }
+          ]
+        }
+      ]
+    }
+  `}
         </script>
       </Helmet>
 
       <HeroLesPrivate
-        nameCountry={nameCountry}
         images={heroImageSrc}
         heading={displayedHeading}
         desc={heroData?.description}
+        location={nameCountry}
       />
-      <EmbrelaSlider />
+      {/* <EmbrelaSlider /> */}
       {/* <Slidertop /> */}
       <TableOfContents title="Table of Contents" items={items} />
-      <LesPrivateSMAHeader />
-      <PTNSuccessStrategy />
-      <MatrixDifferentiationSMA />
-      <StatistikImageSMA />
+      <ImpactStatistics />
+      <WhyMTXImportant location={nameCountry} />
+      <LesPrivatSMAMetode />
+      <ProgaramLesPrivatSMA />
+      <SolusiLesPrivateSMA />
+      <LogoPengajarMTX
+        title={"Siapa Guru Les Privat SMA dari Matrix Tutoring?"}
+      />
+      <GalleryBelajarSMA />
+      <KeunggulanLesPrivateSMA />
+      <ProfileMatrixTutoring title={"SMA Terbaik"} location={nameCountry} />
+      <TutorLesprivatMatrix location={nameCountry} />
+      <KurikulumLesPrivate />
+      <LesprivatKota />
+      <PTNSuccessStrategy location={nameCountry} />
+      {/* <MatrixDifferentiationSMA /> */}
 
       <section id="program-les-private-matrix-tutoring">
-        <ProgramLesPrivatV2 />
+        <ProgramLesPrivatV2 location={nameCountry} />
       </section>
       <section id="fitur-program-les-private">
-        <FiturProgramNew />
+        <FiturProgramNew location={nameCountry} />
       </section>
       <section id="pilihan-program-les-private">
-        <PilihanProgram />
+        <PilihanProgram location={nameCountry} />
       </section>
       <section id="matrix-juga-melayani-les-privat-online">
-        <OnlineLesOptions />
+        <OnlineLesOptions location={nameCountry} />
       </section>
       <section id="pengajar-les-private">
-        <MasterTeacherV2 />
+        <MasterTeacherV2 location={nameCountry} />
       </section>
-      <ProgramBelajarLesPrivat />
-      <MatrixFeatures />
-      <SuccessStoryLesPrivate />
+      <ProgramBelajarLesPrivat location={nameCountry} />
+      <WhyMatrixFeatures />
+      <MatrixSubjects />
+      <SuccessStoryLesPrivate location={nameCountry} />
       {/* <TestimonialSiswa /> */}
-      <TestimoniOrtuSiswa />
+      <TestimoniOrtuSiswa location={nameCountry} />
       <section id="asal-sekolah-siswa-matrix-tutoring-private">
         <AsalSekolahSiswaEdumatrix />
-        <AsalSekolahSiswaMarque />
+        {/* <AsalSekolahSiswaMarque /> */}
       </section>
 
       <HowToOrder />
       <AccordionFAQ />
-      <GaleriKegiatanBelajar />
-      <PromoHomepage />
+      <GaleriKegiatanBelajar location={nameCountry} />
+      <PromoHomepage location={nameCountry} />
       <CTABottomHome />
     </React.Fragment>
   );

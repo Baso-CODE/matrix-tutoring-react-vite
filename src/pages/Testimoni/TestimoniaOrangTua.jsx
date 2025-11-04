@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import { getAllTestimoniSiswaOrangTua } from "../../helper/request/getAllTestimoniSiswaOrangTua";
+import TestimoniCardOrtuSiswa from "../../Components/TestimoniOrtuSiswa/TestimoniCardOrtuSiswa";
 
 const TestimoniOrangTuaNotSlide = () => {
   const [dataTestimoniSiswa, setDataTestimoniSiswa] = useState([]);
@@ -23,14 +24,9 @@ const TestimoniOrangTuaNotSlide = () => {
             Testimoni Orang Tua Siswa
           </h2>
           <div className="testimonials-siswa-grid">
-            {dataTestimoniSiswa.map((image, index) => (
+            {dataTestimoniSiswa.map((data, index) => (
               <div className="testimonial-ortu-siswa-notSlider" key={index}>
-                <img
-                  loading="lazy"
-                  src={image.link_image}
-                  alt={`Testimonial ${image.name}`}
-                  className="testimonial-siswa-image"
-                />
+                <TestimoniCardOrtuSiswa data={data} />
               </div>
             ))}
           </div>

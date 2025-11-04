@@ -8,7 +8,7 @@
   font-weight: 700;
   margin-bottom: 20px;
   color: #333333;
-  font-family: "Nunito", sans-serif;
+  font-family: "Poppins", sans-serif;
   text-align: center;
 }
 
@@ -47,14 +47,14 @@
   margin: 0;
   font-weight: 700;
   color: #333333;
-  font-family: "Nunito", sans-serif;
+  font-family: "Poppins", sans-serif;
 }
 
 .programs-les-private p {
   font-size: 1rem;
   color: #4f4f4f;
   margin: 0;
-  font-family: "Nunito", sans-serif;
+  font-family: "Poppins", sans-serif;
   font-weight: 500;
 }
 

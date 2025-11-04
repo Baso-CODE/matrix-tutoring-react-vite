@@ -1,6 +1,6 @@
 import "./PilihanProgram.css";
 
-const PilihanProgram = () => {
+const PilihanProgram = ({ location }) => {
   return (
     <div className="container-all">
       <div className="program-options">
@@ -9,7 +9,9 @@ const PilihanProgram = () => {
             loading="lazy"
             className="icon-program-mtx"
             src="/images/pilihan-program/house.webp"
-            alt="Ikon Buku"
+            alt={`Ikon Program Pembelejaran Offline / Guru ke Rumah ${
+              location ? `di ${location}` : "Indonesia"
+            } - Matrix Tutoring`}
           />
           <h3>Program Offline / Guru ke Rumah</h3>
           <p>
@@ -23,7 +25,9 @@ const PilihanProgram = () => {
             loading="lazy"
             className="icon-program-mtx"
             src="/images/pilihan-program/onlinee.webp"
-            alt="Ikon Buku"
+            alt={`Ikon Program Pembelejaran Online ${
+              location ? `di ${location}` : "Indonesia"
+            } - Matrix Tutoring`}
           />
           <h3>Program Online / Les Privat Online</h3>
           <p>

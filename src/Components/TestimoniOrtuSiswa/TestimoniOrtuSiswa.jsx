@@ -3,8 +3,9 @@ import useEmblaCarousel from "embla-carousel-react";
 import Autoplay from "embla-carousel-autoplay";
 import "./TestimoniOrtuSiswa.css";
 import { getAllTestimoniSiswaOrangTua } from "../../helper/request/getAllTestimoniSiswaOrangTua";
+import TestimoniCardOrtuSiswa from "./TestimoniCardOrtuSiswa";
 
-const TestimoniOrtuSiswa = () => {
+const TestimoniOrtuSiswa = ({ location }) => {
   const [dataTestimoniOrangTua, setDataTestimoniOrtu] = useState([]);
 
   useEffect(() => {
@@ -42,14 +43,17 @@ const TestimoniOrtuSiswa = () => {
         </h2>
         <div className="embla" ref={emblaRef}>
           <div className="embla__container">
-            {dataTestimoniOrangTua.map((image, index) => (
+            {dataTestimoniOrangTua.map((data, index) => (
               <div className="embla__slide-tesimoni-ortu" key={index}>
-                <img
+                <TestimoniCardOrtuSiswa data={data} location={location} />
+                {/* <img
                   loading="lazy"
                   src={image.link_image}
-                  alt={`Testimoni Orang Tua ${image.name}`}
+                  alt={`Testimoni Orang Tua ${image.name} - Matrix Tutoring ${
+                    location ? `di ${location}` : "Indonesia"
+                  }`}
                   className="testimonial-image"
-                />
+                /> */}
               </div>
             ))}
           </div>

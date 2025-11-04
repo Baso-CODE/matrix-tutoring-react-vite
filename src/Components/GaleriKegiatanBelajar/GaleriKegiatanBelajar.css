@@ -11,7 +11,7 @@
   font-weight: 800;
   text-transform: uppercase;
   color: #333333;
-  font-family: "Nunito", sans-serif;
+  font-family: "Poppins", sans-serif;
   margin-bottom: 10px;
 }
 
@@ -61,7 +61,7 @@
   font-weight: 600;
   margin: 0;
   color: #ffffff;
-  font-family: "Nunito", sans-serif;
+  font-family: "Poppins", sans-serif;
 }
 
 /* Grid gambar di dalam kartu */
@@ -115,7 +115,7 @@
   font-size: 0.7rem;
   color: #f4f4f4;
   margin-top: 5px;
-  font-family: "Nunito", sans-serif;
+  font-family: "Poppins", sans-serif;
 }
 
 /* Scrollbar kustom */

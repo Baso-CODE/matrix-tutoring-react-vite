@@ -4,30 +4,30 @@ import AsalSekolahSiswaEdumatrix from "../../Components/AsalSekolahSiswa/AsalSek
 import AccordionFAQ from "../../Components/FAQ/AccordionFAQ";
 import FiturProgramNew from "../../Components/FiturProgramNew/FiturProgramNew";
 import HowToOrder from "../../Components/HowToOrder/HowToOrder";
-import Keunggulan from "../../Components/Keunggulan/Keunggulan";
 import MasterTeacherV2 from "../../Components/MasterTeacherV2/MasterTeacherV2";
-import MatrixFeatures from "../../Components/MatrixFeatures/MatrixFeatures";
+import MatrixSubjects from "../../Components/MatrixFeatures/MatrixSubjects";
+import WhyMatrixFeatures from "../../Components/MatrixFeatures/WhyMatrixFeatures";
 import OnlineLesOptions from "../../Components/OnlineLesOption/OnlineLesOption";
-import PengajarLestPrivate from "../../Components/PengajarLestPrivate/PengajarLestPrivate";
 import ProgramBelajarLesPrivat from "../../Components/ProgramBelajarLesPrivate/ProgramBelajarLesPrivate";
-import ProgramLesPrivat from "../../Components/ProgramLesPrivate/ProgramLesPrivate";
+import ProgramLesPrivatV2 from "../../Components/ProgramLesPrivatNew/ProgramLesPrivatV2 ";
 import PilihanProgram from "../../Components/ProgramOptions/PilihanProgram";
-import AsalSekolahSiswaMarque from "../../Components/SekolahSiswaMarque/SekolahSiswaMarque";
-import EmbrelaSlider from "../../Components/SlideTop/EmbrelaSlider";
+import SuccessStoryLesPrivate from "../../Components/SuccesStoryLesPrivate/SuccesStoryLesPrivate";
+import TestimoniOrtuSiswa from "../../Components/TestimoniOrtuSiswa/TestimoniOrtuSiswa";
 import CTABottomHome from "../../Home/CTABottomHome/CTABottomHome";
 import PromoHomepage from "../../Home/PromoHomepage/PromoHomepage";
-import ListKotaProgramLesPrivate from "../components/ListKotaProgramLesPrivate/ListKotaProgramLesPrivate";
 import TableOfContents from "../components/TableOfContent";
-import CoreUniversityBenefits from "./components/CoreUniversityBenefits/CoreUniversityBenefits";
-import LesPrivateMahasiswaHeader from "./components/LesPrivateMahasiswaHeader";
+import TestimoniWaSNBT from "../LesPrivateSBMPTN/components/TestimoniWaSNBT/TestimoniWaSNBT";
+import LesprivatKota from "../LesPrivateSD/components/LesprivatKota/LesprivatKota";
+import ProfileMatrixTutoring from "../LesPrivateSD/components/ProfileMatrixTutoring/ProfileMatrixTutoring";
+import TutorLesprivatMatrix from "../LesPrivateSD/components/TutorLesprivatMatrix/TutorLesprivatMatrix";
+import GalleryBelajarMahasiswa from "./components/GalleryBelajarMahasiswa/GalleryBelajarMahasiswa";
+import HeroMahasiswa from "./components/HeroMahasiswa/HeroMahasiswa";
+import ImpactStatistics from "./components/ImpactStatistics/ImpactStatistics";
+import LesPrivateMahasiswaList from "./components/LesPrivateMahasiswaList";
+import LesPrivatMahasiswaContent from "./components/LesPrivatMahasiswaContent/LesPrivatMahasiswaContent";
 import PopularCourses from "./components/PopularCourses/PopularCourses";
-import StatistikImageMahasiswa from "./components/StatistikImageMahasiswa";
-import StudentTestimonialsSlider from "./components/StudentTestimonialsSlider/StudentTestimonialsSlider";
+import ProgamLesPrivatMahasiswa from "./components/ProgamLesPrivatMahasiswa/ProgamLesPrivatMahasiswa";
 import UniversitySuccessFlow from "./components/UniversitySuccessFlow/UniversitySuccessFlow";
-import TestimoniOrtuSiswa from "../../Components/TestimoniOrtuSiswa/TestimoniOrtuSiswa";
-import TestimonialSiswa from "../../Components/TestimonialSiswa/TestimonialSiswa";
-import SuccessStoryLesPrivate from "../../Components/SuccesStoryLesPrivate/SuccesStoryLesPrivate";
-import ProgramLesPrivatV2 from "../../Components/ProgramLesPrivatNew/ProgramLesPrivatV2 ";
 
 const items = [
   {
@@ -201,16 +201,19 @@ const LesPrivateMahasiswa = () => {
           `}
         </script>
       </Helmet>
-
-      <EmbrelaSlider />
-      {/* <Slidertop /> */}
+      <HeroMahasiswa />
+      <ImpactStatistics />
       <TableOfContents title="Table of Contents" items={items} />
-      <LesPrivateMahasiswaHeader />
+      <LesPrivatMahasiswaContent />
+      <ProgamLesPrivatMahasiswa />
+      <LesPrivateMahasiswaList />
+      <GalleryBelajarMahasiswa />
+      <TestimoniWaSNBT />
+      <ProfileMatrixTutoring title={"Mahasiswa Terbaik"} />
+      <TutorLesprivatMatrix />
+      <LesprivatKota />
       <UniversitySuccessFlow />
-      <CoreUniversityBenefits />
-      <StudentTestimonialsSlider />
       <PopularCourses />
-      <StatistikImageMahasiswa />
       <section id="program-les-private-matrix-tutoring">
         <ProgramLesPrivatV2 />
       </section>
@@ -227,16 +230,15 @@ const LesPrivateMahasiswa = () => {
         <MasterTeacherV2 />
       </section>
       <ProgramBelajarLesPrivat />
-      <MatrixFeatures />
+      <WhyMatrixFeatures />
+      <MatrixSubjects />
       <SuccessStoryLesPrivate />
       {/* <TestimonialSiswa /> */}
       <TestimoniOrtuSiswa />
       <section id="asal-sekolah-siswa-matrix-tutoring-private">
         <AsalSekolahSiswaEdumatrix />
-        <AsalSekolahSiswaMarque />
+        {/* <AsalSekolahSiswaMarque /> */}
       </section>
-      <Keunggulan />
-
       <HowToOrder />
       <AccordionFAQ />
       <PromoHomepage />

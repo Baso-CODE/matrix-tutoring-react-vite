@@ -1,0 +1,51 @@
+.centered-content-programLesPrivatCalistungLanjutan {
+  width: 100%;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.centered-content-programLesPrivatCalistungLanjutan h2 {
+  font-size: 1.2rem;
+  color: #333333;
+  font-family: "Poppins", sans-serif;
+  font-weight: 700;
+  margin-bottom: 0.3rem;
+  line-height: 1.4;
+  border-left: 4px solid #0077ff;
+  padding-left: 0.6rem;
+}
+
+.centered-content-programLesPrivatCalistungLanjutan p {
+  font-size: 0.9rem;
+  color: #4f4f4f;
+  line-height: normal;
+  font-weight: 400;
+  font-family: "Poppins", sans-serif;
+  margin-bottom: 0.6rem;
+}
+
+.centered-content-programLesPrivatCalistungLanjutan ul.program-list {
+  margin-left: 1rem;
+  margin-bottom: 1rem;
+  list-style-type: disc;
+}
+
+.centered-content-programLesPrivatCalistungLanjutan ul.program-list li {
+  margin-bottom: 0.6rem;
+  color: #555555;
+  font-size: 0.9rem;
+  line-height: normal;
+  font-family: "Poppins", sans-serif;
+}
+
+/* Responsiveness */
+@media (max-width: 768px) {
+  .centered-content-programLesPrivatCalistungLanjutan h2 {
+    font-size: 1.15rem;
+  }
+
+  .centered-content-programLesPrivatCalistungLanjutan p,
+  .centered-content-programLesPrivatCalistungLanjutan li {
+    font-size: 0.9rem;
+  }
+}

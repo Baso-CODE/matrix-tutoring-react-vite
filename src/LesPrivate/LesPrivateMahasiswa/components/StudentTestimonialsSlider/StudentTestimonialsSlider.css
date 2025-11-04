@@ -62,7 +62,7 @@
   text-transform: uppercase;
   color: #ffffff;
   margin-bottom: 15px;
-  font-family: "Nunito", sans-serif;
+  font-family: "Poppins", sans-serif;
   line-height: 1.2;
   text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.05);
 }
@@ -79,7 +79,7 @@
   margin-left: auto;
   margin-right: auto;
   line-height: 1.6;
-  font-family: "Nunito", sans-serif;
+  font-family: "Poppins", sans-serif;
 }
 
 .slider-wrapper {
@@ -119,7 +119,7 @@
   color: #2d3748;
   margin-bottom: 30px;
   line-height: 1.8;
-  font-family: "Nunito", sans-serif;
+  font-family: "Poppins", sans-serif;
   max-width: 680px;
 
   text-align: center;
@@ -137,13 +137,13 @@
   font-size: 1.1rem;
   font-weight: 700;
   color: #007bff; /* Nama penulis biru */
-  font-family: "Nunito", sans-serif;
+  font-family: "Poppins", sans-serif;
 }
 
 .author-university {
-  font-size: 0.95rem;
+  font-size: 0.9rem;
   color: #64748b;
-  font-family: "Nunito", sans-serif;
+  font-family: "Poppins", sans-serif;
 }
 
 .slider-arrow {

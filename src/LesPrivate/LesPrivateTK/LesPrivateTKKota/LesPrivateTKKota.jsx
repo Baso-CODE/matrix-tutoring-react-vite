@@ -1,15 +1,11 @@
 import React, { useEffect, useState } from "react";
 import { Helmet } from "react-helmet-async";
 import AsalSekolahSiswaEdumatrix from "../../../Components/AsalSekolahSiswa/AsalSekolahSiswa";
-import MatrixFeatures from "../../../Components/MatrixFeatures/MatrixFeatures";
 import OnlineLesOptions from "../../../Components/OnlineLesOption/OnlineLesOption";
 import ProgramBelajarLesPrivat from "../../../Components/ProgramBelajarLesPrivate/ProgramBelajarLesPrivate";
 import PilihanProgram from "../../../Components/ProgramOptions/PilihanProgram";
-import AsalSekolahSiswaMarque from "../../../Components/SekolahSiswaMarque/SekolahSiswaMarque";
-import EmbrelaSlider from "../../../Components/SlideTop/EmbrelaSlider";
 import TableOfContents from "../../components/TableOfContent";
 import LearningFeaturesLesPrivateTk from "../components/LearningFeaturesLesPrivateTk";
-import LesPrivateTKHeader from "../components/LesPrivateTKHeader";
 
 import { useParams } from "react-router-dom";
 import AccordionFAQ from "../../../Components/FAQ/AccordionFAQ";
@@ -17,6 +13,9 @@ import FiturProgramNew from "../../../Components/FiturProgramNew/FiturProgramNew
 import GaleriKegiatanBelajar from "../../../Components/GaleriKegiatanBelajar/GaleriKegiatanBelajar";
 import HowToOrder from "../../../Components/HowToOrder/HowToOrder";
 import MasterTeacherV2 from "../../../Components/MasterTeacherV2/MasterTeacherV2";
+import MatrixSubjects from "../../../Components/MatrixFeatures/MatrixSubjects";
+import WhyMatrixFeatures from "../../../Components/MatrixFeatures/WhyMatrixFeatures";
+import ProgramLesPrivatV2 from "../../../Components/ProgramLesPrivatNew/ProgramLesPrivatV2 ";
 import SuccessStoryLesPrivate from "../../../Components/SuccesStoryLesPrivate/SuccesStoryLesPrivate";
 import TestimoniOrtuSiswa from "../../../Components/TestimoniOrtuSiswa/TestimoniOrtuSiswa";
 import { getAllKotBySlug } from "../../../helper/request/getAllKotaBySlug";
@@ -24,8 +23,17 @@ import CTABottomHome from "../../../Home/CTABottomHome/CTABottomHome";
 import PromoHomepage from "../../../Home/PromoHomepage/PromoHomepage";
 import { getHeroData } from "../../../utils/getHeroData";
 import HeroLesPrivate from "../../components/HeroLesPrrivate/HeroLesPrivate";
+import ImpactStatistics from "../../LesPrivateMahasiswa/components/ImpactStatistics/ImpactStatistics";
+import KurikulumLesPrivate from "../../LesPrivateSD/components/KurikulumLesPrivate/KurikulumLesPrivate";
+import LesprivatKota from "../../LesPrivateSD/components/LesprivatKota/LesprivatKota";
+import ProfileMatrixTutoring from "../../LesPrivateSD/components/ProfileMatrixTutoring/ProfileMatrixTutoring";
+import TutorLesprivatMatrix from "../../LesPrivateSD/components/TutorLesprivatMatrix/TutorLesprivatMatrix";
+import GalleryBelajarTK from "../components/GalleryBelajarTK/GalleryBelajarTK";
+import KeunggulanCalistungMatrix from "../components/KeunggulanCalistungMatrix/KeunggulanCalistungMatrix";
 import MainLearningContent from "../components/MainLearningContent/MainLearningContent";
-import StatistikImage from "../components/StatistikImage/StatistikImage";
+import PelajaranCalistungMatrix from "../components/PelajaranCalistungMatrix/PelajaranCalistungMatrix";
+import ProgramLesPrivatCalistung from "../components/ProgramLesPrivatCalistung/ProgramLesPrivatCalistung";
+import ProgramLesPrivatCalistungLanjutan from "../components/ProgramLesPrivatCalistungLanjutan/ProgramLesPrivatCalistungLanjutan";
 
 const items = [
   {
@@ -204,87 +212,178 @@ const LesPrivateTKKota = () => {
           <meta name="twitter:site" content="@matrix_tutoring" />
           <meta name="twitter:creator" content="@matrix_tutoring" />
 
-          {/* Schema Markup (JSON-LD) - BreadcrumbList */}
           <script type="application/ld+json">
             {`
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "BreadcrumbList",
+          "@id": "${canonicalUrl}#breadcrumb",
+          "itemListElement": [
             {
-              "@context": "https://schema.org",
-              "@graph": [
-                {
-                  "@type": "BreadcrumbList",
-                  "@id": "${canonicalUrl}#breadcrumb",
-                  "itemListElement": [
-                    {
-                      "@type": "ListItem",
-                      "position": "1",
-                      "item": {
-                        "@id": "${baseUrl}",
-                        "name": "Home"
-                      }
-                    },
-                    {
-                      "@type": "ListItem",
-                      "position": "2",
-                      "item": {
-                        "@id": "${baseUrl}/les-privat-tk", // URL program utama
-                        "name": "Les Privat ${programName}"
-                      }
-                    },
-                    {
-                      "@type": "ListItem",
-                      "position": "3",
-                      "item": {
-                        "@id": "${canonicalUrl}",
-                        "name": "${pageTitle.replace(/<\/?[^>]+(>|$)/g, "")}"
-                      }
-                    }
-                  ]
-                }
-              ]
+              "@type": "ListItem",
+              "position": 1,
+              "item": {
+                "@id": "${baseUrl}",
+                "name": "Home"
+              }
+            },
+            {
+              "@type": "ListItem",
+              "position": 2,
+              "item": {
+                "@id": "${baseUrl}/les-privat-tk", 
+                "name": "Les Privat TK" // Mengasumsikan ${programName} = TK
+              }
+            },
+            {
+              "@type": "ListItem",
+              "position": 3,
+              "item": {
+                "@id": "${canonicalUrl}",
+                "name": "${pageTitle.replace(/<\/?[^>]+(>|$)/g, "")}"
+              }
             }
-          `}
+          ]
+        },
+
+        {
+          "@type": "EducationalOrganization",
+          "name": "Matrix Tutoring",
+          "description": "Les Privat TK (Taman Kanak-kanak) terbaik di Kota ${nameCountry}. Membantu anak belajar membaca, menulis, berhitung (calistung) dan persiapan masuk SD dengan tutor sabar.",
+          "url": "https://lesprivat.bimbelmatrix.com/les-privat-tk/kota/${nameCountry}",
+          "areaServed": "Kota ${nameCountry}",
+          "sameAs": [
+            "https://www.instagram.com/matrixtutoring.id",
+            "https://www.tiktok.com/@lesprivatmatrix.com",
+            "https://www.facebook.com/matrixtutoring"
+          ],
+          "brand": {
+            "@type": "Brand",
+            "name": "Matrix Tutoring",
+            "logo": "https://lesprivat.bimbelmatrix.com/images/whatsapp_footer.webp"
+          },
+          "contactPoint": {
+            "@type": "ContactPoint",
+            "telephone": "+62-857-4728-1466",
+            "contactType": "Customer Service",
+            "areaServed": "ID",
+            "availableLanguage": ["Indonesian", "English"]
+          },
+          "keywords": "les privat TK Kota ${nameCountry}, les calistung Kota ${nameCountry}, guru privat datang ke rumah TK, les membaca menulis berhitung, les privat anak usia dini, persiapan masuk SD ${nameCountry}"
+        },
+
+        {
+          "@type": "WebPage",
+          "@id": "${canonicalUrl}#webpage",
+          "url": "${canonicalUrl}",
+          "name": "Les Privat TK (Calistung) Kota ${nameCountry} | Matrix Tutoring",
+          "inLanguage": "id-ID",
+          "description": "Matrix Tutoring menyediakan Les Privat TK terbaik di Kota ${nameCountry}. Fokus pada pengembangan motorik, kognitif, dan kemampuan dasar calistung untuk kesiapan sekolah dasar.",
+          "isPartOf": { "@id": "${baseUrl}" },
+          "about": { "@id": "${canonicalUrl}#organization" },
+          "mainEntity": {
+            "@type": "Service",
+            "name": "Les Privat TK (Calistung) di Kota ${nameCountry}",
+            "provider": { "@id": "${canonicalUrl}#organization" },
+            "serviceType": "Les Privat Anak Usia Dini",
+            "areaServed": "Kota ${nameCountry}",
+            "offers": {
+              "@type": "Offer",
+              "priceCurrency": "IDR",
+              "availability": "https://schema.org/InStock",
+              "url": "${canonicalUrl}"
+            }
+          }
+        },
+
+        {
+          
+          "@type": "FAQPage",
+          "@id": "${canonicalUrl}#faq",
+          "mainEntity": [
+            {
+              "@type": "Question",
+              "name": "Materi apa saja yang diajarkan dalam program Les Privat TK Matrix Tutoring?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Program kami fokus pada Calistung (Membaca, Menulis, Berhitung), pengenalan huruf dan angka, pengembangan motorik halus, dan kesiapan mental anak untuk memasuki jenjang Sekolah Dasar."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Apakah tutor Les Privat TK sudah berpengalaman menangani anak usia dini?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Ya, semua tutor kami yang mengajar program TK/Calistung adalah tutor yang sabar, terampil, dan memiliki pengalaman spesifik dalam mengajar anak usia dini dengan pendekatan yang menyenangkan dan interaktif."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Berapa lama durasi belajar les privat untuk anak TK?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Durasi belajar biasanya disesuaikan agar anak tidak mudah bosan, umumnya sekitar 60 hingga 90 menit per sesi. Jadwal dapat disepakati antara orang tua dan tutor."
+              }
+            }
+          ]
+        }
+      ]
+    }
+  `}
           </script>
         </Helmet>
         {/* <div className="container-all"> */}
         <HeroLesPrivate
           heading={displayedHeading}
           desc={heroData?.description}
-          nameCountry={nameCountry}
+          location={nameCountry}
           images={heroImageSrc}
         />
-        <EmbrelaSlider />
+
         <TableOfContents title="Table of Contents" items={items} />
-        <LesPrivateTKHeader />
+        <ImpactStatistics />
+        <ProgramLesPrivatCalistung location={nameCountry} />
+        <ProgramLesPrivatCalistungLanjutan />
+        <GalleryBelajarTK />
+        <PelajaranCalistungMatrix />
+        <KeunggulanCalistungMatrix location={nameCountry} />
+        <ProfileMatrixTutoring
+          title={"Calistung TK Terbaik"}
+          location={nameCountry}
+        />
+        <KurikulumLesPrivate />
+        <TutorLesprivatMatrix />
+        <LesprivatKota />
         <LearningFeaturesLesPrivateTk />
-        <MainLearningContent />
-        <StatistikImage />
+        <MainLearningContent location={nameCountry} />
         <section id="program-les-private-matrix-tutoring">
-          <ProgramLesPrivatV2 />
+          <ProgramLesPrivatV2 location={nameCountry} />
         </section>
         <section id="fitur-program-les-private">
-          <FiturProgramNew />
+          <FiturProgramNew location={nameCountry} />
         </section>
         <section id="pilihan-program-les-private">
-          <PilihanProgram />
+          <PilihanProgram location={nameCountry} />
         </section>
         <section id="matrix-juga-melayani-les-privat-online">
-          <OnlineLesOptions />
+          <OnlineLesOptions location={nameCountry} />
         </section>
-        <MasterTeacherV2 />
-        <ProgramBelajarLesPrivat />
-        <MatrixFeatures />
-        <SuccessStoryLesPrivate />
-        {/* <TestimonialSiswa /> */}
-        <TestimoniOrtuSiswa />
+        <MasterTeacherV2 location={nameCountry} />
+        <ProgramBelajarLesPrivat location={nameCountry} />
+        <WhyMatrixFeatures />
+        <MatrixSubjects />
+        <SuccessStoryLesPrivate location={nameCountry} />
+        <TestimoniOrtuSiswa location={nameCountry} />
         <section id="asal-sekolah-siswa-matrix-tutoring-private">
           <AsalSekolahSiswaEdumatrix />
-          <AsalSekolahSiswaMarque />
+          {/* <AsalSekolahSiswaMarque /> */}
         </section>
-
         <HowToOrder />
         <AccordionFAQ />
-        <GaleriKegiatanBelajar />
-        <PromoHomepage />
+        <GaleriKegiatanBelajar location={nameCountry} />
+        <PromoHomepage location={nameCountry} />
         <CTABottomHome />
       </React.Fragment>
     </div>

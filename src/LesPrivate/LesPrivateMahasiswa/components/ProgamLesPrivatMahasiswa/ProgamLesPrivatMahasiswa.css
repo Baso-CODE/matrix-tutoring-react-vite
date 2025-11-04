@@ -1,0 +1,75 @@
+.centered-program__mahasiswa {
+  padding-left: 10%;
+  padding-right: 10%;
+  padding-bottom: 4%;
+}
+
+@media (max-width: 1024px) {
+  .centered-program__mahasiswa {
+    padding-left: 4%;
+    padding-right: 4%;
+  }
+}
+
+.centered-program__mahasiswa h2 {
+  font-size: 1.2rem;
+  color: #333333;
+  font-family: "Poppins", sans-serif;
+  font-weight: 700;
+  margin-bottom: 0.3rem;
+  line-height: 1.4;
+  border-left: 4px solid #0077ff;
+  padding-left: 0.6rem;
+}
+
+.centered-program__mahasiswa h3 {
+  font-size: 1.15rem;
+  color: #333333;
+  font-family: "Poppins", sans-serif;
+  font-weight: 700;
+  margin-top: 1.5rem;
+  margin-bottom: 0.7rem;
+}
+.centered-program__mahasiswa h4 {
+  font-size: 1.05rem;
+  color: #333333;
+  font-family: "Poppins", sans-serif;
+  font-weight: 700;
+  margin-top: 1.5rem;
+  margin-bottom: 0.3rem;
+}
+
+.centered-program__mahasiswa p {
+  font-size: 0.9rem;
+  color: #4f4f4f;
+  line-height: 1.6;
+  font-weight: 400;
+  font-family: "Poppins", sans-serif;
+  margin-bottom: 0.5rem;
+}
+
+.centered-program__mahasiswa ul {
+  margin-left: 1.2rem;
+  margin-bottom: 1rem;
+  list-style-type: disc;
+}
+
+.centered-program__mahasiswa li {
+  margin-bottom: 0.3rem;
+  color: #555555;
+  font-size: 0.9rem;
+  line-height: 1.5;
+  font-family: "Poppins", sans-serif;
+}
+
+/* Responsiveness */
+@media (max-width: 768px) {
+  .centered-program__mahasiswa h2 {
+    font-size: 1.1rem;
+  }
+
+  .centered-program__mahasiswa p,
+  .centered-program__mahasiswa li {
+    font-size: 0.9rem;
+  }
+}

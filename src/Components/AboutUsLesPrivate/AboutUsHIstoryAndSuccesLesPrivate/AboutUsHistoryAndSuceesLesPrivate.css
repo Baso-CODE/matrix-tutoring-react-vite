@@ -41,7 +41,7 @@
   font-size: 1.4rem;
   color: #333333;
   text-transform: uppercase;
-  font-family: "Nunito", sans-serif;
+  font-family: "Poppins", sans-serif;
   font-weight: 800;
   margin-bottom: 1rem;
 }
@@ -53,11 +53,11 @@
   }
 }
 .about-us-description p {
-  font-size: 1rem;
+  font-size: 0.9rem;
   color: #555;
-  font-weight: 500;
-  font-family: "Nunito", sans-serif;
-  line-height: 1.6;
+
+  font-family: "Poppins", sans-serif;
+
   margin-bottom: 1rem;
 }
 

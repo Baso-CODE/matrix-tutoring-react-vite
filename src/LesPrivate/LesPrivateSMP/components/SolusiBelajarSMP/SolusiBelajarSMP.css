@@ -1,0 +1,149 @@
+.centered-content-programLesPrivatSMP {
+  width: 100%;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.centered-content-programLesPrivatSMP h2 {
+  font-size: 1.2rem;
+  color: #333333;
+  font-family: "Poppins", sans-serif;
+  font-weight: 700;
+  margin-bottom: 0.3rem;
+  line-height: 1.4;
+  border-left: 4px solid #0077ff;
+  padding-left: 0.6rem;
+}
+
+.centered-content-programLesPrivatSMP h3 {
+  font-size: 1.1rem;
+  color: #333333;
+  font-family: "Poppins", sans-serif;
+  font-weight: 700;
+  margin-top: 1.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.centered-content-programLesPrivatSMP h4 {
+  font-size: 1.02rem;
+  color: #444444;
+  font-family: "Poppins", sans-serif;
+  font-weight: 600;
+  margin-bottom: 0.3rem;
+}
+
+.centered-content-programLesPrivatSMP p {
+  font-size: 0.9rem;
+  color: #4f4f4f;
+  line-height: 1.6;
+  font-weight: 400;
+  font-family: "Poppins", sans-serif;
+  margin-bottom: 0.5rem;
+}
+
+.centered-content-programLesPrivatSMP ul {
+  margin-left: 1.2rem;
+  margin-bottom: 1rem;
+  list-style-type: disc;
+}
+
+.centered-content-programLesPrivatSMP li {
+  margin-bottom: 0.3rem;
+  color: #555555;
+  font-size: 0.9rem;
+  line-height: 1.5;
+  font-family: "Poppins", sans-serif;
+}
+
+/* --- Checklist style --- */
+.centered-content-programLesPrivatSMP .checklist {
+  list-style: none; /* hilangkan bullet bawaan */
+  margin: 0;
+  padding: 0;
+}
+
+.centered-content-programLesPrivatSMP .checklist li {
+  position: relative;
+  padding-left: 1.6rem; /* ruang untuk icon ceklis */
+  margin-bottom: 0.4rem;
+  font-size: 1rem;
+  color: #444;
+  line-height: 1.5;
+  font-family: "Poppins", sans-serif;
+}
+
+.centered-content-programLesPrivatSMP .checklist li::before {
+  content: "✔"; /* ceklis manual */
+  position: absolute;
+  left: 0;
+  top: 0;
+  color: #0077ff; /* biru biar standout */
+  font-weight: bold;
+}
+
+/* --- Numbered list style --- */
+.centered-content-programLesPrivatSMP .numbered-list {
+  margin-left: 1.5rem;
+  margin-bottom: 1rem;
+  list-style-type: decimal;
+}
+
+.centered-content-programLesPrivatSMP .numbered-list li {
+  margin-bottom: 0.4rem;
+  color: #555;
+  font-size: 0.9rem;
+  line-height: 1.5;
+  font-family: "Poppins", sans-serif;
+}
+
+/* --- Layout teks & gambar --- */
+.centered-content-programLesPrivatSMP .content-smp-wrapper {
+  display: flex;
+
+  justify-content: space-between;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.centered-content-programLesPrivatSMP .text-section-solusi-belajar-smp {
+  flex: 1.2;
+}
+
+.centered-content-programLesPrivatSMP .image-section-solusi-belajar-smp {
+  flex: 1;
+}
+
+.centered-content-programLesPrivatSMP .image-section-solusi-belajar-smp img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+
+/* Responsiveness */
+@media (max-width: 768px) {
+  .centered-content-programLesPrivatSMP h2 {
+    font-size: 1.2rem;
+  }
+
+  .centered-content-programLesPrivatSMP h3 {
+    font-size: 1rem;
+  }
+
+  .centered-content-programLesPrivatSMP h4 {
+    font-size: 0.9rem;
+  }
+
+  .centered-content-programLesPrivatSMP p,
+  .centered-content-programLesPrivatSMP li {
+    font-size: 0.9rem;
+  }
+
+  /* stack gambar atas, teks bawah */
+  .centered-content-programLesPrivatSMP .content-smp-wrapper {
+    flex-direction: column;
+  }
+
+  .centered-content-programLesPrivatSMP .image-section-solusi-belajar-smp {
+    order: -1;
+  }
+}

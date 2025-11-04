@@ -4,18 +4,16 @@ import { useParams } from "react-router-dom";
 import AsalSekolahSiswaEdumatrix from "../../../Components/AsalSekolahSiswa/AsalSekolahSiswa";
 import AccordionFAQ from "../../../Components/FAQ/AccordionFAQ";
 import FiturProgramNew from "../../../Components/FiturProgramNew/FiturProgramNew";
+import GaleriKegiatanBelajar from "../../../Components/GaleriKegiatanBelajar/GaleriKegiatanBelajar";
 import HowToOrder from "../../../Components/HowToOrder/HowToOrder";
-import Keunggulan from "../../../Components/Keunggulan/Keunggulan";
 import MasterTeacherV2 from "../../../Components/MasterTeacherV2/MasterTeacherV2";
-import MatrixFeatures from "../../../Components/MatrixFeatures/MatrixFeatures";
+import MatrixSubjects from "../../../Components/MatrixFeatures/MatrixSubjects";
+import WhyMatrixFeatures from "../../../Components/MatrixFeatures/WhyMatrixFeatures";
 import OnlineLesOptions from "../../../Components/OnlineLesOption/OnlineLesOption";
 import ProgramBelajarLesPrivat from "../../../Components/ProgramBelajarLesPrivate/ProgramBelajarLesPrivate";
 import ProgramLesPrivatV2 from "../../../Components/ProgramLesPrivatNew/ProgramLesPrivatV2 ";
 import PilihanProgram from "../../../Components/ProgramOptions/PilihanProgram";
-import AsalSekolahSiswaMarque from "../../../Components/SekolahSiswaMarque/SekolahSiswaMarque";
-import EmbrelaSlider from "../../../Components/SlideTop/EmbrelaSlider";
 import SuccessStoryLesPrivate from "../../../Components/SuccesStoryLesPrivate/SuccesStoryLesPrivate";
-import TestimonialSiswa from "../../../Components/TestimonialSiswa/TestimonialSiswa";
 import TestimoniOrtuSiswa from "../../../Components/TestimoniOrtuSiswa/TestimoniOrtuSiswa";
 import { getKelurahanBySlug } from "../../../helper/request/getAllKelurahanBySlug";
 import CTABottomHome from "../../../Home/CTABottomHome/CTABottomHome";
@@ -23,11 +21,15 @@ import PromoHomepage from "../../../Home/PromoHomepage/PromoHomepage";
 import { getHeroData } from "../../../utils/getHeroData";
 import HeroLesPrivate from "../../components/HeroLesPrrivate/HeroLesPrivate";
 import TableOfContents from "../../components/TableOfContent";
+import TestimoniWaSNBT from "../../LesPrivateSBMPTN/components/TestimoniWaSNBT/TestimoniWaSNBT";
+import LesprivatKota from "../../LesPrivateSD/components/LesprivatKota/LesprivatKota";
+import ProfileMatrixTutoring from "../../LesPrivateSD/components/ProfileMatrixTutoring/ProfileMatrixTutoring";
+import TutorLesprivatMatrix from "../../LesPrivateSD/components/TutorLesprivatMatrix/TutorLesprivatMatrix";
 import FlowBelajarSimakUI from "../components/FlowBelajarSimakUI/FlowBelajarSimakUI";
 import LesPrivateSimakUIHeader from "../components/LesPrivateSimakUIHeader";
-import StatistikImageSimakUI from "../components/StatistikImageSimakUi";
+import ProgramSpesialisSimak from "../components/ProgramSpesialisSimak/ProgramSpesialisSimak";
+import WhyShouldYouTake from "../components/WhyShouldYouTake";
 import { items } from "../LesPrivateSimakUIKecamatan/LesPrivateSimakUIKecamatan";
-import GaleriKegiatanBelajar from "../../../Components/GaleriKegiatanBelajar/GaleriKegiatanBelajar";
 
 const LesPrivateSimakUIKelurahan = () => {
   const [kelurahan, setKelurahan] = useState({});
@@ -255,47 +257,52 @@ const LesPrivateSimakUIKelurahan = () => {
       </Helmet>
 
       <HeroLesPrivate
-        nameCountry={nameCountry}
         images={heroImageSrc}
         heading={displayedHeading}
         desc={heroData?.description}
+        location={nameCountry}
       />
-      <EmbrelaSlider />
-      {/* <Slidertop /> */}
-      <TableOfContents title="Table of Contents" items={items} />
-      <LesPrivateSimakUIHeader />
-      <FlowBelajarSimakUI />
-      <StatistikImageSimakUI />
 
+      {/* <EmbrelaSlider /> */}
+      <TableOfContents title="Table of Contents" items={items} />
+      <LesPrivateSimakUIHeader location={nameCountry} />
+      <TestimoniWaSNBT location={nameCountry} />
+      <ProfileMatrixTutoring
+        title={"Simak UI KKI Terbaik"}
+        location={nameCountry}
+      />
+      <TutorLesprivatMatrix location={nameCountry} />
+      <LesprivatKota />
+      <WhyShouldYouTake />
+      <ProgramSpesialisSimak />
+      <FlowBelajarSimakUI location={nameCountry} />
       <section id="program-les-private-matrix-tutoring">
-        <ProgramLesPrivatV2 />
+        <ProgramLesPrivatV2 location={nameCountry} />
       </section>
       <section id="fitur-program-les-private">
-        <FiturProgramNew />
+        <FiturProgramNew location={nameCountry} />
       </section>
       <section id="pilihan-program-les-private">
-        <PilihanProgram />
+        <PilihanProgram location={nameCountry} />
       </section>
       <section id="matrix-juga-melayani-les-privat-online">
-        <OnlineLesOptions />
+        <OnlineLesOptions location={nameCountry} />
       </section>
       <section id="pengajar-les-private">
-        <MasterTeacherV2 />
+        <MasterTeacherV2 location={nameCountry} />
       </section>
-      <ProgramBelajarLesPrivat />
-      <MatrixFeatures />
-      <SuccessStoryLesPrivate />
-      {/* <TestimonialSiswa /> */}
-      <TestimoniOrtuSiswa />
+      <ProgramBelajarLesPrivat location={nameCountry} />
+      <WhyMatrixFeatures />
+      <MatrixSubjects />
+      <SuccessStoryLesPrivate location={nameCountry} />
+      <TestimoniOrtuSiswa location={nameCountry} />
       <section id="asal-sekolah-siswa-matrix-tutoring-private">
         <AsalSekolahSiswaEdumatrix />
-        <AsalSekolahSiswaMarque />
       </section>
-
       <HowToOrder />
       <AccordionFAQ />
-      <GaleriKegiatanBelajar />
-      <PromoHomepage />
+      <GaleriKegiatanBelajar location={nameCountry} />
+      <PromoHomepage location={nameCountry} />
       <CTABottomHome />
     </React.Fragment>
   );

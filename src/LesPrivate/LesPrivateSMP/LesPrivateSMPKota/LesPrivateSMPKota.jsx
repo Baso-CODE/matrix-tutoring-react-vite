@@ -2,35 +2,38 @@ import React, { useEffect, useState } from "react";
 import { Helmet } from "react-helmet-async";
 import { useParams } from "react-router-dom";
 import AsalSekolahSiswaEdumatrix from "../../../Components/AsalSekolahSiswa/AsalSekolahSiswa";
-import Keunggulan from "../../../Components/Keunggulan/Keunggulan";
 import MatrixFeatures from "../../../Components/MatrixFeatures/MatrixFeatures";
 import OnlineLesOptions from "../../../Components/OnlineLesOption/OnlineLesOption";
-import PengajarLestPrivate from "../../../Components/PengajarLestPrivate/PengajarLestPrivate";
 import ProgramBelajarLesPrivat from "../../../Components/ProgramBelajarLesPrivate/ProgramBelajarLesPrivate";
-import ProgramLesPrivat from "../../../Components/ProgramLesPrivate/ProgramLesPrivate";
 import PilihanProgram from "../../../Components/ProgramOptions/PilihanProgram";
-import AsalSekolahSiswaMarque from "../../../Components/SekolahSiswaMarque/SekolahSiswaMarque";
 import EmbrelaSlider from "../../../Components/SlideTop/EmbrelaSlider";
 import { getAllKotBySlug } from "../../../helper/request/getAllKotaBySlug";
 import HeroLesPrivate from "../../components/HeroLesPrrivate/HeroLesPrivate";
 import TableOfContents from "../../components/TableOfContent";
-import LesPrivateSMPHeader from "../components/LesPrivateSMPHeader";
 
 import AccordionFAQ from "../../../Components/FAQ/AccordionFAQ";
 import FiturProgramNew from "../../../Components/FiturProgramNew/FiturProgramNew";
+import GaleriKegiatanBelajar from "../../../Components/GaleriKegiatanBelajar/GaleriKegiatanBelajar";
 import HowToOrder from "../../../Components/HowToOrder/HowToOrder";
 import MasterTeacherV2 from "../../../Components/MasterTeacherV2/MasterTeacherV2";
-import CTABottomHome from "../../../Home/CTABottomHome/CTABottomHome";
-import PromoHomepage from "../../../Home/PromoHomepage/PromoHomepage";
-import { getHeroData } from "../../../utils/getHeroData";
-import ListKabupatenLesPrivate from "../../components/ListKabupatenLesPrivate/ListKabupatenLesPrivate";
-import AdaptiveLearningSMP from "../components/AdaptiveLearningSMP/AdaptiveLearningSMP";
-import StatistikImageSMP from "../components/StatistikImageSMP";
 import ProgramLesPrivatV2 from "../../../Components/ProgramLesPrivatNew/ProgramLesPrivatV2 ";
-import TestimoniOrtuSiswa from "../../../Components/TestimoniOrtuSiswa/TestimoniOrtuSiswa";
-import TestimonialSiswa from "../../../Components/TestimonialSiswa/TestimonialSiswa";
 import SuccessStoryLesPrivate from "../../../Components/SuccesStoryLesPrivate/SuccesStoryLesPrivate";
-import GaleriKegiatanBelajar from "../../../Components/GaleriKegiatanBelajar/GaleriKegiatanBelajar";
+import TestimoniOrtuSiswa from "../../../Components/TestimoniOrtuSiswa/TestimoniOrtuSiswa";
+import CTABottomHome from "../../../Home/CTABottomHome/CTABottomHome";
+import { getHeroData } from "../../../utils/getHeroData";
+import ImpactStatistics from "../../LesPrivateMahasiswa/components/ImpactStatistics/ImpactStatistics";
+import KurikulumLesPrivate from "../../LesPrivateSD/components/KurikulumLesPrivate/KurikulumLesPrivate";
+import LesprivatKota from "../../LesPrivateSD/components/LesprivatKota/LesprivatKota";
+import ProfileMatrixTutoring from "../../LesPrivateSD/components/ProfileMatrixTutoring/ProfileMatrixTutoring";
+import TutorLesprivatMatrix from "../../LesPrivateSD/components/TutorLesprivatMatrix/TutorLesprivatMatrix";
+import AdaptiveLearningSMP from "../components/AdaptiveLearningSMP/AdaptiveLearningSMP";
+import GalleryBelajarSMP from "../components/GalleryBelajarSMP/GalleryBelajarSMP";
+import ProgramBelajarSMP from "../components/ProgramBelajarSMP/ProgramBelajarSMP";
+import SolusiBelajarSMP from "../components/SolusiBelajarSMP/SolusiBelajarSMP";
+import TargetBelajarSMP from "../components/TargetBelajarSMP/TargetBelajarSMP";
+import WhyMatrixFeatures from "../../../Components/MatrixFeatures/WhyMatrixFeatures";
+import MatrixSubjects from "../../../Components/MatrixFeatures/MatrixSubjects";
+import PromoHomepage from "../../../Home/PromoHomepage/PromoHomepage";
 const items = [
   {
     text: "Les Privat SMP – Guru Les Privat SMP ke Rumah dan Bimbel Online",
@@ -131,10 +134,9 @@ const LesPrivateSMPKota = () => {
     "https://apps.bimbelmatrix.com/images/DSIKON_BULANAN.webp";
 
   const baseUrl = "https://apps.bimbelmatrix.com/";
-  // Canonical URL untuk halaman kota
+
   const canonicalUrl = `${baseUrl}/les-privat-smp/${kotaSlug}`;
 
-  // Judul dan Deskripsi yang Optimal dengan brand "Matrix Tutoring" dan lokasi dinamis
   const pageTitle = `📚 Les Privat SMP di ${nameCountry} Terbaik #1 | Matrix Tutoring`;
   const descriptionContent = `🚀 Kursus Les Privat SMP Terbaik di ${nameCountry} ✔️ Dibimbing GURU BERPENGALAMAN ✔️ Metode Fun & Interaktif ✍️ Daftar? Segera kunjungi situs Matrix Tutoring sekarang!`;
 
@@ -147,41 +149,41 @@ const LesPrivateSMPKota = () => {
   const ogImageAlt = `Les Privat SMP Terbaik ${nameCountry} Matrix Tutoring`;
 
   const keywords = [
-    `Les Privat SMP ${nameCountry}`,
-    `Les Privat Sekolah Menengah Pertama ${nameCountry}`,
-    `Guru Privat SMP ${nameCountry}`,
-    `Guru Les Privat SMP ${nameCountry}`,
-    `Bimbel SMP ${nameCountry}`,
-    `Bimbingan Belajar SMP ${nameCountry}`,
-    `Les Privat Online SMP ${nameCountry}`,
-    `Les Privat Offline SMP ${nameCountry}`,
-    `Program Belajar SMP ${nameCountry}`,
-    `Program Les Sekolah Menengah Pertama ${nameCountry}`,
-    `Guru Les Matematika SMP ${nameCountry}`,
-    `Les Matematika SMP ${nameCountry}`,
-    `Les IPA SMP ${nameCountry}`,
-    `Les Bahasa Inggris SMP ${nameCountry}`,
-    `Tutor SMP Berpengalaman ${nameCountry}`,
-    `Les Privat Mata Pelajaran SMP ${nameCountry}`,
-    `Les Privat Bahasa Indonesia SMP ${nameCountry}`,
-    `Les Privat Fisika SMP ${nameCountry}`,
-    `Les Privat Kimia SMP ${nameCountry}`,
-    `Les Privat Biologi SMP ${nameCountry}`,
-    `Les Privat Ekonomi SMP ${nameCountry}`,
-    `Les Privat Geografi SMP ${nameCountry}`,
-    `Matrix Tutoring SMP ${nameCountry}`,
-    `Bimbel Online SMP ${nameCountry}`,
-    `Kursus SMP ${nameCountry}`,
-    `Persiapan Ujian SMP ${nameCountry}`,
-    `Ujian Nasional SMP ${nameCountry}`,
-    `Tingkat SMP ${nameCountry}`,
-    `Materi SMP ${nameCountry}`,
-    `PR SMP ${nameCountry}`,
-    `Remedi SMP ${nameCountry}`,
-    `Persiapan Masuk SMA ${nameCountry}`,
-    `Penerimaan Siswa Baru SMA ${nameCountry}`, // Tambahan keywords relevan untuk SMP
-    kotaSlug.replace(/-/g, " ").toLowerCase(), // Tambahkan slug kota sebagai keyword
-  ].filter(Boolean); // Filter untuk menghapus string kosong
+    `Les Privat SMP Kota ${nameCountry}`,
+    `Les Privat Sekolah Menengah Pertama Kota ${nameCountry}`,
+    `Guru Privat SMP Kota ${nameCountry}`,
+    `Guru Les Privat SMP Kota ${nameCountry}`,
+    `Bimbel SMP Kota ${nameCountry}`,
+    `Bimbingan Belajar SMP Kota ${nameCountry}`,
+    `Les Privat Online SMP Kota ${nameCountry}`,
+    `Les Privat Offline SMP Kota ${nameCountry}`,
+    `Program Belajar SMP Kota ${nameCountry}`,
+    `Program Les Sekolah Menengah Pertama Kota ${nameCountry}`,
+    `Guru Les Matematika SMP Kota ${nameCountry}`,
+    `Les Matematika SMP Kota ${nameCountry}`,
+    `Les IPA SMP Kota ${nameCountry}`,
+    `Les Bahasa Inggris SMP Kota ${nameCountry}`,
+    `Tutor SMP Berpengalaman Kota ${nameCountry}`,
+    `Les Privat Mata Pelajaran SMP Kota ${nameCountry}`,
+    `Les Privat Bahasa Indonesia SMP Kota ${nameCountry}`,
+    `Les Privat Fisika SMP Kota ${nameCountry}`,
+    `Les Privat Kimia SMP Kota ${nameCountry}`,
+    `Les Privat Biologi SMP Kota ${nameCountry}`,
+    `Les Privat Ekonomi SMP Kota ${nameCountry}`,
+    `Les Privat Geografi SMP Kota ${nameCountry}`,
+    `Matrix Tutoring SMP Kota ${nameCountry}`,
+    `Bimbel Online SMP Kota ${nameCountry}`,
+    `Kursus SMP Kota ${nameCountry}`,
+    `Persiapan Ujian SMP Kota ${nameCountry}`,
+    `Ujian Nasional SMP Kota ${nameCountry}`,
+    `Tingkat SMP Kota ${nameCountry}`,
+    `Materi SMP Kota ${nameCountry}`,
+    `PR SMP Kota ${nameCountry}`,
+    `Remedi SMP Kota ${nameCountry}`,
+    `Persiapan Masuk SMA Kota ${nameCountry}`,
+    `Penerimaan Siswa Baru SMA Kota ${nameCountry}`,
+    kotaSlug.replace(/-/g, " ").toLowerCase(),
+  ].filter(Boolean);
 
   return (
     <React.Fragment>
@@ -195,7 +197,6 @@ const LesPrivateSMPKota = () => {
         <meta name="description" content={descriptionContent} />
         <meta name="keywords" content={keywords.join(", ")} />
         <link rel="canonical" href={canonicalUrl} />
-
         {/* Open Graph Meta Tags */}
         <meta property="og:locale" content="id_ID" />
         <meta property="og:type" content="article" />
@@ -216,7 +217,6 @@ const LesPrivateSMPKota = () => {
           property="article:section"
           content={`Les Privat ${programName}`}
         />
-
         {/* Twitter Card Meta Tags */}
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content={twitterTitle} />
@@ -224,90 +224,176 @@ const LesPrivateSMPKota = () => {
         <meta name="twitter:image" content={ogImage} />
         <meta name="twitter:site" content="@matrix_tutoring" />
         <meta name="twitter:creator" content="@matrix_tutoring" />
-
-        {/* Schema Markup (JSON-LD) - BreadcrumbList */}
+        /* Schema Markup (JSON-LD) */
         <script type="application/ld+json">
           {`
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "BreadcrumbList",
+          "@id": "${canonicalUrl}#breadcrumb",
+          "itemListElement": [
             {
-              "@context": "https://schema.org",
-              "@graph": [
-                {
-                  "@type": "BreadcrumbList",
-                  "@id": "${canonicalUrl}#breadcrumb",
-                  "itemListElement": [
-                    {
-                      "@type": "ListItem",
-                      "position": "1",
-                      "item": {
-                        "@id": "${baseUrl}",
-                        "name": "Home"
-                      }
-                    },
-                    {
-                      "@type": "ListItem",
-                      "position": "2",
-                      "item": {
-                        "@id": "${baseUrl}/les-privat-smp", 
-                        "name": "Les Pr2 ivat ${programName}"
-                      }
-                    },
-                    {
-                      "@type": "ListItem",
-                      "position": "3",
-                      "item": {
-                        "@id": "${canonicalUrl}",
-                        "name": "${pageTitle.replace(/<\/?[^>]+(>|$)/g, "")}"
-                      }
-                    }
-                  ]
-                }
-              ]
+              "@type": "ListItem",
+              "position": 1,
+              "item": {
+                "@id": "${baseUrl}",
+                "name": "Home"
+              }
+            },
+            {
+              "@type": "ListItem",
+              "position": 2,
+              "item": {
+                "@id": "${baseUrl}/les-privat-smp", 
+                "name": "Les Privat SMP" 
+              }
+            },
+            {
+              "@type": "ListItem",
+              "position": 3,
+              "item": {
+                "@id": "${canonicalUrl}",
+                "name": "${pageTitle.replace(/<\/?[^>]+(>|$)/g, "")}"
+              }
             }
-          `}
+          ]
+        },
+
+        {
+          "@type": "EducationalOrganization",
+          "@id": "${canonicalUrl}#organization",
+          "name": "Matrix Tutoring",
+          "description": "Layanan Les Privat SMP terbaik di Kota ${nameCountry}. Kami menawarkan bimbingan intensif untuk mata pelajaran SMP dan persiapan masuk SMA favorit.",
+          "url": "${canonicalUrl}",
+          "areaServed": "Kota ${nameCountry}", 
+          "sameAs": [
+            "https://www.instagram.com/matrixtutoring.id",
+            "https://www.tiktok.com/@lesprivatmatrix.com",
+            "https://www.facebook.com/matrixtutoring" 
+          ],
+          "brand": {
+            "@type": "Brand",
+            "name": "Matrix Tutoring",
+            "logo": "https://apps.bimbelmatrix.com/images/whatsapp_footer.webp"
+          },
+          "contactPoint": {
+            "@type": "ContactPoint",
+            "telephone": "+62-857-4728-1466",
+            "contactType": "Customer Service",
+            "areaServed": "ID",
+            "availableLanguage": ["Indonesian", "English"]
+          },
+          "keywords": "${keywords.join(", ")}"
+        },
+
+        {
+          "@type": "WebPage",
+          "@id": "${canonicalUrl}#webpage",
+          "url": "${canonicalUrl}",
+          "name": "${pageTitle.replace(/<\/?[^>]+(>|$)/g, "")}",
+          "inLanguage": "id-ID",
+          "description": "${descriptionContent}",
+          "isPartOf": { "@id": "${baseUrl}" },
+          "about": { "@id": "${canonicalUrl}#organization" },
+          "mainEntity": {
+            "@type": "Service",
+            "name": "Les Privat Sekolah Menengah Pertama di Kota ${nameCountry}",
+            "provider": { "@id": "${canonicalUrl}#organization" },
+            "serviceType": "Les Privat Sekolah Menengah Pertama",
+            "areaServed": "Kota ${nameCountry}",
+            "offers": {
+              "@type": "Offer",
+              "priceCurrency": "IDR",
+              "availability": "https://schema.org/InStock",
+              "url": "${canonicalUrl}"
+            }
+          }
+        },
+
+        {
+          "@type": "FAQPage",
+          "@id": "${canonicalUrl}#faq",
+          "mainEntity": [
+            {
+              "@type": "Question",
+              "name": "Apa fokus utama Les Privat SMP di Kota ${nameCountry}?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Fokus utama kami adalah pendalaman konsep mata pelajaran eksakta (Matematika, IPA) dan Bahasa Inggris, serta bimbingan khusus untuk Ujian Sekolah dan persiapan ketat masuk SMA favorit di wilayah Kota ${nameCountry}."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Apakah tutor Matrix Tutoring datang ke rumah siswa SMP di Kota ${nameCountry}?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Ya, kami menawarkan layanan guru privat yang datang langsung ke rumah Anda di seluruh area Kota ${nameCountry}, memberikan lingkungan belajar yang nyaman dan personal."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Bagaimana Matrix Tutoring membantu siswa mempersiapkan diri untuk masuk SMA Favorit?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Kami menyediakan modul dan latihan soal yang mengacu pada standar seleksi masuk SMA/SMK unggulan, fokus pada mata pelajaran yang diujikan, serta strategi mengerjakan soal yang cepat dan tepat."
+              }
+            }
+          ]
+        }
+      ]
+    }
+  `}
         </script>
       </Helmet>
-
       <HeroLesPrivate
-        nameCountry={nameCountry}
         images={heroImageSrc}
         heading={displayedHeading}
+        location={nameCountry}
         desc={heroData?.description}
       />
-      <EmbrelaSlider />
       {/* <Slidertop /> */}
-      <TableOfContents title="Table of Contents" items={items} />
-      <LesPrivateSMPHeader />
-      <AdaptiveLearningSMP />
-      <StatistikImageSMP />
-
+      <TableOfContents title="Table of Contents" items={items} />{" "}
+      <ImpactStatistics />
+      <SolusiBelajarSMP location={nameCountry} />
+      <ProgramBelajarSMP />
+      <TargetBelajarSMP location={nameCountry} />
+      <GalleryBelajarSMP />
+      <ProfileMatrixTutoring title={"SMP Terbaik"} location={nameCountry} />
+      <KurikulumLesPrivate />
+      <TutorLesprivatMatrix location={nameCountry} />
+      <LesprivatKota />
+      <AdaptiveLearningSMP location={name} />
       <section id="program-les-private-matrix-tutoring">
-        <ProgramLesPrivatV2 />
+        <ProgramLesPrivatV2 location={nameCountry} />
       </section>
       <section id="fitur-program-les-private">
-        <FiturProgramNew />
+        <FiturProgramNew location={nameCountry} />
       </section>
       <section id="pilihan-program-les-private">
-        <PilihanProgram />
+        <PilihanProgram location={nameCountry} />
       </section>
       <section id="matrix-juga-melayani-les-privat-online">
-        <OnlineLesOptions />
+        <OnlineLesOptions location={nameCountry} />
       </section>
       <section id="pengajar-les-private">
-        <MasterTeacherV2 />
+        <MasterTeacherV2 location={nameCountry} />
       </section>
-      <ProgramBelajarLesPrivat />
-      <MatrixFeatures />
-      <SuccessStoryLesPrivate />
+      <ProgramBelajarLesPrivat location={nameCountry} />
+      <WhyMatrixFeatures />
+      <MatrixSubjects />
+      <SuccessStoryLesPrivate location={nameCountry} />
       {/* <TestimonialSiswa /> */}
-      <TestimoniOrtuSiswa />
+      <TestimoniOrtuSiswa location={nameCountry} />
       <section id="asal-sekolah-siswa-matrix-tutoring-private">
         <AsalSekolahSiswaEdumatrix />
-        <AsalSekolahSiswaMarque />
+        {/* <AsalSekolahSiswaMarque /> */}
       </section>
-
       <HowToOrder />
       <AccordionFAQ />
-      <GaleriKegiatanBelajar />
+      <GaleriKegiatanBelajar location={nameCountry} />
+      <PromoHomepage location={nameCountry} />
       <CTABottomHome />
     </React.Fragment>
   );

@@ -2,35 +2,38 @@ import React, { useEffect, useState } from "react";
 import { Helmet } from "react-helmet-async";
 import { useParams } from "react-router-dom";
 import AsalSekolahSiswaEdumatrix from "../../../Components/AsalSekolahSiswa/AsalSekolahSiswa";
-import Keunggulan from "../../../Components/Keunggulan/Keunggulan";
-import MatrixFeatures from "../../../Components/MatrixFeatures/MatrixFeatures";
 import OnlineLesOptions from "../../../Components/OnlineLesOption/OnlineLesOption";
-import PengajarLestPrivate from "../../../Components/PengajarLestPrivate/PengajarLestPrivate";
 import ProgramBelajarLesPrivat from "../../../Components/ProgramBelajarLesPrivate/ProgramBelajarLesPrivate";
-import ProgramLesPrivat from "../../../Components/ProgramLesPrivate/ProgramLesPrivate";
 import PilihanProgram from "../../../Components/ProgramOptions/PilihanProgram";
-import AsalSekolahSiswaMarque from "../../../Components/SekolahSiswaMarque/SekolahSiswaMarque";
-import EmbrelaSlider from "../../../Components/SlideTop/EmbrelaSlider";
 
 import AccordionFAQ from "../../../Components/FAQ/AccordionFAQ";
 import FiturProgramNew from "../../../Components/FiturProgramNew/FiturProgramNew";
+import GaleriKegiatanBelajar from "../../../Components/GaleriKegiatanBelajar/GaleriKegiatanBelajar";
 import HowToOrder from "../../../Components/HowToOrder/HowToOrder";
 import MasterTeacherV2 from "../../../Components/MasterTeacherV2/MasterTeacherV2";
+import MatrixSubjects from "../../../Components/MatrixFeatures/MatrixSubjects";
+import WhyMatrixFeatures from "../../../Components/MatrixFeatures/WhyMatrixFeatures";
+import ProgramLesPrivatV2 from "../../../Components/ProgramLesPrivatNew/ProgramLesPrivatV2 ";
+import SuccessStoryLesPrivate from "../../../Components/SuccesStoryLesPrivate/SuccesStoryLesPrivate";
+import TestimoniOrtuSiswa from "../../../Components/TestimoniOrtuSiswa/TestimoniOrtuSiswa";
 import { getKelurahanBySlug } from "../../../helper/request/getAllKelurahanBySlug";
 import CTABottomHome from "../../../Home/CTABottomHome/CTABottomHome";
 import PromoHomepage from "../../../Home/PromoHomepage/PromoHomepage";
 import { getHeroData } from "../../../utils/getHeroData";
 import HeroLesPrivate from "../../components/HeroLesPrrivate/HeroLesPrivate";
 import TableOfContents from "../../components/TableOfContent";
+import ImpactStatistics from "../../LesPrivateMahasiswa/components/ImpactStatistics/ImpactStatistics";
+import KurikulumLesPrivate from "../../LesPrivateSD/components/KurikulumLesPrivate/KurikulumLesPrivate";
+import LesprivatKota from "../../LesPrivateSD/components/LesprivatKota/LesprivatKota";
+import ProfileMatrixTutoring from "../../LesPrivateSD/components/ProfileMatrixTutoring/ProfileMatrixTutoring";
+import TutorLesprivatMatrix from "../../LesPrivateSD/components/TutorLesprivatMatrix/TutorLesprivatMatrix";
+import GalleryBelajarTK from "../components/GalleryBelajarTK/GalleryBelajarTK";
+import KeunggulanCalistungMatrix from "../components/KeunggulanCalistungMatrix/KeunggulanCalistungMatrix";
 import LearningFeaturesLesPrivateTk from "../components/LearningFeaturesLesPrivateTk";
-import LesPrivateTKHeader from "../components/LesPrivateTKHeader";
 import MainLearningContent from "../components/MainLearningContent/MainLearningContent";
-import StatistikImage from "../components/StatistikImage/StatistikImage";
-import ProgramLesPrivatV2 from "../../../Components/ProgramLesPrivatNew/ProgramLesPrivatV2 ";
-import TestimoniOrtuSiswa from "../../../Components/TestimoniOrtuSiswa/TestimoniOrtuSiswa";
-import TestimonialSiswa from "../../../Components/TestimonialSiswa/TestimonialSiswa";
-import SuccessStoryLesPrivate from "../../../Components/SuccesStoryLesPrivate/SuccesStoryLesPrivate";
-import GaleriKegiatanBelajar from "../../../Components/GaleriKegiatanBelajar/GaleriKegiatanBelajar";
+import PelajaranCalistungMatrix from "../components/PelajaranCalistungMatrix/PelajaranCalistungMatrix";
+import ProgramLesPrivatCalistung from "../components/ProgramLesPrivatCalistung/ProgramLesPrivatCalistung";
+import ProgramLesPrivatCalistungLanjutan from "../components/ProgramLesPrivatCalistungLanjutan/ProgramLesPrivatCalistungLanjutan";
 
 const items = [
   {
@@ -155,34 +158,34 @@ const LesPrivateTKKelurahan = () => {
   const ogImageAlt = `Les Privat TK Terbaik ${nameCountry} Matrix Tutoring`;
 
   const keywords = [
-    `Les Privat TK ${nameCountry}`,
-    `Guru Calistung ${nameCountry}`,
-    `Les PAUD ${nameCountry}`,
-    `Les Privat Online TK ${nameCountry}`,
-    `Les Privat Taman Kanak-Kanak ${nameCountry}`,
-    `Program Belajar TK ${nameCountry}`,
-    `Guru Les TK ${nameCountry}`,
-    `Les Privat Calistung ${nameCountry}`,
-    `Bimbel TK ${nameCountry}`,
-    `Bimbingan Belajar PAUD ${nameCountry}`,
-    `Tutor TK Berpengalaman ${nameCountry}`,
-    `Materi TK ${nameCountry}`,
-    `Persiapan SD ${nameCountry}`,
-    `Les Privat Prasekolah ${nameCountry}`,
-    `Belajar Membaca TK ${nameCountry}`,
-    `Belajar Menulis TK ${nameCountry}`,
-    `Belajar Berhitung TK ${nameCountry}`,
-    `Private Tutor TK ${nameCountry}`,
-    `Matrix Tutoring TK ${nameCountry}`,
-    `Calistung Private ${nameCountry}`,
-    `PAUD Private ${nameCountry}`,
-    `Les Privat Anak Usia Dini ${nameCountry}`,
-    `Stimulasi Belajar TK ${nameCountry}`,
+    `Les Privat TK Kelurahan ${nameCountry}`,
+    `Guru Calistung Kelurahan ${nameCountry}`,
+    `Les PAUD Kelurahan ${nameCountry}`,
+    `Les Privat Online TK Kelurahan ${nameCountry}`,
+    `Les Privat Taman Kanak-Kanak Kelurahan ${nameCountry}`,
+    `Program Belajar TK Kelurahan ${nameCountry}`,
+    `Guru Les TK Kelurahan ${nameCountry}`,
+    `Les Privat Calistung Kelurahan ${nameCountry}`,
+    `Bimbel TK Kelurahan ${nameCountry}`,
+    `Bimbingan Belajar PAUD Kelurahan ${nameCountry}`,
+    `Tutor TK Berpengalaman Kelurahan ${nameCountry}`,
+    `Materi TK Kelurahan ${nameCountry}`,
+    `Persiapan SD Kelurahan ${nameCountry}`,
+    `Les Privat Prasekolah Kelurahan ${nameCountry}`,
+    `Belajar Membaca TK Kelurahan ${nameCountry}`,
+    `Belajar Menulis TK Kelurahan ${nameCountry}`,
+    `Belajar Berhitung TK Kelurahan ${nameCountry}`,
+    `Private Tutor TK Kelurahan ${nameCountry}`,
+    `Matrix Tutoring TK Kelurahan ${nameCountry}`,
+    `Calistung Private Kelurahan ${nameCountry}`,
+    `PAUD Private Kelurahan ${nameCountry}`,
+    `Les Privat Anak Usia Dini Kelurahan ${nameCountry}`,
+    `Stimulasi Belajar TK Kelurahan ${nameCountry}`,
     kelurahanSlug.replace(/-/g, " ").toLowerCase(),
     kecamatanSlug.replace(/-/g, " ").toLowerCase(),
     kabupatenSlug.replace(/-/g, " ").toLowerCase(),
     kotaSlug.replace(/-/g, " ").toLowerCase(),
-    `${nameCountry}, ${nameKecamatan}, ${nameKabupaten}, ${nameKota}`,
+    `Kelurahan ${nameCountry}, ${nameKecamatan}, ${nameKabupaten}, ${nameKota}`,
   ].filter(Boolean);
   return (
     <div>
@@ -197,7 +200,6 @@ const LesPrivateTKKelurahan = () => {
           <meta name="description" content={descriptionContent} />
           <meta name="keywords" content={keywords.join(", ")} />
           <link rel="canonical" href={canonicalUrl} />
-
           {/* Open Graph Meta Tags */}
           <meta property="og:locale" content="id_ID" />
           <meta property="og:type" content="article" />
@@ -218,7 +220,6 @@ const LesPrivateTKKelurahan = () => {
             property="article:section"
             content={`Les Privat ${programName}`}
           />
-
           {/* Twitter Card Meta Tags */}
           <meta name="twitter:card" content="summary_large_image" />
           <meta name="twitter:title" content={twitterTitle} />
@@ -226,113 +227,204 @@ const LesPrivateTKKelurahan = () => {
           <meta name="twitter:image" content={ogImage} />
           <meta name="twitter:site" content="@matrix_tutoring" />
           <meta name="twitter:creator" content="@matrix_tutoring" />
-
-          {/* Schema Markup (JSON-LD) - BreadcrumbList */}
+          /* Schema Markup (JSON-LD) */
           <script type="application/ld+json">
             {`
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "BreadcrumbList",
+          "@id": "${canonicalUrl}#breadcrumb",
+          "itemListElement": [
             {
-              "@context": "https://schema.org",
-              "@graph": [
-                {
-                  "@type": "BreadcrumbList",
-                  "@id": "${canonicalUrl}#breadcrumb",
-                  "itemListElement": [
-                    {
-                      "@type": "ListItem",
-                      "position": "1",
-                      "item": {
-                        "@id": "${baseUrl}",
-                        "name": "Home"
-                      }
-                    },
-                    {
-                      "@type": "ListItem",
-                      "position": "2",
-                      "item": {
-                        "@id": "${baseUrl}/les-privat-tk", // URL program utama
-                        "name": "Les Privat ${programName}"
-                      }
-                    },
-                    {
-                      "@type": "ListItem",
-                      "position": "3",
-                      "item": {
-                        "@id": "${baseUrl}/les-privat-tk/${kotaSlug}", // URL kota
-                        "name": "Les Privat ${programName} di ${nameKota}"
-                      }
-                    },
-                    {
-                      "@type": "ListItem",
-                      "position": "4",
-                      "item": {
-                        "@id": "${baseUrl}/les-privat-tk/${kotaSlug}/${kabupatenSlug}", // URL kabupaten
-                        "name": "Les Privat ${programName} di ${nameKabupaten}"
-                      }
-                    },
-                    {
-                      "@type": "ListItem",
-                      "position": "5",
-                      "item": {
-                        "@id": "${baseUrl}/les-privat-tk/${kotaSlug}/${kabupatenSlug}/${kecamatanSlug}", // URL kecamatan
-                        "name": "Les Privat ${programName} di ${nameKecamatan}"
-                      }
-                    },
-                    {
-                      "@type": "ListItem",
-                      "position": "6",
-                      "item": {
-                        "@id": "${canonicalUrl}",
-                        "name": "${pageTitle.replace(/<\/?[^>]+(>|$)/g, "")}"
-                      }
-                    }
-                  ]
-                }
-              ]
+              "@type": "ListItem",
+              "position": 1,
+              "item": {
+                "@id": "${baseUrl}",
+                "name": "Home"
+              }
+            },
+            {
+              "@type": "ListItem",
+              "position": 2,
+              "item": {
+                "@id": "${baseUrl}/les-privat-tk", 
+                "name": "Les Privat TK" 
+              }
+            },
+            {
+              "@type": "ListItem",
+              "position": 3,
+              "item": {
+                "@id": "${baseUrl}/les-privat-tk/${kotaSlug}", 
+                "name": "Les Privat TK di ${nameKota}" 
+              }
+            },
+            {
+              "@type": "ListItem",
+              "position": 4,
+              "item": {
+                "@id": "${baseUrl}/les-privat-tk/${kotaSlug}/${kabupatenSlug}", 
+                "name": "Les Privat TK di ${nameKabupaten}" 
+              }
+            },
+            {
+              "@type": "ListItem",
+              "position": 5,
+              "item": {
+                "@id": "${baseUrl}/les-privat-tk/${kotaSlug}/${kabupatenSlug}/${kecamatanSlug}", 
+                "name": "Les Privat TK di ${nameKecamatan}" 
+              }
+            },
+            {
+              "@type": "ListItem",
+              "position": 6,
+              "item": {
+                // Posisi 6 adalah Kelurahan target
+                "@id": "${canonicalUrl}", 
+                "name": "${pageTitle.replace(/<\/?[^>]+(>|$)/g, "")}" 
+              }
             }
-          `}
+          ]
+        },
+
+        {
+          "@type": "EducationalOrganization",
+          "@id": "${canonicalUrl}#organization",
+          "name": "Matrix Tutoring",
+          "description": "Les Privat TK (Taman Kanak-kanak) terbaik di Kelurahan ${nameCountry}, ${nameKecamatan}. Program Calistung dan persiapan masuk SD dengan guru yang berpengalaman di wilayah Anda.",
+          "url": "${canonicalUrl}",
+          "areaServed": "Kelurahan ${nameCountry}", 
+          "sameAs": [
+            "https://www.instagram.com/matrixtutoring.id",
+            "https://www.tiktok.com/@lesprivatmatrix.com",
+            "https://www.facebook.com/matrixtutoring"
+          ],
+          "brand": {
+            "@type": "Brand",
+            "name": "Matrix Tutoring",
+            "logo": "https://apps.bimbelmatrix.com/images/whatsapp_footer.webp"
+          },
+          "contactPoint": {
+            "@type": "ContactPoint",
+            "telephone": "+62-857-4728-1466",
+            "contactType": "Customer Service",
+            "areaServed": "ID",
+            "availableLanguage": ["Indonesian", "English"]
+          },
+          "keywords": "${keywords.join(", ")}"
+        },
+
+        {
+          "@type": "WebPage",
+          "@id": "${canonicalUrl}#webpage",
+          "url": "${canonicalUrl}",
+          "name": "Les Privat TK (Calistung) Kelurahan ${nameCountry} | Matrix Tutoring",
+          "inLanguage": "id-ID",
+          "description": "Matrix Tutoring menghadirkan Les Privat TK terbaik di Kelurahan ${nameCountry}. Fokus pada Calistung (Membaca, Menulis, Berhitung) dan pengembangan minat belajar anak usia dini.",
+          "isPartOf": { "@id": "${baseUrl}" },
+          "about": { "@id": "${canonicalUrl}#organization" },
+          "mainEntity": {
+            "@type": "Service",
+            "name": "Les Privat TK (Calistung) di Kelurahan ${nameCountry}",
+            "provider": { "@id": "${canonicalUrl}#organization" },
+            "serviceType": "Les Privat Anak Usia Dini",
+            "areaServed": "Kelurahan ${nameCountry}",
+            "offers": {
+              "@type": "Offer",
+              "priceCurrency": "IDR",
+              "availability": "https://schema.org/InStock",
+              "url": "${canonicalUrl}"
+            }
+          }
+        },
+
+        {
+          "@type": "FAQPage",
+          "@id": "${canonicalUrl}#faq",
+          "mainEntity": [
+            {
+              "@type": "Question",
+              "name": "Apakah Matrix Tutoring menyediakan guru datang ke rumah di Kelurahan ${nameCountry} untuk Les Privat TK?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Ya, Matrix Tutoring menyediakan guru privat yang dapat datang langsung ke rumah siswa di Kelurahan ${nameCountry} untuk fokus pada Calistung dan materi TK lainnya. Kami memiliki tutor yang tersedia di sekitar wilayah Anda."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Apakah tutor Les Privat TK sudah berpengalaman menangani anak usia dini?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Tentu. Tutor kami telah dilatih secara khusus untuk mengajar anak usia dini, menggunakan metode yang sabar, interaktif, dan menyenangkan untuk menumbuhkan minat belajar anak."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Materi apa saja yang diajarkan untuk persiapan masuk SD?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Fokus kami adalah menguatkan dasar Calistung, pengenalan konsep dasar matematika, dan pengembangan motorik halus yang diperlukan anak saat memasuki Sekolah Dasar."
+              }
+            }
+          ]
+        }
+      ]
+    }
+  `}
           </script>
         </Helmet>
 
         <HeroLesPrivate
           heading={displayedHeading}
           desc={heroData?.description}
-          nameCountry={nameCountry}
+          location={nameCountry}
           images={heroImageSrc}
         />
-        <EmbrelaSlider />
-        {/* <Slidertop /> */}
+
         <TableOfContents title="Table of Contents" items={items} />
-        <LesPrivateTKHeader />
+        <ImpactStatistics />
+        <ProgramLesPrivatCalistung location={nameCountry} />
+        <ProgramLesPrivatCalistungLanjutan />
+        <GalleryBelajarTK />
+        <PelajaranCalistungMatrix />
+        <KeunggulanCalistungMatrix location={nameCountry} />
+        <ProfileMatrixTutoring
+          title={"Calistung TK Terbaik"}
+          location={nameCountry}
+        />
+        <KurikulumLesPrivate />
+        <TutorLesprivatMatrix />
+        <LesprivatKota />
         <LearningFeaturesLesPrivateTk />
-        <MainLearningContent />
-        <StatistikImage />
+        <MainLearningContent location={nameCountry} />
         <section id="program-les-private-matrix-tutoring">
-          <ProgramLesPrivatV2 />
+          <ProgramLesPrivatV2 location={nameCountry} />
         </section>
         <section id="fitur-program-les-private">
-          <FiturProgramNew />
+          <FiturProgramNew location={nameCountry} />
         </section>
         <section id="pilihan-program-les-private">
-          <PilihanProgram />
+          <PilihanProgram location={nameCountry} />
         </section>
         <section id="matrix-juga-melayani-les-privat-online">
-          <OnlineLesOptions />
+          <OnlineLesOptions location={nameCountry} />
         </section>
-        <MasterTeacherV2 />
-        <ProgramBelajarLesPrivat />
-        <MatrixFeatures />
-        <SuccessStoryLesPrivate />
-        {/* <TestimonialSiswa /> */}
-        <TestimoniOrtuSiswa />
+        <MasterTeacherV2 location={nameCountry} />
+        <ProgramBelajarLesPrivat location={nameCountry} />
+        <WhyMatrixFeatures />
+        <MatrixSubjects />
+        <SuccessStoryLesPrivate location={nameCountry} />
+        <TestimoniOrtuSiswa location={nameCountry} />
         <section id="asal-sekolah-siswa-matrix-tutoring-private">
           <AsalSekolahSiswaEdumatrix />
-          <AsalSekolahSiswaMarque />
+          {/* <AsalSekolahSiswaMarque /> */}
         </section>
-
         <HowToOrder />
         <AccordionFAQ />
-        <GaleriKegiatanBelajar />
-        <PromoHomepage />
+        <GaleriKegiatanBelajar location={nameCountry} />
+        <PromoHomepage location={nameCountry} />
         <CTABottomHome />
       </React.Fragment>
     </div>

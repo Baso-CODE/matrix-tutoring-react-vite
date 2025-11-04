@@ -40,7 +40,7 @@ const learningItems = [
   },
 ];
 
-const MainLearningContent = () => {
+const MainLearningContent = ({ location }) => {
   const [hoveredIndex, setHoveredIndex] = useState(null); // State untuk melacak indeks slide yang dihover
 
   return (
@@ -100,7 +100,9 @@ const MainLearningContent = () => {
                 <div className="learning-icon-wrapper">
                   <img
                     src={item.images}
-                    alt={item.title}
+                    alt={`${item.title} Icon - Les Privat TK di ${
+                      location ? location : "Indonesia"
+                    } - Matrix Tutoring`}
                     className="subject-icon"
                     loading="lazy"
                   />

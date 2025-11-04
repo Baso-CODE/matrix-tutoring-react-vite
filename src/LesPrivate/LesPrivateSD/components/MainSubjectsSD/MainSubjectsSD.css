@@ -18,7 +18,7 @@
   font-weight: 700;
   color: #ffffff;
   margin-bottom: 20px;
-  font-family: "Nunito", sans-serif;
+  font-family: "Poppins", sans-serif;
 }
 
 .main-subjects-description {
@@ -29,7 +29,7 @@
   margin-left: auto;
   margin-right: auto;
   line-height: 1.6;
-  font-family: "Nunito", sans-serif;
+  font-family: "Poppins", sans-serif;
 }
 
 /* SWIPER SPECIFIC STYLES */
@@ -98,20 +98,20 @@
 }
 
 .subject-item-title {
-  font-size: 1.2rem;
+  font-size: 1.1rem;
   font-weight: 700;
   margin-top: 0.8rem;
   color: #007bff; /* Biru utama */
   margin-bottom: 10px;
-  font-family: "Nunito", sans-serif;
+  font-family: "Poppins", sans-serif;
   flex-shrink: 0;
 }
 
 .subject-item-text {
-  font-size: 1rem;
+  font-size: 0.9rem;
   color: #4f4f4f; /* Teks sedang */
   line-height: 1.6;
-  font-family: "Nunito", sans-serif;
+  font-family: "Poppins", sans-serif;
   flex-grow: 1;
   display: -webkit-box;
   -webkit-line-clamp: 4; /* Batasi hingga 4 baris */
@@ -169,7 +169,7 @@
   }
   .subject-item {
     padding: 20px 28px;
-    min-height: 33vh;
+    min-height: 30vh;
   }
   .subject-icon-wrapper {
     width: 60px;
@@ -177,7 +177,7 @@
   }
 
   .subject-item-title {
-    font-size: 1.2rem;
+    font-size: 1rem;
   }
   .subject-item-text {
     font-size: 0.9rem;

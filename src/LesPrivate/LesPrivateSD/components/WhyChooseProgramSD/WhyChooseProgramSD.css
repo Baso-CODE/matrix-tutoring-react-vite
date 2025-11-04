@@ -1,0 +1,12 @@
+.numbered-list {
+  margin-left: 1.5rem;
+  margin-bottom: 1rem;
+  list-style-type: decimal;
+}
+.numbered-list li {
+  margin-bottom: 0.4rem;
+  color: #555;
+  font-size: 0.9rem;
+  line-height: 1.5;
+  font-family: "Poppins", sans-serif;
+}

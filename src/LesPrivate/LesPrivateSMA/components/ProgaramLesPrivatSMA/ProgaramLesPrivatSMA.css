@@ -1,0 +1,117 @@
+.centered-content__program-sma {
+  width: 100%;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.centered-content__program-sma h2 {
+  font-size: 1.2rem;
+  color: #333333;
+  font-family: "Poppins", sans-serif;
+  font-weight: 700;
+  margin-bottom: 0.3rem;
+  line-height: 1.4;
+  border-left: 4px solid #0077ff;
+  padding-left: 0.6rem;
+}
+
+.centered-content__program-sma h3 {
+  font-size: 1.1rem;
+  color: #333333;
+  font-family: "Poppins", sans-serif;
+  font-weight: 700;
+  margin-top: 1.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.centered-content__program-sma h4 {
+  font-size: 1.02rem;
+  color: #444444;
+  font-family: "Poppins", sans-serif;
+  font-weight: 600;
+  margin-bottom: 0.3rem;
+}
+
+.centered-content__program-sma p {
+  font-size: 0.9rem;
+  color: #4f4f4f;
+  line-height: 1.6;
+  font-weight: 400;
+  font-family: "Poppins", sans-serif;
+  margin-bottom: 0.5rem;
+}
+
+.centered-content__program-sma ul {
+  margin-left: 1.2rem;
+  margin-bottom: 1rem;
+  list-style-type: disc;
+}
+
+.centered-content__program-sma li {
+  margin-bottom: 0.3rem;
+  color: #555555;
+  font-size: 1rem;
+  line-height: 1.5;
+  font-family: "Poppins", sans-serif;
+}
+
+/* --- Checklist style --- */
+.centered-content__program-sma .checklist {
+  list-style: none; /* hilangkan bullet bawaan */
+  margin: 0;
+  padding: 0;
+}
+
+.centered-content__program-sma .checklist li {
+  position: relative;
+  padding-left: 1.6rem; /* kasih ruang buat icon ceklis */
+  margin-bottom: 0.4rem;
+  font-size: 1rem;
+  color: #444;
+  line-height: 1.5;
+  font-family: "Poppins", sans-serif;
+}
+
+.centered-content__program-sma .checklist li::before {
+  content: "✔"; /* ceklis manual */
+  position: absolute;
+  left: 0;
+  top: 0;
+  color: #0077ff; /* biru biar standout */
+  font-weight: bold;
+}
+
+/* --- Numbered list style --- */
+.centered-content__program-sma .numbered-list {
+  margin-left: 1.5rem;
+  margin-bottom: 1rem;
+  list-style-type: decimal;
+}
+
+.centered-content__program-sma .numbered-list li {
+  margin-bottom: 0.4rem;
+  color: #555;
+  font-size: 0.9rem;
+  line-height: 1.5;
+  font-family: "Poppins", sans-serif;
+}
+
+/* Responsiveness */
+@media (max-width: 768px) {
+  .centered-content__program-sma h2 {
+    font-size: 1.2rem;
+  }
+
+  .centered-content__program-sma h3 {
+    font-size: 1rem;
+  }
+
+  .centered-content__program-sma h4 {
+    font-size: 0.9rem;
+  }
+
+  .centered-content__program-sma p,
+  .centered-content__program-sma li {
+    font-size: 0.9rem;
+  }
+}

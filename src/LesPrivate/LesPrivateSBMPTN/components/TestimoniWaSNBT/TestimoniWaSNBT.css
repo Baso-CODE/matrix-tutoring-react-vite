@@ -1,0 +1,66 @@
+.testimoniwa__container {
+  padding-left: 10%;
+  padding-right: 10%;
+  padding-top: 6%;
+  padding-bottom: 4%;
+}
+
+.testimoniwa__title {
+  text-align: center;
+  font-size: 1.6rem;
+  text-transform: uppercase;
+  font-family: "Poppins", sans-serif;
+  margin-bottom: 30px;
+  font-weight: 800;
+  color: #333333;
+}
+
+.testimoniwa__card {
+  border-radius: 12px;
+  overflow: hidden;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.3s ease;
+}
+
+.testimoniwa__card:hover {
+  transform: translateY(-8px);
+}
+
+.testimoniwa__image {
+  width: 100%;
+  height: auto;
+  border-radius: 12px;
+  object-fit: cover;
+}
+
+/* Custom navigation button color */
+.swiper-button-next,
+.swiper-button-prev {
+  color: #007bff;
+  transition: color 0.3s ease;
+}
+
+.swiper-button-next:hover,
+.swiper-button-prev:hover {
+  color: #0056b3;
+}
+
+/* Custom pagination color */
+.swiper-pagination-bullet {
+  background: #ccc;
+  opacity: 1;
+}
+
+.swiper-pagination-bullet-active {
+  background: #007bff;
+}
+
+@media (max-width: 1024px) {
+  .testimoniwa__container {
+    padding-left: 4%;
+    padding-right: 4%;
+  }
+}

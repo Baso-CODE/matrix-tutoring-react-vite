@@ -1,0 +1,131 @@
+.centered-content-programLesPrivatCalistung {
+  width: 100%;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.centered-content-programLesPrivatCalistung h2 {
+  font-size: 1.2rem;
+  color: #333333;
+  font-family: "Poppins", sans-serif;
+  font-weight: 700;
+  margin-bottom: 0.3rem;
+  line-height: 1.4;
+  border-left: 4px solid #0077ff;
+  padding-left: 0.6rem;
+}
+
+.container-calistung-left-right {
+  display: flex;
+  align-items: start;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+.program-calistung-text {
+  flex: 1;
+}
+
+.program-calistung-image {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
+
+.centered-content-programLesPrivatCalistung h3 {
+  font-size: 1.1rem;
+  color: #333333;
+  font-family: "Poppins", sans-serif;
+  font-weight: 700;
+
+  margin-bottom: 0.5rem;
+}
+
+.centered-content-programLesPrivatCalistung h4 {
+  font-size: 1.02rem;
+  color: #444444;
+  font-family: "Poppins", sans-serif;
+  font-weight: 600;
+  margin-bottom: 0.3rem;
+}
+
+.centered-content-programLesPrivatCalistung p {
+  font-size: 0.9rem;
+  color: #4f4f4f;
+  line-height: 1.6;
+  font-weight: 400;
+  font-family: "Poppins", sans-serif;
+  margin-bottom: 0.5rem;
+}
+
+.centered-content-programLesPrivatCalistung ul {
+  margin-left: 1.2rem;
+  margin-bottom: 1rem;
+  list-style-type: disc;
+}
+
+.centered-content-programLesPrivatCalistung li {
+  margin-bottom: 0.3rem;
+  color: #555555;
+  font-size: 0.9rem;
+  line-height: 1.5;
+  font-family: "Poppins", sans-serif;
+}
+
+/* --- Checklist style --- */
+.centered-content-programLesPrivatCalistung .checklist {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.centered-content-programLesPrivatCalistung .checklist li {
+  position: relative;
+  padding-left: 1.6rem;
+  margin-bottom: 0.4rem;
+  font-size: 0.9rem;
+  color: #444;
+  line-height: 1.5;
+  font-family: "Poppins", sans-serif;
+}
+
+.centered-content-programLesPrivatCalistung .checklist li::before {
+  content: "📌";
+  position: absolute;
+  left: 0;
+  top: 0;
+  color: #0077ff;
+  font-weight: bold;
+}
+
+/* Responsiveness */
+@media (max-width: 768px) {
+  .container-calistung-left-right {
+    flex-direction: column;
+  }
+  .program-calistung-text {
+    order: 1;
+  }
+
+  .program-calistung-image {
+    order: 2;
+    margin-top: 20px;
+  }
+
+  .centered-content-programLesPrivatCalistung h2 {
+    font-size: 1.2rem;
+  }
+
+  .centered-content-programLesPrivatCalistung h3 {
+    font-size: 1rem;
+  }
+
+  .centered-content-programLesPrivatCalistung h4 {
+    font-size: 0.9rem;
+  }
+
+  .centered-content-programLesPrivatCalistung p,
+  .centered-content-programLesPrivatCalistung li {
+    font-size: 0.9rem;
+  }
+}

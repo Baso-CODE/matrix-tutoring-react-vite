@@ -19,7 +19,7 @@ const programs = [
   { image: "/images/program-belajar/les_privat_toefl.webp" },
 ];
 
-const ProgramBelajarLesPrivat = () => {
+const ProgramBelajarLesPrivat = ({ location }) => {
   return (
     <div className="container-all">
       <div className="programBelajar-section">
@@ -41,7 +41,9 @@ const ProgramBelajarLesPrivat = () => {
               <img
                 loading="lazy"
                 src={program.image}
-                alt={`les privat Online & Guru ke Rumah (TK, SD, SMP, SMA, AKM, Mahasiswa, Bahasa Asing, Simak UI, SBMPTN) - Matrix Tutoring`}
+                alt={`Program Belajar Les Privat - Matrix Tutoring ${
+                  location ? `di ${location}` : "Indonesia"
+                } `}
               />
             </div>
           ))}

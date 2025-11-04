@@ -41,7 +41,7 @@ const strategyFeatures = [
   },
 ];
 
-const PTNSuccessStrategy = () => {
+const PTNSuccessStrategy = ({ location }) => {
   return (
     <section id="ptn-success-strategy" className="ptn-strategy-section">
       <div className="ptn-strategy-container">
@@ -59,7 +59,9 @@ const PTNSuccessStrategy = () => {
               <div className="strategy-feature-icon-wrapper">
                 <img
                   src={feature.images}
-                  alt={feature.title}
+                  alt={`${feature.title} Icon - Matrix Tutoring ${
+                    location ? `di ${location}` : "Indonesia"
+                  }  `}
                   className="strategy-feature-icon"
                   loading="lazy"
                 />

@@ -1,5 +1,4 @@
 // LesPrivateMahasiswaList.js
-import React from "react";
 import { FaCheckCircle } from "react-icons/fa";
 import "./LesPrivateMahasiswaList.css";
 
@@ -47,21 +46,28 @@ const LesPrivateMahasiswaList = () => {
   ];
 
   return (
-    <div className="les-private-mahasiswa-list-container">
-      <h2>
-        Kami melayani les privat datang ke rumah dan les privat online untuk
-        mahasiswa seluruh Indonesia. Berikut beberapa mata kuliah yang dapat
-        kami upayakan tutornya:
-      </h2>
-      <ul className="subject-list-les-private-mahasiswa">
-        {subjects.map((subject, index) => (
-          <li key={index} className="subject-list-les-private-mahasiswa-item">
-            <FaCheckCircle className="subject-list-les-private-mahasiswa-icon" />
-            {subject}
-          </li>
-        ))}
-      </ul>
-    </div>
+    <section className="container-list-les-mahasiswa">
+      <div className="les-private-mahasiswa-list-container">
+        <h2>
+          Pilihan Mata Kuliah Lengkap - Program Les Privat Mahasiswa Matrix
+          Tutoring
+        </h2>
+        <p>
+          Di Matrix Tutoring, mahasiswa dapat memilih pendampingan belajar untuk
+          berbagai mata kulia mulai dari mata kuliah dasar umum hingga mata
+          kuliah jurusan yang lebih spesifik. Berikut daftar mata kuliah untuk
+          Program Les Privat Mahasiswa:
+        </p>
+        <ul className="subject-list-les-private-mahasiswa">
+          {subjects.map((subject, index) => (
+            <li key={index} className="subject-list-les-private-mahasiswa-item">
+              <FaCheckCircle className="subject-list-les-private-mahasiswa-icon" />
+              {subject}
+            </li>
+          ))}
+        </ul>
+      </div>
+    </section>
   );
 };
 

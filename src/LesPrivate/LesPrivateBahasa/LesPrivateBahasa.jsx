@@ -1,33 +1,31 @@
 import React from "react";
 import { Helmet } from "react-helmet-async";
 import AsalSekolahSiswaEdumatrix from "../../Components/AsalSekolahSiswa/AsalSekolahSiswa";
-import FiturProgramNew from "../../Components/FiturProgramNew/FiturProgramNew";
-import Keunggulan from "../../Components/Keunggulan/Keunggulan";
-import MasterTeacherV2 from "../../Components/MasterTeacherV2/MasterTeacherV2";
-import MatrixFeatures from "../../Components/MatrixFeatures/MatrixFeatures";
-import OnlineLesOptions from "../../Components/OnlineLesOption/OnlineLesOption";
-import PengajarLestPrivate from "../../Components/PengajarLestPrivate/PengajarLestPrivate";
-import ProgramBelajarLesPrivat from "../../Components/ProgramBelajarLesPrivate/ProgramBelajarLesPrivate";
-import ProgramLesPrivat from "../../Components/ProgramLesPrivate/ProgramLesPrivate";
-import PilihanProgram from "../../Components/ProgramOptions/PilihanProgram";
-import AsalSekolahSiswaMarque from "../../Components/SekolahSiswaMarque/SekolahSiswaMarque";
-import EmbrelaSlider from "../../Components/SlideTop/EmbrelaSlider";
-import PromoHomepage from "../../Home/PromoHomepage/PromoHomepage";
-import ListKotaProgramLesPrivate from "../components/ListKotaProgramLesPrivate/ListKotaProgramLesPrivate";
-import TableOfContents from "../components/TableOfContent";
-import FlowPembelajaranBahasa from "./components/FlowPembelajaranBahasa/FlowPembelajaranBahasa";
-import LanguageOptions from "./components/LanguageOptions/LanguageOptions";
-import LesPrivateBahasaHeader from "./components/LesPrivateBahasaHeader";
-import StatistikImageBahasa from "./components/StatistikImageBahasa";
-import TestimonialBahasa from "./components/TestimonialBahasa/TestimonialBahasa";
-import HowToOrder from "../../Components/HowToOrder/HowToOrder";
 import AccordionFAQ from "../../Components/FAQ/AccordionFAQ";
-import CTABottomHome from "../../Home/CTABottomHome/CTABottomHome";
-import ProgramLesPrivatV2 from "../../Components/ProgramLesPrivatNew/ProgramLesPrivatV2 ";
-import TestimoniOrtuSiswa from "../../Components/TestimoniOrtuSiswa/TestimoniOrtuSiswa";
-import TestimonialSiswa from "../../Components/TestimonialSiswa/TestimonialSiswa";
-import SuccessStoryLesPrivate from "../../Components/SuccesStoryLesPrivate/SuccesStoryLesPrivate";
+import FiturProgramNew from "../../Components/FiturProgramNew/FiturProgramNew";
 import GaleriKegiatanBelajar from "../../Components/GaleriKegiatanBelajar/GaleriKegiatanBelajar";
+import HowToOrder from "../../Components/HowToOrder/HowToOrder";
+import MasterTeacherV2 from "../../Components/MasterTeacherV2/MasterTeacherV2";
+import MatrixSubjects from "../../Components/MatrixFeatures/MatrixSubjects";
+import WhyMatrixFeatures from "../../Components/MatrixFeatures/WhyMatrixFeatures";
+import OnlineLesOptions from "../../Components/OnlineLesOption/OnlineLesOption";
+import ProgramBelajarLesPrivat from "../../Components/ProgramBelajarLesPrivate/ProgramBelajarLesPrivate";
+import ProgramLesPrivatV2 from "../../Components/ProgramLesPrivatNew/ProgramLesPrivatV2 ";
+import PilihanProgram from "../../Components/ProgramOptions/PilihanProgram";
+import SuccessStoryLesPrivate from "../../Components/SuccesStoryLesPrivate/SuccesStoryLesPrivate";
+import TestimoniOrtuSiswa from "../../Components/TestimoniOrtuSiswa/TestimoniOrtuSiswa";
+import CTABottomHome from "../../Home/CTABottomHome/CTABottomHome";
+import PromoHomepage from "../../Home/PromoHomepage/PromoHomepage";
+import TableOfContents from "../components/TableOfContent";
+import ContentLesPrivatBahasa from "./components/ContentLesPrivatBahasa/ContentLesPrivatBahasa";
+import FlowPembelajaranBahasa from "./components/FlowPembelajaranBahasa/FlowPembelajaranBahasa";
+import HeroBahasa from "./components/HeroBahasa/HeroBahasa";
+import LanguageOptions from "./components/LanguageOptions/LanguageOptions";
+import ProgaramInsenstifBahasa from "./components/ProgaramInsenstifBahasa/ProgaramInsenstifBahasa";
+import ProgaramLesPrivatBahasa from "./components/ProgaramLesPrivatBahasa/ProgaramLesPrivatBahasa";
+import ProfileMatrixTutoring from "../LesPrivateSD/components/ProfileMatrixTutoring/ProfileMatrixTutoring";
+import TutorLesprivatMatrix from "../LesPrivateSD/components/TutorLesprivatMatrix/TutorLesprivatMatrix";
+import LesprivatKota from "../LesPrivateSD/components/LesprivatKota/LesprivatKota";
 
 const items = [
   {
@@ -193,15 +191,16 @@ const LesPrivateBahasa = () => {
           `}
         </script>
       </Helmet>
-
-      <EmbrelaSlider />
-      {/* <Slidertop /> */}
+      <HeroBahasa />
       <TableOfContents title="Table of Contents" items={items} />
-      <LesPrivateBahasaHeader />
+      <ContentLesPrivatBahasa />
+      <ProgaramLesPrivatBahasa />
+      <ProgaramInsenstifBahasa />
       <FlowPembelajaranBahasa />
       <LanguageOptions />
-      <TestimonialBahasa />
-      <StatistikImageBahasa />
+      <ProfileMatrixTutoring title={"Bahasa Asing Terbaik"} />
+      <TutorLesprivatMatrix />
+      <LesprivatKota />
       <section id="program-les-private-matrix-tutoring">
         <ProgramLesPrivatV2 />
       </section>
@@ -218,16 +217,13 @@ const LesPrivateBahasa = () => {
         <MasterTeacherV2 />
       </section>
       <ProgramBelajarLesPrivat />
-      <MatrixFeatures />
+      <WhyMatrixFeatures />
+      <MatrixSubjects />
       <SuccessStoryLesPrivate />
-      {/* <TestimonialSiswa /> */}
       <TestimoniOrtuSiswa />
       <section id="asal-sekolah-siswa-matrix-tutoring-private">
         <AsalSekolahSiswaEdumatrix />
-        <AsalSekolahSiswaMarque />
       </section>
-      <Keunggulan />
-
       <HowToOrder />
       <AccordionFAQ />
       <GaleriKegiatanBelajar />

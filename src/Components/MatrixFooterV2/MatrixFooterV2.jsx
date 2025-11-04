@@ -8,17 +8,17 @@ const MatrixFooterV2 = () => {
   const consultationContacts = [
     {
       name: "Ms. Dita (Nasional)",
-      phone: "6285817279118",
+      phone: "085817279118",
       link: "https://api.whatsapp.com/send?phone=6285817279118&text=Halo%20Ms.%20Dita,%20saya%20tertarik%20dengan%20program%20Matrix%20Tutoring.",
     },
     {
       name: "Ms. Eka (Nasional)",
-      phone: "6287783999349",
+      phone: "087783999349",
       link: "https://api.whatsapp.com/send?phone=6287783999349&text=Halo%20Ms.%20Eka,%20saya%20tertarik%20dengan%20program%20Matrix%20Tutoring.",
     },
     {
       name: "Ms. Linda (Internasional)",
-      phone: "6285747281466",
+      phone: "085747281466",
       link: "https://api.whatsapp.com/send?phone=6285747281466&text=Halo%20Ms.%20Linda,%20saya%20tertarik%20dengan%20program%20Matrix%20Tutoring.",
     },
   ];
@@ -50,42 +50,79 @@ const MatrixFooterV2 = () => {
   return (
     <footer className="footer-container-matrix-v2">
       <div className="footer-content-matrix-v2">
+        {/* Kolom 1: Logo dan Deskripsi */}
+        <div className="brand-info-footer-v2">
+          <img
+            loading="eager"
+            src="/images/logo-matrix-putih.webp"
+            alt="Matrix Group Logo"
+            className="logo-footer-v2"
+          />
+          <h3 className="tagline-footer-v2">
+            MATRIX TUTORING - Les ONLINE & Guru ke Rumah
+          </h3>
+          <p className="address-text-footer-v2">
+            Pesona Khayangan Blok CP No. 4, Depok, Jawa Barat (Lingkungan
+            Pendidikan UI)
+          </p>
+          <p className="description-footer-v2">
+            Matrix Tutoring adalah lembaga penyedia layanan les privat
+            profesional yang siap mendampingi siswa dari berbagai jenjang dan
+            kebutuhan belajar, mulai dari TK, SD, SMP, SMA, hingga persiapan
+            ujian seperti TKA, OSN, UTBK SNBT, SIMAK UI, IUP, UM, CPNS, TNI,
+            POLRI, LPDP, IELTS, TOEFL, serta pendampingan belajar untuk
+            Mahasiswa dan karyawan.
+            <br />
+            <br />
+            Kami menawarkan Program Les Privat Offline (guru privat datang ke
+            rumah) dan Les Privat Online interaktif, dengan tutor berpengalaman
+            sesuai bidang keahliannya. Proses pembelajaran dirancang
+            personalize, menyesuaikan gaya belajar, target, dan kurikulum yang
+            digunakan di sekolah atau kebutuhan spesifik siswa.
+            <br />
+            <br />
+            Dengan metode yang terarah, materi yang relevan, dan tutor yang
+            berkualitas, Matrix Tutoring berkomitmen memberikan pengalaman
+            belajar yang efektif, nyaman, dan berorientasi pada hasil.
+          </p>
+        </div>
+        <br />
+        <br />
         <div className="grid-container-footer-matrix-v2">
-          {/* Kolom 1: Logo dan Deskripsi */}
-          <div className="brand-info-footer-v2">
-            <img
-              loading="eager"
-              src="/images/logo-matrix-putih.webp"
-              alt="Matrix Group Logo"
-              className="logo-footer-v2"
-            />
-            <h3 className="tagline-footer-v2">
-              MATRIX TUTORING - Les ONLINE & Guru ke Rumah
-            </h3>
-            <p className="address-text-footer-v2">
-              Pesona Khayangan Blok CP No. 4, Depok, Jawa Barat (Lingkungan
-              Pendidikan UI)
-            </p>
-            <p className="description-footer-v2">
-              Matrix Tutoring adalah lembaga penyedia layanan les privat
-              profesional yang siap mendampingi siswa dari berbagai jenjang dan
-              kebutuhan belajar, mulai dari TK, SD, SMP, SMA, hingga persiapan
-              ujian seperti TKA, OSN, UTBK SNBT, SIMAK UI, IUP, UM, CPNS, TNI,
-              POLRI, LPDP, IELTS, TOEFL, serta pendampingan belajar untuk
-              Mahasiswa dan karyawan.
+          {/* Kolom 2: CONTACT US */}
+          <div className="contact-info-footer-v2">
+            <h3 className="section-title-footer-v2">CONTACT US</h3>
+            <div className="contact-details-footer-v2">
+              <p>
+                <strong>Office Address:</strong>
+                <br />
+                Pesona Khayangan Blok CP No. 4, Depok, Jawa Barat
+              </p>
               <br />
+              <p>
+                <strong>Time to Visit Us:</strong>
+                <br />
+                10.00 – 16.00 WIB Senin s.d Jumat
+                <br />
+                10.00 – 12.00 WIB Sabtu
+              </p>
               <br />
-              Kami menawarkan Program Les Privat Offline (guru privat datang ke
-              rumah) dan Les Privat Online interaktif, dengan tutor
-              berpengalaman sesuai bidang keahliannya. Proses pembelajaran
-              dirancang personalize, menyesuaikan gaya belajar, target, dan
-              kurikulum yang digunakan di sekolah atau kebutuhan spesifik siswa.
-              <br />
-              <br />
-              Dengan metode yang terarah, materi yang relevan, dan tutor yang
-              berkualitas, Matrix Tutoring berkomitmen memberikan pengalaman
-              belajar yang efektif, nyaman, dan berorientasi pada hasil.
-            </p>
+              <p>
+                <strong>Customer Service (Admin):</strong>
+              </p>
+              <ul className="customer-service-list-footer-v2">
+                {consultationContacts.map((contact, index) => (
+                  <li key={index}>
+                    <a
+                      href={contact.link}
+                      target="_blank"
+                      rel="noopener noreferrer">
+                      - {contact.name}: {contact.phone}
+                    </a>
+                  </li>
+                ))}
+              </ul>
+            </div>
             <div className="social-icons-footer-v2">
               <a
                 href="https://www.instagram.com/matrixtutoring.id/"
@@ -109,45 +146,6 @@ const MatrixFooterV2 = () => {
             </div>
           </div>
 
-          {/* Kolom 2: CONTACT US */}
-          <div className="contact-info-footer-v2">
-            <h3 className="section-title-footer-v2">CONTACT US</h3>
-            <div className="contact-details-footer-v2">
-              <p>
-                <strong>Office Address:</strong>
-                <br />
-                Pesona Khayangan Blok CP No. 4, Depok, Jawa Barat
-              </p>
-              <p>
-                <strong>Time to Visit Us:</strong>
-                <br />
-                10.00 – 16.00 WIB Senin s.d Jumat
-                <br />
-                10.00 – 12.00 WIB Sabtu
-              </p>
-              <p>
-                <strong>Office Phone:</strong>
-                <br />
-                021-2761-2993
-              </p>
-              <p>
-                <strong>Customer Service (Admin):</strong>
-              </p>
-              <ul className="customer-service-list-footer-v2">
-                {consultationContacts.map((contact, index) => (
-                  <li key={index}>
-                    <a
-                      href={contact.link}
-                      target="_blank"
-                      rel="noopener noreferrer">
-                      {contact.name}: {contact.phone}
-                    </a>
-                  </li>
-                ))}
-              </ul>
-            </div>
-          </div>
-
           {/* Kolom 3: OUR PROGRAM */}
           <div className="our-program-footer-v2">
             <h3 className="section-title-footer-v2">OUR PROGRAM</h3>
@@ -157,14 +155,14 @@ const MatrixFooterV2 = () => {
                 if (item.name !== "Program") {
                   return (
                     <li key={item.name}>
-                      <Link to={item.link}>{item.name}</Link>
+                      <Link to={item.link}>- {item.name}</Link>
                     </li>
                   );
                 } else {
                   // Render sub-menu for "Program"
                   return item.subMenu.map((subItem) => (
                     <li key={subItem.name}>
-                      <Link to={subItem.link}>{subItem.name}</Link>
+                      <Link to={subItem.link}>- {subItem.name}</Link>
                     </li>
                   ));
                 }
@@ -180,7 +178,9 @@ const MatrixFooterV2 = () => {
                 <li key={index}>- {country}</li>
               ))}
             </ul>
-            {/* Kolom 5: CTA */}
+          </div>
+          {/* Kolom 4: CTA */}
+          <div className="students-section-footer-v2">
             <div className="cta-section-footer-v2">
               <h3 className="section-title-footer-v2-wa">
                 CLICK TO CHAT WHATSAPP

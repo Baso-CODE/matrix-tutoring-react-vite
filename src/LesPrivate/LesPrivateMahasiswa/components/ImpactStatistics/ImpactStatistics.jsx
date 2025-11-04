@@ -1,50 +1,55 @@
-import StatCard from "./StatCard"; // Import komponen StatCard baru
 import "./ImpactStatistics.css";
-import { ArrowUp, BookOpen, GraduationCap, Users } from "lucide-react";
+import StatCard from "./StatCard";
 
 const stats = [
   {
-    numericValue: 0.5,
+    numericValue: 3800,
     displaySuffix: "+",
-    unit: "Poin IPK",
-    description: "Rata-rata kenaikan IPK mahasiswa kami setelah les privat.",
-    icon: ArrowUp, // Tetap gunakan ArrowUp di sini, lalu pass ke StatCard
-    isDecimal: true,
+    unit: "Jumlah Siswa",
+    description:
+      "Persentase siswa yang berhasil diterima di Perguruan Tinggi Negeri dan jurusan impian.",
+    icon: "/images/statistic/jumlah-siswa.webp",
+    isDecimal: false,
   },
   {
-    numericValue: 97,
+    numericValue: 4016,
+    displaySuffix: "+",
+    unit: "Jumlah Tutor",
+    description:
+      "Rata-rata peningkatan skor UTBK/SNBT siswa setelah bimbingan intensif kami.",
+    icon: "/images/statistic/total-tutor.webp",
+    isDecimal: false,
+  },
+  {
+    numericValue: 999, // Misalnya, jumlah siswa SMA yang sudah dibantu
+    displaySuffix: "+",
+    unit: "Review Google",
+    description:
+      "Jumlah siswa SMA yang telah kami antarkan menuju kesuksesan akademik dan masa depan cerah.",
+    icon: "/images/statistic/review-google.webp",
+    isDecimal: false,
+  },
+  {
+    numericValue: 96, // Misalnya, % siswa yang menguasai materi ujian
     displaySuffix: "%",
-    unit: "Tingkat Kelulusan",
-    description: "Mahasiswa kami berhasil menyelesaikan studi tepat waktu.",
-    icon: GraduationCap,
-  },
-  {
-    numericValue: 1000,
-    displaySuffix: "+",
-    unit: "Mata Kuliah",
-    description: "Berbagai mata kuliah telah kami bantu di berbagai jurusan.",
-    icon: BookOpen,
-  },
-  {
-    numericValue: 3000,
-    displaySuffix: "+",
-    unit: "Mahasiswa",
-    description: "Jumlah mahasiswa yang telah sukses bersama Matrix Tutoring.",
-    icon: Users,
+    unit: "Rating Kepuasan Siswa",
+    description:
+      "Tingkat penguasaan materi pelajaran yang kompleks dan strategi hadapi ujian akhir.",
+    icon: "/images/statistic/rating-kepuasan-siswa.webp",
+    isDecimal: false,
   },
 ];
-
 const ImpactStatistics = () => {
   return (
-    <section id="impact-statistics" className="impact-statistics-section">
+    <section className="impact-statistics-section">
       <div className="impact-statistics-container">
-        <h2 className="impact-statistics-title">
+        {/* <h2 className="impact-statistics-title">
           Statistik <span className="highlight-text-orange">Keberhasilan</span>{" "}
           Kami
         </h2>
         <p className="impact-statistics-subtitle">
           Angka berbicara: Bukti nyata dampak positif les privat kami.
-        </p>
+        </p> */}
 
         <div className="stats-grid">
           {stats.map((stat, index) => (

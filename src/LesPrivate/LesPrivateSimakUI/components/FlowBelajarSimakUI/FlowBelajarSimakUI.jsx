@@ -3,13 +3,13 @@ const flowData = [
     icon: "/images/les-private/simak-ui/flow-simak-ui/clipboard.webp",
     title: "Diagnosis Awal & Pemetaan Materi",
     description:
-      "Kami memulai dengan asesmen komprehensif untuk mengidentifikasi kekuatan dan kelemahan akademik Anda, serta memetakan materi SIMAK UI yang perlu difokuskan.",
+      "Kami memulai dengan memetakan kemampuan awal siswa sebelum mulai belajar untuk mengidentifikasi kekuatan dan kelemahan akademik siswa, serta memetakan materi SIMAK UI yang perlu difokuskan.",
   },
   {
     icon: "/images/les-private/simak-ui/flow-simak-ui/book-open.webp",
     title: "Pendalaman Konsep & Teori",
     description:
-      "Memahami secara menyeluruh materi esensial TKPA dan TKA (Saintek/Soshum) yang sering muncul di ujian SIMAK UI dengan bimbingan personal.",
+      "Memahami secara menyeluruh materi esensial TKD (Tes Kemampuan Dasar) dan PEKA (Pemetaan Kemampuan Akademik) yang sering muncul di ujian SIMAK UI dengan bimbingan personal.",
   },
   {
     icon: "/images/les-private/simak-ui/flow-simak-ui/light-bulb.webp",
@@ -21,34 +21,34 @@ const flowData = [
     icon: "/images/les-private/simak-ui/flow-simak-ui/filetext.webp",
     title: "Latihan Soal & Pembahasan Intensif",
     description:
-      "Mengerjakan bank soal SIMAK UI dari tahun-tahun sebelumnya (UTBK, SBMPTN, dll.) dan mendapatkan pembahasan detail untuk setiap soal.",
+      "Mengerjakan bank soal SIMAK UI dari tahun-tahun sebelumnya dan mendapatkan pembahasan detail untuk setiap soal.",
   },
-  {
-    icon: "/images/les-private/simak-ui/flow-simak-ui/alarmcheck.webp",
-    title: "Simulasi Ujian (Try Out) Berkala",
-    description:
-      "Mengikuti try out yang disimulasikan sesuai kondisi riil ujian SIMAK UI untuk melatih manajemen waktu, ketahanan mental, dan strategi pengerjaan.",
-  },
+  // {
+  //   icon: "/images/les-private/simak-ui/flow-simak-ui/alarmcheck.webp",
+  //   title: "Simulasi Ujian (Try Out) Berkala",
+  //   description:
+  //     "Mengikuti try out yang disimulasikan sesuai kondisi riil ujian SIMAK UI untuk melatih manajemen waktu, ketahanan mental, dan strategi pengerjaan.",
+  // },
   {
     icon: "/images/les-private/simak-ui/flow-simak-ui/trendingup.webp",
     title: "Evaluasi Hasil & Bimbingan Lanjutan",
     description:
-      "Menganalisis performa try out secara mendalam, mengidentifikasi area yang masih perlu ditingkatkan, dan mendapatkan bimbingan personal dari pengajar ahli untuk perbaikan.",
+      "Evaluasi Progress Perkembangan Belajar Siswa. Kemudian isinya yang Menganalisis performa try out diubah menjadi Menganalisis performa progress belajar siswa.",
   },
 ];
 
-const FlowBelajarSimakUI = () => {
+const FlowBelajarSimakUI = ({ location }) => {
   return (
     // Menggunakan kelas CSS yang sudah Anda berikan
     <section id="simak-ui-success-flow" className="university-flow-section">
       <div className="university-flow-container">
         <h2 className="university-flow-title">
-          Alur Belajar Les Privat SIMAK UI Matrix Tutoring Indonesia
+          Alur Belajar Les Privat SIMAK UI Matrix Tutoring
         </h2>
         <p className="university-flow-subtitle">
-          Kami hadir membimbing Anda meraih kursi di Universitas Indonesia
-          dengan strategi belajar yang teruji dan personal, sesuai target
-          jurusan impian Anda.
+          Kami hadir untuk mendampingi siswa agar Sukses Simak UI dengan
+          strategi belajar yang teruji dan personal, sesuai dengan target
+          jurusan yang dicita-citakan.
         </p>
 
         <div className="flow-steps-wrapper">
@@ -58,7 +58,9 @@ const FlowBelajarSimakUI = () => {
                 <span className="flow-step-number">{index + 1}</span>
                 <img
                   src={step.icon}
-                  alt={step.title}
+                  alt={`${step.title} ${
+                    location ? `${location}` : "Indonesia"
+                  } - Matrix Tutoring`}
                   className="flow-step-icon"
                 />
               </div>

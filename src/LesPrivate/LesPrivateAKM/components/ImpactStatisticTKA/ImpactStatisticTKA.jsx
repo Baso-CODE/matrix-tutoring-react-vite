@@ -12,12 +12,12 @@ const stats = [
     isDecimal: false,
   },
   {
-    numericValue: 90, // Misalnya, % siswa yang paham konsep TKA
+    numericValue: 90,
     displaySuffix: "%",
     unit: "Pemahaman Konsep TKA",
     description:
       "Persentase siswa yang menguasai konsep dasar literasi dan numerasi sesuai TKA.",
-    icon: Lightbulb, // Ikon untuk ide/pemahaman
+    icon: Lightbulb,
     isDecimal: false,
   },
   {

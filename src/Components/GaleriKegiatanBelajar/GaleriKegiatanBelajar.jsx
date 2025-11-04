@@ -194,7 +194,7 @@ const dummyData = [
   },
 ];
 
-const GaleriKegiatanBelajar = () => {
+const GaleriKegiatanBelajar = ({ location }) => {
   return (
     <section className="container-all">
       <div className="galeri-container">
@@ -221,6 +221,7 @@ const GaleriKegiatanBelajar = () => {
                 <img
                   src={"/images/shooting-star.webp"}
                   alt="Star Icon"
+                  loading="lazy"
                   className="star-icon"
                 />
                 <div className="card-title-container">
@@ -230,7 +231,14 @@ const GaleriKegiatanBelajar = () => {
                   {card.images.map((image) => (
                     <div key={image.id} className="image-item">
                       <div className="image-box">
-                        <img src={image.src} alt={image.caption} />
+                        <img
+                          src={image.src}
+                          alt={`${image.caption} - Matrix Tutoring ${
+                            location ? `di ${location}` : "Indonesia"
+                          }`}
+                          className="image-galeri-kegiatan"
+                          loading="lazy"
+                        />
                         {image.tag && (
                           <span className="image-tag">{image.tag}</span>
                         )}

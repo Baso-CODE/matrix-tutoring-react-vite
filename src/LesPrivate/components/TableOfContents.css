@@ -1,5 +1,6 @@
 .container-TOC {
   padding-left: 10%;
+  padding-top: 3%;
   padding-right: 10%;
 }
 .toc-container {
@@ -27,7 +28,7 @@
   display: flex;
   align-items: center;
   color: #333333;
-  font-family: "Nunito", sans-serif;
+  font-family: "Poppins", sans-serif;
 }
 
 .toc-icon {
@@ -66,7 +67,7 @@
   padding-left: 20px;
   list-style-type: circle;
   margin-top: 8px;
-  font-family: "Nunito", sans-serif;
+  font-family: "Poppins", sans-serif;
 }
 
 .toc-subitem {

@@ -1,0 +1,510 @@
+.hero-section-container-v2 {
+  /* padding: 40px 20px; */
+  padding-left: 10%;
+  padding-right: 10%;
+  padding-top: 6%;
+  padding-bottom: 5%;
+  /* min-height: 100vh; */
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "Poppins", sans-serif;
+  color: #333333;
+  overflow: hidden;
+}
+
+/* Wrapper to constrain content width */
+
+.hero-content-wrapper-v2 {
+  display: flex;
+  flex-direction: row; /* Default: row on larger screens */
+  justify-content: center;
+  align-items: center;
+  /* max-width: 1240px; */
+  width: 100%;
+  gap: 40px;
+}
+
+/* Left Section: Text Content */
+
+.hero-left-section-v2 {
+  flex: 1;
+  /* max-width: 550px; */
+  padding: 20px 0;
+  text-align: left;
+}
+
+.hero-title-v2 {
+  font-size: 2rem;
+  font-weight: 800;
+  line-height: 1.1;
+  margin-bottom: 18px;
+  color: #333333;
+}
+
+.hero-highlight-bimbel-v2 {
+  color: #007bff;
+  margin-left: 10px;
+}
+
+.hero-subtitle-v2 {
+  font-size: 0.9rem; /* Slightly larger for better readability */
+  color: #4a5568;
+  font-weight: 500;
+  line-height: 1.5;
+  margin-bottom: 25px; /* Added margin-bottom for spacing */
+}
+
+.hero-highlight-discount-v2 {
+  color: #ef4444;
+  font-weight: 700;
+}
+
+.hero-feature-list-v2 {
+  list-style: none;
+  padding: 0;
+  margin-bottom: 25px;
+}
+
+.hero-feature-list-v2 li {
+  display: flex;
+  text-align: start;
+  align-items: flex-start;
+  margin-bottom: 3px;
+  font-size: 0.9rem;
+  color: #2d3748;
+
+  gap: 3px;
+}
+
+.check-icon-v2 {
+  width: 26px;
+  height: 26px;
+  color: #34d399;
+  /* Hapus margin-right: 8px; dan ganti dengan gap pada parent */
+  /* margin-right: 8px; */
+  stroke-width: 2.5;
+  /* Tambahkan flex-shrink: 0; agar ikon tidak mengecil */
+  flex-shrink: 0;
+}
+
+.hero-pricing-v2 {
+  display: flex;
+  align-items: baseline;
+  margin-bottom: 5px;
+}
+
+.hero-price-v2 {
+  font-size: 2rem;
+  font-weight: 800;
+  color: #333333;
+  margin-right: 8px;
+}
+
+.hero-per-month-v2 {
+  font-size: 1.4rem; /* Adjusted for better proportion */
+  color: #4a5568;
+  font-weight: 700;
+}
+
+.hero-bonus-v2 {
+  font-size: 1rem; /* Adjusted for better proportion */
+  color: #4a5568;
+  margin-bottom: 30px;
+  font-weight: 500;
+}
+
+.hero-cta-section-2 {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+.link_cta_decoration-v2 {
+  text-decoration: none;
+}
+
+.hero-cta-section-wrapper-v2 {
+  margin-bottom: 20px;
+}
+
+/* END: Style untuk container tombol */
+
+.hero-promo-button-v2 {
+  display: inline-flex;
+  font-family: "Poppins", sans-serif;
+  align-items: center;
+  justify-content: center;
+
+  padding: 10px 15px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  font-size: 1.2rem;
+  font-weight: 700;
+  text-decoration: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  box-shadow: 0 6px 20px rgba(20, 23, 229, 0.4);
+  width: fit-content; /* Sesuaikan lebar dengan konten */
+}
+
+.hero-promo-button-v2:hover {
+  background-color: #007bff;
+  transform: translateY(-3px);
+}
+
+.hero-right-section-v2 {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.image-jumbotron-right-home-v2 {
+  width: 110%;
+  height: auto;
+  object-fit: cover;
+}
+
+@media (max-width: 1024px) {
+  .hero-section-container-v2 {
+    padding-left: 4%;
+    padding-right: 4%;
+  }
+  .hero-content-wrapper-v2 {
+    flex-direction: column; /* Stack columns */
+    gap: 60px; /* More space when stacked */
+    padding-top: 40px;
+    align-items: normal;
+    justify-content: start;
+  }
+  .image-jumbotron-right-home-v2 {
+    width: 80%;
+  }
+
+  .hero-left-section-v2 {
+    max-width: 100%;
+  }
+
+  .hero-title-v2 {
+    font-size: 2.5rem;
+    line-height: 1.2;
+  }
+
+  .hero-subtitle-v2 {
+    font-size: 0.9rem;
+  }
+
+  .hero-feature-list-v2 {
+    padding-left: 0; /* Remove padding */
+    display: flex; /* Use flexbox for list items */
+    flex-direction: column;
+    align-items: center; /* Center list items horizontally */
+  }
+
+  .hero-feature-list-v2 li {
+    justify-content: flex-start; /* Align icon and text to start */
+    width: fit-content;
+
+    margin-right: auto;
+  }
+
+  .hero-bonus-v2,
+  .hero-cta-section,
+  .hero-guarantee-v2 {
+    justify-content: center; /* Center these elements */
+    text-align: center; /* Center guarantee text */
+  }
+
+  .hero-promo-button-v2 {
+    width: 100%;
+  }
+}
+
+/* For mobile phones (e.g., 768px and smaller) */
+
+@media (max-width: 768px) {
+  .hero-section-container-v2 {
+    padding: 30px 15px;
+    padding-left: 4%;
+    padding-right: 4%;
+    min-height: auto; /* Allow height to adjust to content */
+  }
+
+  .hero-content-wrapper-v2 {
+    gap: 20px; /* Reduce gap */
+  }
+
+  .hero-left-section-v2 {
+    padding: 0 10px; /* Further reduce padding */
+  }
+
+  .hero-title-v2 {
+    font-size: 2rem;
+    margin-bottom: 15px;
+  }
+
+  .hero-subtitle-v2 {
+    font-size: 0.9rem;
+    margin-bottom: 20px;
+  }
+
+  .hero-price-v2 {
+    font-size: 2rem;
+  }
+
+  .hero-per-month-v2 {
+    font-size: 1.2rem;
+  }
+
+  .hero-feature-list-v2 li {
+    font-size: 0.9rem;
+    margin-bottom: 10px;
+  }
+
+  .check-icon-v2 {
+    width: 22px;
+    height: 22px;
+
+    flex-shrink: 0;
+  }
+
+  .hero-promo-button-v2 {
+    padding: 15px 25px;
+    font-size: 1.05rem;
+    flex-direction: column; /* Stack button text and timer */
+    gap: 5px;
+    width: 100%;
+  }
+  .image-jumbotron-right-home-v2 {
+    width: 100%;
+    height: auto;
+  }
+}
+
+/* For very small mobile devices (e.g., iPhone SE) */
+
+@media (max-width: 480px) {
+  .hero-section-container-v2 {
+    padding: 20px 10px;
+    padding-left: 4%;
+    padding-right: 4%;
+    margin-top: 40px;
+  }
+
+  .hero-title-v2 {
+    font-size: 1.6rem;
+  }
+
+  .hero-subtitle-v2 {
+    font-size: 0.9rem;
+  }
+
+  .hero-price-v2 {
+    font-size: 1.8rem;
+  }
+  .hero-per-month-v2 {
+    font-size: 1.1rem;
+  }
+
+  .hero-promo-button-v2 {
+    padding: 10px 15px;
+    font-size: 0.8rem;
+    width: 100%;
+  }
+
+  .hero-timer {
+    font-size: 0.8rem;
+    padding: 3px 6px;
+  }
+
+  .hero-illustration-main {
+    height: 445px;
+    padding: 10px;
+  }
+
+  .illustration-top-bar {
+    padding: 6px 12px;
+    font-size: 0.8rem;
+  }
+
+  .website-ui-placeholder {
+    top: 25px;
+    left: 10px;
+    right: 10px;
+    height: 280px;
+  }
+}
+
+/* Button */
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+    transform: scale(0.5);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes jump-scare {
+  0% {
+    transform: scale(1) rotate(0deg);
+    opacity: 1;
+  }
+  50% {
+    transform: scale(1.5) rotate(10deg);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(0.9) rotate(-5deg);
+    opacity: 1;
+  }
+}
+
+@keyframes drop {
+  0% {
+    bottom: 0px;
+    opacity: 1;
+  }
+  80% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 1;
+    bottom: -400px;
+  }
+}
+
+.loader {
+  text-align: center;
+  font-size: 16px;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  position: relative;
+  border: none;
+  cursor: pointer;
+  margin-left: 20%;
+  background-color: transparent;
+}
+
+.loader-bg {
+  border-radius: 12px;
+  padding: 10px 15px;
+  z-index: 2;
+  width: 120px;
+  color: #fff;
+  font-weight: bold;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  background-color: black;
+  background-image: radial-gradient(circle 80px at 50% 150%, #2a2a2a, black);
+  margin-bottom: 10px;
+  transition: all 0.2s ease-in-out;
+}
+
+.loader-bg:hover {
+  text-shadow: 0px 0px 8px #fff;
+  animation: jump-scare 0.2s ease-in-out;
+}
+
+.loader-bg:active {
+  background-image: radial-gradient(circle 140px at 50% 150%, #2a2a2a, black);
+}
+
+.loader-bg:hover + .drops .drop2,
+.drop3 {
+  animation: drop 0.5s cubic-bezier(1, 0.19, 0.66, 0.12) 0.1s infinite;
+}
+
+.loader-bg:active + .drops .drop1,
+.drop2,
+.drop3 {
+  background-color: #fff;
+}
+
+.drops {
+  filter: url("#liquid");
+  position: absolute;
+  top: 35%;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  z-index: 1;
+  opacity: 0;
+  animation: fade-in 0.3s linear 0.2s forwards;
+}
+
+.drop1,
+.drop2,
+.drop3 {
+  width: 20px;
+  height: 28px;
+  border-radius: 50%;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  margin: auto;
+  background-color: black;
+}
+
+.drop1 {
+  width: 125px;
+  height: 16px;
+  bottom: 2px;
+  border-radius: 0;
+}
+
+.drop3 {
+  background-color: white;
+}
+
+.drop2,
+.drop3 {
+  animation: drop 1.5s cubic-bezier(1, 0.19, 0.66, 0.12) 0.7s infinite;
+}
+
+/* add new Style button */
+/* Styling untuk Link utama */
+.promo-button-new {
+  /* Variables */
+  --button_radius: 0.75em;
+  --button_color: #e8e8e8;
+  --button_outline_color: #000000;
+  font-size: 17px;
+  font-weight: bold;
+  border: none;
+  border-radius: var(--button_radius);
+  background: var(--button_outline_color);
+  text-decoration: none; /* Penting untuk Link */
+  cursor: pointer;
+  display: inline-block; /* Agar dapat menerapkan padding dan transform */
+}
+
+/* Styling untuk span di dalamnya */
+.promo-button-new-top {
+  display: block;
+  box-sizing: border-box;
+  border: 2px solid var(--button_outline_color);
+  border-radius: var(--button_radius);
+  padding: 0.75em 1.5em;
+  background: linear-gradient(to bottom right, #ffcc99, #ff9966);
+  color: var(--button_outline_color);
+  transform: translateY(-0.2em);
+  transition: transform 0.1s ease;
+}
+
+/* Hover state */
+.promo-button-new:hover .promo-button-new-top {
+  transform: translateY(-0.33em);
+}
+
+/* Active state */
+.promo-button-new:active .promo-button-new-top {
+  transform: translateY(0);
+}

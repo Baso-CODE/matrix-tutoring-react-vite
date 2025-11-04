@@ -1,41 +1,41 @@
-import { Award, BookOpen, Sparkles, Users } from "lucide-react";
+import { Award, Sparkles, UserCheck, Users } from "lucide-react";
 import StatCard from "../../../LesPrivateMahasiswa/components/ImpactStatistics/StatCard";
 
 const stats = [
   {
-    numericValue: 90, // Misalnya, rata-rata kenaikan nilai rapor per mata pelajaran
+    numericValue: 4500,
     displaySuffix: "+",
-    unit: "Peningkatan Rapor",
+    unit: "Jumlah Siswa",
     description:
-      "Rata-rata kenaikan nilai rapor siswa di mata pelajaran utama.",
-    icon: Award, // Ikon untuk penghargaan/prestasi
-    isDecimal: true, // Nilai bisa desimal untuk rata-rata
+      "Total siswa SD yang telah mengikuti program les privat bersama Matrix Tutoring.",
+    icon: Users, // Ikon siswa
+    isDecimal: false,
   },
   {
-    numericValue: 92, // Misalnya, % siswa yang lebih aktif dan mandiri
+    numericValue: 4250,
+    displaySuffix: "+",
+    unit: "Jumlah Tutor",
+    description:
+      "Tutor berpengalaman, sabar, dan menyenangkan yang siap membimbing siswa SD.",
+    icon: UserCheck, // Ikon tutor/pengajar
+    isDecimal: false,
+  },
+  {
+    numericValue: 95,
+    displaySuffix: "%",
+    unit: "Peningkatan Rapor",
+    description:
+      "Rata-rata kenaikan nilai rapor siswa SD pada mata pelajaran utama (Matematika, IPA, Bahasa Indonesia).",
+    icon: Award, // Ikon penghargaan/prestasi
+    isDecimal: false,
+  },
+  {
+    numericValue: 96,
     displaySuffix: "%",
     unit: "Peningkatan Minat Belajar",
     description:
-      "Persentase siswa yang menunjukkan peningkatan minat dan kemandirian dalam belajar.",
-    icon: Sparkles, // Ikon untuk menunjukkan minat/inspirasi
-    isDecimal: false,
-  },
-  {
-    numericValue: 500, // Misalnya, jumlah siswa SD yang sudah dibantu
-    displaySuffix: "+",
-    unit: "Siswa Berprestasi",
-    description:
-      "Jumlah siswa SD yang telah kami bimbing mencapai target akademik mereka.",
-    icon: Users, // Ikon pengguna/komunitas siswa
-    isDecimal: false,
-  },
-  {
-    numericValue: 100, // Misalnya, % siswa yang paham konsep dasar
-    displaySuffix: "%",
-    unit: "Pemahaman Konsep",
-    description:
-      "Siswa mampu memahami konsep dasar pelajaran dengan lebih baik.",
-    icon: BookOpen, // Ikon buku terbuka, cocok untuk belajar
+      "Persentase siswa SD yang lebih aktif, mandiri, dan semangat dalam belajar setelah mengikuti les privat.",
+    icon: Sparkles, // Ikon minat belajar
     isDecimal: false,
   },
 ];
@@ -44,14 +44,14 @@ const ImpactStatisticsSD = () => {
   return (
     <section id="impact-statistics" className="impact-statistics-section">
       <div className="impact-statistics-container">
-        <h2 className="impact-statistics-title">
+        {/* <h2 className="impact-statistics-title">
           Statistik <span className="highlight-text-orange">Keberhasilan</span>{" "}
           Les Privat SD Kami
         </h2>
         <p className="impact-statistics-subtitle">
           Melihat dampak positif yang kami berikan pada perjalanan belajar siswa
           Sekolah Dasar.
-        </p>
+        </p> */}
 
         <div className="stats-grid">
           {stats.map((stat, index) => (

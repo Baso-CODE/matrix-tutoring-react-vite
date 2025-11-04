@@ -3,27 +3,29 @@ import { Helmet } from "react-helmet-async";
 import AsalSekolahSiswaEdumatrix from "../../Components/AsalSekolahSiswa/AsalSekolahSiswa";
 import AccordionFAQ from "../../Components/FAQ/AccordionFAQ";
 import FiturProgramNew from "../../Components/FiturProgramNew/FiturProgramNew";
+import GaleriKegiatanBelajar from "../../Components/GaleriKegiatanBelajar/GaleriKegiatanBelajar";
 import HowToOrder from "../../Components/HowToOrder/HowToOrder";
-import Keunggulan from "../../Components/Keunggulan/Keunggulan";
 import MasterTeacherV2 from "../../Components/MasterTeacherV2/MasterTeacherV2";
-import MatrixFeatures from "../../Components/MatrixFeatures/MatrixFeatures";
+import MatrixSubjects from "../../Components/MatrixFeatures/MatrixSubjects";
+import WhyMatrixFeatures from "../../Components/MatrixFeatures/WhyMatrixFeatures";
 import OnlineLesOptions from "../../Components/OnlineLesOption/OnlineLesOption";
 import ProgramBelajarLesPrivat from "../../Components/ProgramBelajarLesPrivate/ProgramBelajarLesPrivate";
 import ProgramLesPrivatV2 from "../../Components/ProgramLesPrivatNew/ProgramLesPrivatV2 ";
 import PilihanProgram from "../../Components/ProgramOptions/PilihanProgram";
-import AsalSekolahSiswaMarque from "../../Components/SekolahSiswaMarque/SekolahSiswaMarque";
-import EmbrelaSlider from "../../Components/SlideTop/EmbrelaSlider";
 import SuccessStoryLesPrivate from "../../Components/SuccesStoryLesPrivate/SuccesStoryLesPrivate";
 import TestimoniOrtuSiswa from "../../Components/TestimoniOrtuSiswa/TestimoniOrtuSiswa";
-import TestimonialSiswa from "../../Components/TestimonialSiswa/TestimonialSiswa";
 import CTABottomHome from "../../Home/CTABottomHome/CTABottomHome";
 import PromoHomepage from "../../Home/PromoHomepage/PromoHomepage";
-import ListKotaProgramLesPrivate from "../components/ListKotaProgramLesPrivate/ListKotaProgramLesPrivate";
 import TableOfContents from "../components/TableOfContent";
+import TestimoniWaSNBT from "../LesPrivateSBMPTN/components/TestimoniWaSNBT/TestimoniWaSNBT";
+import LesprivatKota from "../LesPrivateSD/components/LesprivatKota/LesprivatKota";
+import ProfileMatrixTutoring from "../LesPrivateSD/components/ProfileMatrixTutoring/ProfileMatrixTutoring";
+import TutorLesprivatMatrix from "../LesPrivateSD/components/TutorLesprivatMatrix/TutorLesprivatMatrix";
 import FlowBelajarSimakUI from "./components/FlowBelajarSimakUI/FlowBelajarSimakUI";
+import HeroSimakUI from "./components/HeroSimakUI/HeroSimakUI";
 import LesPrivateSimakUIHeader from "./components/LesPrivateSimakUIHeader";
-import StatistikImageSimakUI from "./components/StatistikImageSimakUi";
-import GaleriKegiatanBelajar from "../../Components/GaleriKegiatanBelajar/GaleriKegiatanBelajar";
+import ProgramSpesialisSimak from "./components/ProgramSpesialisSimak/ProgramSpesialisSimak";
+import WhyShouldYouTake from "./components/WhyShouldYouTake";
 
 const items = [
   {
@@ -209,14 +211,16 @@ const LesPrivateSimakUI = () => {
           `}
         </script>
       </Helmet>
-
-      <EmbrelaSlider />
-      {/* <Slidertop /> */}
+      <HeroSimakUI />
       <TableOfContents title="Table of Contents" items={items} />
       <LesPrivateSimakUIHeader />
+      <TestimoniWaSNBT />
+      <ProfileMatrixTutoring title={"SIMAK UI Terbaik"} />
+      <TutorLesprivatMatrix />
+      <LesprivatKota />
+      <WhyShouldYouTake />
+      <ProgramSpesialisSimak />
       <FlowBelajarSimakUI />
-      <StatistikImageSimakUI />
-
       <section id="program-les-private-matrix-tutoring">
         <ProgramLesPrivatV2 />
       </section>
@@ -233,13 +237,14 @@ const LesPrivateSimakUI = () => {
         <MasterTeacherV2 />
       </section>
       <ProgramBelajarLesPrivat />
-      <MatrixFeatures />
+      <WhyMatrixFeatures />
+      <MatrixSubjects />
       <SuccessStoryLesPrivate />
       {/* <TestimonialSiswa /> */}
       <TestimoniOrtuSiswa />
       <section id="asal-sekolah-siswa-matrix-tutoring-private">
         <AsalSekolahSiswaEdumatrix />
-        <AsalSekolahSiswaMarque />
+        {/* <AsalSekolahSiswaMarque /> */}
       </section>
 
       <HowToOrder />

@@ -1,0 +1,131 @@
+.alumni_top_ptn-section {
+  padding-left: 10%;
+  padding-right: 10%;
+  padding-top: 7%;
+  padding-bottom: 7%;
+  height: auto;
+  background-color: #f4f7f9;
+  text-align: center;
+}
+
+.alumni_top_ptn-header {
+  margin-bottom: 50px;
+}
+
+.alumni_top_ptn-title {
+  font-size: 1.8rem;
+  text-transform: uppercase;
+  font-weight: 800;
+  color: #007bff;
+  font-family: "Poppins", sans-serif;
+  margin-bottom: 10px;
+}
+
+.alumni_top_ptn-description {
+  font-size: 1.1rem;
+  color: #555;
+  font-family: "Poppins", sans-serif;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.alumni_top_ptn-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 30px;
+  justify-content: center;
+}
+
+.alumni_top_ptn-card {
+  background-color: #ffffff;
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.08);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  display: flex;
+  flex-direction: column;
+}
+
+.alumni_top_ptn-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+}
+
+.alumni_top_ptn-image {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+}
+
+.alumni_top_ptn-info {
+  padding: 25px;
+  text-align: left;
+}
+
+.alumni_top_ptn-name {
+  font-size: 1.5rem;
+  color: #1a237e;
+  font-family: "Poppins", sans-serif;
+  margin: 0 0 5px;
+  font-weight: bold;
+}
+
+.alumni_top_ptn-university {
+  font-size: 1rem;
+  color: #3f51b5; /* Medium blue */
+  margin: 0 0 5px;
+  font-family: "Poppins", sans-serif;
+  font-weight: 600;
+}
+
+.alumni_top_ptn-major {
+  font-size: 0.9rem;
+  font-family: "Poppins", sans-serif;
+  color: #777;
+  margin: 0;
+}
+@media (max-width: 1024px) {
+  .alumni_top_ptn-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+  }
+
+  .alumni_top_ptn-card {
+    width: calc(50% - 15px);
+    max-width: 300px;
+  }
+
+  .alumni_top_ptn-card:nth-child(3) {
+    margin-top: 30px;
+    flex-basis: 100%;
+    justify-content: center;
+    display: flex;
+    justify-self: center;
+  }
+}
+@media (max-width: 768px) {
+  .alumni_top_ptn-section {
+    padding-left: 4%;
+    padding-right: 4%;
+  }
+  .alumni_top_ptn-list {
+    grid-template-columns: 1fr;
+  }
+
+  .alumni_top_ptn-card {
+    width: 100%;
+    max-width: 100%;
+  }
+  .alumni_top_ptn-title {
+    font-size: 1.4rem;
+    text-transform: uppercase;
+    font-weight: 800;
+    color: #007bff;
+    font-family: "Poppins", sans-serif;
+    margin-bottom: 10px;
+  }
+}

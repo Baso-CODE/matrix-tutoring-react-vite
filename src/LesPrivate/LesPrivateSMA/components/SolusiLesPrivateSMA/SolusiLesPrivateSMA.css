@@ -1,0 +1,67 @@
+.solusi_les-private-sma-container {
+  padding-left: 10%;
+  padding-right: 10%;
+  padding-bottom: 2%;
+}
+
+@media (max-width: 1024px) {
+  .solusi_les-private-sma-container {
+    padding-left: 4%;
+    padding-right: 4%;
+  }
+}
+
+.solusi_les-private-sma-container h2 {
+  font-size: 1.2rem;
+  color: #333333;
+  font-family: "Poppins", sans-serif;
+  font-weight: 700;
+  margin-bottom: 0.3rem;
+  line-height: 1.4;
+  border-left: 4px solid #0077ff;
+  padding-left: 0.6rem;
+}
+
+.solusi_les-private-sma-container h3 {
+  font-size: 1.1rem;
+  color: #333333;
+  font-family: "Poppins", sans-serif;
+  font-weight: 700;
+  margin-top: 1.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.solusi_les-private-sma-container p {
+  font-size: 0.9rem;
+  color: #4f4f4f;
+  line-height: 1.6;
+  font-weight: 400;
+  font-family: "Poppins", sans-serif;
+  margin-bottom: 0.5rem;
+}
+
+.solusi_les-private-sma-container ul {
+  margin-left: 1.2rem;
+  margin-bottom: 1rem;
+  list-style-type: disc;
+}
+
+.solusi_les-private-sma-container li {
+  margin-bottom: 0.3rem;
+  color: #555555;
+  font-size: 0.9rem;
+  line-height: 1.5;
+  font-family: "Poppins", sans-serif;
+}
+
+/* Responsiveness */
+@media (max-width: 768px) {
+  .solusi_les-private-sma-container h2 {
+    font-size: 1.1rem;
+  }
+
+  .solusi_les-private-sma-container p,
+  .solusi_les-private-sma-container li {
+    font-size: 0.9rem;
+  }
+}

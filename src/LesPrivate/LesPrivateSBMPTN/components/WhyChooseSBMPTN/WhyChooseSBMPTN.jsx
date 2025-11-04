@@ -28,7 +28,7 @@ const whyChooseItems = [
   },
 ];
 
-const WhyChooseSBMPTN = () => {
+const WhyChooseSBMPTN = ({ location }) => {
   const [hoveredCardIndex, setHoveredCardIndex] = useState(null);
 
   return (
@@ -56,7 +56,9 @@ const WhyChooseSBMPTN = () => {
               <div className="why-choose-icon-wrapper">
                 <img
                   src={item.icon}
-                  alt={item.title}
+                  alt={`${item.title} icon in ${
+                    location ? location : "Indonesia"
+                  }`}
                   loading="lazy"
                   className="why-choose-icon"
                 />

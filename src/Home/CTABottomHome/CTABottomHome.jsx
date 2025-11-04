@@ -1,44 +1,38 @@
-import { Link } from "react-router-dom";
-import { selectContactCsData } from "../../lib/features/contactCsSlice";
-import { useAppSelector } from "../../lib/hooks";
 import "./CTABottomHome.css";
 
 const CTABottomHome = () => {
-  const contactData = useAppSelector(selectContactCsData);
-
   return (
     <div className="parent-cta-bottom-home">
+      <h2 className="cta-title-absolute">
+        Kini Saatnya Anda Belajar Bersama <br /> Matrix Tutoring
+      </h2>
       <div className="cta-content">
-        <h2 className="cta-title">
-          Kini Saatnya Anda Belajar <br /> Bersama Matrix Tutoring
-        </h2>
-        <p className="cta-subtitle">
-          Pusat Guru Les Privat TK, SD, SMP, SMA, hingga persiapan ujian seperti
-          TKA, OSN, UTBK SNBT, SIMAK UI, IUP, UM, CPNS, TNI, POLRI, LPDP, IELTS,
-          TOEFL, serta pendampingan belajar untuk Mahasiswa dan karyawan. Les
-          Privat Online dan Guru ke Rumah - Kurikulum Nasional & Internasional.
-        </p>
-        <div>
-          <a
-            href={contactData?.link_cta}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="animated-button-cta-bottom">
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              className="arr-2"
-              viewBox="0 0 24 24">
-              <path d="M16.1716 10.9999L10.8076 5.63589L12.2218 4.22168L20 11.9999L12.2218 19.778L10.8076 18.3638L16.1716 12.9999H4V10.9999H16.1716Z"></path>
-            </svg>
-            <span className="text-cta-bottom">Tanya Jawab</span>
-            <span className="circle"></span>
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              className="arr-1"
-              viewBox="0 0 24 24">
-              <path d="M16.1716 10.9999L10.8076 5.63589L12.2218 4.22168L20 11.9999L12.2218 19.778L10.8076 18.3638L16.1716 12.9999H4V10.9999H16.1716Z"></path>
-            </svg>
-          </a>
+        <div className="cta-buttons">
+          {/* Admin Eka */}
+          <div className="cta-admin">
+            <p className="admin-name">Admin Eka</p>
+            <p className="admin-phone">(0877-8399-9349)</p>
+            <a
+              href="https://api.whatsapp.com/send?phone=6287783999349&text=Halo%20Kak%20Eka%20https://apps.bimbelmatrix.com/,%20saya%20ingin%20bertanya%20program%20belajar%20untuk:%0AKelas%3A%20%5BIsi%20Kelas%5D%0AMapel%3A%20%5BIsi%20Mapel%5D%0AKurikulum%3A%20%5BIsi%20Kurikulum%5D%0AWilayah%3A%20%5BIsi%20Wilayah%5D"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="animated-button-cta-bottom left-btn">
+              <span className="text-cta-bottom">Hubungi Kak Eka</span>
+            </a>
+          </div>
+
+          {/* Admin Dita */}
+          <div className="cta-admin">
+            <p className="admin-name">Admin Dita</p>
+            <p className="admin-phone">(0858-1727-9118)</p>
+            <a
+              href="https://api.whatsapp.com/send?phone=6285817279118&text=Halo%20Kak%20Dita%20https://apps.bimbelmatrix.com/,%20saya%20ingin%20bertanya%20program%20belajar%20untuk:%0AKelas%3A%20%5BIsi%20Kelas%5D%0AMapel%3A%20%5BIsi%20Mapel%5D%0AKurikulum%3A%20%5BIsi%20Kurikulum%5D%0AWilayah%3A%20%5BIsi%20Wilayah%5D"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="animated-button-cta-bottom right-btn">
+              <span className="text-cta-bottom">Hubungi Kak Dita</span>
+            </a>
+          </div>
         </div>
       </div>
     </div>

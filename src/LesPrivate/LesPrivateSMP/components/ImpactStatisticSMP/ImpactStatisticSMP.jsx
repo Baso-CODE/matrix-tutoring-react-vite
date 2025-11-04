@@ -1,41 +1,41 @@
-import { TrendingUp, FlaskConical, Brain, Users } from "lucide-react";
+import { GraduationCap, Smile, Star, Users } from "lucide-react";
 import StatCard from "../../../LesPrivateMahasiswa/components/ImpactStatistics/StatCard";
 
 const stats = [
   {
-    numericValue: 20, // Misalnya, rata-rata peningkatan persentase nilai ujian
-    displaySuffix: "%",
-    unit: "Peningkatan Nilai Ujian",
-    description:
-      "Rata-rata peningkatan persentase nilai ujian mata pelajaran inti (Matematika, IPA, Bahasa).",
-    icon: TrendingUp, // Ikon untuk menunjukkan peningkatan
-    isDecimal: false,
-  },
-  {
-    numericValue: 90, // Misalnya, % siswa yang menguasai konsep sulit
-    displaySuffix: "%",
-    unit: "Penguasaan Konsep",
-    description:
-      "Persentase siswa yang berhasil menguasai konsep-konsep sulit dalam pelajaran.",
-    icon: FlaskConical, // Ikon untuk sains/konsep
-    isDecimal: false,
-  },
-  {
-    numericValue: 750, // Misalnya, jumlah siswa SMP yang sudah dibantu
+    numericValue: 4500,
     displaySuffix: "+",
-    unit: "Siswa Berprestasi",
+    unit: "Jumlah Siswa",
     description:
-      "Jumlah siswa SMP yang telah kami bimbing meraih prestasi akademik dan non-akademik.",
-    icon: Users, // Ikon pengguna/komunitas siswa
+      "Total siswa yang telah mengikuti program pembelajaran di Matrix Tutoring.",
+    icon: Users, // Ikon komunitas/siswa
     isDecimal: false,
   },
   {
-    numericValue: 85, // Misalnya, % siswa yang siap ke SMA
-    displaySuffix: "%",
-    unit: "Kesiapan SMA",
+    numericValue: 4016,
+    displaySuffix: "+",
+    unit: "Jumlah Tutor",
     description:
-      "Persentase siswa yang merasa siap dan percaya diri menghadapi jenjang SMA.",
-    icon: Brain, // Ikon untuk berpikir/kecerdasan
+      "Tutor berpengalaman dan berdedikasi yang siap membimbing siswa secara personal.",
+    icon: GraduationCap, // Ikon tutor/pendidikan
+    isDecimal: false,
+  },
+  {
+    numericValue: 999,
+    displaySuffix: "+",
+    unit: "Review Google",
+    description:
+      "Ulasan positif dari orang tua dan siswa di platform Google Reviews.",
+    icon: Star, // Ikon bintang/review
+    isDecimal: false,
+  },
+  {
+    numericValue: 96,
+    displaySuffix: "%",
+    unit: "Review Kepuasan Siswa",
+    description:
+      "Persentase tingkat kepuasan siswa dan orang tua terhadap layanan Matrix Tutoring.",
+    icon: Smile, // Ikon kepuasan/emoji senyum
     isDecimal: false,
   },
 ];
@@ -44,14 +44,14 @@ const ImpactStatisticsSMP = () => {
   return (
     <section id="impact-statistics" className="impact-statistics-section">
       <div className="impact-statistics-container">
-        <h2 className="impact-statistics-title">
+        {/* <h2 className="impact-statistics-title">
           Statistik <span className="highlight-text-orange">Keberhasilan</span>{" "}
           Les Privat SMP Kami
         </h2>
         <p className="impact-statistics-subtitle">
           Melihat dampak positif yang kami berikan pada perjalanan belajar siswa
           Sekolah Menengah Pertama.
-        </p>
+        </p> */}
 
         <div className="stats-grid">
           {stats.map((stat, index) => (

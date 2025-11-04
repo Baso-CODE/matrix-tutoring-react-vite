@@ -1,3 +1,7 @@
+import { Link } from "react-router-dom";
+import { useAppSelector } from "../../../lib/hooks";
+import { selectContactCsData } from "../../../lib/features/contactCsSlice";
+
 const stats = [
   {
     image:
@@ -27,6 +31,8 @@ const stats = [
 ];
 
 const StatistikImageBahasa = () => {
+  const contactData = useAppSelector(selectContactCsData);
+  const finalUrl = contactData?.link_cta;
   return (
     <section id="bahasa-success-statistics" className="statistik-image-section">
       {" "}
@@ -42,20 +48,25 @@ const StatistikImageBahasa = () => {
 
         <div className="statistik-cards-grid">
           {stats.map((item, index) => (
-            <div key={index} className="statistik-card">
+            <div key={index} className="card">
               <img
                 src={item.image}
                 alt={item.title}
-                className="statistik-card-image"
+                className="card__image"
+                loading="lazy"
                 onError={(e) => {
                   e.target.onerror = null;
                   e.target.src =
-                    "https://placehold.co/80x80/cccccc/333333?text=Icon";
+                    "https://placehold.co/300x200/cccccc/333333?text=No+Image";
                 }}
-                loading="lazy"
               />
-              <h3 className="statistik-card-title">{item.title}</h3>
-              <p className="statistik-card-description">{item.description}</p>
+              <div className="card__content">
+                <p className="card__title">{item.title}</p>
+                <p className="card__description">{item.description}</p>
+                <Link to={finalUrl}>
+                  <button className="card__button">Detail</button>
+                </Link>
+              </div>
             </div>
           ))}
         </div>

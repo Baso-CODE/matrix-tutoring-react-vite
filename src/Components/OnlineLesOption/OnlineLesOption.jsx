@@ -1,6 +1,6 @@
 import "./OnlineLesOption.css";
 
-const OnlineLesOptions = () => {
+const OnlineLesOptions = ({ location }) => {
   return (
     <div className="container-all">
       <div className="online-les-options">
@@ -11,12 +11,14 @@ const OnlineLesOptions = () => {
             dan layanan yang sama
           </p>
         </div>
-        <div className="options">
+        <div className="stats-grid">
           <div className="online-les-option">
             <img
               loading="lazy"
               src="/images/learnhing-methode/zoom.webp"
-              alt="les privat Online & Guru ke Rumah (TK, SD, SMP, SMA, AKM, Mahasiswa, Bahasa Asing, Simak UI, SBMPTN) - Matrix Tutoring"
+              alt={`les privat Online Metode Zoom ${
+                location ? `${location}` : "Indonesia"
+              } - Matrix Tutoring`}
               width="600"
               height="600"
             />
@@ -25,7 +27,9 @@ const OnlineLesOptions = () => {
             <img
               loading="lazy"
               src="/images/learnhing-methode/google-meet.webp"
-              alt="les privat Online & Guru ke Rumah (TK, SD, SMP, SMA, AKM, Mahasiswa, Bahasa Asing, Simak UI, SBMPTN) - Matrix Tutoring"
+              alt={`les privat Online Metode Google Meet ${
+                location ? `${location}` : "Indonesia"
+              } - Matrix Tutoring`}
               width="600"
               height="600"
             />
@@ -34,7 +38,9 @@ const OnlineLesOptions = () => {
             <img
               loading="lazy"
               src="/images/learnhing-methode/whatsapp.webp"
-              alt="les privat Online & Guru ke Rumah (TK, SD, SMP, SMA, AKM, Mahasiswa, Bahasa Asing, Simak UI, SBMPTN) - Matrix Tutoring"
+              alt={`les privat Online Metode WhatsApp ${
+                location ? `${location}` : "Indonesia"
+              } - Matrix Tutoring`}
               width="600"
               height="600"
             />

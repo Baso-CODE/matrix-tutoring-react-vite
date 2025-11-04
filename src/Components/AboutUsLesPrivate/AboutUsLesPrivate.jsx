@@ -1,7 +1,6 @@
 import React from "react";
 import { Helmet } from "react-helmet-async";
 // import Bottombar from "../BottomBar/Bottombar";
-import PengajarLestPrivate2 from "../PengajarLestPrivate/PengajarLesPrivat2";
 import AboutUsHistoryAndSuccess from "./AboutUsHIstoryAndSuccesLesPrivate/AboutUsHistoryAndSuceesLesPrivate";
 import "./AboutUsLesPrivate.css";
 import ProfesionalTeam from "./OurTeam/ProfesionalTeam";
@@ -11,7 +10,7 @@ const AboutUsLesPrivate = () => {
     <React.Fragment>
       <Helmet>
         <meta charSet="utf-8" />
-        <title>Tentang Kami - #1 Matrix Tutoring</title>
+        <title>Tentang Kami - Matrix Tutoring</title>
         <meta
           name="description"
           content="Matrix Tutoring menyediakan layanan les privat dengan pengajar berkualitas tinggi untuk semua tingkatan pendidikan. Temukan visi dan misi kami untuk meningkatkan potensi akademik siswa."
@@ -57,8 +56,6 @@ const AboutUsLesPrivate = () => {
               />
             </div>
 
-            {/* pengajar les private */}
-            <PengajarLestPrivate2 />
             <div className="about-us-info">
               <h2>Visi Kami</h2>
               <p>
@@ -67,12 +64,15 @@ const AboutUsLesPrivate = () => {
                 untuk menciptakan lingkungan belajar yang mendukung, merangsang,
                 dan membantu siswa mencapai potensi penuh mereka.
               </p>
+              <br />
               <h2>Misi Kami</h2>
               <p>
                 Kami berkomitmen untuk menyediakan program dan layanan yang
                 berkualitas, merekrut, melatih, dan menugaskan pengajar yang
                 berkompeten dari berbagai perguruan tinggi terbaik. Kami juga
                 mengembangkan sistem layanan akademik yang efektif dan solutif.
+              </p>
+              <p>
                 Kami berusaha menjadi sahabat siswa untuk mengoptimalkan
                 kemampuan akademik terbaik mereka, serta menjadi partner orang
                 tua dalam membimbing dan memotivasi anak agar selalu berprestasi

@@ -88,10 +88,10 @@ export const Menus = [
     name: "Promo",
     link: "/promo",
   },
-  {
-    name: "Term",
-    link: "/term",
-  },
+  // {
+  //   name: "Term",
+  //   link: "/term",
+  // },
   {
     name: "ContactUs",
     link: "/contact-us",

@@ -1,5 +1,14 @@
 .container-halaman-kota {
   padding-top: 5%;
+  padding-left: 10%;
+  padding-right: 10%;
+}
+@media (max-width: 768px) {
+  .container-halaman-kota {
+    padding-top: 12%;
+    padding-left: 0%;
+    padding-right: 0%;
+  }
 }
 
 .content-kota {
@@ -33,13 +42,13 @@
 }
 
 .child-paragraf-kota {
-  font-family: "Nunito", sans-serif;
+  font-family: "Poppins", sans-serif;
   margin-top: 10px;
   font-weight: 400;
 }
 
 .title-halaman-kota {
-  font-family: "Nunito", sans-serif;
+  font-family: "Poppins", sans-serif;
   font-size: 30px;
   font-weight: 800;
   color: white;
@@ -71,7 +80,7 @@
     border-radius: 10px;
   }
   .child-paragraf-kota {
-    font-family: "Nunito", sans-serif;
+    font-family: "Poppins", sans-serif;
     margin-top: 10px;
     font-weight: 400;
     padding-left: 4px;
@@ -80,7 +89,7 @@
   }
 
   .title-halaman-kota {
-    font-family: "Nunito", sans-serif;
+    font-family: "Poppins", sans-serif;
     font-size: 30px;
     font-weight: 800;
     padding: 20px;

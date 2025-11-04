@@ -48,7 +48,7 @@
 .contact-form-form span {
   color: #4a5568;
   font-weight: 500;
-  font-family: "Nunito", sans-serif;
+  font-family: "Poppins", sans-serif;
   margin-bottom: 0.25rem;
 }
 
@@ -56,7 +56,7 @@
 .contact-form-form textarea,
 .contact-form-form select {
   padding: 0.75rem 1rem;
-  font-family: "Nunito", sans-serif;
+  font-family: "Poppins", sans-serif;
   background-color: #f7fafc;
   border: 1px solid #e2e8f0;
   border-radius: 0.5rem;
@@ -90,7 +90,7 @@
 }
 .contact-form-button span {
   color: #ffffff;
-  font-family: "Nunito", sans-serif;
+  font-family: "Poppins", sans-serif;
 }
 
 @media (min-width: 768px) {
@@ -133,7 +133,7 @@
   color: #ffffff;
   font-weight: 600;
   font-size: 1.2rem;
-  font-family: "Nunito", sans-serif;
+  font-family: "Poppins", sans-serif;
 }
 .icon-bouncy-button {
   color: #ffffff;

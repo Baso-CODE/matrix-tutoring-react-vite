@@ -1,20 +1,21 @@
-import React from "react";
 import "./LesPrivateSDHeader.css";
 
 const LesPrivateSDHeader = () => {
   return (
     <section className="container-all">
       <div className="centered-content-lesPrivate-sd">
-        <div className="image-lesPrivate">
+        <h1 id="les-privat-sd">
+          Les Privat SD Bantu Anak Lebih Paham Pelajaran Sekolah!
+        </h1>
+        {/* <HeroTK /> */}
+        {/* section hero */}
+        {/* <div className="image-lesPrivate">
           <img
             loading="lazy"
             src="/images/les-private/sd/sd.webp"
             alt="Les Privat sd"
           />
         </div>
-        <h1 id="les-privat-sd">
-          Les Privat SD – Guru Les Privat SD ke Rumah dan Bimbel Online
-        </h1>
         <p>
           Guru Les Privat SD – Penerapan sistem belajar PJJ berdampak pada
           kesibukan orangtua yang bertambah selama di rumah. Anak akan meminta
@@ -22,7 +23,7 @@ const LesPrivateSDHeader = () => {
           sekolah yang belum tentu mereka kuasai. Meskipun orangtua pastinya
           akan berusaha membantu sebisa mungkin, namun dengan kesibukan mereka
           bekerja hal itu cukup merepotkan tentunya.
-        </p>
+        </p> */}
         <br />
         <br />
         {/* Section 1 */}

@@ -1,7 +1,6 @@
-import React, { useState } from "react";
+import { useState } from "react";
+import { MdOpenInFull, MdOutlineCloseFullscreen } from "react-icons/md";
 import "./TableOfContents.css";
-import { MdOutlineCloseFullscreen } from "react-icons/md";
-import { MdOpenInFull } from "react-icons/md";
 
 const TableOfContents = ({ title = "Table of Contents", items }) => {
   const [isOpen, setIsOpen] = useState(false);

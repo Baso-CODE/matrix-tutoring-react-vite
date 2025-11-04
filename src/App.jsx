@@ -21,7 +21,6 @@ import Floatingcta from "./Components/FloatingCta/Floatingcta";
 import Halamankelurahan from "./Components/HalamanKelurahan/HalamanKelurahan";
 import Tutor from "./Components/Tutor/Tutor";
 import LoadingSpinner from "./helper/LoadingSpinner/LoadingSpinner";
-import BottomNavigationBar from "./helper/Navbar/BottomNavigationBar/BottomNavigationBar";
 import Nav from "./helper/Navbar/Nav/Nav";
 import ProgramModal from "./helper/Navbar/ProgramModal/ProgramModal";
 import ScrollToTop from "./helper/scrollToTop";
@@ -33,6 +32,7 @@ import LesPrivateBahasaKelurahan from "./LesPrivate/LesPrivateBahasa/LesPrivateB
 import LesPrivateBahasaKota from "./LesPrivate/LesPrivateBahasa/LesPrivateBahasaKota/LesPrivateBahasaKota";
 
 import MatrixFooterV2 from "./Components/MatrixFooterV2/MatrixFooterV2";
+import MoreModal from "./Home/MoreModal/MoreModal";
 import LesPrivateTKA from "./LesPrivate/LesPrivateAKM/LesPrivateTKA";
 import LesPrivateTKAKabupaten from "./LesPrivate/LesPrivateAKM/LesPrivateTKAKabupaten/LesPrivateTKAKabupaten";
 import LesPrivateTKAKecamatan from "./LesPrivate/LesPrivateAKM/LesPrivateTKAKecamatan/LesPrivateTKAKecamatan";
@@ -71,7 +71,6 @@ import ContactUsPage from "./pages/ContactUs/ContactUsPage";
 import Promo from "./pages/Promo/Promo";
 import Term from "./pages/Term/Term";
 import Testimoni from "./pages/Testimoni/Testimoni";
-import MoreModal from "./Home/MoreModal/MoreModal";
 
 // const TRACKING_ID = "G-NZRFMBB12N";
 // ReactGA.initialize(TRACKING_ID);
@@ -108,17 +107,17 @@ function App() {
   const [showProgramModal, setShowProgramModal] = useState(false);
   const [showMoreModal, setShowMoreModal] = useState(false);
 
-  const handleOpenProgramModal = () => {
-    setShowProgramModal(true);
-  };
+  // const handleOpenProgramModal = () => {
+  //   setShowProgramModal(true);
+  // };
 
   const handleCloseProgramModal = () => {
     setShowProgramModal(false);
   };
 
-  const handleOpenMoreModal = () => {
-    setShowMoreModal(true);
-  };
+  // const handleOpenMoreModal = () => {
+  //   setShowMoreModal(true);
+  // };
 
   const handleCloseMoreModal = () => {
     setShowMoreModal(false);
@@ -358,10 +357,10 @@ function App() {
         <Route exact path="/contact-us" element={<ContactUsPage />}></Route>
       </Routes>
       {/* <MediaMassaMarquee /> */}
-      <BottomNavigationBar
+      {/* <BottomNavigationBar
         onProgramClick={handleOpenProgramModal}
         onMoreClick={handleOpenMoreModal}
-      />
+      /> */}
       <Floatingcta />
       <ScrollToTopButton />
       <MatrixFooterV2 />

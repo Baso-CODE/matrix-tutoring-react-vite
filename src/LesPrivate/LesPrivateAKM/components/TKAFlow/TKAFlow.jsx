@@ -57,6 +57,7 @@ const TKAFlow = () => {
                 <span className="flow-step-number">{index + 1}</span>
                 <img
                   src={step.icon}
+                  loading="lazy"
                   alt={step.title}
                   className="flow-step-icon"
                 />

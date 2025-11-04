@@ -1,6 +1,6 @@
 import "./FiturProgramNew.css";
 
-const FiturProgramNew = () => {
+const FiturProgramNew = ({ location }) => {
   const featuresData = [
     {
       id: 1,
@@ -75,7 +75,9 @@ const FiturProgramNew = () => {
                 <div className="feature-image-v2">
                   <img
                     src={feature.image}
-                    alt={feature.alt}
+                    alt={`${feature.alt} ${
+                      location ? `di ${location}` : "Indonesia"
+                    } - Matrix Tutoring`}
                     className="feature-img-v2"
                     loading="lazy"
                   />

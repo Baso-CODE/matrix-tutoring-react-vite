@@ -16,8 +16,9 @@ const FormRegist = () => {
         <div className="right-column-stack">
           <div className="image-section">
             <img
-              src="/images/contact-us/hero-form.png"
-              alt="A boy in a hat smiling"
+              src="/images/contact-us/hero-form.webp"
+              alt="A Girl in a hat smiling"
+              loading="lazy"
             />
           </div>
           {/* Komponen OurFeatures yang sekarang berada di bawah image-section */}

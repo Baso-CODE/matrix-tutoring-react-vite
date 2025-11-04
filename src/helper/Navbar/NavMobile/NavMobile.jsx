@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 import { motion } from "framer-motion";
 import { ChevronDown, Menu, X } from "lucide-react";
 import { useState } from "react";
@@ -15,16 +16,16 @@ export default function NavMobile({ Menus }) {
 
   const handleMenuClick = (i, hasSubMenu) => {
     if (hasSubMenu) {
-      setClicked(clicked === i ? null : i); // Toggle submenu
+      setClicked(clicked === i ? null : i);
     } else {
-      setIsOpen(false); // Close drawer when clicking non-submenu link
-      setClicked(null); // Reset clicked submenu
+      setIsOpen(false);
+      setClicked(null);
     }
   };
 
   const handleSubMenuClick = () => {
-    setIsOpen(false); // Close the drawer when clicking submenu link
-    setClicked(null); // Reset clicked submenu
+    setIsOpen(false);
+    setClicked(null);
   };
 
   const subMenuDrawer = {
@@ -54,7 +55,7 @@ export default function NavMobile({ Menus }) {
             const hasSubMenu = subMenu && subMenu.length > 0;
 
             return (
-              <li key={name} className="menu-item">
+              <li key={name} className="menu-item-mobile">
                 {hasSubMenu ? (
                   // Render as a button or div for items with submenu
                   <div

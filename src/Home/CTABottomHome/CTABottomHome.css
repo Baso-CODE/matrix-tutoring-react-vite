@@ -1,149 +1,196 @@
-/* CTABottomHome.css */
-
+/* --- Container Utama --- */
 .parent-cta-bottom-home {
-  /* Mengganti background menjadi warna putih bersih */
-  background: #ffffff;
-  padding: 80px 20px;
+  background-image: url("/images/matrix-cta-bottom.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  min-height: 100vh;
+  padding-top: 4%;
   display: flex;
   justify-content: center;
   align-items: center;
+  position: relative;
+}
+
+.parent-cta-bottom-home::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(255, 255, 255, 0.088);
+  z-index: 0;
+}
+
+.cta-title-absolute {
+  position: absolute;
+  top: 40px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 1.5rem;
+  font-weight: 800;
+  color: #ffffff;
+  font-family: "Poppins", sans-serif;
+  line-height: 1.2;
+  margin: 0;
   text-align: center;
-  min-height: 350px;
+  z-index: 2;
+  text-transform: uppercase;
 }
 
 .cta-content {
-  max-width: 900px;
+  position: relative;
+  z-index: 1;
   width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
 }
 
+/* --- Title (bisa digeser posisinya) --- */
 .cta-title {
   font-size: 2.3rem;
   font-weight: 800;
-  color: #333333;
-  margin-bottom: 20px;
-  font-family: "Nunito", sans-serif;
+  color: #333;
+  font-family: "Poppins", sans-serif;
   line-height: 1.2;
+  margin: 0;
+
+  /* atur posisi */
+  text-align: left; /* ubah ke center/right kalau mau */
+  align-self: flex-start; /* flex-start / center / flex-end */
+  margin-top: 20px; /* naik-turun */
+  margin-left: 30px; /* geser kanan */
 }
 
-.cta-subtitle {
-  font-size: 1.1rem;
-  color: #555555; /* Warna teks lebih gelap agar kontras */
-  margin-bottom: 40px;
-  font-family: "Nunito", sans-serif;
-  line-height: 1.6;
+/* --- Container Tombol --- */
+.cta-buttons {
+  display: flex;
+  justify-content: space-between;
+
+  padding-left: 10%;
+  padding-right: 10%;
 }
 
-/* --- Responsive Adjustments --- */
-@media (max-width: 992px) {
-  .cta-title {
-    font-size: 2.2rem;
-  }
-  .cta-subtitle {
-    font-size: 1rem;
-  }
-}
-
-@media (max-width: 768px) {
-  .parent-cta-bottom-home {
-    padding: 60px 15px;
-  }
-  .cta-title {
-    font-size: 1.3rem;
-  }
-  .cta-subtitle {
-    font-size: 0.95rem;
-    margin-bottom: 30px;
-  }
-}
-
-/* --- Gaya Tombol Animasi yang Diperbarui --- */
+/* --- Style Button --- */
 .animated-button-cta-bottom {
-  position: relative;
-  display: inline-flex; /* Menggunakan inline-flex untuk memusatkan tombol */
-  align-items: center;
-  gap: 4px;
-  padding: 16px 36px;
-  border: 4px solid;
-  border-color: transparent;
-  font-size: 16px;
-  background-color: #00b33c;
-  border-radius: 100px;
+  display: inline-block;
+  padding: 14px 28px;
+  border-radius: 8px;
+  background: linear-gradient(-45deg, #007bff, #0056b3);
+  color: #fff;
   font-weight: 600;
-  color: #ffffff; /* Warna teks tombol */
-  box-shadow: 0 0 0 2px #333333; /* Warna border luar */
-  cursor: pointer;
-  overflow: hidden;
-  text-decoration: none; /* Menghilangkan garis bawah pada tautan */
-  transition: all 0.6s cubic-bezier(0.23, 1, 0.32, 1);
-}
-
-.animated-button-cta-bottom svg {
-  position: absolute;
-  width: 1.8rem;
-  fill: #333333;
-  z-index: 9;
-  transition: all 0.8s cubic-bezier(0.23, 1, 0.32, 1);
-}
-
-.animated-button-cta-bottom .arr-1 {
-  right: 16px;
-  top: 20px;
-}
-
-.animated-button-cta-bottom .arr-2 {
-  left: -25%;
-}
-
-.animated-button-cta-bottom .circle {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  width: 20px;
-  height: 20px;
-  background-color: #007bff; /* Warna hijau baru untuk efek hover */
-  border-radius: 50%;
-  opacity: 0;
-  transition: all 0.8s cubic-bezier(0.23, 1, 0.32, 1);
-}
-
-.animated-button-cta-bottom .text-cta-bottom {
-  position: relative;
-  z-index: 1;
-  font-size: 1.5rem;
-  transform: translateX(-12px);
-  transition: all 0.8s cubic-bezier(0.23, 1, 0.32, 1);
+  text-decoration: none;
+  transition: all 0.3s ease-in-out;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
 }
 
 .animated-button-cta-bottom:hover {
-  box-shadow: 0 0 0 12px transparent;
-  color: #ffffff; /* Warna teks saat hover */
-  border-radius: 12px;
+  background: linear-gradient(-45deg, #28a745, #218838);
+  transform: translateY(-3px);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.2);
 }
 
-.animated-button-cta-bottom:hover .arr-1 {
-  right: -25%;
+.text-cta-bottom {
+  font-size: 1rem;
+  font-family: "Poppins", sans-serif;
 }
 
-.animated-button-cta-bottom:hover .arr-2 {
-  left: 16px;
+.cta-admin {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px; /* jarak antar teks dengan tombol */
 }
 
-.animated-button-cta-bottom:hover .text-cta-bottom {
-  transform: translateX(12px);
+.admin-name {
+  font-size: 1.1rem;
+  font-weight: 700;
+  font-family: "Poppins", sans-serif;
+  color: #ffffff;
+  margin: 0;
 }
 
-.animated-button-cta-bottom:hover svg {
-  fill: #ffffff; /* Warna ikon saat hover */
+.admin-phone {
+  font-size: 0.9rem;
+  font-weight: 400;
+  color: #e0e0e0;
+  font-family: "Poppins", sans-serif;
+  margin: 0 0 10px 0; /* kasih jarak ke bawah sebelum button */
 }
 
-.animated-button-cta-bottom:active {
-  scale: 0.95;
-  box-shadow: 0 0 0 4px #007bff; /* Warna bayangan aktif */
+/* Responsive */
+@media (max-width: 768px) {
+  .cta-admin {
+    align-items: center;
+    text-align: center;
+    width: 50%;
+  }
 }
 
-.animated-button-cta-bottom:hover .circle {
-  width: 220px;
-  height: 220px;
-  opacity: 1;
+/* Button posisi kiri-kanan */
+.left-btn {
+  align-self: flex-start;
+}
+
+.right-btn {
+  align-self: flex-end;
+}
+
+/* --- Responsive --- */
+@media (max-width: 1024px) {
+  .cta-buttons {
+    position: absolute;
+    top: 28rem;
+    display: flex;
+    justify-content: none;
+    right: 5%;
+    left: 5%;
+    gap: 20px;
+    padding-left: 0%;
+    padding-right: 0%;
+  }
+}
+@media (max-width: 768px) {
+  .cta-content {
+    gap: 30px;
+  }
+
+  .cta-title {
+    font-size: 1.5rem;
+    text-align: center;
+    margin: 0 auto;
+  }
+
+  .cta-title-absolute {
+    width: 80%;
+    font-size: 1.2rem;
+  }
+  .text-cta-bottom {
+    font-size: 0.8rem;
+    font-family: "Poppins", sans-serif;
+  }
+  /* 
+  .cta-buttons {
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+  } */
+
+  .cta-buttons {
+    position: absolute;
+    top: 260px;
+    display: flex;
+    justify-content: none;
+    right: 5%;
+    left: 5%;
+    gap: 20px;
+    padding-left: 0%;
+    padding-right: 0%;
+  }
+
+  .left-btn,
+  .right-btn {
+    align-self: center;
+    width: 71%;
+    text-align: center;
+  }
 }

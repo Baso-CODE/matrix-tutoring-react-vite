@@ -10,7 +10,7 @@ import { Autoplay, Pagination } from "swiper/modules";
 import { getAllMasterTeacherAlfa } from "../../helper/request/getAllMasterTeacherAlfa";
 import { FaStar } from "react-icons/fa";
 
-const MasterTeacherV2 = () => {
+const MasterTeacherV2 = ({ location }) => {
   const [dataTutor, setDataTutor] = useState([]);
   const swiperRef = useRef(null);
 
@@ -92,7 +92,13 @@ const MasterTeacherV2 = () => {
                     <img
                       loading="lazy"
                       src={tutor?.url_image}
-                      alt={`Foto ${tutor?.nama}, seorang tutor berpengalaman di bidang ${tutor?.jurusan}`}
+                      alt={`Foto ${
+                        tutor?.nama
+                      }, seorang tutor berpengalaman di bidang ${
+                        tutor?.jurusan
+                      } ${
+                        location ? `di ${location}` : "Indonesia"
+                      } - Matrix Tutoring`}
                       className="img-card-master-teacher-v2"
                     />
                     <h3 className="nama-master-teacher-v2">{tutor.nama}</h3>

@@ -1,5 +1,4 @@
 // HowToOrder.jsx
-import { Link } from "react-router-dom";
 import "./HowToOrder.css";
 
 const orderSteps = [
@@ -53,7 +52,7 @@ const HowToOrder = () => {
             Alur Pendaftaran Siswa <br />
             Program Privat
           </h2>
-          <Link
+          {/* <Link
             to={"/contact-us"}
             target="_blank"
             rel="noopener noreferrer"
@@ -70,7 +69,7 @@ const HowToOrder = () => {
                   clip-rule="evenodd"></path>
               </svg>
             </button>
-          </Link>
+          </Link> */}
         </div>
         {/* Left Column: Steps */}
         <div className="how-to-order-steps">

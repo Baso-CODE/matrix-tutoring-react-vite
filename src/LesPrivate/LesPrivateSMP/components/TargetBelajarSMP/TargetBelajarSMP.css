@@ -1,0 +1,97 @@
+.target-container {
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.target-image img {
+  width: 100%;
+  max-width: 400px;
+  border-radius: 12px;
+}
+
+.target-content {
+  flex: 1;
+  min-width: 300px;
+}
+
+.target-content h2 {
+  font-size: 1.2rem;
+  color: #333333;
+  font-family: "Poppins", sans-serif;
+  font-weight: 700;
+  margin-bottom: 0.75rem;
+  border-left: 4px solid #0077ff;
+  padding-left: 0.6rem;
+}
+
+.target-content p {
+  font-size: 0.9rem;
+  color: #555;
+  margin-bottom: 1rem;
+  font-family: "Poppins", sans-serif;
+}
+
+.checklist {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.checklist li {
+  font-size: 0.9rem;
+  margin-bottom: 0.6rem;
+  color: #444;
+  font-family: "Poppins", sans-serif;
+  display: flex;
+  align-items: flex-start;
+}
+
+.checklist li::before {
+  content: "✔";
+  margin-right: 0.5rem;
+  color: #0077ff;
+}
+
+/* --- Checklist style --- */
+/* .centered-content-programLesPrivatSD .checklist {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.centered-content-programLesPrivatSD .checklist li {
+  position: relative;
+  padding-left: 1.6rem;
+  margin-bottom: 0.4rem;
+  font-size: 1rem;
+  color: #444;
+  line-height: 1.5;
+  font-family: "Poppins", sans-serif;
+}
+
+.centered-content-programLesPrivatSD .checklist li::before {
+  content: "✔";
+  position: absolute;
+  left: 0;
+  top: 0;
+  color: #0077ff;
+  font-weight: bold;
+} */
+
+@media (max-width: 768px) {
+  .target-container {
+    flex-direction: column;
+    text-align: left;
+  }
+
+  .target-content h2 {
+    font-size: 1.2rem;
+  }
+
+  .target-content p,
+  .checklist li {
+    font-size: 0.9rem;
+  }
+}

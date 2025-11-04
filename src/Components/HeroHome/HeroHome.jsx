@@ -1,11 +1,11 @@
 /* eslint-disable react-hooks/exhaustive-deps */
+import { ArrowRightCircleIcon } from "lucide-react";
 import { useEffect, useRef, useState } from "react";
 import { Link } from "react-router-dom";
+import ReusableButton from "../../helper/Button/ReusableButton/ReusableButton";
 import ImageModal from "../../helper/ImageModal/ImageModal";
 import { getAllRandomSlogans } from "../../helper/request/getAllSloganSRequest";
 import "./HeroHome.css";
-import { ArrowRightCircleIcon, MoveRight } from "lucide-react";
-import ReusableButton from "../../helper/Button/ReusableButton/ReusableButton";
 
 const HeroHome = ({ contactData }) => {
   const [dataSlogan, setDataSlogan] = useState(null);
@@ -324,7 +324,7 @@ const HeroHome = ({ contactData }) => {
                   clip-rule="evenodd"></path>
               </svg> */}
               <ReusableButton
-                text="Ambil Promo Sekarang!"
+                text="Dapatkan promo, chat sekarang!"
                 bgColor="#ffffff"
                 borderColor="#007bff"
                 textColor="#007bff"
@@ -333,7 +333,7 @@ const HeroHome = ({ contactData }) => {
               />
             </Link>
 
-            <button className="button-how-to-order">
+            {/* <button className="button-how-to-order">
               {timerVisible && timerComponents.length ? (
                 // Jika timer terlihat dan berjalan, tampilkan timer
                 <span className="hero-timer-display">{timerComponents}</span>
@@ -352,7 +352,7 @@ const HeroHome = ({ contactData }) => {
                   </svg>
                 </>
               )}
-            </button>
+            </button> */}
           </div>
 
           {/* <p className="hero-guarantee">Garansi kepuasan belajar</p> */}

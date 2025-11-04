@@ -1,0 +1,174 @@
+/* --- Container Hero --- */
+.hero__tka {
+  position: relative;
+  min-height: 100vh;
+  background-image: url("/images/les-private/ksm/bg-jumbotron-tka.png");
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: start;
+}
+
+/* Overlay gelap agar teks lebih jelas */
+.hero__tka-overlay {
+  position: absolute;
+  inset: 0;
+
+  z-index: 0;
+}
+
+.hero__tka-content {
+  position: relative;
+  z-index: 1;
+  padding-left: 5%;
+  padding-right: 5%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  color: #fff;
+}
+
+.hero__tka-text {
+  flex: 0 0 55%;
+}
+
+/* Title */
+.hero__tka-title {
+  font-size: 2.5rem;
+  font-weight: 800;
+  line-height: 1.3;
+  margin-bottom: 20px;
+  font-family: "Poppins", sans-serif;
+}
+
+.hero__tka-title span {
+  display: block;
+  font-size: 1.8rem;
+  font-weight: 600;
+  margin-top: 10px;
+}
+
+/* Deskripsi */
+.hero__tka-description {
+  font-size: 1.2rem;
+  line-height: 1.7;
+  font-weight: 300;
+  margin-bottom: 30px;
+  color: #f0f0f0;
+  font-family: "Poppins", sans-serif;
+}
+
+/* Tombol */
+.hero__tka-buttons {
+  display: flex;
+
+  gap: 20px;
+}
+
+.btn__tka {
+  display: inline-block;
+  padding: 14px 28px;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: 600;
+  text-decoration: none;
+  transition: all 0.3s ease-in-out;
+}
+
+.btn__tka.primary {
+  background: linear-gradient(135deg, #007bff, #0056b3);
+  color: #fff;
+}
+
+.btn__tka.primary:hover {
+  background: linear-gradient(135deg, #28a745, #218838);
+  transform: translateY(-3px);
+}
+
+.btn__tka.secondary {
+  background: rgba(255, 255, 255, 0.1);
+  color: #fff;
+  border: 2px solid #fff;
+}
+
+.btn__tka.secondary:hover {
+  background: #fff;
+  color: #000;
+}
+
+.hero__tka-image {
+  flex: 0 0 45%;
+
+  display: flex;
+  align-items: flex-end;
+}
+
+.hero__tka-image img {
+  width: 101%;
+  height: 101%;
+  object-fit: contain;
+}
+
+/* --- Responsive --- */
+@media (max-width: 1024px) {
+  .hero__tka {
+    min-height: min-content;
+  }
+
+  .hero__tka-title {
+    font-size: 1.5rem;
+  }
+  .hero__tka-title span {
+    font-size: 1.2rem;
+  }
+  .hero__tka-description {
+    font-size: 0.9rem;
+  }
+}
+@media (max-width: 992px) {
+  .hero__tka-title {
+    font-size: 2rem;
+  }
+
+  .hero__tka-title span {
+    font-size: 1.4rem;
+  }
+
+  .hero__tka-description {
+    font-size: 1.05rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .hero__tka-content {
+    flex-direction: column;
+    text-align: center;
+    gap: 0px;
+    padding-left: 3%;
+    padding-right: 3%;
+  }
+  .hero__tka-title {
+    font-size: 1.5rem;
+  }
+  .hero__tka-description {
+    font-size: 1rem;
+  }
+  .hero__tka-text {
+    flex: 0 0 100%;
+    margin-top: 6rem;
+  }
+
+  .hero__tka-image {
+    flex: 0 0 100%;
+    margin-top: 10px;
+  }
+
+  .hero__tka-buttons {
+    flex-direction: column;
+    gap: 15px;
+  }
+}

@@ -3,19 +3,19 @@ const successSteps = [
     icon: "/images/les-private/simak-ui/flow-simak-ui/light-bulb.webp",
     title: "Analisis Kebutuhan Belajar",
     description:
-      "Deteksi mendalam kekuatan dan kelemahan Anda di setiap materi SBMPTN (TPS, TKA Saintek/Soshum) untuk strategi personal.",
+      "Deteksi mendalam kekuatan dan kelemahan Anda di setiap materi SNBT UTBK (TPS, TKA Saintek/Soshum) untuk strategi personal.",
   },
   {
     icon: "/images/les-private/simak-ui/flow-simak-ui/book-open.webp",
     title: "Kurikulum & Modul Terstruktur",
     description:
-      "Materi belajar lengkap dan terupdate sesuai silabus SBMPTN terbaru, dilengkapi bank soal dan pembahasan mendalam.",
+      "Materi belajar lengkap dan terupdate sesuai silabus SNBT UTBK terbaru, dilengkapi bank soal dan pembahasan mendalam.",
   },
   {
     icon: "/images/les-private/ksm/flow-tka/graduation-cap.webp",
-    title: "Pengajar Berpengalaman & Ahli SBMPTN",
+    title: "Pengajar Berpengalaman & Ahli SNBT UTBK",
     description:
-      "Belajar dari tutor yang kompeten, berpengalaman meloloskan siswa ke PTN favorit, dan menguasai seluk-beluk SBMPTN.",
+      "Belajar dari tutor yang kompeten, berpengalaman meloloskan siswa ke PTN favorit, dan menguasai seluk-beluk SNBT UTBK.",
   },
   {
     icon: "/images/les-private/ksm/flow-tka/timer.webp",
@@ -27,13 +27,13 @@ const successSteps = [
     icon: "/images/les-private/bahasa-asing/flow-pembelajaran/user-check.webp",
     title: "Simulasi Ujian & Try Out Rutin",
     description:
-      "Latih kesiapan Anda dengan simulasi ujian SBMPTN yang akurat dan try out berkala untuk mengukur kemajuan.",
+      "Latih kesiapan Anda dengan simulasi ujian SNBT UTBK yang akurat dan try out berkala untuk mengukur kemajuan.",
   },
   {
     icon: "/images/les-private/simak-ui/flow-simak-ui/alarmcheck.webp",
     title: "Strategi Pengerjaan Soal & Waktu",
     description:
-      "Ajarkan teknik efektif untuk menganalisis soal, manajemen waktu, dan strategi lolos passing grade SBMPTN.",
+      "Ajarkan teknik efektif untuk menganalisis soal, manajemen waktu, dan strategi lolos passing grade SNBT UTBK.",
   },
 ];
 
@@ -42,11 +42,11 @@ const SBMPTNFlow = () => {
     <section id="sbmptn-success-flow" className="university-flow-section">
       <div className="university-flow-container">
         <h2 className="university-flow-title">
-          Langkah Menuju Kesuksesan SBMPTN
+          Langkah Menuju Kesuksesan SNBT UTBK
         </h2>
         <p className="university-flow-subtitle">
           Matrix Tutoring memandu Anda melalui setiap tahapan persiapan,
-          memastikan Anda siap menghadapi SBMPTN dan meraih PTN impian.
+          memastikan Anda siap menghadapi SNBT UTBK dan meraih PTN impian.
         </p>
         <div className="flow-steps-wrapper">
           {successSteps.map((step, index) => (

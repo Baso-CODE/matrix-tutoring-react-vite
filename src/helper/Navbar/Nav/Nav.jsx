@@ -7,6 +7,7 @@ import { Menus } from "../../utils";
 import NavDescktop from "../NavDescktop/NavDescktop";
 import "./Nav.css";
 import { PhoneCall } from "lucide-react";
+import NavMobile from "../NavMobile/NavMobile";
 
 const Nav = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -37,11 +38,10 @@ const Nav = () => {
             <Link to={"/"}>
               <img
                 loading="eager"
-                src={"/images/MATRIX.png"}
+                src={"/images/logo-matrix-tutoring-putih.png"}
                 alt="Logo"
                 className="logo-nav"
               />
-              <h2>Matrix Tutoring</h2>
             </Link>
           </div>
 
@@ -53,18 +53,37 @@ const Nav = () => {
 
           <div className="auth-menu">
             <div className="button-container">
-              <ReusableButton
+              {/* <ReusableButton
                 text="Konsultasi"
                 bgColor="#ffffff"
                 borderColor="#007bff"
                 textColor="#007bff"
                 onClick={handleConsultationClick}
                 icon={<PhoneCall />}
-              />
+              /> */}
+
+              <button
+                onClick={handleConsultationClick}
+                className="button-no_icon">
+                {" "}
+                Chat Us Now!
+              </button>
+              {/* <button
+                className="button-with-icon"
+                onClick={handleConsultationClick}>
+                <svg
+                  className="icon"
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 24 24"
+                  fill="white">
+                  <path d="M20 2H4C2.9 2 2.01 2.9 2.01 4L2 22l4-4h14c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zm-2 12H6v-2h12v2zm0-3H6V9h12v2zm0-3H6V6h12v2z" />
+                </svg>
+                <span className="text">Chat Us</span>
+              </button> */}
             </div>
-            {/* <div className="mobile-menu">
+            <div className="mobile-menu">
               <NavMobile Menus={Menus} />
-            </div> */}
+            </div>
           </div>
         </div>
       </div>

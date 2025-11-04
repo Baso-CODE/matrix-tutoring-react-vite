@@ -41,7 +41,7 @@ const benefitsData = [
   },
 ];
 
-const BenefitOfTKA = () => {
+const BenefitOfTKA = ({ location }) => {
   return (
     <section id="benefit-of-tka" className="benefit-of-tka-section">
       <div className="benefit-of-tka-container">
@@ -60,11 +60,12 @@ const BenefitOfTKA = () => {
                 <div className="benefit-icon-wrapper">
                   <img
                     src={benefit.images}
-                    alt={benefit.title}
+                    alt={`${benefit.title} Icon - Matrix Tutoring ${
+                      location ? `di ${location}` : "Indonesia"
+                    }  `}
                     className="benefit-icon"
                     loading="lazy"
                   />
-                  {/* Gunakan komponen ikon Lucide */}
                 </div>
                 <h3 className="card-title">{benefit.title}</h3>
                 <p className="card-description">{benefit.description}</p>

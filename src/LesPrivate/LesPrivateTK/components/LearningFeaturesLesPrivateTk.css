@@ -38,18 +38,18 @@
 }
 
 .feature-title {
-  font-size: 1.25rem;
+  font-size: 1rem;
   margin-bottom: 6px;
   color: #333333;
-  font-family: "Nunito", sans-serif;
+  font-family: "Poppins", sans-serif;
 }
 
 .feature-description-v2 {
-  font-size: 1rem;
+  font-size: 0.9rem;
   line-height: 1.5;
   margin-top: 0;
   color: #4f4f4f;
-  font-family: "Nunito", sans-serif;
+  font-family: "Poppins", sans-serif;
 }
 
 @media (max-width: 768px) {
@@ -70,15 +70,15 @@
   }
 
   .feature-title {
-    font-size: 1.2rem;
+    font-size: 1rem;
     margin-bottom: 8px;
-    font-family: "Nunito", sans-serif;
+    font-family: "Poppins", sans-serif;
   }
 
   .feature-description-v2 {
-    font-size: 0.9rem;
-    font-weight: 500;
+    font-size: 0.85rem;
+
     text-align: start;
-    font-family: "Nunito", sans-serif;
+    font-family: "Poppins", sans-serif;
   }
 }

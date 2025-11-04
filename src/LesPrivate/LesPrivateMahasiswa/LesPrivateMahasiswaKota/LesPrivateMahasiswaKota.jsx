@@ -4,35 +4,34 @@ import { useParams } from "react-router-dom";
 import AsalSekolahSiswaEdumatrix from "../../../Components/AsalSekolahSiswa/AsalSekolahSiswa";
 import AccordionFAQ from "../../../Components/FAQ/AccordionFAQ";
 import FiturProgramNew from "../../../Components/FiturProgramNew/FiturProgramNew";
+import GaleriKegiatanBelajar from "../../../Components/GaleriKegiatanBelajar/GaleriKegiatanBelajar";
 import HowToOrder from "../../../Components/HowToOrder/HowToOrder";
-import Keunggulan from "../../../Components/Keunggulan/Keunggulan";
 import MasterTeacherV2 from "../../../Components/MasterTeacherV2/MasterTeacherV2";
-import MatrixFeatures from "../../../Components/MatrixFeatures/MatrixFeatures";
+import MatrixSubjects from "../../../Components/MatrixFeatures/MatrixSubjects";
+import WhyMatrixFeatures from "../../../Components/MatrixFeatures/WhyMatrixFeatures";
 import OnlineLesOptions from "../../../Components/OnlineLesOption/OnlineLesOption";
-import PengajarLestPrivate from "../../../Components/PengajarLestPrivate/PengajarLestPrivate";
 import ProgramBelajarLesPrivat from "../../../Components/ProgramBelajarLesPrivate/ProgramBelajarLesPrivate";
-import ProgramLesPrivat from "../../../Components/ProgramLesPrivate/ProgramLesPrivate";
+import ProgramLesPrivatV2 from "../../../Components/ProgramLesPrivatNew/ProgramLesPrivatV2 ";
 import PilihanProgram from "../../../Components/ProgramOptions/PilihanProgram";
-import AsalSekolahSiswaMarque from "../../../Components/SekolahSiswaMarque/SekolahSiswaMarque";
-import EmbrelaSlider from "../../../Components/SlideTop/EmbrelaSlider";
+import SuccessStoryLesPrivate from "../../../Components/SuccesStoryLesPrivate/SuccesStoryLesPrivate";
+import TestimoniOrtuSiswa from "../../../Components/TestimoniOrtuSiswa/TestimoniOrtuSiswa";
 import { getAllKotBySlug } from "../../../helper/request/getAllKotaBySlug";
 import CTABottomHome from "../../../Home/CTABottomHome/CTABottomHome";
 import PromoHomepage from "../../../Home/PromoHomepage/PromoHomepage";
 import { getHeroData } from "../../../utils/getHeroData";
 import HeroLesPrivate from "../../components/HeroLesPrrivate/HeroLesPrivate";
-import ListKabupatenLesPrivate from "../../components/ListKabupatenLesPrivate/ListKabupatenLesPrivate";
 import TableOfContents from "../../components/TableOfContent";
-import CoreUniversityBenefits from "../components/CoreUniversityBenefits/CoreUniversityBenefits";
-import LesPrivateMahasiswaHeader from "../components/LesPrivateMahasiswaHeader";
+import TestimoniWaSNBT from "../../LesPrivateSBMPTN/components/TestimoniWaSNBT/TestimoniWaSNBT";
+import LesprivatKota from "../../LesPrivateSD/components/LesprivatKota/LesprivatKota";
+import ProfileMatrixTutoring from "../../LesPrivateSD/components/ProfileMatrixTutoring/ProfileMatrixTutoring";
+import TutorLesprivatMatrix from "../../LesPrivateSD/components/TutorLesprivatMatrix/TutorLesprivatMatrix";
+import GalleryBelajarMahasiswa from "../components/GalleryBelajarMahasiswa/GalleryBelajarMahasiswa";
+import ImpactStatistics from "../components/ImpactStatistics/ImpactStatistics";
+import LesPrivateMahasiswaList from "../components/LesPrivateMahasiswaList";
+import LesPrivatMahasiswaContent from "../components/LesPrivatMahasiswaContent/LesPrivatMahasiswaContent";
 import PopularCourses from "../components/PopularCourses/PopularCourses";
-import StatistikImageMahasiswa from "../components/StatistikImageMahasiswa";
-import StudentTestimonialsSlider from "../components/StudentTestimonialsSlider/StudentTestimonialsSlider";
+import ProgamLesPrivatMahasiswa from "../components/ProgamLesPrivatMahasiswa/ProgamLesPrivatMahasiswa";
 import UniversitySuccessFlow from "../components/UniversitySuccessFlow/UniversitySuccessFlow";
-import SuccessStoryLesPrivate from "../../../Components/SuccesStoryLesPrivate/SuccesStoryLesPrivate";
-import TestimonialSiswa from "../../../Components/TestimonialSiswa/TestimonialSiswa";
-import TestimoniOrtuSiswa from "../../../Components/TestimoniOrtuSiswa/TestimoniOrtuSiswa";
-import ProgramLesPrivatV2 from "../../../Components/ProgramLesPrivatNew/ProgramLesPrivatV2 ";
-import GaleriKegiatanBelajar from "../../../Components/GaleriKegiatanBelajar/GaleriKegiatanBelajar";
 
 const items = [
   {
@@ -202,7 +201,6 @@ const LesPrivateMahasiswaKota = () => {
         <meta name="description" content={descriptionContent} />
         <meta name="keywords" content={keywords.join(", ")} />
         <link rel="canonical" href={canonicalUrl} />
-
         {/* Open Graph Meta Tags */}
         <meta property="og:locale" content="id_ID" />
         <meta property="og:type" content="article" />
@@ -220,7 +218,6 @@ const LesPrivateMahasiswaKota = () => {
           <meta key={tag} property="og:article:tag" content={tag} />
         ))}
         <meta property="article:section" content="Les Privat Mahasiswa" />
-
         {/* Twitter Card Meta Tags */}
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content={twitterTitle} />
@@ -228,94 +225,181 @@ const LesPrivateMahasiswaKota = () => {
         <meta name="twitter:image" content={ogImage} />
         <meta name="twitter:site" content="@matrix_tutoring" />
         <meta name="twitter:creator" content="@matrix_tutoring" />
-
-        {/* Schema Markup (JSON-LD) - BreadcrumbList */}
+        /* Schema Markup (JSON-LD) */
         <script type="application/ld+json">
           {`
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "BreadcrumbList",
+          "@id": "${canonicalUrl}#breadcrumb",
+          "itemListElement": [
             {
-              "@context": "https://schema.org",
-              "@graph": [
-                {
-                  "@type": "BreadcrumbList",
-                  "@id": "${canonicalUrl}#breadcrumb",
-                  "itemListElement": [
-                    {
-                      "@type": "ListItem",
-                      "position": "1",
-                      "item": {
-                        "@id": "${baseUrl}",
-                        "name": "Home"
-                      }
-                    },
-                    {
-                      "@type": "ListItem",
-                      "position": "2",
-                      "item": {
-                        "@id": "${baseUrl}/les-privat-mahasiswa",
-                        "name": "Les Privat Mahasiswa"
-                      }
-                    },
-                    {
-                      "@type": "ListItem",
-                      "position": "3",
-                      "item": {
-                        "@id": "${canonicalUrl}",
-                        "name": "${pageTitle.replace(/<\/?[^>]+(>|$)/g, "")}"
-                      }
-                    }
-                  ]
-                }
-              ]
+              "@type": "ListItem",
+              "position": 1,
+              "item": {
+                "@id": "${baseUrl}",
+                "name": "Home"
+              }
+            },
+            {
+              "@type": "ListItem",
+              "position": 2,
+              "item": {
+                "@id": "${baseUrl}/les-privat-mahasiswa", 
+                "name": "Les Privat Mahasiswa" 
+              }
+            },
+            {
+              "@type": "ListItem",
+              "position": 3,
+              "item": {
+                "@id": "${canonicalUrl}",
+                "name": "${pageTitle.replace(/<\/?[^>]+(>|$)/g, "")}" 
+              }
             }
-          `}
+          ]
+        },
+
+        {
+          "@type": "EducationalOrganization",
+          "@id": "${canonicalUrl}#organization",
+          "name": "Matrix Tutoring",
+          "description": "Layanan Les Privat Mahasiswa terbaik di **Kota ${nameCountry}**. Kami menyediakan bimbingan profesional untuk berbagai mata kuliah, persiapan ujian, dan pendampingan Tugas Akhir/Skripsi.",
+          "url": "${canonicalUrl}",
+          "areaServed": "Kota ${nameCountry}", 
+          "sameAs": [
+            "https://www.instagram.com/matrixtutoring.id",
+            "https://www.tiktok.com/@lesprivatmatrix.com",
+            "https://www.facebook.com/matrixtutoring"
+          ],
+          "brand": {
+            "@type": "Brand",
+            "name": "Matrix Tutoring",
+            "logo": "https://apps.bimbelmatrix.com/images/whatsapp_footer.webp"
+          },
+          "contactPoint": {
+            "@type": "ContactPoint",
+            "telephone": "+62-857-4728-1466",
+            "contactType": "Customer Service",
+            "areaServed": "ID",
+            "availableLanguage": ["Indonesian", "English"]
+          },
+          "keywords": "${keywords.join(", ")}"
+        },
+
+        {
+          "@type": "WebPage",
+          "@id": "${canonicalUrl}#webpage",
+          "url": "${canonicalUrl}",
+          "name": "${pageTitle.replace(/<\/?[^>]+(>|$)/g, "")}",
+          "inLanguage": "id-ID",
+          "description": "${descriptionContent}",
+          "isPartOf": { "@id": "${baseUrl}" },
+          "about": { "@id": "${canonicalUrl}#organization" },
+          "mainEntity": {
+            "@type": "Service",
+            "name": "Les Privat untuk Mahasiswa di Kota ${nameCountry}",
+            "provider": { "@id": "${canonicalUrl}#organization" },
+            "serviceType": "Bimbingan Akademik Perguruan Tinggi",
+            "areaServed": "Kota ${nameCountry}",
+            "offers": {
+              "@type": "Offer",
+              "priceCurrency": "IDR",
+              "availability": "https://schema.org/InStock",
+              "url": "${canonicalUrl}"
+            }
+          }
+        },
+
+        {
+          "@type": "FAQPage",
+          "@id": "${canonicalUrl}#faq",
+          "mainEntity": [
+            {
+              "@type": "Question",
+              "name": "Mata kuliah apa saja yang tersedia dalam Les Privat Mahasiswa di Kota ${nameCountry}?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Kami melayani hampir semua mata kuliah universitas, terutama mata kuliah dasar eksakta (Matematika Dasar, Fisika Dasar, Kimia Dasar), Statistika, Akuntansi, Ekonomi, dan bimbingan tugas akhir/skripsi."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Siapa pengajar untuk program Les Privat Mahasiswa?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Pengajar kami adalah lulusan S2 atau dosen muda berpengalaman dari universitas ternama, yang memiliki penguasaan materi mendalam dan siap membantu mahasiswa meraih IPK tinggi."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Bagaimana jadwal Les Privat Mahasiswa diatur?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Jadwal les bersifat sangat fleksibel. Mahasiswa dapat menentukan waktu dan frekuensi sesi sesuai dengan jadwal kuliah mereka, baik secara online maupun tatap muka."
+              }
+            }
+          ]
+        }
+      ]
+    }
+  `}
         </script>
       </Helmet>
 
       <HeroLesPrivate
-        nameCountry={nameCountry}
+        location={nameCountry}
         images={heroImageSrc}
         heading={displayedHeading}
         desc={heroData?.description}
       />
-      <EmbrelaSlider />
-      {/* <Slidertop /> */}
+      <ImpactStatistics />
+      {/* <EmbrelaSlider /> */}
       <TableOfContents title="Table of Contents" items={items} />
-      <LesPrivateMahasiswaHeader />
-      <UniversitySuccessFlow />
-      <CoreUniversityBenefits />
-      <StudentTestimonialsSlider />
+      <LesPrivatMahasiswaContent location={nameCountry} />
+      <ProgamLesPrivatMahasiswa />
+      <LesPrivateMahasiswaList />
+      <GalleryBelajarMahasiswa />
+      <TestimoniWaSNBT location={nameCountry} />
+      <ProfileMatrixTutoring
+        title={"Mahasiswa Terbaik"}
+        location={nameCountry}
+      />
+      <TutorLesprivatMatrix location={nameCountry} />
+      <LesprivatKota />
+      <UniversitySuccessFlow location={nameCountry} />
       <PopularCourses />
-      {/* <ImpactStatistics /> */}
-      <StatistikImageMahasiswa />
       <section id="program-les-private-matrix-tutoring">
-        <ProgramLesPrivatV2 />
+        <ProgramLesPrivatV2 location={nameCountry} />
       </section>
       <section id="fitur-program-les-private">
-        <FiturProgramNew />
+        <FiturProgramNew location={nameCountry} />
       </section>
       <section id="pilihan-program-les-private">
-        <PilihanProgram />
+        <PilihanProgram location={nameCountry} />
       </section>
       <section id="matrix-juga-melayani-les-privat-online">
-        <OnlineLesOptions />
+        <OnlineLesOptions location={nameCountry} />
       </section>
       <section id="pengajar-les-private">
-        <MasterTeacherV2 />
+        <MasterTeacherV2 location={nameCountry} />
       </section>
-      <ProgramBelajarLesPrivat />
-      <MatrixFeatures />
-      <SuccessStoryLesPrivate />
+      <ProgramBelajarLesPrivat location={nameCountry} />
+      <WhyMatrixFeatures />
+      <MatrixSubjects />
+      <SuccessStoryLesPrivate location={nameCountry} />
       {/* <TestimonialSiswa /> */}
-      <TestimoniOrtuSiswa />
+      <TestimoniOrtuSiswa location={nameCountry} />
       <section id="asal-sekolah-siswa-matrix-tutoring-private">
         <AsalSekolahSiswaEdumatrix />
-        <AsalSekolahSiswaMarque />
       </section>
 
       <HowToOrder />
       <AccordionFAQ />
-      <GaleriKegiatanBelajar />
-      <PromoHomepage />
+      <GaleriKegiatanBelajar location={nameCountry} />
+      <PromoHomepage location={nameCountry} />
       <CTABottomHome />
     </React.Fragment>
   );

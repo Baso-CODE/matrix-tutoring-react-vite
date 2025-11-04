@@ -1,6 +1,6 @@
 /* File: src/helper/Navbar/BottomNavigationBar/BottomNavigationBar.css */
 
-@media (min-width: 1024px) {
+@media (min-width: 1025px) {
   .bottom-nav-bar {
     display: none;
   }
@@ -8,7 +8,7 @@
 
 .bottom-nav-bar {
   position: fixed;
-  font-family: "Nunito", sans-serif;
+  font-family: "Poppins", sans-serif;
   bottom: 0;
   left: 0;
   right: 0;

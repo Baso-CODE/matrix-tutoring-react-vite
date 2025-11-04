@@ -1,9 +1,12 @@
+import { Link } from "react-router-dom";
+import { selectContactCsData } from "../../../../lib/features/contactCsSlice";
+import { useAppSelector } from "../../../../lib/hooks";
 import "./StatistikImage.css"; // Import file CSS terpisah
 
 const stats = [
   {
     image: "/images/les-private/tk/statistic/keterampilan.webp",
-    title: "Peningkatan Keterampilan", // Menggunakan 'title' untuk judul kartu
+    title: "Peningkatan Keterampilan",
     description:
       "Persentase siswa yang menunjukkan peningkatan signifikan dalam membaca, menulis, dan berhitung.",
   },
@@ -28,6 +31,9 @@ const stats = [
 ];
 
 const StatistikImage = () => {
+  const contactData = useAppSelector(selectContactCsData);
+
+  const finalUrl = contactData?.link_cta;
   return (
     <section id="tk-learning-materials" className="statistik-image-section">
       <div className="statistik-image-container">
@@ -41,20 +47,25 @@ const StatistikImage = () => {
 
         <div className="statistik-cards-grid">
           {stats.map((item, index) => (
-            <div key={index} className="statistik-card">
+            <div key={index} className="card">
               <img
                 src={item.image}
                 alt={item.title}
-                className="statistik-card-image"
+                className="card__image"
+                loading="lazy"
                 onError={(e) => {
                   e.target.onerror = null;
                   e.target.src =
-                    "https://placehold.co/80x80/cccccc/333333?text=Icon";
+                    "https://placehold.co/300x200/cccccc/333333?text=No+Image";
                 }}
-                loading="lazy"
               />
-              <h3 className="statistik-card-title">{item.title}</h3>
-              <p className="statistik-card-description">{item.description}</p>
+              <div className="card__content">
+                <p className="card__title">{item.title}</p>
+                <p className="card__description">{item.description}</p>
+                <Link to={finalUrl}>
+                  <button className="card__button">Detail</button>
+                </Link>
+              </div>
             </div>
           ))}
         </div>

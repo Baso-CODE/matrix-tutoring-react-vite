@@ -5,25 +5,22 @@ import { getKelurahanBySlug } from "../../helper/request/getAllKelurahanBySlug";
 import CTABottomHome from "../../Home/CTABottomHome/CTABottomHome";
 import PromoHomepage from "../../Home/PromoHomepage/PromoHomepage";
 import AsalSekolahSiswaEdumatrix from "../AsalSekolahSiswa/AsalSekolahSiswa";
-import BannerComponent from "../Banner/Banner";
 import AccordionFAQ from "../FAQ/AccordionFAQ";
 import FiturProgramNew from "../FiturProgramNew/FiturProgramNew";
+import GaleriKegiatanBelajar from "../GaleriKegiatanBelajar/GaleriKegiatanBelajar";
 import HowToOrder from "../HowToOrder/HowToOrder";
-import Keunggulan from "../Keunggulan/Keunggulan";
 import MasterTeacherV2 from "../MasterTeacherV2/MasterTeacherV2";
 import MatrixFeatures from "../MatrixFeatures/MatrixFeatures";
 import OnlineLesOptions from "../OnlineLesOption/OnlineLesOption";
-import PengajarLestPrivate from "../PengajarLestPrivate/PengajarLestPrivate";
 import ProgramBelajarLesPrivat from "../ProgramBelajarLesPrivate/ProgramBelajarLesPrivate";
-import ProgramLesPrivat from "../ProgramLesPrivate/ProgramLesPrivate";
+import ProgramLesPrivatV2 from "../ProgramLesPrivatNew/ProgramLesPrivatV2 ";
 import PilihanProgram from "../ProgramOptions/PilihanProgram";
 import AsalSekolahSiswaMarque from "../SekolahSiswaMarque/SekolahSiswaMarque";
 import EmbrelaSlider from "../SlideTop/EmbrelaSlider";
 import SuccessStoryLesPrivate from "../SuccesStoryLesPrivate/SuccesStoryLesPrivate";
-import TestimonialSiswa from "../TestimonialSiswa/TestimonialSiswa";
 import TestimoniOrtuSiswa from "../TestimoniOrtuSiswa/TestimoniOrtuSiswa";
-import ProgramLesPrivatV2 from "../ProgramLesPrivatNew/ProgramLesPrivatV2 ";
-import GaleriKegiatanBelajar from "../GaleriKegiatanBelajar/GaleriKegiatanBelajar";
+import WhyMatrixFeatures from "../MatrixFeatures/WhyMatrixFeatures";
+import MatrixSubjects from "../MatrixFeatures/MatrixSubjects";
 
 const Halamankelurahan = () => {
   const [kelurahan, setKelurahan] = useState([]);
@@ -93,47 +90,50 @@ const Halamankelurahan = () => {
           content="https://apps.bimbelmatrix.com/images/whatsapp_footer.webp"
         />
       </Helmet>
-
-      <div className="content-kota">
-        <div className="teks-content">
-          <h1 className="title-halaman-kota">
-            Les Privat Terbaik di{" "}
-            <span className="highlight-yellow">{kelurahan.kelurahan}</span> -
-            TK, SD, SMP, SMA, UTBK SNBT, SIMAK UI, UM PTN & CBT UGM Terbaik
-          </h1>
-          <div className="paragraf-kota">
-            <p className="child-paragraf-kota">
-              Bimbel Les Privat di {kelurahan.kelurahan} untuk TK, SD, SMP, SMA,
-              UN/AKM, OSN, CPNS, LPDP, PPDS, SIMAK UI, UTBK SNBT, CBT UGM,
-              UMPTN.
-            </p>
-            <p className="child-paragraf-kota">
-              Dapatkan layanan Les Privat kapan pun dan dimana pun dengan lebih
-              dari 5.000 Master Teacher Matrix Tutoring yang siap memberikan
-              pelayanan <span className="highlight-yellow">terbaik.</span>
-            </p>
+      <div className="container-halaman-kota">
+        <div className="content-kota">
+          <div className="teks-content">
+            <h1 className="title-halaman-kota">
+              Les Privat Terbaik di{" "}
+              <span className="highlight-yellow">{kelurahan.kelurahan}</span> -
+              TK, SD, SMP, SMA, UTBK SNBT, SIMAK UI, UM PTN & CBT UGM Terbaik
+            </h1>
+            <div className="paragraf-kota">
+              <p className="child-paragraf-kota">
+                Bimbel Les Privat di {kelurahan.kelurahan} untuk TK, SD, SMP,
+                SMA, UN/AKM, OSN, CPNS, LPDP, PPDS, SIMAK UI, UTBK SNBT, CBT
+                UGM, UMPTN.
+              </p>
+              <p className="child-paragraf-kota">
+                Dapatkan layanan Les Privat kapan pun dan dimana pun dengan
+                lebih dari 5.000 Master Teacher Matrix Tutoring yang siap
+                memberikan pelayanan{" "}
+                <span className="highlight-yellow">terbaik.</span>
+              </p>
+            </div>
           </div>
+          <img
+            className="rumah-adat"
+            loading="eager"
+            src={"/images/KELURAHAN.webp"}
+            alt={`les privat Online & Guru ke Rumah (TK, SD, SMP, SMA, AKM, Mahasiswa, Bahasa Asing, Simak UI, SBMPTN) di ${kelurahan.kelurahan} - Matrix Tutoring`}
+          />
         </div>
-        <img
-          className="rumah-adat"
-          loading="eager"
-          src={"/images/KELURAHAN.webp"}
-          alt={`les privat Online & Guru ke Rumah (TK, SD, SMP, SMA, AKM, Mahasiswa, Bahasa Asing, Simak UI, SBMPTN) di ${kelurahan.kelurahan} - Matrix Tutoring`}
-        />
       </div>
-      <EmbrelaSlider />
+      {/* <EmbrelaSlider /> */}
       <ProgramLesPrivatV2 />
       <FiturProgramNew />
       <PilihanProgram />
       <OnlineLesOptions />
       <MasterTeacherV2 />
       <ProgramBelajarLesPrivat />
-      <MatrixFeatures />
+      <WhyMatrixFeatures />
+      <MatrixSubjects />
       <SuccessStoryLesPrivate />
       {/* <TestimonialSiswa /> */}
       <TestimoniOrtuSiswa />
       <AsalSekolahSiswaEdumatrix />
-      <AsalSekolahSiswaMarque />
+      {/* <AsalSekolahSiswaMarque /> */}
       <HowToOrder />
       <AccordionFAQ />
       <GaleriKegiatanBelajar />

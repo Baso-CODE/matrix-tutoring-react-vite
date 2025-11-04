@@ -1,0 +1,129 @@
+.container-informasi_seputar_tka {
+  padding-left: 10%;
+  padding-right: 10%;
+  padding-bottom: 5%;
+}
+
+@media (max-width: 1024px) {
+  .container-informasi_seputar_tka {
+    padding-left: 4%;
+    padding-right: 4%;
+  }
+}
+
+.centered-content-informationTKA {
+  width: 100%;
+
+  margin-bottom: 20px;
+}
+
+.centered-content-informationTKA h2 {
+  font-size: 1.2rem;
+  color: #333333;
+  font-family: "Poppins", sans-serif;
+  font-weight: 700;
+  margin-bottom: 0.3rem;
+  line-height: 1.4;
+  border-left: 4px solid #0077ff;
+  padding-left: 0.6rem;
+}
+
+.centered-content-informationTKA h3 {
+  font-size: 1.1rem;
+  color: #333333;
+  font-family: "Poppins", sans-serif;
+  font-weight: 600;
+  margin-top: 1.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.centered-content-informationTKA h4 {
+  font-size: 1.02rem;
+  color: #444444;
+  font-family: "Poppins", sans-serif;
+  font-weight: 600;
+  margin-bottom: 0.3rem;
+}
+
+.centered-content-informationTKA p {
+  font-size: 0.9rem;
+  color: #4f4f4f;
+  line-height: 1.6;
+  font-weight: 400;
+  font-family: "Poppins", sans-serif;
+}
+
+.centered-content-informationTKA ul {
+  margin-left: 1.2rem;
+  margin-bottom: 1rem;
+  list-style-type: disc;
+}
+
+.centered-content-informationTKA li {
+  margin-bottom: 0.3rem;
+  color: #555555;
+  font-size: 1rem;
+  line-height: 1.5;
+  font-family: "Poppins", sans-serif;
+}
+
+/* --- Checklist style --- */
+.centered-content-informationTKA .checklist {
+  list-style: none; /* hilangkan bullet bawaan */
+  margin: 0;
+  padding: 0;
+}
+
+.centered-content-informationTKA .checklist li {
+  position: relative;
+  padding-left: 1.6rem; /* kasih ruang buat icon ceklis */
+  margin-bottom: 0.4rem;
+  font-size: 1rem;
+  color: #444;
+  line-height: 1.5;
+  font-family: "Poppins", sans-serif;
+}
+
+.centered-content-informationTKA .checklist li::before {
+  content: "✔"; /* ceklis manual */
+  position: absolute;
+  left: 0;
+  top: 0;
+  color: #0077ff; /* biru biar standout */
+  font-weight: bold;
+}
+
+/* --- Numbered list style --- */
+.centered-content-informationTKA .numbered-list {
+  margin-left: 1.5rem;
+  margin-bottom: 1rem;
+  list-style-type: decimal;
+}
+
+.centered-content-informationTKA .numbered-list li {
+  margin-bottom: 0.4rem;
+  color: #555;
+  font-size: 0.9rem;
+  line-height: 1.5;
+  font-family: "Poppins", sans-serif;
+}
+
+/* Responsiveness */
+@media (max-width: 768px) {
+  .centered-content-informationTKA h2 {
+    font-size: 1.2rem;
+  }
+
+  .centered-content-informationTKA h3 {
+    font-size: 1rem;
+  }
+
+  .centered-content-informationTKA h4 {
+    font-size: 0.9rem;
+  }
+
+  .centered-content-informationTKA p,
+  .centered-content-informationTKA li {
+    font-size: 0.9rem;
+  }
+}

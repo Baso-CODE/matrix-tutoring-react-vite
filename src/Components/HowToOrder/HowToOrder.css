@@ -75,7 +75,6 @@
 
 .step-header {
   display: flex;
-  align-items: center;
   margin-bottom: 15px;
   position: relative;
   z-index: 1;
@@ -86,8 +85,8 @@
   color: #ffffff;
   font-size: 1.2rem;
   font-weight: bold;
-  width: 45px;
-  height: 45px;
+  width: 38px;
+  height: 38px;
   border-radius: 50%;
   display: flex;
   justify-content: center;
@@ -103,22 +102,23 @@
 }
 
 .step-title {
-  font-size: 1.2rem;
+  font-size: 1rem;
   color: #333333;
-  font-weight: 700;
+
+  line-height: 1.3rem;
   transition: color 0.3s ease;
   margin: 0;
-  font-family: "Nunito", sans-serif;
+  font-family: "Poppins", sans-serif;
 }
 
 .step-description {
-  font-size: 0.95rem;
+  font-size: 0.9rem;
   color: #4f4f4f;
   line-height: 1.6;
   margin: 0;
   position: relative;
   z-index: 1;
-  font-family: "Nunito", sans-serif;
+  font-family: "Poppins", sans-serif;
   transition: color 0.3s ease;
 }
 
@@ -167,7 +167,7 @@
   color: #ffffff;
   padding: 12px 25px;
   border: none;
-  font-family: "Nunito", sans-serif;
+  font-family: "Poppins", sans-serif;
   border-radius: 8px;
   font-size: 1.1rem;
   font-weight: 600;
@@ -199,29 +199,37 @@
     padding-left: 4%;
     padding-right: 4%;
   }
+  .order-step-card {
+    padding: 19px 20px;
+  }
   .how-to-order-container {
     flex-direction: column;
     align-items: center;
   }
   .how-to-order-main {
     order: 0;
-    padding: 30px;
+    padding: 0px;
     align-items: center;
     text-align: center;
-    margin-bottom: 30px;
   }
   .how-to-order-steps {
-    order: 1;
-    max-width: 600px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px; /* jarak antar kolom dan baris */
   }
+
   .how-to-order-heading {
     font-size: 2rem;
     margin-bottom: 20px;
   }
   .order-step-card::after {
-    font-size: 25vw;
-    bottom: -10px;
+    font-size: 18vw;
+    bottom: -15px;
     right: -10px;
+  }
+  .step-number {
+    width: 35px;
+    height: 35px;
   }
 }
 
@@ -251,7 +259,7 @@
     margin-right: 10px;
   }
   .step-title {
-    font-size: 1.2rem;
+    font-size: 1.1rem;
   }
   .step-description {
     font-size: 0.9rem;

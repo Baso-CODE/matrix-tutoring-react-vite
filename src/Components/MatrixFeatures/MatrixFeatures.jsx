@@ -1,7 +1,6 @@
 import { useState } from "react";
-import "./MatrixFeature.css";
 import ReusableButton from "../../helper/Button/ReusableButton/ReusableButton";
-// Ganti path ke gambar Anda
+import "./MatrixFeature.css";
 
 const whyMatrixFeatures = [
   {

@@ -4,32 +4,30 @@ import { useParams } from "react-router-dom";
 import AsalSekolahSiswaEdumatrix from "../../../Components/AsalSekolahSiswa/AsalSekolahSiswa";
 import AccordionFAQ from "../../../Components/FAQ/AccordionFAQ";
 import FiturProgramNew from "../../../Components/FiturProgramNew/FiturProgramNew";
+import GaleriKegiatanBelajar from "../../../Components/GaleriKegiatanBelajar/GaleriKegiatanBelajar";
 import HowToOrder from "../../../Components/HowToOrder/HowToOrder";
-import Keunggulan from "../../../Components/Keunggulan/Keunggulan";
 import MasterTeacherV2 from "../../../Components/MasterTeacherV2/MasterTeacherV2";
-import MatrixFeatures from "../../../Components/MatrixFeatures/MatrixFeatures";
+import MatrixSubjects from "../../../Components/MatrixFeatures/MatrixSubjects";
+import WhyMatrixFeatures from "../../../Components/MatrixFeatures/WhyMatrixFeatures";
 import OnlineLesOptions from "../../../Components/OnlineLesOption/OnlineLesOption";
-import PengajarLestPrivate from "../../../Components/PengajarLestPrivate/PengajarLestPrivate";
 import ProgramBelajarLesPrivat from "../../../Components/ProgramBelajarLesPrivate/ProgramBelajarLesPrivate";
-import ProgramLesPrivat from "../../../Components/ProgramLesPrivate/ProgramLesPrivate";
+import ProgramLesPrivatV2 from "../../../Components/ProgramLesPrivatNew/ProgramLesPrivatV2 ";
 import PilihanProgram from "../../../Components/ProgramOptions/PilihanProgram";
-import AsalSekolahSiswaMarque from "../../../Components/SekolahSiswaMarque/SekolahSiswaMarque";
-import EmbrelaSlider from "../../../Components/SlideTop/EmbrelaSlider";
+import SuccessStoryLesPrivate from "../../../Components/SuccesStoryLesPrivate/SuccesStoryLesPrivate";
+import TestimoniOrtuSiswa from "../../../Components/TestimoniOrtuSiswa/TestimoniOrtuSiswa";
 import CTABottomHome from "../../../Home/CTABottomHome/CTABottomHome";
 import PromoHomepage from "../../../Home/PromoHomepage/PromoHomepage";
 import { getHeroData } from "../../../utils/getHeroData";
 import HeroLesPrivate from "../../components/HeroLesPrrivate/HeroLesPrivate";
-import ListKabupatenLesPrivate from "../../components/ListKabupatenLesPrivate/ListKabupatenLesPrivate";
 import TableOfContents from "../../components/TableOfContent";
+import LesprivatKota from "../../LesPrivateSD/components/LesprivatKota/LesprivatKota";
+import ProfileMatrixTutoring from "../../LesPrivateSD/components/ProfileMatrixTutoring/ProfileMatrixTutoring";
+import TutorLesprivatMatrix from "../../LesPrivateSD/components/TutorLesprivatMatrix/TutorLesprivatMatrix";
+import ContentLesPrivatBahasa from "../components/ContentLesPrivatBahasa/ContentLesPrivatBahasa";
 import FlowPembelajaranBahasa from "../components/FlowPembelajaranBahasa/FlowPembelajaranBahasa";
-import LesPrivateBahasaHeader from "../components/LesPrivateBahasaHeader";
-import StatistikImageBahasa from "../components/StatistikImageBahasa";
-import TestimonialBahasa from "../components/TestimonialBahasa/TestimonialBahasa";
-import ProgramLesPrivatV2 from "../../../Components/ProgramLesPrivatNew/ProgramLesPrivatV2 ";
-import TestimoniOrtuSiswa from "../../../Components/TestimoniOrtuSiswa/TestimoniOrtuSiswa";
-import TestimonialSiswa from "../../../Components/TestimonialSiswa/TestimonialSiswa";
-import SuccessStoryLesPrivate from "../../../Components/SuccesStoryLesPrivate/SuccesStoryLesPrivate";
-import GaleriKegiatanBelajar from "../../../Components/GaleriKegiatanBelajar/GaleriKegiatanBelajar";
+import LanguageOptions from "../components/LanguageOptions/LanguageOptions";
+import ProgaramInsenstifBahasa from "../components/ProgaramInsenstifBahasa/ProgaramInsenstifBahasa";
+import ProgaramLesPrivatBahasa from "../components/ProgaramLesPrivatBahasa/ProgaramLesPrivatBahasa";
 
 const items = [
   {
@@ -144,25 +142,25 @@ const LesPrivateBahasaKota = () => {
   const ogImageAlt = `Les Privat Bahasa Asing Inggris ${nameCountry} Matrix Tutoring`;
 
   const keywords = [
-    `Les Privat Bahasa Asing ${nameCountry}`,
-    `Les Bahasa Inggris ${nameCountry}`,
-    `Les Privat Online Bahasa ${nameCountry}`,
-    `Les Privat Offline Bahasa ${nameCountry}`,
-    `Program Les Bahasa Asing ${nameCountry}`,
-    `Tutor Bahasa Asing ${nameCountry}`,
-    `Les Bahasa Jepang ${nameCountry}`,
-    `Les Bahasa Mandarin ${nameCountry}`,
-    `Les Bahasa Prancis ${nameCountry}`,
-    `Les Bahasa Spanyol ${nameCountry}`,
-    `Les Bahasa Jerman ${nameCountry}`,
-    `Les Bahasa Korea ${nameCountry}`,
-    `Les Bahasa Arab ${nameCountry}`,
-    `Kursus Bahasa Inggris ${nameCountry}`,
-    `Kursus Bahasa Asing ${nameCountry}`,
-    `Les Privat Conversation ${nameCountry}`,
-    `Bimbingan Belajar Bahasa Asing ${nameCountry}`,
-    `Matrix Tutoring ${nameCountry}`,
-    `Les Privat Matrix ${nameCountry}`,
+    `Les Privat Bahasa Asing Kota ${nameCountry}`,
+    `Les Bahasa Inggris Kota ${nameCountry}`,
+    `Les Privat Online Bahasa Kota ${nameCountry}`,
+    `Les Privat Offline Bahasa Kota ${nameCountry}`,
+    `Program Les Bahasa Asing Kota ${nameCountry}`,
+    `Tutor Bahasa Asing Kota ${nameCountry}`,
+    `Les Bahasa Jepang Kota ${nameCountry}`,
+    `Les Bahasa Mandarin Kota ${nameCountry}`,
+    `Les Bahasa Prancis Kota ${nameCountry}`,
+    `Les Bahasa Spanyol Kota ${nameCountry}`,
+    `Les Bahasa Jerman Kota ${nameCountry}`,
+    `Les Bahasa Korea Kota ${nameCountry}`,
+    `Les Bahasa Arab Kota ${nameCountry}`,
+    `Kursus Bahasa Inggris Kota ${nameCountry}`,
+    `Kursus Bahasa Asing Kota ${nameCountry}`,
+    `Les Privat Conversation Kota ${nameCountry}`,
+    `Bimbingan Belajar Bahasa Asing Kota ${nameCountry}`,
+    `Matrix Tutoring Kota ${nameCountry}`,
+    `Les Privat Matrix Kota ${nameCountry}`,
     kotaSlug.replace(/-/g, " ").toLowerCase(), // Tambahkan slug kota sebagai keyword tanpa diulang
   ];
 
@@ -178,7 +176,6 @@ const LesPrivateBahasaKota = () => {
         <meta name="description" content={descriptionContent} />
         <meta name="keywords" content={keywords.join(", ")} />
         <link rel="canonical" href={canonicalUrl} />
-
         {/* Open Graph Meta Tags */}
         <meta property="og:locale" content="id_ID" />
         <meta property="og:type" content="article" />
@@ -196,7 +193,6 @@ const LesPrivateBahasaKota = () => {
           <meta key={tag} property="og:article:tag" content={tag} />
         ))}
         <meta property="article:section" content="Les Privat Bahasa Asing" />
-
         {/* Twitter Card Meta Tags */}
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content={twitterTitle} />
@@ -204,91 +200,176 @@ const LesPrivateBahasaKota = () => {
         <meta name="twitter:image" content={ogImage} />
         <meta name="twitter:site" content="@matrix_tutoring" />
         <meta name="twitter:creator" content="@matrix_tutoring" />
-
-        {/* Schema Markup (JSON-LD) - BreadcrumbList dan Service */}
+        /* Schema Markup (JSON-LD) */
         <script type="application/ld+json">
           {`
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "BreadcrumbList",
+          "@id": "${canonicalUrl}#breadcrumb",
+          "itemListElement": [
             {
-              "@context": "https://schema.org",
-              "@graph": [
-                {
-                  "@type": "BreadcrumbList",
-                  "@id": "${canonicalUrl}#breadcrumb",
-                  "itemListElement": [
-                    {
-                      "@type": "ListItem",
-                      "position": "1",
-                      "item": {
-                        "@id": "${baseUrl}",
-                        "name": "Home"
-                      }
-                    },
-                    {
-                      "@type": "ListItem",
-                      "position": "2",
-                      "item": {
-                        "@id": "${baseUrl}/les-privat-bahasa-asing",
-                        "name": "Les Privat Bahasa Asing"
-                      }
-                    },
-                    {
-                      "@type": "ListItem",
-                      "position": "3",
-                      "item": {
-                        "@id": "${canonicalUrl}",
-                        "name": "${pageTitle.replace(/<\/?[^>]+(>|$)/g, "")}"
-                      }
-                    }
-                  ]
-                },
-              ]
+              "@type": "ListItem",
+              "position": 1,
+              "item": {
+                "@id": "${baseUrl}",
+                "name": "Home"
+              }
+            },
+            {
+              "@type": "ListItem",
+              "position": 2,
+              "item": {
+                "@id": "${baseUrl}/les-privat-bahasa-asing", 
+                "name": "Les Privat Bahasa Asing" 
+              }
+            },
+            {
+              "@type": "ListItem",
+              "position": 3,
+              "item": {
+                "@id": "${canonicalUrl}",
+                "name": "${pageTitle.replace(/<\/?[^>]+(>|$)/g, "")}" 
+              }
             }
-          `}
+          ]
+        },
+
+        {
+          "@type": "EducationalOrganization",
+          "@id": "${canonicalUrl}#organization",
+          "name": "Matrix Tutoring",
+          "description": "Les Privat Bahasa Asing (Inggris, Mandarin, Jepang, Korea, dll.) terbaik di **Kota ${nameCountry}**. Program fleksibel untuk percakapan, akademik, dan persiapan ujian internasional.",
+          "url": "${canonicalUrl}",
+          "areaServed": "Kota ${nameCountry}", 
+          "sameAs": [
+            "https://www.instagram.com/matrixtutoring.id",
+            "https://www.tiktok.com/@lesprivatmatrix.com",
+            "https://www.facebook.com/matrixtutoring"
+          ],
+          "brand": {
+            "@type": "Brand",
+            "name": "Matrix Tutoring",
+            "logo": "https://apps.bimbelmatrix.com/images/whatsapp_footer.webp"
+          },
+          "contactPoint": {
+            "@type": "ContactPoint",
+            "telephone": "+62-857-4728-1466",
+            "contactType": "Customer Service",
+            "areaServed": "ID",
+            "availableLanguage": ["Indonesian", "English"]
+          },
+          "keywords": "${keywords.join(", ")}"
+        },
+
+        {
+          "@type": "WebPage",
+          "@id": "${canonicalUrl}#webpage",
+          "url": "${canonicalUrl}",
+          "name": "${pageTitle.replace(/<\/?[^>]+(>|$)/g, "")}",
+          "inLanguage": "id-ID",
+          "description": "${descriptionContent}",
+          "isPartOf": { "@id": "${baseUrl}" },
+          "about": { "@id": "${canonicalUrl}#organization" },
+          "mainEntity": {
+            "@type": "Service",
+            "name": "Les Privat Bahasa Asing di Kota ${nameCountry}",
+            "provider": { "@id": "${canonicalUrl}#organization" },
+            "serviceType": "Kursus dan Les Privat Bahasa Asing",
+            "areaServed": "Kota ${nameCountry}",
+            "offers": {
+              "@type": "Offer",
+              "priceCurrency": "IDR",
+              "availability": "https://schema.org/InStock",
+              "url": "${canonicalUrl}"
+            }
+          }
+        },
+
+        {
+          "@type": "FAQPage",
+          "@id": "${canonicalUrl}#faq",
+          "mainEntity": [
+            {
+              "@type": "Question",
+              "name": "Apakah Les Privat Bahasa Asing di Kota ${nameCountry} melayani semua usia?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Ya, kami menyediakan program untuk semua jenjang usia, mulai dari anak-anak (SD/TK) hingga dewasa dan profesional, dengan kurikulum yang disesuaikan untuk setiap kebutuhan."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Bahasa apa saja yang dapat dipelajari melalui les privat ini?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Kami fokus pada Bahasa Inggris (General English, TOEFL, IELTS), Mandarin, Jepang, Korea, Jerman, Prancis, Spanyol, dan Arab. Hubungi kami jika bahasa yang Anda cari tidak tercantum."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Apakah tersedia guru privat Bahasa Inggris untuk persiapan TOEFL atau IELTS di ${nameCountry}?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Tentu. Kami memiliki tutor spesialis yang berpengalaman dalam persiapan ujian TOEFL iBT, ITP, dan IELTS, fokus pada strategi membaca, mendengarkan, menulis, dan berbicara."
+              }
+            }
+          ]
+        }
+      ]
+    }
+  `}
         </script>
       </Helmet>
-
       <HeroLesPrivate
-        nameCountry={nameCountry}
         images={heroImageSrc}
         heading={displayedHeading}
         desc={heroData?.description}
+        location={nameCountry}
       />
-      <EmbrelaSlider />
+      {/* <EmbrelaSlider /> */}
       {/* <Slidertop /> */}
       <TableOfContents title="Table of Contents" items={items} />
-      <LesPrivateBahasaHeader />
-      <FlowPembelajaranBahasa />
-      <TestimonialBahasa />
-      <StatistikImageBahasa />
+      <ContentLesPrivatBahasa />
+      <ProgaramLesPrivatBahasa />
+      <ProgaramInsenstifBahasa location={nameCountry} />
+      <FlowPembelajaranBahasa location={nameCountry} />
+      <LanguageOptions location={nameCountry} />{" "}
+      <ProfileMatrixTutoring title={"Bahasa Asing Terbaik"} />
+      <TutorLesprivatMatrix />
+      <LesprivatKota />
+      {/* <StatistikImageBahasa /> */}
       <section id="program-les-private-matrix-tutoring">
-        <ProgramLesPrivatV2 />
+        <ProgramLesPrivatV2 location={nameCountry} />
       </section>
       <section id="fitur-program-les-private">
-        <FiturProgramNew />
+        <FiturProgramNew location={nameCountry} />
       </section>
       <section id="pilihan-program-les-private">
-        <PilihanProgram />
+        <PilihanProgram location={nameCountry} />
       </section>
       <section id="matrix-juga-melayani-les-privat-online">
-        <OnlineLesOptions />
+        <OnlineLesOptions location={nameCountry} />
       </section>
       <section id="pengajar-les-private">
-        <MasterTeacherV2 />
+        <MasterTeacherV2 location={nameCountry} />
       </section>
-      <ProgramBelajarLesPrivat />
-      <MatrixFeatures />
-      <SuccessStoryLesPrivate />
+      <ProgramBelajarLesPrivat location={nameCountry} />
+      <WhyMatrixFeatures />
+      <MatrixSubjects />
+      <SuccessStoryLesPrivate location={nameCountry} />
       {/* <TestimonialSiswa /> */}
-      <TestimoniOrtuSiswa />
+      <TestimoniOrtuSiswa location={nameCountry} />
       <section id="asal-sekolah-siswa-matrix-tutoring-private">
         <AsalSekolahSiswaEdumatrix />
-        <AsalSekolahSiswaMarque />
+        {/* <AsalSekolahSiswaMarque /> */}
       </section>
-
       <HowToOrder />
       <AccordionFAQ />
-      <GaleriKegiatanBelajar />
-      <PromoHomepage />
+      <GaleriKegiatanBelajar location={nameCountry} />
+      <PromoHomepage location={nameCountry} />
       <CTABottomHome />
     </React.Fragment>
   );

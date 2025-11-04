@@ -7,16 +7,20 @@ import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
 
-// Import required modules
 import { Autoplay, Navigation, Pagination } from "swiper/modules";
 
-import "./MainSubjectsSD.css"; // Import file CSS untuk styling
+import "./MainSubjectsSD.css";
 
 const subjectItems = [
   {
+    images: "/images/les-private/sd/mata-pelajaran/calistung.png", // Calistung
+    title: "Calistung (Baca, Tulis, Hitung)",
+    text: "Fokus pada kemampuan dasar membaca, menulis huruf dengan benar, dan berhitung sederhana. Cocok untuk siswa kelas awal SD agar lebih siap mengikuti pelajaran.",
+  },
+  {
     images: "/images/les-private/sd/mata-pelajaran/matematika.webp", // Matematika
     title: "Matematika",
-    text: "Penguasaan konsep dasar hitung, aljabar sederhana, geometri, dan pemecahan masalah. Dari penjumlahan hingga pecahan.",
+    text: "Penguasaan konsep dasar hitung mulai dari penjumlahan, pengurangan, pembagian, perkalian, aljabar sederhana, geometri, dan pemecahan masalah lewat latihan soal.",
   },
   {
     images: "/images/les-private/sd/mata-pelajaran/bahasa-indonesia.webp", // Bahasa Indonesia
@@ -46,8 +50,8 @@ const subjectItems = [
   },
 ];
 
-const MainSubjectsSD = () => {
-  const [hoveredIndex, setHoveredIndex] = useState(null); // State untuk melacak indeks slide yang dihover
+const MainSubjectsSD = ({ location }) => {
+  const [hoveredIndex, setHoveredIndex] = useState(null);
 
   return (
     <section id="materi-pelajaran-sd-utama" className="main-subjects-section">
@@ -103,7 +107,9 @@ const MainSubjectsSD = () => {
                 <div className="subject-icon-wrapper">
                   <img
                     src={item.images}
-                    alt={item.title}
+                    alt={`${item.title} Icon Les Privat SD ${
+                      location ? `di ${location}` : ""
+                    }`}
                     className="subject-icon"
                   />
                 </div>

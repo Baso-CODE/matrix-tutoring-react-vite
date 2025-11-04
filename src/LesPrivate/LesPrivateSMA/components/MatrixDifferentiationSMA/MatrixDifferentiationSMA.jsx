@@ -87,7 +87,7 @@ const MatrixDifferentiationSMA = () => {
                   onError={(e) => {
                     e.target.onerror = null;
                     e.target.src =
-                      "https://placehold.co/600x400/CCCCCC/000000?text=Image+Not+Found";
+                      "https://placehold.co/800x360/CCCCCC/000000?text=Image+Not+Found";
                   }}
                 />
               </div>

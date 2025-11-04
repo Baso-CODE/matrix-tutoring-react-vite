@@ -1,8 +1,11 @@
 import React, { useEffect, useState } from "react";
 import "./PromoHomepage.css";
 import { getAllPromo } from "../../helper/request/getAllPromo";
+import { selectContactCsData } from "../../lib/features/contactCsSlice";
+import { useAppSelector } from "../../lib/hooks";
 
-const PromoHomepage = () => {
+const PromoHomepage = ({ location }) => {
+  const contactData = useAppSelector(selectContactCsData);
   const [promoMobile, setPromoMobile] = useState([]);
 
   const [promoDesktop, setPromoDesktop] = useState([]);
@@ -55,14 +58,16 @@ const PromoHomepage = () => {
             promoMobile.map((promo, index) => (
               <a
                 key={promo.id || index}
-                href={promo.url || "#"}
+                href={contactData?.link_cta || "#"}
                 target="_blank"
                 rel="noopener noreferrer">
                 <img
                   loading="lazy"
                   className="child-promo-home"
                   src={promo.url}
-                  alt={`Promo mobile ${promo.id || index + 1}`}
+                  alt={`Promo mobile ${location ? `di ${location}` : ""} ${
+                    promo.id || index + 1
+                  }`}
                 />
               </a>
             ))
@@ -76,14 +81,16 @@ const PromoHomepage = () => {
             promoDesktop.map((promo, index) => (
               <a
                 key={promo.id || index}
-                href={promo.url || "#"}
+                href={contactData?.link_cta || "#"}
                 target="_blank"
                 rel="noopener noreferrer">
                 <img
                   loading="lazy"
                   className="child-promo-home"
                   src={promo.url}
-                  alt={`Promo desktop ${promo.id || index + 1}`}
+                  alt={`Promo desktop ${location ? `di ${location}` : ""} ${
+                    promo.id || index + 1
+                  }`}
                 />
               </a>
             ))

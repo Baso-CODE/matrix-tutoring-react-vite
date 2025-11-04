@@ -2,52 +2,10 @@
   position: relative;
   list-style: none;
 }
-/* 
-.menu-link {
-  display: flex;
-  align-items: center;
-  gap: 4px;
-  font-weight: 500;
-  padding: 4px 8px;
-  border-radius: 10px;
-  cursor: pointer;
-  transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
-  text-decoration: none;
-  color: white;
-  font-family: "Nunito", sans-serif;
-} */
-
-/* .menu-link:hover {
-  color: #011cde;
-}
-
-.menu-link.active {
-  color: #007bff;
-}
-
-.chevron-icon {
-  margin-top: 2px;
-  transition: transform 0.2s ease-in-out;
-} */
 
 .rotate-180 {
   transform: rotate(180deg);
 }
-
-/* .sub-menu {
-  position: absolute;
-  top: 110%;
-  left: 0;
-
-  z-index: 999;
-  padding: 16px;
-  border-radius: 6px;
-  backdrop-filter: blur(4px);
-  background-color: #3348e4;
-  display: none;
-  width: 400px;
-  grid-gap: 20px;
-} */
 
 .grid {
   display: grid;
@@ -111,11 +69,12 @@
 
 .menu-link {
   display: flex;
+  font-size: 0.9rem;
   align-items: center;
   gap: 4px;
   padding: 4px 8px;
   font-weight: 600;
-  font-family: "Nunito", sans-serif;
+  font-family: "Poppins", sans-serif;
   border-radius: 10px;
   cursor: pointer;
   transition: background-color 0.2s ease-in-out;
@@ -181,7 +140,7 @@
   width: max-content;
   height: fit-content;
   grid-gap: 20px;
-  font-family: "Nunito", sans-serif;
+  font-family: "Poppins", sans-serif;
 }
 
 .grid {
@@ -237,16 +196,16 @@
   font-weight: 700;
   /* margin-bottom: -10px; */
   color: #ffffff;
-  font-size: 14px;
-  font-family: "Nunito", sans-serif;
+  font-size: 0.8rem;
+  font-family: "Poppins", sans-serif;
 }
 
 .submenu-desc {
-  font-size: 15px;
+  font-size: 0.9rem;
   font-weight: 700;
   margin: 0;
   color: #f9f9f9cf;
-  font-family: "Nunito", sans-serif;
+  font-family: "Poppins", sans-serif;
 }
 
 @media (max-width: 768px) {

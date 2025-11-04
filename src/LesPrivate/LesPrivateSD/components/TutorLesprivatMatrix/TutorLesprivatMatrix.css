@@ -1,0 +1,145 @@
+.tutor__section {
+  text-align: center;
+  padding-top: 5%;
+  padding-bottom: 5%;
+  background-color: #007bff;
+  padding-left: 8%;
+  padding-right: 8%;
+}
+
+.tutor__title {
+  font-size: 1.3rem;
+  font-family: "Poppins", sans-serif;
+  font-weight: 800;
+  text-transform: uppercase;
+  margin-bottom: 10px;
+  color: #ffffff;
+}
+.container__tutor-description {
+  display: flex;
+  justify-content: center;
+}
+.tutor__description {
+  font-size: 0.9rem;
+  justify-content: center;
+  text-align: center;
+  font-family: "Poppins", sans-serif;
+  font-weight: normal;
+  max-width: 70%;
+  margin-bottom: 40px;
+  color: #f2f2f2;
+}
+
+.tutor__grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 20px;
+  width: 100%;
+  /* justify-items: center; */
+}
+.tutor__card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  /* max-width: 200px; */
+  min-height: 220px;
+  background: linear-gradient(to bottom, #c3e6ec, #a7d1d9);
+  border-radius: 10px;
+  padding: 20px;
+  /* margin: 12px; */
+  text-align: center;
+  overflow: hidden;
+  z-index: 0;
+  transition: all 0.3s ease;
+}
+
+.tutor__card:before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  top: -16px;
+  right: -16px;
+  background: linear-gradient(135deg, #f2f2f2, #ffffff);
+  height: 32px;
+  width: 32px;
+  border-radius: 32px;
+  transform: scale(1);
+  transform-origin: 50% 50%;
+  transition: transform 0.35s ease-out;
+}
+
+.tutor__card:hover:before {
+  transform: scale(28);
+}
+
+.tutor__logo {
+  width: 70px;
+  height: 70px;
+  object-fit: contain;
+  margin-bottom: 15px;
+  transition: transform 0.3s ease;
+}
+
+.tutor__card-title {
+  color: #262626;
+  font-size: 1rem;
+  font-weight: 600;
+  font-family: "Poppins", sans-serif;
+  transition: all 0.4s ease-out;
+}
+
+.tutor__card:hover .tutor__card-title {
+  color: #333333;
+}
+
+.tutor__card:hover .tutor__logo {
+  transform: scale(1.1);
+}
+
+.tutor__go-corner {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  width: 2em;
+  height: 2em;
+  top: 0;
+  right: 0;
+  background: linear-gradient(135deg, #f2f2f2, #ffffff);
+  border-radius: 0 4px 0 32px;
+}
+
+.tutor__go-arrow {
+  margin-top: -4px;
+  margin-right: -4px;
+  color: #333333;
+  font-family: courier, sans;
+}
+
+@media (max-width: 1024px) {
+  .tutor__section {
+    padding-left: 4%;
+    padding-right: 4%;
+  }
+  .tutor__grid {
+    grid-template-columns: repeat(3, 1fr); /* Tablet 3 kolom */
+  }
+}
+
+@media (max-width: 768px) {
+  .tutor__description {
+    font-size: 0.9rem;
+    max-width: 90%;
+  }
+  .tutor__grid {
+    grid-template-columns: repeat(2, 1fr); /* Selalu 2 kolom di mobile */
+    gap: 16px; /* bisa disesuaikan biar lebih rapat */
+  }
+
+  .tutor__card {
+    max-width: 100%; /* biar fleksibel */
+    margin: 0; /* hapus margin agar rapat */
+  }
+}

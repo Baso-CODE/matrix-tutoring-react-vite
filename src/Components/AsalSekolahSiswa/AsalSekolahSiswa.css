@@ -25,18 +25,19 @@
   color: #ffffff;
   font-weight: 800;
   text-transform: uppercase;
-  font-family: "Nunito", sans-serif;
+  font-family: "Poppins", sans-serif;
   text-align: center;
 }
 
 .scrollable-content {
-  background-color: #ffffff;
-  color: #4f4f4f;
-  font-family: "Nunito", sans-serif;
+  background-color: #006bde;
+  color: #ffffff;
+  font-family: "Poppins", sans-serif;
   border-radius: 0.5rem;
   overflow: auto;
   font-weight: 700;
   padding: 2vh;
+  border: 10px solid #006bde;
   max-height: 580px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
@@ -61,20 +62,24 @@
 }
 
 .grid-item {
-  color: #4f4f4f; /* Warna teks */
-  font-weight: 500;
-  line-height: 1.6; /* Tinggi baris */
+  color: #ffffff; /* Warna teks */
   font-size: 0.9rem;
+  font-weight: normal;
+  line-height: 1.6; /* Tinggi baris */
 }
-
+.grid-item::marker {
+  color: #ffffff; /* Warna bullet point */
+  font-size: 1.2rem; /* Ukuran bullet point */
+  margin-right: 0.5rem; /* Jarak antara bullet point dan teks */
+}
 .grid-container-asal-sekolah-siswa-matrix li {
-  font-family: "Nunito", sans-serif; /* Font keluarga */
+  font-family: "Poppins", sans-serif; /* Font keluarga */
 }
 
 /* Style for the scrollbar */
 .scrollable-content::-webkit-scrollbar {
-  width: 10px; /* Set the width of the scrollbar */
-  height: 10px; /* Set the height of the scrollbar (for horizontal scroll) */
+  width: 15px; /* Set the width of the scrollbar */
+  height: 15px; /* Set the height of the scrollbar (for horizontal scroll) */
 }
 
 /* For browsers like Firefox */

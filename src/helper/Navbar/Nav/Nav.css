@@ -88,7 +88,7 @@
   display: none;
 }
 
-@media (min-width: 1024px) {
+@media (min-width: 1025px) {
   .desktop-menu {
     display: flex;
     align-items: center;
@@ -161,7 +161,7 @@
   display: block;
 }
 
-@media (min-width: 1024px) {
+@media (min-width: 1025px) {
   .mobile-menu {
     display: none;
   }
@@ -181,7 +181,7 @@
 
 /* Button */
 /* From Uiverse.io by MuhammadHasann */
-.button-nav {
+/* .button-nav {
   --blue-700: hsl(211, 100%, 50%);
   --border_radius: 14px;
   --transtion: 0.3s ease-in-out;
@@ -339,7 +339,112 @@
   );
   background-clip: text;
   font-size: 1rem;
-  font-family: "Nunito", sans-serif;
+  font-family: "Poppins", sans-serif;
   font-weight: 700;
   color: transparent;
+} */
+
+/* ADD BUTTON */
+.button-with-icon {
+  overflow: hidden;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid #037afa;
+  font-family: "Istok Web", sans-serif;
+  letter-spacing: 1px;
+  padding: 0 12px;
+  text-align: center;
+  width: 150px;
+  height: 40px;
+  font-size: 14px;
+  text-transform: uppercase;
+  font-weight: normal;
+  border-radius: 3px;
+  outline: none;
+  user-select: none;
+  cursor: pointer;
+  transform: translateY(0px);
+  position: relative;
+  box-shadow: inset 0 30px 30px -15px rgba(255, 255, 255, 0.1),
+    inset 0 0 0 1px rgba(255, 255, 255, 0.3), inset 0 1px 20px rgba(0, 0, 0, 0),
+    0 3px 0 #037afa, 0 3px 2px rgba(0, 0, 0, 0.2), 0 5px 10px rgba(0, 0, 0, 0.1),
+    0 10px 20px rgba(0, 0, 0, 0.1);
+  background: #007bff;
+  color: white;
+  text-shadow: 0 1px 0 rgba(0, 0, 0, 0.3);
+  transition: 150ms all ease-in-out;
+}
+
+.button-with-icon .icon {
+  margin-right: 8px;
+  width: 24px;
+  height: 24px;
+  transition: all 0.5s ease-in-out;
+}
+
+.button-with-icon:active {
+  transform: translateY(3px);
+  box-shadow: inset 0 16px 2px -15px rgba(0, 0, 0, 0),
+    inset 0 0 0 1px rgba(255, 255, 255, 0.15),
+    inset 0 1px 20px rgba(0, 0, 0, 0.1), 0 0 0 #0f988e,
+    0 0 0 2px rgba(255, 255, 255, 0.5), 0 0 0 rgba(0, 0, 0, 0),
+    0 0 0 rgba(0, 0, 0, 0);
+}
+
+.button-with-icon:hover .text {
+  transform: translateX(94px);
+}
+.button-with-icon:hover .icon {
+  transform: translate(38px);
+}
+
+.text {
+  transition: all 0.5s ease-in-out;
+}
+
+/* From Uiverse.io by alexroumi */
+.button-no_icon {
+  padding: 12px 22px;
+  border: unset;
+  border-radius: 10px;
+  font-family: "Poppins", sans-serif;
+  color: #ffffff;
+  z-index: 1;
+  background: #007bff;
+  cursor: pointer;
+  position: relative;
+  font-weight: 700;
+  font-size: 0.8rem;
+
+  transition: all 250ms;
+  overflow: hidden;
+}
+
+.button-no_icon::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 0;
+  border-radius: 10px;
+  background-color: #25d366;
+  z-index: -1;
+
+  transition: all 250ms;
+}
+
+.button-no_icon:hover {
+  color: #ffffff;
+}
+
+.button-no_icon:hover::before {
+  width: 100%;
+}
+
+@media (max-width: 768px) {
+  .button-no_icon {
+    font-size: 0.75rem;
+  }
 }

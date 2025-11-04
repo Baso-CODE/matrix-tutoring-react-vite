@@ -21,7 +21,7 @@
   font-weight: 800;
   color: #007bff; /* Biru utama */
   margin-bottom: 20px;
-  font-family: "Nunito", sans-serif;
+  font-family: "Poppins", sans-serif;
   line-height: 1.2;
   text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.05);
 }
@@ -34,7 +34,7 @@
   margin-left: auto;
   margin-right: auto;
   line-height: 1.6;
-  font-family: "Nunito", sans-serif;
+  font-family: "Poppins", sans-serif;
 }
 
 .dream-path-grid {
@@ -118,7 +118,7 @@
   font-weight: 700;
   color: #007bff; /* Biru gelap untuk judul fitur */
   margin-bottom: 15px;
-  font-family: "Nunito", sans-serif;
+  font-family: "Poppins", sans-serif;
   position: relative;
   z-index: 1;
 }
@@ -127,7 +127,7 @@
   font-size: 1rem;
   color: #64748b; /* Abu-abu teks */
   line-height: 1.6;
-  font-family: "Nunito", sans-serif;
+  font-family: "Poppins", sans-serif;
   position: relative;
   z-index: 1;
   flex-grow: 1; /* Biarkan teks mengisi sisa ruang */
@@ -160,7 +160,7 @@
   font-size: 1.8rem;
   font-weight: 700;
   color: #ffffff;
-  font-family: "Nunito", sans-serif;
+  font-family: "Poppins", sans-serif;
   max-width: 800px;
 }
 
@@ -217,7 +217,7 @@
     font-size: 1.3rem;
   }
   .ptn-dream-path-card-description {
-    font-size: 0.95rem;
+    font-size: 0.9rem;
   }
   .ptn-dream-path-cta-wrapper {
     padding: 30px 20px;

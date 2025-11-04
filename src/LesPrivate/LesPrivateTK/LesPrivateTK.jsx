@@ -3,30 +3,35 @@ import { Helmet } from "react-helmet-async";
 import AsalSekolahSiswaEdumatrix from "../../Components/AsalSekolahSiswa/AsalSekolahSiswa";
 import AccordionFAQ from "../../Components/FAQ/AccordionFAQ";
 import FiturProgramNew from "../../Components/FiturProgramNew/FiturProgramNew";
+import GaleriKegiatanBelajar from "../../Components/GaleriKegiatanBelajar/GaleriKegiatanBelajar";
 import HowToOrder from "../../Components/HowToOrder/HowToOrder";
-import Keunggulan from "../../Components/Keunggulan/Keunggulan";
 import MasterTeacherV2 from "../../Components/MasterTeacherV2/MasterTeacherV2";
 import MatrixFeatures from "../../Components/MatrixFeatures/MatrixFeatures";
 import OnlineLesOptions from "../../Components/OnlineLesOption/OnlineLesOption";
-import PengajarLestPrivate from "../../Components/PengajarLestPrivate/PengajarLestPrivate";
 import ProgramBelajarLesPrivat from "../../Components/ProgramBelajarLesPrivate/ProgramBelajarLesPrivate";
-import ProgramLesPrivat from "../../Components/ProgramLesPrivate/ProgramLesPrivate";
+import ProgramLesPrivatV2 from "../../Components/ProgramLesPrivatNew/ProgramLesPrivatV2 ";
 import PilihanProgram from "../../Components/ProgramOptions/PilihanProgram";
-import AsalSekolahSiswaMarque from "../../Components/SekolahSiswaMarque/SekolahSiswaMarque";
 import EmbrelaSlider from "../../Components/SlideTop/EmbrelaSlider";
 import SuccessStoryLesPrivate from "../../Components/SuccesStoryLesPrivate/SuccesStoryLesPrivate";
-import TestimonialSiswa from "../../Components/TestimonialSiswa/TestimonialSiswa";
 import TestimoniOrtuSiswa from "../../Components/TestimoniOrtuSiswa/TestimoniOrtuSiswa";
 import CTABottomHome from "../../Home/CTABottomHome/CTABottomHome";
 import PromoHomepage from "../../Home/PromoHomepage/PromoHomepage";
-import ListKotaProgramLesPrivate from "../components/ListKotaProgramLesPrivate/ListKotaProgramLesPrivate";
 import TableOfContents from "../components/TableOfContent";
+import ImpactStatistics from "../LesPrivateMahasiswa/components/ImpactStatistics/ImpactStatistics";
+import KurikulumLesPrivate from "../LesPrivateSD/components/KurikulumLesPrivate/KurikulumLesPrivate";
+import LesprivatKota from "../LesPrivateSD/components/LesprivatKota/LesprivatKota";
+import ProfileMatrixTutoring from "../LesPrivateSD/components/ProfileMatrixTutoring/ProfileMatrixTutoring";
+import TutorLesprivatMatrix from "../LesPrivateSD/components/TutorLesprivatMatrix/TutorLesprivatMatrix";
+import GalleryBelajarTK from "./components/GalleryBelajarTK/GalleryBelajarTK";
+import HeroTK__new from "./components/HeroTK__new/HeroTK__new";
+import KeunggulanCalistungMatrix from "./components/KeunggulanCalistungMatrix/KeunggulanCalistungMatrix";
 import LearningFeaturesLesPrivateTk from "./components/LearningFeaturesLesPrivateTk";
-import LesPrivateTKHeader from "./components/LesPrivateTKHeader";
 import MainLearningContent from "./components/MainLearningContent/MainLearningContent";
-import StatistikImage from "./components/StatistikImage/StatistikImage";
-import ProgramLesPrivatV2 from "../../Components/ProgramLesPrivatNew/ProgramLesPrivatV2 ";
-import GaleriKegiatanBelajar from "../../Components/GaleriKegiatanBelajar/GaleriKegiatanBelajar";
+import PelajaranCalistungMatrix from "./components/PelajaranCalistungMatrix/PelajaranCalistungMatrix";
+import ProgramLesPrivatCalistung from "./components/ProgramLesPrivatCalistung/ProgramLesPrivatCalistung";
+import ProgramLesPrivatCalistungLanjutan from "./components/ProgramLesPrivatCalistungLanjutan/ProgramLesPrivatCalistungLanjutan";
+import WhyMatrixFeatures from "../../Components/MatrixFeatures/WhyMatrixFeatures";
+import MatrixSubjects from "../../Components/MatrixFeatures/MatrixSubjects";
 
 const items = [
   {
@@ -191,15 +196,20 @@ const LesPrivateTK = () => {
           `}
         </script>
       </Helmet>
-
-      <EmbrelaSlider />
-      {/* <Slidertop /> */}
+      <HeroTK__new />
+      <ImpactStatistics />
       <TableOfContents title="Table of Contents" items={items} />
-      <LesPrivateTKHeader />
+      <ProgramLesPrivatCalistung />
+      <ProgramLesPrivatCalistungLanjutan />
+      <GalleryBelajarTK />
+      <PelajaranCalistungMatrix />
+      <KeunggulanCalistungMatrix />
+      <ProfileMatrixTutoring title={"Calistung TK Terbaik"} />
+      <KurikulumLesPrivate />
+      <TutorLesprivatMatrix />
+      <LesprivatKota />
       <LearningFeaturesLesPrivateTk />
       <MainLearningContent />
-      <StatistikImage />
-
       <section id="program-les-private-matrix-tutoring">
         <ProgramLesPrivatV2 />
       </section>
@@ -214,13 +224,14 @@ const LesPrivateTK = () => {
       </section>
       <MasterTeacherV2 />
       <ProgramBelajarLesPrivat />
-      <MatrixFeatures />
+      <WhyMatrixFeatures />
+      <MatrixSubjects />
       <SuccessStoryLesPrivate />
       {/* <TestimonialSiswa /> */}
       <TestimoniOrtuSiswa />
       <section id="asal-sekolah-siswa-matrix-tutoring-private">
         <AsalSekolahSiswaEdumatrix />
-        <AsalSekolahSiswaMarque />
+        {/* <AsalSekolahSiswaMarque /> */}
       </section>
       <HowToOrder />
       <AccordionFAQ />

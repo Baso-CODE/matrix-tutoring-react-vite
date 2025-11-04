@@ -3,27 +3,36 @@ import { Helmet } from "react-helmet-async";
 import AsalSekolahSiswaEdumatrix from "../../Components/AsalSekolahSiswa/AsalSekolahSiswa";
 import AccordionFAQ from "../../Components/FAQ/AccordionFAQ";
 import FiturProgramNew from "../../Components/FiturProgramNew/FiturProgramNew";
+import GaleriKegiatanBelajar from "../../Components/GaleriKegiatanBelajar/GaleriKegiatanBelajar";
 import HowToOrder from "../../Components/HowToOrder/HowToOrder";
-import Keunggulan from "../../Components/Keunggulan/Keunggulan";
 import MasterTeacherV2 from "../../Components/MasterTeacherV2/MasterTeacherV2";
-import MatrixFeatures from "../../Components/MatrixFeatures/MatrixFeatures";
+import MatrixSubjects from "../../Components/MatrixFeatures/MatrixSubjects";
+import WhyMatrixFeatures from "../../Components/MatrixFeatures/WhyMatrixFeatures";
 import OnlineLesOptions from "../../Components/OnlineLesOption/OnlineLesOption";
 import ProgramBelajarLesPrivat from "../../Components/ProgramBelajarLesPrivate/ProgramBelajarLesPrivate";
 import ProgramLesPrivatV2 from "../../Components/ProgramLesPrivatNew/ProgramLesPrivatV2 ";
 import PilihanProgram from "../../Components/ProgramOptions/PilihanProgram";
-import AsalSekolahSiswaMarque from "../../Components/SekolahSiswaMarque/SekolahSiswaMarque";
-import EmbrelaSlider from "../../Components/SlideTop/EmbrelaSlider";
 import SuccessStoryLesPrivate from "../../Components/SuccesStoryLesPrivate/SuccesStoryLesPrivate";
-import TestimonialSiswa from "../../Components/TestimonialSiswa/TestimonialSiswa";
 import TestimoniOrtuSiswa from "../../Components/TestimoniOrtuSiswa/TestimoniOrtuSiswa";
 import CTABottomHome from "../../Home/CTABottomHome/CTABottomHome";
 import PromoHomepage from "../../Home/PromoHomepage/PromoHomepage";
 import TableOfContents from "../components/TableOfContent";
-import LesPrivateSBMPTNHeader from "./components/LesPrivateSBMPTNHeader";
+import ImpactStatistics from "../LesPrivateMahasiswa/components/ImpactStatistics/ImpactStatistics";
+import KurikulumLesPrivate from "../LesPrivateSD/components/KurikulumLesPrivate/KurikulumLesPrivate";
+import LesprivatKota from "../LesPrivateSD/components/LesprivatKota/LesprivatKota";
+import ProfileMatrixTutoring from "../LesPrivateSD/components/ProfileMatrixTutoring/ProfileMatrixTutoring";
+import LogoPengajarMTX from "../LesPrivateSMA/components/LogoAlumniTutor/LogoPengajarMTX";
+import FokusPembelajaranSNBT from "./components/FokusPembelajaranSNBT/FokusPembelajaranSNBT";
+import GalleryBelajarSNBT from "./components/GalleryBelajarSNBT/GalleryBelajarSNBT";
+import HeroSNBT from "./components/HeroSNBT/HeroSNBT";
+import ListProgramLesPrivatSNBT from "./components/ListProgramLesPrivatSNBT/ListProgramLesPrivatSNBT";
+import PreparationToPTN from "./components/PreparationToPTN/PreparationToPTN";
+import ProgramSpesialisSNBT from "./components/ProgramSpesialisSNBT/ProgramSpesialisSNBT";
 import SBMPTNFlow from "./components/SBMPTNFlow";
-import StatistikImageSBMPTN from "./components/StatistikImageSBMPTN";
+import SistemBelajarSNBT from "./components/SistemBelajarSNBT/SistemBelajarSNBT";
+import TestimoniWaSNBT from "./components/TestimoniWaSNBT/TestimoniWaSNBT";
+import Top3AlumniSNBT from "./components/Top3AlumniSNBT/Top3AlumniSNBT";
 import WhyChooseSBMPTN from "./components/WhyChooseSBMPTN/WhyChooseSBMPTN";
-import GaleriKegiatanBelajar from "../../Components/GaleriKegiatanBelajar/GaleriKegiatanBelajar";
 
 const items = [
   {
@@ -159,15 +168,28 @@ const LesPrivateSBMPTN = () => {
           content="https://apps.bimbelmatrix.com/images/whatsapp_footer.webp"
         />
       </Helmet>
-
-      <EmbrelaSlider />
+      <HeroSNBT />
+      <ImpactStatistics />
+      {/* <EmbrelaSlider /> */}
       {/* <Slidertop /> */}
       <TableOfContents title="Table of Contents" items={items} />
-      <LesPrivateSBMPTNHeader />
+      <PreparationToPTN />
+      <ProgramSpesialisSNBT />
+      <SistemBelajarSNBT />
+      <FokusPembelajaranSNBT />
+      <ListProgramLesPrivatSNBT />
+      <LogoPengajarMTX
+        title={"Siapa Guru Les Privat SNBT UTBK dari Matrix Tutoring?"}
+      />
+      <GalleryBelajarSNBT />
+      <TestimoniWaSNBT />
+      {/* <Top3AlumniSNBT /> */}
+      <ProfileMatrixTutoring title={"SNBT UTBK Terbaik"} />
+      <KurikulumLesPrivate />
+      <LesprivatKota />
+      <SuccessStoryLesPrivate />
       <SBMPTNFlow />
-      <StatistikImageSBMPTN />
       <WhyChooseSBMPTN />
-
       <section id="program-les-private-matrix-tutoring">
         <ProgramLesPrivatV2 />
       </section>
@@ -184,15 +206,13 @@ const LesPrivateSBMPTN = () => {
         <MasterTeacherV2 />
       </section>
       <ProgramBelajarLesPrivat />
-      <MatrixFeatures />
-      <SuccessStoryLesPrivate />
-      {/* <TestimonialSiswa /> */}
+      <WhyMatrixFeatures />
+      <MatrixSubjects />
       <TestimoniOrtuSiswa />
       <section id="asal-sekolah-siswa-matrix-tutoring-private">
         <AsalSekolahSiswaEdumatrix />
-        <AsalSekolahSiswaMarque />
+        {/* <AsalSekolahSiswaMarque /> */}
       </section>
-
       <HowToOrder />
       <AccordionFAQ />
       <GaleriKegiatanBelajar />

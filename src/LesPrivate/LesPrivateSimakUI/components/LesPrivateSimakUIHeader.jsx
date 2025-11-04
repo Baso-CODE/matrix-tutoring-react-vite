@@ -1,111 +1,66 @@
 // LesPrivateSimakUIHeader.js
-import KeunggulanLesPrivateSimakUIList from "./KeunggulanLesPrivateSimakUIList";
+import Content1 from "./Content1";
+import Content2 from "./Content2";
+import Content3 from "./Content3";
 import "./LesPrivateSimakUIHeader.css";
-import LesPrivateSimakUIList from "./LesPrivateSimakUIList";
-import LesPrivateSimakUIProgram from "./LesPrivateSimakUIProgram";
 
-const LesPrivateSimakUIHeader = () => {
+const LesPrivateSimakUIHeader = ({ location }) => {
   return (
     <section className="container-all">
       <div className="centered-content-lesPrivate-simakUI">
-        <h1 id="les-privat-simak-ui">
-          Les Privat Simak UI – Guru ke Rumah & Les Online Simak UI 2021
-        </h1>
-        <p>
-          Les Privat Simak UI datang ke rumah. Guru Les Privat Seleksi Bersama
-          Masuk Universitas Indonesia di Jakarta, Bogor, Depok, Tangsel,
-          Tangerang, Bekasi, Bintaro, BSD, Cibubur dan sekitarnya. Les Privat
-          Intensif Program SBMPTN Masuk UI UGM ITB IPB Unpad Undip Unair dan
-          berbagai PTN Favorit Impian Lainnya. Guru Privat SIMAK UI datang ke
-          rumah untuk mengajar Les Privat SIMAK UI berdasarkan mata pelajaran
-          yang dibutuhkan.
-        </p>
-
-        <div className="image-lesPrivate">
-          <img
-            loading="lazy"
-            src="/images/les-private/simak-ui/simakui.webp"
-            alt="Les Privat simak ui"
-          />
-        </div>
-
-        {/* content 1 */}
-        <h2 id="kegiatan-belajar-simak-ui">
-          Apakah kita sudah memberikan dukungan terbaik?
+        <h2 id="les-privat-simak-ui">
+          Les Privat Simak UI Fokus Intensif Persiapan Ujian Mandiri Universitas
+          Indonesia
         </h2>
         <p>
-          Bagi Ananda yang saat ini berada di kelas 12, sebentar lagi akan
-          melaksanakan ujian penting yang dilaksanakan pada semester kedua,
-          yaitu UN dan UASBN. Kemudian akan disibukkan kembali dengan Ujian
-          Tulis, Seleksi Bersama Masuk Perguruan Tinggi Negeri dan Ujian Mandiri
-          seperti Simak UI (Seleksi Masuk UI). Memilih jurusan yang sesuai
-          dengan passion, target karir dan expertise untuk masa depan Ananda.
+          Matrix Tutoring memiliki Layanan Program Intensif Privat Simak UI
+          persiapan Ujian Mandiri UI dengan dua pilihan sistem belajar, yaitu
+          Privat Offline dan Online . Pembelajaran dengan sistem Privat Offline
+          (Guru les privat datang ke rumah) dapat menjangkau Anda yang berlokasi
+          di Jakarta, Bogor, Depok, Tangerang, Tangsel, Bekasi, Bandung, Bali,
+          Medan, Semarang, Surabaya, dan Yogyakarta. Sementara itu, Privat
+          Online (via Zoo/Google Meet) dapat menjangkau seluruh wilayah di
+          Indonesia hingga Luar Negeri.
         </p>
-        <br />
-        <p>
-          Kita akan bisa melihat kemandirian, kedewasaan dan kesiapan Ananda
-          dalam menjalani proses tersebut. Menentukan target belajar berdasarkan
-          jenis ujian yang akan dijalani (splitting fokus), memilih program
-          belajar yang sesuai (bimbel umum, les privat, pendalaman materi di
-          sekolah) dan menentukan prioritas mata pelajaran apa saja yang perlu
-          dikuasai lebih dalam pada saat belajar.
-        </p>
-        <br />
-        <br />
-
-        {/* content 2 */}
-        <h2 id="dukungan-orang-tua">Dukungan Orang Tua yang Tak Tergantikan</h2>
-        <p className="">
-          Kemampuan Ananda dalam problem solving, manajemen waktu, manajemen
-          emosi dan menentukan prioritas akan sangat teruji pada fase saat ini.
-          Di fase perjuangan Ananda saat ini, diperlukan dukungan maksimal dari
-          orang tua siswa. Memotivasi Ananda setiap saat agar terjaga
-          konsistensi semangatnya dan juga menjadi pendengar saat Ananda
-          kesulitan dalam memutuskan sesuatu atau memahami benang merah dari
-          kesulitan yang dialaminya. Membantu memberikan feedback dan opsi-opsi
-          terbaik yang dapat diambil Ananda untuk masa depannya. Dukungan
-          terbaik orang tua sangat diperlukan dan tak tergantikan.
-        </p>
-
         <div className="image-lesPrivate">
           <img
             loading="lazy"
-            src="/images/les-private/simak-ui/content-ui.webp"
-            alt="Les UI"
+            src="/images/les-private/simak-ui/SIMAK-UI-5x4.webp"
+            alt={`Persiapkan Ujian Mandiri Universitas Indonesia dengan Les Privat Simak UI ${
+              location ? `di ${location}` : "Indonesia"
+            } Matrix Tutoring`}
           />
         </div>
-        <p>
-          Hal terbaik juga dapat dilakukan dengan memfasilitasi Ananda agar
-          dapat belajar dengan guru les privat yang sesuai agar dapat
-          membantunya dalam proses belajar. Berangkat dari hal tersebut, Les
-          Privat Matrix membuka Program Intensif Simak UI – Les Privat Persiapan
-          Masuk Perguruan Tinggi Negeri Favorit.
-        </p>
+        {/* content 1 */}
+        <Content1 />
+        <br />
+        <br />
 
+        {/*Content 2  */}
+        <Content2 />
         <br />
         <br />
-        {/* content 3 */}
-        <div id="list-lest-private-simak-ui">
-          <LesPrivateSimakUIList />
-        </div>
-        <br />
+
+        {/* Content 3 */}
+        <Content3 />
+
         {/* content 4 */}
-        <h2 id="sistem-belajar-terstruktur">Sistem Belajar Terstruktur</h2>
+        {/* <h2 id="sistem-belajar-terstruktur">Sistem Belajar Terstruktur</h2>
         <p className="">
           Selain kemampuan siswa, sistem belajar yang terstruktur dan sistematis
           dilengkapi dengan guru les privat yang tepat akan memperbesar peluang
           siswa untuk menjalani proses belajar dengan lebih baik dan mendapatkan
           hasil yang terbaik. Les Privat Matrix siap mengirimkan guru les privat
           sbmptn yang sesuai untuk mendampingi belajar Ananda.
-        </p>
-        <div className="image-lesPrivate">
+        </p> */}
+        {/* <div className="image-lesPrivate">
           <img
             loading="lazy"
             src="/images/les-private/simak-ui/universitas-impian.webp"
             alt="Les UI"
           />
-        </div>
-        <p>
+        </div> */}
+        {/* <p>
           Les Privat Matrix (Matrix Tutoring) adalah lembaga penyedia layanan
           jasa les privat untuk TK, SD, SMP, SMA, UN, OSN, Simak UI, SBMPTN dan
           Mahasiswa, guru datang ke rumah dengan spesialisasi pengajaran
@@ -116,15 +71,14 @@ const LesPrivateSimakUIHeader = () => {
           pengalaman, diseleksi, dilatih dan diarahkan mengajar sesuai dengan
           spesialisasi dalam bidang ilmu yang dikuasai.
         </p>
-        <br />
-        <div id="program-simak-ui">
+        <br /> */}
+        {/* <div id="program-simak-ui">
           <h2>Program Les Privat Matrix</h2>
           <LesPrivateSimakUIProgram />
         </div>
-
         <div id="keunggulan-program-simak-ui">
           <KeunggulanLesPrivateSimakUIList />
-        </div>
+        </div> */}
       </div>
     </section>
   );
