@@ -220,7 +220,6 @@ const LesPrivateSimakUIKabupaten = () => {
         <meta name="description" content={descriptionContent} />
         <meta name="keywords" content={keywords.join(", ")} />
         <link rel="canonical" href={canonicalUrl} />
-
         {/* Open Graph Meta Tags */}
         <meta property="og:locale" content="id_ID" />
         <meta property="og:type" content="article" />
@@ -241,7 +240,6 @@ const LesPrivateSimakUIKabupaten = () => {
           property="article:section"
           content={`Les Privat ${programName}`}
         />
-
         {/* Twitter Card Meta Tags */}
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content={twitterTitle} />
@@ -249,61 +247,142 @@ const LesPrivateSimakUIKabupaten = () => {
         <meta name="twitter:image" content={ogImage} />
         <meta name="twitter:site" content="@matrix_tutoring" />
         <meta name="twitter:creator" content="@matrix_tutoring" />
-
-        {/* Schema Markup (JSON-LD) - BreadcrumbList */}
+        /* Schema Markup (JSON-LD) */
         <script type="application/ld+json">
           {`
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "BreadcrumbList",
+          "@id": "${canonicalUrl}#breadcrumb",
+          "itemListElement": [
             {
-              "@context": "https://schema.org",
-              "@graph": [
-                {
-                  "@type": "BreadcrumbList",
-                  "@id": "${canonicalUrl}#breadcrumb",
-                  "itemListElement": [
-                    {
-                      "@type": "ListItem",
-                      "position": "1",
-                      "item": {
-                        "@id": "${baseUrl}",
-                        "name": "Home"
-                      }
-                    },
-                    {
-                      "@type": "ListItem",
-                      "position": "2",
-                      "item": {
-                        "@id": "${baseUrl}/les-privat-simak-ui", 
-                        "name": "Les Privat ${programName}"
-                      }
-                    },
-                    {
-                      "@type": "ListItem",
-                      "position": "3",
-                      "item": {
-                        "@id": "${baseUrl}/les-privat-simak-ui/${kotaSlug}",
-                        "name": "Les Privat ${programName} di ${
+              "@type": "ListItem",
+              "position": 1,
+              "item": {
+                "@id": "${baseUrl}",
+                "name": "Home"
+              }
+            },
+            {
+              "@type": "ListItem",
+              "position": 2,
+              "item": {
+                "@id": "${baseUrl}/les-privat-simak-ui", 
+                "name": "Les Privat ${programName}" 
+              }
+            },
+            {
+              "@type": "ListItem",
+              "position": 3,
+              "item": {
+                "@id": "${baseUrl}/les-privat-simak-ui/${kotaSlug}", 
+                "name": "Les Privat ${programName} di ${
             kotaParent?.kota ||
             kotaSlug
               .replace(/-/g, " ")
               .split(" ")
               .map((word) => word.charAt(0).toUpperCase() + word.slice(1))
               .join(" ")
-          }"
-                      }
-                    },
-                    {
-                      "@type": "ListItem",
-                      "position": "4",
-                      "item": {
-                        "@id": "${canonicalUrl}",
-                        "name": "${pageTitle.replace(/<\/?[^>]+(>|$)/g, "")}"
-                      }
-                    }
-                  ]
-                }
-              ]
+          }" 
+              }
+            },
+            {
+              "@type": "ListItem",
+              "position": 4,
+              "item": {
+                "@id": "${canonicalUrl}",
+                "name": "${pageTitle.replace(/<\/?[^>]+(>|$)/g, "")}" 
+              }
             }
-          `}
+          ]
+        },
+
+        {
+          "@type": "EducationalOrganization",
+          "@id": "${canonicalUrl}#organization",
+          "name": "Matrix Tutoring",
+          "description": "Les Privat SIMAK UI terbaik di **Kabupaten ${nameCountry}**. Program bimbingan belajar intensif untuk memastikan persiapan optimal menuju Universitas Indonesia.",
+          "url": "${canonicalUrl}",
+          "areaServed": "Kabupaten ${nameCountry}", 
+          "sameAs": [
+            "https://www.instagram.com/matrixtutoring.id",
+            "https://www.tiktok.com/@lesprivatmatrix.com",
+            "https://www.facebook.com/matrixtutoring"
+          ],
+          "brand": {
+            "@type": "Brand",
+            "name": "Matrix Tutoring",
+            "logo": "https://apps.bimbelmatrix.com/images/whatsapp_footer.webp"
+          },
+          "contactPoint": {
+            "@type": "ContactPoint",
+            "telephone": "+62-857-4728-1466",
+            "contactType": "Customer Service",
+            "areaServed": "ID",
+            "availableLanguage": ["Indonesian", "English"]
+          },
+          "keywords": "Les Privat Simak UI Kabupaten ${nameCountry}, Guru Privat Universitas Indonesia ${nameCountry}, Bimbel Intensif Simak UI ${nameCountry}, Try Out Simak UI ${nameCountry}"
+        },
+
+        {
+          "@type": "WebPage",
+          "@id": "${canonicalUrl}#webpage",
+          "url": "${canonicalUrl}",
+          "name": "Les Privat SIMAK UI Terbaik di Kabupaten ${nameCountry} | Matrix Tutoring",
+          "inLanguage": "id-ID",
+          "description": "Capai target Anda lolos SIMAK UI dengan tutor privat profesional di Kabupaten ${nameCountry}. Kami fokus pada materi ujian dan strategi pengerjaan soal yang efektif.",
+          "isPartOf": { "@id": "${baseUrl}" },
+          "about": { "@id": "${canonicalUrl}#organization" },
+          "mainEntity": {
+            "@type": "Service",
+            "name": "Les Privat Persiapan Ujian SIMAK UI di Kabupaten ${nameCountry}",
+            "provider": { "@id": "${canonicalUrl}#organization" },
+            "serviceType": "Bimbingan Belajar Ujian Masuk Universitas Indonesia",
+            "areaServed": "Kabupaten ${nameCountry}",
+            "offers": {
+              "@type": "Offer",
+              "priceCurrency": "IDR",
+              "availability": "https://schema.org/InStock",
+              "url": "${canonicalUrl}"
+            }
+          }
+        },
+
+        {
+          "@type": "FAQPage",
+          "@id": "${canonicalUrl}#faq",
+          "mainEntity": [
+            {
+              "@type": "Question",
+              "name": "Apakah Les Privat SIMAK UI di Kabupaten ${nameCountry} melayani semua jurusan (IPA/IPS/IPC)?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Ya, kami menyediakan tutor yang ahli di semua kategori ujian SIMAK UI, baik Saintek (IPA), Soshum (IPS), maupun Campuran (IPC), disesuaikan dengan kebutuhan Anda."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Apa keunggulan Les Privat SIMAK UI dibanding bimbel konvensional?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Keunggulannya adalah fokus materi 100% pada kelemahan siswa, jadwal yang fleksibel, dan tutor yang datang ke lokasi Anda, membuat sesi belajar jauh lebih efektif dan personal."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Apakah ada Try Out rutin dalam program SIMAK UI?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Tentu. Kami menyediakan Try Out SIMAK UI berkala dengan standar soal yang menyerupai ujian asli untuk mengukur kemajuan siswa dan membiasakan mereka dengan atmosfer ujian."
+              }
+            }
+          ]
+        }
+      ]
+    }
+  `}
         </script>
       </Helmet>
 

@@ -166,31 +166,31 @@ const LesPrivateSBMPTNKkota = () => {
   const ogImageAlt = `Les Privat ${programName} Terbaik ${nameCountry} Matrix Tutoring`;
 
   const keywords = [
-    `Les Privat ${programName} ${nameCountry}`,
-    `Guru Privat ${programName} ${nameCountry}`,
-    `Les ${programName} ${nameCountry}`,
-    `Bimbingan ${programName} ${nameCountry}`,
-    `Les Privat Online ${programName} ${nameCountry}`,
-    `Les Privat Offline ${programName} ${nameCountry}`,
-    `Program Belajar ${programName} ${nameCountry}`,
-    `Tutor ${programName} ${nameCountry}`,
-    `Les Matematika ${programName} ${nameCountry}`,
-    `Les IPA ${programName} ${nameCountry}`,
-    `Les Bahasa Inggris ${programName} ${nameCountry}`,
-    `Les Fisika ${programName} ${nameCountry}`,
-    `Les Kimia ${programName} ${nameCountry}`,
-    `Les Biologi ${programName} ${nameCountry}`,
-    `Les Ekonomi ${programName} ${nameCountry}`,
-    `Les Geografi ${programName} ${nameCountry}`,
-    `Persiapan PTN ${nameCountry}`,
-    `Bimbel PTN ${nameCountry}`,
-    `Matrix Tutoring ${programName} ${nameCountry}`,
-    `Bimbel ${programName} ${nameCountry}`,
-    `Kursus ${programName} ${nameCountry}`,
+    `Les Privat ${programName} Kelurahan ${nameCountry}`,
+    `Guru Privat ${programName} Kelurahan ${nameCountry}`,
+    `Les ${programName} Kelurahan ${nameCountry}`,
+    `Bimbingan ${programName} Kelurahan ${nameCountry}`,
+    `Les Privat Online ${programName} Kelurahan ${nameCountry}`,
+    `Les Privat Offline ${programName} Kelurahan ${nameCountry}`,
+    `Program Belajar ${programName} Kelurahan ${nameCountry}`,
+    `Tutor ${programName} Kelurahan ${nameCountry}`,
+    `Les Matematika ${programName} Kelurahan ${nameCountry}`,
+    `Les IPA ${programName} Kelurahan ${nameCountry}`,
+    `Les Bahasa Inggris ${programName} Kelurahan ${nameCountry}`,
+    `Les Fisika ${programName} Kelurahan ${nameCountry}`,
+    `Les Kimia ${programName} Kelurahan ${nameCountry}`,
+    `Les Biologi ${programName} Kelurahan ${nameCountry}`,
+    `Les Ekonomi ${programName} Kelurahan ${nameCountry}`,
+    `Les Geografi ${programName} Kelurahan ${nameCountry}`,
+    `Persiapan PTN Kelurahan ${nameCountry}`,
+    `Bimbel PTN Kelurahan ${nameCountry}`,
+    `Matrix Tutoring ${programName} Kelurahan ${nameCountry}`,
+    `Bimbel ${programName} Kelurahan ${nameCountry}`,
+    `Kursus ${programName} Kelurahan ${nameCountry}`,
     kotaSlug.replace(/-/g, " ").toLowerCase(),
-    `Les Privat SBMPTN ${nameCountry}`,
-    `Guru Privat SBMPTN ${nameCountry}`,
-    `Bimbel SBMPTN ${nameCountry}`,
+    `Les Privat SBMPTN Kelurahan ${nameCountry}`,
+    `Guru Privat SBMPTN Kelurahan ${nameCountry}`,
+    `Bimbel SBMPTN Kelurahan ${nameCountry}`,
   ];
 
   return (
@@ -205,7 +205,6 @@ const LesPrivateSBMPTNKkota = () => {
         <meta name="description" content={descriptionContent} />
         <meta name="keywords" content={keywords.join(", ")} />
         <link rel="canonical" href={canonicalUrl} />
-
         {/* Open Graph Meta Tags */}
         <meta property="og:locale" content="id_ID" />
         <meta property="og:type" content="article" />
@@ -226,7 +225,6 @@ const LesPrivateSBMPTNKkota = () => {
           property="article:section"
           content={`Les Privat ${programName}`}
         />
-
         {/* Twitter Card Meta Tags */}
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content={twitterTitle} />
@@ -234,46 +232,128 @@ const LesPrivateSBMPTNKkota = () => {
         <meta name="twitter:image" content={ogImage} />
         <meta name="twitter:site" content="@matrix_tutoring" />
         <meta name="twitter:creator" content="@matrix_tutoring" />
-
-        {/* Schema Markup (JSON-LD) - BreadcrumbList */}
+        /* Schema Markup (JSON-LD) */
         <script type="application/ld+json">
           {`
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "BreadcrumbList",
+          "@id": "${canonicalUrl}#breadcrumb",
+          "itemListElement": [
             {
-              "@context": "https://schema.org",
-              "@graph": [
-                {
-                  "@type": "BreadcrumbList",
-                  "@id": "${canonicalUrl}#breadcrumb",
-                  "itemListElement": [
-                    {
-                      "@type": "ListItem",
-                      "position": "1",
-                      "item": {
-                        "@id": "${baseUrl}",
-                        "name": "Home"
-                      }
-                    },
-                    {
-                      "@type": "ListItem",
-                      "position": "2",
-                      "item": {
-                        "@id": "${baseUrl}/les-privat-sbmptn", // Pastikan ini sesuai dengan slug program utama
-                        "name": "Les Privat ${programName}"
-                      }
-                    },
-                    {
-                      "@type": "ListItem",
-                      "position": "3",
-                      "item": {
-                        "@id": "${canonicalUrl}",
-                        "name": "${pageTitle.replace(/<\/?[^>]+(>|$)/g, "")}"
-                      }
-                    }
-                  ]
-                }
-              ]
+              "@type": "ListItem",
+              "position": 1,
+              "item": {
+                "@id": "${baseUrl}",
+                "name": "Home"
+              }
+            },
+            {
+              "@type": "ListItem",
+              "position": 2,
+              "item": {
+                "@id": "${baseUrl}/les-privat-sbmptn", 
+                "name": "Les Privat ${programName}" 
+              }
+            },
+            {
+              "@type": "ListItem",
+              "position": 3,
+              "item": {
+                "@id": "${canonicalUrl}",
+                "name": "${pageTitle.replace(/<\/?[^>]+(>|$)/g, "")}" 
+              }
             }
-          `}
+          ]
+        },
+
+        {
+          "@type": "EducationalOrganization",
+          "@id": "${canonicalUrl}#organization",
+          "name": "Matrix Tutoring",
+          "description": "Les Privat SNBT (Seleksi Nasional Berdasarkan Tes) terbaik di **Kota ${nameCountry}** dengan jaminan tutor berpengalaman dan kurikulum fokus. Solusi tepat untuk lolos PTN impian.",
+          "url": "${canonicalUrl}",
+          "areaServed": "Kota ${nameCountry}", 
+          "sameAs": [
+            "https://www.instagram.com/matrixtutoring.id",
+            "https://www.tiktok.com/@lesprivatmatrix.com",
+            "https://www.facebook.com/matrixtutoring"
+          ],
+          "brand": {
+            "@type": "Brand",
+            "name": "Matrix Tutoring",
+            "logo": "https://apps.bimbelmatrix.com/images/whatsapp_footer.webp"
+          },
+          // ContactPoint
+          "contactPoint": {
+            "@type": "ContactPoint",
+            "telephone": "+62-857-4728-1466",
+            "contactType": "Customer Service",
+            "areaServed": "ID",
+            "availableLanguage": ["Indonesian", "English"]
+          },
+          "keywords": "${keywords.join(", ")}"
+        },
+
+        {
+          "@type": "WebPage",
+          "@id": "${canonicalUrl}#webpage",
+          "url": "${canonicalUrl}",
+          "name": "${pageTitle.replace(/<\/?[^>]+(>|$)/g, "")}",
+          "inLanguage": "id-ID",
+          "description": "${descriptionContent}",
+          "isPartOf": { "@id": "${baseUrl}" },
+          "about": { "@id": "${canonicalUrl}#organization" },
+          "mainEntity": {
+            "@type": "Service",
+            "name": "Les Privat Persiapan Ujian ${programName} di Kota ${nameCountry}",
+            "provider": { "@id": "${canonicalUrl}#organization" },
+            "serviceType": "Bimbingan Belajar Ujian Masuk Perguruan Tinggi Negeri",
+            "areaServed": "Kota ${nameCountry}",
+            "offers": {
+              "@type": "Offer",
+              "priceCurrency": "IDR",
+              "availability": "https://schema.org/InStock",
+              "url": "${canonicalUrl}"
+            }
+          }
+        },
+
+        {
+          "@type": "FAQPage",
+          "@id": "${canonicalUrl}#faq",
+          "mainEntity": [
+            {
+              "@type": "Question",
+              "name": "Apa fokus utama Les Privat ${programName} di ${nameCountry}?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Fokus utama kami adalah pada Tes Potensi Skolastik (TPS) dan Tes Literasi (Bahasa Indonesia, Bahasa Inggris, Matematika), yang merupakan inti dari ujian ${programName}, memastikan siswa menguasai materi kunci."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Bagaimana cara Matrix Tutoring menjamin kelulusan SNBT?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Kami menggunakan pendekatan personal, mengidentifikasi kelemahan siswa, menyediakan simulasi Try Out berstandar SNBT, dan membekali siswa dengan strategi pengerjaan soal yang efisien. Program kami dirancang untuk memaksimalkan peluang lolos PTN impian."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Apakah Les Privat ${programName} di ${nameCountry} menyediakan layanan konsultasi jurusan?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Ya, kami menyediakan layanan konsultasi jurusan yang komprehensif, membantu siswa memilih program studi dan PTN berdasarkan minat, kemampuan, dan peluang kelulusan (strategi prodi)."
+              }
+            }
+          ]
+        }
+      ]
+    }
+  `}
         </script>
       </Helmet>
 

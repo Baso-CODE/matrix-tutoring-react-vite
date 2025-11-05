@@ -164,34 +164,34 @@ const LesPrivateSBMPTNKecamatan = () => {
   const ogImageAlt = `Les Privat ${programName} Terbaik ${nameCountry} Matrix Tutoring`;
 
   const keywords = [
-    `Les Privat ${programName} ${nameCountry}`,
-    `Guru Privat ${programName} ${nameCountry}`,
-    `Les ${programName} ${nameCountry}`,
-    `Bimbingan ${programName} ${nameCountry}`,
-    `Les Privat Online ${programName} ${nameCountry}`,
-    `Les Privat Offline ${programName} ${nameCountry}`,
-    `Program Belajar ${programName} ${nameCountry}`,
-    `Tutor ${programName} ${nameCountry}`,
-    `Les Matematika ${programName} ${nameCountry}`,
-    `Les IPA ${programName} ${nameCountry}`,
-    `Les Bahasa Inggris ${programName} ${nameCountry}`,
-    `Les Fisika ${programName} ${nameCountry}`,
-    `Les Kimia ${programName} ${nameCountry}`,
-    `Les Biologi ${programName} ${nameCountry}`,
-    `Les Ekonomi ${programName} ${nameCountry}`,
-    `Les Geografi ${programName} ${nameCountry}`,
-    `Persiapan PTN ${nameCountry}`,
-    `Bimbel PTN ${nameCountry}`,
-    `Matrix Tutoring ${programName} ${nameCountry}`,
-    `Bimbel ${programName} ${nameCountry}`,
-    `Kursus ${programName} ${nameCountry}`,
+    `Les Privat ${programName} Kecamatan ${nameCountry}`,
+    `Guru Privat ${programName} Kecamatan ${nameCountry}`,
+    `Les ${programName} Kecamatan ${nameCountry}`,
+    `Bimbingan ${programName} Kecamatan ${nameCountry}`,
+    `Les Privat Online ${programName} Kecamatan ${nameCountry}`,
+    `Les Privat Offline ${programName} Kecamatan ${nameCountry}`,
+    `Program Belajar ${programName} Kecamatan ${nameCountry}`,
+    `Tutor ${programName} Kecamatan ${nameCountry}`,
+    `Les Matematika ${programName} Kecamatan ${nameCountry}`,
+    `Les IPA ${programName} Kecamatan ${nameCountry}`,
+    `Les Bahasa Inggris ${programName} Kecamatan ${nameCountry}`,
+    `Les Fisika ${programName} Kecamatan ${nameCountry}`,
+    `Les Kimia ${programName} Kecamatan ${nameCountry}`,
+    `Les Biologi ${programName} Kecamatan ${nameCountry}`,
+    `Les Ekonomi ${programName} Kecamatan ${nameCountry}`,
+    `Les Geografi ${programName} Kecamatan ${nameCountry}`,
+    `Persiapan PTN Kecamatan ${nameCountry}`,
+    `Bimbel PTN Kecamatan ${nameCountry}`,
+    `Matrix Tutoring ${programName} Kecamatan ${nameCountry}`,
+    `Bimbel ${programName} Kecamatan ${nameCountry}`,
+    `Kursus ${programName} Kecamatan ${nameCountry}`,
     kotaSlug.replace(/-/g, " ").toLowerCase(),
     kabupatenSlug.replace(/-/g, " ").toLowerCase(),
     kecamatanSlug.replace(/-/g, " ").toLowerCase(),
     // Jika masih ada yang mencari SNBT UTBK
-    `Les Privat SNBT UTBK ${nameCountry}`,
-    `Guru Privat SNBT UTBK ${nameCountry}`,
-    `Bimbel SNBT UTBK ${nameCountry}`,
+    `Les Privat SNBT UTBK Kecamatan ${nameCountry}`,
+    `Guru Privat SNBT UTBK Kecamatan ${nameCountry}`,
+    `Bimbel SNBT UTBK Kecamatan ${nameCountry}`,
   ];
 
   return (
@@ -206,7 +206,6 @@ const LesPrivateSBMPTNKecamatan = () => {
         <meta name="description" content={descriptionContent} />
         <meta name="keywords" content={keywords.join(", ")} />
         <link rel="canonical" href={canonicalUrl} />
-
         {/* Open Graph Meta Tags */}
         <meta property="og:locale" content="id_ID" />
         <meta property="og:type" content="article" />
@@ -227,7 +226,6 @@ const LesPrivateSBMPTNKecamatan = () => {
           property="article:section"
           content={`Les Privat ${programName}`}
         />
-
         {/* Twitter Card Meta Tags */}
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content={twitterTitle} />
@@ -235,70 +233,151 @@ const LesPrivateSBMPTNKecamatan = () => {
         <meta name="twitter:image" content={ogImage} />
         <meta name="twitter:site" content="@matrix_tutoring" />
         <meta name="twitter:creator" content="@matrix_tutoring" />
-
-        {/* Schema Markup (JSON-LD) - BreadcrumbList */}
+        /* Schema Markup (JSON-LD) */
         <script type="application/ld+json">
           {`
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "BreadcrumbList",
+          "@id": "${canonicalUrl}#breadcrumb",
+          "itemListElement": [
             {
-              "@context": "https://schema.org",
-              "@graph": [
-                {
-                  "@type": "BreadcrumbList",
-                  "@id": "${canonicalUrl}#breadcrumb",
-                  "itemListElement": [
-                    {
-                      "@type": "ListItem",
-                      "position": "1",
-                      "item": {
-                        "@id": "${baseUrl}",
-                        "name": "Home"
-                      }
-                    },
-                    {
-                      "@type": "ListItem",
-                      "position": "2",
-                      "item": {
-                        "@id": "${baseUrl}/les-privat-sbmptn", 
-                        "name": "Les Privat ${programName}"
-                      }
-                    },
-                    {
-                      "@type": "ListItem",
-                      "position": "3",
-                      "item": {
-                        "@id": "${baseUrl}/les-privat-sbmptn/${kotaSlug}",
-                        "name": "Les Privat ${programName} di ${kotaSlug
+              "@type": "ListItem",
+              "position": 1,
+              "item": {
+                "@id": "${baseUrl}",
+                "name": "Home"
+              }
+            },
+            {
+              "@type": "ListItem",
+              "position": 2,
+              "item": {
+                "@id": "${baseUrl}/les-privat-sbmptn", 
+                "name": "Les Privat ${programName}" 
+              }
+            },
+            {
+              "@type": "ListItem",
+              "position": 3,
+              "item": {
+                "@id": "${baseUrl}/les-privat-sbmptn/${kotaSlug}", 
+                "name": "Les Privat ${programName} di ${kotaSlug
             .replace(/-/g, " ")
             .split(" ")
             .map((word) => word.charAt(0).toUpperCase() + word.slice(1))
-            .join(" ")}"
-                      }
-                    },
-                    {
-                      "@type": "ListItem",
-                      "position": "4",
-                      "item": {
-                        "@id": "${baseUrl}/les-privat-sbmptn/${kotaSlug}/${kabupatenSlug}",
-                        "name": "Les Privat ${programName} di ${kabupatenSlug
+            .join(" ")}" 
+              }
+            },
+            {
+              "@type": "ListItem",
+              "position": 4,
+              "item": {
+                "@id": "${baseUrl}/les-privat-sbmptn/${kotaSlug}/${kabupatenSlug}", 
+                "name": "Les Privat ${programName} di ${kabupatenSlug
             .replace(/-/g, " ")
             .split(" ")
             .map((word) => word.charAt(0).toUpperCase() + word.slice(1))
-            .join(" ")}"
-                      }
-                    },
-                    {
-                      "@type": "ListItem",
-                      "position": "5",
-                      "item": {
-                        "@id": "${canonicalUrl}",
-                        "name": "${pageTitle.replace(/<\/?[^>]+(>|$)/g, "")}"
-                      }
-                    }
-                  ]
-                }
-              ]
+            .join(" ")}" 
+              }
+            },
+            {
+              "@type": "ListItem",
+              "position": 5,
+              "item": {
+                "@id": "${canonicalUrl}",
+                "name": "${pageTitle.replace(/<\/?[^>]+(>|$)/g, "")}" 
+              }
             }
-          `}
+          ]
+        },
+
+        {
+          "@type": "EducationalOrganization",
+          "@id": "${canonicalUrl}#organization",
+          "name": "Matrix Tutoring",
+          "description": "Les Privat SNBT (UTBK) terbaik di **Kecamatan ${nameCountry}**. Guru datang ke rumah, fokus materi TPS dan Literasi untuk memastikan Anda lolos PTN.",
+          "url": "${canonicalUrl}",
+          "areaServed": "Kecamatan ${nameCountry}", 
+          "sameAs": [
+            "https://www.instagram.com/matrixtutoring.id",
+            "https://www.tiktok.com/@lesprivatmatrix.com",
+            "https://www.facebook.com/matrixtutoring"
+          ],
+          "brand": {
+            "@type": "Brand",
+            "name": "Matrix Tutoring",
+            "logo": "https://apps.bimbelmatrix.com/images/whatsapp_footer.webp"
+          },
+          "contactPoint": {
+            "@type": "ContactPoint",
+            "telephone": "+62-857-4728-1466",
+            "contactType": "Customer Service",
+            "areaServed": "ID",
+            "availableLanguage": ["Indonesian", "English"]
+          },
+          "keywords": "${keywords.join(", ")}"
+        },
+
+        {
+          "@type": "WebPage",
+          "@id": "${canonicalUrl}#webpage",
+          "url": "${canonicalUrl}",
+          "name": "${pageTitle.replace(/<\/?[^>]+(>|$)/g, "")}",
+          "inLanguage": "id-ID",
+          "description": "${descriptionContent}",
+          "isPartOf": { "@id": "${baseUrl}" },
+          "about": { "@id": "${canonicalUrl}#organization" },
+          "mainEntity": {
+            "@type": "Service",
+            "name": "Les Privat Persiapan Ujian ${programName} di Kecamatan ${nameCountry}",
+            "provider": { "@id": "${canonicalUrl}#organization" },
+            "serviceType": "Bimbingan Belajar Ujian Masuk Perguruan Tinggi Negeri",
+            "areaServed": "Kecamatan ${nameCountry}",
+            "offers": {
+              "@type": "Offer",
+              "priceCurrency": "IDR",
+              "availability": "https://schema.org/InStock",
+              "url": "${canonicalUrl}"
+            }
+          }
+        },
+
+        {
+          "@type": "FAQPage",
+          "@id": "${canonicalUrl}#faq",
+          "mainEntity": [
+            {
+              "@type": "Question",
+              "name": "Berapa lama durasi belajar per sesi Les Privat SNBT di Kecamatan ${nameCountry}?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Durasi standar per sesi adalah 90 menit (1.5 jam). Namun, ini dapat disesuaikan berdasarkan kebutuhan siswa, program yang dipilih, dan persetujuan tutor."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Apakah tutor SNBT bisa membimbing pemilihan PTN dan jurusan?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Ya, sebagai bagian dari layanan kami, tutor akan membantu siswa menganalisis peluang kelulusan berdasarkan hasil Try Out dan memberikan konsultasi strategis dalam memilih kombinasi PTN/Jurusan terbaik."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Apakah Matrix Tutoring menyediakan guru yang datang ke rumah di Kecamatan ${nameCountry}?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Ya, layanan guru datang ke rumah tersedia di seluruh wilayah Kecamatan ${nameCountry}. Pembelajaran menjadi lebih fokus dan efisien tanpa perlu bepergian."
+              }
+            }
+          ]
+        }
+      ]
+    }
+  `}
         </script>
       </Helmet>
 

@@ -163,35 +163,35 @@ const LesPrivateSBMPTNKelurahan = () => {
   const ogImageAlt = `Les Privat ${programName} Terbaik ${nameCountry} Matrix Tutoring`;
 
   const keywords = [
-    `Les Privat ${programName} ${nameCountry}`,
-    `Guru Privat ${programName} ${nameCountry}`,
-    `Les ${programName} ${nameCountry}`,
-    `Bimbingan ${programName} ${nameCountry}`,
-    `Les Privat Online ${programName} ${nameCountry}`,
-    `Les Privat Offline ${programName} ${nameCountry}`,
-    `Program Belajar ${programName} ${nameCountry}`,
-    `Tutor ${programName} ${nameCountry}`,
-    `Les Matematika ${programName} ${nameCountry}`,
-    `Les IPA ${programName} ${nameCountry}`,
-    `Les Bahasa Inggris ${programName} ${nameCountry}`,
-    `Les Fisika ${programName} ${nameCountry}`,
-    `Les Kimia ${programName} ${nameCountry}`,
-    `Les Biologi ${programName} ${nameCountry}`,
-    `Les Ekonomi ${programName} ${nameCountry}`,
-    `Les Geografi ${programName} ${nameCountry}`,
-    `Persiapan PTN ${nameCountry}`,
-    `Bimbel PTN ${nameCountry}`,
-    `Matrix Tutoring ${programName} ${nameCountry}`,
-    `Bimbel ${programName} ${nameCountry}`,
-    `Kursus ${programName} ${nameCountry}`,
+    `Les Privat ${programName} Kelurahan ${nameCountry}`,
+    `Guru Privat ${programName} Kelurahan ${nameCountry}`,
+    `Les ${programName} Kelurahan ${nameCountry}`,
+    `Bimbingan ${programName} Kelurahan ${nameCountry}`,
+    `Les Privat Online ${programName} Kelurahan ${nameCountry}`,
+    `Les Privat Offline ${programName} Kelurahan ${nameCountry}`,
+    `Program Belajar ${programName} Kelurahan ${nameCountry}`,
+    `Tutor ${programName} Kelurahan ${nameCountry}`,
+    `Les Matematika ${programName} Kelurahan ${nameCountry}`,
+    `Les IPA ${programName} Kelurahan ${nameCountry}`,
+    `Les Bahasa Inggris ${programName} Kelurahan ${nameCountry}`,
+    `Les Fisika ${programName} Kelurahan ${nameCountry}`,
+    `Les Kimia ${programName} Kelurahan ${nameCountry}`,
+    `Les Biologi ${programName} Kelurahan ${nameCountry}`,
+    `Les Ekonomi ${programName} Kelurahan ${nameCountry}`,
+    `Les Geografi ${programName} Kelurahan ${nameCountry}`,
+    `Persiapan PTN Kelurahan ${nameCountry}`,
+    `Bimbel PTN Kelurahan ${nameCountry}`,
+    `Matrix Tutoring ${programName} Kelurahan ${nameCountry}`,
+    `Bimbel ${programName} Kelurahan ${nameCountry}`,
+    `Kursus ${programName} Kelurahan ${nameCountry}`,
     kotaSlug.replace(/-/g, " ").toLowerCase(),
     kabupatenSlug.replace(/-/g, " ").toLowerCase(),
     kecamatanSlug.replace(/-/g, " ").toLowerCase(),
     kelurahanSlug.replace(/-/g, " ").toLowerCase(),
     // Jika masih ada yang mencari SNBT UTBK
-    `Les Privat SNBT UTBK ${nameCountry}`,
-    `Guru Privat SNBT UTBK ${nameCountry}`,
-    `Bimbel SNBT UTBK ${nameCountry}`,
+    `Les Privat SNBT UTBK Kelurahan ${nameCountry}`,
+    `Guru Privat SNBT UTBK Kelurahan ${nameCountry}`,
+    `Bimbel SNBT UTBK Kelurahan ${nameCountry}`,
   ];
 
   return (
@@ -206,7 +206,6 @@ const LesPrivateSBMPTNKelurahan = () => {
         <meta name="description" content={descriptionContent} />
         <meta name="keywords" content={keywords.join(", ")} />
         <link rel="canonical" href={canonicalUrl} />
-
         {/* Open Graph Meta Tags */}
         <meta property="og:locale" content="id_ID" />
         <meta property="og:type" content="article" />
@@ -227,7 +226,6 @@ const LesPrivateSBMPTNKelurahan = () => {
           property="article:section"
           content={`Les Privat ${programName}`}
         />
-
         {/* Twitter Card Meta Tags */}
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content={twitterTitle} />
@@ -235,82 +233,163 @@ const LesPrivateSBMPTNKelurahan = () => {
         <meta name="twitter:image" content={ogImage} />
         <meta name="twitter:site" content="@matrix_tutoring" />
         <meta name="twitter:creator" content="@matrix_tutoring" />
-
-        {/* Schema Markup (JSON-LD) - BreadcrumbList */}
+        /* Schema Markup (JSON-LD) */
         <script type="application/ld+json">
           {`
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "BreadcrumbList",
+          "@id": "${canonicalUrl}#breadcrumb",
+          "itemListElement": [
             {
-              "@context": "https://schema.org",
-              "@graph": [
-                {
-                  "@type": "BreadcrumbList",
-                  "@id": "${canonicalUrl}#breadcrumb",
-                  "itemListElement": [
-                    {
-                      "@type": "ListItem",
-                      "position": "1",
-                      "item": {
-                        "@id": "${baseUrl}",
-                        "name": "Home"
-                      }
-                    },
-                    {
-                      "@type": "ListItem",
-                      "position": "2",
-                      "item": {
-                        "@id": "${baseUrl}/les-privat-sbmptn", 
-                        "name": "Les Privat ${programName}"
-                      }
-                    },
-                    {
-                      "@type": "ListItem",
-                      "position": "3",
-                      "item": {
-                        "@id": "${baseUrl}/les-privat-sbmptn/${kotaSlug}",
-                        "name": "Les Privat ${programName} di ${kotaSlug
+              "@type": "ListItem",
+              "position": 1,
+              "item": {
+                "@id": "${baseUrl}",
+                "name": "Home"
+              }
+            },
+            {
+              "@type": "ListItem",
+              "position": 2,
+              "item": {
+                "@id": "${baseUrl}/les-privat-sbmptn", 
+                "name": "Les Privat ${programName}" 
+              }
+            },
+            {
+              "@type": "ListItem",
+              "position": 3,
+              "item": {
+                "@id": "${baseUrl}/les-privat-sbmptn/${kotaSlug}",
+                "name": "Les Privat ${programName} di ${kotaSlug
             .replace(/-/g, " ")
             .split(" ")
             .map((word) => word.charAt(0).toUpperCase() + word.slice(1))
             .join(" ")}"
-                      }
-                    },
-                    {
-                      "@type": "ListItem",
-                      "position": "4",
-                      "item": {
-                        "@id": "${baseUrl}/les-privat-sbmptn/${kotaSlug}/${kabupatenSlug}",
-                        "name": "Les Privat ${programName} di ${kabupatenSlug
+              }
+            },
+            {
+              "@type": "ListItem",
+              "position": 4,
+              "item": {
+                "@id": "${baseUrl}/les-privat-sbmptn/${kotaSlug}/${kabupatenSlug}",
+                "name": "Les Privat ${programName} di ${kabupatenSlug
             .replace(/-/g, " ")
             .split(" ")
             .map((word) => word.charAt(0).toUpperCase() + word.slice(1))
             .join(" ")}"
-                      }
-                    },
-                    {
-                      "@type": "ListItem",
-                      "position": "5",
-                      "item": {
-                        "@id": "${baseUrl}/les-privat-sbmptn/${kotaSlug}/${kabupatenSlug}/${kecamatanSlug}",
-                        "name": "Les Privat ${programName} di ${kecamatanSlug
+              }
+            },
+            {
+              "@type": "ListItem",
+              "position": 5,
+              "item": {
+                "@id": "${baseUrl}/les-privat-sbmptn/${kotaSlug}/${kabupatenSlug}/${kecamatanSlug}",
+                "name": "Les Privat ${programName} di ${kecamatanSlug
             .replace(/-/g, " ")
             .split(" ")
             .map((word) => word.charAt(0).toUpperCase() + word.slice(1))
             .join(" ")}"
-                      }
-                    },
-                    {
-                      "@type": "ListItem",
-                      "position": "6",
-                      "item": {
-                        "@id": "${canonicalUrl}",
-                        "name": "${pageTitle.replace(/<\/?[^>]+(>|$)/g, "")}"
-                      }
-                    }
-                  ]
-                }
-              ]
+              }
+            },
+            {
+              "@type": "ListItem",
+              "position": 6,
+              "item": {
+                "@id": "${canonicalUrl}",
+                "name": "${pageTitle.replace(/<\/?[^>]+(>|$)/g, "")}" 
+              }
             }
-          `}
+          ]
+        },
+
+        {
+          "@type": "EducationalOrganization",
+          "@id": "${canonicalUrl}#organization",
+          "name": "Matrix Tutoring",
+          "description": "Les Privat SNBT (UTBK) 1-on-1 terbaik di **Kelurahan ${nameCountry}**. Guru datang ke rumah Anda. Fokus pada TPS dan strategi lolos PTN favorit.",
+          "url": "${canonicalUrl}",
+          "areaServed": "Kelurahan ${nameCountry}", 
+          "sameAs": [
+            "https://www.instagram.com/matrixtutoring.id",
+            "https://www.tiktok.com/@lesprivatmatrix.com",
+            "https://www.facebook.com/matrixtutoring"
+          ],
+          "brand": {
+            "@type": "Brand",
+            "name": "Matrix Tutoring",
+            "logo": "https://apps.bimbelmatrix.com/images/whatsapp_footer.webp"
+          },
+          "contactPoint": {
+            "@type": "ContactPoint",
+            "telephone": "+62-857-4728-1466",
+            "contactType": "Customer Service",
+            "areaServed": "ID",
+            "availableLanguage": ["Indonesian", "English"]
+          },
+          "keywords": "${keywords.join(", ")}"
+        },
+
+        {
+          "@type": "WebPage",
+          "@id": "${canonicalUrl}#webpage",
+          "url": "${canonicalUrl}",
+          "name": "${pageTitle.replace(/<\/?[^>]+(>|$)/g, "")}",
+          "inLanguage": "id-ID",
+          "description": "${descriptionContent}", 
+          "isPartOf": { "@id": "${baseUrl}" },
+          "about": { "@id": "${canonicalUrl}#organization" },
+          "mainEntity": {
+            "@type": "Service",
+            "name": "Les Privat Persiapan Ujian ${programName} di Kelurahan ${nameCountry}",
+            "provider": { "@id": "${canonicalUrl}#organization" },
+            "serviceType": "Bimbingan Belajar Ujian Masuk Perguruan Tinggi Negeri",
+            "areaServed": "Kelurahan ${nameCountry}",
+            "offers": {
+              "@type": "Offer",
+              "priceCurrency": "IDR",
+              "availability": "https://schema.org/InStock",
+              "url": "${canonicalUrl}"
+            }
+          }
+        },
+
+        {
+          "@type": "FAQPage",
+          "@id": "${canonicalUrl}#faq",
+          "mainEntity": [
+            {
+              "@type": "Question",
+              "name": "Apakah tutor SNBT bisa datang ke rumah saya di Kelurahan ${nameCountry}?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Ya, kami menjamin ketersediaan tutor profesional yang siap datang ke lokasi Anda di seluruh area Kelurahan ${nameCountry}, memastikan kenyamanan dan efektivitas belajar."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Bagaimana cara mendaftar Les Privat SNBT di Kelurahan ${nameCountry}?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Anda bisa mendaftar dengan mudah melalui website kami atau menghubungi layanan pelanggan kami. Kami akan melakukan konsultasi untuk mencocokkan tutor terbaik dan menyusun jadwal belajar."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Materi apa yang menjadi fokus utama di Les Privat SNBT ini?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Fokus utama adalah pada penguasaan Tes Potensi Skolastik (TPS) dan semua subtes Tes Literasi sesuai format UTBK terbaru, serta strategi pengerjaan soal yang efisien."
+              }
+            }
+          ]
+        }
+      ]
+    }
+  `}
         </script>
       </Helmet>
 

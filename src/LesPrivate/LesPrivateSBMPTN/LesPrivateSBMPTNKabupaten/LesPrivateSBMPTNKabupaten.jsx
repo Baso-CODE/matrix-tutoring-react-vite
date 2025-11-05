@@ -168,32 +168,32 @@ const LesPrivateSBMPTNKabupaten = () => {
   const ogImageAlt = `Les Privat ${programName} Terbaik ${nameCountry} Matrix Tutoring`;
 
   const keywords = [
-    `Les Privat ${programName} ${nameCountry}`,
-    `Guru Privat ${programName} ${nameCountry}`,
-    `Les ${programName} ${nameCountry}`,
-    `Bimbingan ${programName} ${nameCountry}`,
-    `Les Privat Online ${programName} ${nameCountry}`,
-    `Les Privat Offline ${programName} ${nameCountry}`,
-    `Program Belajar ${programName} ${nameCountry}`,
-    `Tutor ${programName} ${nameCountry}`,
-    `Les Matematika ${programName} ${nameCountry}`,
-    `Les IPA ${programName} ${nameCountry}`,
-    `Les Bahasa Inggris ${programName} ${nameCountry}`,
-    `Les Fisika ${programName} ${nameCountry}`,
-    `Les Kimia ${programName} ${nameCountry}`,
-    `Les Biologi ${programName} ${nameCountry}`,
-    `Les Ekonomi ${programName} ${nameCountry}`,
-    `Les Geografi ${programName} ${nameCountry}`,
-    `Persiapan PTN ${nameCountry}`,
-    `Bimbel PTN ${nameCountry}`,
-    `Matrix Tutoring ${programName} ${nameCountry}`,
-    `Bimbel ${programName} ${nameCountry}`,
-    `Kursus ${programName} ${nameCountry}`,
+    `Les Privat ${programName} Kabupaten ${nameCountry}`,
+    `Guru Privat ${programName} Kabupaten ${nameCountry}`,
+    `Les ${programName} Kabupaten ${nameCountry}`,
+    `Bimbingan ${programName} Kabupaten ${nameCountry}`,
+    `Les Privat Online ${programName} Kabupaten ${nameCountry}`,
+    `Les Privat Offline ${programName} Kabupaten ${nameCountry}`,
+    `Program Belajar ${programName} Kabupaten ${nameCountry}`,
+    `Tutor ${programName} Kabupaten ${nameCountry}`,
+    `Les Matematika ${programName} Kabupaten ${nameCountry}`,
+    `Les IPA ${programName} Kabupaten ${nameCountry}`,
+    `Les Bahasa Inggris ${programName} Kabupaten ${nameCountry}`,
+    `Les Fisika ${programName} Kabupaten ${nameCountry}`,
+    `Les Kimia ${programName} Kabupaten ${nameCountry}`,
+    `Les Biologi ${programName} Kabupaten ${nameCountry}`,
+    `Les Ekonomi ${programName} Kabupaten ${nameCountry}`,
+    `Les Geografi ${programName} Kabupaten ${nameCountry}`,
+    `Persiapan PTN Kabupaten ${nameCountry}`,
+    `Bimbel PTN Kabupaten ${nameCountry}`,
+    `Matrix Tutoring ${programName} Kabupaten ${nameCountry}`,
+    `Bimbel ${programName} Kabupaten ${nameCountry}`,
+    `Kursus ${programName} Kabupaten ${nameCountry}`,
     kotaSlug.replace(/-/g, " ").toLowerCase(),
     kabupatenSlug.replace(/-/g, " ").toLowerCase(),
-    `Les Privat SBMPTN ${nameCountry}`,
-    `Guru Privat SBMPTN ${nameCountry}`,
-    `Bimbel SBMPTN ${nameCountry}`,
+    `Les Privat SBMPTN Kabupaten ${nameCountry}`,
+    `Guru Privat SBMPTN Kabupaten ${nameCountry}`,
+    `Bimbel SBMPTN Kabupaten ${nameCountry}`,
   ];
 
   return (
@@ -208,7 +208,6 @@ const LesPrivateSBMPTNKabupaten = () => {
         <meta name="description" content={descriptionContent} />
         <meta name="keywords" content={keywords.join(", ")} />
         <link rel="canonical" href={canonicalUrl} />
-
         {/* Open Graph Meta Tags */}
         <meta property="og:locale" content="id_ID" />
         <meta property="og:type" content="article" />
@@ -229,7 +228,6 @@ const LesPrivateSBMPTNKabupaten = () => {
           property="article:section"
           content={`Les Privat ${programName}`}
         />
-
         {/* Twitter Card Meta Tags */}
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content={twitterTitle} />
@@ -237,58 +235,139 @@ const LesPrivateSBMPTNKabupaten = () => {
         <meta name="twitter:image" content={ogImage} />
         <meta name="twitter:site" content="@matrix_tutoring" />
         <meta name="twitter:creator" content="@matrix_tutoring" />
-
-        {/* Schema Markup (JSON-LD) - BreadcrumbList */}
+        /* Schema Markup (JSON-LD) */
         <script type="application/ld+json">
           {`
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "BreadcrumbList",
+          "@id": "${canonicalUrl}#breadcrumb",
+          "itemListElement": [
             {
-              "@context": "https://schema.org",
-              "@graph": [
-                {
-                  "@type": "BreadcrumbList",
-                  "@id": "${canonicalUrl}#breadcrumb",
-                  "itemListElement": [
-                    {
-                      "@type": "ListItem",
-                      "position": "1",
-                      "item": {
-                        "@id": "${baseUrl}",
-                        "name": "Home"
-                      }
-                    },
-                    {
-                      "@type": "ListItem",
-                      "position": "2",
-                      "item": {
-                        "@id": "${baseUrl}/les-privat-sbmptn",
-                        "name": "Les Privat ${programName}"
-                      }
-                    },
-                    {
-                      "@type": "ListItem",
-                      "position": "3",
-                      "item": {
-                        "@id": "${baseUrl}/les-privat-sbmptn/${kotaSlug}",
-                        "name": "Les Privat ${programName} di ${kotaSlug
+              "@type": "ListItem",
+              "position": 1,
+              "item": {
+                "@id": "${baseUrl}",
+                "name": "Home"
+              }
+            },
+            {
+              "@type": "ListItem",
+              "position": 2,
+              "item": {
+                "@id": "${baseUrl}/les-privat-sbmptn", 
+                "name": "Les Privat ${programName}" 
+              }
+            },
+            {
+              "@type": "ListItem",
+              "position": 3,
+              "item": {
+                "@id": "${baseUrl}/les-privat-sbmptn/${kotaSlug}", 
+                "name": "Les Privat ${programName} di ${kotaSlug
             .replace(/-/g, " ")
             .split(" ")
             .map((word) => word.charAt(0).toUpperCase() + word.slice(1))
-            .join(" ")}"
-                      }
-                    },
-                    {
-                      "@type": "ListItem",
-                      "position": "4",
-                      "item": {
-                        "@id": "${canonicalUrl}",
-                        "name": "${pageTitle.replace(/<\/?[^>]+(>|$)/g, "")}"
-                      }
-                    }
-                  ]
-                }
-              ]
+            .join(" ")}" 
+              }
+            },
+            {
+              "@type": "ListItem",
+              "position": 4,
+              "item": {
+                "@id": "${canonicalUrl}",
+                "name": "${pageTitle.replace(/<\/?[^>]+(>|$)/g, "")}" 
+              }
             }
-          `}
+          ]
+        },
+
+        {
+          "@type": "EducationalOrganization",
+          "@id": "${canonicalUrl}#organization",
+          "name": "Matrix Tutoring",
+          "description": "Les Privat SNBT (UTBK) terbaik di **Kabupaten ${nameCountry}**. Program bimbingan belajar intensif untuk memastikan persiapan optimal menuju PTN impian Anda.",
+          "url": "${canonicalUrl}",
+          "areaServed": "Kabupaten ${nameCountry}", 
+          "sameAs": [
+            "https://www.instagram.com/matrixtutoring.id",
+            "https://www.tiktok.com/@lesprivatmatrix.com",
+            "https://www.facebook.com/matrixtutoring"
+          ],
+          "brand": {
+            "@type": "Brand",
+            "name": "Matrix Tutoring",
+            "logo": "https://apps.bimbelmatrix.com/images/whatsapp_footer.webp"
+          },
+          "contactPoint": {
+            "@type": "ContactPoint",
+            "telephone": "+62-857-4728-1466",
+            "contactType": "Customer Service",
+            "areaServed": "ID",
+            "availableLanguage": ["Indonesian", "English"]
+          },
+          "keywords": "${keywords.join(", ")}"
+        },
+
+        {
+          "@type": "WebPage",
+          "@id": "${canonicalUrl}#webpage",
+          "url": "${canonicalUrl}",
+          "name": "${pageTitle.replace(/<\/?[^>]+(>|$)/g, "")}",
+          "inLanguage": "id-ID",
+          "description": "${descriptionContent}", 
+          "isPartOf": { "@id": "${baseUrl}" },
+          "about": { "@id": "${canonicalUrl}#organization" },
+          "mainEntity": {
+            "@type": "Service",
+            "name": "Les Privat Persiapan Ujian ${programName} di Kabupaten ${nameCountry}",
+            "provider": { "@id": "${canonicalUrl}#organization" },
+            "serviceType": "Bimbingan Belajar Ujian Masuk Perguruan Tinggi Negeri",
+            "areaServed": "Kabupaten ${nameCountry}",
+            "offers": {
+              "@type": "Offer",
+              "priceCurrency": "IDR",
+              "availability": "https://schema.org/InStock",
+              "url": "${canonicalUrl}"
+            }
+          }
+        },
+
+        {
+          "@type": "FAQPage",
+          "@id": "${canonicalUrl}#faq",
+          "mainEntity": [
+            {
+              "@type": "Question",
+              "name": "Mata pelajaran apa yang menjadi fokus utama dalam Les Privat SNBT di Kabupaten ${nameCountry}?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Fokus utama kami adalah pada Tes Potensi Skolastik (TPS) dan Tes Literasi (Matematika, Bahasa Indonesia, Bahasa Inggris), yang merupakan komponen utama dalam penentuan kelulusan SNBT (UTBK)."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Apakah Matrix Tutoring melayani les privat SNBT secara tatap muka (offline) di Kabupaten ${nameCountry}?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Ya, kami menyediakan layanan guru datang ke rumah (tatap muka) di seluruh area Kabupaten ${nameCountry}, selain opsi belajar online yang fleksibel."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Apakah Les Privat SNBT ini menyediakan konsultasi pemilihan jurusan PTN?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Tentu. Siswa akan mendapatkan sesi konsultasi strategis pemilihan jurusan dan PTN berdasarkan analisis peluang, passing grade, dan minat siswa untuk memaksimalkan hasil di hari ujian."
+              }
+            }
+          ]
+        }
+      ]
+    }
+  `}
         </script>
       </Helmet>
 
