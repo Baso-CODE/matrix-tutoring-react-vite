@@ -155,7 +155,6 @@ const HeroHomeV2 = ({ contactData }) => {
     });
   }
 
-  // Fungsi handler untuk menutup modal
   const handleCloseModal = () => {
     setIsModalOpen(false);
     setModalImageUrl("");

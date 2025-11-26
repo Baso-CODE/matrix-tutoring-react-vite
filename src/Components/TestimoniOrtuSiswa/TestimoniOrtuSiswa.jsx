@@ -46,14 +46,6 @@ const TestimoniOrtuSiswa = ({ location }) => {
             {dataTestimoniOrangTua.map((data, index) => (
               <div className="embla__slide-tesimoni-ortu" key={index}>
                 <TestimoniCardOrtuSiswa data={data} location={location} />
-                {/* <img
-                  loading="lazy"
-                  src={image.link_image}
-                  alt={`Testimoni Orang Tua ${image.name} - Matrix Tutoring ${
-                    location ? `di ${location}` : "Indonesia"
-                  }`}
-                  className="testimonial-image"
-                /> */}
               </div>
             ))}
           </div>
