@@ -401,14 +401,14 @@ const LesPrivateSMPKelurahan = () => {
       <TableOfContents title="Table of Contents" items={items} />{" "}
       <ImpactStatistics />
       <SolusiBelajarSMP location={nameCountry} />
-      <ProgramBelajarSMP />
+      <ProgramBelajarSMP location={nameCountry} />
       <TargetBelajarSMP location={nameCountry} />
       <GalleryBelajarSMP />
       <ProfileMatrixTutoring title={"SMP Terbaik"} location={nameCountry} />
-      <KurikulumLesPrivate />
+      <KurikulumLesPrivate location={nameCountry} />
       <TutorLesprivatMatrix location={nameCountry} />
       <LesprivatKota />
-      <AdaptiveLearningSMP location={name} />
+      <AdaptiveLearningSMP location={nameCountry} />
       <section id="program-les-private-matrix-tutoring">
         <ProgramLesPrivatV2 location={nameCountry} />
       </section>

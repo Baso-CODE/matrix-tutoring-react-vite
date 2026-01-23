@@ -1,5 +1,24 @@
 import "./TargetBelajarSMP.css";
+
 const TargetBelajarSMP = ({ location }) => {
+  // 1. Setup Variabel Lokasi
+  const locName = location || "Indonesia";
+  const locSuffix = location ? `di ${location}` : "";
+
+  // 2. Strategi SEO: 3 Variasi Judul (Anti-Duplikat)
+  const titleVariations = [
+    // Variasi 1 (Brand Focused)
+    `Target Belajar Les Privat SMP ${locSuffix} - Matrix Tutoring`,
+    // Variasi 2 (Result Focused)
+    `Capaian Belajar Siswa SMP bersama Matrix Tutoring ${locName}`,
+    // Variasi 3 (Benefit Focused)
+    `Manfaat Mengikuti Les Privat SMP ${locSuffix}`,
+  ];
+
+  // 3. Logic Pemilihan Judul (Deterministik)
+  const seed = location ? location.length : 0;
+  const selectedTitle = titleVariations[seed % titleVariations.length];
+
   return (
     <section className="container-all">
       <div className="target-belajar-smp">
@@ -7,46 +26,75 @@ const TargetBelajarSMP = ({ location }) => {
           <img
             className="les-privat-sd-image_v2"
             src="/images/les-private/smp/target-belajar-les-privat-smp.webp"
-            // target-belajar-smp.png
-            alt={`Target Belajar Image Les Privat SMP di ${
-              location ? location : "Indonesia"
-            } - Matrix Tutoring`}
+            // Alt Text Dioptimalkan
+            alt={`Target dan Capaian Belajar Les Privat SMP di ${locName} - Matrix Tutoring`}
             onError={(e) => {
               e.currentTarget.src =
                 "https://placehold.co/800x360/007bff/ffffff?text=Target+Belajar+Les+Privat+SMP";
             }}
             loading="lazy"
+            width="600"
+            height="400"
           />
 
           <div className="target-content">
-            <h2>Target Belajar Les Privat SMP - Matrix Tutoring</h2>
+            {/* DYNAMIC TITLE */}
+            <h2>{selectedTitle}</h2>
+
+            {/* Injeksi Lokasi di Paragraf Pembuka */}
             <p>
-              Dengan mengikuti les privat secara konsisten, anak diharapkan
-              dapat:
+              Dengan mengikuti les privat secara konsisten, siswa SMP{" "}
+              <strong>{locName}</strong> diharapkan dapat mencapai target
+              berikut:
             </p>
+
             <ul className="checklist">
-              <li> Meningkatkan nilai rapor secara konsisten</li>
               <li>
-                Mendapatkan bimbingan khusus pada mata pelajaran yang dirasa
-                sulit
+                <strong>Nilai Rapor Naik:</strong> Meningkatkan nilai akademik
+                sekolah secara konsisten.
               </li>
               <li>
-                Memahami konsep pelajaran lebih mendalam dan terlatih
-                mengerjakan berbagai latihan soal dari level mudah sampai sulit
+                <strong>Pemahaman Tuntas:</strong> Mendapatkan bimbingan khusus
+                pada mata pelajaran yang dirasa sulit di sekolah.
               </li>
-              <li> Menguasai materi sesuai dengan kurikulum sekolah siswa</li>
-              <li> Mampu menghadapi ulangan atau ujian semester</li>
               <li>
-                Membangun rasa percaya diri saat presentasi atau diskusi di
-                kelas
+                <strong>Latihan Soal:</strong> Memahami konsep lebih mendalam
+                dan terlatih mengerjakan berbagai variasi soal ujian.
               </li>
-              <li> Mengatur waktu belajar lebih efektif dan disiplin</li>
               <li>
-                Mengembangkan soft skills seperti problem solving dan komunikasi
+                <strong>Sesuai Kurikulum:</strong> Menguasai materi sesuai
+                dengan kurikulum sekolah yang diterapkan di{" "}
+                <strong>{locName}</strong>.
               </li>
-              <li> Memiliki fondasi yang kuat untuk masuk SMA favorit</li>
-              <li> Terbiasa berpikir kritis, bukan sekadar menghafal</li>
-              <li> Siap ikut lomba atau seleksi masuk sekolah unggulan</li>
+              <li>
+                <strong>Siap Ujian:</strong> Lebih siap dan tenang menghadapi
+                Ulangan Harian, PTS, atau PAT.
+              </li>
+              <li>
+                <strong>Percaya Diri:</strong> Membangun rasa percaya diri saat
+                presentasi atau diskusi di kelas.
+              </li>
+              <li>
+                <strong>Manajemen Waktu:</strong> Mengatur waktu belajar lebih
+                efektif dan disiplin di tengah kesibukan sekolah.
+              </li>
+              <li>
+                <strong>Soft Skills:</strong> Mengembangkan kemampuan{" "}
+                <em>problem solving</em> dan komunikasi.
+              </li>
+              <li>
+                <strong>Masuk SMA Favorit:</strong> Memiliki fondasi nilai dan
+                akademik yang kuat untuk seleksi masuk SMA Favorit{" "}
+                <strong>{locSuffix}</strong>.
+              </li>
+              <li>
+                <strong>Berpikir Kritis:</strong> Terbiasa menganalisis soal
+                (HOTS), bukan sekadar menghafal rumus.
+              </li>
+              <li>
+                <strong>Kompetisi:</strong> Siap mengikuti lomba (OSN/Olimpiade)
+                atau seleksi masuk sekolah unggulan.
+              </li>
             </ul>
           </div>
         </div>

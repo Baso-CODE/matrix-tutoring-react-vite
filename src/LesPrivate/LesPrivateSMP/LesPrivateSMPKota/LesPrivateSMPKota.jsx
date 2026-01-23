@@ -2,11 +2,9 @@ import React, { useEffect, useState } from "react";
 import { Helmet } from "react-helmet-async";
 import { useParams } from "react-router-dom";
 import AsalSekolahSiswaEdumatrix from "../../../Components/AsalSekolahSiswa/AsalSekolahSiswa";
-import MatrixFeatures from "../../../Components/MatrixFeatures/MatrixFeatures";
 import OnlineLesOptions from "../../../Components/OnlineLesOption/OnlineLesOption";
 import ProgramBelajarLesPrivat from "../../../Components/ProgramBelajarLesPrivate/ProgramBelajarLesPrivate";
 import PilihanProgram from "../../../Components/ProgramOptions/PilihanProgram";
-import EmbrelaSlider from "../../../Components/SlideTop/EmbrelaSlider";
 import { getAllKotBySlug } from "../../../helper/request/getAllKotaBySlug";
 import HeroLesPrivate from "../../components/HeroLesPrrivate/HeroLesPrivate";
 import TableOfContents from "../../components/TableOfContent";
@@ -16,10 +14,13 @@ import FiturProgramNew from "../../../Components/FiturProgramNew/FiturProgramNew
 import GaleriKegiatanBelajar from "../../../Components/GaleriKegiatanBelajar/GaleriKegiatanBelajar";
 import HowToOrder from "../../../Components/HowToOrder/HowToOrder";
 import MasterTeacherV2 from "../../../Components/MasterTeacherV2/MasterTeacherV2";
+import MatrixSubjects from "../../../Components/MatrixFeatures/MatrixSubjects";
+import WhyMatrixFeatures from "../../../Components/MatrixFeatures/WhyMatrixFeatures";
 import ProgramLesPrivatV2 from "../../../Components/ProgramLesPrivatNew/ProgramLesPrivatV2 ";
 import SuccessStoryLesPrivate from "../../../Components/SuccesStoryLesPrivate/SuccesStoryLesPrivate";
 import TestimoniOrtuSiswa from "../../../Components/TestimoniOrtuSiswa/TestimoniOrtuSiswa";
 import CTABottomHome from "../../../Home/CTABottomHome/CTABottomHome";
+import PromoHomepage from "../../../Home/PromoHomepage/PromoHomepage";
 import { getHeroData } from "../../../utils/getHeroData";
 import ImpactStatistics from "../../LesPrivateMahasiswa/components/ImpactStatistics/ImpactStatistics";
 import KurikulumLesPrivate from "../../LesPrivateSD/components/KurikulumLesPrivate/KurikulumLesPrivate";
@@ -31,9 +32,6 @@ import GalleryBelajarSMP from "../components/GalleryBelajarSMP/GalleryBelajarSMP
 import ProgramBelajarSMP from "../components/ProgramBelajarSMP/ProgramBelajarSMP";
 import SolusiBelajarSMP from "../components/SolusiBelajarSMP/SolusiBelajarSMP";
 import TargetBelajarSMP from "../components/TargetBelajarSMP/TargetBelajarSMP";
-import WhyMatrixFeatures from "../../../Components/MatrixFeatures/WhyMatrixFeatures";
-import MatrixSubjects from "../../../Components/MatrixFeatures/MatrixSubjects";
-import PromoHomepage from "../../../Home/PromoHomepage/PromoHomepage";
 const items = [
   {
     text: "Les Privat SMP – Guru Les Privat SMP ke Rumah dan Bimbel Online",
@@ -354,17 +352,17 @@ const LesPrivateSMPKota = () => {
         desc={heroData?.description}
       />
       {/* <Slidertop /> */}
-      <TableOfContents title="Table of Contents" items={items} />{" "}
+      <TableOfContents title="Table of Contents" items={items} />
       <ImpactStatistics />
       <SolusiBelajarSMP location={nameCountry} />
-      <ProgramBelajarSMP />
+      <ProgramBelajarSMP location={nameCountry} />
       <TargetBelajarSMP location={nameCountry} />
       <GalleryBelajarSMP />
       <ProfileMatrixTutoring title={"SMP Terbaik"} location={nameCountry} />
-      <KurikulumLesPrivate />
+      <KurikulumLesPrivate location={nameCountry} />
       <TutorLesprivatMatrix location={nameCountry} />
       <LesprivatKota />
-      <AdaptiveLearningSMP location={name} />
+      <AdaptiveLearningSMP location={nameCountry} />
       <section id="program-les-private-matrix-tutoring">
         <ProgramLesPrivatV2 location={nameCountry} />
       </section>
