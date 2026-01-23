@@ -1,50 +1,64 @@
 import "./SolusiLesPrivateSMA.css";
 
-const SolusiLesPrivateSMA = () => {
+const SolusiLesPrivateSMA = ({ location }) => {
+  // 1. Setup Variabel Lokasi
+  const locName = location || "Indonesia";
+  const locSuffix = location ? `di ${location}` : "";
+
+  // 2. Strategi SEO: 3 Variasi Judul (Anti-Duplikat)
+  const titleVariations = [
+    // Variasi 1 (Standard)
+    `Les Privat SMA ${locSuffix}: Solusi Berbagai Kebutuhan Belajar`,
+    // Variasi 2 (Student Focused)
+    `Solusi Belajar Siswa SMA ${locName} Terlengkap`,
+    // Variasi 3 (Quality Focused)
+    `Bimbingan Belajar Privat SMA Terbaik ${locSuffix}`,
+  ];
+
+  // 3. Logic Pemilihan Judul (Deterministik)
+  const seed = location ? location.length : 0;
+  const selectedTitle = titleVariations[seed % titleVariations.length];
+
   return (
     <div className="solusi_les-private-sma-container">
-      <h2>Les Privat SMA: Solusi Berbagai Kebutuhan Belajar</h2>
-      <p>Program Les Privat SMA - Matrix Tutoring diperuntukkan bagi:</p>
+      {/* DYNAMIC TITLE */}
+      <h2>{selectedTitle}</h2>
+
+      {/* Injeksi Lokasi di Paragraf Pembuka */}
+      <p>
+        Program Les Privat SMA - Matrix Tutoring diperuntukkan bagi siswa{" "}
+        <strong>{locName}</strong>, khususnya:
+      </p>
+
       <ul>
         <li>
-          Siswa yang membutuhkan pendalaman konsep dan pemahaman pelajaran
-          sekolah
+          <strong>Pendalaman Materi:</strong> Siswa yang membutuhkan pendalaman
+          konsep dan pemahaman pelajaran sekolah yang lebih tuntas.
         </li>
         <li>
-          Siswa yang membutuhkan bimbingan mengerjakan PR dan tugas sekolah
+          <strong>Bantuan Tugas:</strong> Siswa yang membutuhkan bimbingan
+          intensif dalam mengerjakan PR dan tugas sekolah.
         </li>
         <li>
-          Siswa yang sedang mempersiapkan diri untuk ulangan harian atau ujian
-          semester
+          <strong>Persiapan Ujian:</strong> Siswa yang sedang mempersiapkan diri
+          untuk Ulangan Harian, PTS, atau Ujian Semester di sekolahnya{" "}
+          <strong>{locSuffix}</strong>.
         </li>
         <li>
-          Siswa kelas 12 yang bersiap menghadapi UTBK–SNBT atau ujian mandiri
-          masuk PTN
+          <strong>Lolos PTN Impian:</strong> Siswa kelas 12 yang bersiap
+          menghadapi UTBK–SNBT, Simak UI, atau ujian mandiri masuk PTN Favorit.
         </li>
         <li>
-          Siswa yang ingin mengasah kemampuan akademik untuk OSN tingkat SMA
+          <strong>Kompetisi & OSN:</strong> Siswa yang ingin mengasah kemampuan
+          akademik tingkat lanjut untuk Olimpiade Sains Nasional (OSN) tingkat
+          SMA.
         </li>
         <li>
-          Siswa yang membutuhkan dukungan belajar yang lebih terarah,
-          menyenangkan, dan tidak membosankan
+          <strong>Motivasi Belajar:</strong> Siswa yang membutuhkan dukungan
+          belajar yang lebih terarah, personal, menyenangkan, dan tidak
+          membosankan.
         </li>
       </ul>
-
-      {/* <h3>Siapa Pengajar Les Privat SMA dari Matrix Tutoring?</h3>
-      <p>
-        Matrix percaya bahwa guru yang baik bukan hanya sekadar pintar, tetapi
-        juga paham bagaimana membimbing siswa agar lebih fokus, percaya diri,
-        dan siap menghadapi berbagai ujian penting.
-      </p>
-      <p>
-        Pengajar Matrix Tutoring berasal dari alumni dan mahasiswa dari UI, UGM,
-        ITB, IPB, STAN, STIS, UNJ, dan Perguruan Tinggi lainnya. Selain itu,
-        terdapat beberapa dosen, guru sekolah, dan asisten dosen berpengalaman
-        yang menjadi bagian dari guru privat Matrix Tutoring. Para pengajar kami
-        telah diseleksi secara ketat, dilatih, dan ditugaskan sesuai dengan
-        bidang keahliannya. Guru Privat Matrix bukan hanya pintar, tetapi juga
-        paham bagaimana membuat anak merasa nyaman belajar.
-      </p> */}
     </div>
   );
 };

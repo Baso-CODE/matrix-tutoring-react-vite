@@ -31,7 +31,6 @@ import LesPrivatSMAMetode from "../components/LesPrivatSMAMetode/LesPrivatSMAMet
 import MatrixSubjects from "../../../Components/MatrixFeatures/MatrixSubjects";
 import WhyMatrixFeatures from "../../../Components/MatrixFeatures/WhyMatrixFeatures";
 import LogoPengajarMTX from "../components/LogoAlumniTutor/LogoPengajarMTX";
-import MatrixDifferentiationSMA from "../components/MatrixDifferentiationSMA/MatrixDifferentiationSMA";
 import ProgaramLesPrivatSMA from "../components/ProgaramLesPrivatSMA/ProgaramLesPrivatSMA";
 import PTNSuccessStrategy from "../components/PTNSuccessStrategy/PTNSuccessStrategy";
 import SolusiLesPrivateSMA from "../components/SolusiLesPrivateSMA/SolusiLesPrivateSMA";
@@ -390,17 +389,17 @@ const LesPrivateSMAKecamatan = () => {
       <TableOfContents title="Table of Contents" items={items} />
       <ImpactStatistics />
       <WhyMTXImportant location={nameCountry} />
-      <LesPrivatSMAMetode />
-      <ProgaramLesPrivatSMA />
-      <SolusiLesPrivateSMA />
+      <LesPrivatSMAMetode location={nameCountry} />
+      <ProgaramLesPrivatSMA location={nameCountry} />
+      <SolusiLesPrivateSMA location={nameCountry} />
       <LogoPengajarMTX
         title={"Siapa Guru Les Privat SMA dari Matrix Tutoring?"}
       />
       <GalleryBelajarSMA />
-      <KeunggulanLesPrivateSMA />
+      <KeunggulanLesPrivateSMA location={nameCountry} />
       <ProfileMatrixTutoring title={"SMA Terbaik"} location={nameCountry} />
       <TutorLesprivatMatrix location={nameCountry} />
-      <KurikulumLesPrivate />
+      <KurikulumLesPrivate location={nameCountry} />
       <LesprivatKota />
       <PTNSuccessStrategy location={nameCountry} />
       {/* <MatrixDifferentiationSMA /> */}
