@@ -386,16 +386,16 @@ const LesPrivateTKKelurahan = () => {
         <TableOfContents title="Table of Contents" items={items} />
         <ImpactStatistics />
         <ProgramLesPrivatCalistung location={nameCountry} />
-        <ProgramLesPrivatCalistungLanjutan />
+        <ProgramLesPrivatCalistungLanjutan location={nameCountry} />
         <GalleryBelajarTK />
-        <PelajaranCalistungMatrix />
+        <PelajaranCalistungMatrix location={nameCountry} />
         <KeunggulanCalistungMatrix location={nameCountry} />
         <ProfileMatrixTutoring
           title={"Calistung TK Terbaik"}
           location={nameCountry}
         />
-        <KurikulumLesPrivate />
-        <TutorLesprivatMatrix />
+        <KurikulumLesPrivate location={nameCountry} />
+        <TutorLesprivatMatrix location={nameCountry} />
         <LesprivatKota />
         <LearningFeaturesLesPrivateTk />
         <MainLearningContent location={nameCountry} />

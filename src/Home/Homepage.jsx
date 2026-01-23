@@ -1,32 +1,28 @@
 import React from "react";
 import { Helmet } from "react-helmet-async";
 import AsalSekolahSiswaEdumatrix from "../Components/AsalSekolahSiswa/AsalSekolahSiswa";
-import MatrixFeatures from "../Components/MatrixFeatures/MatrixFeatures";
 import OnlineLesOptions from "../Components/OnlineLesOption/OnlineLesOption";
 import ProgramBelajarLesPrivat from "../Components/ProgramBelajarLesPrivate/ProgramBelajarLesPrivate";
 import PilihanProgram from "../Components/ProgramOptions/PilihanProgram";
-import AsalSekolahSiswaMarque from "../Components/SekolahSiswaMarque/SekolahSiswaMarque";
 
 import AccordionFAQ from "../Components/FAQ/AccordionFAQ";
 import FiturProgramNew from "../Components/FiturProgramNew/FiturProgramNew";
 import GaleriKegiatanBelajar from "../Components/GaleriKegiatanBelajar/GaleriKegiatanBelajar";
-import HeroHome from "../Components/HeroHome/HeroHome";
+import HeroHomeV2 from "../Components/HeroHomeV2/HeroHomeV2";
 import HowToOrder from "../Components/HowToOrder/HowToOrder";
 import MasterTeacherV2 from "../Components/MasterTeacherV2/MasterTeacherV2";
+import MatrixSubjects from "../Components/MatrixFeatures/MatrixSubjects";
+import WhyMatrixFeatures from "../Components/MatrixFeatures/WhyMatrixFeatures";
 import ProgramLesPrivatV2 from "../Components/ProgramLesPrivatNew/ProgramLesPrivatV2 ";
-import EmbrelaSlider from "../Components/SlideTop/EmbrelaSlider";
 import SuccessStoryLesPrivate from "../Components/SuccesStoryLesPrivate/SuccesStoryLesPrivate";
 import TestimoniOrtuSiswa from "../Components/TestimoniOrtuSiswa/TestimoniOrtuSiswa";
+import KurikulumLesPrivate from "../LesPrivate/LesPrivateSD/components/KurikulumLesPrivate/KurikulumLesPrivate";
+import LesprivatKota from "../LesPrivate/LesPrivateSD/components/LesprivatKota/LesprivatKota";
 import { selectContactCsData } from "../lib/features/contactCsSlice";
 import { useAppSelector } from "../lib/hooks";
 import CTABottomHome from "./CTABottomHome/CTABottomHome";
 import "./Homepage.css";
 import PromoHomepage from "./PromoHomepage/PromoHomepage";
-import WhyMatrixFeatures from "../Components/MatrixFeatures/WhyMatrixFeatures";
-import MatrixSubjects from "../Components/MatrixFeatures/MatrixSubjects";
-import KurikulumLesPrivate from "../LesPrivate/LesPrivateSD/components/KurikulumLesPrivate/KurikulumLesPrivate";
-import LesprivatKota from "../LesPrivate/LesPrivateSD/components/LesprivatKota/LesprivatKota";
-import HeroHomeV2 from "../Components/HeroHomeV2/HeroHomeV2";
 
 const Homepage = () => {
   const contactData = useAppSelector(selectContactCsData);

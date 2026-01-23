@@ -97,9 +97,8 @@ const LesPrivateTKKabupaten = () => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const responseKabupaten = await getAllKotaKabupatenBySlug(
-          kabupatenSlug
-        );
+        const responseKabupaten =
+          await getAllKotaKabupatenBySlug(kabupatenSlug);
         setKabupaten(responseKabupaten.data);
 
         const getHero = await getHeroData("TK", "kabupaten");
@@ -356,16 +355,16 @@ const LesPrivateTKKabupaten = () => {
         <TableOfContents title="Table of Contents" items={items} />
         <ImpactStatistics />
         <ProgramLesPrivatCalistung location={nameCountry} />
-        <ProgramLesPrivatCalistungLanjutan />
+        <ProgramLesPrivatCalistungLanjutan location={nameCountry} />
         <GalleryBelajarTK />
-        <PelajaranCalistungMatrix />
+        <PelajaranCalistungMatrix location={nameCountry} />
         <KeunggulanCalistungMatrix location={nameCountry} />
         <ProfileMatrixTutoring
           title={"Calistung TK Terbaik"}
           location={nameCountry}
         />
-        <KurikulumLesPrivate />
-        <TutorLesprivatMatrix />
+        <KurikulumLesPrivate location={nameCountry} />
+        <TutorLesprivatMatrix location={nameCountry} />
         <LesprivatKota />
         <LearningFeaturesLesPrivateTk />
         <MainLearningContent location={nameCountry} />

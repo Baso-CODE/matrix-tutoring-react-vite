@@ -345,15 +345,15 @@ const LesPrivateTKKota = () => {
         <TableOfContents title="Table of Contents" items={items} />
         <ImpactStatistics />
         <ProgramLesPrivatCalistung location={nameCountry} />
-        <ProgramLesPrivatCalistungLanjutan />
+        <ProgramLesPrivatCalistungLanjutan location={nameCountry} />
         <GalleryBelajarTK />
-        <PelajaranCalistungMatrix />
+        <PelajaranCalistungMatrix location={nameCountry} />
         <KeunggulanCalistungMatrix location={nameCountry} />
         <ProfileMatrixTutoring
           title={"Calistung TK Terbaik"}
           location={nameCountry}
         />
-        <KurikulumLesPrivate />
+        <KurikulumLesPrivate location={nameCountry} />
         <TutorLesprivatMatrix />
         <LesprivatKota />
         <LearningFeaturesLesPrivateTk />
