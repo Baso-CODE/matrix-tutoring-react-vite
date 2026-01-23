@@ -98,9 +98,8 @@ const LesPrivateSDKabupaten = () => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const responseKabupaten = await getAllKotaKabupatenBySlug(
-          kabupatenSlug
-        ); // Pastikan fungsi ini ada dan benar
+        const responseKabupaten =
+          await getAllKotaKabupatenBySlug(kabupatenSlug); // Pastikan fungsi ini ada dan benar
         setKabupaten(responseKabupaten.data);
 
         const getHero = await getHeroData("SD", "kabupaten");
@@ -361,10 +360,10 @@ const LesPrivateSDKabupaten = () => {
       <ProgramLesPrivatSD location={nameCountry} />
       <ProgramSD location={nameCountry} />
       <GalleryBelajarSD />
-      <WhyChooseProgramSD />
+      <WhyChooseProgramSD location={nameCountry} />
       <ProfileMatrixTutoring title={"SD Terbaik"} location={nameCountry} />
       <TutorLesprivatMatrix location={nameCountry} />
-      <KurikulumLesPrivate />
+      <KurikulumLesPrivate location={nameCountry} />
       <LesprivatKota />
       <MainSubjectsSD location={nameCountry} />
       <section id="program-les-private-matrix-tutoring">

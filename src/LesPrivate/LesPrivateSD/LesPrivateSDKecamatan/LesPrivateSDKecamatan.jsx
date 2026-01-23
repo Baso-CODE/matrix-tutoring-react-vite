@@ -377,10 +377,10 @@ const LesPrivateSDKecamatan = () => {
       <ProgramLesPrivatSD location={nameCountry} />
       <ProgramSD location={nameCountry} />
       <GalleryBelajarSD />
-      <WhyChooseProgramSD />
+      <WhyChooseProgramSD location={nameCountry} />
       <ProfileMatrixTutoring title={"SD Terbaik"} location={nameCountry} />
       <TutorLesprivatMatrix location={nameCountry} />
-      <KurikulumLesPrivate />
+      <KurikulumLesPrivate location={nameCountry} />
       <LesprivatKota />
       <MainSubjectsSD location={nameCountry} />
       <section id="program-les-private-matrix-tutoring">
