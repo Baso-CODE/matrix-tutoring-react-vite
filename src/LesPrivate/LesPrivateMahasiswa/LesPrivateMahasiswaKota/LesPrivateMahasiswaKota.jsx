@@ -359,9 +359,9 @@ const LesPrivateMahasiswaKota = () => {
       {/* <EmbrelaSlider /> */}
       <TableOfContents title="Table of Contents" items={items} />
       <LesPrivatMahasiswaContent location={nameCountry} />
-      <ProgamLesPrivatMahasiswa />
-      <LesPrivateMahasiswaList />
-      <GalleryBelajarMahasiswa />
+      <ProgamLesPrivatMahasiswa location={nameCountry} />
+      <LesPrivateMahasiswaList location={nameCountry} />
+      <GalleryBelajarMahasiswa location={nameCountry} />
       <TestimoniWaSNBT location={nameCountry} />
       <ProfileMatrixTutoring
         title={"Mahasiswa Terbaik"}

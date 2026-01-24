@@ -106,9 +106,8 @@ const LesPrivateMahasiswaKabupaten = () => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const responseKabupaten = await getAllKotaKabupatenBySlug(
-          kabupatenSlug
-        ); // Pastikan fungsi ini ada dan benar
+        const responseKabupaten =
+          await getAllKotaKabupatenBySlug(kabupatenSlug); // Pastikan fungsi ini ada dan benar
         setKabupaten(responseKabupaten.data);
 
         const getHero = await getHeroData("MAHASISWA", "kabupaten"); // Pastikan kategori dan jenis sudah benar di backend
@@ -374,9 +373,9 @@ const LesPrivateMahasiswaKabupaten = () => {
       {/* <EmbrelaSlider /> */}
       <TableOfContents title="Table of Contents" items={items} />
       <LesPrivatMahasiswaContent location={nameCountry} />
-      <ProgamLesPrivatMahasiswa />
-      <LesPrivateMahasiswaList />
-      <GalleryBelajarMahasiswa />
+      <ProgamLesPrivatMahasiswa location={nameCountry} />
+      <LesPrivateMahasiswaList location={nameCountry} />
+      <GalleryBelajarMahasiswa location={nameCountry} />
       <TestimoniWaSNBT location={nameCountry} />
       <ProfileMatrixTutoring
         title={"Mahasiswa Terbaik"}
