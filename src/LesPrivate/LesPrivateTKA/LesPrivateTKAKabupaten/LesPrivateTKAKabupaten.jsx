@@ -14,6 +14,7 @@ import ProgramBelajarLesPrivat from "../../../Components/ProgramBelajarLesPrivat
 import ProgramLesPrivatV2 from "../../../Components/ProgramLesPrivatNew/ProgramLesPrivatV2 ";
 import PilihanProgram from "../../../Components/ProgramOptions/PilihanProgram";
 import SuccessStoryLesPrivate from "../../../Components/SuccesStoryLesPrivate/SuccesStoryLesPrivate";
+import TestimoniOrtuSiswa from "../../../Components/TestimoniOrtuSiswa/TestimoniOrtuSiswa";
 import { getAllKotaKabupatenBySlug } from "../../../helper/request/getAllKotaKabupatenBySlug";
 import CTABottomHome from "../../../Home/CTABottomHome/CTABottomHome";
 import PromoHomepage from "../../../Home/PromoHomepage/PromoHomepage";
@@ -27,16 +28,15 @@ import ProfileMatrixTutoring from "../../LesPrivateSD/components/ProfileMatrixTu
 import LogoPengajarMTX from "../../LesPrivateSMA/components/LogoAlumniTutor/LogoPengajarMTX";
 import BenefitOfTKA from "../components/BenefitOfTKA/BenefitOfTKA";
 import FokusLesPrivateTKA from "../components/FokusLesPrivateTKA/FokusLesPrivateTKA";
+import FokusPersiapanTKA from "../components/FokusPersiapanTKA/FokusPersiapanTKA";
 import GalleryBelajarTKA from "../components/GalleryBelajarTKA/GalleryBelajarTKA";
+import InformasiSeputarTKA from "../components/InformasiSeputarTKA/InformasiSeputarTKA";
+import KegunaanTestTKA from "../components/KegunaanTestTKA/KegunaanTestTKA";
+import MataPelajaranTKATable from "../components/MataPelajaranTKATable/MataPelajaranTKATable";
 import ProgramLesPrivatTKA from "../components/ProgramLesPrivatTKA/ProgramLesPrivatTKA";
 import SistemBelajarTKA from "../components/SistemBelajarTKA/SistemBelajarTKA";
 import TKAFlow from "../components/TKAFlow/TKAFlow";
 import TKAPillarsShowcase from "../components/TKAPillarsShowcase/TKAPillarsShowcase";
-import InformasiSeputarTKA from "../components/InformasiSeputarTKA/InformasiSeputarTKA";
-import FokusPersiapanTKA from "../components/FokusPersiapanTKA/FokusPersiapanTKA";
-import MataPelajaranTKATable from "../components/MataPelajaranTKATable/MataPelajaranTKATable";
-import KegunaanTestTKA from "../components/KegunaanTestTKA/KegunaanTestTKA";
-import TestimoniOrtuSiswa from "../../../Components/TestimoniOrtuSiswa/TestimoniOrtuSiswa";
 
 const items = [
   {
@@ -105,9 +105,8 @@ const LesPrivateTKAKabupaten = () => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const responseKabupaten = await getAllKotaKabupatenBySlug(
-          kabupatenSlug
-        );
+        const responseKabupaten =
+          await getAllKotaKabupatenBySlug(kabupatenSlug);
         setKabupaten(responseKabupaten.data);
 
         const getHero = await getHeroData("AKM", "kabupaten");
@@ -372,13 +371,13 @@ const LesPrivateTKAKabupaten = () => {
       <ImpactStatistics />
       <TableOfContents title="Table of Contents" items={items} />
       {/* <EmbrelaSlider /> */}
-      <FokusPersiapanTKA />
+      <FokusPersiapanTKA location={nameCountry} />
       <InformasiSeputarTKA location={nameCountry} />
-      <MataPelajaranTKATable />
-      <KegunaanTestTKA />
+      <MataPelajaranTKATable location={nameCountry} />
+      <KegunaanTestTKA location={nameCountry} />
       <ProgramLesPrivatTKA location={nameCountry} />
-      <FokusLesPrivateTKA />
-      <SistemBelajarTKA />
+      <FokusLesPrivateTKA location={nameCountry} />
+      <SistemBelajarTKA location={nameCountry} />
       <LogoPengajarMTX
         title={"Siapa Guru Les Privat TKA dari Matrix Tutoring?"}
       />{" "}
@@ -386,7 +385,7 @@ const LesPrivateTKAKabupaten = () => {
       <GalleryBelajarTKA />
       <ProfileMatrixTutoring title={"TKA Terbaik"} location={nameCountry} />
       <LesprivatKota />
-      <TKAFlow />
+      <TKAFlow location={nameCountry} />
       <TKAPillarsShowcase />
       <BenefitOfTKA location={nameCountry} />
       <section id="program-les-private-matrix-tutoring">

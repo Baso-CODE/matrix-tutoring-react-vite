@@ -1,9 +1,9 @@
+import { ArrowRightCircleIcon } from "lucide-react";
 import { Link } from "react-router-dom";
 import ReusableButton from "../../../helper/Button/ReusableButton/ReusableButton";
 import { selectContactCsData } from "../../../lib/features/contactCsSlice";
 import { useAppSelector } from "../../../lib/hooks";
 import "./HeroLesPrivate.css";
-import { ArrowRightCircleIcon } from "lucide-react";
 
 const HeroLesPrivate = ({ heading, desc, images, location }) => {
   const contactData = useAppSelector(selectContactCsData);
@@ -25,49 +25,14 @@ const HeroLesPrivate = ({ heading, desc, images, location }) => {
             </div>
             <div className="btn-and-icons">
               <Link to={finalUrl || "#"} className="link_cta_decoration">
-                {/* <svg
-                className="icon-button-how-to-order"
-                viewBox="0 0 24 24"
-                fill="currentColor">
-                <path
-                  fill-rule="evenodd"
-                  d="M12 2.25c-5.385 0-9.75 4.365-9.75 9.75s4.365 9.75 9.75 9.75 9.75-4.365 9.75-9.75S17.385 2.25 12 2.25zm4.28 10.28a.75.75 0 000-1.06l-3-3a.75.75 0 10-1.06 1.06l1.72 1.72H8.25a.75.75 0 000 1.5h5.69l-1.72 1.72a.75.75 0 101.06 1.06l3-3z"
-                  clip-rule="evenodd"></path>
-              </svg> */}
                 <ReusableButton
                   text="Konsultasi Sekarang!"
                   bgColor="#ffffff"
                   borderColor="#007bff"
                   textColor="#007bff"
-                  // onClick={handleConsultationClick}
                   icon={<ArrowRightCircleIcon />}
                 />
               </Link>
-              {/* <button
-                className="btn-daftar-sekarang-lesprivate"
-                onClick={() => window.open(finalUrl, "_blank")}>
-                Konsultasi
-              </button> */}
-              {/* <div className="social-icons">
-              <a
-                href="https://www.instagram.com/matrixtutoring.id"
-                target="_blank"
-                rel="noopener noreferrer">
-                <FaInstagram className="social-icon" />
-              </a>
-              <a
-                href="https://www.tiktok.com/@edumatrixindonesia"
-                target="_blank"
-                rel="noopener noreferrer">
-                <FaTiktok className="social-icon" />
-              </a>
-              <a
-                href="https://www.facebook.com/profile.php?id=100088009847192"
-                target="_blank"
-                rel="noopener noreferrer">
-                <FaFacebookSquare className="social-icon" />
-              </a>
-            </div> */}
             </div>
           </div>
           <img

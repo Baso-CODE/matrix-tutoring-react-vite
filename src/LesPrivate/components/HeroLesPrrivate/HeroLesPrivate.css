@@ -76,7 +76,7 @@
 
 .btn-and-icons {
   display: flex;
-
+  text-decoration: none;
   justify-content: space-between;
 }
 

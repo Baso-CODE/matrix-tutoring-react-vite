@@ -33,11 +33,6 @@ import LesPrivateBahasaKota from "./LesPrivate/LesPrivateBahasa/LesPrivateBahasa
 
 import MatrixFooterV2 from "./Components/MatrixFooterV2/MatrixFooterV2";
 import MoreModal from "./Home/MoreModal/MoreModal";
-import LesPrivateTKA from "./LesPrivate/LesPrivateAKM/LesPrivateTKA";
-import LesPrivateTKAKabupaten from "./LesPrivate/LesPrivateAKM/LesPrivateTKAKabupaten/LesPrivateTKAKabupaten";
-import LesPrivateTKAKecamatan from "./LesPrivate/LesPrivateAKM/LesPrivateTKAKecamatan/LesPrivateTKAKecamatan";
-import LesPrivateTKAKelurahan from "./LesPrivate/LesPrivateAKM/LesPrivateTKAKelurahan/LesPrivateTKAKelurahan";
-import LesPrivateTKAKota from "./LesPrivate/LesPrivateAKM/LesPrivateTKAKota/LesPrivateTKAKota";
 import LesPrivateMahasiswaKabupaten from "./LesPrivate/LesPrivateMahasiswa/LesPrivateMahasiswaKabupaten/LesPrivateMahasiswaKabupaten";
 import LesPrivateMahasiswaKecamatan from "./LesPrivate/LesPrivateMahasiswa/LesPrivateMahasiswaKecamatan/LesPrivateMahasiswaKecamatan";
 import LesPrivateMahasiswaKelurahan from "./LesPrivate/LesPrivateMahasiswa/LesPrivateMahasiswaKelurahan/LesPrivateMahasiswaKelurahan";
@@ -65,6 +60,11 @@ import LesPrivateTKKabupaten from "./LesPrivate/LesPrivateTK/LesPrivateTKKabupat
 import LesPrivateTKKecamatan from "./LesPrivate/LesPrivateTK/LesPrivateTkKecamatan/LesPrivateTkKecamatan";
 import LesPrivateTKKelurahan from "./LesPrivate/LesPrivateTK/LesPrivateTkKelurahan/LesPrivateTkKelurahan";
 import LesPrivateTKKota from "./LesPrivate/LesPrivateTK/LesPrivateTKKota/LesPrivateTKKota";
+import LesPrivateTKA from "./LesPrivate/LesPrivateTKA/LesPrivateTKA";
+import LesPrivateTKAKabupaten from "./LesPrivate/LesPrivateTKA/LesPrivateTKAKabupaten/LesPrivateTKAKabupaten";
+import LesPrivateTKAKecamatan from "./LesPrivate/LesPrivateTKA/LesPrivateTKAKecamatan/LesPrivateTKAKecamatan";
+import LesPrivateTKAKelurahan from "./LesPrivate/LesPrivateTKA/LesPrivateTKAKelurahan/LesPrivateTKAKelurahan";
+import LesPrivateTKAKota from "./LesPrivate/LesPrivateTKA/LesPrivateTKAKota/LesPrivateTKAKota";
 import { fetchContactCs } from "./lib/features/contactCsSlice";
 import { useAppDispatch } from "./lib/hooks";
 import ContactUsPage from "./pages/ContactUs/ContactUsPage";

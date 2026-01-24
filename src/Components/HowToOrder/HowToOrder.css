@@ -36,7 +36,10 @@
   padding: 25px 30px;
   position: relative;
   overflow: hidden;
-  transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease,
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease,
+    border-color 0.3s ease,
     background 0.3s ease;
   background: #ffffff;
   color: #333333;
@@ -93,7 +96,9 @@
   align-items: center;
   margin-right: 15px;
   flex-shrink: 0;
-  transition: background-color 0.3s ease, color 0.3s ease;
+  transition:
+    background-color 0.3s ease,
+    color 0.3s ease;
 }
 
 .order-step-card:hover .step-number {
@@ -175,7 +180,9 @@
   display: flex;
   align-items: center;
   gap: 10px;
-  transition: background-color 0.3s ease, transform 0.2s ease;
+  transition:
+    background-color 0.3s ease,
+    transform 0.2s ease;
   position: relative;
   z-index: 1;
 }
@@ -246,6 +253,8 @@
   }
   .how-to-order-steps {
     gap: 20px;
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
     padding-right: 4%;
     padding-left: 4%;
   }

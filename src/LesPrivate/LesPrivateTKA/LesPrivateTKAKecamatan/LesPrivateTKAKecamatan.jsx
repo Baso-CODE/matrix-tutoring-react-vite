@@ -15,7 +15,7 @@ import ProgramLesPrivatV2 from "../../../Components/ProgramLesPrivatNew/ProgramL
 import PilihanProgram from "../../../Components/ProgramOptions/PilihanProgram";
 import SuccessStoryLesPrivate from "../../../Components/SuccesStoryLesPrivate/SuccesStoryLesPrivate";
 import TestimoniOrtuSiswa from "../../../Components/TestimoniOrtuSiswa/TestimoniOrtuSiswa";
-import { getKelurahanBySlug } from "../../../helper/request/getAllKelurahanBySlug";
+import { getAllKecamatanBySlug } from "../../../helper/request/getAllKecamatanBySlug";
 import CTABottomHome from "../../../Home/CTABottomHome/CTABottomHome";
 import PromoHomepage from "../../../Home/PromoHomepage/PromoHomepage";
 import { getHeroData } from "../../../utils/getHeroData";
@@ -79,7 +79,7 @@ const items = [
   },
   {
     text: "Program Les Private Matrix",
-    href: "#program-les-private-matrix",
+    href: "#program-les-private-matrixx",
   },
   {
     text: "Saat Ini, Matrix Juga Melayani Les Privat Online",
@@ -87,18 +87,18 @@ const items = [
   },
   {
     text: "Asal Sekolah Siswa Matrix Tutoring les Private",
-    href: "#asal-sekolah-siswa-matrix-private",
+    href: "#asal-sekolah-siswa-matrixx-private",
   },
 ];
 
-const LesPrivateTKAKelurahan = () => {
-  const [kelurahan, setKelurahan] = useState({});
+const LesPrivateTKAKecamatan = () => {
+  const [kecamatan, setKecamatan] = useState({});
   const [heroData, setHeroData] = useState(null);
-  const { kelurahanSlug, kecamatanSlug, kabupatenSlug, kotaSlug } = useParams();
+  const { kecamatanSlug, kabupatenSlug, kotaSlug } = useParams();
 
   const nameCountry =
-    kelurahan?.kelurahan ||
-    kelurahanSlug
+    kecamatan?.kecamatan ||
+    kecamatanSlug
       .split("-")
       .map((word) => word.charAt(0).toUpperCase() + word.slice(1))
       .join(" ");
@@ -106,16 +106,16 @@ const LesPrivateTKAKelurahan = () => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const responseKelurahan = await getKelurahanBySlug(kelurahanSlug);
-        setKelurahan(responseKelurahan.data);
+        const responseKecamatan = await getAllKecamatanBySlug(kecamatanSlug);
+        setKecamatan(responseKecamatan.data);
 
-        const getHero = await getHeroData("AKM", "kelurahan");
+        const getHero = await getHeroData("AKM", "kecamatan");
         setHeroData(getHero);
       } catch (error) {
-        console.error("Failed to fetch kelurahan data:", error);
-
-        setKelurahan({
-          kelurahan: kelurahanSlug
+        console.error("Failed to fetch kecamatan data:", error);
+        // Fallback jika API gagal, set kecamatan secara manual dari slug
+        setKecamatan({
+          kecamatan: kecamatanSlug
             .split("-")
             .map((word) => word.charAt(0).toUpperCase() + word.slice(1))
             .join(" "),
@@ -123,13 +123,13 @@ const LesPrivateTKAKelurahan = () => {
         setHeroData({
           heading:
             "Les Privat TKA di [LOKASI] - Persiapan Tes Kemampuan Akademik dengan Pendekatan Terstruktur",
-          image: "https://apps.bimbelmatrix.com/images/DSIKON_BULANAN.webp",
+          image: "https://apps.bimbelmatrix.com/DSIKON_BULANAN.webp",
         });
       }
     };
 
     fetchData();
-  }, [kelurahanSlug]);
+  }, [kecamatanSlug]);
 
   let displayedHeading = heroData?.heading;
   if (displayedHeading && nameCountry) {
@@ -139,15 +139,13 @@ const LesPrivateTKAKelurahan = () => {
   }
 
   const heroImageSrc =
-    heroData?.image ||
-    "https://apps.bimbelmatrix.com/images/DSIKON_BULANAN.webp";
+    heroData?.image || "https://apps.bimbelmatrix.com/DSIKON_BULANAN.webp";
 
   const baseUrl = "https://apps.bimbelmatrix.com/";
 
-  const canonicalUrl = `${baseUrl}/les-privat-tka-tes-kemampuan-akademik/${kotaSlug}/${kabupatenSlug}/${kecamatanSlug}/${kelurahanSlug}`;
+  const canonicalUrl = `${baseUrl}/les-privat-tka-tes-kemampuan-akademik/${kotaSlug}/${kabupatenSlug}/${kecamatanSlug}`;
 
   const pageTitle = `🏆 Les Privat TKA (Tes Kemampuan Akademik) di ${nameCountry} | Matrix Tutoring`;
-  // Konten deskripsi yang disesuaikan untuk TKA
   const descriptionContent = `Kursus Les Privat TKA di ${nameCountry} Terbaik ✔️ Dibimbing GURU BERPENGALAMAN ✔️ Garansi Peningkatan Kompetensi ✍️ Daftar? Segera kunjungi situs Matrix Tutoring...`;
 
   const ogTitle = `Les Privat TKA (Tes Kemampuan Akademik) di ${nameCountry} - Peningkatan Kompetensi Bersama Matrix Tutoring`;
@@ -159,29 +157,28 @@ const LesPrivateTKAKelurahan = () => {
   const ogImageAlt = `Les Privat TKA Tes Kemampuan Akademik ${nameCountry} Matrix Tutoring`;
 
   const keywords = [
-    `Les Privat TKA ${nameCountry}`,
-    `Tes Kemampuan Akademik ${nameCountry}`,
-    `Bimbel TKA ${nameCountry}`,
-    `Guru Privat TKA ${nameCountry}`,
-    `Persiapan TKA ${nameCountry}`,
-    `Soal TKA ${nameCountry}`,
-    `Strategi TKA ${nameCountry}`,
-    `Materi TKA ${nameCountry}`,
-    `TKA SD ${nameCountry}`,
-    `TKA SMP ${nameCountry}`,
-    `TKA SMA ${nameCountry}`,
-    `Literasi Membaca TKA ${nameCountry}`,
-    `Numerasi TKA ${nameCountry}`,
-    `Matrix Tutoring TKA ${nameCountry}`,
-    `Les Privat Matrix TKA ${nameCountry}`,
-    `Les Privat TKA Online ${nameCountry}`,
-    `Les Privat TKA Offline ${nameCountry}`,
-    `Kursus TKA ${nameCountry}`,
-    `Bimbingan TKA ${nameCountry}`,
-    kelurahanSlug.replace(/-/g, " ").toLowerCase(), // Tambahkan slug kelurahan sebagai keyword
-    kecamatanSlug.replace(/-/g, " ").toLowerCase(), // Tambahkan slug kecamatan sebagai keyword
-    kabupatenSlug.replace(/-/g, " ").toLowerCase(), // Tambahkan slug kabupaten sebagai keyword
-    kotaSlug.replace(/-/g, " ").toLowerCase(), // Tambahkan slug kota sebagai keyword
+    `Les Privat TKA Kecamatan ${nameCountry}`,
+    `Tes Kemampuan Akademik Kecamatan ${nameCountry}`,
+    `Bimbel TKA Kecamatan ${nameCountry}`,
+    `Guru Privat TKA Kecamatan ${nameCountry}`,
+    `Persiapan TKA Kecamatan ${nameCountry}`,
+    `Soal TKA Kecamatan ${nameCountry}`,
+    `Strategi TKA Kecamatan ${nameCountry}`,
+    `Materi TKA Kecamatan ${nameCountry}`,
+    `TKA SD Kecamatan ${nameCountry}`,
+    `TKA SMP Kecamatan ${nameCountry}`,
+    `TKA SMA Kecamatan ${nameCountry}`,
+    `Literasi Membaca TKA Kecamatan ${nameCountry}`,
+    `Numerasi TKA Kecamatan ${nameCountry}`,
+    `Matrix Tutoring TKA Kecamatan ${nameCountry}`,
+    `Les Privat Matrix TKA Kecamatan ${nameCountry}`,
+    `Les Privat TKA Online Kecamatan ${nameCountry}`,
+    `Les Privat TKA Offline Kecamatan ${nameCountry}`,
+    `Kursus TKA Kecamatan ${nameCountry}`,
+    `Bimbingan TKA Kecamatan ${nameCountry}`,
+    kecamatanSlug.replace(/-/g, " ").toLowerCase(),
+    kabupatenSlug.replace(/-/g, " ").toLowerCase(),
+    kotaSlug.replace(/-/g, " ").toLowerCase(),
   ];
 
   return (
@@ -213,14 +210,14 @@ const LesPrivateTKAKelurahan = () => {
           <meta key={tag} property="og:article:tag" content={tag} />
         ))}
         <meta property="article:section" content="Les Privat TKA" />
-        {/* Twitter Card Meta Tags */}
+
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content={twitterTitle} />
         <meta name="twitter:description" content={twitterDescription} />
         <meta name="twitter:image" content={ogImage} />
         <meta name="twitter:site" content="@matrix_tutoring" />
         <meta name="twitter:creator" content="@matrix_tutoring" />
-        /* Schema Markup (JSON-LD) */
+
         <script type="application/ld+json">
           {`
     {
@@ -274,18 +271,6 @@ const LesPrivateTKAKelurahan = () => {
               "@type": "ListItem",
               "position": 5,
               "item": {
-                "@id": "${baseUrl}/les-privat-tka-tes-kemampuan-akademik/${kotaSlug}/${kabupatenSlug}/${kecamatanSlug}", 
-                "name": "Les Privat TKA di ${kecamatanSlug
-                  .replace(/-/g, " ")
-                  .split(" ")
-                  .map((word) => word.charAt(0).toUpperCase() + word.slice(1))
-                  .join(" ")}"
-              }
-            },
-            {
-              "@type": "ListItem",
-              "position": 6,
-              "item": {
                 "@id": "${canonicalUrl}",
                 "name": "${pageTitle.replace(/<\/?[^>]+(>|$)/g, "")}" 
               }
@@ -297,9 +282,9 @@ const LesPrivateTKAKelurahan = () => {
           "@type": "EducationalOrganization",
           "@id": "${canonicalUrl}#organization",
           "name": "Matrix Tutoring",
-          "description": "Guru Les Privat Tes Kemampuan Akademik (TKA) datang ke rumah di **Kelurahan ${nameCountry}**. Bimbingan terstruktur untuk sukses kompetisi dan tes akademik SD, SMP, SMA.",
+          "description": "Les Privat Tes Kemampuan Akademik (TKA) terbaik di **Kecamatan ${nameCountry}**. Pembimbingan intensif untuk olimpiade dan seleksi akademik semua jenjang (SD, SMP, SMA).",
           "url": "${canonicalUrl}",
-          "areaServed": "Kelurahan ${nameCountry}", 
+          "areaServed": "Kecamatan ${nameCountry}", 
           "sameAs": [
             "https://www.instagram.com/matrixtutoring.id",
             "https://www.tiktok.com/@lesprivatmatrix.com",
@@ -317,24 +302,24 @@ const LesPrivateTKAKelurahan = () => {
             "areaServed": "ID",
             "availableLanguage": ["Indonesian", "English"]
           },
-          "keywords": "Les Privat TKA Kelurahan ${nameCountry}, Les Privat Olimpiade terdekat ${nameCountry}, Guru Privat TKA ${nameCountry}, Bimbel Kompetisi Kelurahan ${nameCountry}"
+          "keywords": "Les Privat TKA Kecamatan ${nameCountry}, Les Privat Olimpiade ${nameCountry}, Guru Privat TKA datang ke rumah ${nameCountry}, Bimbel Kompetisi Sains ${nameCountry}"
         },
 
         {
           "@type": "WebPage",
           "@id": "${canonicalUrl}#webpage",
           "url": "${canonicalUrl}",
-          "name": "Les Privat TKA (Tes Kemampuan Akademik) di Kelurahan ${nameCountry} | Matrix Tutoring",
+          "name": "Les Privat TKA (Tes Kemampuan Akademik) di Kecamatan ${nameCountry} | Matrix Tutoring",
           "inLanguage": "id-ID",
-          "description": "Temukan tutor ahli TKA terdekat di Kelurahan ${nameCountry}. Program intensif yang fokus pada penguasaan konsep dan strategi kompetisi.",
+          "description": "Raih prestasi di TKA dengan Les Privat TKA profesional di Kecamatan ${nameCountry}. Program intensif dan tutor yang ahli di bidang kompetisi.",
           "isPartOf": { "@id": "${baseUrl}" },
           "about": { "@id": "${canonicalUrl}#organization" },
           "mainEntity": {
             "@type": "Service",
-            "name": "Les Privat Tes Kemampuan Akademik di Kelurahan ${nameCountry}",
+            "name": "Les Privat Tes Kemampuan Akademik di Kecamatan ${nameCountry}",
             "provider": { "@id": "${canonicalUrl}#organization" },
             "serviceType": "Les Privat Tes Kemampuan Akademik (TKA)",
-            "areaServed": "Kelurahan ${nameCountry}",
+            "areaServed": "Kecamatan ${nameCountry}",
             "offers": {
               "@type": "Offer",
               "priceCurrency": "IDR",
@@ -350,26 +335,26 @@ const LesPrivateTKAKelurahan = () => {
           "mainEntity": [
             {
               "@type": "Question",
-              "name": "Apakah tutor TKA di Kelurahan ${nameCountry} bisa datang ke rumah?",
+              "name": "Apakah Les Privat TKA di Kecamatan ${nameCountry} melayani bimbingan untuk olimpiade sains?",
               "acceptedAnswer": {
                 "@type": "Answer",
-                "text": "Ya, layanan utama kami adalah les privat TKA datang ke rumah di seluruh area Kelurahan ${nameCountry}, memberikan kenyamanan dan efektivitas belajar maksimal bagi siswa."
+                "text": "Ya, kami memiliki tutor spesialis untuk olimpiade sains seperti Matematika, Fisika, Kimia, dan Biologi, dengan kurikulum yang fokus pada pemecahan masalah tingkat kompetisi."
               }
             },
             {
               "@type": "Question",
-              "name": "Bagaimana cara Matrix Tutoring memastikan tutor TKA berkualitas?",
+              "name": "Bisakah les privat TKA diadakan secara online?",
               "acceptedAnswer": {
                 "@type": "Answer",
-                "text": "Tutor kami melewati seleksi ketat, termasuk tes kemampuan akademik yang mendalam dan pelatihan metodologi pengajaran kompetisi, untuk memastikan kualitas bimbingan terbaik."
+                "text": "Tentu. Kami menyediakan opsi les privat TKA secara online melalui platform interaktif, memungkinkan siswa di Kecamatan ${nameCountry} belajar dengan tutor terbaik tanpa batasan jarak."
               }
             },
             {
               "@type": "Question",
-              "name": "Apakah Les Privat TKA mencakup simulasi lomba/ujian?",
+              "name": "Apa yang membedakan tutor TKA Matrix Tutoring dengan tutor biasa?",
               "acceptedAnswer": {
                 "@type": "Answer",
-                "text": "Tentu. Program TKA kami mencakup sesi simulasi ujian berkala untuk melatih siswa beradaptasi dengan tekanan waktu dan format soal yang sesungguhnya."
+                "text": "Tutor TKA kami adalah ahli yang tidak hanya menguasai materi tetapi juga memahami pola dan strategi soal kompetisi. Fokus bimbingan adalah pada kedalaman materi dan kecepatan berpikir analitis."
               }
             }
           ]
@@ -388,13 +373,13 @@ const LesPrivateTKAKelurahan = () => {
       <ImpactStatistics />
       <TableOfContents title="Table of Contents" items={items} />
       {/* <EmbrelaSlider /> */}
-      <FokusPersiapanTKA />
+      <FokusPersiapanTKA location={nameCountry} />
       <InformasiSeputarTKA location={nameCountry} />
-      <MataPelajaranTKATable />
-      <KegunaanTestTKA />
+      <MataPelajaranTKATable location={nameCountry} />
+      <KegunaanTestTKA location={nameCountry} />
       <ProgramLesPrivatTKA location={nameCountry} />
-      <FokusLesPrivateTKA />
-      <SistemBelajarTKA />
+      <FokusLesPrivateTKA location={nameCountry} />
+      <SistemBelajarTKA location={nameCountry} />
       <LogoPengajarMTX
         title={"Siapa Guru Les Privat TKA dari Matrix Tutoring?"}
       />{" "}
@@ -402,7 +387,7 @@ const LesPrivateTKAKelurahan = () => {
       <GalleryBelajarTKA />
       <ProfileMatrixTutoring title={"TKA Terbaik"} location={nameCountry} />
       <LesprivatKota />
-      <TKAFlow />
+      <TKAFlow location={nameCountry} />
       <TKAPillarsShowcase />
       <BenefitOfTKA location={nameCountry} />
       <section id="program-les-private-matrix-tutoring">
@@ -439,4 +424,4 @@ const LesPrivateTKAKelurahan = () => {
   );
 };
 
-export default LesPrivateTKAKelurahan;
+export default LesPrivateTKAKecamatan;

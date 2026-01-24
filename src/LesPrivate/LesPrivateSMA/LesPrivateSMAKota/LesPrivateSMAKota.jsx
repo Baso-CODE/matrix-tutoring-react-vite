@@ -375,7 +375,7 @@ const LesPrivateSMAKota = () => {
       <KeunggulanLesPrivateSMA location={nameCountry} />
       <ProfileMatrixTutoring title={"SMA Terbaik"} location={nameCountry} />
       <TutorLesprivatMatrix location={nameCountry} />
-      <KurikulumLesPrivate />
+      <KurikulumLesPrivate location={nameCountry} />
       <LesprivatKota />
       <PTNSuccessStrategy location={nameCountry} />
       {/* <MatrixDifferentiationSMA /> */}
