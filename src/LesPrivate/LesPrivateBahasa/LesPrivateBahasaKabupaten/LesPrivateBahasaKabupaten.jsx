@@ -99,9 +99,8 @@ const LesPrivateBahasaKabupaten = () => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const responseKabupaten = await getAllKotaKabupatenBySlug(
-          kabupatenSlug
-        );
+        const responseKabupaten =
+          await getAllKotaKabupatenBySlug(kabupatenSlug);
         setKabupaten(responseKabupaten.data);
         const getHero = await getHeroData("BAHASA", "kabupaten");
         setHeroData(getHero);
@@ -349,13 +348,13 @@ const LesPrivateBahasaKabupaten = () => {
       {/* <EmbrelaSlider /> */}
       {/* <Slidertop /> */}
       <TableOfContents title="Table of Contents" items={items} />
-      <ContentLesPrivatBahasa />
-      <ProgaramLesPrivatBahasa />
+      <ContentLesPrivatBahasa location={nameCountry} />
+      <ProgaramLesPrivatBahasa location={nameCountry} />
       <ProgaramInsenstifBahasa location={nameCountry} />
       <FlowPembelajaranBahasa location={nameCountry} />
       <LanguageOptions location={nameCountry} />{" "}
       <ProfileMatrixTutoring title={"Bahasa Asing Terbaik"} />
-      <TutorLesprivatMatrix />
+      <TutorLesprivatMatrix location={nameCountry} />
       <LesprivatKota />
       <section id="program-les-private-matrix-tutoring">
         <ProgramLesPrivatV2 location={nameCountry} />

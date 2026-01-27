@@ -21,14 +21,14 @@ import PromoHomepage from "../../../Home/PromoHomepage/PromoHomepage";
 import { getHeroData } from "../../../utils/getHeroData";
 import HeroLesPrivate from "../../components/HeroLesPrrivate/HeroLesPrivate";
 import TableOfContents from "../../components/TableOfContent";
+import LesprivatKota from "../../LesPrivateSD/components/LesprivatKota/LesprivatKota";
+import ProfileMatrixTutoring from "../../LesPrivateSD/components/ProfileMatrixTutoring/ProfileMatrixTutoring";
+import TutorLesprivatMatrix from "../../LesPrivateSD/components/TutorLesprivatMatrix/TutorLesprivatMatrix";
 import ContentLesPrivatBahasa from "../components/ContentLesPrivatBahasa/ContentLesPrivatBahasa";
 import FlowPembelajaranBahasa from "../components/FlowPembelajaranBahasa/FlowPembelajaranBahasa";
 import LanguageOptions from "../components/LanguageOptions/LanguageOptions";
 import ProgaramInsenstifBahasa from "../components/ProgaramInsenstifBahasa/ProgaramInsenstifBahasa";
 import ProgaramLesPrivatBahasa from "../components/ProgaramLesPrivatBahasa/ProgaramLesPrivatBahasa";
-import LesprivatKota from "../../LesPrivateSD/components/LesprivatKota/LesprivatKota";
-import TutorLesprivatMatrix from "../../LesPrivateSD/components/TutorLesprivatMatrix/TutorLesprivatMatrix";
-import ProfileMatrixTutoring from "../../LesPrivateSD/components/ProfileMatrixTutoring/ProfileMatrixTutoring";
 
 const items = [
   {
@@ -389,13 +389,13 @@ const LesPrivateBahasaKelurahan = () => {
         location={nameCountry}
       />
       <TableOfContents title="Table of Contents" items={items} />
-      <ContentLesPrivatBahasa />
-      <ProgaramLesPrivatBahasa />
+      <ContentLesPrivatBahasa location={nameCountry} />
+      <ProgaramLesPrivatBahasa location={nameCountry} />
       <ProgaramInsenstifBahasa location={nameCountry} />
       <FlowPembelajaranBahasa location={nameCountry} />
       <LanguageOptions location={nameCountry} />{" "}
       <ProfileMatrixTutoring title={"Bahasa Asing Terbaik"} />
-      <TutorLesprivatMatrix />
+      <TutorLesprivatMatrix location={nameCountry} />
       <LesprivatKota />
       <section id="program-les-private-matrix-tutoring">
         <ProgramLesPrivatV2 location={nameCountry} />
