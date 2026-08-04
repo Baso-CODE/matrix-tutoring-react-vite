@@ -10,13 +10,12 @@ import MasterTeacherV2 from "../../../Components/MasterTeacherV2/MasterTeacherV2
 import MatrixSubjects from "../../../Components/MatrixFeatures/MatrixSubjects";
 import WhyMatrixFeatures from "../../../Components/MatrixFeatures/WhyMatrixFeatures";
 import OnlineLesOptions from "../../../Components/OnlineLesOption/OnlineLesOption";
-import PengajarLestPrivate from "../../../Components/PengajarLestPrivate/PengajarLestPrivate";
 import ProgramBelajarLesPrivat from "../../../Components/ProgramBelajarLesPrivate/ProgramBelajarLesPrivate";
-import ProgramLesPrivat from "../../../Components/ProgramLesPrivate/ProgramLesPrivate";
+import ProgramLesPrivatV2 from "../../../Components/ProgramLesPrivatNew/ProgramLesPrivatV2 ";
 import PilihanProgram from "../../../Components/ProgramOptions/PilihanProgram";
 import SuccessStoryLesPrivate from "../../../Components/SuccesStoryLesPrivate/SuccesStoryLesPrivate";
+import TestimoniOrtuSiswa from "../../../Components/TestimoniOrtuSiswa/TestimoniOrtuSiswa";
 import { getAllKecamatanBySlug } from "../../../helper/request/getAllKecamatanBySlug";
-import CTABottomHome from "../../../Home/CTABottomHome/CTABottomHome";
 import PromoHomepage from "../../../Home/PromoHomepage/PromoHomepage";
 import { getHeroData } from "../../../utils/getHeroData";
 import HeroLesPrivate from "../../components/HeroLesPrrivate/HeroLesPrivate";
@@ -34,10 +33,7 @@ import ProgramSpesialisSNBT from "../components/ProgramSpesialisSNBT/ProgramSpes
 import SBMPTNFlow from "../components/SBMPTNFlow";
 import SistemBelajarSNBT from "../components/SistemBelajarSNBT/SistemBelajarSNBT";
 import TestimoniWaSNBT from "../components/TestimoniWaSNBT/TestimoniWaSNBT";
-import Top3AlumniSNBT from "../components/Top3AlumniSNBT/Top3AlumniSNBT";
 import WhyChooseSBMPTN from "../components/WhyChooseSBMPTN/WhyChooseSBMPTN";
-import ProgramLesPrivatV2 from "../../../Components/ProgramLesPrivatNew/ProgramLesPrivatV2 ";
-import TestimoniOrtuSiswa from "../../../Components/TestimoniOrtuSiswa/TestimoniOrtuSiswa";
 
 const items = [
   {
@@ -265,10 +261,10 @@ const LesPrivateSBMPTNKecamatan = () => {
               "item": {
                 "@id": "${baseUrl}/les-privat-sbmptn/${kotaSlug}", 
                 "name": "Les Privat ${programName} di ${kotaSlug
-            .replace(/-/g, " ")
-            .split(" ")
-            .map((word) => word.charAt(0).toUpperCase() + word.slice(1))
-            .join(" ")}" 
+                  .replace(/-/g, " ")
+                  .split(" ")
+                  .map((word) => word.charAt(0).toUpperCase() + word.slice(1))
+                  .join(" ")}" 
               }
             },
             {
@@ -277,10 +273,10 @@ const LesPrivateSBMPTNKecamatan = () => {
               "item": {
                 "@id": "${baseUrl}/les-privat-sbmptn/${kotaSlug}/${kabupatenSlug}", 
                 "name": "Les Privat ${programName} di ${kabupatenSlug
-            .replace(/-/g, " ")
-            .split(" ")
-            .map((word) => word.charAt(0).toUpperCase() + word.slice(1))
-            .join(" ")}" 
+                  .replace(/-/g, " ")
+                  .split(" ")
+                  .map((word) => word.charAt(0).toUpperCase() + word.slice(1))
+                  .join(" ")}" 
               }
             },
             {
@@ -438,7 +434,7 @@ const LesPrivateSBMPTNKecamatan = () => {
       <AccordionFAQ />
       <GaleriKegiatanBelajar location={nameCountry} />
       <PromoHomepage location={nameCountry} />
-      <CTABottomHome />
+      {/* <CTABottomHome /> */}
     </React.Fragment>
   );
 };

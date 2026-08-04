@@ -67,7 +67,7 @@
   color: rgb(0, 0, 0);
   padding: 5px;
   border-radius: 50px;
-  font-family: "Montserrat", sans-serif;
+  font-family: "Poppins", sans-serif;
   width: 25%;
   font-weight: 500;
   font-size: 16px;
@@ -84,7 +84,7 @@
   color: rgb(0, 0, 0);
   padding: 6px;
   border-radius: 50px;
-  font-family: "Montserrat", sans-serif;
+  font-family: "Poppins", sans-serif;
   width: 25%;
   font-weight: 500;
   font-size: 16px;
@@ -175,7 +175,7 @@
 
 /* Style untuk pesan No Kelurahan */
 .no-kelurahan {
-  font-family: "Montserrat", sans-serif;
+  font-family: "Poppins", sans-serif;
   font-size: 18px;
   font-weight: 700;
   color: #f52f63;

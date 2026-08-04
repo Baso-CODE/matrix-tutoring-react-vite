@@ -6,15 +6,14 @@ import FiturProgramNew from "../../Components/FiturProgramNew/FiturProgramNew";
 import GaleriKegiatanBelajar from "../../Components/GaleriKegiatanBelajar/GaleriKegiatanBelajar";
 import HowToOrder from "../../Components/HowToOrder/HowToOrder";
 import MasterTeacherV2 from "../../Components/MasterTeacherV2/MasterTeacherV2";
-import MatrixFeatures from "../../Components/MatrixFeatures/MatrixFeatures";
+import MatrixSubjects from "../../Components/MatrixFeatures/MatrixSubjects";
+import WhyMatrixFeatures from "../../Components/MatrixFeatures/WhyMatrixFeatures";
 import OnlineLesOptions from "../../Components/OnlineLesOption/OnlineLesOption";
 import ProgramBelajarLesPrivat from "../../Components/ProgramBelajarLesPrivate/ProgramBelajarLesPrivate";
 import ProgramLesPrivatV2 from "../../Components/ProgramLesPrivatNew/ProgramLesPrivatV2 ";
 import PilihanProgram from "../../Components/ProgramOptions/PilihanProgram";
-import EmbrelaSlider from "../../Components/SlideTop/EmbrelaSlider";
 import SuccessStoryLesPrivate from "../../Components/SuccesStoryLesPrivate/SuccesStoryLesPrivate";
 import TestimoniOrtuSiswa from "../../Components/TestimoniOrtuSiswa/TestimoniOrtuSiswa";
-import CTABottomHome from "../../Home/CTABottomHome/CTABottomHome";
 import PromoHomepage from "../../Home/PromoHomepage/PromoHomepage";
 import TableOfContents from "../components/TableOfContent";
 import ImpactStatistics from "../LesPrivateMahasiswa/components/ImpactStatistics/ImpactStatistics";
@@ -30,8 +29,6 @@ import MainLearningContent from "./components/MainLearningContent/MainLearningCo
 import PelajaranCalistungMatrix from "./components/PelajaranCalistungMatrix/PelajaranCalistungMatrix";
 import ProgramLesPrivatCalistung from "./components/ProgramLesPrivatCalistung/ProgramLesPrivatCalistung";
 import ProgramLesPrivatCalistungLanjutan from "./components/ProgramLesPrivatCalistungLanjutan/ProgramLesPrivatCalistungLanjutan";
-import WhyMatrixFeatures from "../../Components/MatrixFeatures/WhyMatrixFeatures";
-import MatrixSubjects from "../../Components/MatrixFeatures/MatrixSubjects";
 
 const items = [
   {
@@ -237,7 +234,7 @@ const LesPrivateTK = () => {
       <AccordionFAQ />
       <GaleriKegiatanBelajar />
       <PromoHomepage />
-      <CTABottomHome />
+      {/* <CTABottomHome /> */}
     </React.Fragment>
   );
 };

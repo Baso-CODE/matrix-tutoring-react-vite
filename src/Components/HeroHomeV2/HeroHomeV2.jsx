@@ -150,7 +150,7 @@ const HeroHomeV2 = ({ contactData }) => {
         <span key={interval}>
           {String(timeLeft[interval]).padStart(2, "0")}
           {interval === "hours" ? ":" : interval === "minutes" ? ":" : ""}
-        </span>
+        </span>,
       );
     });
   }
@@ -299,64 +299,31 @@ const HeroHomeV2 = ({ contactData }) => {
             <span className="hero-price-v2">Mulai Rp 100.000</span>
             <span className="hero-per-month-v2">/sesi</span>
           </div>
-          {/* <p className="hero-bonus">
-            Gratis sesi percobaan untuk pendaftar baru!
-          </p> */}
 
           <div className="hero-cta-section-wrapper-v2">
             <Link
               to={contactData?.link_cta || "#"}
               className="link_cta_decoration-v2">
-              {/* <svg
-                className="icon-button-how-to-order"
-                viewBox="0 0 24 24"
-                fill="currentColor">
-                <path
-                  fill-rule="evenodd"
-                  d="M12 2.25c-5.385 0-9.75 4.365-9.75 9.75s4.365 9.75 9.75 9.75 9.75-4.365 9.75-9.75S17.385 2.25 12 2.25zm4.28 10.28a.75.75 0 000-1.06l-3-3a.75.75 0 10-1.06 1.06l1.72 1.72H8.25a.75.75 0 000 1.5h5.69l-1.72 1.72a.75.75 0 101.06 1.06l3-3z"
-                  clip-rule="evenodd"></path>
-              </svg> */}
               <ReusableButton
                 text="Dapatkan promo, chat sekarang!"
                 bgColor="#ffffff"
                 borderColor="#007bff"
                 textColor="#007bff"
-                // onClick={handleConsultationClick}
                 icon={<ArrowRightCircleIcon />}
               />
             </Link>
-
-            {/* <button className="button-how-to-order">
-              {timerVisible && timerComponents.length ? (
-                // Jika timer terlihat dan berjalan, tampilkan timer
-                <span className="hero-timer-display">{timerComponents}</span>
-              ) : (
-                // Jika tidak, tampilkan teks awal dengan ikon
-                <>
-                  Lihat Promo & Waktu!
-                  <svg
-                    className="icon-button-how-to-order"
-                    viewBox="0 0 24 24"
-                    fill="currentColor">
-                    <path
-                      fillRule="evenodd"
-                      d="M12 2.25c-5.385 0-9.75 4.365-9.75 9.75s4.365 9.75 9.75 9.75 9.75-4.365 9.75-9.75S17.385 2.25 12 2.25zm4.28 10.28a.75.75 0 000-1.06l-3-3a.75.75 0 10-1.06 1.06l1.72 1.72H8.25a.75.75 0 000 1.5h5.69l-1.72 1.72a.75.75 0 101.06 1.06l3-3z"
-                      clipRule="evenodd"></path>
-                  </svg>
-                </>
-              )}
-            </button> */}
           </div>
-
-          {/* <p className="hero-guarantee">Garansi kepuasan belajar</p> */}
         </div>
 
-        {/* Right Section: Illustrations / Graphics for Bimbel */}
         <div className="hero-right-section-v2">
           <img
             src="/images/jumbotron_homepage.webp"
             className="image-jumbotron-right-home-v2"
-            alt=""
+            alt="Ilustrasi Bimbel Matrix"
+            loading="eager"
+            fetchpriority="high"
+            width="600"
+            height="500"
           />
         </div>
       </div>

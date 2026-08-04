@@ -13,7 +13,6 @@ import ProgramLesPrivatV2 from "../../Components/ProgramLesPrivatNew/ProgramLesP
 import PilihanProgram from "../../Components/ProgramOptions/PilihanProgram";
 import SuccessStoryLesPrivate from "../../Components/SuccesStoryLesPrivate/SuccesStoryLesPrivate";
 import TestimoniOrtuSiswa from "../../Components/TestimoniOrtuSiswa/TestimoniOrtuSiswa";
-import CTABottomHome from "../../Home/CTABottomHome/CTABottomHome";
 import PromoHomepage from "../../Home/PromoHomepage/PromoHomepage";
 import TableOfContents from "../components/TableOfContent";
 import TestimoniWaSNBT from "../LesPrivateSBMPTN/components/TestimoniWaSNBT/TestimoniWaSNBT";
@@ -242,7 +241,7 @@ const LesPrivateMahasiswa = () => {
       <HowToOrder />
       <AccordionFAQ />
       <PromoHomepage />
-      <CTABottomHome />
+      {/* <CTABottomHome /> */}
     </React.Fragment>
   );
 };

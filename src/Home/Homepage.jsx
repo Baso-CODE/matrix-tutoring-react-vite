@@ -1,4 +1,3 @@
-import React from "react";
 import { Helmet } from "react-helmet-async";
 import AsalSekolahSiswaEdumatrix from "../Components/AsalSekolahSiswa/AsalSekolahSiswa";
 import OnlineLesOptions from "../Components/OnlineLesOption/OnlineLesOption";
@@ -20,7 +19,6 @@ import KurikulumLesPrivate from "../LesPrivate/LesPrivateSD/components/Kurikulum
 import LesprivatKota from "../LesPrivate/LesPrivateSD/components/LesprivatKota/LesprivatKota";
 import { selectContactCsData } from "../lib/features/contactCsSlice";
 import { useAppSelector } from "../lib/hooks";
-import CTABottomHome from "./CTABottomHome/CTABottomHome";
 import "./Homepage.css";
 import PromoHomepage from "./PromoHomepage/PromoHomepage";
 
@@ -28,7 +26,7 @@ const Homepage = () => {
   const contactData = useAppSelector(selectContactCsData);
 
   return (
-    <React.Fragment>
+    <>
       <Helmet>
         <meta charSet="utf-8" />
         <title>
@@ -92,9 +90,9 @@ const Homepage = () => {
         <GaleriKegiatanBelajar />
         <LesprivatKota />
         <PromoHomepage />
-        <CTABottomHome />
+        {/* <CTABottomHome /> */}
       </div>
-    </React.Fragment>
+    </>
   );
 };
 

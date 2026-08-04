@@ -14,7 +14,6 @@ import ProgramLesPrivatV2 from "../../Components/ProgramLesPrivatNew/ProgramLesP
 import PilihanProgram from "../../Components/ProgramOptions/PilihanProgram";
 import SuccessStoryLesPrivate from "../../Components/SuccesStoryLesPrivate/SuccesStoryLesPrivate";
 import TestimoniOrtuSiswa from "../../Components/TestimoniOrtuSiswa/TestimoniOrtuSiswa";
-import CTABottomHome from "../../Home/CTABottomHome/CTABottomHome";
 import PromoHomepage from "../../Home/PromoHomepage/PromoHomepage";
 import TableOfContents from "../components/TableOfContent";
 import ImpactStatistics from "../LesPrivateMahasiswa/components/ImpactStatistics/ImpactStatistics";
@@ -31,7 +30,6 @@ import ProgramSpesialisSNBT from "./components/ProgramSpesialisSNBT/ProgramSpesi
 import SBMPTNFlow from "./components/SBMPTNFlow";
 import SistemBelajarSNBT from "./components/SistemBelajarSNBT/SistemBelajarSNBT";
 import TestimoniWaSNBT from "./components/TestimoniWaSNBT/TestimoniWaSNBT";
-import Top3AlumniSNBT from "./components/Top3AlumniSNBT/Top3AlumniSNBT";
 import WhyChooseSBMPTN from "./components/WhyChooseSBMPTN/WhyChooseSBMPTN";
 
 const items = [
@@ -217,7 +215,7 @@ const LesPrivateSBMPTN = () => {
       <AccordionFAQ />
       <GaleriKegiatanBelajar />
       <PromoHomepage />
-      <CTABottomHome />
+      {/* <CTABottomHome /> */}
     </React.Fragment>
   );
 };

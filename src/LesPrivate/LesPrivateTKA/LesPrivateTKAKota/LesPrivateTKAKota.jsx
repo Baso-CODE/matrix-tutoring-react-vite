@@ -21,7 +21,6 @@ import WhyMatrixFeatures from "../../../Components/MatrixFeatures/WhyMatrixFeatu
 import ProgramLesPrivatV2 from "../../../Components/ProgramLesPrivatNew/ProgramLesPrivatV2 ";
 import SuccessStoryLesPrivate from "../../../Components/SuccesStoryLesPrivate/SuccesStoryLesPrivate";
 import TestimoniOrtuSiswa from "../../../Components/TestimoniOrtuSiswa/TestimoniOrtuSiswa";
-import CTABottomHome from "../../../Home/CTABottomHome/CTABottomHome";
 import ImpactStatistics from "../../LesPrivateMahasiswa/components/ImpactStatistics/ImpactStatistics";
 import TestimoniWaSNBT from "../../LesPrivateSBMPTN/components/TestimoniWaSNBT/TestimoniWaSNBT";
 import LesprivatKota from "../../LesPrivateSD/components/LesprivatKota/LesprivatKota";
@@ -404,7 +403,7 @@ const LesPrivateTKAKota = () => {
       <AccordionFAQ />
       <GaleriKegiatanBelajar location={nameCountry} />
       <PromoHomepage location={nameCountry} />
-      <CTABottomHome />
+      {/* <CTABottomHome /> */}
     </React.Fragment>
   );
 };

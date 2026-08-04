@@ -1,5 +1,5 @@
 .hero-section-container-v2 {
-  /* padding: 40px 20px; */
+  /* padding: 40px 20px3 */
   padding-left: 10%;
   padding-right: 10%;
   padding-top: 8%;
@@ -172,8 +172,8 @@
 
 @media (max-width: 1024px) {
   .hero-section-container-v2 {
-    padding-left: 4%;
-    padding-right: 4%;
+    padding-left: 3%;
+    padding-right: 3%;
   }
   .hero-content-wrapper-v2 {
     flex-direction: column; /* Stack columns */
@@ -230,8 +230,8 @@
 @media (max-width: 768px) {
   .hero-section-container-v2 {
     padding: 30px 15px;
-    padding-left: 4%;
-    padding-right: 4%;
+    padding-left: 3%;
+    padding-right: 3%;
     min-height: auto; /* Allow height to adjust to content */
   }
 
@@ -291,8 +291,8 @@
 @media (max-width: 480px) {
   .hero-section-container-v2 {
     padding: 20px 10px;
-    padding-left: 4%;
-    padding-right: 4%;
+    padding-left: 3%;
+    padding-right: 3%;
     margin-top: 40px;
   }
 

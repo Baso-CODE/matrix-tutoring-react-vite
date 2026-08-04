@@ -17,7 +17,6 @@ import SuccessStoryLesPrivate from "../../../Components/SuccesStoryLesPrivate/Su
 import TestimoniOrtuSiswa from "../../../Components/TestimoniOrtuSiswa/TestimoniOrtuSiswa";
 import { getAllKotBySlug } from "../../../helper/request/getAllKotaBySlug";
 import { getAllKotaKabupatenBySlug } from "../../../helper/request/getAllKotaKabupatenBySlug";
-import CTABottomHome from "../../../Home/CTABottomHome/CTABottomHome";
 import PromoHomepage from "../../../Home/PromoHomepage/PromoHomepage";
 import { getHeroData } from "../../../utils/getHeroData";
 import HeroLesPrivate from "../../components/HeroLesPrrivate/HeroLesPrivate";
@@ -107,9 +106,8 @@ const LesPrivateSimakUIKabupaten = () => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const responseKabupaten = await getAllKotaKabupatenBySlug(
-          kabupatenSlug
-        ); // Pastikan fungsi ini ada dan benar
+        const responseKabupaten =
+          await getAllKotaKabupatenBySlug(kabupatenSlug); // Pastikan fungsi ini ada dan benar
         setKabupaten(responseKabupaten.data);
 
         // Ambil data kota induk
@@ -279,13 +277,13 @@ const LesPrivateSimakUIKabupaten = () => {
               "item": {
                 "@id": "${baseUrl}/les-privat-simak-ui/${kotaSlug}", 
                 "name": "Les Privat ${programName} di ${
-            kotaParent?.kota ||
-            kotaSlug
-              .replace(/-/g, " ")
-              .split(" ")
-              .map((word) => word.charAt(0).toUpperCase() + word.slice(1))
-              .join(" ")
-          }" 
+                  kotaParent?.kota ||
+                  kotaSlug
+                    .replace(/-/g, " ")
+                    .split(" ")
+                    .map((word) => word.charAt(0).toUpperCase() + word.slice(1))
+                    .join(" ")
+                }" 
               }
             },
             {
@@ -433,7 +431,7 @@ const LesPrivateSimakUIKabupaten = () => {
       <AccordionFAQ />
       <GaleriKegiatanBelajar location={nameCountry} />
       <PromoHomepage location={nameCountry} />
-      <CTABottomHome />
+      {/* <CTABottomHome /> */}
     </React.Fragment>
   );
 };

@@ -18,7 +18,6 @@ import TestimoniOrtuSiswa from "../../../Components/TestimoniOrtuSiswa/Testimoni
 import { getAllKecamatanBySlug } from "../../../helper/request/getAllKecamatanBySlug";
 import { getAllKotBySlug } from "../../../helper/request/getAllKotaBySlug";
 import { getAllKotaKabupatenBySlug } from "../../../helper/request/getAllKotaKabupatenBySlug";
-import CTABottomHome from "../../../Home/CTABottomHome/CTABottomHome";
 import PromoHomepage from "../../../Home/PromoHomepage/PromoHomepage";
 import { getHeroData } from "../../../utils/getHeroData";
 import HeroLesPrivate from "../../components/HeroLesPrrivate/HeroLesPrivate";
@@ -112,9 +111,8 @@ const LesPrivateSimakUIKecamatan = () => {
         setKecamatan(responseKecamatan.data);
 
         // Ambil data kabupaten induk
-        const responseKabupatenParent = await getAllKotaKabupatenBySlug(
-          kabupatenSlug
-        );
+        const responseKabupatenParent =
+          await getAllKotaKabupatenBySlug(kabupatenSlug);
         setKabupatenParent(responseKabupatenParent.data);
 
         // Ambil data kota induk
@@ -300,13 +298,16 @@ const LesPrivateSimakUIKecamatan = () => {
                       "item": {
                         "@id": "${baseUrl}/les-privat-simak-ui/${kotaSlug}", // URL kota induk
                         "name": "Les Privat ${programName} di ${
-            kotaParent?.kota ||
-            kotaSlug
-              .replace(/-/g, " ")
-              .split(" ")
-              .map((word) => word.charAt(0).toUpperCase() + word.slice(1))
-              .join(" ")
-          }"
+                          kotaParent?.kota ||
+                          kotaSlug
+                            .replace(/-/g, " ")
+                            .split(" ")
+                            .map(
+                              (word) =>
+                                word.charAt(0).toUpperCase() + word.slice(1),
+                            )
+                            .join(" ")
+                        }"
                       }
                     },
                     {
@@ -315,13 +316,16 @@ const LesPrivateSimakUIKecamatan = () => {
                       "item": {
                         "@id": "${baseUrl}/les-privat-simak-ui/${kotaSlug}/${kabupatenSlug}", // URL kabupaten induk
                         "name": "Les Privat ${programName} di ${
-            kabupatenParent?.kota_kabupaten ||
-            kabupatenSlug
-              .replace(/-/g, " ")
-              .split(" ")
-              .map((word) => word.charAt(0).toUpperCase() + word.slice(1))
-              .join(" ")
-          }"
+                          kabupatenParent?.kota_kabupaten ||
+                          kabupatenSlug
+                            .replace(/-/g, " ")
+                            .split(" ")
+                            .map(
+                              (word) =>
+                                word.charAt(0).toUpperCase() + word.slice(1),
+                            )
+                            .join(" ")
+                        }"
                       }
                     },
                     {
@@ -387,7 +391,7 @@ const LesPrivateSimakUIKecamatan = () => {
       <AccordionFAQ />
       <GaleriKegiatanBelajar location={nameCountry} />
       <PromoHomepage location={nameCountry} />
-      <CTABottomHome />
+      {/* <CTABottomHome /> */}
     </React.Fragment>
   );
 };

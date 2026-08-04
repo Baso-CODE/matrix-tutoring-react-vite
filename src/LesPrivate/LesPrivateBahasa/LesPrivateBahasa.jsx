@@ -14,18 +14,17 @@ import ProgramLesPrivatV2 from "../../Components/ProgramLesPrivatNew/ProgramLesP
 import PilihanProgram from "../../Components/ProgramOptions/PilihanProgram";
 import SuccessStoryLesPrivate from "../../Components/SuccesStoryLesPrivate/SuccesStoryLesPrivate";
 import TestimoniOrtuSiswa from "../../Components/TestimoniOrtuSiswa/TestimoniOrtuSiswa";
-import CTABottomHome from "../../Home/CTABottomHome/CTABottomHome";
 import PromoHomepage from "../../Home/PromoHomepage/PromoHomepage";
 import TableOfContents from "../components/TableOfContent";
+import LesprivatKota from "../LesPrivateSD/components/LesprivatKota/LesprivatKota";
+import ProfileMatrixTutoring from "../LesPrivateSD/components/ProfileMatrixTutoring/ProfileMatrixTutoring";
+import TutorLesprivatMatrix from "../LesPrivateSD/components/TutorLesprivatMatrix/TutorLesprivatMatrix";
 import ContentLesPrivatBahasa from "./components/ContentLesPrivatBahasa/ContentLesPrivatBahasa";
 import FlowPembelajaranBahasa from "./components/FlowPembelajaranBahasa/FlowPembelajaranBahasa";
 import HeroBahasa from "./components/HeroBahasa/HeroBahasa";
 import LanguageOptions from "./components/LanguageOptions/LanguageOptions";
 import ProgaramInsenstifBahasa from "./components/ProgaramInsenstifBahasa/ProgaramInsenstifBahasa";
 import ProgaramLesPrivatBahasa from "./components/ProgaramLesPrivatBahasa/ProgaramLesPrivatBahasa";
-import ProfileMatrixTutoring from "../LesPrivateSD/components/ProfileMatrixTutoring/ProfileMatrixTutoring";
-import TutorLesprivatMatrix from "../LesPrivateSD/components/TutorLesprivatMatrix/TutorLesprivatMatrix";
-import LesprivatKota from "../LesPrivateSD/components/LesprivatKota/LesprivatKota";
 
 const items = [
   {
@@ -228,7 +227,7 @@ const LesPrivateBahasa = () => {
       <AccordionFAQ />
       <GaleriKegiatanBelajar />
       <PromoHomepage />
-      <CTABottomHome />
+      {/* <CTABottomHome /> */}
     </React.Fragment>
   );
 };

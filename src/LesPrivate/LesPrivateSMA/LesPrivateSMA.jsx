@@ -12,7 +12,6 @@ import ProgramLesPrivatV2 from "../../Components/ProgramLesPrivatNew/ProgramLesP
 import PilihanProgram from "../../Components/ProgramOptions/PilihanProgram";
 import SuccessStoryLesPrivate from "../../Components/SuccesStoryLesPrivate/SuccesStoryLesPrivate";
 import TestimoniOrtuSiswa from "../../Components/TestimoniOrtuSiswa/TestimoniOrtuSiswa";
-import CTABottomHome from "../../Home/CTABottomHome/CTABottomHome";
 import PromoHomepage from "../../Home/PromoHomepage/PromoHomepage";
 import TableOfContents from "../components/TableOfContent";
 import ImpactStatistics from "../LesPrivateMahasiswa/components/ImpactStatistics/ImpactStatistics";
@@ -28,7 +27,6 @@ import LesPrivatSMAMetode from "./components/LesPrivatSMAMetode/LesPrivatSMAMeto
 import MatrixSubjects from "../../Components/MatrixFeatures/MatrixSubjects";
 import WhyMatrixFeatures from "../../Components/MatrixFeatures/WhyMatrixFeatures";
 import LogoPengajarMTX from "./components/LogoAlumniTutor/LogoPengajarMTX";
-import MatrixDifferentiationSMA from "./components/MatrixDifferentiationSMA/MatrixDifferentiationSMA";
 import ProgaramLesPrivatSMA from "./components/ProgaramLesPrivatSMA/ProgaramLesPrivatSMA";
 import PTNSuccessStrategy from "./components/PTNSuccessStrategy/PTNSuccessStrategy";
 import SolusiLesPrivateSMA from "./components/SolusiLesPrivateSMA/SolusiLesPrivateSMA";
@@ -266,7 +264,7 @@ const LesPrivateSMA = () => {
       <AccordionFAQ />
       <GaleriKegiatanBelajar />
       <PromoHomepage />
-      <CTABottomHome />
+      {/* <CTABottomHome /> */}
     </React.Fragment>
   );
 };

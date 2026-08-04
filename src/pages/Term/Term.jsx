@@ -1,4 +1,3 @@
-import CTABottomHome from "../../Home/CTABottomHome/CTABottomHome";
 import "./Term.css";
 
 const Term = () => {
@@ -78,7 +77,7 @@ const Term = () => {
           </div>
         </main>
       </div>
-      <CTABottomHome />
+      {/* <CTABottomHome /> */}
     </>
   );
 };

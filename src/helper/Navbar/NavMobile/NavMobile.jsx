@@ -41,7 +41,12 @@ export default function NavMobile({ Menus }) {
 
   return (
     <div>
-      <button className="menu-toggle" onClick={toggleDrawer}>
+      <button
+        className="menu-toggle"
+        onClick={toggleDrawer}
+        aria-label={isOpen ? "Tutup menu navigasi" : "Buka menu navigasi"}
+        aria-expanded={isOpen}
+        aria-controls="main-navigation">
         {isOpen ? <X /> : <Menu />}
       </button>
 

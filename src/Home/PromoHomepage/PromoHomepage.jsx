@@ -1,8 +1,8 @@
-import React, { useEffect, useState } from "react";
-import "./PromoHomepage.css";
+import { useEffect, useState } from "react";
 import { getAllPromo } from "../../helper/request/getAllPromo";
 import { selectContactCsData } from "../../lib/features/contactCsSlice";
 import { useAppSelector } from "../../lib/hooks";
+import "./PromoHomepage.css";
 
 const PromoHomepage = ({ location }) => {
   const contactData = useAppSelector(selectContactCsData);
@@ -51,7 +51,7 @@ const PromoHomepage = ({ location }) => {
   const isMobileView = windowWidth < 768;
 
   return (
-    <React.Fragment>
+    <>
       {isMobileView ? (
         <div className="parent-promo-home-mobile">
           {promoMobile.length > 0 ? (
@@ -60,14 +60,17 @@ const PromoHomepage = ({ location }) => {
                 key={promo.id || index}
                 href={contactData?.link_cta || "#"}
                 target="_blank"
-                rel="noopener noreferrer">
+                rel="noopener noreferrer"
+                aria-label={`Lihat promo mobile ${
+                  location ? `di ${location}` : ""
+                } ${promo.id || index + 1} (membuka tab baru)`}>
                 <img
                   loading="lazy"
                   className="child-promo-home"
                   src={promo.url}
-                  alt={`Promo mobile ${location ? `di ${location}` : ""} ${
-                    promo.id || index + 1
-                  }`}
+                  alt={`Promo mobile ${
+                    location ? `di ${location}` : ""
+                  } ${promo.id || index + 1}`}
                 />
               </a>
             ))
@@ -83,14 +86,17 @@ const PromoHomepage = ({ location }) => {
                 key={promo.id || index}
                 href={contactData?.link_cta || "#"}
                 target="_blank"
-                rel="noopener noreferrer">
+                rel="noopener noreferrer"
+                aria-label={`Lihat promo desktop ${
+                  location ? `di ${location}` : ""
+                } ${promo.id || index + 1} (membuka tab baru)`}>
                 <img
                   loading="lazy"
                   className="child-promo-home"
                   src={promo.url}
-                  alt={`Promo desktop ${location ? `di ${location}` : ""} ${
-                    promo.id || index + 1
-                  }`}
+                  alt={`Promo desktop ${
+                    location ? `di ${location}` : ""
+                  } ${promo.id || index + 1}`}
                 />
               </a>
             ))
@@ -99,7 +105,7 @@ const PromoHomepage = ({ location }) => {
           )}
         </div>
       )}
-    </React.Fragment>
+    </>
   );
 };
 

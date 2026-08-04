@@ -6,9 +6,9 @@ import "swiper/css";
 import "swiper/css/pagination";
 
 import { useEffect, useRef, useState } from "react";
+import { FaStar } from "react-icons/fa";
 import { Autoplay, Pagination } from "swiper/modules";
 import { getAllMasterTeacherAlfa } from "../../helper/request/getAllMasterTeacherAlfa";
-import { FaStar } from "react-icons/fa";
 
 const MasterTeacherV2 = ({ location }) => {
   const [dataTutor, setDataTutor] = useState([]);
@@ -128,10 +128,6 @@ const MasterTeacherV2 = ({ location }) => {
                     </p>
                     <div className="rating-container-v2">{renderStars(5)}</div>{" "}
                     <p className="univ-jurusan-text">
-                      {/* <p className="ratting-master-teacher-v2">
-                        <strong>{generateRandomRating()}</strong>
-                        <br /> Rating{" "}
-                      </p> */}
                       {tutor?.jurusan} - {tutor?.universitas}
                     </p>
                   </div>

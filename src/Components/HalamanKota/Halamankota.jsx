@@ -2,7 +2,6 @@ import React, { useEffect, useState } from "react";
 import { Helmet } from "react-helmet-async";
 import { useParams } from "react-router-dom";
 import { getAllKotBySlug } from "../../helper/request/getAllKotaBySlug";
-import CTABottomHome from "../../Home/CTABottomHome/CTABottomHome";
 import PromoHomepage from "../../Home/PromoHomepage/PromoHomepage";
 import AsalSekolahSiswaEdumatrix from "../AsalSekolahSiswa/AsalSekolahSiswa";
 import AccordionFAQ from "../FAQ/AccordionFAQ";
@@ -10,19 +9,15 @@ import FiturProgramNew from "../FiturProgramNew/FiturProgramNew";
 import GaleriKegiatanBelajar from "../GaleriKegiatanBelajar/GaleriKegiatanBelajar";
 import HowToOrder from "../HowToOrder/HowToOrder";
 import MasterTeacherV2 from "../MasterTeacherV2/MasterTeacherV2";
-import MatrixFeatures from "../MatrixFeatures/MatrixFeatures";
+import MatrixSubjects from "../MatrixFeatures/MatrixSubjects";
+import WhyMatrixFeatures from "../MatrixFeatures/WhyMatrixFeatures";
 import OnlineLesOptions from "../OnlineLesOption/OnlineLesOption";
 import ProgramBelajarLesPrivat from "../ProgramBelajarLesPrivate/ProgramBelajarLesPrivate";
 import ProgramLesPrivatV2 from "../ProgramLesPrivatNew/ProgramLesPrivatV2 ";
 import PilihanProgram from "../ProgramOptions/PilihanProgram";
-import AsalSekolahSiswaMarque from "../SekolahSiswaMarque/SekolahSiswaMarque";
-import EmbrelaSlider from "../SlideTop/EmbrelaSlider";
 import SuccessStoryLesPrivate from "../SuccesStoryLesPrivate/SuccesStoryLesPrivate";
-import TestimonialSiswa from "../TestimonialSiswa/TestimonialSiswa";
 import TestimoniOrtuSiswa from "../TestimoniOrtuSiswa/TestimoniOrtuSiswa";
 import "./Halamankota.css";
-import WhyMatrixFeatures from "../MatrixFeatures/WhyMatrixFeatures";
-import MatrixSubjects from "../MatrixFeatures/MatrixSubjects";
 
 const Halamankota = () => {
   const [kota, setKota] = useState([]);
@@ -148,7 +143,7 @@ const Halamankota = () => {
       <AccordionFAQ />
       <GaleriKegiatanBelajar />
       <PromoHomepage />
-      <CTABottomHome />
+      {/* <CTABottomHome /> */}
     </React.Fragment>
   );
 };
