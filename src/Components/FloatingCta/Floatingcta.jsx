@@ -1,19 +1,15 @@
-import { selectContactCsData } from "../../lib/features/contactCsSlice";
-import { useAppSelector } from "../../lib/hooks";
+import { handleCsWhatsAppClick } from "../../helper/csRotationHelper";
 import "./Floatingcta.css";
 
 const Floatingcta = () => {
-  const contactData = useAppSelector(selectContactCsData);
   return (
     <div className="box-float-main">
-      <div className="main-parent-wa">
+      <div className="main-parent-wa" onClick={() => handleCsWhatsAppClick()}>
         <span className="label-cta">Klik Untuk Konsultasi</span>
 
-        <a
+        <button
+          type="button"
           className="parent-btn-wa"
-          href={contactData?.link_cta}
-          target="_blank"
-          rel="noopener noreferrer"
           aria-label="Konsultasi via WhatsApp (membuka tab baru)">
           <span className="btn-float-wa">
             <span className="parent-icon-wa">
@@ -25,7 +21,7 @@ const Floatingcta = () => {
               />
             </span>
           </span>
-        </a>
+        </button>
       </div>
     </div>
   );
