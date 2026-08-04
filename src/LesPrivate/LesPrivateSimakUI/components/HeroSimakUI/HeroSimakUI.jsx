@@ -1,12 +1,10 @@
 import { ArrowRightCircleIcon } from "lucide-react";
-import "./HeroSimakUI.css";
-import ReusableButton from "../../../../helper/Button/ReusableButton/ReusableButton";
-import { selectContactCsData } from "../../../../lib/features/contactCsSlice";
-import { useAppSelector } from "../../../../lib/hooks";
 import { Link } from "react-router-dom";
+import ReusableButton from "../../../../helper/Button/ReusableButton/ReusableButton";
+import { handleCsWhatsAppClick } from "../../../../helper/csRotationHelper";
+import "./HeroSimakUI.css";
 
 const HeroSimakUI = () => {
-  const contactData = useAppSelector(selectContactCsData);
   return (
     <section className="hero__simakUI">
       <div className="hero__simakUI-overlay"></div>
@@ -26,7 +24,7 @@ const HeroSimakUI = () => {
           </p>
           <div className="hero__simakUI-buttons">
             <Link
-              to={contactData?.link_cta}
+              onClick={() => handleCsWhatsAppClick()}
               className="button_no-link-direction">
               <ReusableButton
                 text="Konsultasi Sekarang!"

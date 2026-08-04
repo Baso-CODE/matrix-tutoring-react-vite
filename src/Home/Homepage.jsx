@@ -17,14 +17,10 @@ import SuccessStoryLesPrivate from "../Components/SuccesStoryLesPrivate/SuccesSt
 import TestimoniOrtuSiswa from "../Components/TestimoniOrtuSiswa/TestimoniOrtuSiswa";
 import KurikulumLesPrivate from "../LesPrivate/LesPrivateSD/components/KurikulumLesPrivate/KurikulumLesPrivate";
 import LesprivatKota from "../LesPrivate/LesPrivateSD/components/LesprivatKota/LesprivatKota";
-import { selectContactCsData } from "../lib/features/contactCsSlice";
-import { useAppSelector } from "../lib/hooks";
 import "./Homepage.css";
 import PromoHomepage from "./PromoHomepage/PromoHomepage";
 
 const Homepage = () => {
-  const contactData = useAppSelector(selectContactCsData);
-
   return (
     <>
       <Helmet>
@@ -69,7 +65,7 @@ const Homepage = () => {
       </Helmet>
 
       <div>
-        <HeroHomeV2 contactData={contactData} />
+        <HeroHomeV2 />
 
         <ProgramLesPrivatV2 />
         <FiturProgramNew />

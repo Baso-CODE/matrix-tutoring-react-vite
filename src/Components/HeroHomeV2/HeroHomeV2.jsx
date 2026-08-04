@@ -1,16 +1,67 @@
 /* eslint-disable react-hooks/exhaustive-deps */
 import { ArrowRightCircleIcon } from "lucide-react";
 import { useEffect, useRef, useState } from "react";
-import { Link } from "react-router-dom";
 import ReusableButton from "../../helper/Button/ReusableButton/ReusableButton";
 import ImageModal from "../../helper/ImageModal/ImageModal";
 import { getAllRandomSlogans } from "../../helper/request/getAllSloganSRequest";
 import "./HeroHomeV2.css";
 
-const HeroHomeV2 = ({ contactData }) => {
+const HeroHomeV2 = () => {
   const [dataSlogan, setDataSlogan] = useState(null);
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [modalImageUrl, setModalImageUrl] = useState("");
+
+  // Data 4 CS Lokal
+  const csList = [
+    {
+      name: "Ms. Dita",
+      phone: "6285817279118",
+    },
+    {
+      name: "Ms. Eka",
+      phone: "6287783999349",
+    },
+    {
+      name: "Ms. Linda",
+      phone: "6285747281466",
+    },
+    {
+      name: "Ms. Syifa",
+      phone: "628131971916",
+    },
+  ];
+
+  // State indeks CS aktif
+  const [currentCsIndex, setCurrentCsIndex] = useState(0);
+
+  // 1. ROTASI VIA REFRESH / INITIAL LOAD
+  useEffect(() => {
+    const savedIndex = localStorage.getItem("matrix_cs_rotation_index");
+    if (savedIndex !== null) {
+      const nextIndex = (parseInt(savedIndex, 10) + 1) % csList.length;
+      setCurrentCsIndex(nextIndex);
+      localStorage.setItem("matrix_cs_rotation_index", nextIndex.toString());
+    } else {
+      localStorage.setItem("matrix_cs_rotation_index", "0");
+      setCurrentCsIndex(0);
+    }
+  }, [csList.length]);
+
+  // 2. ROTASI VIA KLIK BUTTON PROMO
+  const handlePromoClick = () => {
+    const activeCs = csList[currentCsIndex];
+
+    const messageTemplate = `Halo ${activeCs.name} https://apps.bimbelmatrix.com/, saya ingin tanya program belajar untuk\n\nKelas : \nMapel : \nKurikulum : \nWilayah : `;
+    const finalUrl = `https://api.whatsapp.com/send?phone=${activeCs.phone}&text=${encodeURIComponent(messageTemplate)}`;
+
+    // Geser giliran ke CS berikutnya untuk klik/refresh selanjutnya
+    const nextIndex = (currentCsIndex + 1) % csList.length;
+    localStorage.setItem("matrix_cs_rotation_index", nextIndex.toString());
+    setCurrentCsIndex(nextIndex);
+
+    // Buka WhatsApp di tab baru
+    window.open(finalUrl, "_blank", "noopener,noreferrer");
+  };
 
   const splitSlogan = (slogan) => {
     if (!slogan) {
@@ -32,11 +83,9 @@ const HeroHomeV2 = ({ contactData }) => {
     const fetchDataSlogan = async () => {
       try {
         const response = await getAllRandomSlogans();
-
         setDataSlogan(response.data || null);
       } catch (error) {
         console.error("Error fetching slogan data:", error);
-
         setDataSlogan({
           content: "Bimbel Les Privat Terbaik untuk Semua Jenjang",
         });
@@ -48,7 +97,6 @@ const HeroHomeV2 = ({ contactData }) => {
   const currentSloganText =
     dataSlogan?.content || "Bimbel Les Privat Terbaik untuk Semua Jenjang";
 
-  // Pisahkan slogan untuk menyorot kata terakhir
   const { mainText, highlightWord } = splitSlogan(currentSloganText);
 
   const PROMO_DURATION_MINUTES = 120;
@@ -87,14 +135,11 @@ const HeroHomeV2 = ({ contactData }) => {
   const [timerVisible, setTimerVisible] = useState(false);
   const timerIntervalRef = useRef(null);
 
-  // Fungsi untuk memulai timer
   const startTimer = () => {
-    // Pastikan hanya satu interval yang berjalan
     if (timerIntervalRef.current) {
       clearInterval(timerIntervalRef.current);
     }
 
-    // Reset endTime di localStorage jika sudah habis atau belum ada
     if (
       !localStorage.getItem(END_TIME_STORAGE_KEY) ||
       Object.keys(calculateTimeLeft()).length === 0
@@ -105,29 +150,26 @@ const HeroHomeV2 = ({ contactData }) => {
     }
 
     setTimerVisible(true);
-    setTimeLeft(calculateTimeLeft()); // Update waktu segera setelah memulai
+    setTimeLeft(calculateTimeLeft());
 
     timerIntervalRef.current = setInterval(() => {
       const newTimeLeft = calculateTimeLeft();
       if (Object.keys(newTimeLeft).length === 0) {
-        clearInterval(timerIntervalRef.current); // Hentikan timer jika waktu habis
-        setTimerVisible(false); // Sembunyikan timer setelah habis
-        localStorage.removeItem(END_TIME_STORAGE_KEY); // Pastikan dibersihkan
+        clearInterval(timerIntervalRef.current);
+        setTimerVisible(false);
+        localStorage.removeItem(END_TIME_STORAGE_KEY);
       }
       setTimeLeft(newTimeLeft);
     }, 1000);
   };
 
-  // Efek samping untuk membersihkan interval saat komponen di-unmount
   useEffect(() => {
-    // Inisialisasi timer jika ada waktu tersisa dari sesi sebelumnya
     if (localStorage.getItem(END_TIME_STORAGE_KEY)) {
       const initialTimeLeft = calculateTimeLeft();
       if (Object.keys(initialTimeLeft).length > 0) {
-        // Hanya mulai jika waktu tersisa
         startTimer();
       } else {
-        localStorage.removeItem(END_TIME_STORAGE_KEY); // Hapus jika sudah habis saat dimuat
+        localStorage.removeItem(END_TIME_STORAGE_KEY);
         setTimerVisible(false);
       }
     }
@@ -140,9 +182,7 @@ const HeroHomeV2 = ({ contactData }) => {
 
   const timerComponents = [];
   if (timerVisible) {
-    // Hanya tampilkan komponen timer jika timerVisible true
     Object.keys(timeLeft).forEach((interval) => {
-      // Pastikan untuk menampilkan 0 jika nilainya 0 (misal: 00:05:30)
       if (timeLeft[interval] === undefined && interval !== "seconds") {
         return;
       }
@@ -199,7 +239,6 @@ const HeroHomeV2 = ({ contactData }) => {
                 viewBox="0 0 24 24"
                 fill="none"
                 xmlns="http://www.w3.org/2000/svg">
-                w
                 <path
                   d="M4.5 12.75L9 17.25L19.5 6.75"
                   stroke="currentColor"
@@ -301,9 +340,10 @@ const HeroHomeV2 = ({ contactData }) => {
           </div>
 
           <div className="hero-cta-section-wrapper-v2">
-            <Link
-              to={contactData?.link_cta || "#"}
-              className="link_cta_decoration-v2">
+            <div
+              onClick={handlePromoClick}
+              className="link_cta_decoration-v2"
+              style={{ cursor: "pointer" }}>
               <ReusableButton
                 text="Dapatkan promo, chat sekarang!"
                 bgColor="#ffffff"
@@ -311,7 +351,7 @@ const HeroHomeV2 = ({ contactData }) => {
                 textColor="#007bff"
                 icon={<ArrowRightCircleIcon />}
               />
-            </Link>
+            </div>
           </div>
         </div>
 

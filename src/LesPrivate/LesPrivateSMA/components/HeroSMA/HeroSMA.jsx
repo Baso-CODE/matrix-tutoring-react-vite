@@ -1,12 +1,10 @@
 import { ArrowRightCircleIcon } from "lucide-react";
-import "./HeroSMA.css";
-import ReusableButton from "../../../../helper/Button/ReusableButton/ReusableButton";
-import { selectContactCsData } from "../../../../lib/features/contactCsSlice";
-import { useAppSelector } from "../../../../lib/hooks";
 import { Link } from "react-router-dom";
+import ReusableButton from "../../../../helper/Button/ReusableButton/ReusableButton";
+import { handleCsWhatsAppClick } from "../../../../helper/csRotationHelper";
+import "./HeroSMA.css";
 
 const HeroSMA = () => {
-  const contactData = useAppSelector(selectContactCsData);
   return (
     <section className="hero__sma">
       <div className="hero__sma-overlay"></div>
@@ -26,7 +24,7 @@ const HeroSMA = () => {
           </p>
           <div className="hero-sma-buttons">
             <Link
-              to={contactData?.link_cta}
+              onClick={() => handleCsWhatsAppClick()}
               className="button_no-link-direction">
               <ReusableButton
                 text="Konsultasi Sekarang!"

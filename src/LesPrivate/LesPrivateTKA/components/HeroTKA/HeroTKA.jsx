@@ -1,12 +1,10 @@
-import { Link } from "react-router-dom";
-import { selectContactCsData } from "../../../../lib/features/contactCsSlice";
-import { useAppSelector } from "../../../../lib/hooks";
-import "./HeroTKA.css";
-import ReusableButton from "../../../../helper/Button/ReusableButton/ReusableButton";
 import { ArrowRightCircleIcon } from "lucide-react";
+import { Link } from "react-router-dom";
+import ReusableButton from "../../../../helper/Button/ReusableButton/ReusableButton";
+import { handleCsWhatsAppClick } from "../../../../helper/csRotationHelper";
+import "./HeroTKA.css";
 
 const HeroTKA = () => {
-  const contactData = useAppSelector(selectContactCsData);
   return (
     <section className="hero__tka">
       <div className="hero__tka-overlay"></div>
@@ -26,7 +24,7 @@ const HeroTKA = () => {
           </p>
           <div className="hero__tka-buttons">
             <Link
-              to={contactData?.link_cta}
+              onClick={() => handleCsWhatsAppClick()}
               className="button_no-link-direction">
               <ReusableButton
                 text="Konsultasi Sekarang!"

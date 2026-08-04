@@ -1,14 +1,10 @@
 import { ArrowRightCircleIcon } from "lucide-react";
 import { Link } from "react-router-dom";
 import ReusableButton from "../../../helper/Button/ReusableButton/ReusableButton";
-import { selectContactCsData } from "../../../lib/features/contactCsSlice";
-import { useAppSelector } from "../../../lib/hooks";
+import { handleCsWhatsAppClick } from "../../../helper/csRotationHelper";
 import "./HeroLesPrivate.css";
 
 const HeroLesPrivate = ({ heading, desc, images, location }) => {
-  const contactData = useAppSelector(selectContactCsData);
-
-  const finalUrl = contactData?.link_cta;
   return (
     <section className="container-all">
       <div className=" container-halaman-hero-lesprivate">
@@ -24,7 +20,9 @@ const HeroLesPrivate = ({ heading, desc, images, location }) => {
               </p>
             </div>
             <div className="btn-and-icons">
-              <Link to={finalUrl || "#"} className="link_cta_decoration">
+              <Link
+                onClick={() => handleCsWhatsAppClick()}
+                className="link_cta_decoration">
                 <ReusableButton
                   text="Konsultasi Sekarang!"
                   bgColor="#ffffff"

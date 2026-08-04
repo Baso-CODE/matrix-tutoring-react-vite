@@ -3,7 +3,10 @@
   font-family: sans-serif;
   overflow: hidden;
 }
-
+.swiper-slide {
+  height: auto !important; /* Membuat semua slide dalam satu baris berketinggian sama */
+  display: flex;
+}
 /* Judul utama */
 .main-title-galeri-belajar {
   text-align: center;
@@ -30,7 +33,8 @@
   padding: 20px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
   overflow: hidden;
-  min-height: 52vh;
+  width: 100%;
+  height: 100%;
   display: flex;
   flex-direction: column;
 }
@@ -69,6 +73,7 @@
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 10px;
+  flex-grow: 1;
 }
 
 .image-item {
@@ -131,16 +136,7 @@
   border-radius: 10px;
 }
 
-@media (max-width: 1024px) {
-  .galeri-card {
-    min-height: 25vh;
-  }
-}
-
 @media (max-width: 767px) {
-  .galeri-card {
-    min-height: 43vh;
-  } /* Judul utama */
   .main-title-galeri-belajar {
     font-size: 1.4rem;
   }

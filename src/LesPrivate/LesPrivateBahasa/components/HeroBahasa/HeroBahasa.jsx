@@ -1,5 +1,7 @@
 import { ArrowRightCircleIcon } from "lucide-react";
+import { Link } from "react-router-dom";
 import ReusableButton from "../../../../helper/Button/ReusableButton/ReusableButton";
+import { handleCsWhatsAppClick } from "../../../../helper/csRotationHelper";
 import "./HeroBahasa.css";
 
 const HeroBahasa = () => {
@@ -28,13 +30,15 @@ const HeroBahasa = () => {
             </p>
 
             <div className="hero__bahasa-buttons">
-              <ReusableButton
-                text="Daftar Sekarang!"
-                bgColor="#ffffff"
-                borderColor="#007bff"
-                textColor="#007bff"
-                icon={<ArrowRightCircleIcon />}
-              />
+              <Link onClick={() => handleCsWhatsAppClick()}>
+                <ReusableButton
+                  text="Daftar Sekarang!"
+                  bgColor="#ffffff"
+                  borderColor="#007bff"
+                  textColor="#007bff"
+                  icon={<ArrowRightCircleIcon />}
+                />
+              </Link>
             </div>
           </div>
 

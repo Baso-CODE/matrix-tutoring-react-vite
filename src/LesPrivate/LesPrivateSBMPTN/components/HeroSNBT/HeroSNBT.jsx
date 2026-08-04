@@ -1,12 +1,10 @@
 import { ArrowRightCircleIcon } from "lucide-react";
 import { Link } from "react-router-dom";
 import ReusableButton from "../../../../helper/Button/ReusableButton/ReusableButton";
-import { selectContactCsData } from "../../../../lib/features/contactCsSlice";
-import { useAppSelector } from "../../../../lib/hooks";
+import { handleCsWhatsAppClick } from "../../../../helper/csRotationHelper";
 import "./HeroSNBT.css";
 
 const HeroSNBT = () => {
-  const contactData = useAppSelector(selectContactCsData);
   return (
     <section className="hero__snbt">
       <div className="hero__snbt-overlay"></div>
@@ -25,7 +23,7 @@ const HeroSNBT = () => {
           </p>
           <div className="hero__snbt-buttons">
             <Link
-              to={contactData?.link_cta}
+              onClick={() => handleCsWhatsAppClick()}
               className="button_no-link-direction">
               <ReusableButton
                 text="Daftar Program SNBT Sekarang!"

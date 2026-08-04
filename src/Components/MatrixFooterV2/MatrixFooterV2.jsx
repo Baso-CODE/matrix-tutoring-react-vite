@@ -1,3 +1,4 @@
+import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import { Menus } from "../../helper/utils";
 import "./MatrixFooterV2.css";
@@ -9,20 +10,24 @@ const MatrixFooterV2 = () => {
     {
       name: "Ms. Dita (Nasional)",
       phone: "085817279118",
-      link: "https://api.whatsapp.com/send?phone=6285817279118&text=Halo%20Ms.%20Dita,%20saya%20tertarik%20dengan%20program%20Matrix%20Tutoring.",
+      link: "https://api.whatsapp.com/send?phone=6285817279118&text=Halo%20Ms.%20Dita,%20saya%20tertarik%20dengan%20program%20Matrix%20Tutoring.%20Informasi%20dari%20website%20https://apps.bimbelmatrix.com/",
     },
     {
       name: "Ms. Eka (Nasional)",
       phone: "087783999349",
-      link: "https://api.whatsapp.com/send?phone=6287783999349&text=Halo%20Ms.%20Eka,%20saya%20tertarik%20dengan%20program%20Matrix%20Tutoring.",
+      link: "https://api.whatsapp.com/send?phone=6287783999349&text=Halo%20Ms.%20Eka,%20saya%20tertarik%20dengan%20program%20Matrix%20Tutoring.%20Informasi%20dari%20website%20https://apps.bimbelmatrix.com/",
     },
     {
       name: "Ms. Linda (Internasional)",
       phone: "085747281466",
-      link: "https://api.whatsapp.com/send?phone=6285747281466&text=Halo%20Ms.%20Linda,%20saya%20tertarik%20dengan%20program%20Matrix%20Tutoring.",
+      link: "https://api.whatsapp.com/send?phone=6285747281466&text=Halo%20Ms.%20Linda,%20saya%20tertarik%20dengan%20program%20Matrix%20Tutoring.%20Informasi%20dari%20website%20https://apps.bimbelmatrix.com/",
+    },
+    {
+      name: "Ms. Syifa",
+      phone: "08131971916",
+      link: "https://api.whatsapp.com/send?phone=628131971916&text=Halo%20Ms.%20Syifa,%20saya%20tertarik%20dengan%20program%20Matrix%20Tutoring.%20Informasi%20dari%20website%20https://apps.bimbelmatrix.com/",
     },
   ];
-
   const studentCountries = [
     "Indonesia",
     "Australia",
@@ -43,9 +48,31 @@ const MatrixFooterV2 = () => {
     "Germany",
     "USA",
   ];
+  // State untuk menyimpan indeks CS yang sedang aktif
+  const [currentCsIndex, setCurrentCsIndex] = useState(0);
 
-  const ctaWhatsAppLink =
-    "https://api.whatsapp.com/send?phone=6285747281466&text=Halo%20Kak,%20saya%20tertarik%20dengan%20program%20Matrix%20Tutoring.";
+  // Inisialisasi rotasi CS saat komponen pertama kali dirender
+  useEffect(() => {
+    const savedIndex = localStorage.getItem("matrix_cs_rotation_index");
+    if (savedIndex !== null) {
+      const nextIndex =
+        (parseInt(savedIndex, 10) + 1) % consultationContacts.length;
+      setCurrentCsIndex(nextIndex);
+      localStorage.setItem("matrix_cs_rotation_index", nextIndex.toString());
+    } else {
+      localStorage.setItem("matrix_cs_rotation_index", "0");
+      setCurrentCsIndex(0);
+    }
+  }, [consultationContacts.length]);
+
+  // Handler saat gambar CTA diklik: menggeser giliran ke CS selanjutnya
+  const handleCtaClick = () => {
+    const nextIndex = (currentCsIndex + 1) % consultationContacts.length;
+    localStorage.setItem("matrix_cs_rotation_index", currentCsIndex.toString());
+    setCurrentCsIndex(nextIndex);
+  };
+
+  const activeContact = consultationContacts[currentCsIndex];
 
   return (
     <footer className="footer-container-matrix-v2">
@@ -179,20 +206,21 @@ const MatrixFooterV2 = () => {
               ))}
             </ul>
           </div>
-          {/* Kolom 4: CTA */}
+          {/* Kolom 4: CTA WhatsApp (Rotasi 4 CS) */}
           <div className="students-section-footer-v2">
             <div className="cta-section-footer-v2">
               <h3 className="section-title-footer-v2-wa">
                 CLICK TO CHAT WHATSAPP
               </h3>
               <a
-                href={ctaWhatsAppLink}
+                href={activeContact.link}
+                onClick={handleCtaClick}
                 target="_blank"
                 rel="noopener noreferrer">
                 <img
                   loading="lazy"
                   src="/images/whatsapp_footer.webp"
-                  alt="Klik Untuk Pesan Melalui Whatsapp"
+                  alt={`Klik Untuk Pesan Melalui Whatsapp (${activeContact.name})`}
                   className="whatsapp-cta-image-v2"
                 />
               </a>

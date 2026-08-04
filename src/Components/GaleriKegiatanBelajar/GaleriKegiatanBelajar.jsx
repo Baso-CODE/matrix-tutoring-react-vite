@@ -1,15 +1,14 @@
-import React from "react";
+import { A11y, Navigation, Pagination, Scrollbar } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
-import { Pagination, Navigation, Scrollbar, A11y } from "swiper/modules";
 
 // Import Swiper styles
 import "swiper/css";
-import "swiper/css/pagination";
 import "swiper/css/navigation";
+import "swiper/css/pagination";
 import "swiper/css/scrollbar";
 
-import "./GaleriKegiatanBelajar.css";
 import background from "../../assets/bg-gallery.jpg"; // Ganti dengan path file background Anda
+import "./GaleriKegiatanBelajar.css";
 
 const dummyData = [
   {
@@ -205,6 +204,7 @@ const GaleriKegiatanBelajar = ({ location }) => {
           slidesPerView={1}
           centeredSlides={false}
           loop={true}
+          autoHeight={false}
           // navigation={true}
           scrollbar={{ draggable: true }}
           breakpoints={{

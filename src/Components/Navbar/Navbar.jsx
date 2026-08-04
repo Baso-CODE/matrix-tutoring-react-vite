@@ -5,13 +5,47 @@ import {
   faSignIn,
 } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import "./Navbar.css";
 
 const Navbar = () => {
   const navigate = useNavigate();
   const [dropdownOpen, setDropdownOpen] = useState(false);
+  const csList = [
+    {
+      name: "Ms. Dita",
+      phone: "6285817279118",
+    },
+    {
+      name: "Ms. Eka",
+      phone: "6287783999349",
+    },
+    {
+      name: "Ms. Linda",
+      phone: "6285747281466",
+    },
+    {
+      name: "Ms. Syifa",
+      phone: "628131971916",
+    },
+  ];
+
+  // State indeks CS aktif
+  const [currentCsIndex, setCurrentCsIndex] = useState(0);
+
+  // 1. CARA PERTAMA: Berganti saat halaman di-refresh / di-load
+  useEffect(() => {
+    const savedIndex = localStorage.getItem("matrix_cs_rotation_index");
+    if (savedIndex !== null) {
+      const nextIndex = (parseInt(savedIndex, 10) + 1) % csList.length;
+      setCurrentCsIndex(nextIndex);
+      localStorage.setItem("matrix_cs_rotation_index", nextIndex.toString());
+    } else {
+      localStorage.setItem("matrix_cs_rotation_index", "0");
+      setCurrentCsIndex(0);
+    }
+  }, [csList.length]);
 
   const toggleDropdown = () => {
     setDropdownOpen(!dropdownOpen);
@@ -24,17 +58,18 @@ const Navbar = () => {
     navigate("/");
   };
 
-  const phone = "6285747281466"; // Nomor telepon
-  const baseUrl = `https://api.whatsapp.com/send?phone=${phone}&text=Halo%20Kak%20Linda%20https://apps.bimbelmatrix.com/,%20saya%20ingin%20tanya%20program%20belajar%20untuk%0A`;
+  // 2. CARA KEDUA: Langsung berganti ke CS berikutnya seketika saat diklik
+  const handleDaftarClick = () => {
+    const nextIndex = (currentCsIndex + 1) % csList.length;
+    // Simpan indeks baru ke localStorage & state agar klik selanjutnya langsung memakai CS berikutnya
+    localStorage.setItem("matrix_cs_rotation_index", nextIndex.toString());
+    setCurrentCsIndex(nextIndex);
+  };
 
-  const message = `
-Kelas : 
-Mapel : 
-Kurikulum : 
-Wilayah : 
-`.trim(); // Placeholder untuk pesan yang diinginkan
-  const finalUrl = `${baseUrl}${encodeURIComponent(message)}`;
-
+  // Buat URL WhatsApp dinamis sesuai CS aktif saat ini
+  const activeCs = csList[currentCsIndex];
+  const messageTemplate = `Halo ${activeCs.name} https://apps.bimbelmatrix.com/, saya ingin tanya program belajar untuk\n\nKelas : \nMapel : \nKurikulum : \nWilayah : `;
+  const finalUrl = `https://api.whatsapp.com/send?phone=${activeCs.phone}&text=${encodeURIComponent(messageTemplate)}`;
   return (
     <React.Fragment>
       <nav className="navbar">
@@ -177,6 +212,7 @@ Wilayah :
               <a
                 className="menu-nav-daftar"
                 href={finalUrl}
+                onClick={handleDaftarClick}
                 target="_blank"
                 rel="noopener noreferrer">
                 <FontAwesomeIcon className="icon-navbar" icon={faSignIn} />{" "}
