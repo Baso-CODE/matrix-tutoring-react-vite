@@ -11,7 +11,7 @@ const OnlineLesOptions = ({ location }) => {
             dan layanan yang sama
           </p>
         </div>
-        <div className="stats-grid">
+        <div className="options">
           <div className="online-les-option">
             <img
               loading="lazy"
