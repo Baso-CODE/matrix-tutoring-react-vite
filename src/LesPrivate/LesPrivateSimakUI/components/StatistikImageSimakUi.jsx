@@ -1,6 +1,5 @@
 import { Link } from "react-router-dom";
-import { selectContactCsData } from "../../../lib/features/contactCsSlice";
-import { useAppSelector } from "../../../lib/hooks";
+import { handleCsWhatsAppClick } from "../../../helper/csRotationHelper";
 
 const stats = [
   {
@@ -30,9 +29,6 @@ const stats = [
 ];
 
 const StatistikImageSimakUI = () => {
-  const contactData = useAppSelector(selectContactCsData);
-  const finalUrl = contactData?.link_cta;
-
   return (
     <section
       id="simak-ui-success-statistics"
@@ -65,7 +61,7 @@ const StatistikImageSimakUI = () => {
               <div className="card__content">
                 <p className="card__title">{item.title}</p>
                 <p className="card__description">{item.description}</p>
-                <Link to={finalUrl}>
+                <Link onClick={() => handleCsWhatsAppClick()}>
                   <button className="card__button">Detail</button>
                 </Link>
               </div>

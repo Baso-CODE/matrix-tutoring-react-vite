@@ -1,7 +1,5 @@
 import { Link } from "react-router-dom";
-import { selectContactCsData } from "../../../lib/features/contactCsSlice";
-import { useAppSelector } from "../../../lib/hooks";
-
+import { handleCsWhatsAppClick } from "../../../helper/csRotationHelper";
 const stats = [
   {
     image: "/images/les-private/sma/statistic/lolos-ptn.webp", // Gambar bisa tetap sama jika relevan secara visual
@@ -30,9 +28,6 @@ const stats = [
 ];
 
 const StatistikImageTKA = () => {
-  const contactData = useAppSelector(selectContactCsData);
-
-  const finalUrl = contactData?.link_cta;
   return (
     <section id="tka-success-statistics" className="statistik-image-section">
       <div className="statistik-image-container">
@@ -60,7 +55,7 @@ const StatistikImageTKA = () => {
               <div className="card__content">
                 <p className="card__title">{item.title}</p>
                 <p className="card__description">{item.description}</p>
-                <Link to={finalUrl}>
+                <Link onClick={() => handleCsWhatsAppClick()}>
                   <button className="card__button">Detail</button>
                 </Link>
               </div>

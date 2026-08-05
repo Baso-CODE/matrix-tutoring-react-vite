@@ -1,188 +1,170 @@
-/* MasterTeacherV2.css */
-
 .container-full-master-teacher-v2 {
   background-color: #007bff;
+  font-family: "Poppins", sans-serif;
 }
 
-.container-master-teacher-v2 {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 10px;
-}
 .superparent-container-master-teacher-v2 {
-  padding-top: 5%;
-  padding-bottom: 5%;
-}
-.img-card-master-teacher-v2 {
-  width: 50%;
-  max-width: 120px;
-  height: 120px;
-  object-fit: cover;
-  border-radius: 100px;
-  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
-  margin-top: -60px;
-  margin-bottom: 15px;
-  flex-shrink: 0;
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-}
-.card-master-teacher-v2 {
-  background-color: white;
-  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
-  padding: 20px;
-  padding-top: 80px;
-  border-radius: 15px;
-  text-align: center;
-  display: flex;
-  flex-direction: column;
-  height: 380px; /* Sesuaikan tinggi ini jika diperlukan */
-  justify-content: space-between;
-  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
-}
-.card-master-teacher-v2:hover {
-  transform: translateY(-10px);
-  box-shadow: rgba(0, 0, 0, 0.35) 0px 8px 24px;
-  cursor: pointer;
-}
-
-/* Hapus style tombol lama */
-.jurusan-master-teacher-v2,
-.univ-master-teacher-v2,
-.parent-jurusan-master-teacher-v2 {
-  display: none;
-}
-
-.mapel-master-teacher-v2 {
-  margin-top: 5px;
-  font-weight: 400;
-  font-family: "Poppins", sans-serif;
-  color: rgb(77, 77, 77);
-  margin-bottom: 0;
-  font-size: 0.9rem;
-}
-
-.program-master-teacher-v2 {
-  margin-top: 5px;
-  font-weight: 400;
-  font-family: "Poppins", sans-serif;
-  color: rgb(77, 77, 77);
-  margin-bottom: 0;
-  font-size: 0.9rem;
-}
-.nama-master-teacher-v2 {
-  font-weight: 600;
-  flex-shrink: 0;
-  font-size: 15px;
-  line-height: 19px;
-  margin-bottom: 5px;
-}
-
-.ratting-master-teacher-v2 {
-  line-height: 18px;
-  font-size: 15px;
-  color: rgb(77, 77, 77);
-  margin-top: 12px;
-
-  flex-shrink: 0;
-}
-
-.rating-container-v2 {
-  display: flex; /* Menggunakan flexbox untuk penempatan bintang */
-  justify-content: center; /* Menempatkan bintang di tengah */
-  color: #ffc107;
-  margin-top: 10px;
-  margin-bottom: 10px;
-}
-.star-icon-master-teacher {
-  font-size: 1.2rem;
-  margin: 0 2px; /* Memberikan sedikit ruang antar bintang */
-}
-/* Style baru untuk teks universitas dan jurusan */
-.univ-jurusan-text {
-  font-family: "Poppins", sans-serif;
-  color: #007bff; /* Warna biru */
-  font-weight: bold;
-  font-size: 0.9rem;
-  margin-top: auto; /* Mendorong ke bawah */
-}
-
-.swiper-wrapper {
-  padding-top: 2%;
-  padding-bottom: 40px;
-}
-.swiper {
-  margin-left: auto;
-  margin-right: auto;
-  position: relative;
-  overflow: hidden;
-  list-style: none;
-  padding: 0;
-  z-index: 1;
-  display: block;
-}
-
-/* TARGET PAGINATION BULLET */
-.swiper-pagination {
-  bottom: 0px !important;
+  padding-top: 60px;
+  padding-bottom: 60px;
 }
 
 .title-master-teacher-v2 {
   text-align: center;
-  font-weight: 800;
+  font-weight: 900;
   color: #ffffff;
-  font-size: 1.7rem;
+  font-size: 1.8rem;
   font-family: "Poppins", sans-serif;
+  margin-bottom: 5px;
+  text-transform: uppercase;
 }
+
 .child-title-master-teacher-v2 {
   margin-top: 0;
   text-align: center;
   font-family: "Poppins", sans-serif;
   color: #ffffff;
-  font-weight: normal;
-  margin-bottom: 30px;
+  font-weight: 400;
+  margin-bottom: 40px;
+  letter-spacing: 1px;
+}
+
+.container-master-teacher-v2 {
+  width: 100%;
+}
+
+/* KARTU TUTOR */
+.swiper-slide {
+  height: auto !important;
+  display: flex;
+}
+
+.card-master-teacher-v2 {
+  background-color: #ffffff;
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.15);
+  padding: 24px 18px 20px;
+  border-radius: 16px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+.card-master-teacher-v2:hover {
+  transform: translateY(-8px);
+  box-shadow: 0px 8px 25px rgba(0, 0, 0, 0.25);
+  cursor: pointer;
+}
+
+/* PEMBUNGKUS & UKURAN GAMBAR FIXED */
+.img-wrapper-master-teacher-v2 {
+  width: 110px;
+  height: 110px;
+  min-width: 110px;
+  min-height: 110px;
+  margin-bottom: 15px;
+  border-radius: 50%;
+  overflow: hidden;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+  border: 3px solid #ffffff;
+}
+
+.img-card-master-teacher-v2 {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* TEKS KARTU */
+.nama-master-teacher-v2 {
+  font-family: "Poppins", sans-serif;
+  font-weight: 600;
+  font-size: 1rem;
+  color: #444444;
+  margin: 0 0 8px 0;
+  line-height: 1.3;
+}
+
+.mapel-master-teacher-v2,
+.program-master-teacher-v2 {
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  color: #555555;
+  margin: 3px 0;
+  font-size: 0.85rem;
+  line-height: 1.4;
+}
+
+.mapel-master-teacher-v2 strong,
+.program-master-teacher-v2 strong {
+  color: #333333;
+}
+
+/* RATING BINTANG */
+.rating-container-v2 {
+  display: flex;
+  justify-content: center;
+  color: #ffc107;
+  margin: 10px 0;
+}
+
+.star-icon-master-teacher {
+  font-size: 1.1rem;
+  margin: 0 2px;
+}
+
+/* UNIVERSITAS & JURUSAN */
+.univ-jurusan-text {
+  font-family: "Poppins", sans-serif;
+  color: #007bff;
+  font-weight: 600;
+  font-size: 0.85rem;
+  margin-top: auto;
+  padding-top: 10px;
+  line-height: 1.3;
+}
+
+/* SWIPER CONTAINER & PAGINATION */
+.swiper {
+  padding-bottom: 45px !important;
 }
 
 .swiper-pagination-bullet {
-  background: #bbb;
-  opacity: 0.8;
+  background: #ffffff;
+  opacity: 0.5;
 }
 
 .swiper-pagination-bullet-active {
-  background: #007bff;
+  background: #ffffff;
+  opacity: 1;
   width: 25px;
   border-radius: 5px;
 }
 
-@media only screen and (min-width: 320px) and (max-width: 896px) {
+/* RESPONSIVE */
+@media (max-width: 768px) {
   .title-master-teacher-v2 {
-    font-size: 20px;
+    font-size: 1.4rem;
   }
   .child-title-master-teacher-v2 {
-    font-size: 15px;
+    font-size: 0.9rem;
+    margin-bottom: 25px;
   }
   .superparent-container-master-teacher-v2 {
-    margin-top: 10%;
-    margin-bottom: 10%;
+    padding-top: 40px;
+    padding-bottom: 40px;
   }
-  .card-master-teacher-v2 {
-    height: 310px;
-    padding-top: 70px;
-  }
-  .img-card-master-teacher-v2 {
-    margin-top: -50px;
-  }
-  .swiper-wrapper {
-    padding-bottom: 50px;
-  }
-  .swiper-pagination {
-    bottom: 0px !important;
-  }
-}
-
-@media only screen and (min-width: 1024px) {
-  .card-master-teacher-v2 {
-    height: 290px;
+  .img-wrapper-master-teacher-v2 {
+    width: 95px;
+    height: 95px;
+    min-width: 95px;
+    min-height: 95px;
   }
 }

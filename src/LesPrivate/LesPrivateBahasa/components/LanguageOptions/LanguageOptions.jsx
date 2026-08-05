@@ -1,6 +1,5 @@
 import { Link } from "react-router-dom";
-import { selectContactCsData } from "../../../../lib/features/contactCsSlice";
-import { useAppSelector } from "../../../../lib/hooks";
+import { handleCsWhatsAppClick } from "../../../../helper/csRotationHelper";
 import "./LanguageOptions.css";
 
 // Data bahasa (Tetap di luar komponen agar tidak re-render, tapi aksesibel)
@@ -17,8 +16,6 @@ const languageItems = [
 ];
 
 const LanguageOptions = ({ location }) => {
-  const contactData = useAppSelector(selectContactCsData);
-
   // 1. Setup Variabel Lokasi
   const locName = location || "Indonesia";
   const locSuffix = location ? `di ${location}` : "";
@@ -68,7 +65,7 @@ const LanguageOptions = ({ location }) => {
               {/* Tombol Aksi Dinamis */}
               <Link
                 className="lang-card-button"
-                to={contactData?.link_cta || "/"}
+                onClick={() => handleCsWhatsAppClick()}
                 aria-label={`Daftar Les Privat ${item.name} ${locSuffix}`}>
                 {location ? `Daftar di ${location}` : "Daftar Sekarang"}
               </Link>

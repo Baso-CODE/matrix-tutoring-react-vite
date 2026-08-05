@@ -21,6 +21,7 @@
 /* Gaya Swiper utama */
 .mySwiper {
   margin: 0 auto;
+  padding-top: 20px;
 }
 
 /* Styling untuk kartu di dalam slide */

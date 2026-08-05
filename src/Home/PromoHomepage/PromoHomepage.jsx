@@ -1,11 +1,9 @@
 import { useEffect, useState } from "react";
+import { handleCsWhatsAppClick } from "../../helper/csRotationHelper";
 import { getAllPromo } from "../../helper/request/getAllPromo";
-import { selectContactCsData } from "../../lib/features/contactCsSlice";
-import { useAppSelector } from "../../lib/hooks";
 import "./PromoHomepage.css";
 
 const PromoHomepage = ({ location }) => {
-  const contactData = useAppSelector(selectContactCsData);
   const [promoMobile, setPromoMobile] = useState([]);
 
   const [promoDesktop, setPromoDesktop] = useState([]);
@@ -58,7 +56,7 @@ const PromoHomepage = ({ location }) => {
             promoMobile.map((promo, index) => (
               <a
                 key={promo.id || index}
-                href={contactData?.link_cta || "#"}
+                onClick={() => handleCsWhatsAppClick()}
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label={`Lihat promo mobile ${
@@ -84,7 +82,7 @@ const PromoHomepage = ({ location }) => {
             promoDesktop.map((promo, index) => (
               <a
                 key={promo.id || index}
-                href={contactData?.link_cta || "#"}
+                onClick={() => handleCsWhatsAppClick()}
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label={`Lihat promo desktop ${

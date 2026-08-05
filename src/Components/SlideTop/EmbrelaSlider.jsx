@@ -1,14 +1,14 @@
 /* eslint-disable no-unused-vars */
+import Autoplay from "embla-carousel-autoplay";
+import useEmblaCarousel from "embla-carousel-react";
+import "lazysizes";
 import React, { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
+import { handleCsWhatsAppClick } from "../../helper/csRotationHelper";
 import { getAllSliderHeader2 } from "../../helper/request/getAllSliderHeader2Request";
 import { getAllSliderHeader } from "../../helper/request/getAllSliderHeaderRequest";
-import useEmblaCarousel from "embla-carousel-react";
-import Autoplay from "embla-carousel-autoplay";
-import "lazysizes";
-import "./Slidertop.css";
 import "./EmbrelaSlider.css";
-import { useAppSelector } from "../../lib/hooks";
-import { selectContactCsData } from "../../lib/features/contactCsSlice";
+import "./Slidertop.css";
 
 const EmbrelaSlider = () => {
   const [sliderHeader, setSliderHeader] = useState([]);
@@ -54,10 +54,6 @@ const EmbrelaSlider = () => {
     />
   );
 
-  const contactData = useAppSelector(selectContactCsData);
-
-  const finalUrl = contactData?.link_cta;
-
   return (
     <React.Fragment>
       {/* Slider for desktop */}
@@ -68,12 +64,12 @@ const EmbrelaSlider = () => {
               {sliderHeader.map((item, index) => (
                 <div className="embla__slide top-slider" key={index}>
                   <div className="slider">
-                    <a
-                      href={finalUrl}
+                    <Link
+                      onClick={() => handleCsWhatsAppClick()}
                       target="_blank"
                       rel="noopener noreferrer">
                       {lazyLoadImage(item.url)}
-                    </a>
+                    </Link>
                   </div>
                 </div>
               ))}
@@ -88,12 +84,12 @@ const EmbrelaSlider = () => {
               {sliderHeader2.map((item, index) => (
                 <div className="embla__slide top-slider" key={index}>
                   <div className="slider">
-                    <a
-                      href={finalUrl}
+                    <Link
+                      onClick={() => handleCsWhatsAppClick()}
                       target="_blank"
                       rel="noopener noreferrer">
                       {lazyLoadImage(item.url)}
-                    </a>
+                    </Link>
                   </div>
                 </div>
               ))}

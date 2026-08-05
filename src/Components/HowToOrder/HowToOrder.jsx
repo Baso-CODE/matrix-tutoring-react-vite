@@ -40,9 +40,6 @@ const orderSteps = [
 ];
 
 const HowToOrder = () => {
-  // const contactData = useAppSelector(selectContactCsData);
-
-  // const finalUrl = contactData?.link_cta;
   return (
     <section className="how-to-order-section">
       <div className="how-to-order-container">

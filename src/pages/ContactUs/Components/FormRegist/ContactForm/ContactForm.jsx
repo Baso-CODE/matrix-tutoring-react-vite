@@ -1,15 +1,9 @@
 import { Send } from "lucide-react";
 import { useState } from "react";
+import { handleCsWhatsAppClick } from "../../../../../helper/csRotationHelper";
 import "./ContactForm.css";
-import { selectContactCsData } from "../../../../../lib/features/contactCsSlice";
-import { useAppSelector } from "../../../../../lib/hooks";
 
 const ContactForm = () => {
-  const contactData = useAppSelector(selectContactCsData);
-  const phoneNumber = contactData?.nomor_hp
-    ? contactData.nomor_hp.trim().replace(/^0/, "62")
-    : "6285747281466";
-
   const [formData, setFormData] = useState({
     namaLengkap: "",
     namaPanggilan: "",
@@ -41,28 +35,41 @@ const ContactForm = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    const message = `Halo Kak Linda https://apps.bimbelmatrix.com/, saya ingin bertanya program belajar. Berikut data diri saya:
-Nama Lengkap: ${formData.namaLengkap}
-Nama Panggilan: ${formData.namaPanggilan}
-Jenis Kelamin: ${formData.jenisKelamin}
-Agama: ${formData.agama}
-No HP Siswa: ${formData.noHpSiswa}
-Email Siswa: ${formData.emailSiswa}
-Kelas: ${formData.kelas}
-Sekolah: ${formData.sekolah}
-Kurikulum: ${formData.kurikulum}
-Mapel yang Dileskan: ${formData.mapel}
-Jadwal Les: ${formData.jadwalLes}
-Preferensi Tutor: ${formData.preferensiTutor}
-Sistem Les: ${formData.sistemLes}
-Nama Orang Tua: ${formData.namaOrangTua}
-No HP Orang Tua: ${formData.noHpOrangTua}
-Email Orang Tua: ${formData.emailOrangTua}
-Alamat Lengkap: ${formData.alamatLengkap}
-Catatan Khusus: ${formData.catatanKhusus}`;
-    const encodedMessage = encodeURIComponent(message);
-    const whatsappUrl = `https://api.whatsapp.com/send?phone=${phoneNumber}&text=${encodedMessage}`;
-    window.open(whatsappUrl, "_blank");
+
+    // Template pesan form pendaftaran
+    // Kita kosongkan nama CS di awal karena helper handleCsWhatsAppClick
+    // akan secara otomatis menyisipkan "Halo [Nama CS] https://apps.bimbelmatrix.com/..."
+    const formDetailsMessage = `
+Berikut data diri saya untuk pendaftaran les privat:
+- Nama Lengkap: ${formData.namaLengkap}
+- Nama Panggilan: ${formData.namaPanggilan}
+- Jenis Kelamin: ${formData.jenisKelamin}
+- Agama: ${formData.agama || "-"}
+- No HP Siswa: ${formData.noHpSiswa || "-"}
+- Email Siswa: ${formData.emailSiswa || "-"}
+- Kelas: ${formData.kelas || "-"}
+- Sekolah: ${formData.sekolah || "-"}
+- Kurikulum: ${formData.kurikulum || "-"}
+- Mapel yang Dileskan: ${formData.mapel || "-"}
+- Jadwal Les: ${formData.jadwalLes || "-"}
+- Preferensi Tutor: ${formData.preferensiTutor || "-"}
+- Sistem Les: ${formData.sistemLes || "-"}
+- Nama Orang Tua: ${formData.namaOrangTua || "-"}
+- No HP Orang Tua: ${formData.noHpOrangTua || "-"}
+- Email Orang Tua: ${formData.emailOrangTua || "-"}
+- Alamat Lengkap: ${formData.alamatLengkap || "-"}
+- Catatan Khusus: ${formData.catatanKhusus || "-"}`;
+
+    // Ambil CS aktif saat ini dari helper untuk menyusun salam pembuka
+    const savedIndex = localStorage.getItem("matrix_cs_rotation_index");
+    const currentIndex = savedIndex ? parseInt(savedIndex, 10) % 4 : 0;
+    const csNames = ["Ms. Dita", "Ms. Eka", "Ms. Linda", "Ms. Syifa"];
+    const activeCsName = csNames[currentIndex];
+
+    const fullCustomMessage = `Halo ${activeCsName} https://apps.bimbelmatrix.com/, saya ingin bertanya program belajar.${formDetailsMessage}`;
+
+    // Panggil helper rotasi CS dengan pesan kustom data form
+    handleCsWhatsAppClick(fullCustomMessage);
   };
 
   return (

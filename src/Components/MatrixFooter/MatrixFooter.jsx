@@ -1,10 +1,7 @@
-import React from "react";
+import { handleCsWhatsAppClick } from "../../helper/csRotationHelper";
 import "./MatrixFooter.css";
-import { selectContactCsData } from "../../lib/features/contactCsSlice";
-import { useAppSelector } from "../../lib/hooks";
 
 const MatrixFooter = () => {
-  const contactData = useAppSelector(selectContactCsData);
   const currentYear = new Date().getFullYear();
   const contacts = [
     {
@@ -34,7 +31,7 @@ Hi ${name} https://apps.bimbelmatrix.com/, Saya tertarik *Promo Seru, Diskon Rp1
 `.trim();
 
     return `https://api.whatsapp.com/send?phone=${phone}&text=${encodeURIComponent(
-      message
+      message,
     )}`;
   };
 
@@ -142,8 +139,8 @@ Hi ${name} https://apps.bimbelmatrix.com/, Saya tertarik *Promo Seru, Diskon Rp1
             <div className="section-title-footer-matrix">
               Click to Chat WhatsApp
             </div>
-            <a
-              href={contactData?.link_cta}
+            <Link
+              onClick={() => handleCsWhatsAppClick()}
               target="_blank"
               rel="noopener noreferrer">
               <img
@@ -154,7 +151,7 @@ Hi ${name} https://apps.bimbelmatrix.com/, Saya tertarik *Promo Seru, Diskon Rp1
                 width="575"
                 height="942"
               />
-            </a>
+            </Link>
           </div>
         </div>
         {/* Copyright Section */}

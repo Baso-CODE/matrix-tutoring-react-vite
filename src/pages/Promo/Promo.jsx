@@ -1,10 +1,9 @@
 import { useEffect, useState } from "react";
-import "./Promo.css";
+import { Link } from "react-router-dom";
+import { handleCsWhatsAppClick } from "../../helper/csRotationHelper";
 import { getAllPromo } from "../../helper/request/getAllPromo";
-import { selectContactCsData } from "../../lib/features/contactCsSlice";
-import { useAppSelector } from "../../lib/hooks";
+import "./Promo.css";
 const Promo = () => {
-  const contactData = useAppSelector(selectContactCsData);
   const [promoMobile, setPromoMobile] = useState([]);
   const [promoDesktop, setPromoDesktop] = useState([]);
   const [windowWidth, setWindowWidth] = useState(window.innerWidth);
@@ -54,9 +53,9 @@ const Promo = () => {
         <div className="parent-promo-home-mobile-promopage">
           {promoMobile.length > 0 ? (
             promoMobile.map((promo, index) => (
-              <a
+              <Link
                 key={promo.id || index}
-                href={contactData?.link_cta || "#"}
+                onClick={() => handleCsWhatsAppClick()}
                 target="_blank"
                 rel="noopener noreferrer">
                 <img
@@ -65,7 +64,7 @@ const Promo = () => {
                   src={promo.url}
                   alt={`Promo mobile ${promo.id || index + 1}`}
                 />
-              </a>
+              </Link>
             ))
           ) : (
             <p>Memuat promo mobile...</p>
@@ -75,9 +74,9 @@ const Promo = () => {
         <div className="parent-promo-home-promopage">
           {promoDesktop.length > 0 ? (
             promoDesktop.map((promo, index) => (
-              <a
+              <Link
                 key={promo.id || index}
-                href={contactData?.link_cta || "#"}
+                onClick={() => handleCsWhatsAppClick()}
                 target="_blank"
                 rel="noopener noreferrer">
                 <img
@@ -86,7 +85,7 @@ const Promo = () => {
                   src={promo.url}
                   alt={`Promo desktop ${promo.id || index + 1}`}
                 />
-              </a>
+              </Link>
             ))
           ) : (
             <p>Memuat promo desktop...</p>
