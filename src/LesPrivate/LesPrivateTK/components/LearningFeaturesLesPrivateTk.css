@@ -41,7 +41,6 @@
   font-size: 1rem;
   margin-bottom: 6px;
   color: #333333;
-  font-family: "Poppins", sans-serif;
 }
 
 .feature-description-v2 {
@@ -49,7 +48,6 @@
   line-height: 1.5;
   margin-top: 0;
   color: #4f4f4f;
-  font-family: "Poppins", sans-serif;
 }
 
 @media (max-width: 768px) {
@@ -72,13 +70,11 @@
   .feature-title {
     font-size: 1rem;
     margin-bottom: 8px;
-    font-family: "Poppins", sans-serif;
   }
 
   .feature-description-v2 {
     font-size: 0.85rem;
 
     text-align: start;
-    font-family: "Poppins", sans-serif;
   }
 }

@@ -10,7 +10,6 @@
   margin-top: 2rem;
   font-weight: 600;
   margin-bottom: 1.8rem;
-  font-family: "Poppins", sans-serif;
 }
 
 .keunggulan-subject-list-les-private-UI {
@@ -42,7 +41,6 @@
   font-size: 1rem;
   font-weight: normal;
   line-height: normal;
-  font-family: "Poppins", sans-serif;
 }
 
 @media (max-width: 768px) {

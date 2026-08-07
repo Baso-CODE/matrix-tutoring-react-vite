@@ -4,7 +4,6 @@
   bottom: 3%;
   right: 3%;
   z-index: 1000;
-  font-family: "Poppins", sans-serif;
 }
 
 .main-parent-wa {
@@ -21,7 +20,6 @@
 
 /* LABEL TEXT */
 .label-cta {
-  font-family: "Poppins", sans-serif;
   background: rgba(255, 255, 255, 0.95);
   color: #333333;
   font-size: 13px;

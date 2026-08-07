@@ -25,14 +25,14 @@
   color: #ffffff;
   font-weight: 800;
   text-transform: uppercase;
-  font-family: "Poppins", sans-serif;
+
   text-align: center;
 }
 
 .scrollable-content {
   background-color: #006bde;
   color: #ffffff;
-  font-family: "Poppins", sans-serif;
+
   border-radius: 0.5rem;
   overflow: auto;
   font-weight: 700;
@@ -73,7 +73,7 @@
   margin-right: 0.5rem; /* Jarak antara bullet point dan teks */
 }
 .grid-container-asal-sekolah-siswa-matrix li {
-  font-family: "Poppins", sans-serif; /* Font keluarga */
+  /* Font keluarga */
 }
 
 /* Style for the scrollbar */

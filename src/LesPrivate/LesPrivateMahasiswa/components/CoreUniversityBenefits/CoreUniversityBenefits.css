@@ -33,7 +33,7 @@
   font-weight: 800;
   color: #333333;
   margin-bottom: 20px;
-  font-family: "Poppins", sans-serif;
+
   line-height: 1.2;
   text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.05);
 }
@@ -46,7 +46,6 @@
   margin-left: auto;
   margin-right: auto;
   line-height: 1.6;
-  font-family: "Poppins", sans-serif;
 }
 
 .benefits-grid {
@@ -66,8 +65,12 @@
   border-radius: 16px;
   box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08); /* Bayangan lebih halus */
   /* Tambahkan filter dan opacity ke properti transisi */
-  transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease,
-    filter 0.3s ease, opacity 0.3s ease;
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease,
+    border-color 0.3s ease,
+    filter 0.3s ease,
+    opacity 0.3s ease;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -129,7 +132,9 @@
   margin-bottom: 25px;
   box-shadow: 0 3px 10px rgba(13, 16, 185, 0.1);
   border: 2px solid #a0c4ff;
-  transition: background-color 0.3s ease, transform 0.3s ease;
+  transition:
+    background-color 0.3s ease,
+    transform 0.3s ease;
 }
 
 .benefit-item:hover .benefit-icon-wrapper {
@@ -152,14 +157,12 @@
   font-weight: 700;
   color: #007bff;
   margin-bottom: 15px;
-  font-family: "Poppins", sans-serif;
 }
 
 .benefit-item-description {
   font-size: 1.05rem;
   color: #64748b;
   line-height: 1.6;
-  font-family: "Poppins", sans-serif;
 }
 
 @media (max-width: 1024px) {

@@ -18,38 +18,41 @@
   font-weight: 800;
   color: #ffffff;
   margin-bottom: 10px;
-  font-family: "Poppins", sans-serif;
 }
 
 .main-learning-description {
   font-size: 0.9rem;
   color: #f2f2f2;
   margin-bottom: 30px;
-
   margin-left: auto;
   margin-right: auto;
   line-height: 1.6;
-  font-family: "Poppins", sans-serif;
+
+  max-width: 700px;
 }
 
 .main-learning-swiper {
-  padding-bottom: 50px;
+  padding-bottom: 70px !important; /* Paksa agar tidak tertimpa */
   padding-top: 20px;
 }
 
 .learning-item {
   background-color: #ffffff;
-  padding: 30px;
-  border-radius: 12px;
+  padding: 25px 20px;
+  border-radius: 16px;
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
-  transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease,
-    filter 0.3s ease, opacity 0.3s ease;
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease,
+    border-color 0.3s ease,
+    filter 0.3s ease,
+    opacity 0.3s ease;
   display: flex;
   flex-direction: column;
   align-items: center;
   text-align: center;
   border: 1px solid #e5e7eb;
-  min-height: 43vh;
+  min-height: 280px;
   height: 100%;
   justify-content: flex-start;
 }
@@ -64,7 +67,7 @@
 }
 
 .learning-item:hover {
-  transform: translateY(-10px);
+  transform: translateY(-8px);
   box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
   border-color: #3b82f6;
   filter: blur(0);
@@ -76,47 +79,44 @@
   box-shadow: none;
   border-color: #e5e7eb;
 }
-
+/* Wrapper Ikon / Gambar */
 .learning-icon-wrapper {
-  width: 70px;
-  height: 70px;
-  background-color: #3b82f6;
+  width: 6.5rem; /* Diperbesar dari 5rem */
+  height: 6.5rem; /* Diperbesar dari 5rem */
+  background-color: #f0f7ff;
   border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-bottom: 20px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  margin-bottom: 15px;
+  margin-top: 5px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.04);
   flex-shrink: 0;
+  overflow: hidden;
 }
 
-.subject-icon-learnhing-features-tk {
-  width: 13rem;
-  height: 1rem;
+/* Ukuran Gambar Ikon */
+.subject-icon-learning-tk {
+  width: 3.8rem; /* Diperbesar dari 2rem */
+  height: 3.8rem; /* Diperbesar dari 2rem */
   object-fit: contain;
 }
-
-.learning-icon {
-  font-size: 2.5rem;
-  color: #ffffff;
-}
-
 .learning-item-title {
-  font-size: 1.1rem;
+  font-size: 1.05rem;
   font-weight: 700;
   color: #007bff;
-  margin-top: 2.5rem;
-  margin-bottom: 5px;
-  font-family: "Poppins", sans-serif;
+  margin-top: 10px;
+  margin-bottom: 10px;
+
+  line-height: 1.3;
   flex-shrink: 0;
 }
 
 .learning-item-text {
-  font-size: 0.9rem;
+  font-size: 0.875rem;
   color: #4b5563;
-  height: max-content;
-  line-height: 1.6;
-  font-family: "Poppins", sans-serif;
+  line-height: 1.5;
+
   flex-grow: 1;
   display: -webkit-box;
   -webkit-line-clamp: 4;
@@ -124,63 +124,55 @@
   -webkit-box-orient: vertical;
   overflow: hidden;
   text-overflow: ellipsis;
+  margin: 0;
 }
 
+/* Navigasi Swiper */
 .swiper-button-next,
 .swiper-button-prev {
-  color: #007bff !important;
-  --swiper-navigation-size: 30px;
+  color: #ffffff !important;
+  background-color: rgba(0, 0, 0, 0.2);
+  width: 40px !important;
+  height: 40px !important;
+  border-radius: 50%;
+  --swiper-navigation-size: 18px;
+  transition: background-color 0.3s ease;
 }
 
 .swiper-button-next:hover,
 .swiper-button-prev:hover {
-  color: #3b82f6 !important;
+  background-color: rgba(0, 0, 0, 0.4);
 }
 
 /* Swiper Pagination Dots */
 .swiper-pagination-bullet {
-  background: #a0aec0 !important;
-  opacity: 0.8;
+  background: #ffffff !important;
+  opacity: 0.5;
 }
 
 .swiper-pagination-bullet-active {
-  background: #007bff !important;
+  background: #ffffff !important;
   opacity: 1;
 }
 
 /* Responsivitas */
 @media (max-width: 1024px) {
-  .learning-item {
-    min-height: 28vh;
-  }
   .main-learning-section {
     padding-left: 4%;
     padding-right: 4%;
   }
 }
+
 @media (max-width: 768px) {
   .main-learning-title {
     font-size: 1.3rem;
   }
   .main-learning-description {
-    font-size: 0.9rem;
-    margin-bottom: 30px;
+    font-size: 0.85rem;
+    margin-bottom: 20px;
   }
   .learning-item {
-    padding: 20px;
-    min-height: 33vh;
-  }
-  .learning-icon-wrapper {
-    width: 60px;
-    height: 60px;
-  }
-  .learning-icon {
-    font-size: 2rem;
-  }
-  .learning-item-title {
-    font-size: 1.2rem;
-  }
-  .learning-item-text {
-    font-size: 0.9rem;
+    padding: 20px 15px;
+    min-height: 350px;
   }
 }

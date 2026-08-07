@@ -28,11 +28,13 @@
   justify-content: center;
   font-size: 1.5rem; /* 24px */
   font-weight: 700;
-  font-family: "Poppins", sans-serif;
+
   padding: 30px 20px;
   color: #cbe6ff;
   border-radius: 45px;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
 }
 
 .lang-card:hover {

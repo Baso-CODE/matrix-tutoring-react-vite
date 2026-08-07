@@ -21,7 +21,7 @@
   font-weight: 800;
   color: #333333;
   margin-bottom: 15px;
-  font-family: "Poppins", sans-serif;
+
   line-height: 1.2;
   text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.03);
 }
@@ -38,7 +38,6 @@
   margin-left: auto;
   margin-right: auto;
   line-height: 1.6;
-  font-family: "Poppins", sans-serif;
 }
 
 .features-list-matrix-differentiation-sma {
@@ -55,7 +54,9 @@
   background-color: #ffffff;
   border-radius: 20px;
   box-shadow: 0 15px 40px rgba(0, 0, 0, 0.08); /* Bayangan lebih menonjol */
-  transition: transform 0.4s ease, box-shadow 0.4s ease;
+  transition:
+    transform 0.4s ease,
+    box-shadow 0.4s ease;
   border: 1px solid #e6f0ff; /* Border lembut */
 }
 
@@ -123,14 +124,12 @@
   font-weight: 700;
   color: #007bff;
   margin-bottom: 15px;
-  font-family: "Poppins", sans-serif;
 }
 
 .feature-description {
   font-size: 1.05rem;
   color: #64748b;
   line-height: 1.7;
-  font-family: "Poppins", sans-serif;
 }
 
 /* Responsivitas */

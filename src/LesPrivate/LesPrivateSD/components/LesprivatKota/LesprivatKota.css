@@ -17,7 +17,7 @@
 
 .lesprivat-kota__title {
   font-size: 1.2rem;
-  font-family: "Poppins", sans-serif;
+
   font-weight: 800;
   color: #ffffff;
   text-transform: uppercase;
@@ -39,7 +39,7 @@
 .lesprivat-kota__subtitle {
   font-size: 0.9rem;
   color: #ffffff;
-  font-family: "Poppins", sans-serif;
+
   opacity: 0.9;
   max-width: 48rem;
   margin: 0 auto;
@@ -73,7 +73,7 @@
   font-size: 1.25rem;
   font-weight: 700;
   color: #fff;
-  font-family: "Poppins", sans-serif;
+
   margin-bottom: 1.5rem;
 }
 
@@ -127,7 +127,6 @@
 .lesprivat-kota__link-text {
   position: relative;
   transition: all 0.3s ease;
-  font-family: "Poppins", sans-serif;
 }
 
 @media (max-width: 1024px) {

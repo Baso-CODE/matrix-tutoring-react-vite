@@ -7,7 +7,7 @@
 
 .success-story-container h2 {
   font-size: 1.7rem;
-  font-family: "Poppins", sans-serif;
+
   font-weight: 800;
   margin: 0;
   text-transform: uppercase;
@@ -17,7 +17,7 @@
 .success-story-description {
   font-size: 1rem;
   margin-bottom: 30px;
-  font-family: "Poppins", sans-serif;
+
   color: #555555;
   font-weight: normal;
 }

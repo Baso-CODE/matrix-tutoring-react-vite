@@ -234,7 +234,7 @@ const PageLoader = () => (
       display: "flex",
       justifyContent: "center",
       alignItems: "center",
-      minHeight: "60vh",
+      minHeight: "100vh",
     }}>
     <div
       style={{
@@ -270,7 +270,9 @@ function App() {
 
       {/* ✅ Satu Suspense membungkus semua Routes */}
       <Suspense fallback={<PageLoader />}>
-        <main id="main-content">
+        <main
+          id="main-content"
+          style={{ paddingTop: "var(--navbar-height, 70px)" }}>
           <Routes>
             <Route path="/" element={<Homepage />} />
             <Route

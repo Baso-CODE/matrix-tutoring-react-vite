@@ -3,7 +3,6 @@
   background-color: #007bff;
   overflow: hidden;
   position: relative;
-  font-family: "Poppins", sans-serif;
 }
 
 .university-flow-section::before,
@@ -62,7 +61,7 @@
   text-transform: uppercase;
   color: #ffffff;
   margin-bottom: 20px;
-  font-family: "Poppins", sans-serif;
+
   line-height: 1.2;
   text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.08);
 }
@@ -72,7 +71,7 @@
   text-transform: uppercase;
   color: #ffffff;
   margin-bottom: 20px;
-  font-family: "Poppins", sans-serif;
+
   line-height: 1.2;
   text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.08);
 }
@@ -85,7 +84,6 @@
   margin-left: auto;
   margin-right: auto;
   line-height: 1.6;
-  font-family: "Poppins", sans-serif;
 }
 
 .flow-steps-wrapper {
@@ -120,7 +118,9 @@
   padding: 30px;
   border-radius: 18px;
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
   border: 1px solid #e6f0ff;
 }
 
@@ -212,7 +212,7 @@
   color: #ffffff;
   position: absolute;
   top: 5px;
-  font-family: "Poppins", sans-serif;
+
   right: 5px;
   background-color: #fec100;
   border-radius: 50%;
@@ -257,14 +257,12 @@
   font-weight: 700;
   color: #333333;
   margin-bottom: 10px;
-  font-family: "Poppins", sans-serif;
 }
 
 .flow-step-description {
   font-size: 0.9rem;
   color: #64748b;
   line-height: 1.5;
-  font-family: "Poppins", sans-serif;
 }
 
 /* Responsivitas */

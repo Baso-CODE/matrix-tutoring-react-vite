@@ -12,7 +12,7 @@ const KeunggulanCalistungMatrix = ({ location }) => {
     // Variasi 2 (Benefit Focused)
     `Alasan Memilih Guru Privat Calistung ${locName} Terbaik`,
     // Variasi 3 (Service Focused)
-    `Benefit Program Les Baca Tulis Hitung TK-SD ${locSuffix}`,
+    `Benefit Program Les Baca Tulis Hitung TK ${locSuffix}`,
   ];
 
   // 3. Logic Pemilihan Judul (Deterministik)
@@ -21,10 +21,10 @@ const KeunggulanCalistungMatrix = ({ location }) => {
 
   return (
     <div className="container-all">
-      <div className="target-belajar-smp">
-        <div className="target-container">
+      <div className="keunggulan-tk-wrapper">
+        <div className="keunggulan-tk-container">
           <img
-            className="les-privat-sd-image_v2"
+            className="keunggulan-tk-image"
             src="/images/les-private/tk/keunggulan-tk.webp"
             alt={`Keunggulan Guru Les Privat Calistung datang ke rumah ${locName} - Matrix Tutoring`}
             onError={(e) => {
@@ -35,7 +35,7 @@ const KeunggulanCalistungMatrix = ({ location }) => {
             width="600"
             height="525"
           />
-          <div className="target-content">
+          <div className="keunggulan-tk-content">
             {/* DYNAMIC TITLE */}
             <h2>{selectedTitle}</h2>
 

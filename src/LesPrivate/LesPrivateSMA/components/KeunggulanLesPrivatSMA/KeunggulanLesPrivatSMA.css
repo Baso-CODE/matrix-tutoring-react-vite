@@ -1,46 +1,45 @@
+/* Container Utama */
 .keunggulan__les-private-sma-container {
-  padding-left: 10%;
-  padding-right: 10%;
-  padding-bottom: 4%;
-  padding-top: 5%;
+  padding: 5% 10% 4% 10%;
+  background-color: #ffffff;
 }
 
 @media (max-width: 1024px) {
   .keunggulan__les-private-sma-container {
-    padding-left: 4%;
-    padding-right: 4%;
+    padding: 5% 4% 4% 4%;
   }
 }
 
+/* Judul Utama (H2) */
 .keunggulan__les-private-sma-container h2 {
-  font-size: 1.2rem;
-  color: #333333;
-  font-family: "Poppins", sans-serif;
-  font-weight: 700;
-  margin-bottom: 0.3rem;
+  font-size: 1.25rem; /* Ukuran proporsional, tidak terlalu besar */
+  color: #222222;
+  font-weight: 700; /* Ketebalan pas, tidak terlalu tebal */
+  margin-bottom: 1.25rem;
   line-height: 1.4;
   border-left: 4px solid #0077ff;
   padding-left: 0.6rem;
 }
 
+/* Sub-heading (jika ada) */
 .keunggulan__les-private-sma-container h3 {
-  font-size: 1.1rem;
+  font-size: 1.05rem;
   color: #333333;
-  font-family: "Poppins", sans-serif;
-  font-weight: 700;
+  font-weight: 600;
   margin-top: 1.5rem;
   margin-bottom: 0.5rem;
 }
 
+/* Paragraf */
 .keunggulan__les-private-sma-container p {
   font-size: 0.9rem;
-  color: #4f4f4f;
+  color: #555555;
   line-height: 1.6;
   font-weight: 400;
-  font-family: "Poppins", sans-serif;
-  margin-bottom: 0.5rem;
+  margin-bottom: 0.75rem;
 }
 
+/* List / Daftar Keunggulan */
 .keunggulan__les-private-sma-container ul {
   margin-left: 1.2rem;
   margin-bottom: 1rem;
@@ -48,21 +47,28 @@
 }
 
 .keunggulan__les-private-sma-container li {
-  margin-bottom: 0.3rem;
-  color: #555555;
-  font-size: 1rem;
-  line-height: 1.5;
-  font-family: "Poppins", sans-serif;
+  margin-bottom: 0.5rem;
+  color: #4b5563;
+  font-size: 0.9rem; /* Standar ukuran teks list yang rapi dan nyaman dibaca */
+  line-height: 1.6;
+  font-weight: 400; /* Regular, tidak terlalu tebal */
 }
 
-/* Responsiveness */
+/* Mengatur teks tebal di dalam list agar tidak terlalu mencolok/tebal */
+.keunggulan__les-private-sma-container li strong {
+  font-weight: 600; /* Semi-bold untuk penekanan yang pas */
+  color: #1f2937;
+}
+
+/* Responsiveness untuk Mobile */
 @media (max-width: 768px) {
   .keunggulan__les-private-sma-container h2 {
     font-size: 1.1rem;
+    margin-bottom: 1rem;
   }
 
   .keunggulan__les-private-sma-container p,
   .keunggulan__les-private-sma-container li {
-    font-size: 0.9rem;
+    font-size: 0.85rem; /* Sedikit lebih compact di layar HP */
   }
 }

@@ -7,7 +7,7 @@
 .centered-content__program-sma h2 {
   font-size: 1.2rem;
   color: #333333;
-  font-family: "Poppins", sans-serif;
+
   font-weight: 700;
   margin-bottom: 0.3rem;
   line-height: 1.4;
@@ -18,7 +18,7 @@
 .centered-content__program-sma h3 {
   font-size: 1.1rem;
   color: #333333;
-  font-family: "Poppins", sans-serif;
+
   font-weight: 700;
   margin-top: 1.5rem;
   margin-bottom: 0.5rem;
@@ -27,7 +27,7 @@
 .centered-content__program-sma h4 {
   font-size: 1.02rem;
   color: #444444;
-  font-family: "Poppins", sans-serif;
+
   font-weight: 600;
   margin-bottom: 0.3rem;
 }
@@ -37,7 +37,7 @@
   color: #4f4f4f;
   line-height: 1.6;
   font-weight: 400;
-  font-family: "Poppins", sans-serif;
+
   margin-bottom: 0.5rem;
 }
 
@@ -52,7 +52,6 @@
   color: #555555;
   font-size: 1rem;
   line-height: 1.5;
-  font-family: "Poppins", sans-serif;
 }
 
 /* --- Checklist style --- */
@@ -69,7 +68,6 @@
   font-size: 1rem;
   color: #444;
   line-height: 1.5;
-  font-family: "Poppins", sans-serif;
 }
 
 .centered-content__program-sma .checklist li::before {
@@ -93,7 +91,6 @@
   color: #555;
   font-size: 0.9rem;
   line-height: 1.5;
-  font-family: "Poppins", sans-serif;
 }
 
 /* Responsiveness */

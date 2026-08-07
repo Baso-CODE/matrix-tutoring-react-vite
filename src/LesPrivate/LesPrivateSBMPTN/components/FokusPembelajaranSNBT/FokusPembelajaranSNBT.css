@@ -17,7 +17,7 @@
 .centered-content__learnhing_focus h2 {
   font-size: 1.3rem;
   color: #333333;
-  font-family: "Poppins", sans-serif;
+
   font-weight: 700;
   margin-bottom: 0.6rem;
   line-height: 1.5;
@@ -28,7 +28,7 @@
 .centered-content__learnhing_focus h3 {
   font-size: 1.1rem;
   color: #333333;
-  font-family: "Poppins", sans-serif;
+
   font-weight: 600;
   margin-top: 1.2rem;
   margin-bottom: 0.5rem;
@@ -39,14 +39,13 @@
   color: #4f4f4f;
   line-height: 1.6;
   font-weight: 400;
-  font-family: "Poppins", sans-serif;
 }
 .centered-content__learnhing_focus p {
   font-size: 0.9rem;
   color: #4f4f4f;
   line-height: 1.6;
   font-weight: 400;
-  font-family: "Poppins", sans-serif;
+
   margin-bottom: 0.7rem;
 }
 
@@ -66,7 +65,6 @@
   color: #555;
   font-size: 1rem;
   line-height: 1.5;
-  font-family: "Poppins", sans-serif;
 }
 
 .learnhing_focus_row {

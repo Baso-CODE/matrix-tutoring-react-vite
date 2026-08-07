@@ -14,7 +14,6 @@
   font-size: 1.7rem;
   gap: 10px;
   font-weight: 800;
-  font-family: "Poppins", sans-serif;
 }
 .icon-keunggulan {
   width: 60px;
@@ -31,8 +30,11 @@
   width: 24%;
   border-radius: 12px;
   cursor: pointer;
-  transition: transform 0.3s ease-in-out, filter 0.3s ease-in-out,
-    box-shadow 0.3s ease-in-out, border-radius 0.3s ease-in-out;
+  transition:
+    transform 0.3s ease-in-out,
+    filter 0.3s ease-in-out,
+    box-shadow 0.3s ease-in-out,
+    border-radius 0.3s ease-in-out;
 }
 .keunggulan-img:hover {
   transform: scale(1.05);

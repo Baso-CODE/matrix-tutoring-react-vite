@@ -28,7 +28,7 @@
   font-size: 1.5rem;
   font-weight: 800;
   color: #ffffff;
-  font-family: "Poppins", sans-serif;
+
   line-height: 1.2;
   margin: 0;
   text-align: center;
@@ -50,7 +50,7 @@
   font-size: 2.3rem;
   font-weight: 800;
   color: #333;
-  font-family: "Poppins", sans-serif;
+
   line-height: 1.2;
   margin: 0;
 
@@ -91,7 +91,6 @@
 
 .text-cta-bottom {
   font-size: 1rem;
-  font-family: "Poppins", sans-serif;
 }
 
 .cta-admin {
@@ -104,7 +103,7 @@
 .admin-name {
   font-size: 1.1rem;
   font-weight: 700;
-  font-family: "Poppins", sans-serif;
+
   color: #ffffff;
   margin: 0;
 }
@@ -113,7 +112,7 @@
   font-size: 0.9rem;
   font-weight: 400;
   color: #e0e0e0;
-  font-family: "Poppins", sans-serif;
+
   margin: 0 0 10px 0; /* kasih jarak ke bawah sebelum button */
 }
 
@@ -166,7 +165,6 @@
   }
   .text-cta-bottom {
     font-size: 0.8rem;
-    font-family: "Poppins", sans-serif;
   }
   /* 
   .cta-buttons {

@@ -1,3 +1,5 @@
+import "./GalleryBelajarSMA.css";
+
 const galleryItems = [
   {
     image:
@@ -60,27 +62,27 @@ const galleryItems = [
 const GalleryBelajarSMA = () => {
   return (
     <section className="container-all">
-      <div className="gallery__sd">
-        <div className="gallery-sd__header">
-          <h2 className="gallery-sd__title">
+      <div className="gallery__sma">
+        <div className="gallery-sma__header">
+          <h2 className="gallery-sma__title">
             Gallery Belajar Program Les Privat SMA
           </h2>
-          <p className="gallery-sd__subtitle">
+          <p className="gallery-sma__subtitle">
             Suasana belajar privat yang efektif, nyaman, dan menyenangkan
             bersama Matrix Tutoring.
           </p>
         </div>
 
-        <div className="gallery-sd__grid">
+        <div className="gallery-sma__grid">
           {galleryItems.map((item, index) => (
-            <div className="gallery-sd__card-container" key={index}>
-              <div className="gallery-sd__card">
+            <div className="gallery-sma__card-container" key={index}>
+              <div className="gallery-sma__card">
                 <div
-                  className="gallery-sd__img-content"
+                  className="gallery-sma__img-content"
                   style={{ backgroundImage: `url(${item.image})` }}></div>
-                <div className="gallery-sd__content">
-                  <p className="gallery-sd__heading">{item.title}</p>
-                  <p className="gallery-sd__description">{item.description}</p>
+                <div className="gallery-sma__content">
+                  <p className="gallery-sma__heading">{item.title}</p>
+                  <p className="gallery-sma__description">{item.description}</p>
                 </div>
               </div>
             </div>

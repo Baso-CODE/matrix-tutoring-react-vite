@@ -1,4 +1,4 @@
-import React, { useState } from "react"; // Import useState
+import { useState } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 
 // Import Swiper styles
@@ -9,7 +9,7 @@ import "swiper/css/pagination";
 // Import required modules
 import { Autoplay, Navigation, Pagination } from "swiper/modules";
 
-import "./MainLearningContent.css"; // Import file CSS untuk styling
+import "./MainLearningContent.css";
 
 const learningItems = [
   {
@@ -41,7 +41,7 @@ const learningItems = [
 ];
 
 const MainLearningContent = ({ location }) => {
-  const [hoveredIndex, setHoveredIndex] = useState(null); // State untuk melacak indeks slide yang dihover
+  const [hoveredIndex, setHoveredIndex] = useState(null);
 
   return (
     <section id="materi-pembelajaran-tk" className="main-learning-section">
@@ -56,46 +56,39 @@ const MainLearningContent = ({ location }) => {
 
         <Swiper
           modules={[Autoplay, Navigation, Pagination]}
-          spaceBetween={30} // Jarak antar slide
-          slidesPerView={1} // Default 1 slide per view
-          loop={true} // Agar slider berulang
+          spaceBetween={30}
+          slidesPerView={1}
+          loop={true}
           autoplay={{
-            delay: 3000, // Otomatis geser setiap 3 detik
-            disableOnInteraction: false, // Tetap berjalan meski diinteraksi
+            delay: 3000,
+            disableOnInteraction: false,
           }}
-          pagination={{ clickable: true }} // Pagination (dot indicators) aktif
-          navigation={true} // Navigasi (panah) aktif
+          pagination={{ clickable: true }}
+          navigation={true}
           breakpoints={{
-            // When window width is >= 640px (sm)
             640: {
               slidesPerView: 2,
               spaceBetween: 20,
             },
-            // When window width is >= 768px (md)
             768: {
               slidesPerView: 3,
               spaceBetween: 25,
             },
-            // When window width is >= 1024px (lg)
-            1240: {
+            1024: {
               slidesPerView: 4,
               spaceBetween: 30,
             },
           }}
-          className="main-learning-swiper" // Class untuk styling Swiper keseluruhan
-        >
+          className="main-learning-swiper">
           {learningItems.map((item, index) => (
             <SwiperSlide key={index}>
               <div
                 className={`learning-item ${
-                  // Tambahkan class 'blurred' jika ada kartu lain yang sedang di-hover
                   hoveredIndex !== null && hoveredIndex !== index
                     ? "blurred"
                     : ""
                 }`}
-                // Atur state saat kursor masuk ke kartu
                 onMouseEnter={() => setHoveredIndex(index)}
-                // Reset state saat kursor keluar dari kartu
                 onMouseLeave={() => setHoveredIndex(null)}>
                 <div className="learning-icon-wrapper">
                   <img
@@ -103,7 +96,7 @@ const MainLearningContent = ({ location }) => {
                     alt={`${item.title} Icon - Les Privat TK di ${
                       location ? location : "Indonesia"
                     } - Matrix Tutoring`}
-                    className="subject-icon"
+                    className="subject-icon-learning-tk"
                     loading="lazy"
                   />
                 </div>

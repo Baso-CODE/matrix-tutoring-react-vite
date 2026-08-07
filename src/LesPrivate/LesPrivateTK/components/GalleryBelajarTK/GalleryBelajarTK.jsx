@@ -1,3 +1,5 @@
+import "./GalleryBelajarTK.css"; // Sesuaikan path file CSS Anda
+
 const galleryItems = [
   {
     image:
@@ -60,27 +62,27 @@ const galleryItems = [
 const GalleryBelajarTK = () => {
   return (
     <section className="container-all">
-      <div className="gallery__sd">
-        <div className="gallery-sd__header">
-          <h2 className="gallery-sd__title">
+      <div className="gallery-tk">
+        <div className="gallery-tk__header">
+          <h2 className="gallery-tk__title">
             Galeri Belajar Siswa Les Privat Calistung TK – Matrix Tutoring
           </h2>
-          <p className="gallery-sd__subtitle">
+          <p className="gallery-tk__subtitle">
             Suasana belajar privat yang efektif, nyaman, dan menyenangkan
             bersama Matrix Tutoring.
           </p>
         </div>
 
-        <div className="gallery-sd__grid">
+        <div className="gallery-tk__grid">
           {galleryItems.map((item, index) => (
-            <div className="gallery-sd__card-container" key={index}>
-              <div className="gallery-sd__card">
+            <div className="gallery-tk__card-container" key={index}>
+              <div className="gallery-tk__card">
                 <div
-                  className="gallery-sd__img-content"
+                  className="gallery-tk__img-content"
                   style={{ backgroundImage: `url(${item.image})` }}></div>
-                <div className="gallery-sd__content">
-                  <p className="gallery-sd__heading">{item.title}</p>
-                  <p className="gallery-sd__description">{item.description}</p>
+                <div className="gallery-tk__content">
+                  <p className="gallery-tk__heading">{item.title}</p>
+                  <p className="gallery-tk__description">{item.description}</p>
                 </div>
               </div>
             </div>

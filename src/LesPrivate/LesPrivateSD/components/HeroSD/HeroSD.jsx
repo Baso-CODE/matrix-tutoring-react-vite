@@ -38,7 +38,7 @@ const HeroSD = () => {
         </div>
 
         {/* Bagian gambar */}
-        <div className="hero-sma-image">
+        <div className="hero-sd-image">
           <img
             src="/images/les-private/sd/model-sd.png"
             alt="Model Les Privat Program SD"

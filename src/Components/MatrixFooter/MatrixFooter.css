@@ -69,25 +69,23 @@
 .section-title-footer-matrix {
   font-size: 1.125rem;
   font-weight: 700;
-  font-family: "Poppins", sans-serif;
+
   margin-top: 1rem;
 }
 
 .section-subtitle-footer-matrix {
   font-size: 1rem;
   font-weight: 700;
-  font-family: "Poppins", sans-serif;
+
   margin-bottom: 0.5rem;
   margin-top: 2rem;
 }
 
 .address-footer-matrix,
 .phone-list-footer-matrix {
-  font-family: "Poppins", sans-serif;
   margin: 0;
 }
 .office-hours-footer-matrix {
-  font-family: "Poppins", sans-serif;
   margin-bottom: 0.4rem;
   padding-inline-start: 16px;
   margin: 0;
@@ -107,7 +105,7 @@
 .phone-list-footer-matrix li a {
   color: white; /* Sesuaikan dengan warna teks sebelumnya */
   text-decoration: none; /* Hilangkan underline */
-  font-family: "Poppins", sans-serif; /* Pertahankan font yang sama */
+  /* Pertahankan font yang sama */
   display: inline-block; /* Agar padding dan margin bekerja dengan baik */
   padding: 0.2rem 0; /* Tambahkan padding sesuai kebutuhan */
   transition: color 0.3s ease; /* Tambahkan transisi untuk efek hover */
@@ -135,7 +133,6 @@
   margin-top: 0.7rem;
   text-align: center;
   font-size: 0.7rem;
-  font-family: "Poppins", sans-serif;
 }
 
 .footer-matrix-image {
@@ -156,7 +153,6 @@
     margin-top: 1rem;
     text-align: center;
     font-size: 0.8rem;
-    font-family: "Poppins", sans-serif;
   }
   .office-info-footer,
   .member-of-footer-matrix,

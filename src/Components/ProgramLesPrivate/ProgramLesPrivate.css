@@ -8,7 +8,7 @@
   font-weight: 700;
   margin-bottom: 20px;
   color: #333333;
-  font-family: "Poppins", sans-serif;
+
   text-align: center;
 }
 
@@ -21,7 +21,9 @@
 .program-les-private {
   padding: 20px;
   border-radius: 10px;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
@@ -47,14 +49,13 @@
   margin: 0;
   font-weight: 700;
   color: #333333;
-  font-family: "Poppins", sans-serif;
 }
 
 .programs-les-private p {
   font-size: 1rem;
   color: #4f4f4f;
   margin: 0;
-  font-family: "Poppins", sans-serif;
+
   font-weight: 500;
 }
 

@@ -11,7 +11,6 @@
   color: #333333;
   margin-top: 2rem;
   margin-bottom: 1.8rem;
-  font-family: "Poppins", sans-serif;
 }
 
 .subject-list-les-private-bahasa {
@@ -37,6 +36,6 @@
 
 .subject-text {
   flex: 1;
-  font-family: "Poppins", sans-serif;
+
   color: #333333; /* Ganti warna teks sesuai keinginan, misalnya biru */
 }

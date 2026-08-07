@@ -1,15 +1,13 @@
 .hero-section-container-v2 {
-  /* padding: 40px 20px3 */
   padding-left: 10%;
   padding-right: 10%;
-  padding-top: 8%;
   padding-bottom: 5%;
-  /* min-height: 100vh; */
+  padding-top: 5%;
   height: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
-  font-family: "Poppins", sans-serif;
+
   color: #333333;
   overflow: hidden;
 }
@@ -18,7 +16,7 @@
 
 .hero-content-wrapper-v2 {
   display: flex;
-  flex-direction: row; /* Default: row on larger screens */
+  flex-direction: row;
   justify-content: center;
   align-items: center;
   /* max-width: 1240px; */
@@ -31,7 +29,7 @@
 .hero-left-section-v2 {
   flex: 1;
   /* max-width: 550px; */
-  padding: 20px 0;
+  /* padding: 20px 0; */
   text-align: left;
 }
 
@@ -132,7 +130,7 @@
 
 .hero-promo-button-v2 {
   display: inline-flex;
-  font-family: "Poppins", sans-serif;
+
   align-items: center;
   justify-content: center;
 
@@ -232,15 +230,18 @@
     padding: 30px 15px;
     padding-left: 3%;
     padding-right: 3%;
+    padding-top: 3%;
+    padding-bottom: 3%;
     min-height: auto; /* Allow height to adjust to content */
   }
 
   .hero-content-wrapper-v2 {
-    gap: 20px; /* Reduce gap */
+    gap: 0px; /* Reduce gap */
+    padding-top: 0px;
   }
 
   .hero-left-section-v2 {
-    padding: 0 10px; /* Further reduce padding */
+    padding: 0 5px;
   }
 
   .hero-title-v2 {
@@ -250,7 +251,7 @@
 
   .hero-subtitle-v2 {
     font-size: 0.9rem;
-    margin-bottom: 20px;
+    margin-bottom: 15px;
   }
 
   .hero-price-v2 {
@@ -262,8 +263,8 @@
   }
 
   .hero-feature-list-v2 li {
-    font-size: 0.9rem;
-    margin-bottom: 10px;
+    font-size: 0.8rem;
+    margin-bottom: 6px;
   }
 
   .check-icon-v2 {
@@ -290,18 +291,22 @@
 
 @media (max-width: 480px) {
   .hero-section-container-v2 {
-    padding: 20px 10px;
     padding-left: 3%;
+    padding-top: 3%;
+    padding-bottom: 3%;
     padding-right: 3%;
-    margin-top: 40px;
   }
 
   .hero-title-v2 {
-    font-size: 1.6rem;
+    font-size: 1.3rem;
+    margin-bottom: 10px;
   }
 
   .hero-subtitle-v2 {
-    font-size: 0.9rem;
+    font-size: 0.8rem;
+  }
+  .hero-feature-list-v2 {
+    margin-bottom: 10px;
   }
 
   .hero-price-v2 {

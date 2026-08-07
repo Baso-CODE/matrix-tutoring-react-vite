@@ -1,7 +1,8 @@
 /* PTNSuccessStrategy.css */
 
 .ptn-strategy-section {
-  padding: 80px 20px;
+  /* Pastikan padding bawah cukup besar agar ada jarak */
+  padding: 80px 20px 100px 20px; /* Atas: 80px, Kiri-Kanan: 20px, Bawah: 100px */
   padding-left: 10%;
   padding-right: 10%;
   text-align: center;
@@ -18,7 +19,8 @@
   left: 0;
   width: 100%;
   height: 100%;
-  background: radial-gradient(
+  background:
+    radial-gradient(
       circle at 10% 20%,
       rgba(13, 16, 185, 0.05) 0%,
       transparent 50%
@@ -35,7 +37,7 @@
 .ptn-strategy-container {
   margin: 0 auto;
   padding-top: 30px;
-  position: relative; /* Pastikan konten di atas efek latar */
+  position: relative;
   z-index: 1;
 }
 
@@ -45,36 +47,35 @@
   font-weight: 800;
   color: #ffffff;
   margin-bottom: 20px;
-  font-family: "Poppins", sans-serif;
   line-height: 1.2;
-  text-shadow: 3px 3px 8px rgba(0, 0, 0, 0.1); /* Bayangan lebih kuat */
+  text-shadow: 3px 3px 8px rgba(0, 0, 0, 0.1);
 }
 
 .ptn-strategy-subtitle {
-  font-size: 1rem; /* Sedikit lebih besar */
+  font-size: 1rem;
   color: #f2fff2;
-  margin-bottom: 70px; /* Jarak lebih jauh dari grid */
+  margin-bottom: 50px; /* Dikurangi sedikit agar lebih proporsional */
   max-width: 900px;
   margin-left: auto;
   margin-right: auto;
   line-height: 1.6;
-  font-family: "Poppins", sans-serif;
 }
 
 .strategy-features-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 35px;
-
-  margin-bottom: 60px;
+  margin-bottom: 0; /* Dihapus atau dinolkan karena sudah diatasi padding section bawah */
 }
 
 .strategy-feature-card {
   background-color: #ffffff;
-  padding: 35px; /* Padding lebih besar */
-  border-radius: 20px; /* Sudut lebih membulat */
-  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.1); /* Bayangan lebih menonjol */
-  transition: transform 0.4s ease, box-shadow 0.4s ease; /* Transisi lebih halus */
+  padding: 35px;
+  border-radius: 20px;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.1);
+  transition:
+    transform 0.4s ease,
+    box-shadow 0.4s ease;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -82,7 +83,7 @@
   border: 1px solid #e0efff;
   position: relative;
   overflow: hidden;
-  height: 90%;
+  height: 100%; /* Diubah dari 90% menjadi 100% agar tinggi card konsisten */
   justify-content: flex-start;
 }
 
@@ -93,59 +94,49 @@
   left: -60%;
   width: 220%;
   height: 220%;
-  background: radial-gradient(
-    circle,
-    rgba(13, 16, 185, 0.15),
-    transparent 70%
-  ); /* Efek cahaya lebih kuat */
-  transition: all 0.6s ease-out; /* Transisi efek cahaya lebih lambat */
+  background: radial-gradient(circle, rgba(13, 16, 185, 0.15), transparent 70%);
+  transition: all 0.6s ease-out;
   opacity: 0;
   z-index: 0;
 }
 
 .strategy-feature-card:hover {
-  transform: translateY(-20px) scale(1.03); /* Naik lebih tinggi dan membesar */
-  box-shadow: 0 25px 50px rgba(0, 0, 0, 0.2); /* Bayangan sangat kuat */
-  border-color: #007bff; /* Border menjadi biru utama saat di-hover */
+  transform: translateY(-10px) scale(1.02); /* Sedikit disesuaikan agar tidak terlalu jauh melompatnya */
+  box-shadow: 0 25px 50px rgba(0, 0, 0, 0.2);
+  border-color: #007bff;
 }
 
 .strategy-feature-card:hover::before {
   opacity: 1;
-  transform: rotate(45deg); /* Rotasi efek cahaya lebih dramatis */
+  transform: rotate(45deg);
 }
 
 .strategy-feature-icon-wrapper {
-  background: linear-gradient(
-    45deg,
-    #007bff,
-    #3b82f6
-  ); /* Gradasi pada ikon wrapper */
-  width: 8rem;
-  height: 8rem;
+  background: linear-gradient(45deg, #007bff, #3b82f6);
+  width: 7.5rem; /* Sesuaikan ukuran lingkaran pembungkus */
+  height: 7.5rem; /* Sesuaikan ukuran lingkaran pembungkus */
   border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-bottom: 30px;
-  box-shadow: 0 8px 20px rgba(13, 16, 185, 0.4); /* Bayangan ikon lebih kuat */
+  margin-bottom: 25px;
+  box-shadow: 0 8px 20px rgba(13, 16, 185, 0.4);
   position: relative;
   z-index: 1;
-  border: 4px solid #ffffff; /* Border putih di sekitar ikon */
+  border: 4px solid #ffffff;
+  flex-shrink: 0;
 }
 
 .strategy-feature-icon {
-  width: 8rem;
-  height: 8rem;
-  object-fit: cover;
+  width: 6rem; /* Ubah nilai ini untuk memperbesar/memperkecil ikon gambar (sebelumnya 3rem) */
+  height: 6rem; /* Ubah nilai ini mengikuti lebar di atas */
+  object-fit: contain;
 }
-
 .strategy-feature-title {
-  font-size: 1.2rem; /* Ukuran judul fitur lebih besar */
+  font-size: 1.1rem;
   font-weight: 700;
   color: #007bff;
-  margin: 0;
-  margin-bottom: 15px;
-  font-family: "Poppins", sans-serif;
+  margin: 0 0 15px 0;
   position: relative;
   z-index: 1;
 }
@@ -154,124 +145,47 @@
   font-size: 0.9rem;
   color: #4f4f4f;
   line-height: 1.7;
-  font-family: "Poppins", sans-serif;
   position: relative;
   z-index: 1;
   flex-grow: 1;
   display: -webkit-box;
-  -webkit-line-clamp: 5; /* Batasi hingga 5 baris */
-  line-clamp: 5; /* Standard property for compatibility */
+  -webkit-line-clamp: 5;
+  line-clamp: 5;
   -webkit-box-orient: vertical;
   overflow: hidden;
   text-overflow: ellipsis;
+  margin: 0;
 }
 
-.strategy-cta-wrapper {
-  background: linear-gradient(
-    90deg,
-    #007bff,
-    #007bff
-  ); /* Gradasi biru untuk CTA */
-  padding: 50px; /* Padding lebih besar */
-  border-radius: 20px; /* Sudut lebih membulat */
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  gap: 30px; /* Jarak antar elemen CTA */
-  margin-top: 60px;
-  box-shadow: 0 20px 40px rgba(13, 16, 185, 0.5); /* Bayangan CTA lebih kuat */
-}
-
-.strategy-cta-text {
-  font-size: 2.2rem; /* Ukuran teks CTA lebih besar */
-  font-weight: 800;
-  color: #ffffff;
-  font-family: "Poppins", sans-serif;
-  max-width: 900px;
-  line-height: 1.3;
-}
-
-.strategy-cta-button {
-  background-color: #ff6500; /* Tombol oranye (aksen) */
-  color: #ffffff;
-  padding: 18px 40px; /* Padding tombol lebih besar */
-  border-radius: 12px; /* Sudut tombol lebih membulat */
-  font-size: 1.3rem; /* Ukuran font tombol lebih besar */
-  font-weight: 700;
-  text-decoration: none;
-  transition: background-color 0.3s ease, transform 0.2s ease,
-    box-shadow 0.3s ease;
-  box-shadow: 0 10px 20px rgba(255, 101, 0, 0.4); /* Bayangan tombol lebih kuat */
-}
-
-.strategy-cta-button:hover {
-  background-color: #e54d00; /* Oranye lebih gelap saat hover */
-  transform: translateY(-5px); /* Efek naik lebih tinggi */
-  box-shadow: 0 15px 25px rgba(255, 101, 0, 0.5); /* Bayangan lebih kuat saat hover */
-}
-
+/* Responsivitas */
 @media (max-width: 1024px) {
   .ptn-strategy-section {
     padding-left: 4%;
     padding-right: 4%;
-  }
-}
-/* Responsivitas */
-@media (max-width: 768px) {
-  .ptn-strategy-title {
-    font-size: 1.4rem;
-  }
-  .ptn-strategy-subtitle {
-    font-size: 1.2rem;
-    margin-bottom: 40px;
+    padding-bottom: 80px;
   }
   .strategy-features-grid {
-    grid-template-columns: 1fr; /* Satu kolom di mobile */
+    grid-template-columns: repeat(2, 1fr); /* 2 kolom di tablet besar */
     gap: 25px;
-  }
-  .strategy-feature-card {
-    padding: 25px;
-  }
-  .strategy-feature-icon-wrapper {
-    width: 6rem;
-    height: 6rem;
-  }
-  .strategy-feature-icon {
-    width: 6rem;
-    height: 6rem;
-  }
-  .strategy-feature-title {
-    font-size: 1.2rem;
-  }
-  .strategy-feature-description {
-    font-size: 0.9rem;
-  }
-  .ptn-strategy-cta-wrapper {
-    padding: 30px 20px;
-  }
-  .ptn-strategy-cta-text {
-    font-size: 1.6rem;
-  }
-  .ptn-strategy-cta-button {
-    font-size: 1.1rem;
-    padding: 12px 25px;
   }
 }
 
-@media (max-width: 480px) {
+@media (max-width: 768px) {
+  .ptn-strategy-section {
+    padding: 60px 4% 60px 4%;
+  }
   .ptn-strategy-title {
     font-size: 1.3rem;
   }
   .ptn-strategy-subtitle {
-    font-size: 1rem;
+    font-size: 0.95rem;
+    margin-bottom: 30px;
   }
-  .strategy-feature-icon-wrapper {
-    width: 7rem;
-    height: 7rem;
+  .strategy-features-grid {
+    grid-template-columns: 1fr; /* 1 kolom di mobile */
+    gap: 20px;
   }
-  .strategy-feature-icon {
-    width: 7rem;
-    height: 7rem;
+  .strategy-feature-card {
+    padding: 25px;
   }
 }

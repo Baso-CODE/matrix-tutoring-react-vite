@@ -7,7 +7,7 @@
 .centered-content__preparationToPTN h2 {
   font-size: 1.2rem;
   color: #333333;
-  font-family: "Poppins", sans-serif;
+
   font-weight: 700;
   margin-bottom: 0.3rem;
   line-height: 1.4;
@@ -20,7 +20,7 @@
   color: #4f4f4f;
   line-height: 1.6;
   font-weight: 400;
-  font-family: "Poppins", sans-serif;
+
   margin-bottom: 0.5rem;
 }
 
@@ -35,7 +35,6 @@
   color: #555555;
   font-size: 1rem;
   line-height: 1.5;
-  font-family: "Poppins", sans-serif;
 }
 
 /* --- Checklist style --- */
@@ -52,7 +51,6 @@
   font-size: 1rem;
   color: #444;
   line-height: 1.5;
-  font-family: "Poppins", sans-serif;
 }
 
 .centered-content__preparationToPTN .checklist li::before {

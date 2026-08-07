@@ -1,0 +1,76 @@
+/* Container */
+.pelajaran-calistung-container {
+  display: flex;
+  align-items: flex-start;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+  padding: 20px 0;
+}
+
+/* Content Area */
+.pelajaran-calistung-content {
+  flex: 1;
+  min-width: 300px;
+  width: 100%;
+}
+
+.pelajaran-calistung-content h2 {
+  font-size: 1.25rem;
+  color: #333333;
+
+  font-weight: 700;
+  margin-bottom: 0.75rem;
+  border-left: 4px solid #0077ff;
+  padding-left: 0.6rem;
+  line-height: 1.4;
+}
+
+.pelajaran-calistung-content p {
+  font-size: 0.9rem;
+  color: #555555;
+  margin-bottom: 1rem;
+
+  line-height: 1.6;
+}
+
+/* Checklist Style */
+.checklist-calistung {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.checklist-calistung li {
+  font-size: 0.9rem;
+  margin-bottom: 0.75rem;
+  color: #444444;
+
+  display: flex;
+  align-items: flex-start;
+  line-height: 1.5;
+}
+
+.checklist-calistung li::before {
+  content: "✔";
+  margin-right: 0.6rem;
+  color: #0077ff;
+  font-weight: bold;
+  flex-shrink: 0;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .pelajaran-calistung-container {
+    flex-direction: column;
+    text-align: left;
+  }
+
+  .pelajaran-calistung-content h2 {
+    font-size: 1.15rem;
+  }
+
+  .pelajaran-calistung-content p,
+  .checklist-calistung li {
+    font-size: 0.875rem;
+  }
+}

@@ -9,7 +9,7 @@
 
 .tutor__title {
   font-size: 1.3rem;
-  font-family: "Poppins", sans-serif;
+
   font-weight: 800;
   text-transform: uppercase;
   margin-bottom: 10px;
@@ -23,7 +23,7 @@
   font-size: 0.9rem;
   justify-content: center;
   text-align: center;
-  font-family: "Poppins", sans-serif;
+
   font-weight: normal;
   max-width: 70%;
   margin-bottom: 40px;
@@ -86,7 +86,7 @@
   color: #262626;
   font-size: 1rem;
   font-weight: 600;
-  font-family: "Poppins", sans-serif;
+
   transition: all 0.4s ease-out;
 }
 

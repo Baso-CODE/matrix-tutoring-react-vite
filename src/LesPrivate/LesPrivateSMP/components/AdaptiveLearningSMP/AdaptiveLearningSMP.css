@@ -19,7 +19,7 @@
   color: #ffffff;
   text-transform: uppercase;
   margin-bottom: 20px;
-  font-family: "Poppins", sans-serif;
+
   line-height: 1.2;
   text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.05);
 }
@@ -32,7 +32,6 @@
   margin-left: auto;
   margin-right: auto;
   line-height: 1.6;
-  font-family: "Poppins", sans-serif;
 }
 
 .adaptive-features-grid {
@@ -47,7 +46,9 @@
   padding: 30px;
   border-radius: 16px;
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1); /* Bayangan yang lebih menonjol */
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -107,7 +108,7 @@
   font-weight: 700;
   color: #007bff; /* Biru gelap untuk judul fitur */
   margin-bottom: 10px;
-  font-family: "Poppins", sans-serif;
+
   position: relative;
   z-index: 1;
 }
@@ -116,7 +117,7 @@
   font-size: 0.9rem;
   color: #4f4f4f; /* Abu-abu teks */
   line-height: 1.6;
-  font-family: "Poppins", sans-serif;
+
   position: relative;
   z-index: 1;
 }
@@ -138,7 +139,7 @@
   font-size: 1.8rem;
   font-weight: 700;
   color: #ffffff;
-  font-family: "Poppins", sans-serif;
+
   max-width: 800px;
 }
 
@@ -150,7 +151,9 @@
   font-size: 1.2rem;
   font-weight: 700;
   text-decoration: none;
-  transition: background-color 0.3s ease, transform 0.2s ease,
+  transition:
+    background-color 0.3s ease,
+    transform 0.2s ease,
     box-shadow 0.3s ease;
   box-shadow: 0 8px 15px rgba(255, 221, 0, 0.3);
 }

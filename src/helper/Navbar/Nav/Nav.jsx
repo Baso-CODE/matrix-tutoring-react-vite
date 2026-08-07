@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { Link } from "react-router-dom";
 import { Menus } from "../../utils";
 import NavDescktop from "../NavDescktop/NavDescktop";
@@ -6,6 +6,8 @@ import NavMobile from "../NavMobile/NavMobile";
 import "./Nav.css";
 
 const Nav = () => {
+  const navRef = useRef(null);
+
   const [isScrolled, setIsScrolled] = useState(false);
 
   // Data 4 CS Lokal
@@ -71,6 +73,27 @@ const Nav = () => {
     return () => {
       window.removeEventListener("scroll", handleScroll);
     };
+  }, []);
+
+  useEffect(() => {
+    const nav = navRef.current;
+    if (!nav) return;
+
+    // Set CSS variable pertama kali
+    const setHeight = () => {
+      document.documentElement.style.setProperty(
+        "--navbar-height",
+        `${nav.offsetHeight}px`,
+      );
+    };
+
+    setHeight();
+
+    // Update otomatis kalau navbar berubah ukuran (resize, dll)
+    const observer = new ResizeObserver(setHeight);
+    observer.observe(nav);
+
+    return () => observer.disconnect();
   }, []);
 
   return (

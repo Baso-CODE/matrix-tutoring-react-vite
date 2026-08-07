@@ -4,12 +4,40 @@
   margin-bottom: 20px;
 }
 
+/* Layout Grid Kiri-Kanan khusus SMA */
+.container-sma-left-right {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+  margin-bottom: 20px;
+}
+
+.program-sma-text {
+  flex: 1;
+}
+
+.program-sma-image {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Styling Gambar Khusus SMA */
+.les-privat-sma-image {
+  width: 100%;
+  max-width: 700px;
+  height: auto;
+  border-radius: 16px;
+  object-fit: cover;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+}
+
 .centered-content__why-mtx-important h2 {
-  font-size: 1.2rem;
-  color: #333333;
-  font-family: "Poppins", sans-serif;
+  font-size: 1.25rem;
+  color: #222222;
   font-weight: 700;
-  margin-bottom: 0.3rem;
+  margin-bottom: 1rem;
   line-height: 1.4;
   border-left: 4px solid #0077ff;
   padding-left: 0.6rem;
@@ -17,11 +45,10 @@
 
 .centered-content__why-mtx-important p {
   font-size: 0.9rem;
-  color: #4f4f4f;
+  color: #555555;
   line-height: 1.6;
   font-weight: 400;
-  font-family: "Poppins", sans-serif;
-  margin-bottom: 0.5rem;
+  margin-bottom: 0.75rem;
 }
 
 .centered-content__why-mtx-important ul {
@@ -33,26 +60,24 @@
 .centered-content__why-mtx-important li {
   margin-bottom: 0.3rem;
   color: #555555;
-  font-size: 1rem;
+  font-size: 0.9rem;
   line-height: 1.5;
-  font-family: "Poppins", sans-serif;
 }
 
 /* --- Checklist style --- */
 .centered-content__why-mtx-important .checklist {
   list-style: none;
-  margin: 0;
+  margin: 0 0 1rem 0;
   padding: 0;
 }
 
 .centered-content__why-mtx-important .checklist li {
   position: relative;
   padding-left: 1.6rem;
-  margin-bottom: 0.4rem;
+  margin-bottom: 0.5rem;
   font-size: 0.9rem;
-  color: #444;
+  color: #4b5563;
   line-height: 1.5;
-  font-family: "Poppins", sans-serif;
 }
 
 .centered-content__why-mtx-important .checklist li::before {
@@ -60,18 +85,34 @@
   position: absolute;
   left: 0;
   top: 0;
-  color: #0077ff;
+  color: #007bff;
   font-weight: bold;
 }
 
 /* Responsiveness */
+@media (max-width: 992px) {
+  .container-sma-left-right {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .program-sma-image {
+    width: 100%;
+    margin-top: 10px;
+  }
+
+  .les-privat-sma-image {
+    max-width: 100%;
+  }
+}
+
 @media (max-width: 768px) {
   .centered-content__why-mtx-important h2 {
-    font-size: 1.2rem;
+    font-size: 1.1rem;
   }
 
   .centered-content__why-mtx-important p,
-  .centered-content__why-mtx-important li {
-    font-size: 0.9rem;
+  .centered-content__why-mtx-important .checklist li {
+    font-size: 0.85rem;
   }
 }

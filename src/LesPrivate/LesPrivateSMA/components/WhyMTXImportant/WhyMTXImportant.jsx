@@ -4,9 +4,9 @@ const WhyMTXImportant = ({ location }) => {
   return (
     <section className="container-all">
       <div className="centered-content__why-mtx-important">
-        <div className="container-calistung-left-right">
+        <div className="container-sma-left-right">
           {/* TEXT */}
-          <div className="program-calistung-text">
+          <div className="program-sma-text">
             <h2>Mengapa Les Privat untuk Anak SMA itu Penting?</h2>
             <p>
               Jenjang SMA adalah salah satu fase terpenting dalam kehidupan
@@ -36,20 +36,22 @@ const WhyMTXImportant = ({ location }) => {
               </li>
             </ul>
           </div>
-          <div className="program-calistung-image">
+
+          {/* IMAGE */}
+          <div className="program-sma-image">
             <img
               src="/images/les-private/sma/why-matrix-important.webp"
               alt={`Les Privat SMA - Mengapa Les Privat SMA itu Penting - Matrix Tutoring ${
                 location ? `di ${location}` : "Indonesia"
               }`}
-              className="les-privat-sd-image"
+              className="les-privat-sma-image"
               loading="lazy"
               onError={(e) => {
                 e.currentTarget.src =
                   "https://placehold.co/800x360/007bff/ffffff?text=Les+Privat+SMA+beserta+logo";
               }}
-            />{" "}
-          </div>{" "}
+            />
+          </div>
         </div>
         <p>
           Semua pertanyaan tersebut seringkali muncul dan jawabannya adalah anak

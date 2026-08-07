@@ -2,7 +2,7 @@
   position: fixed;
   top: 0;
   left: 0;
-  font-family: "Poppins", sans-serif;
+
   right: 0;
   bottom: 0;
   background-color: rgba(0, 0, 0, 0.7);
@@ -102,7 +102,10 @@
   border-radius: 8px;
   text-decoration: none;
   color: #333333;
-  transition: background-color 0.2s, transform 0.2s, box-shadow 0.2s;
+  transition:
+    background-color 0.2s,
+    transform 0.2s,
+    box-shadow 0.2s;
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
 }
 
