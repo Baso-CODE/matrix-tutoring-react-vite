@@ -1,3 +1,5 @@
+import "./GalleryBelajarTKA.css";
+
 const galleryItems = [
   {
     image:
@@ -60,27 +62,27 @@ const galleryItems = [
 const GalleryBelajarTKA = () => {
   return (
     <section className="container-all">
-      <div className="gallery__sd">
-        <div className="gallery-sd__header">
-          <h2 className="gallery-sd__title">
+      <div className="gallery__tka">
+        <div className="gallery-tka__header">
+          <h2 className="gallery-tka__title">
             Gallery Belajar Program Les Privat TKA
           </h2>
-          <p className="gallery-sd__subtitle">
+          <p className="gallery-tka__subtitle">
             Suasana belajar privat yang efektif, nyaman, dan menyenangkan
             bersama Matrix Tutoring.
           </p>
         </div>
 
-        <div className="gallery-sd__grid">
+        <div className="gallery-tka__grid">
           {galleryItems.map((item, index) => (
-            <div className="gallery-sd__card-container" key={index}>
-              <div className="gallery-sd__card">
+            <div className="gallery-tka__card-container" key={index}>
+              <div className="gallery-tka__card">
                 <div
-                  className="gallery-sd__img-content"
+                  className="gallery-tka__img-content"
                   style={{ backgroundImage: `url(${item.image})` }}></div>
-                <div className="gallery-sd__content">
-                  <p className="gallery-sd__heading">{item.title}</p>
-                  <p className="gallery-sd__description">{item.description}</p>
+                <div className="gallery-tka__content">
+                  <p className="gallery-tka__heading">{item.title}</p>
+                  <p className="gallery-tka__description">{item.description}</p>
                 </div>
               </div>
             </div>

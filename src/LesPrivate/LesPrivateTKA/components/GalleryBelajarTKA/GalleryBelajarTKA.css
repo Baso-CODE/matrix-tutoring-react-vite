@@ -1,0 +1,150 @@
+/* Section Utama */
+.gallery__tka {
+  margin: 0 auto;
+  text-align: center;
+  padding: 20px 0 40px 0;
+}
+
+.gallery-tka__header {
+  margin-bottom: 30px;
+}
+
+.gallery-tka__title {
+  font-size: 1.4rem;
+  font-weight: 800;
+  color: #333333;
+  text-transform: uppercase;
+  margin-bottom: 10px;
+}
+
+.gallery-tka__subtitle {
+  font-size: 0.9rem;
+  color: #343434;
+}
+
+/* Grid Layout */
+.gallery-tka__grid {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  gap: 24px;
+}
+
+@media (min-width: 768px) {
+  .gallery-tka__grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 1024px) {
+  .gallery-tka__grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+/* Container & Card */
+.gallery-tka__card-container {
+  width: 100%;
+  height: 280px;
+  position: relative;
+  border-radius: 12px;
+}
+
+.gallery-tka__card {
+  width: 100%;
+  height: 100%;
+  border-radius: inherit;
+  overflow: hidden;
+  position: relative;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+}
+
+/* Image Background */
+.gallery-tka__img-content {
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  transition:
+    transform 0.6s ease,
+    filter 0.6s ease;
+}
+
+/* Teks Overlay saat di-hover */
+.gallery-tka__content {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  box-sizing: border-box; /* Mencegah elemen meluber ke kanan */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  gap: 8px;
+
+  color: #ffffff;
+  padding: 15px;
+  opacity: 0;
+  pointer-events: none;
+  transform: translateY(20px);
+  transition: all 0.4s ease-in-out;
+  background: rgba(0, 119, 255, 0.85);
+}
+
+.gallery-tka__heading {
+  font-size: 1.05rem;
+  font-weight: 600;
+  margin: 0;
+  font-family: "Poppins", sans-serif;
+}
+
+.gallery-tka__description {
+  font-size: 0.85rem;
+  font-weight: 400;
+  line-height: 1.5;
+  margin: 0;
+  color: #f8f9fa;
+  font-family: "Poppins", sans-serif;
+
+  /* Mencegah teks kepanjangan dan menabrak */
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+
+  /* Membatasi teks maksimal 4 baris */
+  display: -webkit-box;
+
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+/* Efek Hover */
+.gallery-tka__card:hover .gallery-tka__content {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.gallery-tka__card:hover .gallery-tka__img-content {
+  transform: scale(1.1);
+  filter: blur(2px);
+}
+
+/* Responsiveness tambahan */
+@media (max-width: 1024px) {
+  .gallery-tka__heading {
+    font-size: 1rem;
+  }
+  .gallery-tka__description {
+    font-size: 0.8rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .gallery-tka__title {
+    font-size: 1.15rem;
+  }
+  .gallery-tka__subtitle {
+    font-size: 0.85rem;
+  }
+}

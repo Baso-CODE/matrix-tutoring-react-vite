@@ -20,27 +20,31 @@ const ProgramLesPrivatTKA = ({ location }) => {
   const selectedTitle = titleVariations[seed % titleVariations.length];
 
   return (
-    <section className="container-informasi_seputar_tka">
-      <div className="centered-content-informationTKA">
-        <div className="target-container">
-          <img
-            src="/images/les-private/ksm/tka-5x4.png"
-            // Alt Text Dioptimalkan
-            alt={`Program Persiapan TKA (Tes Kemampuan Akademik) untuk siswa ${locName} - Matrix Tutoring`}
-            className="les-privat-sd-image_v2"
-            loading="lazy"
-            width="600"
-            height="480"
-            onError={(e) => {
-              e.currentTarget.src =
-                "https://placehold.co/800x360/007bff/ffffff?text=PROGRAM+LES+PRIVAT+TKA";
-            }}
-          />
-          <div className="target-content">
-            {/* DYNAMIC TITLE */}
+    <section className="container-all">
+      <div className="centered-content__program-tka">
+        {/* Container Flex (Kiri: Gambar, Kanan: Teks) */}
+        <div className="program-tka-flex-container">
+          {/* BAGIAN KIRI: Gambar */}
+          <div className="program-tka-image-wrapper">
+            <img
+              src="/images/les-private/ksm/tka-5x4.png"
+              // Alt Text Dioptimalkan
+              alt={`Program Persiapan TKA (Tes Kemampuan Akademik) untuk siswa ${locName} - Matrix Tutoring`}
+              className="program-tka-image"
+              loading="lazy"
+              width="600"
+              height="480"
+              onError={(e) => {
+                e.currentTarget.src =
+                  "https://placehold.co/800x360/007bff/ffffff?text=PROGRAM+LES+PRIVAT+TKA";
+              }}
+            />
+          </div>
+
+          {/* BAGIAN KANAN: Teks */}
+          <div className="program-tka-text">
             <h2>{selectedTitle}</h2>
 
-            {/* Injeksi Lokasi di Paragraf Pembuka */}
             <p>
               Sekarang ini, banyak siswa <strong>{locName}</strong> masih
               terbiasa dengan metode belajar yang menekankan hafalan dan latihan
@@ -52,7 +56,6 @@ const ProgramLesPrivatTKA = ({ location }) => {
               penalaran tingkat tinggi (HOTS).
             </p>
 
-            {/* Injeksi Lokasi di Paragraf Solusi */}
             <p>
               Demi menjawab kegelisahan banyak siswa dan orang tua{" "}
               <strong>{locSuffix}</strong> menghadapi TKA,{" "}
@@ -68,9 +71,10 @@ const ProgramLesPrivatTKA = ({ location }) => {
           </div>
         </div>
 
+        {/* Bagian Bawah: List Program */}
         <h3>Program Les Privat TKA {locSuffix} ditujukan untuk:</h3>
 
-        <ol className="numbered-list">
+        <ol className="numbered-list-program-tka">
           <li>
             <strong>Target Siswa:</strong> Kelas 6 SD/MI, 9 SMP/MTs, dan 12
             SMA/SMK/Sederajat <strong>{locSuffix}</strong>.

@@ -20,11 +20,12 @@ const InformasiSeputarTKA = ({ location }) => {
   const selectedTitle = titleVariations[seed % titleVariations.length];
 
   return (
-    <section className="container-informasi_seputar_tka">
-      <div className="centered-content-informationTKA">
-        <div className="container-calistung-left-right">
-          {/* TEXT */}
-          <div className="program-calistung-text">
+    <section className="container-all">
+      <div className="centered-content__info-tka">
+        {/* Layout Flex (Kiri: Teks, Kanan: Gambar) */}
+        <div className="info-tka-flex-container">
+          {/* BAGIAN KIRI: Teks */}
+          <div className="info-tka-text">
             {/* DYNAMIC TITLE */}
             <h2>{selectedTitle}</h2>
 
@@ -45,7 +46,8 @@ const InformasiSeputarTKA = ({ location }) => {
               Tes Kemampuan Akademik mengujikan kompetensi dasar pada beberapa
               mata pelajaran utama, sebagai berikut:
             </p>
-            <ol className="numbered-list">
+
+            <ol className="numbered-list-info-tka">
               <li>
                 <strong>SD/MI/SMP/MTs:</strong> Bahasa Indonesia dan Matematika.
               </li>
@@ -55,6 +57,7 @@ const InformasiSeputarTKA = ({ location }) => {
                 siswa <strong>{locName}</strong>.
               </li>
             </ol>
+
             <p>
               Dalam memilih 2 mata pelajaran pilihan, pihak sekolah di{" "}
               <strong>{locName}</strong> diharapkan dapat memberi arahan agar
@@ -71,13 +74,13 @@ const InformasiSeputarTKA = ({ location }) => {
             </p>
           </div>
 
-          {/* IMAGE */}
-          <div className="program-calistung-image">
+          {/* BAGIAN KANAN: Gambar */}
+          <div className="info-tka-image-wrapper">
             <img
               src="/images/les-private/ksm/Akademik-TKA.png"
               // Alt Text Dioptimalkan
               alt={`Panduan dan Materi Tes Kemampuan Akademik (TKA) di ${locName} - Matrix Tutoring`}
-              className="les-privat-sd-image"
+              className="info-tka-image"
               loading="lazy"
               width="600"
               height="400"

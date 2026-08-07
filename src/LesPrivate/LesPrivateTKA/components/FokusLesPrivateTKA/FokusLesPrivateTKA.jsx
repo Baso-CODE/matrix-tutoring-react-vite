@@ -43,8 +43,8 @@ const FokusLesPrivateTKA = ({ location }) => {
   ];
 
   return (
-    <section className="container-fokus_lesprivat_tka">
-      <div className="centered-content__fokus_lesprivat_tka">
+    <section className="container-fokus-tka">
+      <div className="centered-content__fokus-tka">
         {/* DYNAMIC TITLE */}
         <h2>{selectedTitle}</h2>
 
@@ -55,7 +55,7 @@ const FokusLesPrivateTKA = ({ location }) => {
           intensif untuk mata pelajaran inti sebagai berikut:
         </p>
 
-        <ol className="numbered-list">
+        <ol className="numbered-list-tka">
           <li>
             <strong>SD/MI/SMP/MTs:</strong> Fokus pada Literasi (Bahasa
             Indonesia) dan Numerasi (Matematika).
@@ -73,10 +73,11 @@ const FokusLesPrivateTKA = ({ location }) => {
           minat dan jurusan siswa, di antaranya:
         </p>
 
-        <ul className="subject-list-les-private-mahasiswa">
+        {/* Daftar Mapel yang di-styling dengan Grid */}
+        <ul className="subject-list-tka">
           {subjects.map((subject, index) => (
-            <li key={index} className="subject-list-les-private-mahasiswa-item">
-              <FaCheckCircle className="subject-list-les-private-mahasiswa-icon" />
+            <li key={index} className="subject-list-tka__item">
+              <FaCheckCircle className="subject-list-tka__icon" />
               {subject}
             </li>
           ))}

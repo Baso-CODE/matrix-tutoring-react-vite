@@ -1,0 +1,113 @@
+/* Container Utama */
+.container-program-tka {
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+.centered-content__program-tka {
+  width: 100%;
+}
+
+/* Layout Flex: Gambar (Kiri) & Teks (Kanan) */
+.program-tka-flex-container {
+  display: flex;
+  align-items: center; /* Supaya sejajar di tengah secara vertikal */
+  gap: 40px;
+  margin-bottom: 30px;
+}
+
+/* Bagian Kiri (Gambar) */
+.program-tka-image-wrapper {
+  flex: 1; /* Memberikan porsi ruang untuk gambar */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.program-tka-image {
+  width: 100%;
+
+  height: auto;
+  border-radius: 16px;
+  object-fit: cover;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+}
+
+/* Bagian Kanan (Teks) */
+.program-tka-text {
+  flex: 1.2; /* Memberikan porsi ruang teks sedikit lebih lebar dari gambar */
+}
+
+/* Typography Headings */
+.centered-content__program-tka h2 {
+  font-size: 1.25rem;
+  color: #222222;
+  font-weight: 600;
+  margin-bottom: 1rem;
+  line-height: 1.4;
+  border-left: 4px solid #0077ff;
+  padding-left: 0.6rem;
+  font-family: "Poppins", sans-serif;
+}
+
+.centered-content__program-tka h3 {
+  font-size: 1.1rem;
+  color: #222222;
+  font-weight: 600;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  font-family: "Poppins", sans-serif;
+}
+
+/* Typography Paragraf */
+.centered-content__program-tka p {
+  font-size: 0.9rem;
+  color: #555555;
+  line-height: 1.6;
+  font-weight: 400;
+  margin-bottom: 1rem;
+  font-family: "Poppins", sans-serif;
+}
+
+/* Numbered List */
+.numbered-list-program-tka {
+  margin-left: 1.5rem;
+  margin-bottom: 1.5rem;
+  list-style-type: decimal;
+}
+
+.numbered-list-program-tka li {
+  margin-bottom: 0.5rem;
+  color: #4b5563;
+  font-size: 0.9rem;
+  line-height: 1.5;
+  font-family: "Poppins", sans-serif;
+}
+
+/* Responsiveness untuk Tablet dan Mobile */
+@media (max-width: 992px) {
+  /* Ubah layout jadi atas-bawah saat di layar kecil */
+  .program-tka-flex-container {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .program-tka-image {
+    max-width: 100%; /* Gambar memenuhi lebar kontainer di HP */
+  }
+}
+
+@media (max-width: 768px) {
+  .centered-content__program-tka h2 {
+    font-size: 1.15rem;
+  }
+
+  .centered-content__program-tka h3 {
+    font-size: 1rem;
+  }
+
+  .centered-content__program-tka p,
+  .numbered-list-program-tka li {
+    font-size: 0.85rem;
+  }
+}
