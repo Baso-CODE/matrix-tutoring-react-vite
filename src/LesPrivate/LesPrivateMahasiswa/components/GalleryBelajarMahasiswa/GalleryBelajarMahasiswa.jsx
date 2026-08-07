@@ -1,3 +1,5 @@
+import "./GalleryBelajarMahasiswa.css";
+
 const GalleryBelajarMahasiswa = ({ location }) => {
   // 1. Setup Variabel Lokasi
   const locName = location || "Indonesia";
@@ -74,33 +76,35 @@ const GalleryBelajarMahasiswa = ({ location }) => {
 
   return (
     <section className="container-all">
-      <div className="gallery__sd">
-        <div className="gallery-sd__header">
+      <div className="gallery__mahasiswa">
+        <div className="gallery-mahasiswa__header">
           {/* DYNAMIC TITLE */}
-          <h2 className="gallery-sd__title">{selectedTitle}</h2>
+          <h2 className="gallery-mahasiswa__title">{selectedTitle}</h2>
 
           {/* DYNAMIC SUBTITLE */}
-          <p className="gallery-sd__subtitle">
+          <p className="gallery-mahasiswa__subtitle">
             Intip suasana belajar privat yang efektif, nyaman, dan menyenangkan
             bersama tutor Matrix Tutoring <strong>{locName}</strong>.
           </p>
         </div>
 
-        <div className="gallery-sd__grid">
+        <div className="gallery-mahasiswa__grid">
           {galleryItems.map((item, index) => (
-            <div className="gallery-sd__card-container" key={index}>
-              <div className="gallery-sd__card">
+            <div className="gallery-mahasiswa__card-container" key={index}>
+              <div className="gallery-mahasiswa__card">
                 {/* Optimasi SEO untuk Background Image */}
                 <div
-                  className="gallery-sd__img-content"
+                  className="gallery-mahasiswa__img-content"
                   role="img"
                   aria-label={`${item.title} - Suasana Les Privat Mahasiswa ${locName}`}
                   title={`${item.title} - Les Privat ${locName}`}
                   style={{ backgroundImage: `url(${item.image})` }}></div>
 
-                <div className="gallery-sd__content">
-                  <p className="gallery-sd__heading">{item.title}</p>
-                  <p className="gallery-sd__description">{item.description}</p>
+                <div className="gallery-mahasiswa__content">
+                  <p className="gallery-mahasiswa__heading">{item.title}</p>
+                  <p className="gallery-mahasiswa__description">
+                    {item.description}
+                  </p>
                 </div>
               </div>
             </div>

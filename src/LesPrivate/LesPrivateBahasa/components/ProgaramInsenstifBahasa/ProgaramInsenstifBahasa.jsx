@@ -22,9 +22,10 @@ const ProgaramInsenstifBahasa = ({ location }) => {
   return (
     <section className="container-all">
       <div className="centered__program-insentif-bahasa">
-        <div className="container-calistung-left-right">
-          {/* TEXT */}
-          <div className="program-calistung-text">
+        {/* Layout Flex (Kiri: Teks, Kanan: Gambar) */}
+        <div className="bahasa-flex-container">
+          {/* BAGIAN KIRI: Teks */}
+          <div className="bahasa-text">
             {/* DYNAMIC TITLE */}
             <h2>{selectedTitle}</h2>
 
@@ -46,7 +47,7 @@ const ProgaramInsenstifBahasa = ({ location }) => {
             </p>
 
             {/* List Bahasa dengan Lokasi */}
-            <ul>
+            <ul className="bahasa-list">
               <li>Les Privat Bahasa Inggris {locSuffix}</li>
               <li>Les Privat Bahasa Mandarin {locSuffix}</li>
               <li>Les Privat Bahasa Jepang {locSuffix}</li>
@@ -60,13 +61,13 @@ const ProgaramInsenstifBahasa = ({ location }) => {
             </ul>
           </div>
 
-          {/* IMAGE */}
-          <div className="program-calistung-image">
+          {/* BAGIAN KANAN: Gambar */}
+          <div className="bahasa-image-wrapper">
             <img
               src="/images/les-private/bahasa-asing/BAHASA-ASING-5x4.webp"
               // Alt Text Dioptimalkan
               alt={`Program Intensif Les Privat Bahasa Asing di ${locName} - Matrix Tutoring`}
-              className="les-privat-sd-image"
+              className="bahasa-image"
               loading="lazy"
               width="600"
               height="480"
@@ -74,7 +75,7 @@ const ProgaramInsenstifBahasa = ({ location }) => {
                 e.currentTarget.src =
                   "https://placehold.co/800x360/007bff/ffffff?text=Program+Intensif+Bahasa";
               }}
-            />{" "}
+            />
           </div>
         </div>
       </div>

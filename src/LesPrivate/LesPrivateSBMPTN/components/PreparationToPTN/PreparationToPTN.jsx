@@ -1,4 +1,5 @@
 import "./PreparationToPTN.css";
+
 const PreparationToPTN = ({ location }) => {
   return (
     <section className="container-all">
@@ -8,13 +9,13 @@ const PreparationToPTN = ({ location }) => {
           alt={`Preparation to PTN in ${
             location ? location : "Indonesia"
           } - Les Privat UTBK SNBT`}
-          className="les-privat-sd-image"
+          className="preparation-ptn__image"
           loading="lazy"
           onError={(e) => {
             e.currentTarget.src =
               "https://placehold.co/800x360/007bff/ffffff?text=Les+Privat+UTBK+SNBT";
           }}
-        />{" "}
+        />
         <h2>Les Privat UTBK SNBT – Persiapan Tembus Masuk PTN Impian</h2>
         <p>
           Masuk Perguruan Tinggi Negeri (PTN) favorit adalah impian besar bagi

@@ -1,15 +1,45 @@
+/* Container Utama */
 .centered__program-insentif-bahasa {
   width: 100%;
   margin-top: 20px;
   margin-bottom: 20px;
 }
 
-.centered__program-insentif-bahasa h2 {
-  font-size: 1.2rem;
-  color: #333333;
+/* Layout Flex: Teks (Kiri) & Gambar (Kanan) */
+.bahasa-flex-container {
+  display: flex;
+  align-items: center; /* Meratakan konten di tengah secara vertikal */
+  gap: 40px;
+}
 
+/* Bagian Kiri (Teks) */
+.bahasa-text {
+  flex: 1.2;
+}
+
+/* Bagian Kanan (Gambar) */
+.bahasa-image-wrapper {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.bahasa-image {
+  width: 100%;
+
+  height: auto;
+  border-radius: 16px;
+  object-fit: cover;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+}
+
+/* Typography Headings */
+.centered__program-insentif-bahasa h2 {
+  font-size: 1.25rem;
+  color: #222222;
   font-weight: 700;
-  margin-bottom: 0.3rem;
+  margin-bottom: 1rem;
   line-height: 1.4;
   border-left: 4px solid #0077ff;
   padding-left: 0.6rem;
@@ -17,86 +47,56 @@
 
 .centered__program-insentif-bahasa h3 {
   font-size: 1.1rem;
-  color: #333333;
-
-  font-weight: 700;
-
+  color: #222222;
+  font-weight: 600;
   margin-bottom: 0.5rem;
 }
 
 .centered__program-insentif-bahasa h4 {
   font-size: 1.02rem;
   color: #444444;
-
   font-weight: 600;
   margin-bottom: 0.3rem;
 }
 
+/* Typography Paragraf */
 .centered__program-insentif-bahasa p {
   font-size: 0.9rem;
-  color: #4f4f4f;
+  color: #555555;
   line-height: 1.6;
   font-weight: 400;
-
-  margin-bottom: 0.5rem;
+  margin-bottom: 1rem;
 }
 
-.centered__program-insentif-bahasa ul {
+/* List Bahasa */
+.bahasa-list {
   margin-left: 1.2rem;
   margin-bottom: 1rem;
   list-style-type: disc;
 }
 
-.centered__program-insentif-bahasa li {
-  margin-bottom: 0.3rem;
-  color: #555555;
+.bahasa-list li {
+  margin-bottom: 0.4rem;
+  color: #4b5563;
   font-size: 0.9rem;
   line-height: 1.5;
 }
 
-/* --- Checklist style --- */
-.centered__program-insentif-bahasa .checklist {
-  list-style: none; /* hilangkan bullet bawaan */
-  margin: 0;
-  padding: 0;
+/* Responsiveness untuk Tablet dan Mobile */
+@media (max-width: 992px) {
+  .bahasa-flex-container {
+    flex-direction: column;
+    gap: 24px;
+  }
+
+  .bahasa-image {
+    max-width: 100%;
+  }
 }
 
-.centered__program-insentif-bahasa .checklist li {
-  position: relative;
-  padding-left: 1.6rem; /* kasih ruang buat icon ceklis */
-  margin-bottom: 0.4rem;
-  font-size: 1rem;
-  color: #444;
-  line-height: 1.5;
-}
-
-.centered__program-insentif-bahasa .checklist li::before {
-  content: "✔"; /* ceklis manual */
-  position: absolute;
-  left: 0;
-  top: 0;
-  color: #0077ff; /* biru biar standout */
-  font-weight: bold;
-}
-
-/* --- Numbered list style --- */
-.centered__program-insentif-bahasa .numbered-list {
-  margin-left: 1.5rem;
-  margin-bottom: 1rem;
-  list-style-type: decimal;
-}
-
-.centered__program-insentif-bahasa .numbered-list li {
-  margin-bottom: 0.4rem;
-  color: #555;
-  font-size: 0.9rem;
-  line-height: 1.5;
-}
-
-/* Responsiveness */
 @media (max-width: 768px) {
   .centered__program-insentif-bahasa h2 {
-    font-size: 1.2rem;
+    font-size: 1.15rem;
   }
 
   .centered__program-insentif-bahasa h3 {
@@ -108,7 +108,7 @@
   }
 
   .centered__program-insentif-bahasa p,
-  .centered__program-insentif-bahasa li {
-    font-size: 0.9rem;
+  .bahasa-list li {
+    font-size: 0.85rem;
   }
 }

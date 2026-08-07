@@ -1,3 +1,5 @@
+import "./FlowPembelajaranBahasa.css";
+
 const FlowPembelajaranBahasa = ({ location }) => {
   // 1. Setup Variabel Lokasi
   const locName = location || "Indonesia";
@@ -55,36 +57,36 @@ const FlowPembelajaranBahasa = ({ location }) => {
   ];
 
   return (
-    <section id="university-success-flow" className="university-flow-section">
-      <div className="university-flow-container">
+    <section id="university-success-flow" className="flow-bahasa__section">
+      <div className="flow-bahasa__container">
         {/* DYNAMIC TITLE */}
-        <h2 className="university-flow-title">{selectedTitle}</h2>
+        <h2 className="flow-bahasa__title">{selectedTitle}</h2>
 
         {/* Injeksi Lokasi di Subtitle */}
-        <p className="university-flow-subtitle">
+        <p className="flow-bahasa__subtitle">
           Kami hadir <strong>{locSuffix}</strong> untuk membimbing Anda
           menguasai bahasa baru dengan metode yang efektif dan personal, sesuai
           dengan tujuan dan kecepatan belajar Anda.
         </p>
 
-        <div className="flow-steps-wrapper">
+        <div className="flow-bahasa__steps-wrapper">
           {languageLearningSteps.map((step, index) => (
-            <div className="flow-step-item" key={index}>
-              <div className="flow-step-icon-box">
-                <span className="flow-step-number">{index + 1}</span>
+            <div className="flow-bahasa__item" key={index}>
+              <div className="flow-bahasa__icon-box">
+                <span className="flow-bahasa__number">{index + 1}</span>
                 <img
                   src={step.icon}
                   // Alt Text SEO Friendly
                   alt={`${step.title} - Kursus Bahasa ${locName} - Matrix Tutoring`}
-                  className="flow-step-icon"
+                  className="flow-bahasa__icon"
                   loading="lazy"
                   width="50"
                   height="50"
                 />
               </div>
-              <div className="flow-step-content">
-                <h3 className="flow-step-title">{step.title}</h3>
-                <p className="flow-step-description">{step.description}</p>
+              <div className="flow-bahasa__content">
+                <h3 className="flow-bahasa__step-title">{step.title}</h3>
+                <p className="flow-bahasa__description">{step.description}</p>
               </div>
             </div>
           ))}

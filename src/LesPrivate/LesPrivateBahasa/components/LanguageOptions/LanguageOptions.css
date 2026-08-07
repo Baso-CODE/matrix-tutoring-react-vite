@@ -1,34 +1,109 @@
-/* Card Grid Layout (mengganti grid Tailwind) */
-.lang-grid {
-  display: grid;
-  gap: 2rem; /* gap-8 */
+/* --- Container Utama & Background Section --- */
+.lang-opt__section {
+  text-align: center;
+  background-color: #007bff;
+  overflow: hidden;
+  position: relative;
 }
 
-/* Penyesuaian Responsif untuk Grid */
+.lang-opt__section::before,
+.lang-opt__section::after {
+  content: "";
+  position: absolute;
+  border-radius: 50%;
+  background: rgba(13, 16, 185, 0.03);
+  filter: blur(60px);
+  z-index: 0;
+  pointer-events: none;
+}
+
+.lang-opt__section::before {
+  width: 300px;
+  height: 300px;
+  top: -100px;
+  left: -100px;
+  animation: langOptFloatEffect 12s infinite ease-in-out;
+}
+
+.lang-opt__section::after {
+  width: 350px;
+  height: 350px;
+  bottom: -120px;
+  right: -120px;
+  background: rgba(59, 130, 246, 0.03);
+  animation: langOptFloatEffect 14s infinite ease-in-out reverse;
+}
+
+@keyframes langOptFloatEffect {
+  0% {
+    transform: translate(0, 0) scale(1);
+  }
+  50% {
+    transform: translate(25px, -25px) scale(1.05);
+  }
+  100% {
+    transform: translate(0, 0) scale(1);
+  }
+}
+
+.lang-opt__container {
+  padding-left: 10%;
+  padding-right: 10%;
+  position: relative;
+  z-index: 1;
+  padding-top: 4%;
+  padding-bottom: 5%;
+}
+
+/* --- Typography Judul & Subtitle --- */
+.lang-opt__title {
+  font-size: 1.5rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  color: #ffffff;
+  margin-bottom: 20px;
+  line-height: 1.2;
+  text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.08);
+}
+
+.lang-opt__subtitle {
+  font-size: 0.9rem;
+  color: #f2f2f2;
+  margin-bottom: 50px;
+  max-width: 900px;
+  margin-left: auto;
+  margin-right: auto;
+  line-height: 1.6;
+}
+
+/* --- Card Grid Layout --- */
+.lang-opt__grid {
+  display: grid;
+  gap: 2rem;
+}
+
 @media (min-width: 640px) {
-  /* Sm: 2 kolom */
-  .lang-grid {
+  .lang-opt__grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 }
 
 @media (min-width: 1024px) {
-  /* Lg: 4 kolom */
-  .lang-grid {
+  .lang-opt__grid {
     grid-template-columns: repeat(4, minmax(0, 1fr));
   }
 }
 
-.lang-card {
+/* --- Kartu Bahasa (Lang Card) --- */
+.lang-opt__card {
   background-color: #ffffff;
   border: 3px solid #cbe6ff;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: 1.5rem; /* 24px */
+  font-size: 1.5rem;
   font-weight: 700;
-
   padding: 30px 20px;
   color: #cbe6ff;
   border-radius: 45px;
@@ -37,12 +112,12 @@
     box-shadow 0.3s ease;
 }
 
-.lang-card:hover {
+.lang-opt__card:hover {
   transform: translateY(-5px);
   box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
 }
 
-.lang-card-logo {
+.lang-opt__card-logo {
   width: 70px;
   height: 70px;
   object-fit: contain;
@@ -51,14 +126,15 @@
   pointer-events: none;
 }
 
-.lang-card-header {
+.lang-opt__card-header {
   text-align: center;
   color: #006bde;
   font-size: 1rem;
   margin-top: 10px;
 }
 
-.lang-card-button {
+/* --- Tombol Aksi --- */
+.lang-opt__card-button {
   padding: 10px 20px;
   background-color: transparent;
   color: #006bde;
@@ -73,27 +149,25 @@
 }
 
 @media (max-width: 1024px) {
-  .lang-card-button {
+  .lang-opt__card-button {
     font-size: 13px;
   }
 }
 
-.lang-card-button:hover {
+.lang-opt__card-button:hover {
   color: #1e2127;
   background-color: #cbe6ff;
 }
 
-/* Animasi Wobble untuk Logo saat hover pada Card */
+/* --- Animasi Wobble untuk Logo saat hover pada Card --- */
 @media (prefers-reduced-motion: no-preference) {
-  .lang-card:hover .lang-card-logo {
-    -webkit-animation: lang-wobble-hor-bottom 0.9s ease-in both;
-    animation: lang-wobble-hor-bottom 0.9s ease-in both;
+  .lang-opt__card:hover .lang-opt__card-logo {
+    -webkit-animation: langOptWobble 0.9s ease-in both;
+    animation: langOptWobble 0.9s ease-in both;
   }
 }
 
-/* Keyframes untuk animasi wobble-hor-bottom */
-
-@-webkit-keyframes lang-wobble-hor-bottom {
+@-webkit-keyframes langOptWobble {
   0%,
   100% {
     -webkit-transform: translateX(0%);
@@ -122,7 +196,8 @@
     transform: translateX(-2px) rotate(-1.2deg);
   }
 }
-@keyframes lang-wobble-hor-bottom {
+
+@keyframes langOptWobble {
   0%,
   100% {
     -webkit-transform: translateX(0%);

@@ -1,3 +1,4 @@
+import "./GalleryBelajarSNBT.css";
 const galleryItems = [
   {
     image:
@@ -56,31 +57,32 @@ const galleryItems = [
       "Tips dan strategi mengatur waktu, memilih soal, serta teknik cepat menjawab agar sukses dalam UTBK SNBT.",
   },
 ];
-
 const GalleryBelajarSNBT = () => {
   return (
-    <section className="container-all">
-      <div className="gallery__sd">
-        <div className="gallery-sd__header">
-          <h2 className="gallery-sd__title">
+    <section className="container-all gallery-snbt__section">
+      <div className="gallery-snbt__container">
+        <div className="gallery-snbt__header">
+          <h2 className="gallery-snbt__title">
             Gallery Belajar Program Les Privat SNBT UTBK
           </h2>
-          <p className="gallery-sd__subtitle">
+          <p className="gallery-snbt__subtitle">
             Suasana belajar privat yang efektif, nyaman, dan menyenangkan
             bersama Matrix Tutoring.
           </p>
         </div>
 
-        <div className="gallery-sd__grid">
+        <div className="gallery-snbt__grid">
           {galleryItems.map((item, index) => (
-            <div className="gallery-sd__card-container" key={index}>
-              <div className="gallery-sd__card">
+            <div className="gallery-snbt__card-container" key={index}>
+              <div className="gallery-snbt__card">
                 <div
-                  className="gallery-sd__img-content"
+                  className="gallery-snbt__img-content"
                   style={{ backgroundImage: `url(${item.image})` }}></div>
-                <div className="gallery-sd__content">
-                  <p className="gallery-sd__heading">{item.title}</p>
-                  <p className="gallery-sd__description">{item.description}</p>
+                <div className="gallery-snbt__content">
+                  <p className="gallery-snbt__heading">{item.title}</p>
+                  <p className="gallery-snbt__description">
+                    {item.description}
+                  </p>
                 </div>
               </div>
             </div>

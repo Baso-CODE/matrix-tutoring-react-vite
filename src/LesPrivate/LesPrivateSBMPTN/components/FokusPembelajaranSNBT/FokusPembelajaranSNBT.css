@@ -10,6 +10,7 @@
     padding-right: 4%;
   }
 }
+
 .centered-content__learnhing_focus {
   width: 100%;
 }
@@ -17,7 +18,6 @@
 .centered-content__learnhing_focus h2 {
   font-size: 1.3rem;
   color: #333333;
-
   font-weight: 700;
   margin-bottom: 0.6rem;
   line-height: 1.5;
@@ -28,7 +28,6 @@
 .centered-content__learnhing_focus h3 {
   font-size: 1.1rem;
   color: #333333;
-
   font-weight: 600;
   margin-top: 1.2rem;
   margin-bottom: 0.5rem;
@@ -40,12 +39,12 @@
   line-height: 1.6;
   font-weight: 400;
 }
+
 .centered-content__learnhing_focus p {
   font-size: 0.9rem;
   color: #4f4f4f;
   line-height: 1.6;
   font-weight: 400;
-
   margin-bottom: 0.7rem;
 }
 
@@ -57,7 +56,6 @@
 
 .centered-content__learnhing_focus .numbered-list__learnhing-focus {
   margin-left: 1.5rem;
-
   list-style-type: decimal;
 }
 
@@ -70,13 +68,25 @@
 .learnhing_focus_row {
   display: flex;
   flex-wrap: wrap;
-  gap: 30px; /* jarak antar kolom */
-  margin-bottom: 2rem;
+  gap: 20px;
+  margin-top: 1.2rem;
+  margin-bottom: 1.5rem;
 }
 
 .learnhing_focus_col {
   flex: 1;
-  min-width: 300px; /* biar responsif */
+  min-width: 280px;
+}
+
+/* --- Styling Khusus Gambar agar Jelas & Proporsional --- */
+.learnhing_focus_image {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+  display: block;
 }
 
 /* Responsiveness */
@@ -92,5 +102,9 @@
   .centered-content__learnhing_focus p,
   .centered-content__learnhing_focus li {
     font-size: 0.9rem;
+  }
+
+  .learnhing_focus_image {
+    border-radius: 8px;
   }
 }

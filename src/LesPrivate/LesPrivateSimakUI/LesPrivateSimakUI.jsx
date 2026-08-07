@@ -24,7 +24,6 @@ import FlowBelajarSimakUI from "./components/FlowBelajarSimakUI/FlowBelajarSimak
 import HeroSimakUI from "./components/HeroSimakUI/HeroSimakUI";
 import LesPrivateSimakUIHeader from "./components/LesPrivateSimakUIHeader";
 import ProgramSpesialisSimak from "./components/ProgramSpesialisSimak/ProgramSpesialisSimak";
-import WhyShouldYouTake from "./components/WhyShouldYouTake";
 
 const items = [
   {
@@ -217,7 +216,6 @@ const LesPrivateSimakUI = () => {
       <ProfileMatrixTutoring title={"SIMAK UI Terbaik"} />
       <TutorLesprivatMatrix />
       <LesprivatKota />
-      <WhyShouldYouTake />
       <ProgramSpesialisSimak />
       <FlowBelajarSimakUI />
       <section id="program-les-private-matrix-tutoring">
