@@ -1,4 +1,13 @@
+import { Autoplay, Pagination } from "swiper/modules";
+import { Swiper, SwiperSlide } from "swiper/react";
+
+// Import Swiper styles
+import "swiper/css";
+import "swiper/css/autoplay";
+import "swiper/css/pagination";
+
 import "./TutorLesprivatMatrix.css";
+
 const TutorLesprivatMatrix = ({ location }) => {
   const universities = [
     {
@@ -62,6 +71,7 @@ const TutorLesprivatMatrix = ({ location }) => {
       logo: "/images/logo-univ/al-azhar-cairo.webp",
     },
   ];
+
   return (
     <div className="tutor__section">
       <h2 className="tutor__title">
@@ -69,29 +79,59 @@ const TutorLesprivatMatrix = ({ location }) => {
       </h2>
       <div className="container__tutor-description">
         <p className="tutor__description">
-          Pengajar Matrix Tutoring adalah dosen, asisten dosen, guru, mahasiswa
-          ,dan alumni dari UI, UGM, ITB, IPB, STAN, STIS, UNJ, dan berbagai
+          Pengajar Matrix Tutoring adalah dosen, asisten dosen, guru, mahasiswa,
+          dan alumni dari UI, UGM, ITB, IPB, STAN, STIS, UNJ, dan berbagai
           Perguruan Tinggi lainnya yang telah memiliki pengalaman, diseleksi
           secara ketat, dilatih dan diarahkan mengajar sesuai dengan
           spesialisasi dalam bidang ilmu yang dikuasai.
         </p>
       </div>
-      <div className="tutor__grid">
-        {universities.map((univ, idx) => (
-          <div className="tutor__card" key={idx}>
-            <img
-              src={univ.logo}
-              alt={`Pengajar Les Privat Offline & Online dari ${univ.name} di ${
-                location ? `${location}` : "Indonesia"
-              }`}
-              className="tutor__logo"
-            />
-            <p className="tutor__card-title">{univ.name}</p>
-            <div className="tutor__go-corner">
-              <div className="tutor__go-arrow">→</div>
-            </div>
-          </div>
-        ))}
+
+      <div className="tutor__slider-wrapper">
+        <Swiper
+          modules={[Pagination, Autoplay]}
+          spaceBetween={20}
+          slidesPerView={2} // Default untuk mobile
+          pagination={{ clickable: true, dynamicBullets: true }}
+          autoplay={{ delay: 2500, disableOnInteraction: false }}
+          breakpoints={{
+            640: {
+              slidesPerView: 2,
+              spaceBetween: 20,
+            },
+            768: {
+              slidesPerView: 3,
+              spaceBetween: 20,
+            },
+            1024: {
+              slidesPerView: 4,
+              spaceBetween: 24,
+            },
+            1280: {
+              slidesPerView: 5,
+              spaceBetween: 24,
+            },
+          }}
+          className="tutor__swiper">
+          {universities.map((univ, idx) => (
+            <SwiperSlide key={idx}>
+              <div className="tutor__card">
+                <img
+                  src={univ.logo}
+                  alt={`Pengajar Les Privat Offline & Online dari ${
+                    univ.name
+                  } di ${location ? `${location}` : "Indonesia"}`}
+                  className="tutor__logo"
+                  loading="lazy"
+                />
+                <p className="tutor__card-title">{univ.name}</p>
+                <div className="tutor__go-corner">
+                  <div className="tutor__go-arrow">→</div>
+                </div>
+              </div>
+            </SwiperSlide>
+          ))}
+        </Swiper>
       </div>
     </div>
   );

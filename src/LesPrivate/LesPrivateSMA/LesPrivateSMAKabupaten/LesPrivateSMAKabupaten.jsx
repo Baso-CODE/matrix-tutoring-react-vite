@@ -372,8 +372,6 @@ const LesPrivateSMAKabupaten = () => {
         desc={heroData?.description}
         location={nameCountry}
       />
-      {/* <EmbrelaSlider /> */}
-      {/* <Slidertop /> */}
       <TableOfContents title="Table of Contents" items={items} />
       <ImpactStatistics />
       <WhyMTXImportant location={nameCountry} />

@@ -360,8 +360,6 @@ const LesPrivateSBMPTNKkota = () => {
         desc={heroData?.description}
       />
       <ImpactStatistics />
-      {/* <EmbrelaSlider /> */}
-      {/* <Slidertop /> */}
       <TableOfContents title="Table of Contents" items={items} />
       <PreparationToPTN location={nameCountry} />
       <ProgramSpesialisSNBT />

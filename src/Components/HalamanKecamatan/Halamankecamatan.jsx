@@ -129,7 +129,6 @@ const Halamankecamatan = () => {
           />
         </div>
       </div>
-      {/* <EmbrelaSlider /> */}
       <ProgramLesPrivatV2 />
       <FiturProgramNew />
       <PilihanProgram />

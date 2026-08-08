@@ -204,7 +204,6 @@ const LesPrivateSMP = () => {
       </Helmet>
       <HeroSMP />
       <ImpactStatistics />
-      {/* <EmbrelaSlider /> */}
       <TableOfContents title="Table of Contents" items={items} />
       <SolusiBelajarSMP />
       <ProgramBelajarSMP />

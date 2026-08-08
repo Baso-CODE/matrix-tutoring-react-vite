@@ -168,8 +168,6 @@ const LesPrivateSBMPTN = () => {
       </Helmet>
       <HeroSNBT />
       <ImpactStatistics />
-      {/* <EmbrelaSlider /> */}
-      {/* <Slidertop /> */}
       <TableOfContents title="Table of Contents" items={items} />
       <PreparationToPTN />
       <ProgramSpesialisSNBT />

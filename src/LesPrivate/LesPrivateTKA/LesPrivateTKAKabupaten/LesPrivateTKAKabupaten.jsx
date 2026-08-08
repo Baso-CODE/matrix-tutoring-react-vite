@@ -369,7 +369,6 @@ const LesPrivateTKAKabupaten = () => {
       />
       <ImpactStatistics />
       <TableOfContents title="Table of Contents" items={items} />
-      {/* <EmbrelaSlider /> */}
       <FokusPersiapanTKA location={nameCountry} />
       <InformasiSeputarTKA location={nameCountry} />
       <MataPelajaranTKATable location={nameCountry} />

@@ -126,7 +126,6 @@ const Halamankabupaten = () => {
           />
         </div>
       </div>
-      {/* <EmbrelaSlider /> */}
       <ProgramLesPrivatV2 />
       <FiturProgramNew />
       <PilihanProgram />

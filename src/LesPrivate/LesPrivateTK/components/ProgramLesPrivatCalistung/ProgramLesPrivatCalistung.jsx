@@ -76,7 +76,7 @@ const ProgramLesPrivatCalistung = ({ location }) => {
               src="/images/les-private/tk/program-tk-calistung-siswa.webp"
               // Alt Text dioptimalkan dengan keyword lokasi
               alt={`Guru Les Privat Calistung ${locationSuffix} membantu siswa belajar membaca - Matrix Tutoring`}
-              className="les-privat-sd-image"
+              className="les-privat-calistung-image"
               loading="lazy"
               width="600" // Good practice untuk SEO (CLS Metric)
               height="400"

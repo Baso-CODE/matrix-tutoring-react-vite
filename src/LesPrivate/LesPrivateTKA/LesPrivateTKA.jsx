@@ -200,8 +200,6 @@ const LesPrivateTKA = () => {
       </Helmet>
       <HeroTKA />
       <ImpactStatistics />
-      {/* <EmbrelaSlider /> */}
-      {/* <Slidertop /> */}
       <TableOfContents title="Table of Contents" items={items} />
       <FokusPersiapanTKA />
       <InformasiSeputarTKA />

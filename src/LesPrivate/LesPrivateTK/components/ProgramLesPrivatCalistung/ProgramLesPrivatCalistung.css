@@ -15,6 +15,16 @@
   padding-left: 0.6rem;
 }
 
+/* --- Image Style --- */
+.les-privat-calistung-image {
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+  object-fit: cover;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+}
+
 .container-calistung-left-right {
   display: flex;
   align-items: start;

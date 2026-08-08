@@ -1,3 +1,4 @@
+import "./SBMPTNFlow.css";
 const successSteps = [
   {
     icon: "/images/les-private/simak-ui/flow-simak-ui/light-bulb.webp",
@@ -39,30 +40,30 @@ const successSteps = [
 
 const SBMPTNFlow = () => {
   return (
-    <section id="sbmptn-success-flow" className="university-flow-section">
-      <div className="university-flow-container">
-        <h2 className="university-flow-title">
+    <section id="sbmptn-success-flow" className="sbmptn-flow-section">
+      <div className="sbmptn-flow-container">
+        <h2 className="sbmptn-flow-title">
           Langkah Menuju Kesuksesan SNBT UTBK
         </h2>
-        <p className="university-flow-subtitle">
+        <p className="sbmptn-flow-subtitle">
           Matrix Tutoring memandu Anda melalui setiap tahapan persiapan,
           memastikan Anda siap menghadapi SNBT UTBK dan meraih PTN impian.
         </p>
-        <div className="flow-steps-wrapper">
+        <div className="sbmptn-steps-wrapper">
           {successSteps.map((step, index) => (
-            <div className="flow-step-item" key={index}>
-              <div className="flow-step-icon-box">
-                <span className="flow-step-number">{index + 1}</span>
+            <div className="sbmptn-step-item" key={index}>
+              <div className="sbmptn-step-icon-box">
+                <span className="sbmptn-step-number">{index + 1}</span>
                 <img
                   src={step.icon}
                   alt={`Icon ${step.title}`}
-                  className="flow-step-icon"
+                  className="sbmptn-step-icon"
                   loading="lazy"
                 />
               </div>
-              <div className="flow-step-content">
-                <h3 className="flow-step-title">{step.title}</h3>
-                <p className="flow-step-description">{step.description}</p>
+              <div className="sbmptn-step-content">
+                <h3 className="sbmptn-step-title">{step.title}</h3>
+                <p className="sbmptn-step-description">{step.description}</p>
               </div>
             </div>
           ))}

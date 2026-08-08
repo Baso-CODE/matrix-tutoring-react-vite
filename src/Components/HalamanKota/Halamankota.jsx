@@ -125,7 +125,6 @@ const Halamankota = () => {
           />
         </div>
       </div>
-      {/* <EmbrelaSlider /> */}
       <ProgramLesPrivatV2 />
       <FiturProgramNew />
       <PilihanProgram />

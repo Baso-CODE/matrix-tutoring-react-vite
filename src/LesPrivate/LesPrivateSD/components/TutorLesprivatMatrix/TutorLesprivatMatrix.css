@@ -9,46 +9,72 @@
 
 .tutor__title {
   font-size: 1.3rem;
-
   font-weight: 800;
   text-transform: uppercase;
   margin-bottom: 10px;
   color: #ffffff;
 }
+
 .container__tutor-description {
   display: flex;
   justify-content: center;
 }
+
 .tutor__description {
   font-size: 0.9rem;
   justify-content: center;
   text-align: center;
-
   font-weight: normal;
   max-width: 70%;
-  margin-bottom: 40px;
+  margin-bottom: 30px;
   color: #f2f2f2;
 }
 
-.tutor__grid {
-  display: grid;
-  grid-template-columns: repeat(5, 1fr);
-  gap: 20px;
+/* --- Pengaturan Wrapper Swiper --- */
+.tutor__slider-wrapper {
   width: 100%;
-  /* justify-items: center; */
+  position: relative;
 }
+
+.tutor__swiper {
+  padding-top: 15px !important;
+  padding-bottom: 50px !important;
+  padding-left: 10px !important;
+  padding-right: 10px !important;
+}
+
+/* KUNCI: Membuat semua slide memiliki tinggi yang sama rata */
+.tutor__swiper .swiper-slide {
+  height: auto !important; /* Memaksa slide menyesuaikan tinggi merata */
+  display: flex;
+}
+
+/* Kustomisasi warna pagination dots */
+.tutor__swiper .swiper-pagination-bullet {
+  background: rgba(255, 255, 255, 0.5);
+  opacity: 1;
+}
+
+.tutor__swiper .swiper-pagination-bullet-active {
+  background: #ffffff;
+}
+
+/* --- Desain Card --- */
 .tutor__card {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
+  justify-content: center; /* Memusatkan konten secara vertikal */
   position: relative;
-  /* max-width: 200px; */
-  min-height: 220px;
+
+  /* KUNCI: Memastikan card mengisi penuh lebar dan tinggi seragam */
+  width: 100%;
+  height: 100%;
+  min-height: 240px; /* Memberikan batas minimal tinggi agar proporsional */
+
   background: linear-gradient(to bottom, #c3e6ec, #a7d1d9);
   border-radius: 10px;
   padding: 20px;
-  /* margin: 12px; */
   text-align: center;
   overflow: hidden;
   z-index: 0;
@@ -86,7 +112,8 @@
   color: #262626;
   font-size: 1rem;
   font-weight: 600;
-
+  line-height: 1.4;
+  margin: 0; /* Hapus margin default agar lebih rapi */
   transition: all 0.4s ease-out;
 }
 
@@ -103,8 +130,8 @@
   align-items: center;
   justify-content: center;
   position: absolute;
-  width: 2em;
-  height: 2em;
+  width: 2.5em; /* Sedikit diperbesar agar presisi */
+  height: 2.5em;
   top: 0;
   right: 0;
   background: linear-gradient(135deg, #f2f2f2, #ffffff);
@@ -118,28 +145,31 @@
   font-family: courier, sans;
 }
 
+/* Kustomisasi warna pagination dots agar terlihat di background biru */
+.tutor__swiper .swiper-pagination-bullet {
+  background: rgba(255, 255, 255, 0.5);
+  opacity: 1;
+}
+
+.tutor__swiper .swiper-pagination-bullet-active {
+  background: #ffffff;
+}
+
+/* --- Responsiveness --- */
 @media (max-width: 1024px) {
   .tutor__section {
     padding-left: 4%;
     padding-right: 4%;
   }
-  .tutor__grid {
-    grid-template-columns: repeat(3, 1fr); /* Tablet 3 kolom */
-  }
 }
 
 @media (max-width: 768px) {
+  .tutor__section {
+    padding-left: 2%;
+    padding-right: 2%;
+  }
   .tutor__description {
     font-size: 0.9rem;
-    max-width: 90%;
-  }
-  .tutor__grid {
-    grid-template-columns: repeat(2, 1fr); /* Selalu 2 kolom di mobile */
-    gap: 16px; /* bisa disesuaikan biar lebih rapat */
-  }
-
-  .tutor__card {
-    max-width: 100%; /* biar fleksibel */
-    margin: 0; /* hapus margin agar rapat */
+    max-width: 100%;
   }
 }

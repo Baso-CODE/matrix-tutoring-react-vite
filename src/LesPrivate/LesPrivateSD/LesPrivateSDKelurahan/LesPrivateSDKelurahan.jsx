@@ -379,7 +379,6 @@ const LesPrivateSDKelurahan = () => {
         desc={heroData?.description}
         location={nameCountry}
       />
-      {/* <EmbrelaSlider /> */}
       <TableOfContents title="Table of Contents" items={items} />
       <ImpactStatistics />
       <ProgramLesPrivatSD location={nameCountry} />

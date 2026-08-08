@@ -216,7 +216,6 @@ const LesPrivateSMA = () => {
       </Helmet>
       <HeroSMA />
       <ImpactStatistics />
-      {/* <EmbrelaSlider /> */}
       <TableOfContents title="Table of Contents" items={items} />
       <WhyMTXImportant />
       <LesPrivatSMAMetode />

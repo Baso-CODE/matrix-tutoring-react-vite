@@ -328,8 +328,6 @@ const LesPrivateBahasaKota = () => {
         desc={heroData?.description}
         location={nameCountry}
       />
-      {/* <EmbrelaSlider /> */}
-      {/* <Slidertop /> */}
       <TableOfContents title="Table of Contents" items={items} />
       <ContentLesPrivatBahasa location={nameCountry} />
       <ProgaramLesPrivatBahasa location={nameCountry} />

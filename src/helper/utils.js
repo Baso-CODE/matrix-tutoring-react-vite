@@ -1,13 +1,13 @@
 import {
   BookOpenText,
-  Users,
-  GraduationCap,
-  ClipboardCheck,
-  Edit3,
-  Globe,
   CheckCircle,
-  FileText,
+  ClipboardCheck,
   Coffee,
+  Edit3,
+  FileText,
+  Globe,
+  GraduationCap,
+  Users,
 } from "lucide-react"; // Import the necessary icons
 
 export const Menus = [

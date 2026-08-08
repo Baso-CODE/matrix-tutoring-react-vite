@@ -391,7 +391,6 @@ const LesPrivateSimakUIKabupaten = () => {
         location={nameCountry}
       />
 
-      {/* <EmbrelaSlider /> */}
       <TableOfContents title="Table of Contents" items={items} />
       <LesPrivateSimakUIHeader location={nameCountry} />
       <TestimoniWaSNBT location={nameCountry} />

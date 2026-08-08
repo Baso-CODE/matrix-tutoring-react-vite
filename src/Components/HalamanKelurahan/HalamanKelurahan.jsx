@@ -116,7 +116,6 @@ const Halamankelurahan = () => {
           />
         </div>
       </div>
-      {/* <EmbrelaSlider /> */}
       <ProgramLesPrivatV2 />
       <FiturProgramNew />
       <PilihanProgram />

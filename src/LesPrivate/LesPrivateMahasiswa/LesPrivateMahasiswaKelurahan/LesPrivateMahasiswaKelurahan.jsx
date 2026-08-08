@@ -395,7 +395,6 @@ const LesPrivateMahasiswaKelurahan = () => {
         desc={heroData?.description}
       />
       <ImpactStatistics />
-      {/* <EmbrelaSlider /> */}
       <TableOfContents title="Table of Contents" items={items} />
       <LesPrivatMahasiswaContent location={nameCountry} />
       <ProgamLesPrivatMahasiswa location={nameCountry} />
