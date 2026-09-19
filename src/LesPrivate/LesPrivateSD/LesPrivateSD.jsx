@@ -14,6 +14,7 @@ import ProgramLesPrivatV2 from "../../Components/ProgramLesPrivatNew/ProgramLesP
 import PilihanProgram from "../../Components/ProgramOptions/PilihanProgram";
 import SuccessStoryLesPrivate from "../../Components/SuccesStoryLesPrivate/SuccesStoryLesPrivate";
 import TestimoniOrtuSiswa from "../../Components/TestimoniOrtuSiswa/TestimoniOrtuSiswa";
+import TestimoniOrtuSiswaV2 from "../../Components/TestimoniOrtuSiswa/TestimoniOrtuSiswaV2";
 import PromoHomepage from "../../Home/PromoHomepage/PromoHomepage";
 import TableOfContents from "../components/TableOfContent";
 import ImpactStatistics from "../LesPrivateMahasiswa/components/ImpactStatistics/ImpactStatistics";
@@ -232,6 +233,7 @@ const LesPrivateSD = () => {
       <WhyMatrixFeatures />
       <MatrixSubjects />
       <SuccessStoryLesPrivate />
+      <TestimoniOrtuSiswaV2 />
       {/* <TestimonialSiswa /> */}
       <TestimoniOrtuSiswa />
       <section id="asal-sekolah-siswa-matrix-tutoring-private">

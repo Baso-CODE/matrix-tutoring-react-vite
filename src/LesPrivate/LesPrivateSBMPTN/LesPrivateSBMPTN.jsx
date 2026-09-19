@@ -204,6 +204,8 @@ const LesPrivateSBMPTN = () => {
       <ProgramBelajarLesPrivat />
       <WhyMatrixFeatures />
       <MatrixSubjects />
+
+      <TestimoniOrtuSiswaV2 />
       <TestimoniOrtuSiswa />
       <section id="asal-sekolah-siswa-matrix-tutoring-private">
         <AsalSekolahSiswaEdumatrix />

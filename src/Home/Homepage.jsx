@@ -15,6 +15,7 @@ import WhyMatrixFeatures from "../Components/MatrixFeatures/WhyMatrixFeatures";
 import ProgramLesPrivatV2 from "../Components/ProgramLesPrivatNew/ProgramLesPrivatV2 ";
 import SuccessStoryLesPrivate from "../Components/SuccesStoryLesPrivate/SuccesStoryLesPrivate";
 import TestimoniOrtuSiswa from "../Components/TestimoniOrtuSiswa/TestimoniOrtuSiswa";
+import TestimoniOrtuSiswaV2 from "../Components/TestimoniOrtuSiswa/TestimoniOrtuSiswaV2";
 import KurikulumLesPrivate from "../LesPrivate/LesPrivateSD/components/KurikulumLesPrivate/KurikulumLesPrivate";
 import LesprivatKota from "../LesPrivate/LesPrivateSD/components/LesprivatKota/LesprivatKota";
 import "./Homepage.css";
@@ -77,6 +78,7 @@ const Homepage = () => {
         <WhyMatrixFeatures />
         <MatrixSubjects />
         <SuccessStoryLesPrivate />
+        <TestimoniOrtuSiswaV2 />
 
         <TestimoniOrtuSiswa />
         <AsalSekolahSiswaEdumatrix />

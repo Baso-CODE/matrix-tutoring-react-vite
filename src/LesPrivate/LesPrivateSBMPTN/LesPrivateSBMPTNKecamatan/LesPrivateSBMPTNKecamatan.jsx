@@ -15,6 +15,7 @@ import ProgramLesPrivatV2 from "../../../Components/ProgramLesPrivatNew/ProgramL
 import PilihanProgram from "../../../Components/ProgramOptions/PilihanProgram";
 import SuccessStoryLesPrivate from "../../../Components/SuccesStoryLesPrivate/SuccesStoryLesPrivate";
 import TestimoniOrtuSiswa from "../../../Components/TestimoniOrtuSiswa/TestimoniOrtuSiswa";
+import TestimoniOrtuSiswaV2 from "../../../Components/TestimoniOrtuSiswa/TestimoniOrtuSiswaV2";
 import { getAllKecamatanBySlug } from "../../../helper/request/getAllKecamatanBySlug";
 import PromoHomepage from "../../../Home/PromoHomepage/PromoHomepage";
 import { getHeroData } from "../../../utils/getHeroData";
@@ -376,7 +377,6 @@ const LesPrivateSBMPTNKecamatan = () => {
   `}
         </script>
       </Helmet>
-
       <HeroLesPrivate
         nameCountry={nameCountry}
         images={heroImageSrc}
@@ -423,6 +423,7 @@ const LesPrivateSBMPTNKecamatan = () => {
       <ProgramBelajarLesPrivat location={nameCountry} />
       <WhyMatrixFeatures />
       <MatrixSubjects />
+      <TestimoniOrtuSiswaV2 />
       <TestimoniOrtuSiswa location={nameCountry} />
       <section id="asal-sekolah-siswa-matrix-tutoring-private">
         <AsalSekolahSiswaEdumatrix />

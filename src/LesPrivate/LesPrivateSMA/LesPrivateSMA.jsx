@@ -26,6 +26,7 @@ import LesPrivatSMAMetode from "./components/LesPrivatSMAMetode/LesPrivatSMAMeto
 
 import MatrixSubjects from "../../Components/MatrixFeatures/MatrixSubjects";
 import WhyMatrixFeatures from "../../Components/MatrixFeatures/WhyMatrixFeatures";
+import TestimoniOrtuSiswaV2 from "../../Components/TestimoniOrtuSiswa/TestimoniOrtuSiswaV2";
 import LogoPengajarMTX from "./components/LogoAlumniTutor/LogoPengajarMTX";
 import ProgaramLesPrivatSMA from "./components/ProgaramLesPrivatSMA/ProgaramLesPrivatSMA";
 import PTNSuccessStrategy from "./components/PTNSuccessStrategy/PTNSuccessStrategy";
@@ -252,6 +253,7 @@ const LesPrivateSMA = () => {
       <WhyMatrixFeatures />
       <MatrixSubjects />
       <SuccessStoryLesPrivate />
+      <TestimoniOrtuSiswaV2 />
       {/* <TestimonialSiswa /> */}
       <TestimoniOrtuSiswa />
       <section id="asal-sekolah-siswa-matrix-tutoring-private">

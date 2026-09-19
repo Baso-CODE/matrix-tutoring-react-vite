@@ -15,6 +15,7 @@ import ProgramLesPrivatV2 from "../../../Components/ProgramLesPrivatNew/ProgramL
 import PilihanProgram from "../../../Components/ProgramOptions/PilihanProgram";
 import SuccessStoryLesPrivate from "../../../Components/SuccesStoryLesPrivate/SuccesStoryLesPrivate";
 import TestimoniOrtuSiswa from "../../../Components/TestimoniOrtuSiswa/TestimoniOrtuSiswa";
+import TestimoniOrtuSiswaV2 from "../../../Components/TestimoniOrtuSiswa/TestimoniOrtuSiswaV2";
 import { getAllKotBySlug } from "../../../helper/request/getAllKotaBySlug";
 import PromoHomepage from "../../../Home/PromoHomepage/PromoHomepage";
 import { getHeroData } from "../../../utils/getHeroData";
@@ -392,6 +393,7 @@ const LesPrivateSimakUIKota = () => {
       <WhyMatrixFeatures />
       <MatrixSubjects />
       <SuccessStoryLesPrivate location={nameCountry} />
+      <TestimoniOrtuSiswaV2 />
       <TestimoniOrtuSiswa location={nameCountry} />
       <section id="asal-sekolah-siswa-matrix-tutoring-private">
         <AsalSekolahSiswaEdumatrix />
