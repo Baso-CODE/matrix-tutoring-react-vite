@@ -1,57 +1,132 @@
-import React, { useEffect, useState } from "react";
-import useEmblaCarousel from "embla-carousel-react";
 import Autoplay from "embla-carousel-autoplay";
+import useEmblaCarousel from "embla-carousel-react";
+import { useEffect, useState } from "react";
+import { FiX, FiZoomIn } from "react-icons/fi";
+
 import "./TestimoniOrtuSiswa.css";
+
 import { getAllTestimoniSiswaOrangTua } from "../../helper/request/getAllTestimoniSiswaOrangTua";
 import TestimoniCardOrtuSiswa from "./TestimoniCardOrtuSiswa";
 
 const TestimoniOrtuSiswa = ({ location }) => {
   const [dataTestimoniOrangTua, setDataTestimoniOrtu] = useState([]);
+  const [selectedItem, setSelectedItem] = useState(null);
 
   useEffect(() => {
     const fetchDataOrangTua = async () => {
       try {
         const response = await getAllTestimoniSiswaOrangTua();
-        setDataTestimoniOrtu(response.data);
+
+        setDataTestimoniOrtu(response.data || []);
       } catch (error) {
         console.error("Error fetching testimonials:", error);
       }
     };
+
     fetchDataOrangTua();
   }, []);
 
-  // Embla carousel instance
+  useEffect(() => {
+    if (!selectedItem) return;
+
+    const handleKeyDown = (event) => {
+      if (event.key === "Escape") {
+        setSelectedItem(null);
+      }
+    };
+
+    const previousOverflow = document.body.style.overflow;
+
+    document.body.style.overflow = "hidden";
+
+    window.addEventListener("keydown", handleKeyDown);
+
+    return () => {
+      document.body.style.overflow = previousOverflow;
+
+      window.removeEventListener("keydown", handleKeyDown);
+    };
+  }, [selectedItem]);
+
   const [emblaRef] = useEmblaCarousel(
     {
       loop: true,
       align: "start",
-      breakpoints: {
-        "(min-width: 768px)": { slidesToScroll: 2, slidesToShow: 2 },
-        "(min-width: 1024px)": { slidesToScroll: 3, slidesToShow: 3 },
-      },
       slidesToScroll: 1,
-      slidesToShow: 1,
     },
-    [Autoplay({ delay: 2800, stopOnInteraction: false })]
+    [
+      Autoplay({
+        delay: 2800,
+        stopOnInteraction: false,
+      }),
+    ],
   );
 
+  const handleCardKeyDown = (event, data) => {
+    if (event.key === "Enter" || event.key === " ") {
+      event.preventDefault();
+
+      setSelectedItem(data);
+    }
+  };
+
   return (
-    <section className="container-all">
-      <div className="testimonial-slider-ortu-siswa-container">
-        <h2 className="title-testimonial-orang-tua-siswa">
-          Testimoni Orang Tua
-        </h2>
-        <div className="embla" ref={emblaRef}>
-          <div className="embla__container">
-            {dataTestimoniOrangTua.map((data, index) => (
-              <div className="embla__slide-tesimoni-ortu" key={index}>
-                <TestimoniCardOrtuSiswa data={data} location={location} />
+    <>
+      <section className="ortu-testimoni-slider-section">
+        <div className="container-all">
+          <div className="ortu-testimoni-slider-wrapper">
+            <h2 className="ortu-testimoni-slider-title">Testimoni Orang Tua</h2>
+
+            <div className="ortu-testimoni-slider-viewport" ref={emblaRef}>
+              <div className="ortu-testimoni-slider-container">
+                {dataTestimoniOrangTua.map((data, index) => (
+                  <div
+                    className="ortu-testimoni-slider-slide"
+                    key={data?.id || index}>
+                    <div
+                      className="ortu-testimoni-slider-item"
+                      role="button"
+                      tabIndex={0}
+                      aria-label={`Lihat testimoni ${data?.name || ""}`}
+                      onClick={() => setSelectedItem(data)}
+                      onKeyDown={(event) => handleCardKeyDown(event, data)}>
+                      <TestimoniCardOrtuSiswa data={data} location={location} />
+
+                      <span className="ortu-testimoni-slider-zoom">
+                        <FiZoomIn />
+                      </span>
+                    </div>
+                  </div>
+                ))}
               </div>
-            ))}
+            </div>
           </div>
         </div>
-      </div>
-    </section>
+      </section>
+
+      {selectedItem && (
+        <div
+          className="ortu-testimoni-modal"
+          role="dialog"
+          aria-modal="true"
+          aria-label={`Testimoni ${selectedItem?.name || ""}`}
+          onClick={() => setSelectedItem(null)}>
+          <button
+            type="button"
+            className="ortu-testimoni-modal-close"
+            aria-label="Tutup testimoni"
+            onClick={() => setSelectedItem(null)}>
+            <FiX />
+          </button>
+
+          <div
+            className="ortu-testimoni-modal-content"
+            onClick={(event) => event.stopPropagation()}>
+            <TestimoniCardOrtuSiswa data={selectedItem} location={location} />
+          </div>
+        </div>
+      )}
+    </>
   );
 };
 

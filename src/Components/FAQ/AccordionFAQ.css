@@ -1,137 +1,340 @@
-.accordion-container-faq {
-  border: 1px solid #e5e7eb;
-  border-radius: 8px;
-  overflow: hidden;
-}
+/* =========================================================
+   FAQ SECTION
+========================================================= */
 
-/* Tombol header setiap FAQ */
-.accordion-button-faq {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  width: 100%;
-  padding: 16px 20px;
-  text-align: left;
-  background-color: #f9fafb;
-  border: none;
-  cursor: pointer;
-  outline: none;
-  transition: background-color 0.3s ease;
-}
-
-.accordion-button-faq:hover {
-  background-color: #f3f4f6;
-}
-
-/* Gaya teks pertanyaan */
-.accordion-button-faq span {
-  font-size: 0.9rem;
-  font-weight: 600;
-  color: #1f2937;
-
-  flex-grow: 1;
-  margin-right: 16px;
-}
-
-/* Gaya ikon SVG */
-.accordion-button-faq svg {
-  width: 24px;
-  height: 24px;
-  color: #4f46e5;
-  transition: transform 0.3s ease-in-out;
-  flex-shrink: 0;
-}
-
-/* Rotasi ikon saat accordion terbuka */
-.accordion-button-faq.rotate svg {
-  transform: rotate(90deg);
-}
-
-/* Konten jawaban FAQ */
-.accordion-content {
-  overflow: hidden;
-  transition: max-height 0.4s ease-in-out; /* Transisi lebih halus */
-}
-
-.accordion-content-inner {
-  padding: 16px 20px;
-  font-weight: 400;
-  font-size: 0.8rem;
-  color: #f4f4f4;
-
-  background-color: #007bff;
-  border-top: 1px solid #e5e7eb;
-}
-
-/* Kontainer utama halaman FAQ */
 .main-container-faq {
   padding-top: 10vh;
   padding-left: 10%;
   padding-right: 10%;
   padding-bottom: 10vh;
+
   background: #007bff;
 }
 
 .main-wrapper-faq {
+  width: 100%;
+
   min-height: max-content;
+
   display: flex;
   flex-direction: column;
   align-items: center;
+
   margin: 0 auto;
 }
 
-/* Judul halaman FAQ */
+/* =========================================================
+   TITLE
+========================================================= */
+
 .accordion-title-faq {
-  margin-bottom: 40px;
+  margin-bottom: 36px;
+
+  color: #ffffff;
+
   font-size: 2rem;
-  font-weight: 700;
+  font-weight: 800;
+
   text-align: center;
-  /*  */
-  color: #f3f3f3;
+  text-transform: uppercase;
 }
+
+/* =========================================================
+   WRAPPER
+========================================================= */
 
 .accordion-wrapper-faq {
-  background-color: #ffffff; /* Latar belakang putih untuk wrapper item */
-  border-radius: 12px; /* Radius lebih besar */
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08); /* Tambahkan shadow */
   width: 100%;
-  /* max-width: 1120px; */
+
+  display: flex;
+  flex-direction: column;
+
+  gap: 14px;
+
+  background: transparent;
+
+  border-radius: 0;
+
+  box-shadow: none;
 }
 
-/* Media queries untuk responsivitas */
+/* =========================================================
+   LIQUID GLASS ITEM
+========================================================= */
+
+.accordion-container-faq {
+  position: relative;
+
+  overflow: hidden;
+
+  border-radius: 20px;
+
+  border: 1px solid rgba(255, 255, 255, 0.28);
+
+  background: linear-gradient(
+    145deg,
+    rgba(255, 255, 255, 0.22),
+    rgba(255, 255, 255, 0.1)
+  );
+
+  -webkit-backdrop-filter: blur(24px) saturate(180%);
+  backdrop-filter: blur(24px) saturate(180%);
+
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.34),
+    inset 0 -1px 0 rgba(255, 255, 255, 0.07),
+    0 16px 36px -22px rgba(0, 43, 110, 0.5);
+
+  transition:
+    transform 0.3s ease,
+    background 0.3s ease,
+    border-color 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+/* highlight kaca */
+
+.accordion-container-faq::before {
+  content: "";
+
+  position: absolute;
+
+  top: 0;
+  left: 8%;
+  right: 8%;
+
+  height: 1px;
+
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(255, 255, 255, 0.95),
+    transparent
+  );
+
+  pointer-events: none;
+
+  z-index: 3;
+}
+
+.accordion-container-faq:hover {
+  transform: translateY(-3px);
+
+  border-color: rgba(255, 255, 255, 0.4);
+
+  background: linear-gradient(
+    145deg,
+    rgba(255, 255, 255, 0.28),
+    rgba(255, 255, 255, 0.14)
+  );
+
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.42),
+    inset 0 -1px 0 rgba(255, 255, 255, 0.1),
+    0 20px 40px -22px rgba(0, 43, 110, 0.58);
+}
+
+/* =========================================================
+   BUTTON FAQ
+========================================================= */
+
+.accordion-button-faq {
+  position: relative;
+
+  z-index: 2;
+
+  display: flex;
+
+  width: 100%;
+
+  align-items: center;
+  justify-content: space-between;
+
+  padding: 18px 20px;
+
+  text-align: left;
+
+  border: none;
+
+  background: transparent;
+
+  cursor: pointer;
+
+  outline: none;
+}
+
+/* QUESTION TEXT */
+
+.accordion-button-faq span {
+  flex-grow: 1;
+
+  margin-right: 16px;
+
+  color: #ffffff;
+
+  font-size: 0.9rem;
+  font-weight: 700;
+
+  line-height: 1.5;
+}
+
+/* =========================================================
+   ICON
+========================================================= */
+
+.accordion-button-faq svg {
+  flex-shrink: 0;
+
+  width: 22px;
+  height: 22px;
+
+  padding: 4px;
+
+  box-sizing: content-box;
+
+  border-radius: 50%;
+
+  border: 1px solid rgba(255, 255, 255, 0.28);
+
+  background: rgba(255, 255, 255, 0.12);
+
+  color: #ffffff;
+
+  -webkit-backdrop-filter: blur(12px);
+  backdrop-filter: blur(12px);
+
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.25),
+    0 6px 16px -10px rgba(0, 43, 110, 0.6);
+
+  transition:
+    transform 0.3s ease,
+    background 0.3s ease;
+}
+
+/* OPEN */
+
+.accordion-button-faq.rotate svg {
+  transform: rotate(90deg);
+
+  background: rgba(255, 255, 255, 0.2);
+}
+
+/* =========================================================
+   CONTENT
+========================================================= */
+
+.accordion-content {
+  overflow: hidden;
+
+  transition: max-height 0.4s ease-in-out;
+}
+
+/* =========================================================
+   ANSWER
+========================================================= */
+
+.accordion-content-inner {
+  position: relative;
+
+  z-index: 2;
+
+  padding: 16px 20px 20px;
+
+  border-top: 1px solid rgba(255, 255, 255, 0.16);
+
+  background: rgba(255, 255, 255, 0.08);
+
+  color: rgba(255, 255, 255, 0.9);
+
+  font-size: 0.85rem;
+  font-weight: 400;
+
+  line-height: 1.7;
+
+  -webkit-backdrop-filter: blur(16px);
+  backdrop-filter: blur(16px);
+}
+
+/* =========================================================
+   LOADING / ERROR TEXT
+========================================================= */
+
+.accordion-wrapper-faq > p {
+  margin: 0;
+
+  padding: 18px;
+
+  border-radius: 16px;
+
+  background: rgba(255, 255, 255, 0.14);
+
+  border: 1px solid rgba(255, 255, 255, 0.22);
+
+  color: #ffffff;
+
+  text-align: center;
+
+  -webkit-backdrop-filter: blur(16px);
+  backdrop-filter: blur(16px);
+}
+
+/* =========================================================
+   TABLET
+========================================================= */
+
 @media (max-width: 1024px) {
   .main-container-faq {
-    padding-top: 10vh;
+    padding-top: 8vh;
     padding-left: 4%;
     padding-right: 4%;
-    padding-bottom: 10vh;
-    background: #007bff;
+    padding-bottom: 8vh;
   }
-}
-@media (max-width: 768px) {
-  .accordion-button-faq span {
-    font-size: 0.85rem; /* text-base */
-  }
-  .accordion-button-faq svg {
-    width: 20px;
-    height: 20px;
-  }
-  /* .accordion-wrapper-faq {
-    padding-left: 2vw;
-    padding-right: 2vw;
-  } */
 
   .accordion-title-faq {
-    font-size: 1.7rem; /* text-3xl */
-    margin-bottom: 24px;
+    font-size: 1.8rem;
   }
+}
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 768px) {
   .main-container-faq {
-    padding: 7vh 0;
+    padding: 7vh 4%;
   }
-  .main-wrapper-faq {
-    padding: 0 4%;
+
+  .accordion-title-faq {
+    margin-bottom: 24px;
+
+    font-size: 1.5rem;
   }
+
+  .accordion-wrapper-faq {
+    gap: 12px;
+  }
+
+  .accordion-container-faq {
+    border-radius: 16px;
+  }
+
+  .accordion-button-faq {
+    padding: 15px 16px;
+  }
+
+  .accordion-button-faq span {
+    font-size: 0.85rem;
+  }
+
+  .accordion-button-faq svg {
+    width: 18px;
+    height: 18px;
+  }
+
   .accordion-content-inner {
-    font-size: 0.9rem; /* Ukuran font konten sedikit lebih kecil */
+    padding: 14px 16px 17px;
+
+    font-size: 0.85rem;
   }
 }

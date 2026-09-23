@@ -10,17 +10,17 @@
   text-transform: uppercase;
   margin-bottom: 10px;
   color: #333333;
-  font-weight: 800;
 }
 
 .programBelajar-description {
   font-size: 0.9rem;
   color: #4f4f4f;
   margin-bottom: 30px;
-  line-height: 1.5;
+  line-height: 1.6;
   max-width: 100%;
 }
 
+/* GRID */
 .programBelajar-les-privat {
   display: flex;
   flex-wrap: wrap;
@@ -28,64 +28,149 @@
   gap: 20px;
 }
 
+/* LIQUID GLASS CARD */
 .programBelajar-card {
-  border-radius: 10px;
+  position: relative;
   overflow: hidden;
-  text-align: center;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+
+  border-radius: 20px;
+
+  padding: 8px;
+
+  background: rgba(255, 255, 255, 0.78);
+
+  border: 1px solid rgba(0, 123, 255, 0.16);
+
+  -webkit-backdrop-filter: blur(18px) saturate(160%);
+  backdrop-filter: blur(18px) saturate(160%);
+
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.95),
+    0 12px 30px -16px rgba(0, 123, 255, 0.28);
+
   transition:
-    transform 0.3s ease-in-out,
-    box-shadow 0.3s ease-in-out;
+    transform 0.3s ease,
+    box-shadow 0.3s ease,
+    border-color 0.3s ease,
+    background 0.3s ease;
 }
 
-/* Efek hover */
+/* REFLECTION */
+.programBelajar-card::before {
+  content: "";
+
+  position: absolute;
+  top: 0;
+  left: 12%;
+  right: 12%;
+
+  height: 1px;
+
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(255, 255, 255, 1),
+    transparent
+  );
+
+  z-index: 2;
+
+  pointer-events: none;
+}
+
+/* HOVER */
 .programBelajar-card:hover {
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
-  transform: scale(1.05);
+  transform: translateY(-5px) scale(1.02);
+
+  background: rgba(255, 255, 255, 0.92);
+
+  border-color: rgba(0, 123, 255, 0.28);
+
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 1),
+    0 18px 38px -16px rgba(0, 123, 255, 0.4);
 }
 
-/* 4 items per row on large screens (1280px and above) */
-@media (min-width: 1280px) {
-  .programBelajar-card {
-    width: calc(25% - 20px); /* 4 cards per row, subtracting gap */
-  }
-}
-
-/* 3 items per row on tablet (between 768px and 1279px) */
-@media (min-width: 768px) and (max-width: 1279px) {
-  .programBelajar-card {
-    width: calc(33.3333% - 20px); /* 3 cards per row, subtracting gap */
-  }
-}
-
-/* 2 items per row on small tablets (between 480px and 767px) */
-@media (max-width: 767px) {
-  .programBelajar-card {
-    width: calc(50% - 20px); /* 2 cards per row, subtracting gap */
-  }
-}
-
-/* 1 item per row on mobile (below 480px) */
-/* @media (max-width: 479px) {
-  .programBelajar-card {
-    width: 100%; 
-  }
-} */
-
+/* IMAGE */
 .programBelajar-card img {
+  display: block;
+
   width: 100%;
   height: 100%;
+
+  object-fit: cover;
+
+  border-radius: 14px;
+
+  transition: transform 0.3s ease;
 }
 
-@media (max-width: 768px) {
+.programBelajar-card:hover img {
+  transform: scale(1.025);
+}
+
+/* DESKTOP BESAR - 4 CARD */
+@media (min-width: 1280px) {
+  .programBelajar-card {
+    width: calc(25% - 15px);
+  }
+}
+
+/* DESKTOP / LAPTOP - TETAP 4 CARD */
+@media (min-width: 1024px) and (max-width: 1279px) {
+  .programBelajar-card {
+    width: calc(25% - 15px);
+  }
+}
+
+/* TABLET - 3 CARD */
+@media (min-width: 768px) and (max-width: 1023px) {
+  .programBelajar-card {
+    width: calc(33.333% - 14px);
+  }
+}
+
+/* MOBILE - 2 CARD */
+@media (max-width: 767px) {
+  .programBelajar-les-privat {
+    gap: 12px;
+  }
+
+  .programBelajar-card {
+    width: calc(50% - 6px);
+
+    padding: 6px;
+
+    border-radius: 16px;
+  }
+
+  .programBelajar-card img {
+    border-radius: 11px;
+  }
+
   .programBelajar-title {
     font-size: 1.4rem;
-    font-weight: 800;
     line-height: 1.3;
-    text-align: start;
+    text-align: left;
   }
+
   .programBelajar-description {
     font-size: 0.85rem;
-    text-align: start;
+    text-align: left;
+  }
+}
+
+/* SMALL MOBILE - TETAP 2 CARD */
+@media (max-width: 480px) {
+  .programBelajar-card {
+    width: calc(50% - 6px);
+  }
+
+  .programBelajar-title {
+    font-size: 1.3rem;
+  }
+
+  .programBelajar-description {
+    font-size: 0.8rem;
   }
 }

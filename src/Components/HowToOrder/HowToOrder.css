@@ -1,322 +1,593 @@
-/* HowToOrder.css */
+/* =========================================================
+   HOW TO ORDER - LIQUID GLASS
+========================================================= */
 
 .how-to-order-section {
-  padding: 80px 0;
-  background: #007bff;
   display: flex;
-  justify-content: center;
   align-items: center;
-  /* Menggunakan padding persentase untuk kontrol lebar */
-  padding-left: 10%;
-  padding-right: 10%;
+  justify-content: center;
+
+  padding: 80px 10%;
+
+  background: #007bff;
 }
 
 .how-to-order-container {
   display: flex;
   flex-wrap: wrap;
+
+  width: 100%;
+
   gap: 40px;
-  width: 100%; /* Memastikan kontainer mengisi 100% dari ruang yang tersedia setelah padding di section */
+
   justify-content: center;
 }
 
-/* Left Column: Steps */
-.how-to-order-steps {
-  flex: 2;
-  min-width: 300px;
-  /* max-width: 550px; */
-  display: flex;
-  flex-direction: column;
-  gap: 25px;
-  order: 2;
-}
+/* =========================================================
+   LEFT / MAIN HEADING
+========================================================= */
 
-.order-step-card {
-  border-radius: 12px;
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
-  padding: 25px 30px;
-  position: relative;
-  overflow: hidden;
-  transition:
-    transform 0.3s ease,
-    box-shadow 0.3s ease,
-    border-color 0.3s ease,
-    background 0.3s ease;
-  background: #ffffff;
-  color: #333333;
-  border: 1px solid #e0e0e0;
-}
-
-.order-step-card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
-  border-color: #007bff;
-  background: linear-gradient(to right, #e0f2ff 0%, #66aaff 50%, #007bff 100%);
-}
-
-.order-step-card:hover .step-title,
-.order-step-card:hover .step-description {
-  color: #ffffff;
-}
-
-.order-step-card::after {
-  content: attr(data-background-number);
-  position: absolute;
-  bottom: -20px;
-  right: -20px;
-  font-size: 10vw;
-  font-weight: 700;
-  color: rgb(220, 223, 250);
-  z-index: 0;
-  pointer-events: none;
-  line-height: 1;
-  transition: color 0.3s ease;
-}
-
-.order-step-card:hover::after {
-  color: rgba(255, 255, 255, 0.3);
-}
-
-.step-header {
-  display: flex;
-  margin-bottom: 15px;
-  position: relative;
-  z-index: 1;
-}
-
-.step-number {
-  background-color: #007bff;
-  color: #ffffff;
-  font-size: 1.2rem;
-  font-weight: bold;
-  width: 38px;
-  height: 38px;
-  border-radius: 50%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin-right: 15px;
-  flex-shrink: 0;
-  transition:
-    background-color 0.3s ease,
-    color 0.3s ease;
-}
-
-.order-step-card:hover .step-number {
-  background-color: #ffffff;
-  color: #007bff;
-}
-
-.step-title {
-  font-size: 1rem;
-  color: #333333;
-
-  line-height: 1.3rem;
-  transition: color 0.3s ease;
-  margin: 0;
-}
-
-.step-description {
-  font-size: 0.9rem;
-  color: #4f4f4f;
-  line-height: 1.6;
-  margin: 0;
-  position: relative;
-  z-index: 1;
-
-  transition: color 0.3s ease;
-}
-
-/* Right Column: Main Heading & Button */
 .how-to-order-main {
+  position: relative;
+
   flex: 1;
+
   min-width: 300px;
-  /* max-width: 550px; */
-  border-radius: 12px;
-  padding: 40px;
+
   display: flex;
   flex-direction: column;
-  justify-content: center;
+
   align-items: flex-start;
-  text-align: left;
-  position: relative;
-  overflow: hidden;
+  justify-content: center;
+
   order: 1;
+
+  padding: 40px;
+
+  text-align: left;
+
+  border-radius: 26px;
+
+  background: linear-gradient(
+    145deg,
+    rgba(255, 255, 255, 0.16),
+    rgba(255, 255, 255, 0.08)
+  );
+
+  border: 1px solid rgba(255, 255, 255, 0.26);
+
+  -webkit-backdrop-filter: blur(28px) saturate(190%);
+  backdrop-filter: blur(28px) saturate(190%);
+
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.35),
+    inset 0 -1px 0 rgba(255, 255, 255, 0.08),
+    0 24px 55px -28px rgba(0, 43, 110, 0.55);
+
+  overflow: hidden;
+}
+
+.how-to-order-main::before {
+  content: "";
+
+  position: absolute;
+
+  top: 0;
+  left: 10%;
+  right: 10%;
+
+  height: 1px;
+
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(255, 255, 255, 0.95),
+    transparent
+  );
+
+  pointer-events: none;
+}
+
+.how-to-order-main::after {
+  content: "";
+
+  position: absolute;
+
+  width: 220px;
+  height: 220px;
+
+  top: -90px;
+  right: -90px;
+
+  border-radius: 50%;
+
+  background: rgba(255, 255, 255, 0.1);
+
+  filter: blur(42px);
+
+  pointer-events: none;
 }
 
 .how-to-order-label {
-  font-size: 0.85rem;
-  color: #f4f4f4;
-  font-weight: 600;
-  letter-spacing: 1px;
-  text-transform: uppercase;
-  margin-bottom: 10px;
   position: relative;
-  z-index: 1;
+
+  z-index: 2;
+
+  margin-bottom: 10px;
+
+  color: rgba(255, 255, 255, 0.82);
+
+  font-size: 0.85rem;
+  font-weight: 600;
+
+  letter-spacing: 1px;
+
+  text-transform: uppercase;
 }
 
 .how-to-order-heading {
-  font-size: 2.5rem;
-  color: #f4f4f4;
-  font-weight: 600;
+  position: relative;
+
+  z-index: 2;
+
   margin-top: 0;
-  text-transform: uppercase;
-  line-height: 1.2;
   margin-bottom: 30px;
-  position: relative;
-  z-index: 1;
-}
 
-.start-order-button {
-  background-color: #205aa1;
   color: #ffffff;
-  padding: 12px 25px;
-  border: none;
 
-  border-radius: 8px;
-  font-size: 1.1rem;
-  font-weight: 600;
-  cursor: pointer;
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  transition:
-    background-color 0.3s ease,
-    transform 0.2s ease;
-  position: relative;
-  z-index: 1;
+  font-size: 2.5rem;
+  font-weight: 700;
+
+  line-height: 1.2;
+
+  text-transform: uppercase;
 }
 
-.start-order-button:hover {
-  background-color: #5f67e9;
+/* =========================================================
+   STEPS WRAPPER
+========================================================= */
+
+.how-to-order-steps {
+  flex: 2;
+
+  min-width: 300px;
+
+  display: flex;
+  flex-direction: column;
+
+  gap: 20px;
+
+  order: 2;
+}
+
+/* =========================================================
+   LIQUID GLASS STEP CARD
+========================================================= */
+
+.order-step-card {
+  position: relative;
+
+  overflow: hidden;
+
+  padding: 24px 28px;
+
+  border-radius: 24px;
+
+  background: linear-gradient(
+    145deg,
+    rgba(255, 255, 255, 0.84),
+    rgba(255, 255, 255, 0.64)
+  );
+
+  border: 1px solid rgba(255, 255, 255, 0.92);
+
+  -webkit-backdrop-filter: blur(24px) saturate(180%);
+  backdrop-filter: blur(24px) saturate(180%);
+
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 1),
+    inset 0 -1px 0 rgba(255, 255, 255, 0.45),
+    0 16px 38px -22px rgba(0, 61, 150, 0.32);
+
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease,
+    background 0.3s ease,
+    border-color 0.3s ease;
+}
+
+/* highlight liquid glass */
+
+.order-step-card::before {
+  content: "";
+
+  position: absolute;
+
+  top: 0;
+  left: 8%;
+  right: 8%;
+
+  height: 1px;
+
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(255, 255, 255, 1),
+    transparent
+  );
+
+  pointer-events: none;
+
+  z-index: 3;
+}
+
+/* giant number */
+
+.order-step-card::after {
+  content: attr(data-background-number);
+
+  position: absolute;
+
+  right: -18px;
+  bottom: -24px;
+
+  z-index: 0;
+
+  color: rgba(0, 123, 255, 0.07);
+
+  font-size: clamp(6rem, 9vw, 10rem);
+  font-weight: 800;
+
+  line-height: 1;
+
+  pointer-events: none;
+
+  transition:
+    color 0.3s ease,
+    transform 0.3s ease;
+}
+
+.order-step-card:hover {
+  transform: translateY(-6px);
+
+  background: linear-gradient(
+    145deg,
+    rgba(255, 255, 255, 0.96),
+    rgba(255, 255, 255, 0.74)
+  );
+
+  border-color: rgba(255, 255, 255, 1);
+
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 1),
+    inset 0 -1px 0 rgba(255, 255, 255, 0.55),
+    0 22px 46px -20px rgba(0, 61, 150, 0.42);
+}
+
+.order-step-card:hover::after {
+  color: rgba(0, 123, 255, 0.11);
+
+  transform: scale(1.04);
+}
+
+/* =========================================================
+   STEP CONTENT
+========================================================= */
+
+.step-header {
+  position: relative;
+
+  z-index: 2;
+
+  display: flex;
+
+  margin-bottom: 0;
+}
+
+.step-number {
+  flex-shrink: 0;
+
+  display: flex;
+
+  width: 42px;
+  height: 42px;
+
+  align-items: center;
+  justify-content: center;
+
+  margin-right: 15px;
+
+  border-radius: 50%;
+
+  border: 1px solid rgba(0, 123, 255, 0.16);
+
+  background: rgba(0, 123, 255, 0.1);
+
+  color: #007bff;
+
+  font-size: 1rem;
+  font-weight: 800;
+
+  -webkit-backdrop-filter: blur(14px) saturate(170%);
+  backdrop-filter: blur(14px) saturate(170%);
+
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.95),
+    0 6px 18px -12px rgba(0, 123, 255, 0.35);
+
+  transition:
+    background 0.3s ease,
+    color 0.3s ease,
+    transform 0.3s ease;
+}
+
+.order-step-card:hover .step-number {
+  background: #007bff;
+
+  color: #ffffff;
+
+  transform: scale(1.05);
+}
+
+.step-title {
+  margin: 0;
+
+  color: #1f2937;
+
+  font-size: 1rem;
+  font-weight: 700;
+
+  line-height: 1.35;
+
+  transition: color 0.3s ease;
+}
+
+.step-description {
+  position: relative;
+
+  z-index: 2;
+
+  margin: 4px 0 0;
+
+  color: #4b5563;
+
+  font-size: 0.9rem;
+
+  line-height: 1.6;
+
+  transition: color 0.3s ease;
+}
+
+/* =========================================================
+   OPTIONAL BUTTON
+========================================================= */
+
+.start-order-button,
+.button-how-to-order {
+  position: relative;
+
+  z-index: 2;
+
+  display: inline-flex;
+
+  align-items: center;
+  justify-content: center;
+
+  gap: 0.5rem;
+
+  padding: 0.8rem 1rem;
+
+  border-radius: 14px;
+
+  border: 1px solid rgba(255, 255, 255, 0.35);
+
+  background: rgba(255, 255, 255, 0.16);
+
+  color: #ffffff;
+
+  font-size: 0.9rem;
+  font-weight: 700;
+
+  text-decoration: none;
+
+  cursor: pointer;
+
+  -webkit-backdrop-filter: blur(18px) saturate(180%);
+  backdrop-filter: blur(18px) saturate(180%);
+
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.4),
+    0 10px 26px -16px rgba(0, 43, 110, 0.5);
+
+  transition:
+    transform 0.3s ease,
+    background 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+.start-order-button:hover,
+.button-how-to-order:hover {
   transform: translateY(-2px);
+
+  background: rgba(255, 255, 255, 0.24);
+
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.5),
+    0 14px 32px -16px rgba(0, 43, 110, 0.58);
+}
+
+.start-order-link {
+  text-decoration: none;
+
+  color: inherit;
 }
 
 .arrow-icon {
   font-size: 1.3rem;
 }
-.start-order-link {
-  text-decoration: none;
-  color: inherit;
+
+.icon-button-how-to-order {
+  width: 24px;
+  height: 24px;
+
+  transition: transform 0.3s ease;
 }
 
-/* Responsive Adjustments */
+.button-how-to-order:hover .icon-button-how-to-order {
+  transform: translateX(3px);
+}
+
+/* =========================================================
+   TABLET
+========================================================= */
+
 @media (max-width: 1024px) {
   .how-to-order-section {
     padding-left: 4%;
     padding-right: 4%;
   }
-  .order-step-card {
-    padding: 19px 20px;
-  }
+
   .how-to-order-container {
     flex-direction: column;
-    align-items: center;
+
+    align-items: stretch;
   }
+
   .how-to-order-main {
     order: 0;
-    padding: 0px;
+
+    min-width: 0;
+
     align-items: center;
+
     text-align: center;
+
+    padding: 30px;
   }
+
   .how-to-order-steps {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 20px; /* jarak antar kolom dan baris */
+
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+
+    width: 100%;
+
+    min-width: 0;
+
+    gap: 18px;
+  }
+
+  .order-step-card {
+    padding: 20px;
   }
 
   .how-to-order-heading {
-    font-size: 2rem;
     margin-bottom: 20px;
-  }
-  .order-step-card::after {
-    font-size: 18vw;
-    bottom: -15px;
-    right: -10px;
-  }
-  .step-number {
-    width: 35px;
-    height: 35px;
+
+    font-size: 2rem;
   }
 }
+
+/* =========================================================
+   MOBILE
+========================================================= */
 
 @media (max-width: 768px) {
   .how-to-order-section {
-    padding-left: 4%;
-    padding-right: 4%;
+    padding: 55px 4%;
   }
-}
 
-@media (max-width: 576px) {
-  .how-to-order-section {
-    padding: 50px 0;
-  }
-  .how-to-order-steps {
-    gap: 20px;
-    display: grid;
-    grid-template-columns: repeat(1, 1fr);
-    padding-right: 4%;
-    padding-left: 4%;
-  }
-  .order-step-card {
-    padding: 20px 25px;
-  }
-  .step-number {
-    width: 40px;
-    height: 40px;
-    font-size: 1.1rem;
-    margin-right: 10px;
-  }
-  .step-title {
-    font-size: 1.1rem;
-  }
-  .step-description {
-    font-size: 0.9rem;
-  }
   .how-to-order-main {
-    padding: 25px;
-    margin: 0;
+    padding: 24px;
+
+    border-radius: 20px;
   }
+
   .how-to-order-heading {
     font-size: 1.8rem;
   }
-  .start-order-button {
+
+  .how-to-order-steps {
+    display: grid;
+
+    grid-template-columns: 1fr;
+
+    width: 100%;
+
+    gap: 16px;
+  }
+  .order-step-card {
+    border-radius: 20px;
+  }
+}
+
+/* =========================================================
+   SMALL MOBILE
+========================================================= */
+
+@media (max-width: 576px) {
+  .how-to-order-section {
+    padding: 55px 4%;
+  }
+
+  .how-to-order-container {
+    gap: 24px;
+  }
+
+  .how-to-order-steps {
+    display: grid;
+
+    grid-template-columns: 1fr;
+
+    width: 100%;
+
+    gap: 16px;
+  }
+
+  .how-to-order-main {
+    width: 100%;
+    min-width: 0;
+
+    padding: 24px;
+
+    border-radius: 20px;
+  }
+
+  .how-to-order-label {
+    font-size: 0.75rem;
+  }
+
+  .how-to-order-heading {
+    font-size: 1.55rem;
+  }
+
+  .order-step-card {
+    padding: 20px;
+
+    border-radius: 20px;
+  }
+
+  .step-number {
+    width: 38px;
+    height: 38px;
+
+    margin-right: 12px;
+
+    font-size: 0.95rem;
+  }
+
+  .step-title {
     font-size: 1rem;
-    padding: 10px 25px;
+  }
+
+  .step-description {
+    font-size: 0.85rem;
   }
 
   .order-step-card::after {
-    font-size: 35vw;
+    right: -10px;
+    bottom: -14px;
+
+    font-size: 8rem;
   }
-}
-
-/* additional Button */
-/* additional Button */
-.button-how-to-order {
-  font-size: 0.9rem;
-  border: 2px solid #205aa1; /* Perbatasan biru tua */
-  border-radius: 7px;
-  padding: 0.8rem 1rem;
-  background-color: #ffffff; /* Latar belakang putih */
-  box-shadow: 5px 5px 0px #205aa1; /* Bayangan biru tua */
-  cursor: pointer;
-  text-align: center;
-  font-weight: 700;
-  display: flex;
-  text-decoration: none;
-  align-items: center;
-  justify-content: center;
-  gap: 0.5rem;
-  transition: all 0.3s ease;
-  color: #205aa1; /* Teks biru tua */
-}
-
-.button-how-to-order:hover {
-  box-shadow: 0 0 0 #205aa1;
-  transform: translateY(3px) translateX(3px);
-}
-
-.icon-button-how-to-order {
-  width: 24px;
-  height: 24px;
-  transition: all 0.3s ease-in-out;
 }

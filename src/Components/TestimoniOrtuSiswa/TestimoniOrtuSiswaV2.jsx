@@ -100,6 +100,7 @@ export default function TestimoniOrtuSiswaV2() {
     const previousOverflow = document.body.style.overflow;
 
     document.body.style.overflow = "hidden";
+
     window.addEventListener("keydown", handleKeyDown);
 
     return () => {
@@ -110,54 +111,58 @@ export default function TestimoniOrtuSiswaV2() {
 
   return (
     <>
-      <section id="testimoni-ortu-siswa" className="matrix-testimoni-section">
-        <div className="matrix-testimoni-container">
-          <div className="matrix-testimoni-header">
-            <span className="matrix-testimoni-badge">Cerita Mereka</span>
+      <section id="testimoni-ortu-siswa" className="ortu-testimoni-v2-section">
+        <div className="ortu-testimoni-v2-container">
+          <div className="ortu-testimoni-v2-header">
+            <span className="ortu-testimoni-v2-badge">Cerita Mereka</span>
 
-            <h2 className="matrix-testimoni-title">
+            <h2 className="ortu-testimoni-v2-title">
               Testimoni Ortu & Siswa
               <span> Matrix Tutoring</span>
             </h2>
 
-            <p className="matrix-testimoni-description">
+            <p className="ortu-testimoni-v2-description">
               Lihat cerita dan pengalaman orang tua serta siswa selama mengikuti
               pembelajaran bersama tutor Matrix Tutoring.
             </p>
           </div>
 
-          <div className="matrix-testimoni-grid">
+          <div className="ortu-testimoni-v2-grid">
             {testimonialDummyData.map((item) => (
               <button
                 key={item.id}
                 type="button"
-                className="matrix-testimoni-card"
+                className="ortu-testimoni-v2-card"
                 onClick={() => setSelectedItem(item)}
                 aria-label={`Lihat testimoni ${item.studentName}`}>
-                <div className="matrix-testimoni-image-wrapper">
+                <div className="ortu-testimoni-v2-image-wrapper">
                   <img
                     src={item.image}
                     alt={item.alt}
                     loading="lazy"
-                    className="matrix-testimoni-image"
+                    className="ortu-testimoni-v2-image"
                   />
 
-                  <div className="matrix-testimoni-overlay">
-                    <span className="matrix-testimoni-zoom">
+                  <div className="ortu-testimoni-v2-overlay">
+                    <span className="ortu-testimoni-v2-zoom">
                       <FiZoomIn />
                     </span>
                   </div>
                 </div>
 
-                <div className="matrix-testimoni-info">
-                  <p className="matrix-testimoni-student">{item.studentName}</p>
+                <div className="ortu-testimoni-v2-info">
+                  <p className="ortu-testimoni-v2-student">
+                    {item.studentName}
+                  </p>
 
-                  <div className="matrix-testimoni-meta">
-                    <span className="matrix-testimoni-parent">
+                  <div className="ortu-testimoni-v2-meta">
+                    <span className="ortu-testimoni-v2-parent">
                       {item.parentName}
                     </span>
 
-                    <span className="matrix-testimoni-grade">{item.grade}</span>
+                    <span className="ortu-testimoni-v2-grade">
+                      {item.grade}
+                    </span>
                   </div>
                 </div>
               </button>
@@ -168,26 +173,26 @@ export default function TestimoniOrtuSiswaV2() {
 
       {selectedItem && (
         <div
-          className="matrix-testimoni-lightbox"
+          className="ortu-testimoni-v2-lightbox"
           role="dialog"
           aria-modal="true"
           aria-label={`Testimoni ${selectedItem.studentName}`}
           onClick={() => setSelectedItem(null)}>
           <button
             type="button"
-            className="matrix-testimoni-close"
+            className="ortu-testimoni-v2-close"
             aria-label="Tutup testimoni"
             onClick={() => setSelectedItem(null)}>
             <FiX />
           </button>
 
           <div
-            className="matrix-testimoni-lightbox-content"
+            className="ortu-testimoni-v2-lightbox-content"
             onClick={(event) => event.stopPropagation()}>
             <img
               src={selectedItem.image}
               alt={selectedItem.alt}
-              className="matrix-testimoni-lightbox-image"
+              className="ortu-testimoni-v2-lightbox-image"
             />
           </div>
         </div>

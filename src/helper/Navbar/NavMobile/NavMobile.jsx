@@ -3,20 +3,20 @@ import { motion } from "framer-motion";
 import { ChevronDown, Menu, X } from "lucide-react";
 import { useState } from "react";
 import { Link } from "react-router-dom";
-import "./NavMobile.css"; // Import file CSS terpisah
+import "./NavMobile.css";
 
 export default function NavMobile({ Menus }) {
   const [isOpen, setIsOpen] = useState(false);
   const [clicked, setClicked] = useState(null);
 
   const toggleDrawer = () => {
-    setIsOpen(!isOpen);
+    setIsOpen((prev) => !prev);
     setClicked(null);
   };
 
   const handleMenuClick = (i, hasSubMenu) => {
     if (hasSubMenu) {
-      setClicked(clicked === i ? null : i);
+      setClicked((prev) => (prev === i ? null : i));
     } else {
       setIsOpen(false);
       setClicked(null);
@@ -31,17 +31,28 @@ export default function NavMobile({ Menus }) {
   const subMenuDrawer = {
     enter: {
       height: "auto",
+      opacity: 1,
       overflow: "hidden",
+      transition: {
+        duration: 0.25,
+        ease: "easeOut",
+      },
     },
     exit: {
       height: 0,
+      opacity: 0,
       overflow: "hidden",
+      transition: {
+        duration: 0.2,
+        ease: "easeIn",
+      },
     },
   };
 
   return (
-    <div>
+    <div className="mobile-nav-wrapper">
       <button
+        type="button"
         className="menu-toggle"
         onClick={toggleDrawer}
         aria-label={isOpen ? "Tutup menu navigasi" : "Buka menu navigasi"}
@@ -51,9 +62,17 @@ export default function NavMobile({ Menus }) {
       </button>
 
       <motion.div
+        id="main-navigation"
         className="menu-drawer"
-        initial={{ x: "-100%" }}
-        animate={{ x: isOpen ? "0%" : "-100%" }}>
+        initial={false}
+        animate={{
+          x: isOpen ? "0%" : "-105%",
+          opacity: isOpen ? 1 : 0,
+        }}
+        transition={{
+          duration: 0.3,
+          ease: "easeOut",
+        }}>
         <ul>
           {Menus.map(({ name, link, subMenu }, i) => {
             const isClicked = clicked === i;
@@ -62,30 +81,31 @@ export default function NavMobile({ Menus }) {
             return (
               <li key={name} className="menu-item-mobile">
                 {hasSubMenu ? (
-                  // Render as a button or div for items with submenu
-                  <div
+                  <button
+                    type="button"
                     className="menu-item-link"
-                    onClick={() => handleMenuClick(i, hasSubMenu)}>
-                    {name}
+                    onClick={() => handleMenuClick(i, true)}>
+                    <span>{name}</span>
+
                     <ChevronDown
+                      size={18}
                       className={`chevron-icon ${
                         isClicked ? "rotate-180" : ""
                       }`}
                     />
-                  </div>
+                  </button>
                 ) : (
-                  // Use Link for items without submenu
                   <Link
                     to={link || "#"}
                     className="menu-item-link"
-                    onClick={() => handleMenuClick(i, hasSubMenu)}>
-                    {name}
+                    onClick={() => handleMenuClick(i, false)}>
+                    <span>{name}</span>
                   </Link>
                 )}
 
                 {hasSubMenu && (
                   <motion.ul
-                    initial="exit"
+                    initial={false}
                     animate={isClicked ? "enter" : "exit"}
                     variants={subMenuDrawer}
                     className="submenu">
@@ -95,8 +115,8 @@ export default function NavMobile({ Menus }) {
                           to={link}
                           className="sub-menu-item-link"
                           onClick={handleSubMenuClick}>
-                          <Icon size={17} />
-                          {name}
+                          {Icon && <Icon size={17} />}
+                          <span>{name}</span>
                         </Link>
                       </li>
                     ))}

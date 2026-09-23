@@ -1,68 +1,396 @@
-/* Container Utama */
-.testimonial-slider-ortu-siswa-container {
-  text-align: center;
+/* =========================================================
+   SECTION
+========================================================= */
+
+.ortu-testimoni-slider-section {
+  background: #ffffff;
+}
+
+.ortu-testimoni-slider-wrapper {
+  width: 100%;
+
   margin-top: 8vh;
   margin-bottom: 5vh;
 }
 
-/* Judul */
-.title-testimonial-orang-tua-siswa {
-  font-size: 1.7rem;
+/* =========================================================
+   TITLE
+========================================================= */
+
+.ortu-testimoni-slider-title {
+  margin: 0 0 32px;
+
   color: #007bff;
-  margin-bottom: 20px;
 
+  font-size: 1.7rem;
   font-weight: 800;
-  text-transform: uppercase;
+
+  line-height: 1.3;
+
   text-align: center;
+  text-transform: uppercase;
 }
 
-/* Embla Slider Styles */
-.embla {
-  overflow: hidden;
-  position: relative;
-  margin: 0 0;
-}
+/* =========================================================
+   EMBLA
+========================================================= */
 
-.embla__container {
-  display: flex;
-  gap: 15px;
-}
-
-.embla__slide-tesimoni-ortu {
-  flex: 0 0 100%; /* Default: Full width (mobile) */
-  min-width: 0;
-  overflow: hidden;
-}
-
-.testimonial-image {
+.ortu-testimoni-slider-viewport {
   width: 100%;
-  height: auto;
-  display: block;
+
+  overflow: hidden;
+
+  padding-top: 8px;
+  padding-bottom: 34px;
 }
 
-/* Responsiveness */
+.ortu-testimoni-slider-container {
+  display: flex;
+
+  margin-left: -10px;
+}
+
+.ortu-testimoni-slider-slide {
+  flex: 0 0 100%;
+
+  min-width: 0;
+
+  padding-left: 20px;
+
+  box-sizing: border-box;
+}
+
+/* =========================================================
+   ITEM WRAPPER
+
+   PENTING:
+   Tidak ada border
+   Tidak ada background
+   Tidak ada padding
+   Tidak ada frame tambahan
+
+   Border biru card asli adalah batas satu-satunya.
+========================================================= */
+
+.ortu-testimoni-slider-item {
+  position: relative;
+
+  width: 100%;
+
+  padding: 0;
+  margin: 0;
+
+  border: none;
+
+  background: transparent;
+
+  cursor: pointer;
+
+  outline: none;
+
+  transition:
+    transform 0.3s ease,
+    filter 0.3s ease;
+}
+
+.ortu-testimoni-slider-item:hover {
+  transform: translateY(-5px);
+
+  filter: drop-shadow(0 14px 22px rgba(0, 123, 255, 0.12));
+}
+
+.ortu-testimoni-slider-item:focus-visible {
+  outline: none;
+}
+
+/* =========================================================
+   ZOOM ICON
+========================================================= */
+
+.ortu-testimoni-slider-zoom {
+  position: absolute;
+
+  z-index: 20;
+
+  left: 50%;
+  top: 50%;
+
+  display: flex;
+
+  width: 44px;
+  height: 44px;
+
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 50%;
+
+  border: 1px solid rgba(255, 255, 255, 0.65);
+
+  background: rgba(255, 255, 255, 0.35);
+
+  color: #007bff;
+
+  font-size: 19px;
+
+  opacity: 0;
+
+  transform: translate(-50%, -42%) scale(0.9);
+
+  -webkit-backdrop-filter: blur(18px) saturate(180%);
+  backdrop-filter: blur(18px) saturate(180%);
+
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.9),
+    0 8px 24px rgba(15, 23, 42, 0.12);
+
+  pointer-events: none;
+
+  transition:
+    opacity 0.25s ease,
+    transform 0.25s ease;
+}
+
+.ortu-testimoni-slider-item:hover .ortu-testimoni-slider-zoom {
+  opacity: 1;
+
+  transform: translate(-50%, -50%) scale(1);
+}
+
+/* =========================================================
+   MODAL
+
+   Hanya backdrop.
+   Tidak ada frame putih tambahan.
+========================================================= */
+
+.ortu-testimoni-modal {
+  position: fixed;
+
+  inset: 0;
+
+  z-index: 99999;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  padding: 30px;
+
+  background: rgba(15, 23, 42, 0.42);
+
+  -webkit-backdrop-filter: blur(22px) saturate(120%);
+  backdrop-filter: blur(22px) saturate(120%);
+
+  animation: ortuTestimoniModalFade 0.2s ease;
+}
+
+@keyframes ortuTestimoniModalFade {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+/* =========================================================
+   MODAL CONTENT
+
+   Tidak ada border.
+   Tidak ada background.
+   Tidak ada padding.
+   Jadi tidak ada card berlapis.
+========================================================= */
+
+.ortu-testimoni-modal-content {
+  width: min(92vw, 650px);
+
+  max-height: 88vh;
+
+  padding: 0;
+
+  margin: 0;
+
+  border: none;
+
+  border-radius: 20px;
+
+  background: transparent;
+
+  box-shadow: 0 28px 70px rgba(15, 23, 42, 0.28);
+
+  overflow: visible;
+
+  animation: ortuTestimoniModalScale 0.22s ease;
+}
+
+@keyframes ortuTestimoniModalScale {
+  from {
+    opacity: 0;
+
+    transform: translateY(10px) scale(0.96);
+  }
+
+  to {
+    opacity: 1;
+
+    transform: translateY(0) scale(1);
+  }
+}
+
+/* Card di dalam modal langsung menjadi batas terluar */
+
+.ortu-testimoni-modal-content .testimonial-card-ortu-siswa {
+  width: 100%;
+
+  max-height: 88vh;
+
+  margin: 0;
+
+  overflow-y: auto;
+}
+
+/* scrollbar modal */
+
+.ortu-testimoni-modal-content .testimonial-card-ortu-siswa::-webkit-scrollbar {
+  width: 5px;
+}
+
+.ortu-testimoni-modal-content
+  .testimonial-card-ortu-siswa::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.ortu-testimoni-modal-content
+  .testimonial-card-ortu-siswa::-webkit-scrollbar-thumb {
+  background: rgba(0, 123, 255, 0.3);
+
+  border-radius: 999px;
+}
+
+/* =========================================================
+   CLOSE
+========================================================= */
+
+.ortu-testimoni-modal-close {
+  position: fixed;
+
+  top: 24px;
+  right: 24px;
+
+  z-index: 100000;
+
+  display: flex;
+
+  width: 46px;
+  height: 46px;
+
+  align-items: center;
+  justify-content: center;
+
+  padding: 0;
+
+  border-radius: 50%;
+
+  border: 1px solid rgba(255, 255, 255, 0.4);
+
+  background: rgba(255, 255, 255, 0.14);
+
+  color: #ffffff;
+
+  font-size: 22px;
+
+  cursor: pointer;
+
+  -webkit-backdrop-filter: blur(20px) saturate(180%);
+  backdrop-filter: blur(20px) saturate(180%);
+
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.4),
+    0 10px 30px rgba(15, 23, 42, 0.14);
+
+  transition:
+    transform 0.2s ease,
+    background 0.2s ease;
+}
+
+.ortu-testimoni-modal-close:hover {
+  transform: scale(1.06);
+
+  background: rgba(255, 255, 255, 0.24);
+}
+
+/* =========================================================
+   TABLET - 2 CARD
+========================================================= */
+
 @media (min-width: 768px) {
-  .embla__slide-tesimoni-ortu {
-    flex: 0 0 calc(50% - 15px); /* 2 slides on Tablet */
+  .ortu-testimoni-slider-slide {
+    flex: 0 0 50%;
   }
 }
-@media (max-width: 768px) {
-  .testimonial-image {
-    width: 100%;
-    height: auto;
-  }
-  /* .embla__container {
-  } */
-  .title-testimonial-orang-tua-siswa {
-    font-size: 1.4rem;
-  }
-}
+
+/* =========================================================
+   DESKTOP - 3 CARD
+========================================================= */
 
 @media (min-width: 1024px) {
-  .embla__slide-tesimoni-ortu {
-    flex: 0 0 calc(33.333% - 15px); /* 3 slides on Desktop */
+  .ortu-testimoni-slider-slide {
+    flex: 0 0 33.333333%;
   }
-  .testimonial-slider-ortu-siswa-container {
-    font-size: 1.5rem;
+}
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 767px) {
+  .ortu-testimoni-slider-wrapper {
+    margin-top: 6vh;
+    margin-bottom: 4vh;
+  }
+
+  .ortu-testimoni-slider-title {
+    margin-bottom: 20px;
+
+    font-size: 1.4rem;
+  }
+
+  .ortu-testimoni-slider-container {
+    margin-left: -6px;
+  }
+
+  .ortu-testimoni-slider-slide {
+    padding-left: 12px;
+  }
+
+  .ortu-testimoni-slider-zoom {
+    width: 40px;
+    height: 40px;
+
+    font-size: 17px;
+  }
+
+  .ortu-testimoni-modal {
+    padding: 14px;
+  }
+
+  .ortu-testimoni-modal-content {
+    width: 94vw;
+
+    max-height: 88vh;
+  }
+
+  .ortu-testimoni-modal-close {
+    top: 14px;
+    right: 14px;
+
+    width: 40px;
+    height: 40px;
+
+    font-size: 20px;
   }
 }

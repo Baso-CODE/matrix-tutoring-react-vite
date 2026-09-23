@@ -1,98 +1,299 @@
+/* =========================================================
+   SECTION
+========================================================= */
+
+.container-induk-testimonial-siswa-container {
+  background: #007bff;
+
+  padding-top: 70px;
+  padding-bottom: 70px;
+}
+
 .container-asal-sekolah-siswa-matrix {
-  color: white; /* text-white */
+  width: 100%;
+
   display: flex;
   flex-direction: column;
   align-items: center;
-  /* margin-top: 5vh; */
+
+  color: #ffffff;
 }
 
 .content-wrapper {
+  width: 100%;
+
   display: flex;
   flex-direction: column;
+
   gap: 2rem;
-  width: 100%;
-  border-radius: 0.5rem;
 }
 
 .title-section {
-  padding-bottom: 2.5rem;
+  width: 100%;
 }
+
+/* =========================================================
+   TITLE
+========================================================= */
 
 .title-asal-sekolah {
-  font-size: 1.7rem;
-  margin-bottom: 3vh;
-  line-height: 24px;
+  margin: 0 0 30px;
+
   color: #ffffff;
+
+  font-size: 1.7rem;
   font-weight: 800;
-  text-transform: uppercase;
+
+  line-height: 1.3;
 
   text-align: center;
+  text-transform: uppercase;
 }
+
+/* =========================================================
+   LIQUID GLASS CONTAINER
+========================================================= */
 
 .scrollable-content {
-  background-color: #006bde;
-  color: #ffffff;
+  position: relative;
 
-  border-radius: 0.5rem;
-  overflow: auto;
-  font-weight: 700;
-  padding: 2vh;
-  border: 10px solid #006bde;
+  width: 100%;
+
   max-height: 580px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+
+  overflow-y: auto;
+  overflow-x: hidden;
+
+  padding: 28px;
+
+  box-sizing: border-box;
+
+  border-radius: 26px;
+
+  /*
+    TRANSPARENT WHITE GLASS
+    Background biru section akan terlihat dari belakang.
+  */
+  background: linear-gradient(
+    145deg,
+    rgba(255, 255, 255, 0.22),
+    rgba(255, 255, 255, 0.1)
+  );
+
+  border: 1px solid rgba(255, 255, 255, 0.32);
+
+  -webkit-backdrop-filter: blur(26px) saturate(180%);
+  backdrop-filter: blur(26px) saturate(180%);
+
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.4),
+    inset 0 -1px 0 rgba(255, 255, 255, 0.08),
+    0 20px 45px -22px rgba(0, 43, 110, 0.5);
+
+  scrollbar-width: thin;
+  scrollbar-color: rgba(255, 255, 255, 0.75) rgba(255, 255, 255, 0.1);
 }
+
+/* =========================================================
+   GLASS HIGHLIGHT
+========================================================= */
+
+.scrollable-content::before {
+  content: "";
+
+  position: absolute;
+
+  top: 0;
+  left: 8%;
+  right: 8%;
+
+  height: 1px;
+
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(255, 255, 255, 0.95),
+    transparent
+  );
+
+  pointer-events: none;
+}
+
+/* =========================================================
+   GLASS REFLECTION
+========================================================= */
+
+.scrollable-content::after {
+  content: "";
+
+  position: absolute;
+
+  width: 220px;
+  height: 160px;
+
+  top: -90px;
+  right: -70px;
+
+  border-radius: 50%;
+
+  background: rgba(255, 255, 255, 0.16);
+
+  filter: blur(42px);
+
+  pointer-events: none;
+}
+
+/* =========================================================
+   GRID
+========================================================= */
 
 .grid-container-asal-sekolah-siswa-matrix {
+  position: relative;
+
+  z-index: 2;
+
   display: grid;
-  grid-template-columns: repeat(1, 1fr);
-  list-style-type: disc;
+
+  grid-template-columns: repeat(1, minmax(0, 1fr));
+
+  gap: 9px 30px;
+
+  margin: 0;
+
   padding-left: 1.5rem;
+
+  list-style-type: disc;
 }
+
+/* =========================================================
+   ITEM
+========================================================= */
+
+.grid-item {
+  color: rgba(255, 255, 255, 0.94);
+
+  font-size: 0.9rem;
+  font-weight: 400;
+
+  line-height: 1.6;
+
+  transition:
+    color 0.2s ease,
+    transform 0.2s ease;
+}
+
+.grid-item:hover {
+  color: #ffffff;
+
+  transform: translateX(3px);
+}
+
+.grid-item::marker {
+  color: #ffffff;
+
+  font-size: 1.1rem;
+}
+
+/* =========================================================
+   SCROLLBAR
+========================================================= */
+
+.scrollable-content::-webkit-scrollbar {
+  width: 8px;
+}
+
+.scrollable-content::-webkit-scrollbar-track {
+  background: rgba(255, 255, 255, 0.08);
+
+  border-radius: 999px;
+}
+
+.scrollable-content::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.65);
+
+  border-radius: 999px;
+
+  border: 2px solid transparent;
+
+  background-clip: padding-box;
+}
+
+.scrollable-content::-webkit-scrollbar-thumb:hover {
+  background: rgba(255, 255, 255, 0.9);
+
+  background-clip: padding-box;
+}
+
+/* =========================================================
+   TABLET - 2 COLUMN
+========================================================= */
 
 @media (min-width: 768px) {
   .grid-container-asal-sekolah-siswa-matrix {
-    grid-template-columns: repeat(2, 1fr); /* 2 columns on tablet */
+    grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 }
+
+/* =========================================================
+   DESKTOP - 3 COLUMN
+========================================================= */
 
 @media (min-width: 1024px) {
   .grid-container-asal-sekolah-siswa-matrix {
-    grid-template-columns: repeat(3, 1fr); /* 3 columns on desktop */
+    grid-template-columns: repeat(3, minmax(0, 1fr));
   }
 }
 
-.grid-item {
-  color: #ffffff; /* Warna teks */
-  font-size: 0.9rem;
-  font-weight: normal;
-  line-height: 1.6; /* Tinggi baris */
-}
-.grid-item::marker {
-  color: #ffffff; /* Warna bullet point */
-  font-size: 1.2rem; /* Ukuran bullet point */
-  margin-right: 0.5rem; /* Jarak antara bullet point dan teks */
-}
-.grid-container-asal-sekolah-siswa-matrix li {
-  /* Font keluarga */
-}
-
-/* Style for the scrollbar */
-.scrollable-content::-webkit-scrollbar {
-  width: 15px; /* Set the width of the scrollbar */
-  height: 15px; /* Set the height of the scrollbar (for horizontal scroll) */
-}
-
-/* For browsers like Firefox */
-.scrollable-content {
-  scrollbar-width: thin; /* Make the scrollbar thin */
-  scrollbar-color: #f5f5f5 #007bff;
-}
+/* =========================================================
+   MOBILE
+========================================================= */
 
 @media (max-width: 768px) {
+  .container-induk-testimonial-siswa-container {
+    padding-top: 50px;
+    padding-bottom: 50px;
+  }
+
   .title-asal-sekolah {
+    margin-bottom: 24px;
+
     font-size: 1.4rem;
   }
+
+  .scrollable-content {
+    max-height: 520px;
+
+    padding: 20px;
+
+    border-radius: 20px;
+
+    -webkit-backdrop-filter: blur(22px) saturate(180%);
+    backdrop-filter: blur(22px) saturate(180%);
+  }
+
   .grid-item {
-    font-size: 0.9rem;
+    font-size: 0.88rem;
+  }
+}
+
+/* =========================================================
+   SMALL MOBILE
+========================================================= */
+
+@media (max-width: 480px) {
+  .scrollable-content {
+    padding: 18px;
+
+    border-radius: 18px;
+  }
+
+  .grid-container-asal-sekolah-siswa-matrix {
+    gap: 7px;
+
+    padding-left: 1.25rem;
+  }
+
+  .grid-item {
+    font-size: 0.84rem;
   }
 }

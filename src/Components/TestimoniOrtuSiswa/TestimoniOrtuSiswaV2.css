@@ -1,60 +1,162 @@
-.matrix-testimoni-section {
-  background-color: #ffffff;
+/* =========================================================
+   TESTIMONI ORANG TUA & SISWA V2
+   Semua class dibuat khusus agar tidak bentrok
+========================================================= */
+
+.ortu-testimoni-v2-section {
+  position: relative;
+
+  overflow: hidden;
+
   padding: 70px 10%;
+
+  background:
+    radial-gradient(circle at 8% 18%, rgba(0, 123, 255, 0.12), transparent 26%),
+    radial-gradient(
+      circle at 90% 35%,
+      rgba(90, 185, 255, 0.1),
+      transparent 28%
+    ),
+    radial-gradient(
+      circle at 45% 90%,
+      rgba(0, 123, 255, 0.06),
+      transparent 25%
+    ),
+    #ffffff;
 }
 
-.matrix-testimoni-container {
+/* background glow */
+
+.ortu-testimoni-v2-section::before {
+  content: "";
+
+  position: absolute;
+
+  width: 420px;
+  height: 420px;
+
+  left: -180px;
+  top: 160px;
+
+  border-radius: 50%;
+
+  background: rgba(0, 123, 255, 0.09);
+
+  filter: blur(100px);
+
+  pointer-events: none;
+}
+
+.ortu-testimoni-v2-section::after {
+  content: "";
+
+  position: absolute;
+
+  width: 380px;
+  height: 380px;
+
+  right: -160px;
+  bottom: 120px;
+
+  border-radius: 50%;
+
+  background: rgba(77, 163, 255, 0.1);
+
+  filter: blur(100px);
+
+  pointer-events: none;
+}
+
+/* =========================================================
+   CONTAINER
+========================================================= */
+
+.ortu-testimoni-v2-container {
+  position: relative;
+
+  z-index: 2;
+
   width: 100%;
+
   max-width: 1280px;
+
   margin: 0 auto;
 }
 
-.matrix-testimoni-header {
+/* =========================================================
+   HEADER
+========================================================= */
+
+.ortu-testimoni-v2-header {
   max-width: 720px;
-  margin: 0 auto 40px;
+
+  margin: 0 auto 42px;
+
   text-align: center;
 }
 
-.matrix-testimoni-badge {
+.ortu-testimoni-v2-badge {
   display: inline-flex;
+
+  align-items: center;
+  justify-content: center;
+
   padding: 7px 16px;
+
+  border: 1px solid rgba(255, 255, 255, 0.8);
+
   border-radius: 999px;
 
-  background-color: #eff6ff;
-  color: #0455c0;
+  background: rgba(255, 255, 255, 0.48);
+
+  color: #007bff;
 
   font-size: 12px;
-  font-weight: 600;
+  font-weight: 700;
+
+  -webkit-backdrop-filter: blur(18px) saturate(180%);
+  backdrop-filter: blur(18px) saturate(180%);
+
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 1),
+    0 8px 24px -16px rgba(0, 123, 255, 0.3);
 }
 
-.matrix-testimoni-title {
+.ortu-testimoni-v2-title {
   margin: 16px 0 0;
 
   color: #1e293b;
 
   font-size: 30px;
-  font-weight: 700;
+
+  font-weight: 800;
+
   line-height: 1.3;
+
   letter-spacing: -0.5px;
 }
 
-.matrix-testimoni-title span {
-  color: #0455c0;
+.ortu-testimoni-v2-title span {
+  color: #007bff;
 }
 
-.matrix-testimoni-description {
+.ortu-testimoni-v2-description {
   max-width: 620px;
+
   margin: 12px auto 0;
 
   color: #64748b;
 
   font-size: 15px;
+
   line-height: 1.8;
 }
 
-/* GRID */
+/* =========================================================
+   GRID
+========================================================= */
 
-.matrix-testimoni-grid {
+.ortu-testimoni-v2-grid {
   display: grid;
 
   grid-template-columns: repeat(3, minmax(0, 1fr));
@@ -62,45 +164,128 @@
   gap: 24px;
 }
 
-/* CARD */
+/* =========================================================
+   LIQUID GLASS CARD
+========================================================= */
 
-.matrix-testimoni-card {
+.ortu-testimoni-v2-card {
   position: relative;
 
+  isolation: isolate;
+
   width: 100%;
-  padding: 0;
+
+  padding: 8px;
 
   overflow: hidden;
 
-  border: 1px solid rgba(226, 232, 240, 0.85);
-  border-radius: 20px;
+  appearance: none;
 
-  background-color: rgba(248, 250, 252, 0.9);
+  border: 1px solid rgba(255, 255, 255, 0.82);
+
+  border-radius: 24px;
+
+  background: linear-gradient(
+    145deg,
+    rgba(255, 255, 255, 0.56),
+    rgba(255, 255, 255, 0.28)
+  );
+
+  -webkit-backdrop-filter: blur(28px) saturate(190%);
+  backdrop-filter: blur(28px) saturate(190%);
 
   text-align: left;
 
   cursor: pointer;
 
-  box-shadow: 0 10px 30px -22px rgba(15, 23, 42, 0.25);
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 1),
+    inset 0 -1px 0 rgba(255, 255, 255, 0.25),
+    inset 1px 0 0 rgba(255, 255, 255, 0.3),
+    inset -1px 0 0 rgba(255, 255, 255, 0.18),
+    0 18px 42px -24px rgba(30, 64, 175, 0.25);
 
   transition:
     transform 0.3s ease,
-    box-shadow 0.3s ease,
-    border-color 0.3s ease;
+    background 0.3s ease,
+    border-color 0.3s ease,
+    box-shadow 0.3s ease;
 }
 
-.matrix-testimoni-card:hover {
-  transform: translateY(-4px);
+/* cahaya atas */
 
-  border-color: #bfdbfe;
+.ortu-testimoni-v2-card::before {
+  content: "";
 
-  box-shadow: 0 18px 40px -22px rgba(4, 85, 192, 0.35);
+  position: absolute;
+
+  z-index: 4;
+
+  top: 0;
+  left: 8%;
+  right: 8%;
+
+  height: 1px;
+
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(255, 255, 255, 1),
+    transparent
+  );
+
+  pointer-events: none;
 }
 
-/* IMAGE */
+/* liquid reflection */
 
-.matrix-testimoni-image-wrapper {
+.ortu-testimoni-v2-card::after {
+  content: "";
+
+  position: absolute;
+
+  z-index: 0;
+
+  width: 150px;
+  height: 150px;
+
+  top: -70px;
+  right: -50px;
+
+  border-radius: 50%;
+
+  background: rgba(255, 255, 255, 0.4);
+
+  filter: blur(35px);
+
+  pointer-events: none;
+}
+
+.ortu-testimoni-v2-card:hover {
+  transform: translateY(-6px);
+
+  border-color: rgba(255, 255, 255, 1);
+
+  background: linear-gradient(
+    145deg,
+    rgba(255, 255, 255, 0.68),
+    rgba(255, 255, 255, 0.38)
+  );
+
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 1),
+    inset 0 -1px 0 rgba(255, 255, 255, 0.35),
+    0 24px 50px -22px rgba(0, 123, 255, 0.28);
+}
+
+/* =========================================================
+   IMAGE
+========================================================= */
+
+.ortu-testimoni-v2-image-wrapper {
   position: relative;
+
+  z-index: 2;
 
   width: 100%;
 
@@ -108,10 +293,16 @@
 
   overflow: hidden;
 
-  background-color: #f1f5f9;
+  border-radius: 18px;
+
+  background: rgba(255, 255, 255, 0.4);
+
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.45),
+    0 7px 20px rgba(15, 23, 42, 0.08);
 }
 
-.matrix-testimoni-image {
+.ortu-testimoni-v2-image {
   display: block;
 
   width: 100%;
@@ -119,17 +310,20 @@
 
   object-fit: cover;
 
-  transition: transform 0.5s ease;
+  transition: transform 0.45s ease;
 }
 
-.matrix-testimoni-card:hover .matrix-testimoni-image {
-  transform: scale(1.025);
+.ortu-testimoni-v2-card:hover .ortu-testimoni-v2-image {
+  transform: scale(1.03);
 }
 
-/* OVERLAY */
+/* =========================================================
+   OVERLAY
+========================================================= */
 
-.matrix-testimoni-overlay {
+.ortu-testimoni-v2-overlay {
   position: absolute;
+
   inset: 0;
 
   display: flex;
@@ -137,28 +331,33 @@
   align-items: center;
   justify-content: center;
 
-  background-color: rgba(0, 0, 0, 0);
+  background: rgba(15, 23, 42, 0);
 
-  transition: background-color 0.3s ease;
+  transition: background 0.3s ease;
 }
 
-.matrix-testimoni-card:hover .matrix-testimoni-overlay {
-  background-color: rgba(0, 0, 0, 0.25);
+.ortu-testimoni-v2-card:hover .ortu-testimoni-v2-overlay {
+  background: rgba(15, 23, 42, 0.16);
 }
 
-.matrix-testimoni-zoom {
+/* =========================================================
+   ZOOM BUTTON
+========================================================= */
+
+.ortu-testimoni-v2-zoom {
   display: flex;
 
-  width: 44px;
-  height: 44px;
+  width: 46px;
+  height: 46px;
 
   align-items: center;
   justify-content: center;
 
-  border: 1px solid rgba(255, 255, 255, 0.3);
+  border: 1px solid rgba(255, 255, 255, 0.52);
+
   border-radius: 50%;
 
-  background-color: rgba(255, 255, 255, 0.15);
+  background: rgba(255, 255, 255, 0.16);
 
   color: #ffffff;
 
@@ -166,33 +365,41 @@
 
   opacity: 0;
 
-  transform: translateY(8px);
+  transform: translateY(8px) scale(0.94);
 
-  backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(22px) saturate(180%);
+  backdrop-filter: blur(22px) saturate(180%);
+
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.55),
+    0 10px 30px rgba(0, 0, 0, 0.18);
 
   transition:
     opacity 0.3s ease,
     transform 0.3s ease;
 }
 
-.matrix-testimoni-card:hover .matrix-testimoni-zoom {
+.ortu-testimoni-v2-card:hover .ortu-testimoni-v2-zoom {
   opacity: 1;
 
-  transform: translateY(0);
+  transform: translateY(0) scale(1);
 }
 
-/* INFO */
+/* =========================================================
+   INFO
+========================================================= */
 
-.matrix-testimoni-info {
-  padding: 16px;
+.ortu-testimoni-v2-info {
+  position: relative;
 
-  border-top: 1px solid rgba(226, 232, 240, 0.8);
+  z-index: 2;
 
-  background-color: #ffffff;
+  padding: 14px 10px 8px;
+
+  background: transparent;
 }
 
-.matrix-testimoni-student {
+.ortu-testimoni-v2-student {
   margin: 0;
 
   overflow: hidden;
@@ -200,16 +407,19 @@
   color: #1e293b;
 
   font-size: 14px;
-  font-weight: 600;
+
+  font-weight: 700;
 
   white-space: nowrap;
+
   text-overflow: ellipsis;
 }
 
-.matrix-testimoni-meta {
+.ortu-testimoni-v2-meta {
   display: flex;
 
   align-items: center;
+
   justify-content: space-between;
 
   gap: 10px;
@@ -217,7 +427,7 @@
   margin-top: 7px;
 }
 
-.matrix-testimoni-parent {
+.ortu-testimoni-v2-parent {
   min-width: 0;
 
   overflow: hidden;
@@ -227,48 +437,67 @@
   font-size: 12px;
 
   white-space: nowrap;
+
   text-overflow: ellipsis;
 }
 
-.matrix-testimoni-grade {
+/* =========================================================
+   GRADE GLASS
+========================================================= */
+
+.ortu-testimoni-v2-grade {
   flex-shrink: 0;
 
   padding: 5px 9px;
 
+  border: 1px solid rgba(255, 255, 255, 0.85);
+
   border-radius: 999px;
 
-  background-color: #eff6ff;
+  background: rgba(255, 255, 255, 0.5);
 
-  color: #0455c0;
+  color: #007bff;
 
   font-size: 10px;
-  font-weight: 600;
+
+  font-weight: 700;
+
+  -webkit-backdrop-filter: blur(16px) saturate(170%);
+  backdrop-filter: blur(16px) saturate(170%);
+
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 1),
+    0 6px 16px -10px rgba(0, 123, 255, 0.35);
 }
 
-/* LIGHTBOX */
+/* =========================================================
+   LIGHTBOX
+========================================================= */
 
-.matrix-testimoni-lightbox {
+.ortu-testimoni-v2-lightbox {
   position: fixed;
+
   inset: 0;
 
-  z-index: 9999;
+  z-index: 99999;
 
   display: flex;
 
   align-items: center;
+
   justify-content: center;
 
   padding: 24px;
 
-  background-color: rgba(0, 0, 0, 0.85);
+  background: rgba(15, 23, 42, 0.62);
 
-  backdrop-filter: blur(6px);
-  -webkit-backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(22px) saturate(140%);
+  backdrop-filter: blur(22px) saturate(140%);
 
-  animation: matrixTestimoniFadeIn 0.2s ease;
+  animation: ortuTestimoniV2FadeIn 0.2s ease;
 }
 
-@keyframes matrixTestimoniFadeIn {
+@keyframes ortuTestimoniV2FadeIn {
   from {
     opacity: 0;
   }
@@ -278,52 +507,77 @@
   }
 }
 
-.matrix-testimoni-lightbox-content {
+/* =========================================================
+   LIGHTBOX CONTENT
+========================================================= */
+
+.ortu-testimoni-v2-lightbox-content {
   display: flex;
 
-  width: 100%;
+  width: auto;
+
   max-width: 900px;
+
   max-height: 90vh;
 
   align-items: center;
+
   justify-content: center;
+
+  padding: 8px;
+
+  border: 1px solid rgba(255, 255, 255, 0.28);
+
+  border-radius: 22px;
+
+  background: rgba(255, 255, 255, 0.14);
+
+  -webkit-backdrop-filter: blur(28px) saturate(180%);
+  backdrop-filter: blur(28px) saturate(180%);
+
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.38),
+    0 30px 80px rgba(0, 0, 0, 0.32);
 }
 
-.matrix-testimoni-lightbox-image {
+.ortu-testimoni-v2-lightbox-image {
   display: block;
 
   max-width: 100%;
-  max-height: 90vh;
+
+  max-height: 88vh;
 
   object-fit: contain;
 
-  border-radius: 8px;
-
-  box-shadow: 0 25px 70px rgba(0, 0, 0, 0.45);
+  border-radius: 15px;
 }
 
-/* CLOSE BUTTON */
+/* =========================================================
+   CLOSE BUTTON
+========================================================= */
 
-.matrix-testimoni-close {
+.ortu-testimoni-v2-close {
   position: fixed;
 
   top: 24px;
   right: 24px;
 
-  z-index: 10000;
+  z-index: 100000;
 
   display: flex;
 
-  width: 44px;
-  height: 44px;
+  width: 46px;
+  height: 46px;
 
   align-items: center;
+
   justify-content: center;
 
-  border: 1px solid rgba(255, 255, 255, 0.2);
+  border: 1px solid rgba(255, 255, 255, 0.4);
+
   border-radius: 50%;
 
-  background-color: rgba(255, 255, 255, 0.12);
+  background: rgba(255, 255, 255, 0.16);
 
   color: #ffffff;
 
@@ -331,105 +585,130 @@
 
   cursor: pointer;
 
-  backdrop-filter: blur(16px);
-  -webkit-backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(22px) saturate(180%);
+  backdrop-filter: blur(22px) saturate(180%);
+
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.45),
+    0 10px 30px rgba(0, 0, 0, 0.2);
 
   transition:
-    background-color 0.2s ease,
-    transform 0.2s ease;
+    transform 0.2s ease,
+    background 0.2s ease;
 }
 
-.matrix-testimoni-close:hover {
-  background-color: rgba(255, 255, 255, 0.22);
+.ortu-testimoni-v2-close:hover {
+  transform: scale(1.06);
 
-  transform: scale(1.05);
+  background: rgba(255, 255, 255, 0.26);
 }
 
-/* TABLET */
+/* =========================================================
+   TABLET
+========================================================= */
 
 @media only screen and (max-width: 1024px) {
-  .matrix-testimoni-section {
+  .ortu-testimoni-v2-section {
     padding: 60px 6%;
   }
 
-  .matrix-testimoni-grid {
+  .ortu-testimoni-v2-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
 
     gap: 18px;
   }
 }
 
-/* MOBILE */
+/* =========================================================
+   MOBILE
+========================================================= */
 
-@media only screen and (min-width: 320px) and (max-width: 896px) {
-  .matrix-testimoni-section {
+@media only screen and (max-width: 896px) {
+  .ortu-testimoni-v2-section {
     padding: 50px 3%;
   }
 
-  .matrix-testimoni-header {
+  .ortu-testimoni-v2-header {
     margin-bottom: 28px;
   }
 
-  .matrix-testimoni-badge {
+  .ortu-testimoni-v2-badge {
     padding: 6px 13px;
 
     font-size: 10px;
   }
 
-  .matrix-testimoni-title {
+  .ortu-testimoni-v2-title {
     margin-top: 12px;
 
     font-size: 20px;
+
     line-height: 1.4;
   }
 
-  .matrix-testimoni-description {
+  .ortu-testimoni-v2-description {
     margin-top: 8px;
 
     font-size: 13px;
+
     line-height: 1.7;
   }
 
-  .matrix-testimoni-grid {
+  .ortu-testimoni-v2-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
 
     gap: 12px;
   }
 
-  .matrix-testimoni-card {
+  .ortu-testimoni-v2-card {
+    padding: 6px;
+
+    border-radius: 18px;
+
+    background: linear-gradient(
+      145deg,
+      rgba(255, 255, 255, 0.58),
+      rgba(255, 255, 255, 0.32)
+    );
+
+    -webkit-backdrop-filter: blur(22px) saturate(180%);
+    backdrop-filter: blur(22px) saturate(180%);
+  }
+
+  .ortu-testimoni-v2-image-wrapper {
     border-radius: 14px;
   }
 
-  .matrix-testimoni-info {
-    padding: 10px;
+  .ortu-testimoni-v2-info {
+    padding: 10px 6px 6px;
   }
 
-  .matrix-testimoni-student {
+  .ortu-testimoni-v2-student {
     font-size: 12px;
   }
 
-  .matrix-testimoni-parent {
+  .ortu-testimoni-v2-parent {
     font-size: 10px;
   }
 
-  .matrix-testimoni-grade {
+  .ortu-testimoni-v2-grade {
     padding: 4px 7px;
 
     font-size: 9px;
   }
 
-  .matrix-testimoni-zoom {
+  .ortu-testimoni-v2-zoom {
     width: 38px;
     height: 38px;
 
     font-size: 18px;
   }
 
-  .matrix-testimoni-lightbox {
+  .ortu-testimoni-v2-lightbox {
     padding: 12px;
   }
 
-  .matrix-testimoni-close {
+  .ortu-testimoni-v2-close {
     top: 14px;
     right: 14px;
 
@@ -437,27 +716,29 @@
     height: 40px;
   }
 
-  .matrix-testimoni-lightbox-image {
+  .ortu-testimoni-v2-lightbox-image {
     max-height: 88vh;
   }
 }
 
-/* SMALL MOBILE */
+/* =========================================================
+   SMALL MOBILE
+========================================================= */
 
 @media only screen and (max-width: 480px) {
-  .matrix-testimoni-grid {
+  .ortu-testimoni-v2-grid {
     gap: 10px;
   }
 
-  .matrix-testimoni-info {
-    padding: 9px;
+  .ortu-testimoni-v2-info {
+    padding: 9px 5px 5px;
   }
 
-  .matrix-testimoni-student {
+  .ortu-testimoni-v2-student {
     font-size: 11px;
   }
 
-  .matrix-testimoni-parent {
+  .ortu-testimoni-v2-parent {
     max-width: 80px;
   }
 }

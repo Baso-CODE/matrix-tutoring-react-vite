@@ -1,4 +1,3 @@
-// ReusableButton.jsx
 import "./ReusableButton.css";
 
 const ReusableButton = ({
@@ -10,15 +9,21 @@ const ReusableButton = ({
   icon,
 }) => {
   const buttonStyle = {
-    backgroundColor: bgColor,
-    color: textColor,
+    backgroundColor: bgColor ? `${bgColor}CC` : "rgba(255,255,255,0.72)",
 
-    "--button-border-color": borderColor,
+    color: textColor || "#007bff",
+
+    borderColor: borderColor || "rgba(0,123,255,0.24)",
   };
 
   return (
-    <button className="reusable-button" style={buttonStyle} onClick={onClick}>
-      {text}
+    <button
+      type="button"
+      className="reusable-button"
+      style={buttonStyle}
+      onClick={onClick}>
+      <span>{text}</span>
+
       {icon && <span className="reusable-button-icon-container">{icon}</span>}
     </button>
   );
