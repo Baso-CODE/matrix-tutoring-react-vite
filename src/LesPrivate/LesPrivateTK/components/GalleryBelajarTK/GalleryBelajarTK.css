@@ -1,8 +1,12 @@
-/* Section & Header */
+/* =========================================================
+   SECTION
+========================================================= */
+
 .gallery-tk {
   margin: 0 auto;
-  text-align: center;
   padding: 20px 0;
+
+  text-align: center;
 }
 
 .gallery-tk__header {
@@ -10,120 +14,286 @@
 }
 
 .gallery-tk__title {
+  margin-bottom: 10px;
+
+  color: #333333;
+
   font-size: 1.4rem;
   font-weight: 800;
-  color: #333333;
+
   text-transform: uppercase;
-  margin-bottom: 10px;
 }
 
 .gallery-tk__subtitle {
-  font-size: 0.9rem;
   color: #555555;
+
+  font-size: 0.9rem;
 }
 
-/* Grid Layout */
+/* =========================================================
+   GRID
+========================================================= */
+
 .gallery-tk__grid {
   display: grid;
-  grid-template-columns: repeat(1, 1fr);
+
+  grid-template-columns: repeat(1, minmax(0, 1fr));
+
   gap: 24px;
 }
 
 @media (min-width: 640px) {
   .gallery-tk__grid {
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 }
 
 @media (min-width: 1024px) {
   .gallery-tk__grid {
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(4, minmax(0, 1fr));
   }
 }
 
-/* Card Container */
+/* =========================================================
+   CARD CONTAINER
+========================================================= */
+
 .gallery-tk__card-container {
+  position: relative;
+
   width: 100%;
   height: 320px;
-  position: relative;
+
+  border-radius: 24px;
 }
+
+/* =========================================================
+   LIQUID GLASS CARD
+========================================================= */
 
 .gallery-tk__card {
+  position: relative;
+
   width: 100%;
   height: 100%;
-  border-radius: 12px;
+
   overflow: hidden;
-  position: relative;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+
+  border-radius: 24px;
+
+  border: 1px solid rgba(255, 255, 255, 0.5);
+
+  background: rgba(255, 255, 255, 0.08);
+
+  -webkit-backdrop-filter: blur(18px) saturate(180%);
+  backdrop-filter: blur(18px) saturate(180%);
+
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.5),
+    inset 0 -1px 0 rgba(255, 255, 255, 0.08),
+    0 18px 42px -22px rgba(15, 23, 42, 0.3);
+
+  transition:
+    transform 0.35s ease,
+    box-shadow 0.35s ease,
+    border-color 0.35s ease;
 }
 
-/* Background Image & Zoom Effect */
+.gallery-tk__card::before {
+  content: "";
+
+  position: absolute;
+
+  top: 0;
+  left: 8%;
+  right: 8%;
+
+  height: 1px;
+
+  z-index: 5;
+
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(255, 255, 255, 0.95),
+    transparent
+  );
+
+  pointer-events: none;
+}
+
+.gallery-tk__card:hover {
+  transform: translateY(-6px);
+
+  border-color: rgba(255, 255, 255, 0.75);
+
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.65),
+    0 24px 52px -22px rgba(0, 123, 255, 0.32);
+}
+
+/* =========================================================
+   IMAGE
+========================================================= */
+
 .gallery-tk__img-content {
+  position: absolute;
+
+  inset: 0;
+
   width: 100%;
   height: 100%;
+
   background-size: cover;
   background-position: center;
+
+  transform: scale(1);
+
   transition:
-    transform 0.5s ease,
+    transform 0.6s cubic-bezier(0.23, 1, 0.32, 1),
     filter 0.5s ease;
-  will-change: transform;
 }
 
-/* Hover Overlay Content */
+/* =========================================================
+   LIQUID GLASS CONTENT
+========================================================= */
+
 .gallery-tk__content {
   position: absolute;
-  inset: 0;
+
+  left: 12px;
+  right: 12px;
+  bottom: 12px;
+
+  z-index: 4;
+
   display: flex;
   flex-direction: column;
+
   align-items: center;
   justify-content: center;
-  text-align: center;
-  gap: 12px;
+
+  gap: 8px;
+
+  min-height: 110px;
+
+  padding: 16px;
+
+  border-radius: 18px;
+
+  border: 1px solid rgba(255, 255, 255, 0.28);
+
+  background: linear-gradient(
+    145deg,
+    rgba(0, 123, 255, 0.42),
+    rgba(0, 91, 190, 0.22)
+  );
+
+  -webkit-backdrop-filter: blur(24px) saturate(180%);
+  backdrop-filter: blur(24px) saturate(180%);
+
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.28),
+    0 12px 28px rgba(0, 0, 0, 0.16);
+
   color: #ffffff;
-  padding: 20px;
-  line-height: 1.5;
+
   opacity: 0;
-  pointer-events: none;
+
   transform: translateY(20px);
-  background: rgba(
-    0,
-    119,
-    255,
-    0.85
-  ); /* Background biru semi-transparan yang lebih rapi/profesional */
-  backdrop-filter: blur(3px);
+
+  pointer-events: none;
+
+  transition:
+    opacity 0.35s ease,
+    transform 0.35s ease;
 }
 
+.gallery-tk__content::before {
+  content: "";
+
+  position: absolute;
+
+  top: 0;
+  left: 10%;
+  right: 10%;
+
+  height: 1px;
+
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(255, 255, 255, 0.75),
+    transparent
+  );
+
+  pointer-events: none;
+}
+
+/* =========================================================
+   TEXT
+========================================================= */
+
 .gallery-tk__heading {
-  font-size: 1.15rem;
-  line-height: 1.3;
+  margin: 0;
+
+  color: #ffffff;
+
+  font-size: 1.1rem;
   font-weight: 700;
 
-  margin: 0;
-  color: #ffffff;
+  line-height: 1.3;
+
+  text-align: center;
 }
 
 .gallery-tk__description {
-  font-size: 0.875rem;
+  margin: 0;
+
+  color: rgba(255, 255, 255, 0.92);
+
+  font-size: 0.85rem;
   font-weight: 400;
 
-  color: #f1f5f9;
-  margin: 0;
+  line-height: 1.5;
+
+  text-align: center;
 }
 
-/* Hover Interactions */
+/* =========================================================
+   HOVER
+========================================================= */
+
 .gallery-tk__card:hover .gallery-tk__content {
   opacity: 1;
-  pointer-events: auto;
+
   transform: translateY(0);
 }
 
 .gallery-tk__card:hover .gallery-tk__img-content {
-  transform: scale(1.1);
-  filter: brightness(0.85);
+  transform: scale(1.08);
+
+  filter: brightness(0.72) saturate(1.05);
 }
 
-/* Responsive Styles */
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 1024px) {
+  .gallery-tk__heading {
+    font-size: 1rem;
+  }
+
+  .gallery-tk__description {
+    font-size: 0.82rem;
+  }
+}
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
 @media (max-width: 768px) {
   .gallery-tk__title {
     font-size: 1.2rem;
@@ -133,11 +303,67 @@
     font-size: 0.85rem;
   }
 
+  .gallery-tk__card-container {
+    height: 290px;
+  }
+
+  .gallery-tk__content {
+    left: 10px;
+    right: 10px;
+    bottom: 10px;
+
+    min-height: 100px;
+
+    padding: 14px;
+
+    border-radius: 16px;
+
+    opacity: 1;
+
+    transform: translateY(0);
+
+    background: linear-gradient(
+      145deg,
+      rgba(0, 123, 255, 0.44),
+      rgba(0, 91, 190, 0.24)
+    );
+  }
+
+  .gallery-tk__img-content {
+    filter: brightness(0.82);
+  }
+
   .gallery-tk__heading {
     font-size: 1rem;
   }
 
   .gallery-tk__description {
     font-size: 0.8rem;
+  }
+}
+
+/* =========================================================
+   SMALL MOBILE
+========================================================= */
+
+@media (max-width: 480px) {
+  .gallery-tk__grid {
+    gap: 16px;
+  }
+
+  .gallery-tk__card-container {
+    height: 270px;
+  }
+
+  .gallery-tk__card {
+    border-radius: 20px;
+  }
+
+  .gallery-tk__heading {
+    font-size: 0.95rem;
+  }
+
+  .gallery-tk__description {
+    font-size: 0.78rem;
   }
 }

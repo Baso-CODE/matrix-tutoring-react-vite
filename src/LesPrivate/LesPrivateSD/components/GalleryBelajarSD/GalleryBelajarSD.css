@@ -1,4 +1,7 @@
-/* Section */
+/* =========================================================
+   SECTION
+========================================================= */
+
 .gallery__sd {
   margin: 0 auto;
   text-align: center;
@@ -9,149 +12,352 @@
 }
 
 .gallery-sd__title {
+  margin-bottom: 10px;
+
+  color: #333333;
+
   font-size: 1.4rem;
   font-weight: 800;
-  color: #333333;
+
   text-transform: uppercase;
-  margin-bottom: 10px;
 }
 
 .gallery-sd__subtitle {
+  color: #4f4f4f;
+
   font-size: 0.9rem;
-  color: #343434;
 }
 
-/* Grid */
+/* =========================================================
+   GRID
+========================================================= */
+
 .gallery-sd__grid {
   display: grid;
-  grid-template-columns: repeat(1, 1fr);
+
+  grid-template-columns: repeat(1, minmax(0, 1fr));
+
   gap: 24px;
 }
 
 @media (min-width: 768px) {
   .gallery-sd__grid {
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 }
 
 @media (min-width: 1024px) {
   .gallery-sd__grid {
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(4, minmax(0, 1fr));
   }
 }
 
-/* Card Container */
+/* =========================================================
+   CARD CONTAINER
+========================================================= */
+
 .gallery-sd__card-container {
+  position: relative;
+
   width: 100%;
   height: 300px;
-  position: relative;
-  border-radius: 10px;
+
+  border-radius: 24px;
 }
 
-.gallery-sd__card-container::before {
-  content: "";
-  z-index: -1;
-  position: absolute;
-  inset: 0;
-  /* background: linear-gradient(-45deg, #007bff 0%, #007bff 100%); */
-  transform: translate3d(0, 0, 0) scale(0.95);
-  filter: blur(15px);
-}
+/* =========================================================
+   LIQUID GLASS CARD
+========================================================= */
 
 .gallery-sd__card {
+  position: relative;
+
   width: 100%;
   height: 100%;
-  border-radius: inherit;
+
   overflow: hidden;
-  position: relative;
+
+  border-radius: 24px;
+
+  border: 1px solid rgba(255, 255, 255, 0.5);
+
+  background: rgba(255, 255, 255, 0.1);
+
+  -webkit-backdrop-filter: blur(18px) saturate(180%);
+  backdrop-filter: blur(18px) saturate(180%);
+
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.5),
+    inset 0 -1px 0 rgba(255, 255, 255, 0.1),
+    0 18px 42px -22px rgba(15, 23, 42, 0.32);
+
+  transition:
+    transform 0.35s ease,
+    box-shadow 0.35s ease,
+    border-color 0.35s ease;
 }
 
+/* glass highlight */
+
+.gallery-sd__card::before {
+  content: "";
+
+  position: absolute;
+
+  top: 0;
+  left: 8%;
+  right: 8%;
+
+  height: 1px;
+
+  z-index: 5;
+
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(255, 255, 255, 0.95),
+    transparent
+  );
+
+  pointer-events: none;
+}
+
+.gallery-sd__card:hover {
+  transform: translateY(-6px);
+
+  border-color: rgba(255, 255, 255, 0.75);
+
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.65),
+    0 24px 52px -22px rgba(0, 123, 255, 0.32);
+}
+
+/* =========================================================
+   IMAGE
+========================================================= */
+
 .gallery-sd__img-content {
+  position: absolute;
+
+  inset: 0;
+
   width: 100%;
   height: 100%;
+
   background-size: cover;
   background-position: center;
+
+  transform: scale(1);
+
   transition:
-    scale 0.6s,
-    rotate 0.6s,
-    filter 1s;
+    transform 0.6s cubic-bezier(0.23, 1, 0.32, 1),
+    filter 0.5s ease;
 }
+
+/* =========================================================
+   LIQUID GLASS OVERLAY
+========================================================= */
 
 .gallery-sd__content {
   position: absolute;
-  top: 0;
-  left: 0;
-  height: 100%;
-  overflow: auto;
+
+  left: 12px;
+  right: 12px;
+  bottom: 12px;
+
+  z-index: 4;
+
   display: flex;
   flex-direction: column;
+
   align-items: center;
   justify-content: center;
-  text-align: center;
-  gap: 10px;
 
-  color: #fff;
-  padding-left: 10px;
-  padding-right: 10px;
-  line-height: 1.5;
-  border-radius: 5px;
-  opacity: 0;
-  pointer-events: none;
-  transform: translateY(50px);
-  transition: all 0.6s cubic-bezier(0.23, 1, 0.32, 1);
-  background: rgba(
-    0,
-    119,
-    255,
-    0.85
-  ); /* Background biru semi-transparan yang lebih rapi/profesional */
-}
+  gap: 8px;
 
-.gallery-sd__heading {
-  font-size: 22px;
-  line-height: normal;
-  font-weight: 700;
+  min-height: 110px;
 
-  text-align: center;
-}
-.gallery-sd__description {
-  font-size: 1rem;
-  font-weight: 400;
-  text-align: center;
+  padding: 16px;
+
+  border-radius: 18px;
+
+  border: 1px solid rgba(255, 255, 255, 0.28);
+
+  background: linear-gradient(
+    145deg,
+    rgba(0, 123, 255, 0.4),
+    rgba(0, 91, 190, 0.22)
+  );
+
+  -webkit-backdrop-filter: blur(24px) saturate(180%);
+  backdrop-filter: blur(24px) saturate(180%);
+
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.28),
+    0 12px 28px rgba(0, 0, 0, 0.16);
 
   color: #ffffff;
+
+  opacity: 0;
+
+  transform: translateY(20px);
+
+  pointer-events: none;
+
+  transition:
+    opacity 0.35s ease,
+    transform 0.35s ease;
 }
 
-/* Hover Effects */
+/* reflection */
+
+.gallery-sd__content::before {
+  content: "";
+
+  position: absolute;
+
+  top: 0;
+  left: 10%;
+  right: 10%;
+
+  height: 1px;
+
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(255, 255, 255, 0.75),
+    transparent
+  );
+
+  pointer-events: none;
+}
+
+/* =========================================================
+   TEXT
+========================================================= */
+
+.gallery-sd__heading {
+  margin: 0;
+
+  color: #ffffff;
+
+  font-size: 1.15rem;
+  font-weight: 700;
+
+  line-height: 1.3;
+
+  text-align: center;
+}
+
+.gallery-sd__description {
+  margin: 0;
+
+  color: rgba(255, 255, 255, 0.92);
+
+  font-size: 0.85rem;
+  font-weight: 400;
+
+  line-height: 1.5;
+
+  text-align: center;
+}
+
+/* =========================================================
+   HOVER
+========================================================= */
+
 .gallery-sd__card:hover .gallery-sd__content {
   opacity: 1;
+
   transform: translateY(0);
 }
 
 .gallery-sd__card:hover .gallery-sd__img-content {
-  scale: 2.5;
-  rotate: 30deg;
-  filter: blur(7px);
+  transform: scale(1.08);
+
+  filter: brightness(0.72) saturate(1.05);
 }
+
+/* =========================================================
+   TABLET
+========================================================= */
 
 @media (max-width: 1024px) {
   .gallery-sd__heading {
-    font-size: 18px;
-    line-height: 1.2;
+    font-size: 1rem;
   }
+
   .gallery-sd__description {
-    font-size: 0.9rem;
+    font-size: 0.82rem;
   }
 }
+
+/* =========================================================
+   MOBILE
+========================================================= */
 
 @media (max-width: 768px) {
   .gallery-sd__title {
     font-size: 1.3rem;
   }
+
   .gallery-sd__subtitle {
     font-size: 0.9rem;
   }
+
+  .gallery-sd__card-container {
+    height: 280px;
+  }
+
   .gallery-sd__content {
-    max-width: 100%;
+    left: 10px;
+    right: 10px;
+    bottom: 10px;
+
+    min-height: 100px;
+
+    padding: 14px;
+
+    border-radius: 16px;
+
+    opacity: 1;
+
+    transform: translateY(0);
+
+    background: linear-gradient(
+      145deg,
+      rgba(0, 123, 255, 0.42),
+      rgba(0, 91, 190, 0.24)
+    );
+  }
+
+  .gallery-sd__img-content {
+    filter: brightness(0.82);
+  }
+}
+
+/* =========================================================
+   SMALL MOBILE
+========================================================= */
+
+@media (max-width: 480px) {
+  .gallery-sd__grid {
+    gap: 16px;
+  }
+
+  .gallery-sd__card-container {
+    height: 260px;
+  }
+
+  .gallery-sd__card {
+    border-radius: 20px;
+  }
+
+  .gallery-sd__heading {
+    font-size: 0.95rem;
+  }
+
+  .gallery-sd__description {
+    font-size: 0.78rem;
   }
 }

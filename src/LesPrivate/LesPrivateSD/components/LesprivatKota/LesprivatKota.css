@@ -1,5 +1,6 @@
 .lesprivat-kota__section {
   background: #007bff;
+
   padding-left: 10%;
   padding-right: 10%;
   padding-top: 5%;
@@ -8,138 +9,412 @@
 
 .lesprivat-kota__container {
   margin: 0 auto;
+
   text-align: center;
 }
+
+/* =========================================================
+   HEADER
+========================================================= */
 
 .lesprivat-kota__header {
   margin-bottom: 3rem;
 }
 
 .lesprivat-kota__title {
-  font-size: 1.2rem;
-
-  font-weight: 800;
-  color: #ffffff;
-  text-transform: uppercase;
   margin-bottom: 1rem;
-}
 
-@media (min-width: 640px) {
-  .lesprivat-kota__title {
-    font-size: 1.5rem;
-  }
-}
+  color: #ffffff;
 
-@media (min-width: 1024px) {
-  .lesprivat-kota__title {
-    font-size: 1.5rem;
-  }
+  font-size: 1.2rem;
+  font-weight: 800;
+
+  text-transform: uppercase;
 }
 
 .lesprivat-kota__subtitle {
-  font-size: 0.9rem;
-  color: #ffffff;
-
-  opacity: 0.9;
   max-width: 48rem;
+
   margin: 0 auto;
+
+  color: rgba(255, 255, 255, 0.9);
+
+  font-size: 0.9rem;
+
+  line-height: 1.7;
 }
 
+/* =========================================================
+   IMAGE
+   CLEAN - TANPA LIQUID GLASS
+========================================================= */
+
 .lesprivat-kota__image-wrapper {
-  margin: 0 auto 2.5rem auto;
-  border-radius: 1rem;
+  width: 100%;
+
+  margin: 0 auto 2.5rem;
+
   overflow: hidden;
+
+  border-radius: 16px;
 }
 
 .lesprivat-kota__image {
+  display: block;
+
   width: 100%;
   height: auto;
+
   object-fit: cover;
+
+  border-radius: 16px;
 }
+
+/* =========================================================
+   LIST WRAPPER
+========================================================= */
 
 .lesprivat-kota__list-wrapper {
-  padding: 0 0;
+  width: 100%;
+
+  padding: 0;
 }
+
+/* =========================================================
+   LIQUID GLASS MAIN BOX
+========================================================= */
 
 .lesprivat-kota__list-box {
-  background: rgba(255, 255, 255, 0.1);
-  backdrop-filter: blur(12px);
-  border-radius: 1rem;
+  position: relative;
+
+  overflow: hidden;
+
   padding: 2rem;
-  border: 1px solid rgba(255, 255, 255, 0.2);
+
+  border-radius: 26px;
+
+  border: 1px solid rgba(255, 255, 255, 0.28);
+
+  background: linear-gradient(
+    145deg,
+    rgba(255, 255, 255, 0.22),
+    rgba(255, 255, 255, 0.1)
+  );
+
+  -webkit-backdrop-filter: blur(28px) saturate(190%);
+  backdrop-filter: blur(28px) saturate(190%);
+
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.38),
+    inset 0 -1px 0 rgba(255, 255, 255, 0.08),
+    0 22px 48px -24px rgba(0, 43, 110, 0.52);
 }
+
+/* highlight kaca */
+
+.lesprivat-kota__list-box::before {
+  content: "";
+
+  position: absolute;
+
+  top: 0;
+  left: 8%;
+  right: 8%;
+
+  height: 1px;
+
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(255, 255, 255, 0.95),
+    transparent
+  );
+
+  pointer-events: none;
+
+  z-index: 2;
+}
+
+/* reflection */
+
+.lesprivat-kota__list-box::after {
+  content: "";
+
+  position: absolute;
+
+  top: -80px;
+  right: -60px;
+
+  width: 200px;
+  height: 200px;
+
+  border-radius: 50%;
+
+  background: rgba(255, 255, 255, 0.12);
+
+  filter: blur(42px);
+
+  pointer-events: none;
+}
+
+/* =========================================================
+   LIST TITLE
+========================================================= */
 
 .lesprivat-kota__list-title {
-  font-size: 1.25rem;
-  font-weight: 700;
-  color: #fff;
+  position: relative;
+
+  z-index: 2;
 
   margin-bottom: 1.5rem;
+
+  color: #ffffff;
+
+  font-size: 1.25rem;
+  font-weight: 700;
 }
+
+/* =========================================================
+   GRID
+========================================================= */
 
 .lesprivat-kota__grid {
+  position: relative;
+
+  z-index: 2;
+
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+
   gap: 0.75rem;
+
+  margin: 0;
+
+  padding: 0;
 }
 
+/* =========================================================
+   ITEM
+========================================================= */
+
+.lesprivat-kota__item {
+  width: 100%;
+
+  list-style: none;
+}
+
+/* =========================================================
+   LIQUID GLASS CITY ITEM
+========================================================= */
+
+.lesprivat-kota__link {
+  position: relative;
+
+  display: flex;
+
+  width: 100%;
+  height: 3.2rem;
+
+  align-items: center;
+  justify-content: center;
+
+  overflow: hidden;
+
+  padding: 0 14px;
+
+  box-sizing: border-box;
+
+  border-radius: 14px;
+
+  border: 1px solid rgba(255, 255, 255, 0.24);
+
+  background: linear-gradient(
+    145deg,
+    rgba(255, 255, 255, 0.16),
+    rgba(255, 255, 255, 0.08)
+  );
+
+  -webkit-backdrop-filter: blur(18px) saturate(180%);
+  backdrop-filter: blur(18px) saturate(180%);
+
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.26),
+    0 10px 24px -16px rgba(0, 43, 110, 0.48);
+
+  color: #ffffff;
+
+  font-size: 0.85rem;
+  font-weight: 600;
+
+  white-space: nowrap;
+
+  transition:
+    transform 0.25s ease,
+    background 0.25s ease,
+    border-color 0.25s ease,
+    box-shadow 0.25s ease;
+}
+
+/* item highlight */
+
+.lesprivat-kota__link::before {
+  content: "";
+
+  position: absolute;
+
+  top: 0;
+  left: 12%;
+  right: 12%;
+
+  height: 1px;
+
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(255, 255, 255, 0.75),
+    transparent
+  );
+
+  pointer-events: none;
+}
+
+.lesprivat-kota__link:hover {
+  transform: translateY(-3px);
+
+  border-color: rgba(255, 255, 255, 0.4);
+
+  background: linear-gradient(
+    145deg,
+    rgba(255, 255, 255, 0.24),
+    rgba(255, 255, 255, 0.12)
+  );
+
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.34),
+    0 14px 30px -16px rgba(0, 43, 110, 0.58);
+}
+
+.lesprivat-kota__link-text {
+  position: relative;
+
+  z-index: 2;
+}
+
+/* =========================================================
+   RESPONSIVE GRID
+========================================================= */
+
 @media (min-width: 640px) {
+  .lesprivat-kota__title {
+    font-size: 1.5rem;
+  }
+
   .lesprivat-kota__grid {
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(3, minmax(0, 1fr));
   }
 }
 
 @media (min-width: 768px) {
   .lesprivat-kota__grid {
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(4, minmax(0, 1fr));
   }
 }
 
-.lesprivat-kota__item {
-  width: 100%;
-  list-style: none;
-}
-
-.lesprivat-kota__link {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  width: 100%;
-  height: 3rem;
-
-  font-size: 0.85rem;
-  font-weight: 600;
-  color: #fff;
-  border: 1px solid rgba(255, 255, 255, 0.2);
-  border-radius: 0.5rem;
-  background: rgba(255, 255, 255, 0.15);
-  transition: all 0.3s ease;
-  overflow: hidden;
-  white-space: nowrap;
-}
-
-.lesprivat-kota__link:hover {
-  transform: scale(1.03);
-  background: rgba(255, 255, 255, 0.25);
-  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.25);
-}
-
-.lesprivat-kota__link-text {
-  position: relative;
-  transition: all 0.3s ease;
-}
+/* =========================================================
+   TABLET
+========================================================= */
 
 @media (max-width: 1024px) {
   .lesprivat-kota__section {
     padding-left: 4%;
     padding-right: 4%;
-    padding-top: 10%;
-    padding-bottom: 10%;
+    padding-top: 8%;
+    padding-bottom: 8%;
+  }
+
+  .lesprivat-kota__list-box {
+    padding: 1.5rem;
+
+    border-radius: 22px;
   }
 }
 
-@media (max-widht: 768px) {
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 768px) {
+  .lesprivat-kota__section {
+    padding-top: 50px;
+    padding-bottom: 50px;
+  }
+
+  .lesprivat-kota__header {
+    margin-bottom: 2rem;
+  }
+
+  .lesprivat-kota__title {
+    font-size: 1.3rem;
+  }
+
   .lesprivat-kota__subtitle {
-    font-size: 0.9rem;
+    font-size: 0.88rem;
+  }
+
+  .lesprivat-kota__image-wrapper {
+    margin-bottom: 1.8rem;
+
+    border-radius: 14px;
+  }
+
+  .lesprivat-kota__image {
+    border-radius: 14px;
+  }
+
+  .lesprivat-kota__list-box {
+    padding: 1.2rem;
+
+    border-radius: 18px;
+  }
+
+  .lesprivat-kota__list-title {
+    font-size: 1.05rem;
+
+    margin-bottom: 1rem;
+  }
+
+  .lesprivat-kota__grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+
+    gap: 0.6rem;
+  }
+
+  .lesprivat-kota__link {
+    height: 3rem;
+
+    border-radius: 12px;
+
+    font-size: 0.8rem;
+  }
+}
+
+/* =========================================================
+   SMALL MOBILE
+========================================================= */
+
+@media (max-width: 480px) {
+  .lesprivat-kota__list-box {
+    padding: 1rem;
+  }
+
+  .lesprivat-kota__grid {
+    gap: 0.5rem;
+  }
+
+  .lesprivat-kota__link {
+    padding: 0 8px;
+
+    font-size: 0.75rem;
   }
 }
