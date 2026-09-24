@@ -1,23 +1,18 @@
+import "./TKAFlow.css";
+
 const TKAFlow = ({ location }) => {
-  // 1. Setup Variabel Lokasi
   const locName = location || "Indonesia";
   const locSuffix = location ? `di ${location}` : "";
 
-  // 2. Strategi SEO: 3 Variasi Judul (Anti-Duplikat)
   const titleVariations = [
-    // Variasi 1 (Standard)
     `Alur Belajar TKA (Tes Kompetensi Akademik) Matrix Tutoring ${locSuffix}`,
-    // Variasi 2 (Process Focused)
     `Tahapan Persiapan Sukses TKA bagi Siswa ${locName}`,
-    // Variasi 3 (Method Focused)
     `Metode Bimbingan TKA Terstruktur & Sistematis ${locSuffix}`,
   ];
 
-  // 3. Logic Pemilihan Judul (Deterministik)
   const seed = location ? location.length : 0;
   const selectedTitle = titleVariations[seed % titleVariations.length];
 
-  // 4. Data Steps (Dipindah ke dalam agar bisa injeksi lokasi)
   const tkaFlowSteps = [
     {
       icon: "/images/les-private/ksm/flow-tka/book-open.webp",
@@ -55,36 +50,36 @@ const TKAFlow = ({ location }) => {
   ];
 
   return (
-    <section id="university-success-flow" className="university-flow-section">
-      <div className="university-flow-container">
-        {/* DYNAMIC TITLE */}
-        <h2 className="university-flow-title">{selectedTitle}</h2>
+    <section id="tka-flow" className="tka-flow__section">
+      <div className="tka-flow__container">
+        <h2 className="tka-flow__title">{selectedTitle}</h2>
 
-        {/* Injeksi Lokasi di Subtitle */}
-        <p className="university-flow-subtitle">
+        <p className="tka-flow__subtitle">
           Kami membimbing setiap langkah siswa <strong>{locName}</strong>, dari
           pengenalan konsep hingga kesiapan total, untuk meraih hasil terbaik
           dalam Tes Kompetensi Akademik.
         </p>
 
-        <div className="flow-steps-wrapper">
+        <div className="tka-flow__steps">
           {tkaFlowSteps.map((step, index) => (
-            <div className="flow-step-item" key={index}>
-              <div className="flow-step-icon-box">
-                <span className="flow-step-number">{index + 1}</span>
+            <div className="tka-flow__item" key={index}>
+              <div className="tka-flow__icon-box">
+                <span className="tka-flow__number">{index + 1}</span>
+
                 <img
                   src={step.icon}
                   loading="lazy"
-                  // Alt Text SEO Friendly
                   alt={`${step.title} - Program TKA ${locName}`}
-                  className="flow-step-icon"
+                  className="tka-flow__icon"
                   width="50"
                   height="50"
                 />
               </div>
-              <div className="flow-step-content">
-                <h3 className="flow-step-title">{step.title}</h3>
-                <p className="flow-step-description">{step.description}</p>
+
+              <div className="tka-flow__content">
+                <h3 className="tka-flow__item-title">{step.title}</h3>
+
+                <p className="tka-flow__description">{step.description}</p>
               </div>
             </div>
           ))}

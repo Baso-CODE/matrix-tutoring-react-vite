@@ -1,121 +1,424 @@
+/* =========================================================
+   TKA TABLE — iPHONE LIQUID GLASS STYLE
+========================================================= */
+
 .mata_pelajaran-tka__section {
+  position: relative;
+
+  padding: 70px 10%;
+
+  background: #ffffff;
+
   text-align: center;
-  padding-left: 10%;
-  padding-right: 10%;
+
+  overflow: hidden;
 }
 
+/* =========================================================
+   HEADER
+========================================================= */
+
 .mata_pelajaran-tka__title {
-  font-size: 1.2rem;
+  margin: 0 0 14px;
+
+  color: #2f2f2f;
+
+  font-size: 1.3rem;
   font-weight: 800;
+
+  line-height: 1.35;
+
   text-transform: uppercase;
-  margin-bottom: 12px;
-  color: #333;
 }
 
 .mata_pelajaran-tka__description {
+  max-width: 760px;
+
+  margin: 0 auto 40px;
+
+  color: #555555;
+
   font-size: 1rem;
-  color: #444;
-  max-width: 70%;
-  margin: 0 auto 40px auto;
+
+  line-height: 1.7;
 }
+
+/* =========================================================
+   LIQUID GLASS WRAPPER
+========================================================= */
 
 .mata_pelajaran-tka__table-wrapper {
-  overflow-x: auto;
+  position: relative;
+
   margin-top: 20px;
+
+  padding: 10px;
+
+  overflow-x: auto;
+
+  border-radius: 28px;
+
+  border: 1px solid rgba(255, 255, 255, 0.72);
+
+  background: linear-gradient(
+    135deg,
+    rgba(255, 255, 255, 0.72),
+    rgba(255, 255, 255, 0.38)
+  );
+
+  -webkit-backdrop-filter: blur(30px) saturate(180%);
+
+  backdrop-filter: blur(30px) saturate(180%);
+
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 1),
+    inset 0 -1px 0 rgba(255, 255, 255, 0.36),
+    0 24px 55px -28px rgba(20, 40, 80, 0.22);
 }
+
+/* top specular highlight */
+
+.mata_pelajaran-tka__table-wrapper::before {
+  content: "";
+
+  position: absolute;
+
+  top: 0;
+  left: 9%;
+  right: 9%;
+
+  height: 1px;
+
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(255, 255, 255, 1),
+    transparent
+  );
+
+  pointer-events: none;
+
+  z-index: 5;
+}
+
+/* soft refraction blob */
+
+.mata_pelajaran-tka__table-wrapper::after {
+  content: "";
+
+  position: absolute;
+
+  right: -60px;
+  bottom: -70px;
+
+  width: 220px;
+  height: 220px;
+
+  border-radius: 50%;
+
+  background: rgba(0, 123, 255, 0.06);
+
+  filter: blur(34px);
+
+  pointer-events: none;
+}
+
+/* =========================================================
+   TABLE
+========================================================= */
 
 .mata_pelajaran-tka__table {
+  position: relative;
+
+  z-index: 2;
+
   width: 100%;
-  border-collapse: collapse;
+
+  min-width: 860px;
+
+  border-collapse: separate;
+  border-spacing: 0;
+
+  overflow: hidden;
+
+  border-radius: 20px;
+
   font-size: 0.9rem;
-  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+
+  background: rgba(255, 255, 255, 0.3);
+
+  -webkit-backdrop-filter: blur(20px) saturate(170%);
+
+  backdrop-filter: blur(20px) saturate(170%);
+
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.75);
 }
 
-.mata_pelajaran-tka__table th,
-.mata_pelajaran-tka__table td {
-  border: 1px solid #ddd;
-  padding: 12px 16px;
-  color: #fff;
-  text-align: left;
+/* =========================================================
+   HEADER
+========================================================= */
+
+.mata_pelajaran-tka__table thead th {
+  padding: 16px;
+
+  border-right: 1px solid rgba(255, 255, 255, 0.34);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.38);
+
+  background: linear-gradient(
+    135deg,
+    rgba(0, 123, 255, 0.82),
+    rgba(0, 104, 220, 0.7)
+  );
+
+  color: #ffffff;
+
+  font-weight: 700;
+
   line-height: 1.5;
+
+  text-align: left;
+
+  -webkit-backdrop-filter: blur(18px) saturate(180%);
+
+  backdrop-filter: blur(18px) saturate(180%);
+
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.26);
 }
 
-/* Gaya header tabel */
-.mata_pelajaran-tka__table th {
-  background-color: #007bff; /* Warna header kekuningan */
-
-  color: #fff;
-  font-weight: 700;
+.mata_pelajaran-tka__table thead th:last-child {
+  border-right: none;
 }
 
-/* Gaya sel yang digabungkan (Jenis Sekolah) */
-.mata_pelajaran-tka__jenis {
-  background-color: #ffffff; /* Warna sel yang digabungkan */
-  font-weight: 700;
-
-  color: #fff;
-  text-align: center;
-  vertical-align: middle;
-}
-
-/* Gaya baris genap dan ganjil */
-.mata_pelajaran-tka__table tr:nth-child(odd) {
-  background-color: #ffffff;
-}
-
-.mata_pelajaran-tka__table tr:nth-child(even) {
-  background-color: #ffffff; /* Warna krem muda untuk baris genap */
-}
+/* =========================================================
+   BODY CELL
+========================================================= */
 
 .mata_pelajaran-tka__table td {
-  font-weight: 500;
+  padding: 14px 16px;
+
+  border-right: 1px solid rgba(0, 123, 255, 0.08);
+  border-bottom: 1px solid rgba(0, 123, 255, 0.08);
+
+  background: rgba(255, 255, 255, 0.48);
+
   color: #333333;
+
+  font-weight: 500;
+
+  line-height: 1.55;
+
+  text-align: left;
+
+  vertical-align: middle;
+
+  white-space: pre-line;
+
+  -webkit-backdrop-filter: blur(16px) saturate(150%);
+
+  backdrop-filter: blur(16px) saturate(150%);
+
+  transition:
+    background 0.25s ease,
+    box-shadow 0.25s ease;
 }
 
-/* Gaya list di dalam tabel */
+.mata_pelajaran-tka__table td:last-child {
+  border-right: none;
+}
+
+/* =========================================================
+   ALTERNATING GLASS ROW
+========================================================= */
+
+.mata_pelajaran-tka__table tbody tr:nth-child(odd) td {
+  background: rgba(255, 255, 255, 0.58);
+}
+
+.mata_pelajaran-tka__table tbody tr:nth-child(even) td {
+  background: rgba(248, 251, 255, 0.44);
+}
+
+/* =========================================================
+   ROW HOVER
+========================================================= */
+
+.mata_pelajaran-tka__table tbody tr:hover td {
+  background: rgba(238, 247, 255, 0.78);
+
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.85);
+}
+
+/* =========================================================
+   JENIS SEKOLAH CELL
+========================================================= */
+
+.mata_pelajaran-tka__jenis {
+  min-width: 150px;
+
+  background: linear-gradient(
+    135deg,
+    rgba(0, 123, 255, 0.12),
+    rgba(0, 123, 255, 0.05)
+  ) !important;
+
+  color: #007bff !important;
+
+  font-weight: 800 !important;
+
+  text-align: center !important;
+
+  vertical-align: middle !important;
+
+  -webkit-backdrop-filter: blur(18px) saturate(170%);
+
+  backdrop-filter: blur(18px) saturate(170%);
+
+  box-shadow: inset 1px 0 0 rgba(255, 255, 255, 0.7);
+}
+
+/* =========================================================
+   LIST
+========================================================= */
+
 .mapel-list {
   margin: 0;
+
   padding-left: 20px;
+
   list-style-type: disc;
 }
 
 .mapel-list li {
+  margin-bottom: 0.45rem;
+
   color: #444444;
+
   font-weight: 500;
-  margin-bottom: 0.5rem;
-  line-height: 1.4;
+
+  line-height: 1.45;
 }
 
-/* Gaya untuk teks yang harus berwarna biru */
+.mapel-list li:last-child {
+  margin-bottom: 0;
+}
+
+/* =========================================================
+   BLUE TEXT
+========================================================= */
+
 .blue-text {
-  color: #007bff;
-  font-weight: 600;
+  color: #007bff !important;
+
+  font-weight: 700 !important;
 }
 
-/* Gaya bullet point berwarna biru */
 .mapel-list li.blue-text::marker {
   color: #007bff;
 }
 
-/* Media Query untuk responsivitas */
+/* =========================================================
+   SCROLLBAR
+========================================================= */
+
+.mata_pelajaran-tka__table-wrapper::-webkit-scrollbar {
+  height: 8px;
+}
+
+.mata_pelajaran-tka__table-wrapper::-webkit-scrollbar-track {
+  background: rgba(0, 123, 255, 0.04);
+
+  border-radius: 999px;
+}
+
+.mata_pelajaran-tka__table-wrapper::-webkit-scrollbar-thumb {
+  background: rgba(0, 123, 255, 0.24);
+
+  border-radius: 999px;
+}
+
+.mata_pelajaran-tka__table-wrapper::-webkit-scrollbar-thumb:hover {
+  background: rgba(0, 123, 255, 0.38);
+}
+
+/* =========================================================
+   TABLET
+========================================================= */
+
 @media (max-width: 1024px) {
   .mata_pelajaran-tka__section {
-    padding-left: 4%;
-    padding-right: 4%;
-    padding-top: 10%;
-    padding-bottom: 10%;
+    padding: 65px 4%;
+  }
+
+  .mata_pelajaran-tka__description {
+    max-width: 85%;
   }
 }
 
+/* =========================================================
+   MOBILE
+========================================================= */
+
 @media (max-width: 768px) {
+  .mata_pelajaran-tka__section {
+    padding: 55px 4%;
+  }
+
   .mata_pelajaran-tka__title {
     font-size: 1.2rem;
   }
+
   .mata_pelajaran-tka__description {
-    max-width: 90%;
+    max-width: 100%;
+
+    margin-bottom: 30px;
+
+    font-size: 0.9rem;
   }
+
+  .mata_pelajaran-tka__table-wrapper {
+    padding: 6px;
+
+    border-radius: 20px;
+  }
+
+  .mata_pelajaran-tka__table {
+    min-width: 760px;
+
+    border-radius: 16px;
+
+    font-size: 0.82rem;
+  }
+
   .mata_pelajaran-tka__table th,
   .mata_pelajaran-tka__table td {
-    padding: 8px 12px;
+    padding: 11px 12px;
+  }
+}
+
+/* =========================================================
+   SMALL MOBILE
+========================================================= */
+
+@media (max-width: 480px) {
+  .mata_pelajaran-tka__section {
+    padding: 48px 4%;
+  }
+
+  .mata_pelajaran-tka__title {
+    font-size: 1.1rem;
+  }
+
+  .mata_pelajaran-tka__description {
+    font-size: 0.85rem;
+  }
+
+  .mata_pelajaran-tka__table-wrapper {
+    border-radius: 18px;
+  }
+
+  .mata_pelajaran-tka__table {
+    min-width: 720px;
+
+    font-size: 0.78rem;
   }
 }

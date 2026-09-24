@@ -39,7 +39,6 @@
   position: relative;
   overflow: hidden;
 
-  flex: 1 1 320px;
   max-width: 400px;
 
   display: flex;
@@ -200,10 +199,6 @@
   .program-cards-v2 {
     gap: 18px;
   }
-
-  .card-v2 {
-    flex: 1 1 300px;
-  }
 }
 
 /* MOBILE */
@@ -227,7 +222,6 @@
   }
 
   .card-v2 {
-    width: 100%;
     max-width: none;
 
     padding: 18px;

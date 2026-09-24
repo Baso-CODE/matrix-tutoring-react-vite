@@ -1,14 +1,18 @@
 /* =========================================================
    TESTIMONI CARD ORANG TUA
-   Border biru ini menjadi SATU-SATUNYA batas card.
+   Semua card dibuat sama tinggi
 ========================================================= */
 
 .testimonial-card-ortu-siswa {
   position: relative;
 
-  width: 100%;
+  display: flex;
+  flex-direction: column;
 
-  min-height: 410px;
+  width: 100%;
+  height: 100%;
+
+  min-height: 300px;
 
   margin-top: 2rem;
   margin-bottom: 2rem;
@@ -23,10 +27,6 @@
 
   border-radius: 20px;
 
-  /*
-    LIQUID GLASS LANGSUNG PADA CARD.
-    Tidak ada wrapper glass tambahan.
-  */
   background: linear-gradient(
     145deg,
     rgba(255, 255, 255, 0.82),
@@ -134,10 +134,11 @@
   z-index: 2;
 
   display: flex;
-
   flex-direction: column;
 
   align-items: center;
+
+  flex-shrink: 0;
 
   margin-bottom: 15px;
 
@@ -155,6 +156,8 @@
   margin-bottom: 4px;
 
   overflow: hidden;
+
+  flex-shrink: 0;
 
   border-radius: 50%;
 
@@ -178,6 +181,8 @@
 
 .ortu-siswa-info {
   text-align: center;
+
+  flex-shrink: 0;
 }
 
 .ortu-siswa-name {
@@ -210,6 +215,8 @@
 
   z-index: 2;
 
+  flex-shrink: 0;
+
   margin-bottom: 15px;
 
   text-align: center;
@@ -224,18 +231,27 @@
 
 /* =========================================================
    BODY
+   Ini yang dibuat mengisi sisa tinggi card
 ========================================================= */
 
 .card-body-testimoni-ortu-siswa {
   position: relative;
 
   z-index: 2;
+
+  display: flex;
+
+  flex-direction: column;
+
+  flex-grow: 1;
 }
 
 .ortu-siswa-description {
   position: relative;
 
   z-index: 2;
+
+  flex-grow: 1;
 
   margin: 0;
 
@@ -249,14 +265,49 @@
 }
 
 /* =========================================================
-   MODAL MODE
+   PENTING
+   Parent slider / wrapper harus stretch
+========================================================= */
 
-   Tetap border biru yang sama.
-   Tidak menciptakan border kedua.
+/*
+  Kalau card ini berada di dalam Swiper,
+  slide harus display:flex supaya height:100% bekerja.
+*/
+
+.ortu-testimoni-slider-item {
+  display: flex;
+
+  height: 100%;
+}
+
+.ortu-testimoni-slider-item > .testimonial-card-ortu-siswa {
+  flex: 1;
+}
+
+/*
+  Jika parent carousel menggunakan Swiper,
+  selector ini memastikan semua slide sama tinggi.
+*/
+
+.swiper-slide:has(.testimonial-card-ortu-siswa) {
+  height: auto;
+
+  display: flex;
+}
+
+.swiper-slide:has(.testimonial-card-ortu-siswa) .ortu-testimoni-slider-item {
+  flex: 1;
+}
+
+/* =========================================================
+   MODAL MODE
+   Modal tidak perlu dipaksa mengikuti tinggi card carousel
 ========================================================= */
 
 .ortu-testimoni-modal-content .testimonial-card-ortu-siswa {
-  min-height: 480px;
+  height: auto;
+
+  min-height: 300px;
 
   margin: 0;
 
@@ -273,6 +324,10 @@
 ========================================================= */
 
 @media (max-width: 1024px) {
+  .testimonial-card-ortu-siswa {
+    min-height: 300px;
+  }
+
   .ortu-siswa-description {
     font-size: 0.9rem;
   }
@@ -280,7 +335,7 @@
 
 @media (max-width: 767px) {
   .testimonial-card-ortu-siswa {
-    min-height: 380px;
+    min-height: 300px;
 
     margin-top: 1rem;
     margin-bottom: 1rem;
@@ -317,6 +372,8 @@
   }
 
   .ortu-testimoni-modal-content .testimonial-card-ortu-siswa {
+    height: auto;
+
     min-height: auto;
 
     max-height: 86vh;

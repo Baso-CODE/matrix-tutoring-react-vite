@@ -1,56 +1,498 @@
-/* SuccessStory.css */
+/* =========================================================
+   SUCCESS STORY
+========================================================= */
+
 .success-story-container {
-  text-align: center;
   padding-top: 30px;
   padding-bottom: 30px;
+
+  text-align: center;
 }
+
+/* =========================================================
+   HEADER
+========================================================= */
 
 .success-story-container h2 {
-  font-size: 1.7rem;
-
-  font-weight: 800;
   margin: 0;
-  text-transform: uppercase;
-  font-style: normal;
+
   color: #333333;
+
+  font-size: 1.7rem;
+  font-weight: 800;
+
+  text-transform: uppercase;
 }
+
 .success-story-description {
-  font-size: 1rem;
   margin-bottom: 30px;
 
   color: #555555;
-  font-weight: normal;
+
+  font-size: 1rem;
+  font-weight: 400;
 }
+
+/* =========================================================
+   GRID
+========================================================= */
 
 .success-story-content {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  grid-gap: 20px;
+
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+
+  gap: 20px;
+
+  align-items: stretch;
 }
+
+/* =========================================================
+   LIQUID GLASS ITEM
+========================================================= */
 
 .success-story-item {
-  background-color: #fff;
-  border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  position: relative;
+
+  min-width: 0;
+
+  padding: 8px;
+
+  overflow: hidden;
+
+  border: 1px solid rgba(0, 123, 255, 0.16);
+
+  border-radius: 22px;
+
+  background: linear-gradient(
+    135deg,
+    rgba(255, 255, 255, 0.76),
+    rgba(255, 255, 255, 0.48)
+  );
+
+  -webkit-backdrop-filter: blur(22px) saturate(180%);
+  backdrop-filter: blur(22px) saturate(180%);
+
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.95),
+    inset 0 -1px 0 rgba(255, 255, 255, 0.35),
+    0 16px 36px -24px rgba(0, 123, 255, 0.32);
+
+  cursor: pointer;
+
+  appearance: none;
+
+  transition:
+    transform 0.28s ease,
+    border-color 0.28s ease,
+    box-shadow 0.28s ease,
+    background 0.28s ease;
 }
+
+/* highlight kaca */
+
+.success-story-item::before {
+  content: "";
+
+  position: absolute;
+
+  top: 0;
+  left: 12%;
+  right: 12%;
+
+  height: 1px;
+
+  z-index: 4;
+
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(255, 255, 255, 1),
+    transparent
+  );
+
+  pointer-events: none;
+}
+
+/* soft reflection */
+
+.success-story-item::after {
+  content: "";
+
+  position: absolute;
+
+  right: -35px;
+  bottom: -45px;
+
+  width: 120px;
+  height: 120px;
+
+  border-radius: 50%;
+
+  background: rgba(0, 123, 255, 0.06);
+
+  filter: blur(22px);
+
+  pointer-events: none;
+}
+
+.success-story-item:hover {
+  transform: translateY(-5px);
+
+  border-color: rgba(0, 123, 255, 0.28);
+
+  background: linear-gradient(
+    135deg,
+    rgba(255, 255, 255, 0.9),
+    rgba(255, 255, 255, 0.6)
+  );
+
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 1),
+    0 22px 45px -22px rgba(0, 123, 255, 0.36);
+}
+
+/* =========================================================
+   IMAGE
+========================================================= */
 
 .success-story-item img {
+  position: relative;
+
+  z-index: 2;
+
+  display: block;
+
   width: 100%;
   height: 100%;
+
   object-fit: contain;
-  border-radius: 10px;
+
+  border-radius: 16px;
+
+  transition:
+    transform 0.35s ease,
+    filter 0.35s ease;
 }
 
-@media (max-width: 768px) {
-  .success-story-content {
-    gap: 10px;
-    grid-template-columns: repeat(2, 1fr);
+.success-story-item:hover img {
+  transform: scale(1.02);
+
+  filter: brightness(0.96);
+}
+
+/* =========================================================
+   ZOOM BUTTON
+========================================================= */
+
+.success-story-zoom {
+  position: absolute;
+
+  right: 18px;
+  bottom: 18px;
+
+  z-index: 5;
+
+  display: flex;
+
+  width: 42px;
+  height: 42px;
+
+  align-items: center;
+  justify-content: center;
+
+  border: 1px solid rgba(255, 255, 255, 0.48);
+
+  border-radius: 50%;
+
+  background: rgba(0, 123, 255, 0.34);
+
+  color: #ffffff;
+
+  -webkit-backdrop-filter: blur(14px) saturate(180%);
+  backdrop-filter: blur(14px) saturate(180%);
+
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.34),
+    0 10px 24px -16px rgba(0, 43, 110, 0.5);
+
+  opacity: 0;
+
+  transform: translateY(8px);
+
+  transition:
+    opacity 0.25s ease,
+    transform 0.25s ease,
+    background 0.25s ease;
+}
+
+.success-story-item:hover .success-story-zoom {
+  opacity: 1;
+
+  transform: translateY(0);
+}
+
+.success-story-zoom svg {
+  width: 18px;
+  height: 18px;
+}
+
+/* =========================================================
+   MODAL BACKDROP
+========================================================= */
+
+.success-story-modal {
+  position: fixed;
+
+  inset: 0;
+
+  z-index: 99999;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  padding: 24px;
+
+  background: rgba(5, 20, 45, 0.58);
+
+  -webkit-backdrop-filter: blur(16px) saturate(140%);
+  backdrop-filter: blur(16px) saturate(140%);
+
+  animation: successStoryFadeIn 0.22s ease;
+}
+
+/* =========================================================
+   MODAL CONTENT
+========================================================= */
+
+.success-story-modal-content {
+  position: relative;
+
+  max-width: min(92vw, 900px);
+  max-height: 88vh;
+
+  overflow: hidden;
+
+  padding: 10px;
+
+  border: 1px solid rgba(255, 255, 255, 0.28);
+
+  border-radius: 26px;
+
+  background: linear-gradient(
+    135deg,
+    rgba(255, 255, 255, 0.24),
+    rgba(255, 255, 255, 0.1)
+  );
+
+  -webkit-backdrop-filter: blur(28px) saturate(180%);
+  backdrop-filter: blur(28px) saturate(180%);
+
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.4),
+    0 28px 70px rgba(0, 0, 0, 0.3);
+
+  animation: successStoryZoomIn 0.25s ease;
+}
+
+.success-story-modal-image {
+  display: block;
+
+  max-width: 100%;
+  max-height: calc(88vh - 20px);
+
+  object-fit: contain;
+
+  border-radius: 18px;
+}
+
+/* =========================================================
+   CLOSE BUTTON
+========================================================= */
+
+.success-story-modal-close {
+  position: fixed;
+
+  top: 24px;
+  right: 24px;
+
+  z-index: 100000;
+
+  display: flex;
+
+  width: 46px;
+  height: 46px;
+
+  align-items: center;
+  justify-content: center;
+
+  padding: 0;
+
+  border: 1px solid rgba(255, 255, 255, 0.34);
+
+  border-radius: 50%;
+
+  background: rgba(255, 255, 255, 0.14);
+
+  color: #ffffff;
+
+  cursor: pointer;
+
+  -webkit-backdrop-filter: blur(18px) saturate(180%);
+  backdrop-filter: blur(18px) saturate(180%);
+
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.34),
+    0 10px 30px rgba(0, 0, 0, 0.18);
+
+  transition:
+    transform 0.25s ease,
+    background 0.25s ease;
+}
+
+.success-story-modal-close:hover {
+  transform: scale(1.06);
+
+  background: rgba(255, 255, 255, 0.22);
+}
+
+.success-story-modal-close svg {
+  width: 22px;
+  height: 22px;
+}
+
+/* =========================================================
+   ANIMATION
+========================================================= */
+
+@keyframes successStoryFadeIn {
+  from {
+    opacity: 0;
   }
+
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes successStoryZoomIn {
+  from {
+    opacity: 0;
+
+    transform: scale(0.96);
+  }
+
+  to {
+    opacity: 1;
+
+    transform: scale(1);
+  }
+}
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 1024px) {
+  .success-story-content {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+
+    gap: 16px;
+  }
+}
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 768px) {
   .success-story-container h2 {
     font-size: 1.4rem;
-    font-weight: 800;
   }
+
   .success-story-description {
-    font-size: 16px;
+    font-size: 0.9rem;
+  }
+
+  .success-story-content {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+
+    gap: 10px;
+  }
+
+  .success-story-item {
+    padding: 5px;
+
+    border-radius: 16px;
+  }
+
+  .success-story-item img {
+    border-radius: 12px;
+  }
+
+  .success-story-zoom {
+    right: 10px;
+    bottom: 10px;
+
+    width: 36px;
+    height: 36px;
+
+    opacity: 1;
+
+    transform: none;
+  }
+
+  .success-story-modal {
+    padding: 16px;
+  }
+
+  .success-story-modal-content {
+    max-width: 94vw;
+
+    padding: 6px;
+
+    border-radius: 20px;
+  }
+
+  .success-story-modal-image {
+    border-radius: 14px;
+  }
+
+  .success-story-modal-close {
+    top: 16px;
+    right: 16px;
+
+    width: 42px;
+    height: 42px;
+  }
+}
+
+/* =========================================================
+   SMALL MOBILE
+========================================================= */
+
+@media (max-width: 480px) {
+  .success-story-content {
+    gap: 8px;
+  }
+
+  .success-story-item {
+    border-radius: 14px;
+  }
+
+  .success-story-item img {
+    border-radius: 10px;
+  }
+
+  .success-story-zoom {
+    width: 32px;
+    height: 32px;
+  }
+
+  .success-story-zoom svg {
+    width: 15px;
+    height: 15px;
   }
 }

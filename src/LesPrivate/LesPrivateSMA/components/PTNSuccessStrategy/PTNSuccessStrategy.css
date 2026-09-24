@@ -1,191 +1,450 @@
-/* PTNSuccessStrategy.css */
+/* =========================================================
+   PTN SUCCESS STRATEGY
+========================================================= */
 
 .ptn-strategy-section {
-  /* Pastikan padding bawah cukup besar agar ada jarak */
-  padding: 80px 20px 100px 20px; /* Atas: 80px, Kiri-Kanan: 20px, Bawah: 100px */
-  padding-left: 10%;
-  padding-right: 10%;
-  text-align: center;
-  background-color: #007bff;
-  overflow: hidden;
   position: relative;
-}
 
-/* Efek latar belakang abstrak (opsional, untuk sentuhan futuristik) */
-.ptn-strategy-section::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background:
-    radial-gradient(
-      circle at 10% 20%,
-      rgba(13, 16, 185, 0.05) 0%,
-      transparent 50%
-    ),
-    radial-gradient(
-      circle at 90% 80%,
-      rgba(59, 130, 246, 0.05) 0%,
-      transparent 50%
-    );
-  z-index: 0;
-  pointer-events: none;
+  padding: 80px 10% 100px;
+
+  background: #007bff;
+
+  text-align: center;
+
+  overflow: hidden;
 }
 
 .ptn-strategy-container {
-  margin: 0 auto;
-  padding-top: 30px;
   position: relative;
+
   z-index: 1;
+
+  margin: 0 auto;
+
+  padding-top: 30px;
 }
 
+/* =========================================================
+   HEADER
+========================================================= */
+
 .ptn-strategy-title {
-  font-size: 1.5rem;
-  text-transform: uppercase;
-  font-weight: 800;
+  margin: 0 0 20px;
+
   color: #ffffff;
-  margin-bottom: 20px;
-  line-height: 1.2;
-  text-shadow: 3px 3px 8px rgba(0, 0, 0, 0.1);
+
+  font-size: 1.5rem;
+  font-weight: 800;
+
+  line-height: 1.3;
+
+  text-transform: uppercase;
 }
 
 .ptn-strategy-subtitle {
-  font-size: 1rem;
-  color: #f2fff2;
-  margin-bottom: 50px; /* Dikurangi sedikit agar lebih proporsional */
   max-width: 900px;
-  margin-left: auto;
-  margin-right: auto;
+
+  margin: 0 auto 50px;
+
+  color: rgba(255, 255, 255, 0.9);
+
+  font-size: 1rem;
+
   line-height: 1.6;
 }
 
+/* =========================================================
+   GRID
+========================================================= */
+
 .strategy-features-grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 35px;
-  margin-bottom: 0; /* Dihapus atau dinolkan karena sudah diatasi padding section bawah */
+
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+
+  gap: 24px;
+
+  align-items: stretch;
 }
 
+/* =========================================================
+   LIQUID GLASS CARD
+========================================================= */
+
 .strategy-feature-card {
-  background-color: #ffffff;
-  padding: 35px;
-  border-radius: 20px;
-  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.1);
-  transition:
-    transform 0.4s ease,
-    box-shadow 0.4s ease;
+  position: relative;
+
+  overflow: hidden;
+
   display: flex;
   flex-direction: column;
+
   align-items: center;
-  text-align: center;
-  border: 1px solid #e0efff;
-  position: relative;
-  overflow: hidden;
-  height: 100%; /* Diubah dari 90% menjadi 100% agar tinggi card konsisten */
   justify-content: flex-start;
+
+  min-width: 0;
+
+  min-height: 320px;
+
+  padding: 30px 24px;
+
+  box-sizing: border-box;
+
+  border-radius: 24px;
+
+  border: 1px solid rgba(255, 255, 255, 0.26);
+
+  background: linear-gradient(
+    135deg,
+    rgba(255, 255, 255, 0.22),
+    rgba(255, 255, 255, 0.1)
+  );
+
+  -webkit-backdrop-filter: blur(24px) saturate(180%);
+  backdrop-filter: blur(24px) saturate(180%);
+
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.34),
+    inset 0 -1px 0 rgba(255, 255, 255, 0.06),
+    0 22px 45px -24px rgba(0, 43, 110, 0.5);
+
+  text-align: center;
+
+  transition:
+    transform 0.28s ease,
+    background 0.28s ease,
+    border-color 0.28s ease,
+    box-shadow 0.28s ease;
 }
+
+/* =========================================================
+   TOP GLASS HIGHLIGHT
+========================================================= */
 
 .strategy-feature-card::before {
   content: "";
+
   position: absolute;
-  top: -60%;
-  left: -60%;
-  width: 220%;
-  height: 220%;
-  background: radial-gradient(circle, rgba(13, 16, 185, 0.15), transparent 70%);
-  transition: all 0.6s ease-out;
-  opacity: 0;
-  z-index: 0;
+
+  top: 0;
+  left: 12%;
+  right: 12%;
+
+  height: 1px;
+
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(255, 255, 255, 0.85),
+    transparent
+  );
+
+  pointer-events: none;
 }
+
+/* =========================================================
+   SOFT GLASS REFLECTION
+========================================================= */
+
+.strategy-feature-card::after {
+  content: "";
+
+  position: absolute;
+
+  right: -45px;
+  bottom: -55px;
+
+  width: 150px;
+  height: 150px;
+
+  border-radius: 50%;
+
+  background: rgba(255, 255, 255, 0.08);
+
+  filter: blur(20px);
+
+  pointer-events: none;
+}
+
+/* =========================================================
+   HOVER
+========================================================= */
 
 .strategy-feature-card:hover {
-  transform: translateY(-10px) scale(1.02); /* Sedikit disesuaikan agar tidak terlalu jauh melompatnya */
-  box-shadow: 0 25px 50px rgba(0, 0, 0, 0.2);
-  border-color: #007bff;
+  transform: translateY(-5px);
+
+  background: linear-gradient(
+    135deg,
+    rgba(255, 255, 255, 0.28),
+    rgba(255, 255, 255, 0.14)
+  );
+
+  border-color: rgba(255, 255, 255, 0.38);
+
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.42),
+    0 28px 55px -24px rgba(0, 43, 110, 0.65);
 }
 
-.strategy-feature-card:hover::before {
-  opacity: 1;
-  transform: rotate(45deg);
-}
+/* =========================================================
+   ICON WRAPPER
+========================================================= */
 
 .strategy-feature-icon-wrapper {
-  background: linear-gradient(45deg, #007bff, #3b82f6);
-  width: 7.5rem; /* Sesuaikan ukuran lingkaran pembungkus */
-  height: 7.5rem; /* Sesuaikan ukuran lingkaran pembungkus */
-  border-radius: 50%;
+  position: relative;
+
+  z-index: 2;
+
   display: flex;
+
   align-items: center;
   justify-content: center;
-  margin-bottom: 25px;
-  box-shadow: 0 8px 20px rgba(13, 16, 185, 0.4);
-  position: relative;
-  z-index: 1;
-  border: 4px solid #ffffff;
+
+  width: 110px;
+  height: 110px;
+
   flex-shrink: 0;
+
+  margin-bottom: 24px;
+
+  border-radius: 24px;
+
+  border: 1px solid rgba(255, 255, 255, 0.34);
+
+  background: rgba(255, 255, 255, 0.16);
+
+  -webkit-backdrop-filter: blur(14px) saturate(160%);
+  backdrop-filter: blur(14px) saturate(160%);
+
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.3),
+    0 10px 24px -16px rgba(0, 0, 0, 0.3);
+
+  transition:
+    transform 0.3s ease,
+    background 0.3s ease,
+    box-shadow 0.3s ease;
 }
+
+.strategy-feature-card:hover .strategy-feature-icon-wrapper {
+  transform: translateY(-2px) scale(1.04);
+
+  background: rgba(255, 255, 255, 0.22);
+
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.38),
+    0 14px 28px -16px rgba(0, 0, 0, 0.36);
+}
+
+/* =========================================================
+   ICON IMAGE
+========================================================= */
 
 .strategy-feature-icon {
-  width: 6rem; /* Ubah nilai ini untuk memperbesar/memperkecil ikon gambar (sebelumnya 3rem) */
-  height: 6rem; /* Ubah nilai ini mengikuti lebar di atas */
+  display: block;
+
+  width: 88px;
+  height: 88px;
+
   object-fit: contain;
+
+  filter: drop-shadow(0 10px 18px rgba(0, 48, 120, 0.18));
+
+  transition:
+    transform 0.3s ease,
+    filter 0.3s ease;
 }
+
+.strategy-feature-card:hover .strategy-feature-icon {
+  transform: scale(1.05);
+
+  filter: drop-shadow(0 14px 24px rgba(0, 48, 120, 0.24));
+}
+
+/* =========================================================
+   TITLE
+========================================================= */
+
 .strategy-feature-title {
-  font-size: 1.1rem;
-  font-weight: 700;
-  color: #007bff;
-  margin: 0 0 15px 0;
   position: relative;
-  z-index: 1;
+
+  z-index: 2;
+
+  margin: 0 0 12px;
+
+  color: #ffffff;
+
+  font-size: 1.1rem;
+  font-weight: 800;
+
+  line-height: 1.4;
 }
+
+/* =========================================================
+   DESCRIPTION
+========================================================= */
 
 .strategy-feature-description {
-  font-size: 0.9rem;
-  color: #4f4f4f;
-  line-height: 1.7;
   position: relative;
-  z-index: 1;
+
+  z-index: 2;
+
   flex-grow: 1;
+
+  margin: 0;
+
+  color: #f3f3f3;
+
+  font-size: 0.86rem;
+
+  line-height: 1.65;
+
   display: -webkit-box;
+
   -webkit-line-clamp: 5;
   line-clamp: 5;
+
   -webkit-box-orient: vertical;
+
   overflow: hidden;
+
   text-overflow: ellipsis;
-  margin: 0;
 }
 
-/* Responsivitas */
+/* =========================================================
+   TABLET
+========================================================= */
+
 @media (max-width: 1024px) {
   .ptn-strategy-section {
     padding-left: 4%;
     padding-right: 4%;
     padding-bottom: 80px;
   }
+
   .strategy-features-grid {
-    grid-template-columns: repeat(2, 1fr); /* 2 kolom di tablet besar */
-    gap: 25px;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+
+    gap: 20px;
+  }
+
+  .strategy-feature-card {
+    min-height: 300px;
+
+    padding: 26px 20px;
+  }
+
+  .strategy-feature-icon-wrapper {
+    width: 96px;
+    height: 96px;
+  }
+
+  .strategy-feature-icon {
+    width: 76px;
+    height: 76px;
   }
 }
 
+/* =========================================================
+   MOBILE
+========================================================= */
+
 @media (max-width: 768px) {
   .ptn-strategy-section {
-    padding: 60px 4% 60px 4%;
+    padding: 60px 4%;
   }
+
+  .ptn-strategy-container {
+    padding-top: 0;
+  }
+
   .ptn-strategy-title {
     font-size: 1.3rem;
   }
+
   .ptn-strategy-subtitle {
+    margin-bottom: 32px;
+
     font-size: 0.95rem;
-    margin-bottom: 30px;
   }
+
   .strategy-features-grid {
-    grid-template-columns: 1fr; /* 1 kolom di mobile */
-    gap: 20px;
+    grid-template-columns: 1fr;
+
+    gap: 16px;
   }
+
   .strategy-feature-card {
-    padding: 25px;
+    min-height: auto;
+
+    padding: 22px 18px;
+
+    border-radius: 20px;
+  }
+
+  .strategy-feature-icon-wrapper {
+    width: 82px;
+    height: 82px;
+
+    margin-bottom: 18px;
+
+    border-radius: 20px;
+  }
+
+  .strategy-feature-icon {
+    width: 66px;
+    height: 66px;
+  }
+
+  .strategy-feature-title {
+    font-size: 1rem;
+  }
+
+  .strategy-feature-description {
+    font-size: 0.82rem;
+  }
+}
+
+/* =========================================================
+   SMALL MOBILE
+========================================================= */
+
+@media (max-width: 480px) {
+  .ptn-strategy-section {
+    padding: 50px 4%;
+  }
+
+  .ptn-strategy-title {
+    font-size: 1.2rem;
+  }
+
+  .ptn-strategy-subtitle {
+    font-size: 0.9rem;
+  }
+
+  .strategy-feature-card {
+    padding: 20px 16px;
+
+    border-radius: 18px;
+  }
+
+  .strategy-feature-icon-wrapper {
+    width: 76px;
+    height: 76px;
+
+    border-radius: 18px;
+  }
+
+  .strategy-feature-icon {
+    width: 60px;
+    height: 60px;
+  }
+
+  .strategy-feature-title {
+    font-size: 0.98rem;
+  }
+
+  .strategy-feature-description {
+    font-size: 0.78rem;
   }
 }
