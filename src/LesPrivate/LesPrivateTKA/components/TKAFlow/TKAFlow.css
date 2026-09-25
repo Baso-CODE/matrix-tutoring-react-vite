@@ -1,5 +1,6 @@
 /* =========================================================
    TKA FLOW
+   LIQUID GLASS + ICON KELUAR DARI CARD
 ========================================================= */
 
 .tka-flow__section {
@@ -11,6 +12,10 @@
 
   text-align: center;
 }
+
+/* =========================================================
+   CONTAINER
+========================================================= */
 
 .tka-flow__container {
   position: relative;
@@ -66,7 +71,7 @@
 
   grid-template-columns: repeat(2, minmax(0, 1fr));
 
-  gap: 34px 76px;
+  gap: 34px 90px;
 
   padding: 0;
 
@@ -92,7 +97,7 @@
 
   border-radius: 999px;
 
-  background: rgba(255, 255, 255, 0.22);
+  background: rgba(255, 255, 255, 0.26);
 
   box-shadow:
     inset 0 0 0 1px rgba(255, 255, 255, 0.08),
@@ -115,14 +120,17 @@
   align-items: center;
 
   min-width: 0;
-
   min-height: 185px;
 
-  padding: 26px;
+  padding: 28px;
 
   box-sizing: border-box;
 
-  overflow: hidden;
+  /*
+    PENTING:
+    icon bisa keluar dari card
+  */
+  overflow: visible;
 
   border-radius: 24px;
 
@@ -149,6 +157,10 @@
     box-shadow 0.28s ease;
 }
 
+/* =========================================================
+   TOP GLASS HIGHLIGHT
+========================================================= */
+
 .tka-flow__item::before {
   content: "";
 
@@ -168,27 +180,39 @@
   );
 
   pointer-events: none;
+
+  z-index: 3;
 }
+
+/* =========================================================
+   SOFT INNER REFLECTION
+========================================================= */
 
 .tka-flow__item::after {
   content: "";
 
   position: absolute;
 
-  right: -45px;
-  bottom: -55px;
+  right: 14px;
+  bottom: 12px;
 
-  width: 150px;
-  height: 150px;
+  width: 120px;
+  height: 120px;
 
   border-radius: 50%;
 
-  background: rgba(255, 255, 255, 0.08);
+  background: rgba(255, 255, 255, 0.06);
 
-  filter: blur(20px);
+  filter: blur(26px);
 
   pointer-events: none;
+
+  z-index: 0;
 }
+
+/* =========================================================
+   CARD HOVER
+========================================================= */
 
 .tka-flow__item:hover {
   transform: translateY(-5px);
@@ -207,23 +231,24 @@
 }
 
 /* =========================================================
-   LEFT / RIGHT LAYOUT
+   LEFT / RIGHT CARD LAYOUT
 ========================================================= */
 
 .tka-flow__item:nth-child(odd) {
   text-align: right;
 
-  padding-right: 60px;
+  padding-right: 72px;
 }
 
 .tka-flow__item:nth-child(even) {
   text-align: left;
 
-  padding-left: 60px;
+  padding-left: 72px;
 }
 
 /* =========================================================
    ICON BOX
+   KELUAR DARI CARD
 ========================================================= */
 
 .tka-flow__icon-box {
@@ -231,59 +256,84 @@
 
   top: 50%;
 
-  z-index: 3;
+  z-index: 20;
 
   display: flex;
 
-  width: 64px;
-  height: 64px;
+  width: 78px;
+  height: 78px;
 
   align-items: center;
   justify-content: center;
 
   border-radius: 50%;
 
-  border: 1px solid rgba(255, 255, 255, 0.38);
+  border: 1px solid rgba(255, 255, 255, 0.46);
 
-  background: rgba(255, 255, 255, 0.18);
+  background: linear-gradient(
+    135deg,
+    rgba(255, 255, 255, 0.28),
+    rgba(255, 255, 255, 0.14)
+  );
 
-  -webkit-backdrop-filter: blur(16px) saturate(180%);
-  backdrop-filter: blur(16px) saturate(180%);
+  -webkit-backdrop-filter: blur(18px) saturate(180%);
+  backdrop-filter: blur(18px) saturate(180%);
 
   box-shadow:
-    inset 0 1px 0 rgba(255, 255, 255, 0.38),
-    0 12px 28px -16px rgba(0, 43, 110, 0.45);
+    inset 0 1px 0 rgba(255, 255, 255, 0.48),
+    inset 0 -1px 0 rgba(255, 255, 255, 0.08),
+    0 14px 30px -14px rgba(0, 43, 110, 0.5);
 
   transform: translateY(-50%);
 
   transition:
     transform 0.3s ease,
-    background 0.3s ease;
+    background 0.3s ease,
+    border-color 0.3s ease,
+    box-shadow 0.3s ease;
 }
+
+/* card kiri → icon keluar ke kanan */
 
 .tka-flow__item:nth-child(odd) .tka-flow__icon-box {
-  right: -32px;
+  right: -39px;
 }
+
+/* card kanan → icon keluar ke kiri */
 
 .tka-flow__item:nth-child(even) .tka-flow__icon-box {
-  left: -32px;
-}
-
-.tka-flow__item:hover .tka-flow__icon-box {
-  background: rgba(255, 255, 255, 0.24);
+  left: -39px;
 }
 
 /* =========================================================
-   NUMBER
+   ICON HOVER
+========================================================= */
+
+.tka-flow__item:hover .tka-flow__icon-box {
+  background: linear-gradient(
+    135deg,
+    rgba(255, 255, 255, 0.34),
+    rgba(255, 255, 255, 0.18)
+  );
+
+  border-color: rgba(255, 255, 255, 0.6);
+
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.55),
+    0 18px 34px -14px rgba(0, 43, 110, 0.58);
+}
+
+/* =========================================================
+   NUMBER BADGE
 ========================================================= */
 
 .tka-flow__number {
   position: absolute;
 
-  top: -5px;
-  right: -5px;
+  top: -4px;
+  right: -4px;
 
-  z-index: 4;
+  z-index: 30;
 
   display: flex;
 
@@ -295,20 +345,20 @@
 
   border-radius: 50%;
 
-  border: 1px solid rgba(255, 255, 255, 0.45);
+  border: 1px solid rgba(255, 255, 255, 0.55);
 
-  background: rgba(255, 255, 255, 0.22);
+  background: rgba(255, 255, 255, 0.25);
 
   color: #ffffff;
 
   font-size: 0.75rem;
   font-weight: 800;
 
-  -webkit-backdrop-filter: blur(12px);
-  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px) saturate(160%);
+  backdrop-filter: blur(12px) saturate(160%);
 
   box-shadow:
-    inset 0 1px 0 rgba(255, 255, 255, 0.36),
+    inset 0 1px 0 rgba(255, 255, 255, 0.4),
     0 6px 14px -8px rgba(0, 0, 0, 0.3);
 }
 
@@ -317,10 +367,14 @@
 ========================================================= */
 
 .tka-flow__icon {
+  position: relative;
+
+  z-index: 2;
+
   display: block;
 
-  width: 50px;
-  height: 50px;
+  width: 58px;
+  height: 58px;
 
   object-fit: contain;
 
@@ -330,7 +384,7 @@
 }
 
 .tka-flow__item:hover .tka-flow__icon {
-  transform: scale(1.05);
+  transform: scale(1.08);
 }
 
 /* =========================================================
@@ -349,6 +403,10 @@
   padding: 0;
 }
 
+/* =========================================================
+   TITLE
+========================================================= */
+
 .tka-flow__item-title {
   margin: 0 0 10px;
 
@@ -360,10 +418,14 @@
   line-height: 1.4;
 }
 
+/* =========================================================
+   DESCRIPTION
+========================================================= */
+
 .tka-flow__description {
   margin: 0;
 
-  color: rgba(255, 255, 255, 0.86);
+  color: rgba(255, 255, 255, 0.88);
 
   font-size: 0.86rem;
 
@@ -381,39 +443,39 @@
   }
 
   .tka-flow__steps {
-    gap: 28px 58px;
+    gap: 28px 72px;
   }
 
   .tka-flow__item {
     min-height: 190px;
 
-    padding: 22px;
+    padding: 24px;
   }
 
   .tka-flow__item:nth-child(odd) {
-    padding-right: 48px;
+    padding-right: 62px;
   }
 
   .tka-flow__item:nth-child(even) {
-    padding-left: 48px;
+    padding-left: 62px;
   }
 
   .tka-flow__icon-box {
-    width: 58px;
-    height: 58px;
+    width: 70px;
+    height: 70px;
   }
 
   .tka-flow__item:nth-child(odd) .tka-flow__icon-box {
-    right: -29px;
+    right: -35px;
   }
 
   .tka-flow__item:nth-child(even) .tka-flow__icon-box {
-    left: -29px;
+    left: -35px;
   }
 
   .tka-flow__icon {
-    width: 44px;
-    height: 44px;
+    width: 52px;
+    height: 52px;
   }
 }
 
@@ -439,16 +501,16 @@
   .tka-flow__steps {
     grid-template-columns: 1fr;
 
-    gap: 18px;
+    gap: 20px;
 
-    padding-left: 34px;
+    padding-left: 38px;
   }
 
   .tka-flow__steps::before {
     top: 20px;
     bottom: 20px;
 
-    left: 14px;
+    left: 16px;
 
     transform: none;
   }
@@ -458,7 +520,7 @@
   .tka-flow__item:nth-child(even) {
     min-height: auto;
 
-    padding: 20px 18px 20px 24px;
+    padding: 22px 18px 22px 32px;
 
     border-radius: 20px;
 
@@ -468,23 +530,23 @@
   .tka-flow__icon-box,
   .tka-flow__item:nth-child(odd) .tka-flow__icon-box,
   .tka-flow__item:nth-child(even) .tka-flow__icon-box {
-    left: -34px;
+    left: -38px;
     right: auto;
 
-    width: 54px;
-    height: 54px;
+    width: 64px;
+    height: 64px;
 
     transform: translateY(-50%);
   }
 
   .tka-flow__icon {
-    width: 40px;
-    height: 40px;
+    width: 46px;
+    height: 46px;
   }
 
   .tka-flow__number {
-    width: 21px;
-    height: 21px;
+    width: 22px;
+    height: 22px;
 
     font-size: 0.68rem;
   }
@@ -509,17 +571,17 @@
   }
 
   .tka-flow__steps {
-    padding-left: 30px;
+    padding-left: 34px;
   }
 
   .tka-flow__steps::before {
-    left: 12px;
+    left: 14px;
   }
 
   .tka-flow__item,
   .tka-flow__item:nth-child(odd),
   .tka-flow__item:nth-child(even) {
-    padding: 18px 15px 18px 22px;
+    padding: 20px 14px 20px 28px;
 
     border-radius: 18px;
   }
@@ -527,15 +589,15 @@
   .tka-flow__icon-box,
   .tka-flow__item:nth-child(odd) .tka-flow__icon-box,
   .tka-flow__item:nth-child(even) .tka-flow__icon-box {
-    left: -30px;
+    left: -34px;
 
-    width: 48px;
-    height: 48px;
+    width: 58px;
+    height: 58px;
   }
 
   .tka-flow__icon {
-    width: 36px;
-    height: 36px;
+    width: 42px;
+    height: 42px;
   }
 
   .tka-flow__item-title {
