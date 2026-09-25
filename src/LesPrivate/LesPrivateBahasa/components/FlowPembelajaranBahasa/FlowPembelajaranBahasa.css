@@ -1,301 +1,590 @@
+/* =========================================================
+   FLOW PEMBELAJARAN BAHASA
+   LIQUID GLASS STYLE
+========================================================= */
+
 .flow-bahasa__section {
-  text-align: center;
-  background-color: #007bff;
-  overflow: hidden;
   position: relative;
-}
 
-.flow-bahasa__section::before,
-.flow-bahasa__section::after {
-  content: "";
-  position: absolute;
-  border-radius: 50%;
-  background: rgba(13, 16, 185, 0.03);
-  filter: blur(60px);
-  z-index: 0;
-  pointer-events: none;
-}
+  overflow: hidden;
 
-.flow-bahasa__section::before {
-  width: 300px;
-  height: 300px;
-  top: -100px;
-  left: -100px;
-  animation: flowBahasaFloat 12s infinite ease-in-out;
-}
+  background: #007bff;
 
-.flow-bahasa__section::after {
-  width: 350px;
-  height: 350px;
-  bottom: -120px;
-  right: -120px;
-  background: rgba(59, 130, 246, 0.03);
-  animation: flowBahasaFloat 14s infinite ease-in-out reverse;
-}
-
-@keyframes flowBahasaFloat {
-  0% {
-    transform: translate(0, 0) scale(1);
-  }
-  50% {
-    transform: translate(25px, -25px) scale(1.05);
-  }
-  100% {
-    transform: translate(0, 0) scale(1);
-  }
+  text-align: center;
 }
 
 .flow-bahasa__container {
-  padding-left: 10%;
-  padding-right: 10%;
   position: relative;
-  z-index: 1;
-  padding-top: 3%;
-  padding-bottom: 5%;
+
+  z-index: 2;
+
+  padding: 70px 10% 80px;
 }
 
+/* =========================================================
+   HEADER
+========================================================= */
+
 .flow-bahasa__title {
+  max-width: 900px;
+
+  margin: 0 auto 18px;
+
+  color: #ffffff;
+
   font-size: 1.5rem;
   font-weight: 800;
+
+  line-height: 1.3;
+
   text-transform: uppercase;
-  color: #ffffff;
-  margin-bottom: 20px;
-  line-height: 1.2;
-  text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.08);
 }
 
 .flow-bahasa__subtitle {
-  font-size: 0.9rem;
-  color: #f2f2f2;
-  margin-bottom: 70px;
   max-width: 900px;
-  margin-left: auto;
-  margin-right: auto;
-  line-height: 1.6;
+
+  margin: 0 auto 60px;
+
+  color: rgba(255, 255, 255, 0.9);
+
+  font-size: 0.9rem;
+
+  line-height: 1.7;
 }
+
+.flow-bahasa__subtitle strong {
+  color: #ffffff;
+}
+
+/* =========================================================
+   STEPS WRAPPER
+========================================================= */
 
 .flow-bahasa__steps-wrapper {
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: 60px;
   position: relative;
-  padding: 0 20px;
+
+  display: grid;
+
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+
+  gap: 34px 90px;
+
+  padding: 0;
+
+  align-items: stretch;
 }
 
-/* Garis konektor vertikal (mobile) */
+/* =========================================================
+   CONNECTOR LINE
+========================================================= */
+
 .flow-bahasa__steps-wrapper::before {
   content: "";
+
   position: absolute;
-  top: 0;
-  bottom: 0;
+
+  top: 25px;
+  bottom: 25px;
   left: 50%;
+
+  width: 2px;
+
   transform: translateX(-50%);
-  width: 4px;
-  background: linear-gradient(to bottom, #046ee0, #004da0);
+
+  border-radius: 999px;
+
+  background: rgba(255, 255, 255, 0.24);
+
+  box-shadow:
+    inset 0 0 0 1px rgba(255, 255, 255, 0.08),
+    0 0 18px rgba(255, 255, 255, 0.08);
+
   z-index: 0;
-  border-radius: 5px;
 }
+
+/* =========================================================
+   LIQUID GLASS CARD
+========================================================= */
 
 .flow-bahasa__item {
-  display: flex;
-  align-items: flex-start;
-  text-align: left;
   position: relative;
+
   z-index: 1;
-  background-color: #ffffff;
-  padding: 30px;
-  border-radius: 18px;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+
+  display: flex;
+
+  align-items: center;
+
+  min-width: 0;
+
+  min-height: 210px;
+
+  padding: 28px;
+
+  box-sizing: border-box;
+
+  overflow: visible;
+
+  border-radius: 24px;
+
+  border: 1px solid rgba(255, 255, 255, 0.26);
+
+  background: linear-gradient(
+    135deg,
+    rgba(255, 255, 255, 0.22),
+    rgba(255, 255, 255, 0.1)
+  );
+
+  -webkit-backdrop-filter: blur(24px) saturate(180%);
+  backdrop-filter: blur(24px) saturate(180%);
+
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.34),
+    inset 0 -1px 0 rgba(255, 255, 255, 0.06),
+    0 22px 45px -24px rgba(0, 43, 110, 0.5);
+
   transition:
-    transform 0.3s ease,
-    box-shadow 0.3s ease;
-  border: 1px solid #e6f0ff;
+    transform 0.28s ease,
+    background 0.28s ease,
+    border-color 0.28s ease,
+    box-shadow 0.28s ease;
 }
 
-.flow-bahasa__item:hover {
-  transform: translateY(-8px);
-  box-shadow: 0 18px 40px rgba(0, 0, 0, 0.12);
+/* top highlight */
+
+.flow-bahasa__item::before {
+  content: "";
+
+  position: absolute;
+
+  top: 0;
+  left: 12%;
+  right: 12%;
+
+  height: 1px;
+
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(255, 255, 255, 0.85),
+    transparent
+  );
+
+  pointer-events: none;
+
+  z-index: 3;
 }
+
+/* soft reflection */
+
+.flow-bahasa__item::after {
+  content: "";
+
+  position: absolute;
+
+  right: 14px;
+  bottom: 12px;
+
+  width: 120px;
+  height: 120px;
+
+  border-radius: 50%;
+
+  background: rgba(255, 255, 255, 0.06);
+
+  filter: blur(26px);
+
+  pointer-events: none;
+
+  z-index: 0;
+}
+
+/* =========================================================
+   HOVER
+========================================================= */
+
+.flow-bahasa__item:hover {
+  transform: translateY(-5px);
+
+  background: linear-gradient(
+    135deg,
+    rgba(255, 255, 255, 0.28),
+    rgba(255, 255, 255, 0.14)
+  );
+
+  border-color: rgba(255, 255, 255, 0.38);
+
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.42),
+    0 28px 55px -24px rgba(0, 43, 110, 0.65);
+}
+
+/* =========================================================
+   LEFT / RIGHT LAYOUT
+========================================================= */
+
+.flow-bahasa__item:nth-child(odd) {
+  text-align: right;
+
+  padding-right: 72px;
+}
+
+.flow-bahasa__item:nth-child(even) {
+  text-align: left;
+
+  padding-left: 72px;
+}
+
+/* =========================================================
+   ICON BOX
+========================================================= */
+
+.flow-bahasa__icon-box {
+  position: absolute;
+
+  top: 50%;
+
+  z-index: 20;
+
+  display: flex;
+
+  width: 78px;
+  height: 78px;
+
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 50%;
+
+  border: 1px solid rgba(255, 255, 255, 0.46);
+
+  background: linear-gradient(
+    135deg,
+    rgba(255, 255, 255, 0.28),
+    rgba(255, 255, 255, 0.14)
+  );
+
+  -webkit-backdrop-filter: blur(18px) saturate(180%);
+  backdrop-filter: blur(18px) saturate(180%);
+
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.48),
+    inset 0 -1px 0 rgba(255, 255, 255, 0.08),
+    0 14px 30px -14px rgba(0, 43, 110, 0.5);
+
+  transform: translateY(-50%);
+
+  transition:
+    transform 0.3s ease,
+    background 0.3s ease,
+    border-color 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+.flow-bahasa__item:nth-child(odd) .flow-bahasa__icon-box {
+  right: -39px;
+}
+
+.flow-bahasa__item:nth-child(even) .flow-bahasa__icon-box {
+  left: -39px;
+}
+
+.flow-bahasa__item:hover .flow-bahasa__icon-box {
+  background: linear-gradient(
+    135deg,
+    rgba(255, 255, 255, 0.34),
+    rgba(255, 255, 255, 0.18)
+  );
+
+  border-color: rgba(255, 255, 255, 0.6);
+
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.55),
+    0 18px 34px -14px rgba(0, 43, 110, 0.58);
+}
+
+/* =========================================================
+   NUMBER
+========================================================= */
+
+.flow-bahasa__number {
+  position: absolute;
+
+  top: -4px;
+  right: -4px;
+
+  z-index: 30;
+
+  display: flex;
+
+  width: 24px;
+  height: 24px;
+
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 50%;
+
+  border: 1px solid rgba(255, 255, 255, 0.55);
+
+  background: rgba(255, 255, 255, 0.25);
+
+  color: #ffffff;
+
+  font-size: 0.75rem;
+  font-weight: 800;
+
+  -webkit-backdrop-filter: blur(12px) saturate(160%);
+  backdrop-filter: blur(12px) saturate(160%);
+
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.4),
+    0 6px 14px -8px rgba(0, 0, 0, 0.3);
+}
+
+/* =========================================================
+   ICON IMAGE
+========================================================= */
+
+.flow-bahasa__icon {
+  position: relative;
+
+  z-index: 2;
+
+  display: block;
+
+  width: 58px;
+  height: 58px;
+
+  object-fit: contain;
+
+  filter: drop-shadow(0 8px 14px rgba(0, 48, 120, 0.18));
+
+  transition: transform 0.3s ease;
+}
+
+.flow-bahasa__item:hover .flow-bahasa__icon {
+  transform: scale(1.08);
+}
+
+/* =========================================================
+   CONTENT
+========================================================= */
+
+.flow-bahasa__content {
+  position: relative;
+
+  z-index: 2;
+
+  flex: 1;
+
+  min-width: 0;
+
+  padding: 0;
+}
+
+/* =========================================================
+   STEP TITLE
+========================================================= */
+
+.flow-bahasa__step-title {
+  margin: 0 0 10px;
+
+  color: #ffffff;
+
+  font-size: 1rem;
+  font-weight: 800;
+
+  line-height: 1.4;
+}
+
+/* =========================================================
+   DESCRIPTION
+========================================================= */
+
+.flow-bahasa__description {
+  margin: 0;
+
+  color: rgba(255, 255, 255, 0.88);
+
+  font-size: 0.86rem;
+
+  line-height: 1.65;
+}
+
+/* =========================================================
+   TABLET
+========================================================= */
 
 @media (max-width: 1024px) {
   .flow-bahasa__container {
     padding-left: 4%;
     padding-right: 4%;
   }
-  .flow-bahasa__item:nth-child(odd) .flow-bahasa__content {
-    padding-left: 0;
-    padding-right: 0px;
-  }
-  .flow-bahasa__item:nth-child(even) .flow-bahasa__content {
-    padding-right: 0;
-    padding-left: 0px;
-  }
-}
 
-@media (min-width: 820px) {
   .flow-bahasa__steps-wrapper {
-    grid-template-columns: repeat(2, 1fr);
-    gap: 40px 80px;
-    padding: 0;
+    gap: 28px 72px;
   }
 
-  .flow-bahasa__steps-wrapper::before {
-    left: 50%;
-    transform: translateX(-50%);
+  .flow-bahasa__item {
+    min-height: 220px;
+
+    padding: 24px;
   }
 
   .flow-bahasa__item:nth-child(odd) {
-    justify-self: end;
-    text-align: right;
-    padding-right: 60px;
+    padding-right: 62px;
   }
 
   .flow-bahasa__item:nth-child(even) {
-    justify-self: start;
-    text-align: left;
-    padding-left: 60px;
+    padding-left: 62px;
   }
 
-  .flow-bahasa__item:nth-child(odd) .flow-bahasa__content {
-    order: 1;
+  .flow-bahasa__icon-box {
+    width: 70px;
+    height: 70px;
   }
 
-  .flow-bahasa__item:nth-child(even) .flow-bahasa__content {
-    order: 2;
-  }
-}
-
-.flow-bahasa__icon-box {
-  background: linear-gradient(45deg, #007bff, #3b82f6);
-  width: 60px;
-  height: 60px;
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  box-shadow: 0 4px 12px rgba(13, 16, 185, 0.3);
-  border: 4px solid #ffffff;
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  transform: translate(-50%, -50%);
-  z-index: 2;
-}
-
-@media (min-width: 768px) {
   .flow-bahasa__item:nth-child(odd) .flow-bahasa__icon-box {
-    left: unset;
-    right: -30px;
-    transform: translateY(-50%);
+    right: -35px;
   }
+
   .flow-bahasa__item:nth-child(even) .flow-bahasa__icon-box {
-    left: -30px;
-    right: unset;
-    transform: translateY(-50%);
+    left: -35px;
+  }
+
+  .flow-bahasa__icon {
+    width: 52px;
+    height: 52px;
   }
 }
 
-.flow-bahasa__number {
-  font-size: 0.9rem;
-  font-weight: bold;
-  color: #ffffff;
-  position: absolute;
-  top: 5px;
-  right: 5px;
-  background-color: #fec100;
-  border-radius: 50%;
-  width: 20px;
-  height: 20px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  z-index: 3;
-}
+/* =========================================================
+   MOBILE
+========================================================= */
 
-.flow-bahasa__icon {
-  width: 4rem;
-  height: auto;
-  object-fit: contain;
-}
-
-.flow-bahasa__content {
-  flex: 1;
-  padding-left: 70px;
-}
-
-@media (min-width: 1200px) {
-  .flow-bahasa__item:nth-child(odd) .flow-bahasa__content {
-    padding-left: 0;
-    padding-right: 0px;
-  }
-  .flow-bahasa__item:nth-child(even) .flow-bahasa__content {
-    padding-right: 0;
-    padding-left: 0px;
-  }
-}
-
-@media (max-width: 900px) {
-  .flow-bahasa__content {
-    padding-left: 0;
-    padding-right: 0;
-  }
-}
-
-.flow-bahasa__step-title {
-  font-size: 1rem;
-  font-weight: 700;
-  color: #333333;
-  margin-bottom: 10px;
-}
-
-.flow-bahasa__description {
-  font-size: 0.9rem;
-  color: #64748b;
-  line-height: 1.5;
-}
-
-/* Responsivitas Mobile */
 @media (max-width: 767px) {
+  .flow-bahasa__container {
+    padding: 55px 4%;
+  }
+
   .flow-bahasa__title {
     font-size: 1.2rem;
-    margin-top: 1rem;
   }
+
   .flow-bahasa__subtitle {
-    font-size: 0.9rem;
-    margin-bottom: 30px;
+    margin-bottom: 34px;
+
+    font-size: 0.88rem;
   }
+
   .flow-bahasa__steps-wrapper {
-    padding: 0;
+    grid-template-columns: 1fr;
+
+    gap: 20px;
+
+    padding-left: 38px;
   }
+
   .flow-bahasa__steps-wrapper::before {
-    left: 20px;
+    top: 20px;
+    bottom: 20px;
+
+    left: 16px;
+
+    transform: none;
   }
-  .flow-bahasa__item {
-    flex-direction: row;
-    align-items: center;
-    padding: 20px;
-    margin-left: 34px;
+
+  .flow-bahasa__item,
+  .flow-bahasa__item:nth-child(odd),
+  .flow-bahasa__item:nth-child(even) {
+    min-height: auto;
+
+    padding: 22px 18px 22px 32px;
+
+    border-radius: 20px;
+
     text-align: left;
   }
-  .flow-bahasa__icon-box {
-    position: absolute;
-    left: -30px;
-    top: 50%;
+
+  .flow-bahasa__icon-box,
+  .flow-bahasa__item:nth-child(odd) .flow-bahasa__icon-box,
+  .flow-bahasa__item:nth-child(even) .flow-bahasa__icon-box {
+    left: -38px;
+    right: auto;
+
+    width: 64px;
+    height: 64px;
+
     transform: translateY(-50%);
   }
-  .flow-bahasa__content {
-    padding-left: 0;
+
+  .flow-bahasa__icon {
+    width: 46px;
+    height: 46px;
   }
+
+  .flow-bahasa__number {
+    width: 22px;
+    height: 22px;
+
+    font-size: 0.68rem;
+  }
+
   .flow-bahasa__step-title {
-    font-size: 1rem;
-    padding-left: 19px;
+    font-size: 0.98rem;
   }
+
   .flow-bahasa__description {
-    font-size: 0.9rem;
-    padding-left: 19px;
+    font-size: 0.82rem;
   }
+}
+
+/* =========================================================
+   SMALL MOBILE
+========================================================= */
+
+@media (max-width: 480px) {
   .flow-bahasa__container {
-    padding-left: 4%;
-    padding-right: 4%;
+    padding-top: 48px;
+    padding-bottom: 48px;
+  }
+
+  .flow-bahasa__steps-wrapper {
+    padding-left: 34px;
+  }
+
+  .flow-bahasa__steps-wrapper::before {
+    left: 14px;
+  }
+
+  .flow-bahasa__item,
+  .flow-bahasa__item:nth-child(odd),
+  .flow-bahasa__item:nth-child(even) {
+    padding: 20px 14px 20px 28px;
+
+    border-radius: 18px;
+  }
+
+  .flow-bahasa__icon-box,
+  .flow-bahasa__item:nth-child(odd) .flow-bahasa__icon-box,
+  .flow-bahasa__item:nth-child(even) .flow-bahasa__icon-box {
+    left: -34px;
+
+    width: 58px;
+    height: 58px;
+  }
+
+  .flow-bahasa__icon {
+    width: 42px;
+    height: 42px;
+  }
+
+  .flow-bahasa__step-title {
+    font-size: 0.95rem;
+  }
+
+  .flow-bahasa__description {
+    font-size: 0.78rem;
   }
 }

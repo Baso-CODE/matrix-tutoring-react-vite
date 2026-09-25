@@ -1,85 +1,71 @@
-/* --- Container Utama & Background Section --- */
+/* =========================================================
+   LANGUAGE OPTIONS
+   DEEP LIQUID GLASS STYLE
+========================================================= */
+
 .lang-opt__section {
-  text-align: center;
-  background-color: #007bff;
-  overflow: hidden;
   position: relative;
-}
 
-.lang-opt__section::before,
-.lang-opt__section::after {
-  content: "";
-  position: absolute;
-  border-radius: 50%;
-  background: rgba(13, 16, 185, 0.03);
-  filter: blur(60px);
-  z-index: 0;
-  pointer-events: none;
-}
+  overflow: hidden;
 
-.lang-opt__section::before {
-  width: 300px;
-  height: 300px;
-  top: -100px;
-  left: -100px;
-  animation: langOptFloatEffect 12s infinite ease-in-out;
-}
+  background: #007bff;
 
-.lang-opt__section::after {
-  width: 350px;
-  height: 350px;
-  bottom: -120px;
-  right: -120px;
-  background: rgba(59, 130, 246, 0.03);
-  animation: langOptFloatEffect 14s infinite ease-in-out reverse;
-}
-
-@keyframes langOptFloatEffect {
-  0% {
-    transform: translate(0, 0) scale(1);
-  }
-  50% {
-    transform: translate(25px, -25px) scale(1.05);
-  }
-  100% {
-    transform: translate(0, 0) scale(1);
-  }
+  text-align: center;
 }
 
 .lang-opt__container {
-  padding-left: 10%;
-  padding-right: 10%;
   position: relative;
-  z-index: 1;
-  padding-top: 4%;
-  padding-bottom: 5%;
+
+  z-index: 2;
+
+  padding: 70px 10% 80px;
 }
 
-/* --- Typography Judul & Subtitle --- */
+/* =========================================================
+   HEADER
+========================================================= */
+
 .lang-opt__title {
+  max-width: 900px;
+
+  margin: 0 auto 18px;
+
+  color: #ffffff;
+
   font-size: 1.5rem;
   font-weight: 800;
+
+  line-height: 1.3;
+
   text-transform: uppercase;
-  color: #ffffff;
-  margin-bottom: 20px;
-  line-height: 1.2;
-  text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.08);
 }
 
 .lang-opt__subtitle {
-  font-size: 0.9rem;
-  color: #f2f2f2;
-  margin-bottom: 50px;
   max-width: 900px;
-  margin-left: auto;
-  margin-right: auto;
-  line-height: 1.6;
+
+  margin: 0 auto 50px;
+
+  color: rgba(255, 255, 255, 0.9);
+
+  font-size: 0.9rem;
+
+  line-height: 1.7;
 }
 
-/* --- Card Grid Layout --- */
+.lang-opt__subtitle strong {
+  color: #ffffff;
+}
+
+/* =========================================================
+   GRID
+========================================================= */
+
 .lang-opt__grid {
   display: grid;
-  gap: 2rem;
+
+  grid-template-columns: repeat(1, minmax(0, 1fr));
+
+  gap: 24px;
 }
 
 @media (min-width: 640px) {
@@ -94,135 +80,448 @@
   }
 }
 
-/* --- Kartu Bahasa (Lang Card) --- */
+/* =========================================================
+   LIQUID GLASS CARD
+========================================================= */
+
 .lang-opt__card {
-  background-color: #ffffff;
-  border: 3px solid #cbe6ff;
+  position: relative;
+
+  z-index: 1;
+
   display: flex;
+
   flex-direction: column;
+
   align-items: center;
   justify-content: center;
-  font-size: 1.5rem;
-  font-weight: 700;
-  padding: 30px 20px;
-  color: #cbe6ff;
-  border-radius: 45px;
+
+  min-width: 0;
+
+  min-height: 280px;
+
+  padding: 30px 22px;
+
+  box-sizing: border-box;
+
+  overflow: hidden;
+
+  border-radius: 26px;
+
+  border: 1px solid rgba(255, 255, 255, 0.28);
+
+  background: linear-gradient(
+    135deg,
+    rgba(255, 255, 255, 0.22),
+    rgba(255, 255, 255, 0.1)
+  );
+
+  -webkit-backdrop-filter: blur(24px) saturate(180%);
+  backdrop-filter: blur(24px) saturate(180%);
+
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.34),
+    inset 0 -1px 0 rgba(255, 255, 255, 0.06),
+    0 22px 45px -24px rgba(0, 43, 110, 0.5);
+
   transition:
     transform 0.3s ease,
+    background 0.3s ease,
+    border-color 0.3s ease,
     box-shadow 0.3s ease;
 }
 
-.lang-opt__card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+/* =========================================================
+   TOP SPECULAR HIGHLIGHT
+========================================================= */
+
+.lang-opt__card::before {
+  content: "";
+
+  position: absolute;
+
+  top: 0;
+  left: 12%;
+  right: 12%;
+
+  height: 1px;
+
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(255, 255, 255, 0.88),
+    transparent
+  );
+
+  pointer-events: none;
+
+  z-index: 3;
 }
 
+/* =========================================================
+   SOFT REFLECTION
+========================================================= */
+
+.lang-opt__card::after {
+  content: "";
+
+  position: absolute;
+
+  right: -45px;
+  bottom: -55px;
+
+  width: 150px;
+  height: 150px;
+
+  border-radius: 50%;
+
+  background: rgba(255, 255, 255, 0.08);
+
+  filter: blur(20px);
+
+  pointer-events: none;
+
+  z-index: 0;
+}
+
+/* =========================================================
+   CARD HOVER
+========================================================= */
+
+.lang-opt__card:hover {
+  transform: translateY(-6px);
+
+  background: linear-gradient(
+    135deg,
+    rgba(255, 255, 255, 0.29),
+    rgba(255, 255, 255, 0.14)
+  );
+
+  border-color: rgba(255, 255, 255, 0.4);
+
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.44),
+    inset 0 -1px 0 rgba(255, 255, 255, 0.08),
+    0 28px 55px -24px rgba(0, 43, 110, 0.65);
+}
+
+/* =========================================================
+   LOGO / FLAG
+========================================================= */
+
 .lang-opt__card-logo {
-  width: 70px;
-  height: 70px;
+  position: relative;
+
+  z-index: 2;
+
+  display: block;
+
+  width: 76px;
+  height: 76px;
+
   object-fit: contain;
-  margin-top: -10px;
-  margin-bottom: 10px;
+
+  margin: 0 0 16px;
+
+  padding: 12px;
+
+  box-sizing: border-box;
+
+  border-radius: 22px;
+
+  border: 1px solid rgba(255, 255, 255, 0.36);
+
+  background: linear-gradient(
+    135deg,
+    rgba(255, 255, 255, 0.24),
+    rgba(255, 255, 255, 0.12)
+  );
+
+  -webkit-backdrop-filter: blur(16px) saturate(170%);
+  backdrop-filter: blur(16px) saturate(170%);
+
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.42),
+    0 12px 28px -18px rgba(0, 43, 110, 0.45);
+
+  pointer-events: none;
+
+  transition:
+    transform 0.3s ease,
+    background 0.3s ease,
+    border-color 0.3s ease;
+}
+
+.lang-opt__card:hover .lang-opt__card-logo {
+  transform: translateY(-2px) scale(1.04);
+
+  border-color: rgba(255, 255, 255, 0.52);
+
+  background: linear-gradient(
+    135deg,
+    rgba(255, 255, 255, 0.32),
+    rgba(255, 255, 255, 0.16)
+  );
+}
+
+/* =========================================================
+   CARD HEADER
+========================================================= */
+
+.lang-opt__card-header {
+  position: relative;
+
+  z-index: 2;
+
+  margin-top: 4px;
+
+  color: #ffffff;
+
+  font-size: 1rem;
+  font-weight: 800;
+
+  line-height: 1.4;
+
+  text-align: center;
+}
+
+/* =========================================================
+   LIQUID GLASS BUTTON
+========================================================= */
+
+.lang-opt__card-button {
+  position: relative;
+
+  z-index: 2;
+
+  display: inline-flex;
+
+  align-items: center;
+  justify-content: center;
+
+  margin-top: 22px;
+
+  padding: 10px 18px;
+
+  min-height: 42px;
+
+  box-sizing: border-box;
+
+  overflow: hidden;
+
+  border-radius: 999px;
+
+  border: 1px solid rgba(255, 255, 255, 0.36);
+
+  background: linear-gradient(
+    135deg,
+    rgba(255, 255, 255, 0.2),
+    rgba(255, 255, 255, 0.08)
+  );
+
+  color: #ffffff;
+
+  font-family: inherit;
+
+  font-size: 0.88rem;
+  font-weight: 700;
+
+  text-decoration: none;
+
+  -webkit-backdrop-filter: blur(16px) saturate(175%);
+  backdrop-filter: blur(16px) saturate(175%);
+
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.4),
+    inset 0 -1px 0 rgba(255, 255, 255, 0.05),
+    0 12px 28px -18px rgba(0, 43, 110, 0.45);
+
+  cursor: pointer;
+
+  transition:
+    transform 0.25s ease,
+    background 0.25s ease,
+    border-color 0.25s ease,
+    box-shadow 0.25s ease;
+}
+
+/* button highlight */
+
+.lang-opt__card-button::before {
+  content: "";
+
+  position: absolute;
+
+  top: 0;
+  left: 14%;
+  right: 14%;
+
+  height: 1px;
+
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(255, 255, 255, 0.82),
+    transparent
+  );
+
   pointer-events: none;
 }
 
-.lang-opt__card-header {
-  text-align: center;
-  color: #006bde;
-  font-size: 1rem;
-  margin-top: 10px;
-}
-
-/* --- Tombol Aksi --- */
-.lang-opt__card-button {
-  padding: 10px 20px;
-  background-color: transparent;
-  color: #006bde;
-  font-family: inherit;
-  font-size: 15px;
-  border: 3px solid #cbe6ff;
-  text-decoration: none;
-  border-radius: 5em;
-  margin-top: 20px;
-  transition: 0.2s;
-  cursor: pointer;
-}
-
-@media (max-width: 1024px) {
-  .lang-opt__card-button {
-    font-size: 13px;
-  }
-}
+/* =========================================================
+   BUTTON HOVER
+========================================================= */
 
 .lang-opt__card-button:hover {
-  color: #1e2127;
-  background-color: #cbe6ff;
+  transform: translateY(-2px);
+
+  border-color: rgba(255, 255, 255, 0.55);
+
+  background: linear-gradient(
+    135deg,
+    rgba(255, 255, 255, 0.3),
+    rgba(255, 255, 255, 0.14)
+  );
+
+  color: #ffffff;
+
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.5),
+    0 16px 32px -18px rgba(0, 43, 110, 0.56);
 }
 
-/* --- Animasi Wobble untuk Logo saat hover pada Card --- */
-@media (prefers-reduced-motion: no-preference) {
-  .lang-opt__card:hover .lang-opt__card-logo {
-    -webkit-animation: langOptWobble 0.9s ease-in both;
-    animation: langOptWobble 0.9s ease-in both;
-  }
-}
+/* =========================================================
+   REDUCED MOTION
+========================================================= */
 
-@-webkit-keyframes langOptWobble {
-  0%,
-  100% {
-    -webkit-transform: translateX(0%);
-    transform: translateX(0%);
-    -webkit-transform-origin: 50% 50%;
-    transform-origin: 50% 50%;
-  }
-  15% {
-    -webkit-transform: translateX(-15px) rotate(-6deg);
-    transform: translateX(-15px) rotate(-6deg);
-  }
-  30% {
-    -webkit-transform: translateX(8px) rotate(6deg);
-    transform: translateX(8px) rotate(6deg);
-  }
-  45% {
-    -webkit-transform: translateX(-8px) rotate(-3.6deg);
-    transform: translateX(-8px) rotate(-3.6deg);
-  }
-  60% {
-    -webkit-transform: translateX(4px) rotate(2.4deg);
-    transform: translateX(4px) rotate(2.4deg);
-  }
-  75% {
-    -webkit-transform: translateX(-2px) rotate(-1.2deg);
-    transform: translateX(-2px) rotate(-1.2deg);
+@media (prefers-reduced-motion: reduce) {
+  .lang-opt__card,
+  .lang-opt__card-logo,
+  .lang-opt__card-button {
+    transition: none;
   }
 }
 
-@keyframes langOptWobble {
-  0%,
-  100% {
-    -webkit-transform: translateX(0%);
-    transform: translateX(0%);
-    -webkit-transform-origin: 50% 50%;
-    transform-origin: 50% 50%;
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 1024px) {
+  .lang-opt__container {
+    padding-left: 4%;
+    padding-right: 4%;
   }
-  15% {
-    -webkit-transform: translateX(-15px) rotate(-6deg);
-    transform: translateX(-15px) rotate(-6deg);
+
+  .lang-opt__grid {
+    gap: 20px;
   }
-  30% {
-    -webkit-transform: translateX(8px) rotate(6deg);
-    transform: translateX(8px) rotate(6deg);
+
+  .lang-opt__card {
+    min-height: 260px;
+
+    padding: 26px 20px;
   }
-  45% {
-    -webkit-transform: translateX(-8px) rotate(-3.6deg);
-    transform: translateX(-8px) rotate(-3.6deg);
+
+  .lang-opt__card-button {
+    font-size: 0.82rem;
   }
-  60% {
-    -webkit-transform: translateX(4px) rotate(2.4deg);
-    transform: translateX(4px) rotate(2.4deg);
+}
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 767px) {
+  .lang-opt__container {
+    padding: 55px 4%;
   }
-  75% {
-    -webkit-transform: translateX(-2px) rotate(-1.2deg);
-    transform: translateX(-2px) rotate(-1.2deg);
+
+  .lang-opt__title {
+    font-size: 1.2rem;
+  }
+
+  .lang-opt__subtitle {
+    margin-bottom: 34px;
+
+    font-size: 0.88rem;
+  }
+
+  .lang-opt__grid {
+    gap: 16px;
+  }
+
+  .lang-opt__card {
+    min-height: 240px;
+
+    padding: 24px 18px;
+
+    border-radius: 22px;
+  }
+
+  .lang-opt__card-logo {
+    width: 68px;
+    height: 68px;
+
+    padding: 10px;
+
+    border-radius: 20px;
+  }
+
+  .lang-opt__card-header {
+    font-size: 0.95rem;
+  }
+
+  .lang-opt__card-button {
+    margin-top: 18px;
+
+    padding: 9px 16px;
+
+    min-height: 40px;
+
+    font-size: 0.8rem;
+  }
+}
+
+/* =========================================================
+   SMALL MOBILE
+========================================================= */
+
+@media (max-width: 480px) {
+  .lang-opt__container {
+    padding-top: 48px;
+    padding-bottom: 48px;
+  }
+
+  .lang-opt__title {
+    font-size: 1.08rem;
+  }
+
+  .lang-opt__subtitle {
+    font-size: 0.84rem;
+  }
+
+  .lang-opt__card {
+    min-height: 220px;
+
+    padding: 22px 16px;
+
+    border-radius: 20px;
+  }
+
+  .lang-opt__card-logo {
+    width: 62px;
+    height: 62px;
+
+    padding: 9px;
+  }
+
+  .lang-opt__card-header {
+    font-size: 0.92rem;
+  }
+
+  .lang-opt__card-button {
+    padding: 8px 14px;
+
+    font-size: 0.76rem;
   }
 }

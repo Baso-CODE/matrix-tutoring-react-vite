@@ -92,7 +92,7 @@ const TutorLesprivatMatrix = ({ location }) => {
           modules={[Pagination, Autoplay]}
           spaceBetween={20}
           slidesPerView={2} // Default untuk mobile
-          pagination={{ clickable: true, dynamicBullets: true }}
+          pagination={{ clickable: true }}
           autoplay={{ delay: 2500, disableOnInteraction: false }}
           breakpoints={{
             640: {
