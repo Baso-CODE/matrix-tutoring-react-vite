@@ -1,21 +1,46 @@
+/* =========================================================
+   SECTION
+========================================================= */
+
 .why-choose-section {
+  position: relative;
+
+  padding: 64px 10%;
+
+  background: #ffffff;
+
   text-align: center;
-  padding-top: 64px;
-  padding-left: 10%;
-  padding-right: 10%;
-  padding-bottom: 64px;
+
+  overflow: hidden;
 }
+
+/* =========================================================
+   CONTAINER
+========================================================= */
 
 .why-choose-container {
-  margin-left: auto;
-  margin-right: auto;
+  position: relative;
+
+  z-index: 1;
+
+  width: 100%;
+
+  margin: 0 auto;
 }
 
+/* =========================================================
+   HEADER
+========================================================= */
+
 .why-choose-title {
-  font-size: 1.3rem;
+  margin: 0 0 12px;
+
+  color: #1f2937;
+
+  font-size: 1.4rem;
   font-weight: 800;
-  color: #333333;
-  margin-bottom: 10px;
+
+  line-height: 1.4;
 }
 
 .highlight-text {
@@ -23,139 +48,415 @@
 }
 
 .why-choose-subtitle {
-  font-size: 0.9rem;
-  color: #4f4f4f;
-  margin-bottom: 48px;
   max-width: 800px;
-  margin-left: auto;
-  margin-right: auto;
-  line-height: 1.625;
+
+  margin: 0 auto 48px;
+
+  color: #4b5563;
+
+  font-size: 0.92rem;
+
+  line-height: 1.7;
 }
+
+/* =========================================================
+   GRID
+========================================================= */
 
 .why-choose-cards-grid {
   display: grid;
-  grid-template-columns: 1fr;
+
+  grid-template-columns: repeat(1, minmax(0, 1fr));
+
   gap: 24px;
-  justify-items: center;
+
+  align-items: stretch;
 }
+
+/* =========================================================
+   CARD
+========================================================= */
+
+.why-choose-card {
+  position: relative;
+
+  display: flex;
+
+  min-width: 0;
+  min-height: 290px;
+
+  flex-direction: column;
+
+  align-items: center;
+  justify-content: flex-start;
+
+  padding: 28px 22px;
+
+  box-sizing: border-box;
+
+  overflow: hidden;
+
+  border: 1px solid rgba(0, 123, 255, 0.12);
+
+  border-radius: 24px;
+
+  background: linear-gradient(
+    135deg,
+    rgba(255, 255, 255, 0.92),
+    rgba(241, 247, 255, 0.72)
+  );
+
+  -webkit-backdrop-filter: blur(24px) saturate(180%);
+  backdrop-filter: blur(24px) saturate(180%);
+
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 1),
+    inset 0 -1px 0 rgba(0, 123, 255, 0.04),
+    0 22px 45px -26px rgba(0, 73, 155, 0.28);
+
+  text-align: center;
+
+  transition:
+    transform 0.35s ease,
+    box-shadow 0.35s ease,
+    border-color 0.35s ease,
+    background 0.35s ease,
+    filter 0.35s ease,
+    opacity 0.35s ease;
+}
+
+/* top specular highlight */
+.why-choose-card::before {
+  content: "";
+
+  position: absolute;
+
+  top: 0;
+  left: 12%;
+  right: 12%;
+
+  height: 1px;
+
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(255, 255, 255, 0.95),
+    transparent
+  );
+
+  pointer-events: none;
+}
+
+/* soft reflection */
+.why-choose-card::after {
+  content: "";
+
+  position: absolute;
+
+  right: -55px;
+  bottom: -65px;
+
+  width: 170px;
+  height: 170px;
+
+  border-radius: 50%;
+
+  background: rgba(0, 123, 255, 0.05);
+
+  filter: blur(22px);
+
+  pointer-events: none;
+}
+
+/* =========================================================
+   BLURRED CARD STATE
+========================================================= */
+
+.why-choose-card.blurred-card {
+  filter: blur(3px);
+
+  opacity: 0.55;
+
+  transform: scale(0.98);
+
+  pointer-events: none;
+}
+
+/* =========================================================
+   HOVER
+========================================================= */
+
+@media (hover: hover) and (pointer: fine) {
+  .why-choose-card:hover {
+    transform: translateY(-6px);
+
+    border-color: rgba(0, 123, 255, 0.22);
+
+    background: linear-gradient(
+      135deg,
+      rgba(255, 255, 255, 0.98),
+      rgba(233, 244, 255, 0.82)
+    );
+
+    box-shadow:
+      inset 0 1px 0 rgba(255, 255, 255, 1),
+      0 28px 55px -28px rgba(0, 73, 155, 0.4);
+
+    filter: blur(0);
+
+    opacity: 1;
+  }
+}
+
+/* =========================================================
+   ICON WRAPPER
+========================================================= */
+
+.why-choose-icon-wrapper {
+  position: relative;
+
+  z-index: 2;
+
+  display: inline-flex;
+
+  width: 78px;
+  height: 78px;
+
+  align-items: center;
+  justify-content: center;
+
+  margin-bottom: 22px;
+
+  padding: 0;
+
+  border: 1px solid rgba(0, 123, 255, 0.2);
+
+  border-radius: 50%;
+
+  background: linear-gradient(
+    135deg,
+    rgba(0, 123, 255, 0.92),
+    rgba(0, 96, 210, 0.72)
+  );
+
+  -webkit-backdrop-filter: blur(20px) saturate(180%);
+  backdrop-filter: blur(20px) saturate(180%);
+
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.42),
+    inset 0 -1px 0 rgba(0, 43, 110, 0.1),
+    0 16px 26px -16px rgba(0, 89, 190, 0.48);
+}
+
+/* icon highlight */
+.why-choose-icon-wrapper::before {
+  content: "";
+
+  position: absolute;
+
+  top: 7px;
+  left: 15px;
+
+  width: 26px;
+  height: 10px;
+
+  border-radius: 50%;
+
+  background: rgba(255, 255, 255, 0.24);
+
+  filter: blur(4px);
+
+  transform: rotate(-18deg);
+
+  pointer-events: none;
+}
+
+/* =========================================================
+   ICON
+========================================================= */
+
+.why-choose-icon {
+  position: relative;
+
+  z-index: 1;
+
+  display: block;
+
+  width: 58px;
+  height: 58px;
+
+  object-fit: contain;
+}
+
+/* =========================================================
+   CARD TITLE
+========================================================= */
+
+.why-choose-card-title {
+  position: relative;
+
+  z-index: 2;
+
+  margin: 0 0 12px;
+
+  color: #1f2937;
+
+  font-size: 1.05rem;
+  font-weight: 700;
+
+  line-height: 1.4;
+}
+
+/* =========================================================
+   CARD DESCRIPTION
+========================================================= */
+
+.why-choose-card-description {
+  position: relative;
+
+  z-index: 2;
+
+  flex-grow: 1;
+
+  margin: 0;
+
+  color: #526071;
+
+  font-size: 0.9rem;
+
+  line-height: 1.65;
+}
+
+/* =========================================================
+   TABLET
+========================================================= */
 
 @media (max-width: 1024px) {
   .why-choose-section {
-    padding-right: 4%;
     padding-left: 4%;
+    padding-right: 4%;
   }
 }
+
+/* =========================================================
+   2 COLUMN
+========================================================= */
+
 @media (min-width: 640px) {
-  /* sm breakpoint */
   .why-choose-cards-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 }
 
+/* =========================================================
+   DESKTOP 4 COLUMN
+========================================================= */
+
 @media (min-width: 1024px) {
-  /* lg breakpoint */
   .why-choose-cards-grid {
     grid-template-columns: repeat(4, minmax(0, 1fr));
   }
 }
 
-.why-choose-card {
-  background-color: #f0f8ff;
-  border-radius: 12px;
-  box-shadow:
-    0 4px 6px -1px rgba(0, 0, 0, 0.1),
-    0 2px 4px -1px rgba(0, 0, 0, 0.06);
-  padding: 20px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  text-align: center;
-  transition:
-    transform 0.3s ease-in-out,
-    box-shadow 0.3s ease-in-out,
-    filter 0.3s ease-in-out,
-    opacity 0.3s ease-in-out;
-  min-height: 280px;
-  justify-content: flex-start;
-}
+/* =========================================================
+   MOBILE
+========================================================= */
 
-.why-choose-card.blurred-card {
-  filter: blur(3px);
-  opacity: 0.7;
-  pointer-events: none;
-  transform: translateY(0);
-  box-shadow: none;
-}
-
-.why-choose-card:hover {
-  transform: translateY(-8px);
-  box-shadow:
-    0 10px 15px -3px rgba(0, 0, 0, 0.1),
-    0 4px 6px -2px rgba(0, 0, 0, 0.05);
-  filter: blur(0);
-  opacity: 1;
-}
-
-.why-choose-card.blurred-card:hover {
-  transform: translateY(0);
-  box-shadow: none;
-}
-
-.why-choose-icon-wrapper {
-  background-color: #1a73e8;
-  border-radius: 50%;
-  padding: 16px;
-  width: 4rem;
-  height: 4rem;
-  margin-bottom: 24px;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.why-choose-icon {
-  width: 8rem;
-  height: 8rem;
-}
-
-.why-choose-card-title {
-  font-size: 1rem;
-  font-weight: 700;
-  color: #333333;
-  margin-bottom: 12px;
-}
-
-.why-choose-card-description {
-  font-size: 0.9rem;
-  color: #4f4f4f;
-  line-height: 1.6;
-  flex-grow: 1;
-}
-
-/* Penyesuaian Responsif */
 @media (max-width: 768px) {
+  .why-choose-section {
+    padding-top: 52px;
+    padding-bottom: 52px;
+  }
+
   .why-choose-title {
     font-size: 1.2rem;
   }
+
   .why-choose-subtitle {
-    font-size: 0.9rem;
     margin-bottom: 32px;
+
+    font-size: 0.9rem;
   }
+
+  .why-choose-cards-grid {
+    gap: 18px;
+  }
+
   .why-choose-card {
-    padding: 24px;
     min-height: auto;
+
+    padding: 24px 20px;
+
+    border-radius: 22px;
   }
+
   .why-choose-icon-wrapper {
-    padding: 12px;
-    margin-bottom: 16px;
+    width: 70px;
+    height: 70px;
+
+    margin-bottom: 18px;
   }
+
   .why-choose-icon {
-    size: 32px;
+    width: 52px;
+    height: 52px;
   }
+
   .why-choose-card-title {
     font-size: 1rem;
   }
+
   .why-choose-card-description {
-    font-size: 0.9rem;
+    font-size: 0.88rem;
+  }
+
+  /* blur hover tidak relevan di touch device */
+  .why-choose-card.blurred-card {
+    filter: none;
+
+    opacity: 1;
+
+    transform: none;
+  }
+}
+
+/* =========================================================
+   SMALL MOBILE
+========================================================= */
+
+@media (max-width: 480px) {
+  .why-choose-section {
+    padding-top: 44px;
+    padding-bottom: 44px;
+  }
+
+  .why-choose-title {
+    font-size: 1.1rem;
+  }
+
+  .why-choose-subtitle {
+    font-size: 0.84rem;
+  }
+
+  .why-choose-card {
+    padding: 22px 18px;
+  }
+
+  .why-choose-icon-wrapper {
+    width: 64px;
+    height: 64px;
+  }
+
+  .why-choose-icon {
+    width: 48px;
+    height: 48px;
+  }
+
+  .why-choose-card-title {
+    font-size: 0.95rem;
+  }
+
+  .why-choose-card-description {
+    font-size: 0.82rem;
   }
 }

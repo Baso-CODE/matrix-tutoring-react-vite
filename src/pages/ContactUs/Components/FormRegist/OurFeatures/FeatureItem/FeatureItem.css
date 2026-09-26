@@ -1,86 +1,415 @@
-/* File: FeatureItem.css */
+/* =========================================================
+   FEATURE ITEM
+========================================================= */
+
 .feature-item-our-feautures-contact {
-  background-color: #f8f9fa;
-  border-radius: 12px;
-  padding: 1.5rem;
-  cursor: pointer;
-  transition: all 0.5s ease;
-  border: 1px solid #e9ecef;
+  position: relative;
+
+  width: 100%;
+
+  padding: 1.25rem 1.35rem;
+
+  box-sizing: border-box;
+
   overflow: hidden;
+
+  cursor: pointer;
+
+  border: 1px solid rgba(0, 123, 255, 0.12);
+
+  border-radius: 20px;
+
+  background: linear-gradient(
+    135deg,
+    rgba(255, 255, 255, 0.9),
+    rgba(238, 246, 255, 0.7)
+  );
+
+  -webkit-backdrop-filter: blur(22px) saturate(180%);
+  backdrop-filter: blur(22px) saturate(180%);
+
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.98),
+    inset 0 -1px 0 rgba(0, 123, 255, 0.03),
+    0 18px 38px -24px rgba(0, 73, 155, 0.3);
+
+  transition:
+    transform 0.3s ease,
+    border-color 0.3s ease,
+    background 0.3s ease,
+    box-shadow 0.3s ease;
 }
 
-.feature-item-our-feautures-contact:hover {
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-  transform: translateY(-5px);
+/* =========================================================
+   TOP SPECULAR HIGHLIGHT
+========================================================= */
+
+.feature-item-our-feautures-contact::before {
+  content: "";
+
+  position: absolute;
+
+  top: 0;
+  left: 12%;
+  right: 12%;
+
+  height: 1px;
+
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(255, 255, 255, 0.95),
+    transparent
+  );
+
+  pointer-events: none;
 }
 
-/* Mengubah selektor untuk class 'open' */
+/* =========================================================
+   SOFT REFLECTION
+========================================================= */
+
+.feature-item-our-feautures-contact::after {
+  content: "";
+
+  position: absolute;
+
+  right: -45px;
+  bottom: -55px;
+
+  width: 140px;
+  height: 140px;
+
+  border-radius: 50%;
+
+  background: rgba(0, 123, 255, 0.05);
+
+  filter: blur(20px);
+
+  pointer-events: none;
+}
+
+/* =========================================================
+   HOVER
+========================================================= */
+
+@media (hover: hover) and (pointer: fine) {
+  .feature-item-our-feautures-contact:hover {
+    transform: translateY(-4px);
+
+    border-color: rgba(0, 123, 255, 0.22);
+
+    background: linear-gradient(
+      135deg,
+      rgba(255, 255, 255, 0.96),
+      rgba(230, 242, 255, 0.8)
+    );
+
+    box-shadow:
+      inset 0 1px 0 rgba(255, 255, 255, 1),
+      0 24px 45px -24px rgba(0, 73, 155, 0.4);
+  }
+}
+
+/* =========================================================
+   OPEN STATE
+========================================================= */
+
 .feature-item-our-feautures-contact.open {
-  background-color: #007bff;
-  color: white;
-  border-color: #007bff;
+  border-color: rgba(255, 255, 255, 0.26);
+
+  background: linear-gradient(
+    135deg,
+    rgba(0, 123, 255, 0.88),
+    rgba(0, 91, 190, 0.72)
+  );
+
+  -webkit-backdrop-filter: blur(24px) saturate(180%);
+  backdrop-filter: blur(24px) saturate(180%);
+
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.34),
+    inset 0 -1px 0 rgba(255, 255, 255, 0.06),
+    0 24px 48px -24px rgba(0, 43, 110, 0.58);
 }
 
-.feature-item-our-feautures-contact.open
-  .feature-header-our-contact
-  .feature-title {
-  color: white;
+/* reflection open state */
+.feature-item-our-feautures-contact.open::after {
+  background: rgba(255, 255, 255, 0.08);
 }
 
-.feature-item-our-feautures-contact.open .icon-container-feature-contact {
-  background-color: white;
-  color: #007bff;
-}
+/* =========================================================
+   FEATURE HEADER
+========================================================= */
 
 .feature-header-our-contact {
+  position: relative;
+
+  z-index: 2;
+
   display: flex;
+
   align-items: center;
+
   gap: 1rem;
-  color: #2c3e50;
+
+  width: 100%;
+
+  color: #1f2937;
 }
+
+/* =========================================================
+   ICON CONTAINER
+========================================================= */
 
 .icon-container-feature-contact {
-  background-color: #007bff;
-  color: white;
-  padding: 0.75rem;
-  border-radius: 50%;
+  position: relative;
+
   display: flex;
+
+  flex: 0 0 auto;
+
+  width: 48px;
+  height: 48px;
+
   align-items: center;
   justify-content: center;
+
+  padding: 0;
+
+  box-sizing: border-box;
+
+  border: 1px solid rgba(0, 123, 255, 0.2);
+
+  border-radius: 50%;
+
+  background: linear-gradient(
+    135deg,
+    rgba(0, 123, 255, 0.94),
+    rgba(0, 91, 190, 0.78)
+  );
+
+  -webkit-backdrop-filter: blur(16px) saturate(170%);
+  backdrop-filter: blur(16px) saturate(170%);
+
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.35),
+    0 12px 24px -16px rgba(0, 73, 155, 0.52);
+
+  color: #ffffff;
+
+  transition:
+    background 0.3s ease,
+    color 0.3s ease,
+    border-color 0.3s ease,
+    transform 0.3s ease;
 }
+
+/* =========================================================
+   ICON OPEN STATE
+========================================================= */
+
+.feature-item-our-feautures-contact.open .icon-container-feature-contact {
+  border-color: rgba(255, 255, 255, 0.4);
+
+  background: rgba(255, 255, 255, 0.16);
+
+  color: #ffffff;
+
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.35),
+    0 12px 24px -16px rgba(0, 43, 110, 0.55);
+}
+
+/* =========================================================
+   TITLE
+========================================================= */
 
 .feature-title {
-  font-size: 1rem;
-  font-weight: 600;
   flex-grow: 1;
+
+  margin: 0;
+
+  color: #1f2937;
+
+  font-size: 1rem;
+  font-weight: 700;
+
+  line-height: 1.4;
+
+  text-align: left;
+
+  transition: color 0.3s ease;
 }
+
+/* =========================================================
+   TITLE OPEN STATE
+========================================================= */
+
+.feature-item-our-feautures-contact.open .feature-title {
+  color: #ffffff;
+}
+
+/* =========================================================
+   CHEVRON
+========================================================= */
 
 .chevron-icon-container {
-  color: #7f8c8d;
+  position: relative;
+
+  z-index: 2;
+
+  display: flex;
+
+  flex: 0 0 auto;
+
+  width: 38px;
+  height: 38px;
+
+  align-items: center;
+  justify-content: center;
+
+  border: 1px solid rgba(0, 123, 255, 0.1);
+
+  border-radius: 50%;
+
+  background: rgba(0, 123, 255, 0.06);
+
+  color: #526071;
+
+  transition:
+    color 0.3s ease,
+    background 0.3s ease,
+    border-color 0.3s ease,
+    transform 0.3s ease;
 }
+
+/* =========================================================
+   CHEVRON OPEN
+========================================================= */
 
 .feature-item-our-feautures-contact.open .chevron-icon-container {
-  color: white;
+  border-color: rgba(255, 255, 255, 0.24);
+
+  background: rgba(255, 255, 255, 0.12);
+
+  color: #ffffff;
 }
+
+/* =========================================================
+   DESCRIPTION
+========================================================= */
 
 .feature-description {
-  margin-top: 1rem;
-  font-size: 1rem;
-  line-height: 1.5;
-  padding-left: calc(0.75rem * 2 + 24px);
-  color: #34495e;
+  position: relative;
+
+  z-index: 2;
 
   max-height: 0;
-  transition: max-height 0.8s ease-out, opacity 0.57s ease-out;
+
+  margin: 0;
+
+  padding-left: 64px;
+
+  overflow: hidden;
+
+  color: #526071;
+
+  font-size: 0.95rem;
+
+  line-height: 1.65;
+
+  text-align: left;
+
   opacity: 0;
+
+  transform: translateY(-6px);
+
+  transition:
+    max-height 0.55s ease,
+    opacity 0.35s ease,
+    transform 0.35s ease,
+    margin-top 0.35s ease;
 }
+
+/* =========================================================
+   DESCRIPTION OPEN
+========================================================= */
 
 .feature-item-our-feautures-contact.open .feature-description {
-  color: white;
+  max-height: 250px;
 
-  max-height: 200px;
+  margin-top: 1rem;
+
+  color: rgba(255, 255, 255, 0.9);
+
   opacity: 1;
+
+  transform: translateY(0);
 }
-.feature-title.open {
-  color: #f8f9fa;
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 768px) {
+  .feature-item-our-feautures-contact {
+    padding: 1rem;
+
+    border-radius: 18px;
+  }
+
+  .feature-header-our-contact {
+    gap: 0.75rem;
+  }
+
+  .icon-container-feature-contact {
+    width: 44px;
+    height: 44px;
+  }
+
+  .feature-title {
+    font-size: 0.95rem;
+  }
+
+  .chevron-icon-container {
+    width: 34px;
+    height: 34px;
+  }
+
+  .feature-description {
+    padding-left: 56px;
+
+    font-size: 0.88rem;
+  }
+}
+
+/* =========================================================
+   SMALL MOBILE
+========================================================= */
+
+@media (max-width: 480px) {
+  .feature-item-our-feautures-contact {
+    padding: 0.9rem;
+  }
+
+  .icon-container-feature-contact {
+    width: 40px;
+    height: 40px;
+  }
+
+  .feature-title {
+    font-size: 0.9rem;
+  }
+
+  .chevron-icon-container {
+    width: 32px;
+    height: 32px;
+  }
+
+  .feature-description {
+    padding-left: 0;
+
+    font-size: 0.84rem;
+  }
 }

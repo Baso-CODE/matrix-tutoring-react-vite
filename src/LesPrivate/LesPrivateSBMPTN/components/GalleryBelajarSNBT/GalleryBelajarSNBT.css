@@ -1,154 +1,479 @@
-/* Section */
+/* =========================================================
+   GALLERY SNBT SECTION
+========================================================= */
+
 .gallery-snbt__section {
   margin: 0 auto;
+
   text-align: center;
+
+  background: #ffffff;
 }
 
+.gallery-snbt__container {
+  width: 100%;
+
+  margin: 0 auto;
+}
+
+/* =========================================================
+   HEADER
+========================================================= */
+
 .gallery-snbt__header {
-  margin-bottom: 40px;
+  max-width: 780px;
+
+  margin: 0 auto 40px;
 }
 
 .gallery-snbt__title {
-  font-size: 1.4rem;
+  margin: 0 0 10px;
+
+  color: #1f2937;
+
+  font-size: 1.5rem;
   font-weight: 800;
-  color: #333333;
+
+  line-height: 1.35;
+
   text-transform: uppercase;
-  margin-bottom: 10px;
 }
 
 .gallery-snbt__subtitle {
-  font-size: 0.9rem;
-  color: #343434;
+  margin: 0;
+
+  color: #4b5563;
+
+  font-size: 0.95rem;
+
+  line-height: 1.6;
 }
 
-/* Grid */
+/* =========================================================
+   GRID
+========================================================= */
+
 .gallery-snbt__grid {
   display: grid;
-  grid-template-columns: repeat(1, 1fr);
+
+  grid-template-columns: repeat(1, minmax(0, 1fr));
+
   gap: 24px;
 }
 
-@media (min-width: 768px) {
-  .gallery-snbt__grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
-}
+/* =========================================================
+   CARD CONTAINER
+========================================================= */
 
-@media (min-width: 1024px) {
-  .gallery-snbt__grid {
-    grid-template-columns: repeat(4, 1fr);
-  }
-}
-
-/* Card Container */
 .gallery-snbt__card-container {
-  width: 100%;
-  height: 300px;
   position: relative;
-  border-radius: 10px;
+
+  min-width: 0;
+
+  height: 330px;
+
+  border-radius: 24px;
 }
 
-.gallery-snbt__card-container::before {
-  content: "";
-  z-index: -1;
-  position: absolute;
-  inset: 0;
-  transform: translate3d(0, 0, 0) scale(0.95);
-  filter: blur(15px);
-}
+/* =========================================================
+   CARD
+========================================================= */
 
 .gallery-snbt__card {
+  position: relative;
+
   width: 100%;
   height: 100%;
-  border-radius: inherit;
+
   overflow: hidden;
-  position: relative;
+
+  border-radius: 24px;
+
+  background: #eef5ff;
+
+  box-shadow:
+    0 20px 45px -28px rgba(0, 71, 171, 0.42),
+    0 8px 20px -14px rgba(15, 23, 42, 0.22);
+
+  isolation: isolate;
 }
 
+/* subtle outer highlight */
+.gallery-snbt__card::before {
+  content: "";
+
+  position: absolute;
+
+  inset: 0;
+
+  z-index: 3;
+
+  border: 1px solid rgba(255, 255, 255, 0.7);
+
+  border-radius: inherit;
+
+  pointer-events: none;
+}
+
+/* =========================================================
+   IMAGE
+========================================================= */
+
 .gallery-snbt__img-content {
+  position: absolute;
+
+  inset: 0;
+
+  z-index: 0;
+
   width: 100%;
   height: 100%;
+
   background-size: cover;
   background-position: center;
+
+  transform: scale(1);
+
+  filter: brightness(1);
+
   transition:
-    scale 0.6s,
-    rotate 0.6s,
-    filter 1s;
+    transform 0.6s cubic-bezier(0.22, 1, 0.36, 1),
+    filter 0.45s ease;
 }
+
+/* =========================================================
+   SOFT BOTTOM GRADIENT
+   bukan overlay penuh
+========================================================= */
+
+.gallery-snbt__card::after {
+  content: "";
+
+  position: absolute;
+
+  left: 0;
+  right: 0;
+  bottom: 0;
+
+  z-index: 1;
+
+  height: 55%;
+
+  background: linear-gradient(
+    to top,
+    rgba(0, 35, 90, 0.34),
+    rgba(0, 35, 90, 0.08),
+    transparent
+  );
+
+  pointer-events: none;
+}
+
+/* =========================================================
+   LIQUID GLASS CONTENT
+========================================================= */
 
 .gallery-snbt__content {
   position: absolute;
-  top: 0;
-  left: 0;
-  height: 100%;
-  width: 100%;
-  box-sizing: border-box;
+
+  left: 12px;
+  right: 12px;
+  bottom: 12px;
+
+  z-index: 2;
+
   display: flex;
+
+  min-height: 120px;
+
   flex-direction: column;
-  align-items: center;
+
+  align-items: flex-start;
   justify-content: center;
-  text-align: center;
-  gap: 8px;
+
+  gap: 7px;
+
+  padding: 16px;
+
+  box-sizing: border-box;
+
+  overflow: hidden;
+
+  border: 1px solid rgba(255, 255, 255, 0.28);
+
+  border-radius: 18px;
+
+  background: linear-gradient(
+    135deg,
+    rgba(0, 123, 255, 0.45),
+    rgba(0, 91, 190, 0.24)
+  );
+
+  -webkit-backdrop-filter: blur(24px) saturate(180%);
+  backdrop-filter: blur(24px) saturate(180%);
+
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.34),
+    inset 0 -1px 0 rgba(255, 255, 255, 0.06),
+    0 16px 32px -18px rgba(0, 43, 110, 0.58);
 
   color: #ffffff;
-  padding: 15px;
+
+  text-align: left;
+
   opacity: 0;
+
+  transform: translateY(18px);
+
   pointer-events: none;
-  transform: translateY(20px); /* Efek naik yang lebih smooth */
-  transition: all 0.4s ease-in-out;
-  background: rgba(
-    0,
-    119,
-    255,
-    0.85
-  ); /* Background biru semi-transparan yang lebih rapi/profesional */
+
+  transition:
+    opacity 0.35s ease,
+    transform 0.35s ease,
+    background 0.35s ease,
+    border-color 0.35s ease;
 }
 
+/* top specular highlight */
+.gallery-snbt__content::before {
+  content: "";
+
+  position: absolute;
+
+  top: 0;
+  left: 12%;
+  right: 12%;
+
+  height: 1px;
+
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(255, 255, 255, 0.85),
+    transparent
+  );
+
+  pointer-events: none;
+}
+
+/* soft internal reflection */
+.gallery-snbt__content::after {
+  content: "";
+
+  position: absolute;
+
+  right: -35px;
+  bottom: -55px;
+
+  width: 140px;
+  height: 140px;
+
+  border-radius: 50%;
+
+  background: rgba(255, 255, 255, 0.08);
+
+  filter: blur(20px);
+
+  pointer-events: none;
+}
+
+/* =========================================================
+   TEXT
+========================================================= */
+
 .gallery-snbt__heading {
-  font-size: 1.05rem;
-  font-weight: 600;
+  position: relative;
+
+  z-index: 1;
+
   margin: 0;
+
+  color: #ffffff;
+
+  font-size: 1.05rem;
+  font-weight: 700;
+
+  line-height: 1.3;
 }
 
 .gallery-snbt__description {
-  font-size: 0.85rem;
-  font-weight: 400;
-  line-height: 1.5;
+  position: relative;
+
+  z-index: 1;
+
   margin: 0;
-  color: #f8f9fa;
+
+  color: rgba(255, 255, 255, 0.92);
+
+  font-size: 0.82rem;
+  font-weight: 400;
+
+  line-height: 1.5;
 }
 
-/* Hover Effects */
-.gallery-snbt__card:hover .gallery-snbt__content {
-  opacity: 1;
-  transform: translateY(0);
+/* =========================================================
+   DESKTOP HOVER
+========================================================= */
+
+@media (hover: hover) and (pointer: fine) {
+  .gallery-snbt__card:hover .gallery-snbt__img-content {
+    transform: scale(1.08);
+
+    filter: brightness(0.78);
+  }
+
+  .gallery-snbt__card:hover .gallery-snbt__content {
+    opacity: 1;
+
+    transform: translateY(0);
+
+    border-color: rgba(255, 255, 255, 0.38);
+
+    background: linear-gradient(
+      135deg,
+      rgba(0, 123, 255, 0.56),
+      rgba(0, 91, 190, 0.3)
+    );
+  }
 }
 
-.gallery-snbt__card:hover .gallery-snbt__img-content {
-  scale: 2.5;
-  rotate: 30deg;
-  filter: blur(7px);
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (min-width: 768px) {
+  .gallery-snbt__grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
 }
 
-/* Responsiveness */
+/* =========================================================
+   DESKTOP
+========================================================= */
+
+@media (min-width: 1024px) {
+  .gallery-snbt__grid {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+}
+
+/* =========================================================
+   TOUCH DEVICE / MOBILE
+   content selalu tampil
+========================================================= */
+
+@media (hover: none), (pointer: coarse) {
+  .gallery-snbt__content {
+    opacity: 1;
+
+    transform: translateY(0);
+  }
+
+  .gallery-snbt__img-content {
+    filter: brightness(0.88);
+  }
+}
+
+/* =========================================================
+   TABLET RESPONSIVE
+========================================================= */
+
 @media (max-width: 1024px) {
-  .gallery-snbt__heading {
-    font-size: 18px;
-    line-height: 1.2;
+  .gallery-snbt__card-container {
+    height: 340px;
   }
+
+  .gallery-snbt__heading {
+    font-size: 1rem;
+  }
+
   .gallery-snbt__description {
-    font-size: 0.9rem;
+    font-size: 0.84rem;
   }
 }
 
-@media (max-width: 768px) {
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 767px) {
+  .gallery-snbt__header {
+    margin-bottom: 28px;
+  }
+
   .gallery-snbt__title {
     font-size: 1.3rem;
+
+    line-height: 1.4;
   }
+
   .gallery-snbt__subtitle {
     font-size: 0.9rem;
   }
+
+  .gallery-snbt__grid {
+    gap: 18px;
+  }
+
+  .gallery-snbt__card-container {
+    height: 360px;
+  }
+
+  .gallery-snbt__card {
+    border-radius: 22px;
+  }
+
   .gallery-snbt__content {
-    max-width: 100%;
+    left: 10px;
+    right: 10px;
+    bottom: 10px;
+
+    min-height: 118px;
+
+    padding: 15px;
+
+    border-radius: 17px;
+
+    opacity: 1;
+
+    transform: translateY(0);
+  }
+
+  .gallery-snbt__heading {
+    font-size: 1rem;
+  }
+
+  .gallery-snbt__description {
+    font-size: 0.82rem;
+
+    line-height: 1.45;
+  }
+
+  .gallery-snbt__img-content {
+    filter: brightness(0.9);
+  }
+}
+
+/* =========================================================
+   SMALL MOBILE
+========================================================= */
+
+@media (max-width: 480px) {
+  .gallery-snbt__card-container {
+    height: 340px;
+  }
+
+  .gallery-snbt__content {
+    min-height: 110px;
+
+    padding: 14px;
+  }
+
+  .gallery-snbt__heading {
+    font-size: 0.95rem;
+  }
+
+  .gallery-snbt__description {
+    font-size: 0.78rem;
   }
 }
