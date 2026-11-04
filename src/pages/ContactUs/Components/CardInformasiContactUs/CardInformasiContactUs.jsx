@@ -1,5 +1,5 @@
 /* eslint-disable no-unused-vars */
-import { Mail, MapPin, Phone } from "lucide-react";
+import { Mail, MapPin } from "lucide-react";
 import "./CardInformasiContactUs.css";
 
 const ContactCardIcon = ({ icon: Icon, color }) => (
@@ -27,12 +27,12 @@ const CardInformasiContactUs = () => {
           content="Jl. Akses UI No.165, Tugu, Kec. Cimanggis, Kota Depok, Jawa Barat 16421"
           iconColor="#007bff"
         />
-        <InfoCard
+        {/* <InfoCard
           icon={Phone}
           title="Office Phone"
           content="021-2761-2993"
           iconColor="#007bff"
-        />
+        /> */}
         <InfoCard
           icon={Mail}
           title="Email"

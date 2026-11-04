@@ -64,12 +64,12 @@ Hi ${name} https://apps.bimbelmatrix.com/, Saya tertarik *Promo Seru, Diskon Rp1
               Jl. Akses UI No.165, Tugu, Kec. Cimanggis, Kota Depok, Jawa Barat
               16421
             </p>
-            <div className="section-subtitle-footer-matrix">
+            {/* <div className="section-subtitle-footer-matrix">
               Telepon Kantor:
             </div>
             <ul className="phone-list-footer-matrix">
               <li>021-2761-2993</li>
-            </ul>
+            </ul> */}
             <ul className="office-hours-footer-matrix">
               <li>08.30 - 17.00 WIB Senin s.d Jumat</li>
               <li>08.30 - 13.00 WIB Sabtu</li>
