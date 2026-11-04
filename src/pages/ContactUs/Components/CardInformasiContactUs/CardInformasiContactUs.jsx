@@ -24,7 +24,7 @@ const CardInformasiContactUs = () => {
         <InfoCard
           icon={MapPin}
           title="Address"
-          content="Pesona Khayangan Blok CP No. 4, Depok, Jawa Barat"
+          content="Jl. Akses UI No.165, Tugu, Kec. Cimanggis, Kota Depok, Jawa Barat 16421"
           iconColor="#007bff"
         />
         <InfoCard

@@ -61,8 +61,8 @@ Hi ${name} https://apps.bimbelmatrix.com/, Saya tertarik *Promo Seru, Diskon Rp1
             </p>
             <div className="section-title-footer-matrix">Office:</div>
             <p className="address-footer-matrix">
-              Pesona Khayangan Blok CP No. 4, Depok, Jawa Barat (Lingkungan
-              Pendidikan UI)
+              Jl. Akses UI No.165, Tugu, Kec. Cimanggis, Kota Depok, Jawa Barat
+              16421
             </p>
             <div className="section-subtitle-footer-matrix">
               Telepon Kantor:

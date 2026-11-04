@@ -89,8 +89,8 @@ const MatrixFooterV2 = () => {
             MATRIX TUTORING - Les ONLINE & Guru ke Rumah
           </h3>
           <p className="address-text-footer-v2">
-            Pesona Khayangan Blok CP No. 4, Depok, Jawa Barat (Lingkungan
-            Pendidikan UI)
+            Jl. Akses UI No.165, Tugu, Kec. Cimanggis, Kota Depok, Jawa Barat
+            16421
           </p>
           <p className="description-footer-v2">
             Matrix Tutoring adalah lembaga penyedia layanan les privat
@@ -123,7 +123,8 @@ const MatrixFooterV2 = () => {
               <p>
                 <strong>Office Address:</strong>
                 <br />
-                Pesona Khayangan Blok CP No. 4, Depok, Jawa Barat
+                Jl. Akses UI No.165, Tugu, Kec. Cimanggis, Kota Depok, Jawa
+                Barat 16421
               </p>
               <br />
               <p>
